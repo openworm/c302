@@ -1,2 +1,5 @@
 # c302
-c302 is in the process of moving here...
+
+The c302 framework is going to be moved here...
+
+For now, please go to https://github.com/openworm/CElegansNeuroML/tree/master/CElegans/pythonScripts/c302
