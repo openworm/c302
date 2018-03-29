@@ -1,0 +1,143 @@
+<neuroml xmlns="http://www.neuroml.org/schema/neuroml2"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2 https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2beta5.xsd" id="c302_A_Syns">
+    <notes>
+
+Parameters and setting used to generate this network:
+
+    Data reader:                    SpreadsheetDataReader
+    c302 version:                   0.6.0
+    Cells:                          ['URYDL', 'SMDDR', 'VD12', 'VB11', 'DA1']
+    Cell stimulated:                []
+    Connection:                     []
+    Connection numbers overridden:  None
+    Connection numbers scaled:      None
+    Connection polarities override: None
+    Muscles:                        ['MDL08']
+
+    Known BioParameters:
+        BioParameter: chem_exc_syn_decay = 10ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: chem_exc_syn_erev = 0mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: chem_exc_syn_rise = 3ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: chem_inh_syn_decay = 10ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: chem_inh_syn_erev = -80mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: chem_inh_syn_rise = 3ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: elec_syn_decay = 10ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: elec_syn_erev = 0mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: elec_syn_rise = 3ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_iaf_C = 3pF (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_iaf_conductance = 0.1nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_iaf_leak_reversal = -50mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_iaf_reset = -50mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_iaf_thresh = -30mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_iaf_C = 3pF (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_iaf_conductance = 0.1nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_iaf_leak_reversal = -50mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_iaf_reset = -50mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_iaf_thresh = -30mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_chem_exc_syn_gbase = 0.01nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_chem_inh_syn_gbase = 0.01nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_elec_syn_gbase = 0nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_chem_exc_syn_gbase = 0.01nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_chem_inh_syn_gbase = 0.01nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_elec_syn_gbase = 0nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: unphysiological_offset_current = 2.5pA (SRC: KnownError, certainty 0)
+        BioParameter: unphysiological_offset_current_del = 50 ms (SRC: Testing IClamp, certainty 0)
+        BioParameter: unphysiological_offset_current_dur = 200ms (SRC: KnownError, certainty 0)
+
+</notes>
+    <expTwoSynapse id="neuron_to_neuron_inh_syn" gbase="0.01nS" erev="-80mV" tauDecay="10ms" tauRise="3ms"/>
+    <expTwoSynapse id="neuron_to_neuron_exc_syn" gbase="0.01nS" erev="0mV" tauDecay="10ms" tauRise="3ms"/>
+    <expTwoSynapse id="neuron_to_muscle_exc_syn" gbase="0.01nS" erev="0mV" tauDecay="10ms" tauRise="3ms"/>
+    <iafCell id="generic_muscle_iaf_cell" leakReversal="-50mV" thresh="-30mV" reset="-50mV" C="3pF" leakConductance="0.1nS"/>
+    <iafCell id="generic_neuron_iaf_cell" leakReversal="-50mV" thresh="-30mV" reset="-50mV" C="3pF" leakConductance="0.1nS"/>
+    <pulseGenerator id="offset_current" delay="50 ms" duration="200ms" amplitude="2.5pA"/>
+    <pulseGenerator id="stim_URYDL_1" delay="500ms" duration="800ms" amplitude="2pA"/>
+    <pulseGenerator id="stim_VD12_1" delay="500ms" duration="800ms" amplitude="2pA"/>
+    <pulseGenerator id="stim_DA1_1" delay="500ms" duration="800ms" amplitude="2pA"/>
+    <pulseGenerator id="stim_URYDL_2" delay="1900ms" duration="800ms" amplitude="5pA"/>
+    <pulseGenerator id="stim_VD12_2" delay="1900ms" duration="800ms" amplitude="5pA"/>
+    <pulseGenerator id="stim_DA1_2" delay="1900ms" duration="800ms" amplitude="5pA"/>
+    <network id="c302_A_Syns">
+        <population id="DA1" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3; SER-2; UNC-8"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
+            <property tag="OpenWormBackerAssignedName" value="KR"/>
+            <instance id="0">
+                <location x="-0.75" y="-227.075009999999992" z="3.425"/>
+            </instance>
+        </population>
+        <population id="SMDDR" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="LGC-55; NTR-2"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
+            <instance id="0">
+                <location x="-7.4500003" y="-266.25" z="34.100000000000001"/>
+            </instance>
+        </population>
+        <population id="URYDL" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value="1 .2 1"/>
+            <property tag="type" value="sensory"/>
+            <property tag="receptor" value="LGC-53; PDFR-1; SER-1"/>
+            <property tag="neurotransmitter" value="Glutamate"/>
+            <instance id="0">
+                <location x="4.125" y="-281.425000000000011" z="51.899997999999997"/>
+            </instance>
+        </population>
+        <population id="VB11" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor; sensory"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
+            <instance id="0">
+                <location x="-1.8249999" y="262.324999999999989" z="-21.949999999999999"/>
+            </instance>
+        </population>
+        <population id="VD12" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="DOP-3; MOD-1; NPR-1; SER-2"/>
+            <property tag="neurotransmitter" value="GABA"/>
+            <instance id="0">
+                <location x="-0.75" y="345.5" z="-23.149999999999999"/>
+            </instance>
+        </population>
+        <population id="MDL08" component="generic_muscle_iaf_cell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="-60." z="80."/>
+            </instance>
+        </population>
+        <projection id="NC_VD12_VB11_GABA" presynapticPopulation="VD12" postsynapticPopulation="VB11" synapse="neuron_to_neuron_inh_syn">
+            <connectionWD id="0" preCellId="../VD12/0/generic_neuron_iaf_cell" preSegmentId="0" preFractionAlong="0.5" postCellId="../VB11/0/generic_neuron_iaf_cell" postSegmentId="0" postFractionAlong="0.5" weight="1." delay="0ms"/>
+        </projection>
+        <projection id="NC_URYDL_SMDDR_Glutamate" presynapticPopulation="URYDL" postsynapticPopulation="SMDDR" synapse="neuron_to_neuron_exc_syn">
+            <connectionWD id="0" preCellId="../URYDL/0/generic_neuron_iaf_cell" preSegmentId="0" preFractionAlong="0.5" postCellId="../SMDDR/0/generic_neuron_iaf_cell" postSegmentId="0" postFractionAlong="0.5" weight="1." delay="0ms"/>
+        </projection>
+        <projection id="NC_DA1_MDL08_Acetylcholine" presynapticPopulation="DA1" postsynapticPopulation="MDL08" synapse="neuron_to_muscle_exc_syn">
+            <connection id="0" preCellId="../DA1/0/generic_neuron_iaf_cell" preSegmentId="0" preFractionAlong="0.5" postCellId="../MDL08/0/generic_muscle_iaf_cell" postSegmentId="0" postFractionAlong="0.5"/>
+        </projection>
+        <projection id="NC_SMDDR_MDL08_Acetylcholine" presynapticPopulation="SMDDR" postsynapticPopulation="MDL08" synapse="neuron_to_muscle_exc_syn">
+            <connection id="0" preCellId="../SMDDR/0/generic_neuron_iaf_cell" preSegmentId="0" preFractionAlong="0.5" postCellId="../MDL08/0/generic_muscle_iaf_cell" postSegmentId="0" postFractionAlong="0.5"/>
+        </projection>
+        <inputList id="Input_URYDL_stim_URYDL_1" population="URYDL" component="stim_URYDL_1">
+            <input id="0" target="../URYDL/0/generic_neuron_iaf_cell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_VD12_stim_VD12_1" population="VD12" component="stim_VD12_1">
+            <input id="0" target="../VD12/0/generic_neuron_iaf_cell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_DA1_stim_DA1_1" population="DA1" component="stim_DA1_1">
+            <input id="0" target="../DA1/0/generic_neuron_iaf_cell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_URYDL_stim_URYDL_2" population="URYDL" component="stim_URYDL_2">
+            <input id="0" target="../URYDL/0/generic_neuron_iaf_cell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_VD12_stim_VD12_2" population="VD12" component="stim_VD12_2">
+            <input id="0" target="../VD12/0/generic_neuron_iaf_cell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_DA1_stim_DA1_2" population="DA1" component="stim_DA1_2">
+            <input id="0" target="../DA1/0/generic_neuron_iaf_cell" destination="synapses"/>
+        </inputList>
+    </network>
+</neuroml>

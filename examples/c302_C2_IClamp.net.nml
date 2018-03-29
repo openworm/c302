@@ -1,0 +1,225 @@
+<neuroml xmlns="http://www.neuroml.org/schema/neuroml2"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2 https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2beta5.xsd" id="c302_C2_IClamp">
+    <notes>
+
+Parameters and setting used to generate this network:
+
+    Data reader:                    SpreadsheetDataReader
+    c302 version:                   0.6.0
+    Cells:                          ['ADAL', 'PVCL']
+    Cell stimulated:                []
+    Connection:                     []
+    Connection numbers overridden:  None
+    Connection numbers scaled:      None
+    Connection polarities override: None
+    Muscles:                        ['MDR01']
+
+    Known BioParameters:
+        BioParameter: ca_boyle_erev = 10 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: ca_conc_decay_time = 13.811870945509265 ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: ca_conc_decay_time_muscle = 60.811870945509265 ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: ca_conc_rho = 0.000238919 mol_per_m_per_A_per_s (SRC: BlindGuess, certainty 0.1)
+        BioParameter: ca_conc_rho_muscle = 0.002238919 mol_per_m_per_A_per_s (SRC: BlindGuess, certainty 0.1)
+        BioParameter: cell_diameter = 5 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: initial_memb_pot = -60 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: k_fast_erev = -70 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: k_slow_erev = -60 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: leak_erev = -60 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_ca_boyle_cond_density = 0.812775772264702 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_ca_boyle_erev = 0 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_initial_memb_pot = -28 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_k_fast_cond_density = 0.042711643917483308 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_k_fast_erev = -30 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_k_slow_cond_density = 0.45833751019872582 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_k_slow_erev = -30 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_leak_cond_density = 0.002 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_leak_erev = -20 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_length = 20 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_specific_capacitance = 1 uF_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_spike_thresh = -10 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_to_muscle_elec_syn_gbase = 0 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_ca_boyle_cond_density = 1.812775772264702 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_k_fast_cond_density = 0.042711643917483308 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_k_slow_cond_density = 0.45833751019872582 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_leak_cond_density = 0.002 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_spike_thresh = -55 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_motor_delayed_elec_syn_gbase = 0.01252 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_motor_delayed_elec_syn_mu = -30 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_motor_delayed_elec_syn_sigma = 0.4 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_motor_delayed_elec_syn_weight = 1 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_elec_syn_gbase = 0.00152 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_exc_syn_conductance = 0.10 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_exc_syn_delta = 19 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_exc_syn_erev = 37 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_exc_syn_k = 1.205per_ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_exc_syn_mu = 5 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_exc_syn_sigma = 0.5 per_mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_exc_syn_vth = 27 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_exc_syn_weight = 1 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_inh_syn_conductance = 1.29 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_inh_syn_delta = 5 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_inh_syn_erev = -35 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_inh_syn_k = 0.025per_ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_inh_syn_vth = 0 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_elec_syn_gbase = 0.01252 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_elec_syn_weight = 1 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_exc_syn_conductance = 0.49 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_exc_syn_delta = 5 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_exc_syn_erev = -10 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_exc_syn_k = 0.5per_ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_exc_syn_vth = 00 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_inh_syn_conductance = 0.29 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_inh_syn_delta = 5 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_inh_syn_erev = -70 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_inh_syn_k = 0.015per_ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_inh_syn_vth = 0 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: specific_capacitance = 5 uF_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: unphysiological_offset_current = 5.135697186048022 pA (SRC: KnownError, certainty 0)
+        BioParameter: unphysiological_offset_current_del = 0 ms (SRC: KnownError, certainty 0)
+        BioParameter: unphysiological_offset_current_dur = 2000 ms (SRC: KnownError, certainty 0)
+
+</notes>
+    <include href="cell_C.xml"></include>
+    <include href="custom_muscle_components.xml"></include>
+    <include href="custom_synapses.xml"></include>
+    <fixedFactorConcentrationModel id="CaPool" ion="ca" restingConc="0 mM" decayConstant="13.811870945509265 ms" rho="0.000238919 mol_per_m_per_A_per_s"/>
+    <fixedFactorConcentrationModel id="CaPoolMuscle" ion="ca" restingConc="0 mM" decayConstant="60.811870945509265 ms" rho="0.002238919 mol_per_m_per_A_per_s"/>
+    <cell id="GenericMuscleCell">
+        <morphology id="morphology_GenericMuscleCell">
+            <segment id="0" name="soma">
+                <proximal x="0.000000e+00" y="0.000000e+00" z="0.000000e+00" diameter="5"/>
+                <distal x="0.000000e+00" y="2.000000e+01" z="0.000000e+00" diameter="5"/>
+            </segment>
+        </morphology>
+        <biophysicalProperties id="biophys_GenericMuscleCell">
+            <membraneProperties>
+                <channelDensity id="Leak_all" ionChannel="Leak" condDensity="0.002 mS_per_cm2" erev="-20 mV" ion="non_specific"/>
+                <channelDensity id="k_slow_all" ionChannel="k_slow_muscle" condDensity="0.45833751019872582 mS_per_cm2" erev="-30 mV" ion="k"/>
+                <channelDensity id="k_fast_all" ionChannel="k_fast_muscle" condDensity="0.042711643917483308 mS_per_cm2" erev="-30 mV" ion="k"/>
+                <channelDensity id="ca_boyle_all" ionChannel="ca_boyle_muscle" condDensity="0.812775772264702 mS_per_cm2" erev="0 mV" ion="ca"/>
+                <spikeThresh value="-10 mV"/>
+                <specificCapacitance value="1 uF_per_cm2"/>
+                <initMembPotential value="-28 mV"/>
+            </membraneProperties>
+            <intracellularProperties>
+                <species id="ca" concentrationModel="CaPoolMuscle" ion="ca" initialConcentration="0 mM" initialExtConcentration="2E-6 mol_per_cm3"/>
+                <resistivity value="0.1 kohm_cm"/>
+            </intracellularProperties>
+        </biophysicalProperties>
+    </cell>
+    <cell id="GenericNeuronCell">
+        <morphology id="morphology_GenericNeuronCell">
+            <segment id="0" name="soma">
+                <proximal x="0.000000e+00" y="0.000000e+00" z="0.000000e+00" diameter="5"/>
+                <distal x="0.000000e+00" y="0.000000e+00" z="0.000000e+00" diameter="5"/>
+            </segment>
+        </morphology>
+        <biophysicalProperties id="biophys_GenericNeuronCell">
+            <membraneProperties>
+                <channelDensity id="Leak_all" ionChannel="Leak" condDensity="0.002 mS_per_cm2" erev="-60 mV" ion="non_specific"/>
+                <channelDensity id="k_slow_all" ionChannel="k_slow" condDensity="0.45833751019872582 mS_per_cm2" erev="-60 mV" ion="k"/>
+                <channelDensity id="k_fast_all" ionChannel="k_fast" condDensity="0.042711643917483308 mS_per_cm2" erev="-70 mV" ion="k"/>
+                <channelDensity id="ca_boyle_all" ionChannel="ca_boyle" condDensity="1.812775772264702 mS_per_cm2" erev="10 mV" ion="ca"/>
+                <spikeThresh value="-55 mV"/>
+                <specificCapacitance value="5 uF_per_cm2"/>
+                <initMembPotential value="-60 mV"/>
+            </membraneProperties>
+            <intracellularProperties>
+                <species id="ca" concentrationModel="CaPool" ion="ca" initialConcentration="0 mM" initialExtConcentration="2E-6 mol_per_cm3"/>
+                <resistivity value="0.1 kohm_cm"/>
+            </intracellularProperties>
+        </biophysicalProperties>
+    </cell>
+    <pulseGenerator id="offset_current" delay="0 ms" duration="2000 ms" amplitude="5.135697186048022 pA"/>
+    <pulseGenerator id="stim_ADAL_1" delay="100ms" duration="800ms" amplitude="1pA"/>
+    <pulseGenerator id="stim_PVCL_1" delay="100ms" duration="800ms" amplitude="1pA"/>
+    <pulseGenerator id="stim_MDR01_1" delay="100ms" duration="800ms" amplitude="1pA"/>
+    <pulseGenerator id="stim_ADAL_2" delay="1100ms" duration="800ms" amplitude="2pA"/>
+    <pulseGenerator id="stim_PVCL_2" delay="1100ms" duration="800ms" amplitude="2pA"/>
+    <pulseGenerator id="stim_MDR01_2" delay="1100ms" duration="800ms" amplitude="2pA"/>
+    <pulseGenerator id="stim_ADAL_3" delay="2100ms" duration="800ms" amplitude="3pA"/>
+    <pulseGenerator id="stim_PVCL_3" delay="2100ms" duration="800ms" amplitude="3pA"/>
+    <pulseGenerator id="stim_MDR01_3" delay="2100ms" duration="800ms" amplitude="3pA"/>
+    <pulseGenerator id="stim_ADAL_4" delay="3100ms" duration="800ms" amplitude="4pA"/>
+    <pulseGenerator id="stim_PVCL_4" delay="3100ms" duration="800ms" amplitude="4pA"/>
+    <pulseGenerator id="stim_MDR01_4" delay="3100ms" duration="800ms" amplitude="4pA"/>
+    <pulseGenerator id="stim_ADAL_5" delay="4100ms" duration="800ms" amplitude="5pA"/>
+    <pulseGenerator id="stim_PVCL_5" delay="4100ms" duration="800ms" amplitude="5pA"/>
+    <pulseGenerator id="stim_MDR01_5" delay="4100ms" duration="800ms" amplitude="5pA"/>
+    <pulseGenerator id="stim_ADAL_6" delay="5100ms" duration="800ms" amplitude="6pA"/>
+    <pulseGenerator id="stim_PVCL_6" delay="5100ms" duration="800ms" amplitude="6pA"/>
+    <pulseGenerator id="stim_MDR01_6" delay="5100ms" duration="800ms" amplitude="6pA"/>
+    <network id="c302_C2_IClamp">
+        <population id="ADAL" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="OpenWormBackerAssignedName" value="Xabe"/>
+            <instance id="0">
+                <location x="8.65" y="-239.25" z="31.050000000000001"/>
+            </instance>
+        </population>
+        <population id="PVCL" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="OpenWormBackerAssignedName" value="Ramana Kumar"/>
+            <instance id="0">
+                <location x="0.85" y="404.150019999999984" z="5.5"/>
+            </instance>
+        </population>
+        <population id="MDR01" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="-80." y="-270." z="80."/>
+            </instance>
+        </population>
+        <inputList id="Input_ADAL_stim_ADAL_1" population="ADAL" component="stim_ADAL_1">
+            <input id="0" target="../ADAL/0/GenericNeuronCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_PVCL_stim_PVCL_1" population="PVCL" component="stim_PVCL_1">
+            <input id="0" target="../PVCL/0/GenericNeuronCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_MDR01_stim_MDR01_1" population="MDR01" component="stim_MDR01_1">
+            <input id="0" target="../MDR01/0/GenericMuscleCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_ADAL_stim_ADAL_2" population="ADAL" component="stim_ADAL_2">
+            <input id="0" target="../ADAL/0/GenericNeuronCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_PVCL_stim_PVCL_2" population="PVCL" component="stim_PVCL_2">
+            <input id="0" target="../PVCL/0/GenericNeuronCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_MDR01_stim_MDR01_2" population="MDR01" component="stim_MDR01_2">
+            <input id="0" target="../MDR01/0/GenericMuscleCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_ADAL_stim_ADAL_3" population="ADAL" component="stim_ADAL_3">
+            <input id="0" target="../ADAL/0/GenericNeuronCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_PVCL_stim_PVCL_3" population="PVCL" component="stim_PVCL_3">
+            <input id="0" target="../PVCL/0/GenericNeuronCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_MDR01_stim_MDR01_3" population="MDR01" component="stim_MDR01_3">
+            <input id="0" target="../MDR01/0/GenericMuscleCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_ADAL_stim_ADAL_4" population="ADAL" component="stim_ADAL_4">
+            <input id="0" target="../ADAL/0/GenericNeuronCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_PVCL_stim_PVCL_4" population="PVCL" component="stim_PVCL_4">
+            <input id="0" target="../PVCL/0/GenericNeuronCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_MDR01_stim_MDR01_4" population="MDR01" component="stim_MDR01_4">
+            <input id="0" target="../MDR01/0/GenericMuscleCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_ADAL_stim_ADAL_5" population="ADAL" component="stim_ADAL_5">
+            <input id="0" target="../ADAL/0/GenericNeuronCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_PVCL_stim_PVCL_5" population="PVCL" component="stim_PVCL_5">
+            <input id="0" target="../PVCL/0/GenericNeuronCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_MDR01_stim_MDR01_5" population="MDR01" component="stim_MDR01_5">
+            <input id="0" target="../MDR01/0/GenericMuscleCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_ADAL_stim_ADAL_6" population="ADAL" component="stim_ADAL_6">
+            <input id="0" target="../ADAL/0/GenericNeuronCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_PVCL_stim_PVCL_6" population="PVCL" component="stim_PVCL_6">
+            <input id="0" target="../PVCL/0/GenericNeuronCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_MDR01_stim_MDR01_6" population="MDR01" component="stim_MDR01_6">
+            <input id="0" target="../MDR01/0/GenericMuscleCell" destination="synapses"/>
+        </inputList>
+    </network>
+</neuroml>

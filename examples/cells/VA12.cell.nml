@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<neuroml xmlns="http://www.neuroml.org/schema/neuroml2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2  https://raw.githubusercontent.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2beta4.xsd" id="VA12">
+
+    <include href="LeakConductance.channel.nml"/>
+
+    <cell id="VA12">
+
+        <notes>
+Motor Neuron
+</notes>
+
+        <morphology id="morphology_VA12">
+
+            <segment id="0" name="Seg0_soma_0">
+                <proximal x="-0.1" y="362.45" z="-18.15" diameter="4.1833"/>
+                <distal x="-0.1" y="362.45" z="-18.15" diameter="4.1833"/>
+            </segment>
+
+            <segment id="1" name="Seg0_axon_0">
+                <parent segment="0"/>
+                <proximal x="-0.1" y="362.45" z="-18.15" diameter="0.6"/>
+                <distal x="-0.1" y="362.4" z="-18.199999" diameter="0.6"/>
+            </segment>
+
+            <segment id="2" name="Seg2_axon_0">
+                <parent segment="1"/>
+                <distal x="-0.1" y="359.40002" z="-19.6" diameter="0.6"/>
+            </segment>
+
+            <segment id="3" name="Seg3_axon_0">
+                <parent segment="2"/>
+                <distal x="-0.1" y="350.8" z="-23.6" diameter="0.56568545"/>
+            </segment>
+
+            <segment id="4" name="Seg4_axon_0">
+                <parent segment="3"/>
+                <distal x="-0.1" y="318.9" z="-26.9" diameter="0.56568545"/>
+            </segment>
+
+            <segment id="5" name="Seg5_axon_0">
+                <parent segment="4"/>
+                <distal x="-0.1" y="291.4" z="-25.099998" diameter="0.56568545"/>
+            </segment>
+
+            <segment id="6" name="Seg6_axon_0">
+                <parent segment="5"/>
+                <distal x="-0.1" y="262.2" z="-22.9" diameter="0.56568545"/>
+            </segment>
+
+            <segment id="7" name="Seg7_axon_0">
+                <parent segment="6"/>
+                <distal x="-0.1" y="260.3" z="-22.9" diameter="0.56568545"/>
+            </segment>
+
+            <segmentGroup id="Soma" neuroLexId="sao864921383">    <!--
+                This group contains an unbranched set of segments, and all of the segmentGroups marked with
+                neuroLexId = sao864921383 form a non-overlapping set of all of the segments. 
+                These segmentGroups correspond to the 'cables' of NeuroML v1.8.1. -->
+
+                <member segment="0"/>
+            </segmentGroup>
+
+            <segmentGroup id="Axon" neuroLexId="sao864921383">    <!--
+                This group contains an unbranched set of segments, and all of the segmentGroups marked with
+                neuroLexId = sao864921383 form a non-overlapping set of all of the segments. 
+                These segmentGroups correspond to the 'cables' of NeuroML v1.8.1. -->
+
+                <member segment="1"/>
+            
+                <member segment="2"/>
+            
+                <member segment="3"/>
+            
+                <member segment="4"/>
+            
+                <member segment="5"/>
+            
+                <member segment="6"/>
+            
+                <member segment="7"/>
+            </segmentGroup>
+
+            <segmentGroup id="all">
+                <include segmentGroup="Soma"/>
+                <include segmentGroup="Axon"/>
+            </segmentGroup>
+
+            <segmentGroup id="soma_group" neuroLexId="GO:0043025">    <!--Soma group-->
+
+                <include segmentGroup="Soma"/>
+            </segmentGroup>
+
+            <segmentGroup id="axon_group" neuroLexId="GO:0030424">    <!--Axon group-->
+
+                <include segmentGroup="Axon"/>
+            </segmentGroup>
+
+            
+        </morphology>
+
+            <!--Adding the biophysical parameters-->
+
+        <biophysicalProperties id="biophys">
+
+            <membraneProperties>
+                
+                <channelDensity condDensity="0.025 mS_per_cm2" id="LeakConductance_all" ionChannel="LeakConductance" ion="non_specific" erev="-65.0 mV"/>
+                
+
+                <spikeThresh value="0 mV"/>
+
+                <specificCapacitance value="1.0 uF_per_cm2"/>
+
+                <initMembPotential value="-65.0 mV"/>
+
+            </membraneProperties>
+
+            <intracellularProperties>
+
+                <resistivity value="0.03 kohm_cm"/>
+
+            </intracellularProperties>
+
+        </biophysicalProperties>
+
+    </cell>
+    
+</neuroml>

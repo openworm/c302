@@ -1,0 +1,330 @@
+<neuroml xmlns="http://www.neuroml.org/schema/neuroml2"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2 https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2beta4.xsd" id="cell_C">
+
+
+        <ionChannel id="slo-2" conductance="10pS" type="ionChannelHH" species="k">
+
+        <notes></notes>
+
+        <gateHHtauInf id="m" instances="1">
+
+            <timeCourse type="fixedTimeCourse" tau="30 ms"/>
+            <steadyState type="MuscleSigmoidVariable" rate="1" scale="6.859 mV" midpoint="10.237 mV"/>
+
+        </gateHHtauInf>
+
+        <!--<gateHHtauInf id="n" instances="2">
+
+            <timeCourse type="fixedTimeCourse" tau="30 ms"/>
+            <steadyState type="MuscleSigmoidVariable" rate="1" scale="6.859 mV" midpoint="5.237 mV"/>
+
+        </gateHHtauInf>-->
+
+    </ionChannel>
+
+    <ionChannel id="shk-1" conductance="10pS" type="ionChannelHH" species="k">
+
+        <notes></notes>
+
+        <gateHHtauInf id="m" instances="1">
+
+            <timeCourse type="fixedTimeCourse" tau="10 ms"/>
+            <steadyState type="MuscleSigmoidVariable" rate="1" scale="6.859 mV" midpoint="13.237 mV"/>
+
+        </gateHHtauInf>
+
+        <!--<gateHHtauInf id="n" instances="2">
+
+            <timeCourse type="fixedTimeCourse" tau="30 ms"/>
+            <steadyState type="MuscleSigmoidVariable" rate="1" scale="6.859 mV" midpoint="10.237 mV"/>
+
+        </gateHHtauInf>-->
+
+    </ionChannel>
+
+
+    <ionChannel id="egl-19" conductance="10pS" type="ionChannelHH" species="ca">
+
+        <notes></notes>
+
+        <gateHHtauInf id="m" instances="2">
+
+            <timeCourse type="fixedTimeCourse" tau="30 ms"/>
+            <steadyState type="MuscleSigmoidVariable" scale="4.5 mV" midpoint="-5.7 mV"/>
+
+        </gateHHtauInf>
+
+        <gateHHtauInf id="n" instances="2">
+
+            <timeCourse type="fixedTimeCourse" tau="50 ms"/>
+            <steadyState type="MuscleSigmoidVariable" scale="4.5 mV" midpoint="0.7 mV"/>
+
+        </gateHHtauInf>
+    </ionChannel>
+
+
+    <ionChannel id="k_muscle" conductance="10pS" type="ionChannelHH" species="k">
+    
+        <notes></notes>
+    
+        <gateHHtauInf id="n" instances="4">
+    
+            <timeCourse type="fixedTimeCourse" tau="190 ms"/>
+            <steadyState type="MuscleSigmoidVariable" rate="1" scale="6.859 mV" midpoint="1.237 mV"/>
+            
+        </gateHHtauInf>
+        
+    </ionChannel>
+
+
+    <ionChannel id="k_fast_muscle" conductance="10pS" type="ionChannelHH" species="k">
+
+        <notes>K fast channel from Boyle and Cohen 2008</notes>
+
+        <gateHHtauInf id="p" instances="4">
+
+            <timeCourse type="fixedTimeCourse" tau="2.25518 ms"/>
+            <steadyState type="HHSigmoidVariable" rate="1" scale="7.42636 mV" midpoint="-8.05232 mV"/>
+
+        </gateHHtauInf>
+
+        <gateHHtauInf id="q" instances="1">
+
+            <timeCourse type="fixedTimeCourse" tau="149.963 ms"/>
+            <steadyState type="HHSigmoidVariable" rate="1" scale="-9.97468 mV" midpoint="-15.6456 mV"/>
+
+        </gateHHtauInf>
+
+    </ionChannel>
+
+
+    <ionChannel id="k_slow_muscle" conductance="10pS" type="ionChannelHH" species="k">
+
+        <notes>K slow channel from Boyle and Cohen 2008</notes>
+
+        <gateHHtauInf id="n" instances="1">
+
+            <timeCourse type="fixedTimeCourse" tau="25.0007 ms"/>
+            <steadyState type="HHSigmoidVariable" rate="1" scale="15.8512 mV" midpoint="19.8741 mV"/>
+
+        </gateHHtauInf>
+
+    </ionChannel>
+
+
+
+    <ionChannel id="ca_boyle_muscle" conductance="10pS" type="ionChannelHH" species="ca">
+
+        <notes>Ca channel from Boyle and Cohen 2008</notes>
+
+        <gateHHtauInf id="e" instances="2">
+
+            <timeCourse type="fixedTimeCourse" tau="0.100027 ms"/>
+            <steadyState type="HHSigmoidVariable" rate="1" scale="6.74821 mV" midpoint="-3.3568 mV"/>
+
+        </gateHHtauInf>
+
+        <gateHHtauInf id="f" instances="1">
+
+            <timeCourse type="fixedTimeCourse" tau="150.88 ms"/>
+
+            <!-- Note!!!
+
+                f gate is "inactivation" a/c B&C 2008 p172
+                but the scale value from Table A1 (kf) is positive (5mV), i.e. steady
+                state is zero for v << midpoint and 1 for v >> midpoint
+                Couple this with a very slow time course & the ion channel never
+                conducts as e^2 x f is always ~0
+
+                Using -5.03176mV NOT 5mV for k/scale to make this INACTIVATION
+
+                This is suggested by the value used here:
+                https://github.com/openworm/muscle_model/blob/master/BoyleCohen2008/MatlabSupport/Main_Version/data/input.csv#L20
+
+                see also
+                https://github.com/openworm/muscle_model/blob/master/BoyleCohen2008/PythonSupport/Main_Version/compareToNeuroML2.py
+            -->
+            <steadyState type="HHSigmoidVariable" rate="1" scale="-5.03176 mV" midpoint="25.1815 mV"/>
+
+        </gateHHtauInf>
+
+        <customHGate id="h" instances="1" alpha="0.282473" ca_half="6.41889e-8 mM" k="-1.00056e-8 mM"/>
+
+    </ionChannel>
+    
+    
+    <ionChannel id="ca_muscle" conductance="10pS" type="ionChannelHH" species="ca">
+    
+        <notes></notes>
+    
+        <gateHHtauInf id="m" instances="2">
+    
+            <timeCourse type="fixedTimeCourse" tau="1 ms"/>
+            <steadyState type="MuscleSigmoidVariable" scale="4.5 mV" midpoint="6.7 mV"/>
+    
+        </gateHHtauInf>
+    
+        <gateHHtauInf id="h" instances="1">
+            <timeCourse type="fixedTimeCourse" tau="7 ms"/>
+            <steadyState type="MuscleSigmoidVariableCaInact" a="0.516" b="13.508 mV" c="19.48 mV"/>
+        </gateHHtauInf>
+    
+    </ionChannel>
+    
+    
+    <ComponentType name="MuscleSigmoidVariable" 
+                   extends="baseVoltageDepVariable"
+                   description="Sigmoidal form for variable equation">
+    
+        <Parameter name="midpoint" dimension="voltage" />
+        <Parameter name="scale" dimension="voltage" />
+    
+        <Dynamics>
+            <DerivedVariable name="x" dimension="none" exposure="x" value="1 / (1 + exp((-(v-midpoint)) / scale))"/>
+        </Dynamics>
+    </ComponentType>
+    
+    
+    <ComponentType name="MuscleSigmoidVariableCaInact" 
+                   extends="baseVoltageDepVariable"
+                   description="Sigmoidal form for variable equation">
+    
+        <Parameter name="a" dimension="none" />
+        <Parameter name="b" dimension="voltage" />
+        <Parameter name="c" dimension="voltage" />
+    
+        <Dynamics>
+            <DerivedVariable name="x" dimension="none" exposure="x" value="1 - a * exp((-(v - b)*(v - b)) / (2 * c * c))"/>
+        </Dynamics>
+    </ComponentType>
+
+
+
+
+
+
+    <ComponentType name="muscleConcentrationModel"
+        extends="fixedFactorConcentrationModel"
+        description="Model of buffering of concentration of an ion (currently hard coded to be calcium, due to requirement for _iCa) which has a baseline level _restingConc and tends to this value with time course _decayConstant. A fixed factor _rho is used to scale the incoming current INDEPENDENTLY OF THE SIZE OF THE COMPARTMENT to produce a concentration change.">
+
+        <Parameter name="restingConc" dimension="concentration"/>
+        <Parameter name="decayConstant" dimension="time"/>
+
+        <Parameter name="rho" dimension="rho_factor"/>
+
+        <Requirement name="iCa" dimension="current"/>
+        <Requirement name="surfaceArea" dimension="area"/>
+
+        <Text name="ion"/> <!-- TODO: check why this isn't inherited from concentrationModel -->
+
+        <Dynamics>
+
+            <StateVariable name="concentration" exposure="concentration" dimension="concentration"/>
+            <StateVariable name="extConcentration" exposure="extConcentration" dimension="concentration"/>
+            <!--<StateVariable name="x" dimension="concentration"/>
+            <StateVariable name="iCaSigmoid" dimension="none"/>
+            <StateVariable name="iCaSigmoidMid" dimension="current"/>
+            <StateVariable name="iCaSigmoidSlope" dimension="current"/>
+            <StateVariable name="xSigmoid" dimension="none"/>
+            <StateVariable name="xSigmoidMid" dimension="concentration"/>
+            <StateVariable name="xSigmoidSlope" dimension="concentration"/>
+            <StateVariable name="xDecay" dimension="time"/>-->
+
+
+            <!--<DerivedVariable name="iCaSigmoid" dimension="none" value="1 / (1 + exp((iCaSigmoidMid - iCa) / iCaSigmoidSlope))"/>
+            <DerivedVariable name="xSigmoid" dimension="none" value="1 / (1 + exp((xSigmoidMid - x) / xSigmoidSlope))"/>
+
+            <TimeDerivative variable="x" value="iCaSigmoid * (iCa/surfaceArea) * rho/10 - (x / xDecay)"/>-->
+
+            <TimeDerivative variable="concentration" value="(iCa/surfaceArea) * rho - ((concentration - restingConc) / decayConstant)"/>
+
+            <OnStart>
+                <StateAssignment variable="concentration" value="initialConcentration"/>
+                <StateAssignment variable="extConcentration" value="initialExtConcentration"/>
+                <!--<StateAssignment variable="x" value="initialConcentration"/>
+                <StateAssignment variable="iCaSigmoidMid" value="0.1"/>
+                <StateAssignment variable="iCaSigmoidSlope" value="0.1"/>
+                <StateAssignment variable="xSigmoidMid" value="0.1"/>
+                <StateAssignment variable="xSigmoidSlope" value="0.1"/>
+                <StateAssignment variable="xDecay" value="0.1"/>-->
+            </OnStart>
+
+            <OnCondition test="concentration .lt. 0">
+                <StateAssignment variable="concentration" value="0"/>
+            </OnCondition>
+            <!--<OnCondition test="x .lt. 0">
+                <StateAssignment variable="x" value="0"/>
+            </OnCondition>-->
+        </Dynamics>
+</ComponentType>
+
+
+
+
+   <!-- <ComponentType name="muscleConcentrationModel2"
+        extends="concentrationModel"
+        description="">
+
+        <Parameter name="restingConc" dimension="concentration"/>
+        <Parameter name="decayConstant" dimension="time"/>
+
+        <Parameter name="rho" dimension="rho_factor"/>
+        <Parameter name="xRho" dimension="rho_factor"/>
+
+
+        <Parameter name="iCaSigmoidMid" dimension="current"/>
+        <Parameter name="iCaSigmoidSlope" dimension="current"/>
+
+        <Parameter name="xSigmoidMid" dimension="concentration"/>
+        <Parameter name="xSigmoidSlope" dimension="concentration"/>
+        <Parameter name="xDecay" dimension="time"/>
+        <Parameter name="xrest" dimension="concentration"/>
+
+        <Requirement name="iCa" dimension="current"/>
+        <Requirement name="v" dimension="voltage"/>
+        <Requirement name="surfaceArea" dimension="area"/>
+
+        <Exposure name="xx" dimension="concentration" />
+
+        <Text name="ion"/>
+
+        <Dynamics>
+
+            <StateVariable name="concentration" exposure="concentration" dimension="concentration"/>
+            <StateVariable name="extConcentration" exposure="extConcentration" dimension="concentration"/>
+            <StateVariable name="xx" exposure="xx" dimension="concentration"/>
+            <StateVariable name="tmpConc" dimension="concentration"/>
+            <StateVariable name="tmpX" dimension="concentration"/>
+
+
+            <DerivedVariable name="tmp" dimension="concentration" value="concentration" />
+            <DerivedVariable name="z" dimension="none" value="0" />
+
+            <DerivedVariable name="iCaSigmoid" dimension="none" value="(1 / (1 + exp((iCaSigmoidMid - iCa) / iCaSigmoidSlope)))"/>
+            <DerivedVariable name="xSigmoid" dimension="none" value="(1 / (1 + exp((xSigmoidMid - tmpConc) / xSigmoidSlope)))"/>
+
+
+
+            <TimeDerivative variable="xx" value="((iCa)/surfaceArea) * xRho - ((xx-xrest) / xDecay)"/>
+
+            <TimeDerivative variable="concentration" value="((iCa)/surfaceArea)  * xRho - ((concentration-xrest) / xDecay)"/>
+
+            <OnStart>
+                <StateAssignment variable="concentration" value="initialConcentration"/>
+                <StateAssignment variable="extConcentration" value="initialExtConcentration"/>
+                <StateAssignment variable="xx" value="initialConcentration"/>
+            </OnStart>
+
+            <OnCondition test="concentration .lt. 0">
+                <StateAssignment variable="concentration" value="0"/>
+            </OnCondition>
+            <OnCondition test="t .gt. 0">
+                <StateAssignment variable="tmpConc" value="concentration"/>
+                <StateAssignment variable="tmpX" value="xx"/>
+            </OnCondition>
+            <OnCondition test="xx .lt. 0">
+                <StateAssignment variable="xx" value="0"/>
+            </OnCondition>
+        </Dynamics>
+</ComponentType>
+-->
+</neuroml>

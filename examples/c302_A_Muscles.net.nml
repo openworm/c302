@@ -54,699 +54,1235 @@ Parameters and setting used to generate this network:
     <pulseGenerator id="offset_current" delay="5 ms" duration="10000 ms" amplitude="2.5pA"/>
     <network id="c302_A_Muscles">
         <population id="AS1" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="ACR-14; ACR-15; CKR-2; DOP-1; DOP-3; LGC-46; NPR-3; UNC-63"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <property tag="OpenWormBackerAssignedName" value="Kottbusser Tor"/>
             <instance id="0">
                 <location x="-0.275" y="-229.038000000000011" z="4.738"/>
             </instance>
         </population>
         <population id="AS10" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="ACR-14; ACR-15; CKR-2; DOP-1; DOP-3; LGC-46; NPR-3; UNC-63"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.9" y="278.25" z="-24."/>
             </instance>
         </population>
         <population id="AS11" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="ACR-14; ACR-15; CKR-2; DOP-1; DOP-3; LGC-46; NPR-3; UNC-63"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.8750001" y="315.699999999999989" z="-26.124998000000001"/>
             </instance>
         </population>
         <population id="AS2" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="ACR-14; ACR-15; CKR-2; DOP-1; DOP-3; LGC-46; NPR-3; UNC-63"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <property tag="OpenWormBackerAssignedName" value="Geraldine"/>
             <instance id="0">
                 <location x="-1.8750001" y="-203.875" z="-12.725"/>
             </instance>
         </population>
         <population id="AS3" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="ACR-14; ACR-15; CKR-2; DOP-1; DOP-3; LGC-46; NPR-3; UNC-63"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.9" y="-151.400010000000009" z="-45.649997999999997"/>
             </instance>
         </population>
         <population id="AS4" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="ACR-14; ACR-15; CKR-2; DOP-1; DOP-3; LGC-46; NPR-3; UNC-63"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.8750001" y="-90.200005000000004" z="-65.375"/>
             </instance>
         </population>
         <population id="AS5" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="ACR-14; ACR-15; CKR-2; DOP-1; DOP-3; LGC-46; NPR-3; UNC-63"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.8750001" y="-3.7500002" z="-52.524999999999999"/>
             </instance>
         </population>
         <population id="AS6" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="ACR-14; ACR-15; CKR-2; DOP-1; DOP-3; LGC-46; NPR-3; UNC-63"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.9" y="28.25" z="-34.25"/>
             </instance>
         </population>
         <population id="AS7" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="ACR-14; ACR-15; CKR-2; DOP-1; DOP-3; LGC-46; NPR-3; UNC-63"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.9" y="119.900000000000006" z="3.9500003"/>
             </instance>
         </population>
         <population id="AS8" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="ACR-14; ACR-15; CKR-2; DOP-1; DOP-3; LGC-46; NPR-3; UNC-63"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.9" y="181.849999999999994" z="-1.7750001"/>
             </instance>
         </population>
         <population id="AS9" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="ACR-14; ACR-15; CKR-2; DOP-1; DOP-3; LGC-46; NPR-3; UNC-63"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.8750001" y="228.924990000000008" z="-14.5"/>
             </instance>
         </population>
         <population id="AVAL" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron"/>
+            <property tag="receptor" value="GGR-3; GLR-1; GLR-2; GLR-4; GLR-5; NMR-1; NMR-2; NPR-4; UNC-8"/>
+            <property tag="neurotransmitter" value=""/>
             <property tag="OpenWormBackerAssignedName" value="JUD"/>
             <instance id="0">
                 <location x="-0.55" y="-271.5" z="37.982999999999997"/>
             </instance>
         </population>
         <population id="AVAR" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron"/>
+            <property tag="receptor" value="GGR-3; GLR-1; GLR-2; GLR-4; GLR-5; NMR-1; NMR-2; NPR-4; UNC-8"/>
+            <property tag="neurotransmitter" value=""/>
             <instance id="0">
                 <location x="-3.5" y="-271.5" z="37.982999999999997"/>
             </instance>
         </population>
         <population id="AVBL" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron"/>
+            <property tag="receptor" value="GGR-3; GLR-1; GLR-5; LGC-55; SRA-11; UNC-8"/>
+            <property tag="neurotransmitter" value=""/>
             <instance id="0">
                 <location x="0.225" y="-269.793999999999983" z="37.863002999999999"/>
             </instance>
         </population>
         <population id="AVBR" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron"/>
+            <property tag="receptor" value="GGR-3; GLR-1; GLR-5; LGC-55; SRA-11; UNC-8"/>
+            <property tag="neurotransmitter" value=""/>
             <property tag="OpenWormBackerAssignedName" value="mn"/>
             <instance id="0">
                 <location x="-4.581" y="-269.793999999999983" z="37.863002999999999"/>
             </instance>
         </population>
         <population id="AVDL" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron"/>
+            <property tag="receptor" value="GLR-1; GLR-2; GLR-5; NMR-1; NMR-2; PDFR-1; UNC-8"/>
+            <property tag="neurotransmitter" value=""/>
             <instance id="0">
                 <location x="-0.167" y="-268.699999999999989" z="37.299999999999997"/>
             </instance>
         </population>
         <population id="AVDR" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron"/>
+            <property tag="receptor" value="GLR-1; GLR-2; GLR-5; NMR-1; NMR-2; PDFR-1; UNC-8"/>
+            <property tag="neurotransmitter" value=""/>
             <instance id="0">
                 <location x="-4.033" y="-268.682999999999993" z="37.283000000000001"/>
             </instance>
         </population>
         <population id="AVFL" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron"/>
+            <property tag="receptor" value="LGC-53; PDFR-1"/>
+            <property tag="neurotransmitter" value=""/>
             <instance id="0">
                 <location x="2.1" y="-246.400000000000006" z="18.600000000000001"/>
             </instance>
         </population>
         <population id="AVFR" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron"/>
+            <property tag="receptor" value="LGC-53; PDFR-1"/>
+            <property tag="neurotransmitter" value=""/>
             <instance id="0">
                 <location x="-6.5" y="-246.400000000000006" z="18.600000000000001"/>
             </instance>
         </population>
         <population id="AVKR" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron"/>
+            <property tag="receptor" value="GLR-5"/>
+            <property tag="neurotransmitter" value=""/>
             <instance id="0">
                 <location x="-4.583" y="-246.950009999999992" z="19."/>
             </instance>
         </population>
         <population id="AVL" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="interneuron; motor"/>
+            <property tag="receptor" value="DOP-4"/>
+            <property tag="neurotransmitter" value="GABA"/>
             <instance id="0">
                 <location x="-7.5000005" y="-263.449999999999989" z="36.350000000000001"/>
             </instance>
         </population>
         <population id="CEPVL" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value="1 .2 1"/>
+            <property tag="type" value="sensory"/>
+            <property tag="receptor" value="DOP-2; OCTR-1; TYRA-3"/>
+            <property tag="neurotransmitter" value="Dopamine"/>
             <property tag="OpenWormBackerAssignedName" value="Gernot Weiser"/>
             <instance id="0">
                 <location x="0.70000005" y="-277.125" z="39.924999999999997"/>
             </instance>
         </population>
         <population id="CEPVR" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value="1 .2 1"/>
+            <property tag="type" value="sensory"/>
+            <property tag="receptor" value="DOP-2; OCTR-1; TYRA-3"/>
+            <property tag="neurotransmitter" value="Dopamine"/>
             <property tag="OpenWormBackerAssignedName" value="The Swarm"/>
             <instance id="0">
                 <location x="-4.95" y="-277.125" z="39.924999999999997"/>
             </instance>
         </population>
         <population id="DA1" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3; SER-2; UNC-8"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <property tag="OpenWormBackerAssignedName" value="KR"/>
             <instance id="0">
                 <location x="-0.75" y="-227.075009999999992" z="3.425"/>
             </instance>
         </population>
         <population id="DA2" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3; SER-2; UNC-8"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <property tag="OpenWormBackerAssignedName" value="Ruzila"/>
             <instance id="0">
                 <location x="-1.9" y="-190.75" z="-21.675000000000001"/>
             </instance>
         </population>
         <population id="DA3" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3; SER-2; UNC-8"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <property tag="OpenWormBackerAssignedName" value="Magoo"/>
             <instance id="0">
                 <location x="-1.65" y="-123.650000000000006" z="-58.350002000000003"/>
             </instance>
         </population>
         <population id="DA4" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3; SER-2; UNC-8"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.7" y="-32.399999999999999" z="-61.75"/>
             </instance>
         </population>
         <population id="DA5" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3; SER-2; UNC-8"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.65" y="84.200000000000003" z="-3.15"/>
             </instance>
         </population>
         <population id="DA6" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3; SER-2; UNC-8"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.65" y="198.675000000000011" z="-6.3500004"/>
             </instance>
         </population>
         <population id="DA7" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3; SER-2; UNC-8"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.65" y="281.600000000000023" z="-24.949999999999999"/>
             </instance>
         </population>
         <population id="DA8" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3; SER-2; UNC-8"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="1.275" y="376.800000000000011" z="-10.925000000000001"/>
             </instance>
         </population>
         <population id="DA9" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3; SER-2; UNC-8"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-4.6" y="376.800000000000011" z="-10.925000000000001"/>
             </instance>
         </population>
         <population id="DB1" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.9" y="-230.349989999999991" z="6.85"/>
             </instance>
         </population>
         <population id="DB2" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3; PDFR-1"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-0.2" y="-244.5" z="15.787000000000001"/>
             </instance>
         </population>
         <population id="DB3" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.85" y="-195.275000000000006" z="-18.524999999999999"/>
             </instance>
         </population>
         <population id="DB4" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.8750001" y="-96.275000000000006" z="-64.650000000000006"/>
             </instance>
         </population>
         <population id="DB5" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-4.05" y="35.25" z="-30.449999999999999"/>
             </instance>
         </population>
         <population id="DB6" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.8249999" y="178.099999999999994" z="-0.2"/>
             </instance>
         </population>
         <population id="DB7" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.85" y="267.75" z="-22.625"/>
             </instance>
         </population>
         <population id="DD1" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="DOP-3; MOD-1; NPR-1"/>
+            <property tag="neurotransmitter" value="GABA"/>
             <property tag="OpenWormBackerAssignedName" value="Stanislav Petrov"/>
             <instance id="0">
                 <location x="-0.9" y="-231.949999999999989" z="6.85"/>
             </instance>
         </population>
         <population id="DD2" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="DOP-3; MOD-1; NPR-1"/>
+            <property tag="neurotransmitter" value="GABA"/>
             <property tag="OpenWormBackerAssignedName" value="Evolver"/>
             <instance id="0">
                 <location x="-1.85" y="-156.474989999999991" z="-42.850000000000001"/>
             </instance>
         </population>
         <population id="DD3" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="DOP-3; MOD-1; NPR-1"/>
+            <property tag="neurotransmitter" value="GABA"/>
             <instance id="0">
                 <location x="-1.9" y="-28.600002" z="-60.524999999999999"/>
             </instance>
         </population>
         <population id="DD4" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="DOP-3; MOD-1; NPR-1"/>
+            <property tag="neurotransmitter" value="GABA"/>
             <instance id="0">
                 <location x="-1.8750001" y="122.899994000000007" z="4.5499997"/>
             </instance>
         </population>
         <population id="DD5" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="DOP-3; MOD-1; NPR-1"/>
+            <property tag="neurotransmitter" value="GABA"/>
             <instance id="0">
                 <location x="-1.8750001" y="234.050019999999989" z="-15.775"/>
             </instance>
         </population>
         <population id="DD6" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="DOP-3; MOD-1; NPR-1"/>
+            <property tag="neurotransmitter" value="GABA"/>
             <instance id="0">
                 <location x="-1.9" y="365.774999999999977" z="-16.475000000000001"/>
             </instance>
         </population>
         <population id="DVB" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="interneuron; motor"/>
+            <property tag="receptor" value=""/>
+            <property tag="neurotransmitter" value="GABA"/>
             <instance id="0">
                 <location x="-0.75" y="394.5" z="4."/>
             </instance>
         </population>
         <population id="HSNL" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="EGL-6; GAR-2; GGR-2; GLR-5; LGC-53; LGC-55; MEC-6"/>
+            <property tag="neurotransmitter" value="Serotonin"/>
             <property tag="OpenWormBackerAssignedName" value="The Stoner Neuron"/>
             <instance id="0">
                 <location x="17.449999999999999" y="61.049999999999997" z="6.95"/>
             </instance>
         </population>
         <population id="HSNR" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="EGL-6; GAR-2; GGR-2; GLR-5; LGC-53; LGC-55; MEC-6"/>
+            <property tag="neurotransmitter" value="Serotonin"/>
             <property tag="OpenWormBackerAssignedName" value="OpenScienceFTW"/>
             <instance id="0">
                 <location x="-21.649999999999999" y="61.049999999999997" z="6.95"/>
             </instance>
         </population>
         <population id="IL1DL" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="interneuron; motor; sensory"/>
+            <property tag="receptor" value="DEG-3; LGC-55; MEC-6; TRPA-1"/>
+            <property tag="neurotransmitter" value="Glutamate"/>
             <instance id="0">
                 <location x="2.825" y="-282.762999999999977" z="52.762996999999999"/>
             </instance>
         </population>
         <population id="IL1DR" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="interneuron; motor; sensory"/>
+            <property tag="receptor" value="DEG-3; LGC-55; MEC-6; TRPA-1"/>
+            <property tag="neurotransmitter" value="Glutamate"/>
             <instance id="0">
                 <location x="-7.0620003" y="-282.762999999999977" z="52.762996999999999"/>
             </instance>
         </population>
         <population id="IL1L" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="interneuron; motor; sensory"/>
+            <property tag="receptor" value="DEG-3; LGC-55; MEC-6; TRPA-1"/>
+            <property tag="neurotransmitter" value="Glutamate"/>
             <instance id="0">
                 <location x="3.8" y="-282.675020000000018" z="47.850002000000003"/>
             </instance>
         </population>
         <population id="IL1R" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="interneuron; motor; sensory"/>
+            <property tag="receptor" value="DEG-3; LGC-55; MEC-6; TRPA-1"/>
+            <property tag="neurotransmitter" value="Glutamate"/>
             <instance id="0">
                 <location x="-8.075001" y="-282.675020000000018" z="47.850002000000003"/>
             </instance>
         </population>
         <population id="IL1VL" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="interneuron; motor; sensory"/>
+            <property tag="receptor" value="DEG-3; LGC-55; MEC-6; TRPA-1"/>
+            <property tag="neurotransmitter" value="Glutamate"/>
             <instance id="0">
                 <location x="2.25" y="-279.5" z="41."/>
             </instance>
         </population>
         <population id="IL1VR" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="interneuron; motor; sensory"/>
+            <property tag="receptor" value="DEG-3; LGC-55; MEC-6; TRPA-1"/>
+            <property tag="neurotransmitter" value="Glutamate"/>
             <instance id="0">
                 <location x="-6.5499997" y="-279.5" z="41."/>
             </instance>
         </population>
         <population id="PDA" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="DOP-2; EXP-1; SER-2; UNC-8"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-2.95" y="387.25" z="-5.5"/>
             </instance>
         </population>
         <population id="PDB" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="interneuron; motor"/>
+            <property tag="receptor" value="UNC-8"/>
+            <property tag="neurotransmitter" value=""/>
             <instance id="0">
                 <location x="-3.3" y="384.649999999999977" z="-7.75"/>
             </instance>
         </population>
         <population id="PVCL" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron"/>
+            <property tag="receptor" value="PDFR-1; SER-2"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <property tag="OpenWormBackerAssignedName" value="Ramana Kumar"/>
             <instance id="0">
                 <location x="0.85" y="404.150019999999984" z="5.5"/>
             </instance>
         </population>
         <population id="PVCR" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron"/>
+            <property tag="receptor" value="PDFR-1; SER-2"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <property tag="OpenWormBackerAssignedName" value="J. Pablo Fernandez"/>
             <instance id="0">
                 <location x="-3.4499998" y="404.150019999999984" z="5.5"/>
             </instance>
         </population>
         <population id="PVNL" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="interneuron; motor"/>
+            <property tag="receptor" value=""/>
+            <property tag="neurotransmitter" value=""/>
             <instance id="0">
                 <location x="0.55" y="410." z="8.900001"/>
             </instance>
         </population>
         <population id="PVNR" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="interneuron; motor"/>
+            <property tag="receptor" value=""/>
+            <property tag="neurotransmitter" value=""/>
             <instance id="0">
                 <location x="-3.25" y="409.949999999999989" z="8.900001"/>
             </instance>
         </population>
         <population id="RID" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="interneuron; motor"/>
+            <property tag="receptor" value="DOP-2; MOD-1; SER-2"/>
+            <property tag="neurotransmitter" value=""/>
             <instance id="0">
                 <location x="-1.225" y="-272.350000000000023" z="54.938000000000002"/>
             </instance>
         </population>
         <population id="RIML" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="interneuron; motor"/>
+            <property tag="receptor" value="DOP-1; MOD-1; SER-4"/>
+            <property tag="neurotransmitter" value="Tyramine; Acetylcholine; Glutamate"/>
             <instance id="0">
                 <location x="3.5" y="-260.899999999999977" z="39."/>
             </instance>
         </population>
         <population id="RIMR" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="interneuron; motor"/>
+            <property tag="receptor" value="DOP-1; MOD-1; SER-4"/>
+            <property tag="neurotransmitter" value="Tyramine; Acetylcholine; Glutamate"/>
             <instance id="0">
                 <location x="-7.75" y="-260.899999999999977" z="39."/>
             </instance>
         </population>
         <population id="RIVL" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="interneuron; motor"/>
+            <property tag="receptor" value="NPR-1; NPR-4"/>
+            <property tag="neurotransmitter" value=""/>
             <instance id="0">
                 <location x="4.5" y="-265.300020000000018" z="50.350000000000001"/>
             </instance>
         </population>
         <population id="RIVR" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="interneuron; motor"/>
+            <property tag="receptor" value="NPR-1; NPR-4"/>
+            <property tag="neurotransmitter" value=""/>
             <property tag="OpenWormBackerAssignedName" value="Wil Wheaton"/>
             <instance id="0">
                 <location x="-8.75" y="-265.300020000000018" z="50.350000000000001"/>
             </instance>
         </population>
         <population id="RMDDL" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="GLR-1; LGC-55; SER-1"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="3.6" y="-269.074979999999982" z="37.649999999999999"/>
             </instance>
         </population>
         <population id="RMDDR" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="GLR-1; LGC-55; SER-1"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-7.75" y="-269.074979999999982" z="37.649999999999999"/>
             </instance>
         </population>
         <population id="RMDL" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="GLR-1; LGC-55; SER-1"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="3.1" y="-271." z="41.200000000000003"/>
             </instance>
         </population>
         <population id="RMDR" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="GLR-1; LGC-55; SER-1"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-7.4" y="-271." z="41.200000000000003"/>
             </instance>
         </population>
         <population id="RMDVL" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="GLR-1; LGC-55; SER-1"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="4.8500004" y="-271.199979999999982" z="44.399999999999999"/>
             </instance>
         </population>
         <population id="RMDVR" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="GLR-1; LGC-55; SER-1"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-9.049999" y="-271.199979999999982" z="44.399999999999999"/>
             </instance>
         </population>
         <population id="RMED" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="AVR-15; GLR-1; MOD-1; NTR-2; PDFR-1; SER-2"/>
+            <property tag="neurotransmitter" value="GABA"/>
             <instance id="0">
                 <location x="-1.5" y="-275.75" z="58.499996000000003"/>
             </instance>
         </population>
         <population id="RMEL" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="AVR-15; GLR-1; MOD-1; NTR-2; PDFR-1; SER-2"/>
+            <property tag="neurotransmitter" value="GABA"/>
             <instance id="0">
                 <location x="4.65" y="-274.399999999999977" z="46.987000000000002"/>
             </instance>
         </population>
         <population id="RMER" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="AVR-15; GLR-1; MOD-1; NTR-2; PDFR-1; SER-2"/>
+            <property tag="neurotransmitter" value="GABA"/>
             <instance id="0">
                 <location x="-8.900001" y="-274.399999999999977" z="46.987000000000002"/>
             </instance>
         </population>
         <population id="RMEV" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="AVR-15; GLR-1; MOD-1; NTR-2; PDFR-1; SER-2"/>
+            <property tag="neurotransmitter" value="GABA"/>
             <instance id="0">
                 <location x="-2.033" y="-272.966999999999985" z="35.667000000000002"/>
             </instance>
         </population>
         <population id="RMFL" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="SER-1"/>
+            <property tag="neurotransmitter" value=""/>
             <instance id="0">
                 <location x="1.1" y="-265.050020000000018" z="34.100000000000001"/>
             </instance>
         </population>
         <population id="RMGL" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron"/>
+            <property tag="receptor" value="NPR-1"/>
+            <property tag="neurotransmitter" value=""/>
             <instance id="0">
                 <location x="8.25" y="-238.299990000000008" z="32.700000000000003"/>
             </instance>
         </population>
         <population id="RMGR" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron"/>
+            <property tag="receptor" value="NPR-1"/>
+            <property tag="neurotransmitter" value=""/>
             <property tag="OpenWormBackerAssignedName" value="Bryan Nagle"/>
             <instance id="0">
                 <location x="-12.5" y="-238.299990000000008" z="32.700000000000003"/>
             </instance>
         </population>
         <population id="RMHL" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="SER-1"/>
+            <property tag="neurotransmitter" value=""/>
             <instance id="0">
                 <location x="1.1" y="-265.899999999999977" z="35.700000000000003"/>
             </instance>
         </population>
         <population id="RMHR" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="SER-1"/>
+            <property tag="neurotransmitter" value=""/>
             <property tag="OpenWormBackerAssignedName" value="Martino"/>
             <instance id="0">
                 <location x="-5.2999997" y="-265.899999999999977" z="35.700000000000003"/>
             </instance>
         </population>
         <population id="SMBDL" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="NPR-1"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="3.1" y="-264.300000000000011" z="33.100000000000001"/>
             </instance>
         </population>
         <population id="SMBDR" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="NPR-1"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-7." y="-264.300000000000011" z="33.100000000000001"/>
             </instance>
         </population>
         <population id="SMBVL" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value=""/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="0.425" y="-263.449999999999989" z="33.049999999999997"/>
             </instance>
         </population>
         <population id="SMBVR" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value=""/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-4.6" y="-263.449999999999989" z="33.049999999999997"/>
             </instance>
         </population>
         <population id="SMDDL" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="LGC-55; NTR-2"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="3.25" y="-266.25" z="34.100000000000001"/>
             </instance>
         </population>
         <population id="SMDDR" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="LGC-55; NTR-2"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-7.4500003" y="-266.25" z="34.100000000000001"/>
             </instance>
         </population>
         <population id="SMDVL" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="LGC-55; NTR-2"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="4.7" y="-270.949999999999989" z="46.649999999999999"/>
             </instance>
         </population>
         <population id="SMDVR" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="LGC-55; NTR-2"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-8.900001" y="-270.949999999999989" z="46.649999999999999"/>
             </instance>
         </population>
         <population id="URADL" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor; sensory"/>
+            <property tag="receptor" value=""/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <property tag="OpenWormBackerAssignedName" value="akizzles"/>
             <instance id="0">
                 <location x="5." y="-284.649999999999977" z="52.200000000000003"/>
             </instance>
         </population>
         <population id="URADR" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor; sensory"/>
+            <property tag="receptor" value=""/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-9.300000000000001" y="-284.649999999999977" z="52.200000000000003"/>
             </instance>
         </population>
         <population id="URAVL" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor; sensory"/>
+            <property tag="receptor" value=""/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="0.32500002" y="-279.600000000000023" z="41.399999999999999"/>
             </instance>
         </population>
         <population id="URAVR" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor; sensory"/>
+            <property tag="receptor" value=""/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-4.575" y="-279.600000000000023" z="41.399999999999999"/>
             </instance>
         </population>
         <population id="VA1" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; LGC-53; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.35" y="-235.550000000000011" z="11.75"/>
             </instance>
         </population>
         <population id="VA10" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; LGC-53; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.85" y="254.625020000000006" z="-21.25"/>
             </instance>
         </population>
         <population id="VA11" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; LGC-53; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.55" y="312.350000000000023" z="-26.249998000000001"/>
             </instance>
         </population>
         <population id="VA12" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; LGC-53; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-0.1" y="362.449999999999989" z="-18.149999999999999"/>
             </instance>
         </population>
         <population id="VA2" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; LGC-53; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <property tag="OpenWormBackerAssignedName" value="Marquam Hill"/>
             <instance id="0">
                 <location x="-1.85" y="-217.099999999999994" z="-3.9500003"/>
             </instance>
         </population>
         <population id="VA3" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; LGC-53; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.475" y="-184.099989999999991" z="-26.374998000000001"/>
             </instance>
         </population>
         <population id="VA4" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; LGC-53; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.85" y="-119.500010000000003" z="-58.700000000000003"/>
             </instance>
         </population>
         <population id="VA5" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; LGC-53; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.85" y="-54.299999999999997" z="-66.049994999999996"/>
             </instance>
         </population>
         <population id="VA6" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; LGC-53; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.85" y="21.550000000000001" z="-41.149999999999999"/>
             </instance>
         </population>
         <population id="VA7" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; LGC-53; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.85" y="98.049994999999996" z="1.175"/>
             </instance>
         </population>
         <population id="VA8" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; LGC-53; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.8" y="150.300000000000011" z="3.4"/>
             </instance>
         </population>
         <population id="VA9" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; LGC-53; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.8" y="208.824999999999989" z="-9.049999"/>
             </instance>
         </population>
         <population id="VB1" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor; sensory"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <property tag="OpenWormBackerAssignedName" value="NoTex.ch"/>
             <instance id="0">
                 <location x="-1.55" y="-246.449999999999989" z="16.399999999999999"/>
             </instance>
         </population>
         <population id="VB10" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor; sensory"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.85" y="218.074980000000011" z="-11.4"/>
             </instance>
         </population>
         <population id="VB11" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor; sensory"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.8249999" y="262.324999999999989" z="-21.949999999999999"/>
             </instance>
         </population>
         <population id="VB2" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor; sensory"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <property tag="OpenWormBackerAssignedName" value="Bloodgood"/>
             <instance id="0">
                 <location x="-2." y="-253.300000000000011" z="19.850000000000001"/>
             </instance>
         </population>
         <population id="VB3" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor; sensory"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <property tag="OpenWormBackerAssignedName" value="Ramez Naam"/>
             <instance id="0">
                 <location x="-1.85" y="-210.224999999999994" z="-8.725"/>
             </instance>
         </population>
         <population id="VB4" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor; sensory"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <property tag="OpenWormBackerAssignedName" value="Worm"/>
             <instance id="0">
                 <location x="-2." y="-173.25" z="-33.5"/>
             </instance>
         </population>
         <population id="VB5" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor; sensory"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.85" y="-109.549999999999997" z="-62.149999999999999"/>
             </instance>
         </population>
         <population id="VB6" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor; sensory"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.85" y="-36.575000000000003" z="-62.699997000000003"/>
             </instance>
         </population>
         <population id="VB7" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor; sensory"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-9.675000000000001" y="41.450000000000003" z="-24.361999999999998"/>
             </instance>
         </population>
         <population id="VB8" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor; sensory"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.8249999" y="108.799999999999997" z="2.875"/>
             </instance>
         </population>
         <population id="VB9" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor; sensory"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.85" y="159.550000000000011" z="3.2"/>
             </instance>
         </population>
         <population id="VC1" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="GLR-5"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <property tag="OpenWormBackerAssignedName" value="Gnothi seauton"/>
             <instance id="0">
                 <location x="-0.72499996" y="-170.025010000000009" z="-35.75"/>
             </instance>
         </population>
         <population id="VC2" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="GLR-5"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <property tag="OpenWormBackerAssignedName" value="M.Habryn"/>
             <instance id="0">
                 <location x="-0.625" y="-105.325000000000003" z="-63.399999999999999"/>
             </instance>
         </population>
         <population id="VC3" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="GLR-5"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.4499999" y="-6.45" z="-54.000003999999997"/>
             </instance>
         </population>
         <population id="VC4" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="GLR-5"/>
+            <property tag="neurotransmitter" value="Serotonin; Acetylcholine"/>
             <property tag="OpenWormBackerAssignedName" value="Klob Le Grand"/>
             <instance id="0">
                 <location x="-1.15" y="43.850000000000001" z="-24.199999999999999"/>
             </instance>
         </population>
         <population id="VC5" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="GLR-5"/>
+            <property tag="neurotransmitter" value="Serotonin; Acetylcholine"/>
             <instance id="0">
                 <location x="-1.15" y="66.549994999999996" z="-12.5"/>
             </instance>
         </population>
         <population id="VC6" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="GLR-5"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-1.8249999" y="174.175000000000011" z="1."/>
             </instance>
         </population>
         <population id="VD1" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="DOP-3; MOD-1; NPR-1; SER-2"/>
+            <property tag="neurotransmitter" value="GABA"/>
             <property tag="OpenWormBackerAssignedName" value="Ackley Lab"/>
             <instance id="0">
                 <location x="-0.70000005" y="-228.599999999999994" z="4.05"/>
             </instance>
         </population>
         <population id="VD10" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="DOP-3; MOD-1; NPR-1; SER-2"/>
+            <property tag="neurotransmitter" value="GABA"/>
             <instance id="0">
                 <location x="-0.75" y="236.099999999999994" z="-16.5"/>
             </instance>
         </population>
         <population id="VD11" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="DOP-3; MOD-1; NPR-1; SER-2"/>
+            <property tag="neurotransmitter" value="GABA"/>
             <instance id="0">
                 <location x="-0.8" y="283.800020000000018" z="-24.800000000000001"/>
             </instance>
         </population>
         <population id="VD12" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="DOP-3; MOD-1; NPR-1; SER-2"/>
+            <property tag="neurotransmitter" value="GABA"/>
             <instance id="0">
                 <location x="-0.75" y="345.5" z="-23.149999999999999"/>
             </instance>
         </population>
         <population id="VD13" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="DOP-3; MOD-1; NPR-1; SER-2"/>
+            <property tag="neurotransmitter" value="GABA"/>
             <instance id="0">
                 <location x="-0.75" y="379.850000000000023" z="-10.75"/>
             </instance>
         </population>
         <population id="VD2" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="DOP-3; MOD-1; NPR-1; SER-2"/>
+            <property tag="neurotransmitter" value="GABA"/>
             <instance id="0">
                 <location x="-0.65000004" y="-226.049990000000008" z="2.35"/>
             </instance>
         </population>
         <population id="VD3" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="DOP-3; MOD-1; NPR-1; SER-2"/>
+            <property tag="neurotransmitter" value="GABA"/>
             <instance id="0">
                 <location x="-0.8" y="-188.099999999999994" z="-23.449999999999999"/>
             </instance>
         </population>
         <population id="VD4" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="DOP-3; MOD-1; NPR-1; SER-2"/>
+            <property tag="neurotransmitter" value="GABA"/>
             <instance id="0">
                 <location x="-0.8" y="-137.199999999999989" z="-52.700000000000003"/>
             </instance>
         </population>
         <population id="VD5" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="DOP-3; MOD-1; NPR-1; SER-2"/>
+            <property tag="neurotransmitter" value="GABA"/>
             <instance id="0">
                 <location x="-0.75" y="-68.299999999999997" z="-66.75"/>
             </instance>
         </population>
         <population id="VD6" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="DOP-3; MOD-1; NPR-1; SER-2"/>
+            <property tag="neurotransmitter" value="GABA"/>
             <instance id="0">
                 <location x="-0.70000005" y="-1.4000001" z="-52.149997999999997"/>
             </instance>
         </population>
         <population id="VD7" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="DOP-3; MOD-1; NPR-1; SER-2"/>
+            <property tag="neurotransmitter" value="GABA"/>
             <instance id="0">
                 <location x="-12.349999" y="57.950000000000003" z="-14.200001"/>
             </instance>
         </population>
         <population id="VD8" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="DOP-3; MOD-1; NPR-1; SER-2"/>
+            <property tag="neurotransmitter" value="GABA"/>
             <instance id="0">
                 <location x="-0.75" y="135.099989999999991" z="3.9500003"/>
             </instance>
         </population>
         <population id="VD9" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="DOP-3; MOD-1; NPR-1; SER-2"/>
+            <property tag="neurotransmitter" value="GABA"/>
             <instance id="0">
                 <location x="-0.8" y="191.5" z="-3.8"/>
             </instance>

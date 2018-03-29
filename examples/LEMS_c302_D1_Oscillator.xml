@@ -1,0 +1,185 @@
+<Lems>
+    
+    <!--
+
+
+Parameters and setting used to generate this network:
+
+    Data reader:                    SpreadsheetDataReader
+    c302 version:                   0.6.0
+    Cells:                          ['DB2', 'VB2', 'DD2', 'VD2', 'DB3', 'VB3', 'DD3', 'VD3', 'DA2', 'VA2', 'DA3', 'VA3', 'AVBL', 'AVBR']
+    Cell stimulated:                ['AVBL', 'AVBR']
+    Connection:                     []
+    Connection numbers overridden:  None
+    Connection numbers scaled:      None
+    Connection polarities override: None
+    Muscles:                        []
+
+    Known BioParameters:
+        BioParameter: ca_boyle_erev = 40 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: ca_conc_decay_time = 11.5943 ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: ca_conc_rho = 0.000238919 mol_per_m_per_A_per_s (SRC: BlindGuess, certainty 0.1)
+        BioParameter: cell_diameter = 5 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: exc_syn_ad = 20 per_s (SRC: BlindGuess, certainty 0.1)
+        BioParameter: exc_syn_ar = .5 per_s (SRC: BlindGuess, certainty 0.1)
+        BioParameter: exc_syn_beta = 0.25 per_mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: exc_syn_erev = 0 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: exc_syn_vth = -35 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: global_connectivity_power_scaling = 0 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: inh_syn_ad = 10 per_s (SRC: BlindGuess, certainty 0.1)
+        BioParameter: inh_syn_ar = .005 per_s (SRC: BlindGuess, certainty 0.1)
+        BioParameter: inh_syn_beta = 0.5 per_mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: inh_syn_erev = -90 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: inh_syn_vth = -55 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: initial_memb_pot = -45 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: k_fast_erev = -60 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: k_slow_erev = -60 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: leak_erev = -50 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_ca_boyle_cond_density = 4 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_k_fast_cond_density = 0.2 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_k_slow_cond_density = 4 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_leak_cond_density = 0.005 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_length = 20 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_spike_thresh = -26 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_ca_boyle_cond_density = 1.6862775772264702 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_k_fast_cond_density = 0.0711643917483308 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_k_slow_cond_density = 1.8333751019872582 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_leak_cond_density = 0.005 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_spike_thresh = -26 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_elec_syn_gbase = 0.0001 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_exc_syn_conductance = 2 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_inh_syn_conductance = 0.25 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_elec_syn_gbase = 0.005 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_exc_syn_conductance = 2 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_inh_syn_conductance = 26 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: resistivity = 3 kohm_cm (SRC: BlindGuess, certainty 0.1)
+        BioParameter: specific_capacitance = 1 uF_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: unphysiological_offset_current = 5 pA (SRC: KnownError, certainty 0)
+        BioParameter: unphysiological_offset_current_del = 10 ms (SRC: Testing Osc, certainty 0)
+        BioParameter: unphysiological_offset_current_dur = 2500 ms (SRC: Testing Osc, certainty 0)
+
+   
+    -->
+
+    <Target component="sim_c302_D1_Oscillator" />
+
+    <!-- Include core NeuroML2 ComponentType definitions -->
+
+    <Include file="Cells.xml" />
+    <Include file="Networks.xml" />
+    <Include file="Simulation.xml" />
+    
+    <Include file="cell_C.xml" />
+    
+    <Include file="custom_synapses.xml" />
+    
+    <Include file="cells/AVBL_D.cell.nml" />
+    
+    <Include file="cells/AVBR_D.cell.nml" />
+    
+    <Include file="cells/DA2_D.cell.nml" />
+    
+    <Include file="cells/DA3_D.cell.nml" />
+    
+    <Include file="cells/DB2_D.cell.nml" />
+    
+    <Include file="cells/DB3_D.cell.nml" />
+    
+    <Include file="cells/DD2_D.cell.nml" />
+    
+    <Include file="cells/DD3_D.cell.nml" />
+    
+    <Include file="cells/VA2_D.cell.nml" />
+    
+    <Include file="cells/VA3_D.cell.nml" />
+    
+    <Include file="cells/VB2_D.cell.nml" />
+    
+    <Include file="cells/VB3_D.cell.nml" />
+    
+    <Include file="cells/VD2_D.cell.nml" />
+    
+    <Include file="cells/VD3_D.cell.nml" />
+    
+    <Include file="c302_D1_Oscillator.net.nml" />
+
+    <!-- End of NeuroML2 content -->
+    
+
+    <Simulation id="sim_c302_D1_Oscillator" length="1000ms" step="0.05ms" target="c302_D1_Oscillator">
+
+        <Display id="neurons" title="c302_D1_Oscillator: Membrane potential of a number of neurons" timeScale="1ms" xmin="-100.0" xmax="1100.0" ymin="-60" ymax="25">
+            
+            <Line id="AVBL" quantity="AVBL/0/AVBL/v" scale="1mV" color="#8b779a" timeScale="1ms" />
+            <Line id="AVBR" quantity="AVBR/0/AVBR/v" scale="1mV" color="#ef7488" timeScale="1ms" />
+            <Line id="DA2" quantity="DA2/0/DA2/v" scale="1mV" color="#2a8f25" timeScale="1ms" />
+            <Line id="DA3" quantity="DA3/0/DA3/v" scale="1mV" color="#2d27f5" timeScale="1ms" />
+            <Line id="DB2" quantity="DB2/0/DB2/v" scale="1mV" color="#c979d2" timeScale="1ms" />
+            <Line id="DB3" quantity="DB3/0/DB3/v" scale="1mV" color="#1e88d5" timeScale="1ms" />
+            <Line id="DD2" quantity="DD2/0/DD2/v" scale="1mV" color="#e94527" timeScale="1ms" />
+            <Line id="DD3" quantity="DD3/0/DD3/v" scale="1mV" color="#008216" timeScale="1ms" />
+            <Line id="VA2" quantity="VA2/0/VA2/v" scale="1mV" color="#3365b5" timeScale="1ms" />
+            <Line id="VA3" quantity="VA3/0/VA3/v" scale="1mV" color="#964dd0" timeScale="1ms" />
+            <Line id="VB2" quantity="VB2/0/VB2/v" scale="1mV" color="#d81153" timeScale="1ms" />
+            <Line id="VB3" quantity="VB3/0/VB3/v" scale="1mV" color="#35d361" timeScale="1ms" />
+            <Line id="VD2" quantity="VD2/0/VD2/v" scale="1mV" color="#174269" timeScale="1ms" />
+            <Line id="VD3" quantity="VD3/0/VD3/v" scale="1mV" color="#e171c7" timeScale="1ms" />
+            
+        </Display>
+      
+        <Display id="activity_neurons" title="c302_D1_Oscillator: Activity of a number of neurons" timeScale="1ms" xmin="-100.0" xmax="1100.0" ymin="-0.1" ymax="1.1">
+            
+            <Line id="AVBL" quantity="AVBL/0/AVBL/caConc" scale="1" color="#169445" timeScale="1ms" />
+            <Line id="AVBR" quantity="AVBR/0/AVBR/caConc" scale="1" color="#008200" timeScale="1ms" />
+            <Line id="DA2" quantity="DA2/0/DA2/caConc" scale="1" color="#f0c6f5" timeScale="1ms" />
+            <Line id="DA3" quantity="DA3/0/DA3/caConc" scale="1" color="#27d600" timeScale="1ms" />
+            <Line id="DB2" quantity="DB2/0/DB2/caConc" scale="1" color="#e270c8" timeScale="1ms" />
+            <Line id="DB3" quantity="DB3/0/DB3/caConc" scale="1" color="#7cd2a8" timeScale="1ms" />
+            <Line id="DD2" quantity="DD2/0/DD2/caConc" scale="1" color="#d8b9cb" timeScale="1ms" />
+            <Line id="DD3" quantity="DD3/0/DD3/caConc" scale="1" color="#efb351" timeScale="1ms" />
+            <Line id="VA2" quantity="VA2/0/VA2/caConc" scale="1" color="#e480d2" timeScale="1ms" />
+            <Line id="VA3" quantity="VA3/0/VA3/caConc" scale="1" color="#8980c6" timeScale="1ms" />
+            <Line id="VB2" quantity="VB2/0/VB2/caConc" scale="1" color="#00ada4" timeScale="1ms" />
+            <Line id="VB3" quantity="VB3/0/VB3/caConc" scale="1" color="#e0f68a" timeScale="1ms" />
+            <Line id="VD2" quantity="VD2/0/VD2/caConc" scale="1" color="#dc471d" timeScale="1ms" />
+            <Line id="VD3" quantity="VD3/0/VD3/caConc" scale="1" color="#2a4f12" timeScale="1ms" />
+
+        </Display>
+
+        <OutputFile id="neurons_v" fileName="c302_D1_Oscillator.dat">
+            <OutputColumn id="AVBL_v" quantity="AVBL/0/AVBL/v"/>
+            <OutputColumn id="AVBR_v" quantity="AVBR/0/AVBR/v"/>
+            <OutputColumn id="DA2_v" quantity="DA2/0/DA2/v"/>
+            <OutputColumn id="DA3_v" quantity="DA3/0/DA3/v"/>
+            <OutputColumn id="DB2_v" quantity="DB2/0/DB2/v"/>
+            <OutputColumn id="DB3_v" quantity="DB3/0/DB3/v"/>
+            <OutputColumn id="DD2_v" quantity="DD2/0/DD2/v"/>
+            <OutputColumn id="DD3_v" quantity="DD3/0/DD3/v"/>
+            <OutputColumn id="VA2_v" quantity="VA2/0/VA2/v"/>
+            <OutputColumn id="VA3_v" quantity="VA3/0/VA3/v"/>
+            <OutputColumn id="VB2_v" quantity="VB2/0/VB2/v"/>
+            <OutputColumn id="VB3_v" quantity="VB3/0/VB3/v"/>
+            <OutputColumn id="VD2_v" quantity="VD2/0/VD2/v"/>
+            <OutputColumn id="VD3_v" quantity="VD3/0/VD3/v"/>
+        </OutputFile>
+        
+        <OutputFile id="neurons_activity" fileName="c302_D1_Oscillator.activity.dat">
+            <OutputColumn id="AVBL_v" quantity="AVBL/0/AVBL/caConc"/>
+            <OutputColumn id="AVBR_v" quantity="AVBR/0/AVBR/caConc"/>
+            <OutputColumn id="DA2_v" quantity="DA2/0/DA2/caConc"/>
+            <OutputColumn id="DA3_v" quantity="DA3/0/DA3/caConc"/>
+            <OutputColumn id="DB2_v" quantity="DB2/0/DB2/caConc"/>
+            <OutputColumn id="DB3_v" quantity="DB3/0/DB3/caConc"/>
+            <OutputColumn id="DD2_v" quantity="DD2/0/DD2/caConc"/>
+            <OutputColumn id="DD3_v" quantity="DD3/0/DD3/caConc"/>
+            <OutputColumn id="VA2_v" quantity="VA2/0/VA2/caConc"/>
+            <OutputColumn id="VA3_v" quantity="VA3/0/VA3/caConc"/>
+            <OutputColumn id="VB2_v" quantity="VB2/0/VB2/caConc"/>
+            <OutputColumn id="VB3_v" quantity="VB3/0/VB3/caConc"/>
+            <OutputColumn id="VD2_v" quantity="VD2/0/VD2/caConc"/>
+            <OutputColumn id="VD3_v" quantity="VD3/0/VD3/caConc"/>
+        </OutputFile>
+    </Simulation>
+
+
+</Lems>

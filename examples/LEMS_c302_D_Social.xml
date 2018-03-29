@@ -1,0 +1,136 @@
+<Lems>
+    
+    <!--
+
+
+Parameters and setting used to generate this network:
+
+    Data reader:                    SpreadsheetDataReader
+    c302 version:                   0.6.0
+    Cells:                          ['RMGR', 'ASHR', 'ASKR', 'AWBR', 'IL2R', 'RMHR', 'URXR']
+    Cell stimulated:                []
+    Connection:                     []
+    Connection numbers overridden:  None
+    Connection numbers scaled:      None
+    Connection polarities override: None
+    Muscles:                        []
+
+    Known BioParameters:
+        BioParameter: ca_boyle_erev = 40 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: ca_conc_decay_time = 11.5943 ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: ca_conc_rho = 0.000238919 mol_per_m_per_A_per_s (SRC: BlindGuess, certainty 0.1)
+        BioParameter: cell_diameter = 5 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: chem_exc_syn_decay = 5 ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: chem_exc_syn_erev = 0 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: chem_exc_syn_rise = 1 ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: chem_inh_syn_decay = 40 ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: chem_inh_syn_erev = -60 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: chem_inh_syn_rise = 2 ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: initial_memb_pot = -45 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: k_fast_erev = -60 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: k_slow_erev = -60 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: leak_erev = -50 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_ca_boyle_cond_density = 2 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_k_fast_cond_density = 0.2 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_k_slow_cond_density = 4 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_leak_cond_density = 0.005 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_length = 20 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_spike_thresh = -26 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_ca_boyle_cond_density = 2 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_k_fast_cond_density = 0.2 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_k_slow_cond_density = 2 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_leak_cond_density = 0.02 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_spike_thresh = -26 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_chem_exc_syn_gbase = .01 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_chem_inh_syn_gbase = 3 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_elec_syn_gbase = 0.0005 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_chem_exc_syn_gbase = .01 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_chem_inh_syn_gbase = 3 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_elec_syn_gbase = 0.0005 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: resistivity = 12 kohm_cm (SRC: BlindGuess, certainty 0.1)
+        BioParameter: specific_capacitance = 1 uF_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: unphysiological_offset_current = 5 pA (SRC: KnownError, certainty 0)
+        BioParameter: unphysiological_offset_current_del = 0 ms (SRC: KnownError, certainty 0)
+        BioParameter: unphysiological_offset_current_dur = 2000 ms (SRC: KnownError, certainty 0)
+
+   
+    -->
+
+    <Target component="sim_c302_D_Social" />
+
+    <!-- Include core NeuroML2 ComponentType definitions -->
+
+    <Include file="Cells.xml" />
+    <Include file="Networks.xml" />
+    <Include file="Simulation.xml" />
+    
+    <Include file="cell_C.xml" />
+    
+    <Include file="cells/ASHR_D.cell.nml" />
+    
+    <Include file="cells/ASKR_D.cell.nml" />
+    
+    <Include file="cells/AWBR_D.cell.nml" />
+    
+    <Include file="cells/IL2R_D.cell.nml" />
+    
+    <Include file="cells/RMGR_D.cell.nml" />
+    
+    <Include file="cells/RMHR_D.cell.nml" />
+    
+    <Include file="cells/URXR_D.cell.nml" />
+    
+    <Include file="c302_D_Social.net.nml" />
+
+    <!-- End of NeuroML2 content -->
+    
+
+    <Simulation id="sim_c302_D_Social" length="2500ms" step="0.05ms" target="c302_D_Social">
+
+        <Display id="neurons" title="c302_D_Social: Membrane potential of a number of neurons" timeScale="1ms" xmin="-250.0" xmax="2750.0" ymin="-60" ymax="25">
+            
+            <Line id="ASHR" quantity="ASHR/0/ASHR/v" scale="1mV" color="#8b779a" timeScale="1ms" />
+            <Line id="ASKR" quantity="ASKR/0/ASKR/v" scale="1mV" color="#ef7488" timeScale="1ms" />
+            <Line id="AWBR" quantity="AWBR/0/AWBR/v" scale="1mV" color="#2a8f25" timeScale="1ms" />
+            <Line id="IL2R" quantity="IL2R/0/IL2R/v" scale="1mV" color="#2d27f5" timeScale="1ms" />
+            <Line id="RMGR" quantity="RMGR/0/RMGR/v" scale="1mV" color="#c979d2" timeScale="1ms" />
+            <Line id="RMHR" quantity="RMHR/0/RMHR/v" scale="1mV" color="#1e88d5" timeScale="1ms" />
+            <Line id="URXR" quantity="URXR/0/URXR/v" scale="1mV" color="#e94527" timeScale="1ms" />
+            
+        </Display>
+      
+        <Display id="activity_neurons" title="c302_D_Social: Activity of a number of neurons" timeScale="1ms" xmin="-250.0" xmax="2750.0" ymin="-0.1" ymax="1.1">
+            
+            <Line id="ASHR" quantity="ASHR/0/ASHR/caConc" scale="1" color="#169445" timeScale="1ms" />
+            <Line id="ASKR" quantity="ASKR/0/ASKR/caConc" scale="1" color="#008200" timeScale="1ms" />
+            <Line id="AWBR" quantity="AWBR/0/AWBR/caConc" scale="1" color="#f0c6f5" timeScale="1ms" />
+            <Line id="IL2R" quantity="IL2R/0/IL2R/caConc" scale="1" color="#27d600" timeScale="1ms" />
+            <Line id="RMGR" quantity="RMGR/0/RMGR/caConc" scale="1" color="#e270c8" timeScale="1ms" />
+            <Line id="RMHR" quantity="RMHR/0/RMHR/caConc" scale="1" color="#7cd2a8" timeScale="1ms" />
+            <Line id="URXR" quantity="URXR/0/URXR/caConc" scale="1" color="#d8b9cb" timeScale="1ms" />
+
+        </Display>
+
+        <OutputFile id="neurons_v" fileName="c302_D_Social.dat">
+            <OutputColumn id="ASHR_v" quantity="ASHR/0/ASHR/v"/>
+            <OutputColumn id="ASKR_v" quantity="ASKR/0/ASKR/v"/>
+            <OutputColumn id="AWBR_v" quantity="AWBR/0/AWBR/v"/>
+            <OutputColumn id="IL2R_v" quantity="IL2R/0/IL2R/v"/>
+            <OutputColumn id="RMGR_v" quantity="RMGR/0/RMGR/v"/>
+            <OutputColumn id="RMHR_v" quantity="RMHR/0/RMHR/v"/>
+            <OutputColumn id="URXR_v" quantity="URXR/0/URXR/v"/>
+        </OutputFile>
+        
+        <OutputFile id="neurons_activity" fileName="c302_D_Social.activity.dat">
+            <OutputColumn id="ASHR_v" quantity="ASHR/0/ASHR/caConc"/>
+            <OutputColumn id="ASKR_v" quantity="ASKR/0/ASKR/caConc"/>
+            <OutputColumn id="AWBR_v" quantity="AWBR/0/AWBR/caConc"/>
+            <OutputColumn id="IL2R_v" quantity="IL2R/0/IL2R/caConc"/>
+            <OutputColumn id="RMGR_v" quantity="RMGR/0/RMGR/caConc"/>
+            <OutputColumn id="RMHR_v" quantity="RMHR/0/RMHR/caConc"/>
+            <OutputColumn id="URXR_v" quantity="URXR/0/URXR/caConc"/>
+        </OutputFile>
+    </Simulation>
+
+
+</Lems>

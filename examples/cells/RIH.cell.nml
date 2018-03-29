@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<neuroml xmlns="http://www.neuroml.org/schema/neuroml2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2  https://raw.githubusercontent.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2beta4.xsd" id="RIH">
+
+    <include href="LeakConductance.channel.nml"/>
+
+    <cell id="RIH">
+
+        <notes>
+Interneuron
+</notes>
+
+        <morphology id="morphology_RIH">
+
+            <segment id="0" name="Seg0_soma_0">
+                <proximal x="-2.0" y="-267.35" z="35.95" diameter="2.8460498"/>
+                <distal x="-2.0" y="-267.35" z="35.95" diameter="2.8460498"/>
+            </segment>
+
+            <segment id="1" name="Seg0_axon_0">
+                <parent segment="0"/>
+                <proximal x="-2.0" y="-267.35" z="35.95" diameter="0.37416574"/>
+                <distal x="-1.9" y="-267.35" z="35.95" diameter="0.37416574"/>
+            </segment>
+
+            <segment id="2" name="Seg2_axon_0">
+                <parent segment="1"/>
+                <distal x="-1.9" y="-266.65002" z="35.4" diameter="0.3"/>
+            </segment>
+
+            <segment id="3" name="Seg3_axon_0">
+                <parent segment="2"/>
+                <distal x="-1.9" y="-265.9" z="34.850002" diameter="0.3"/>
+            </segment>
+
+            <segment id="4" name="Seg4_axon_0">
+                <parent segment="3"/>
+                <distal x="-1.9" y="-265.9" z="34.5" diameter="0.28284273"/>
+            </segment>
+
+            <segment id="5" name="Seg5_axon_0">
+                <parent segment="4"/>
+                <distal x="-1.9" y="-266.35" z="34.0" diameter="0.3"/>
+            </segment>
+
+            <segment id="6" name="Seg6_axon_0">
+                <parent segment="5"/>
+                <distal x="-1.9" y="-268.19998" z="33.95" diameter="0.36055514"/>
+            </segment>
+
+            <segment id="7" name="Seg7_axon_0">
+                <parent segment="6"/>
+                <distal x="-1.65" y="-268.475" z="34.125" diameter="0.30822068"/>
+            </segment>
+
+            <segment id="8" name="Seg8_axon_0">
+                <parent segment="7"/>
+                <distal x="0.4" y="-269.32498" z="35.525" diameter="0.35355338"/>
+            </segment>
+
+            <segment id="9" name="Seg9_axon_0">
+                <parent segment="8"/>
+                <distal x="1.8" y="-270.0" z="36.55" diameter="0.3"/>
+            </segment>
+
+            <segment id="10" name="Seg10_axon_0">
+                <parent segment="9"/>
+                <distal x="1.8750001" y="-271.65" z="38.3" diameter="0.41533118"/>
+            </segment>
+
+            <segment id="11" name="Seg11_axon_0">
+                <parent segment="10"/>
+                <distal x="2.4250002" y="-272.42502" z="39.3" diameter="0.47434163"/>
+            </segment>
+
+            <segment id="12" name="Seg12_axon_0">
+                <parent segment="11"/>
+                <distal x="2.775" y="-273.0" z="39.774998" diameter="0.38078865"/>
+            </segment>
+
+            <segment id="13" name="Seg13_axon_0">
+                <parent segment="12"/>
+                <distal x="2.775" y="-273.25" z="39.75" diameter="0.3774917"/>
+            </segment>
+
+            <segment id="14" name="Seg14_neurite_0">
+                <parent segment="13"/>
+                <proximal x="2.775" y="-273.25" z="39.75" diameter="0.3774917"/>
+                <distal x="2.625" y="-273.35" z="39.625" diameter="0.46368092"/>
+            </segment>
+
+            <segment id="15" name="Seg15_neurite_0">
+                <parent segment="14"/>
+                <distal x="0.65000004" y="-273.15" z="38.125" diameter="0.47169906"/>
+            </segment>
+
+            <segment id="16" name="Seg16_neurite_0">
+                <parent segment="15"/>
+                <distal x="-2.1" y="-273.05" z="37.475" diameter="0.39051247"/>
+            </segment>
+
+            <segment id="17" name="Seg17_neurite_0">
+                <parent segment="16"/>
+                <distal x="-4.8500004" y="-273.15" z="38.125" diameter="0.35000002"/>
+            </segment>
+
+            <segment id="18" name="Seg18_neurite_0">
+                <parent segment="17"/>
+                <distal x="-7.125" y="-273.42502" z="39.825" diameter="0.4555217"/>
+            </segment>
+
+            <segment id="19" name="Seg19_neurite_0">
+                <parent segment="18"/>
+                <distal x="-8.7" y="-273.775" z="42.449997" diameter="0.41533118"/>
+            </segment>
+
+            <segment id="20" name="Seg20_neurite_0">
+                <parent segment="19"/>
+                <distal x="-9.2" y="-274.2" z="45.5" diameter="0.4472136"/>
+            </segment>
+
+            <segment id="21" name="Seg21_neurite_0">
+                <parent segment="20"/>
+                <distal x="-8.65" y="-274.65" z="48.525" diameter="0.4924429"/>
+            </segment>
+
+            <segment id="22" name="Seg22_neurite_0">
+                <parent segment="21"/>
+                <distal x="-7.1000004" y="-275.0" z="51.1" diameter="0.48989794"/>
+            </segment>
+
+            <segment id="23" name="Seg23_neurite_0">
+                <parent segment="22"/>
+                <distal x="-4.8500004" y="-275.3" z="52.824997" diameter="0.48218253"/>
+            </segment>
+
+            <segment id="24" name="Seg24_neurite_0">
+                <parent segment="23"/>
+                <distal x="-2.5" y="-275.3" z="53.250004" diameter="0.36055514"/>
+            </segment>
+
+            <segment id="25" name="Seg25_neurite_0">
+                <parent segment="13"/>
+                <proximal x="2.775" y="-273.25" z="39.75" diameter="0.3774917"/>
+                <distal x="2.8999999" y="-273.42502" z="39.825" diameter="0.40620193"/>
+            </segment>
+
+            <segment id="26" name="Seg26_neurite_0">
+                <parent segment="25"/>
+                <distal x="4.475" y="-273.775" z="42.449997" diameter="0.44158804"/>
+            </segment>
+
+            <segment id="27" name="Seg27_neurite_0">
+                <parent segment="26"/>
+                <distal x="4.975" y="-274.2" z="45.5" diameter="0.42720017"/>
+            </segment>
+
+            <segment id="28" name="Seg28_neurite_0">
+                <parent segment="27"/>
+                <distal x="4.4500003" y="-274.65" z="48.525" diameter="0.4924429"/>
+            </segment>
+
+            <segment id="29" name="Seg29_neurite_0">
+                <parent segment="28"/>
+                <distal x="2.8999999" y="-275.0" z="51.1" diameter="0.48989794"/>
+            </segment>
+
+            <segment id="30" name="Seg30_neurite_0">
+                <parent segment="29"/>
+                <distal x="0.6" y="-275.3" z="52.8" diameter="0.4472136"/>
+            </segment>
+
+            <segment id="31" name="Seg31_neurite_0">
+                <parent segment="30"/>
+                <distal x="-1.9" y="-275.3" z="53.250004" diameter="0.36055514"/>
+            </segment>
+
+            <segmentGroup id="Soma" neuroLexId="sao864921383">    <!--
+                This group contains an unbranched set of segments, and all of the segmentGroups marked with
+                neuroLexId = sao864921383 form a non-overlapping set of all of the segments. 
+                These segmentGroups correspond to the 'cables' of NeuroML v1.8.1. -->
+
+                <member segment="0"/>
+            </segmentGroup>
+
+            <segmentGroup id="Axon" neuroLexId="sao864921383">    <!--
+                This group contains an unbranched set of segments, and all of the segmentGroups marked with
+                neuroLexId = sao864921383 form a non-overlapping set of all of the segments. 
+                These segmentGroups correspond to the 'cables' of NeuroML v1.8.1. -->
+
+                <member segment="1"/>
+            
+                <member segment="2"/>
+            
+                <member segment="3"/>
+            
+                <member segment="4"/>
+            
+                <member segment="5"/>
+            
+                <member segment="6"/>
+            
+                <member segment="7"/>
+            
+                <member segment="8"/>
+            
+                <member segment="9"/>
+            
+                <member segment="10"/>
+            
+                <member segment="11"/>
+            
+                <member segment="12"/>
+            
+                <member segment="13"/>
+            </segmentGroup>
+
+            <segmentGroup id="Neurite2" neuroLexId="sao864921383">    <!--
+                This group contains an unbranched set of segments, and all of the segmentGroups marked with
+                neuroLexId = sao864921383 form a non-overlapping set of all of the segments. 
+                These segmentGroups correspond to the 'cables' of NeuroML v1.8.1. -->
+
+                <member segment="14"/>
+            
+                <member segment="15"/>
+            
+                <member segment="16"/>
+            
+                <member segment="17"/>
+            
+                <member segment="18"/>
+            
+                <member segment="19"/>
+            
+                <member segment="20"/>
+            
+                <member segment="21"/>
+            
+                <member segment="22"/>
+            
+                <member segment="23"/>
+            
+                <member segment="24"/>
+            </segmentGroup>
+
+            <segmentGroup id="Neurite3" neuroLexId="sao864921383">    <!--
+                This group contains an unbranched set of segments, and all of the segmentGroups marked with
+                neuroLexId = sao864921383 form a non-overlapping set of all of the segments. 
+                These segmentGroups correspond to the 'cables' of NeuroML v1.8.1. -->
+
+                <member segment="25"/>
+            
+                <member segment="26"/>
+            
+                <member segment="27"/>
+            
+                <member segment="28"/>
+            
+                <member segment="29"/>
+            
+                <member segment="30"/>
+            
+                <member segment="31"/>
+            </segmentGroup>
+
+            <segmentGroup id="all">
+                <include segmentGroup="Soma"/>
+                <include segmentGroup="Axon"/>
+                <include segmentGroup="Neurite2"/>
+                <include segmentGroup="Neurite3"/>
+            </segmentGroup>
+
+            <segmentGroup id="soma_group" neuroLexId="GO:0043025">    <!--Soma group-->
+
+                <include segmentGroup="Soma"/>
+            </segmentGroup>
+
+            <segmentGroup id="axon_group" neuroLexId="GO:0030424">    <!--Axon group-->
+
+                <include segmentGroup="Axon"/>
+            </segmentGroup>
+
+            <segmentGroup id="dendrite_group" neuroLexId="GO:0030425">    <!--Dendrite group-->
+
+                <include segmentGroup="Neurite2"/>
+                <include segmentGroup="Neurite3"/>
+            </segmentGroup>
+
+            
+        </morphology>
+
+            <!--Adding the biophysical parameters-->
+
+        <biophysicalProperties id="biophys">
+
+            <membraneProperties>
+                
+                <channelDensity condDensity="0.025 mS_per_cm2" id="LeakConductance_all" ionChannel="LeakConductance" ion="non_specific" erev="-65.0 mV"/>
+                
+
+                <spikeThresh value="0 mV"/>
+
+                <specificCapacitance value="1.0 uF_per_cm2"/>
+
+                <initMembPotential value="-65.0 mV"/>
+
+            </membraneProperties>
+
+            <intracellularProperties>
+
+                <resistivity value="0.03 kohm_cm"/>
+
+            </intracellularProperties>
+
+        </biophysicalProperties>
+
+    </cell>
+    
+</neuroml>
