@@ -1,0 +1,65 @@
+CEPDL: Tauber
+I1L: sitructa
+HSNR: OpenScienceFTW
+I1R: Jesus Martinez
+I5: yates
+PHAR: Eliot Attridge
+AVAL: JUD
+ALA: Rosa
+RIVR: Wil Wheaton
+I2L: MetaMal
+PVCL: Ramana Kumar
+RIBR: robkirkup
+AVBR: mn
+RMHR: Martino
+CEPVR: The Swarm
+DA1: KR
+MI: NeuroMind technology
+VC1: Gnothi seauton
+PVCR: J. Pablo Fernandez
+DVA: Jeff Alstott
+SDQR: ogachyuallincheck
+DA2: Ruzila
+CANR: neurobelle
+ADAL: Xabe
+VA2: Marquam Hill
+M5: Asher
+FLPR: Geoff Fortytwo's Neuron of Awesomeness
+AS2: Geraldine
+VD1: Ackley Lab
+AQR: Christian A. Seebauer
+VC4: Klob Le Grand
+ADFL: Lloyd Watts
+VB1: NoTex.ch: An online text editor for reST et. al.
+CANL: Ruben Kamran
+PVM: aKzenT
+CEPVL: Gernot Weiser
+AS1: Kottbusser Tor
+AVG: JRW-UK
+VB2: Bloodgood
+CEPDR: foxx
+AIZR: Robleda de Salamanca
+I2R: Flying Armbar
+BAGL: carcode
+RMGR: Bryan Nagle
+ADAR: Aurolessa
+AVM: chinsangian
+ASKR: Z.B.
+VB3: Ramez Naam
+VC2: M.Habryn
+PLML: Isaac Spear
+PLMR: Altman
+DA3: Magoo
+M1: albertwenger
+URADL: akizzles
+RIAL: Sara
+DD1: Stanislav Petrov
+VB4: Worm
+AIAL: Hylowyrm
+AIAR: brunni
+PVDL: Andreas Makoto Hein
+IL2L: Alessandro Russo
+PHCR: unusual connectivity
+DD2: Evolver
+HSNL: The Stoner Neuron
+LUAL: VSAZEL

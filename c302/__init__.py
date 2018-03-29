@@ -44,10 +44,10 @@ except:
     from urllib.error import URLError  # Python 3
 
 import sys
-sys.path.append("..")
+#sys.path.append("..")
 #import SpreadsheetDataReader
 
-__version__ = '0.5.0'
+__version__ = '0.6.0'
 
 LEMS_TEMPLATE_FILE = "LEMS_c302_TEMPLATE.xml"
 
@@ -237,8 +237,8 @@ def get_next_stim_id(nml_doc, cell):
 def get_cell_position(cell):
     root_dir = os.path.dirname(os.path.abspath(__file__))
     #cell_file_path = root_dir + "/../../../" if test else root_dir + "/../../"  # if running test
-    cell_file_path = root_dir + "/../../" 
-    cell_file = cell_file_path + 'generatedNeuroML2/%s.cell.nml' % cell
+    cell_file_path = root_dir + "/" 
+    cell_file = cell_file_path + 'NeuroML2/%s.cell.nml' % cell
     doc = loaders.NeuroMLLoader.load(cell_file)
     location = doc.cells[0].morphology.segments[0].proximal
     #print "%s, %s, %s" %(location.x, location.y, location.z)
@@ -376,7 +376,7 @@ def get_cell_names_and_connection(data_reader="SpreadsheetDataReader", test=Fals
     # This could be replaced with a call to "DatabaseReader" or "OpenWormNeuroLexReader" in future...
     # If called from unittest folder ammend path to "../../../../"
     
-    spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/../../../"
+    spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/data/"
 
     cell_names, conns = load_data_reader(data_reader).readDataFromSpreadsheet(include_nonconnected_cells=True)
 
@@ -696,10 +696,9 @@ def generate(net_id,
             nml_doc.includes.append(IncludeType(href=ctd))
     
     
-    backers_dir = root_dir+"/../../../../OpenWormBackers/" if test else root_dir+"/../../../OpenWormBackers/"
-    sys.path.append(backers_dir)
+
     import backers
-    cells_vs_name = backers.get_adopted_cell_names(backers_dir)
+    cells_vs_name = backers.get_adopted_cell_names()
 
 
     count = 0
@@ -750,8 +749,8 @@ def generate(net_id,
 
             # also use the cell name to grab the morphology file, as a NeuroML data structure
             #  into the 'all_cells' dict
-            cell_file_path = root_dir+"/../../../" if test else root_dir+"/../../" #if running test
-            cell_file = cell_file_path+'generatedNeuroML2/%s.cell.nml'%cell
+            cell_file_path = root_dir+"/../../" if test else root_dir+"/../" #if running test
+            cell_file = cell_file_path+'NeuroML2/%s.cell.nml'%cell
             doc = loaders.NeuroMLLoader.load(cell_file)
             all_cells[cell] = doc.cells[0]
             
