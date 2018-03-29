@@ -1,0 +1,142 @@
+<neuroml xmlns="http://www.neuroml.org/schema/neuroml2"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2 https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2beta5.xsd" id="c302_A_IClamp">
+    <notes>
+
+Parameters and setting used to generate this network:
+
+    Data reader:                    SpreadsheetDataReader
+    c302 version:                   0.6.0
+    Cells:                          ['ADAL', 'PVCL']
+    Cell stimulated:                []
+    Connection:                     []
+    Connection numbers overridden:  None
+    Connection numbers scaled:      None
+    Connection polarities override: None
+    Muscles:                        ['MDR01']
+
+    Known BioParameters:
+        BioParameter: chem_exc_syn_decay = 10ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: chem_exc_syn_erev = 0mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: chem_exc_syn_rise = 3ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: chem_inh_syn_decay = 10ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: chem_inh_syn_erev = -80mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: chem_inh_syn_rise = 3ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: elec_syn_decay = 10ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: elec_syn_erev = 0mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: elec_syn_rise = 3ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_iaf_C = 3pF (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_iaf_conductance = 0.1nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_iaf_leak_reversal = -50mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_iaf_reset = -50mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_iaf_thresh = -30mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_iaf_C = 3pF (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_iaf_conductance = 0.1nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_iaf_leak_reversal = -50mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_iaf_reset = -50mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_iaf_thresh = -30mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_chem_exc_syn_gbase = 0.01nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_chem_inh_syn_gbase = 0.01nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_elec_syn_gbase = 0nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_chem_exc_syn_gbase = 0.01nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_chem_inh_syn_gbase = 0.01nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_elec_syn_gbase = 0nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: unphysiological_offset_current = 2.5pA (SRC: KnownError, certainty 0)
+        BioParameter: unphysiological_offset_current_del = 0ms (SRC: KnownError, certainty 0)
+        BioParameter: unphysiological_offset_current_dur = 200ms (SRC: KnownError, certainty 0)
+
+</notes>
+    <iafCell id="generic_muscle_iaf_cell" leakReversal="-50mV" thresh="-30mV" reset="-50mV" C="3pF" leakConductance="0.1nS"/>
+    <iafCell id="generic_neuron_iaf_cell" leakReversal="-50mV" thresh="-30mV" reset="-50mV" C="3pF" leakConductance="0.1nS"/>
+    <pulseGenerator id="offset_current" delay="0ms" duration="200ms" amplitude="2.5pA"/>
+    <pulseGenerator id="stim_ADAL_1" delay="100ms" duration="800ms" amplitude="1pA"/>
+    <pulseGenerator id="stim_PVCL_1" delay="100ms" duration="800ms" amplitude="1pA"/>
+    <pulseGenerator id="stim_MDR01_1" delay="100ms" duration="800ms" amplitude="1pA"/>
+    <pulseGenerator id="stim_ADAL_2" delay="1100ms" duration="800ms" amplitude="2pA"/>
+    <pulseGenerator id="stim_PVCL_2" delay="1100ms" duration="800ms" amplitude="2pA"/>
+    <pulseGenerator id="stim_MDR01_2" delay="1100ms" duration="800ms" amplitude="2pA"/>
+    <pulseGenerator id="stim_ADAL_3" delay="2100ms" duration="800ms" amplitude="3pA"/>
+    <pulseGenerator id="stim_PVCL_3" delay="2100ms" duration="800ms" amplitude="3pA"/>
+    <pulseGenerator id="stim_MDR01_3" delay="2100ms" duration="800ms" amplitude="3pA"/>
+    <pulseGenerator id="stim_ADAL_4" delay="3100ms" duration="800ms" amplitude="4pA"/>
+    <pulseGenerator id="stim_PVCL_4" delay="3100ms" duration="800ms" amplitude="4pA"/>
+    <pulseGenerator id="stim_MDR01_4" delay="3100ms" duration="800ms" amplitude="4pA"/>
+    <pulseGenerator id="stim_ADAL_5" delay="4100ms" duration="800ms" amplitude="5pA"/>
+    <pulseGenerator id="stim_PVCL_5" delay="4100ms" duration="800ms" amplitude="5pA"/>
+    <pulseGenerator id="stim_MDR01_5" delay="4100ms" duration="800ms" amplitude="5pA"/>
+    <pulseGenerator id="stim_ADAL_6" delay="5100ms" duration="800ms" amplitude="6pA"/>
+    <pulseGenerator id="stim_PVCL_6" delay="5100ms" duration="800ms" amplitude="6pA"/>
+    <pulseGenerator id="stim_MDR01_6" delay="5100ms" duration="800ms" amplitude="6pA"/>
+    <network id="c302_A_IClamp">
+        <population id="ADAL" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="OpenWormBackerAssignedName" value="Xabe"/>
+            <instance id="0">
+                <location x="8.65" y="-239.25" z="31.050000000000001"/>
+            </instance>
+        </population>
+        <population id="PVCL" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="OpenWormBackerAssignedName" value="Ramana Kumar"/>
+            <instance id="0">
+                <location x="0.85" y="404.150019999999984" z="5.5"/>
+            </instance>
+        </population>
+        <population id="MDR01" component="generic_muscle_iaf_cell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="-80." y="-270." z="80."/>
+            </instance>
+        </population>
+        <inputList id="Input_ADAL_stim_ADAL_1" population="ADAL" component="stim_ADAL_1">
+            <input id="0" target="../ADAL/0/generic_neuron_iaf_cell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_PVCL_stim_PVCL_1" population="PVCL" component="stim_PVCL_1">
+            <input id="0" target="../PVCL/0/generic_neuron_iaf_cell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_MDR01_stim_MDR01_1" population="MDR01" component="stim_MDR01_1">
+            <input id="0" target="../MDR01/0/generic_muscle_iaf_cell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_ADAL_stim_ADAL_2" population="ADAL" component="stim_ADAL_2">
+            <input id="0" target="../ADAL/0/generic_neuron_iaf_cell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_PVCL_stim_PVCL_2" population="PVCL" component="stim_PVCL_2">
+            <input id="0" target="../PVCL/0/generic_neuron_iaf_cell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_MDR01_stim_MDR01_2" population="MDR01" component="stim_MDR01_2">
+            <input id="0" target="../MDR01/0/generic_muscle_iaf_cell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_ADAL_stim_ADAL_3" population="ADAL" component="stim_ADAL_3">
+            <input id="0" target="../ADAL/0/generic_neuron_iaf_cell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_PVCL_stim_PVCL_3" population="PVCL" component="stim_PVCL_3">
+            <input id="0" target="../PVCL/0/generic_neuron_iaf_cell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_MDR01_stim_MDR01_3" population="MDR01" component="stim_MDR01_3">
+            <input id="0" target="../MDR01/0/generic_muscle_iaf_cell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_ADAL_stim_ADAL_4" population="ADAL" component="stim_ADAL_4">
+            <input id="0" target="../ADAL/0/generic_neuron_iaf_cell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_PVCL_stim_PVCL_4" population="PVCL" component="stim_PVCL_4">
+            <input id="0" target="../PVCL/0/generic_neuron_iaf_cell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_MDR01_stim_MDR01_4" population="MDR01" component="stim_MDR01_4">
+            <input id="0" target="../MDR01/0/generic_muscle_iaf_cell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_ADAL_stim_ADAL_5" population="ADAL" component="stim_ADAL_5">
+            <input id="0" target="../ADAL/0/generic_neuron_iaf_cell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_PVCL_stim_PVCL_5" population="PVCL" component="stim_PVCL_5">
+            <input id="0" target="../PVCL/0/generic_neuron_iaf_cell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_MDR01_stim_MDR01_5" population="MDR01" component="stim_MDR01_5">
+            <input id="0" target="../MDR01/0/generic_muscle_iaf_cell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_ADAL_stim_ADAL_6" population="ADAL" component="stim_ADAL_6">
+            <input id="0" target="../ADAL/0/generic_neuron_iaf_cell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_PVCL_stim_PVCL_6" population="PVCL" component="stim_PVCL_6">
+            <input id="0" target="../PVCL/0/generic_neuron_iaf_cell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_MDR01_stim_MDR01_6" population="MDR01" component="stim_MDR01_6">
+            <input id="0" target="../MDR01/0/generic_muscle_iaf_cell" destination="synapses"/>
+        </inputList>
+    </network>
+</neuroml>
