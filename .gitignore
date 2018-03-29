@@ -1,0 +1,4 @@
+/build
+/c302.egg-info
+*.pyc
+/dist
