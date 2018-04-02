@@ -749,7 +749,7 @@ def generate(net_id,
 
             # also use the cell name to grab the morphology file, as a NeuroML data structure
             #  into the 'all_cells' dict
-            cell_file_path = root_dir+"/../../" if test else root_dir+"/../" #if running test
+            cell_file_path = root_dir+"/../" if test else root_dir+"/" #if running test
             cell_file = cell_file_path+'NeuroML2/%s.cell.nml'%cell
             doc = loaders.NeuroMLLoader.load(cell_file)
             all_cells[cell] = doc.cells[0]

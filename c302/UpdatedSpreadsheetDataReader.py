@@ -15,7 +15,7 @@ import csv
 from NeuroMLUtilities import ConnectionInfo
 import os
 
-spreadsheet_location = os.path.dirname(os.path.abspath(__file__)) + "/../../../"
+spreadsheet_location = os.path.dirname(os.path.abspath(__file__)) + "/../../"
 filename = "%sherm_full_edgelist.csv" % spreadsheet_location
 
 def get_all_muscle_prefixes():

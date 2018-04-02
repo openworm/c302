@@ -16,7 +16,7 @@ from NeuroMLUtilities import ConnectionInfo
 from xlrd import open_workbook
 import os
 
-spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/../data/"
+spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/data/"
 
 def readDataFromSpreadsheet(include_nonconnected_cells=False, neuron_connect=False):
 

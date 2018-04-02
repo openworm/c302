@@ -1,8 +1,7 @@
 
 
 from setuptools import setup
-from setuptools.command.install import install as _install
-import os, sys
+
 
 import c302
 version = c302.__version__
@@ -23,6 +22,11 @@ setup(
         'xlwt',
         'pyNeuroML'
     ],
+    package_data={
+        'c302': [
+            '*.xml',
+            'data/*',
+            'NeuroML2/*']},
     description = 'c302',
     long_description = long_description,
     license = 'MIT',

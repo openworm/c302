@@ -6,7 +6,7 @@
 
 import os
 
-def get_adopted_cell_names(root=os.path.dirname(os.path.abspath(__file__))+"/../data/"):
+def get_adopted_cell_names(root=os.path.dirname(os.path.abspath(__file__))+"/data/"):
     
     file = open(root+"adopters.txt")
     ads = {}
