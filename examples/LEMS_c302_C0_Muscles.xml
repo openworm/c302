@@ -1,0 +1,788 @@
+<Lems>
+    
+    <!--
+
+
+Parameters and setting used to generate this network:
+
+    Data reader:                    SpreadsheetDataReader
+    c302 version:                   0.6.0
+    Cells:                          ['AS1', 'AS10', 'AS11', 'AS2', 'AS3', 'AS4', 'AS5', 'AS6', 'AS7', 'AS8', 'AS9', 'AVFL', 'AVFR', 'AVKR', 'AVL', 'CEPVL', 'CEPVR', 'DA1', 'DA2', 'DA3', 'DA4', 'DA5', 'DA6', 'DA7', 'DA8', 'DA9', 'DB1', 'DB2', 'DB3', 'DB4', 'DB5', 'DB6', 'DB7', 'DD1', 'DD2', 'DD3', 'DD4', 'DD5', 'DD6', 'DVB', 'HSNL', 'HSNR', 'IL1DL', 'IL1DR', 'IL1L', 'IL1R', 'IL1VL', 'IL1VR', 'PDA', 'PDB', 'PVNL', 'PVNR', 'RID', 'RIML', 'RIMR', 'RIVL', 'RIVR', 'RMDDL', 'RMDDR', 'RMDL', 'RMDR', 'RMDVL', 'RMDVR', 'RMED', 'RMEL', 'RMER', 'RMEV', 'RMFL', 'RMGL', 'RMGR', 'RMHL', 'RMHR', 'SMBDL', 'SMBDR', 'SMBVL', 'SMBVR', 'SMDDL', 'SMDDR', 'SMDVL', 'SMDVR', 'URADL', 'URADR', 'URAVL', 'URAVR', 'VA1', 'VA10', 'VA11', 'VA12', 'VA2', 'VA3', 'VA4', 'VA5', 'VA6', 'VA7', 'VA8', 'VA9', 'VB1', 'VB10', 'VB11', 'VB2', 'VB3', 'VB4', 'VB5', 'VB6', 'VB7', 'VB8', 'VB9', 'VC1', 'VC2', 'VC3', 'VC4', 'VC5', 'VC6', 'VD1', 'VD10', 'VD11', 'VD12', 'VD13', 'VD2', 'VD3', 'VD4', 'VD5', 'VD6', 'VD7', 'VD8', 'VD9', 'AVAL', 'AVAR', 'AVBL', 'AVBR', 'AVDL', 'AVDR', 'PVCL', 'PVCR']
+    Cell stimulated:                ['AVBL', 'AVBR']
+    Connection:                     []
+    Connection numbers overridden:  None
+    Connection numbers scaled:      None
+    Connection polarities override: None
+    Muscles:                        All muscles
+
+    Known BioParameters:
+        BioParameter: ca_conc_decay_time = 20 ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: ca_conc_rho = 0.0002 mol_per_m_per_A_per_s (SRC: BlindGuess, certainty 0.1)
+        BioParameter: ca_simple_erev = 50 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: cell_diameter = 5 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: exc_syn_ad = 20 per_s (SRC: BlindGuess, certainty 0.1)
+        BioParameter: exc_syn_ar = .5 per_s (SRC: BlindGuess, certainty 0.1)
+        BioParameter: exc_syn_beta = 0.25 per_mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: exc_syn_erev = 0 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: exc_syn_vth = -20 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: global_connectivity_power_scaling = 0 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: inh_syn_ad = 10 per_s (SRC: BlindGuess, certainty 0.1)
+        BioParameter: inh_syn_ar = .005 per_s (SRC: BlindGuess, certainty 0.1)
+        BioParameter: inh_syn_beta = 0.5 per_mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: inh_syn_erev = -80 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: inh_syn_vth = -25 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: initial_memb_pot = -50 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: k_slow_erev = -80 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: leak_erev = -44 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_ca_simple_cond_density = 0.25 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_k_slow_cond_density = 0.3 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_leak_cond_density = 0.00105 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_length = 20 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_specific_capacitance = .6860 uF_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_spike_thresh = -20 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_ca_simple_cond_density = 0.06 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_k_slow_cond_density = 0.1 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_leak_cond_density = 0.05 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_specific_capacitance = 5 uF_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_spike_thresh = -20 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_elec_syn_gbase = 0.0001 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_exc_syn_conductance = 13 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_inh_syn_conductance = 0.25 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_elec_syn_gbase = 0.05 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_exc_syn_conductance = 5 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_inh_syn_conductance = 260 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: unphysiological_offset_current = 5 pA (SRC: KnownError, certainty 0)
+        BioParameter: unphysiological_offset_current_del = 5 ms (SRC: Testing IClamp, certainty 0)
+        BioParameter: unphysiological_offset_current_dur = 10000 ms (SRC: Testing IClamp, certainty 0)
+
+   
+    -->
+
+    <Target component="sim_c302_C0_Muscles" />
+
+    <!-- Include core NeuroML2 ComponentType definitions -->
+
+    <Include file="Cells.xml" />
+    <Include file="Networks.xml" />
+    <Include file="Simulation.xml" />
+    
+    <Include file="cell_C.xml" />
+    
+    <Include file="custom_synapses.xml" />
+    
+    <Include file="c302_C0_Muscles.net.nml" />
+
+    <!-- End of NeuroML2 content -->
+    
+
+    <Simulation id="sim_c302_C0_Muscles" length="1000ms" step="0.05ms" target="c302_C0_Muscles">
+
+        <Display id="neurons" title="c302_C0_Muscles: Membrane potential of a number of neurons" timeScale="1ms" xmin="-100.0" xmax="1100.0" ymin="-60" ymax="25">
+            
+            <Line id="AVBL" quantity="AVBL/0/GenericNeuronCell/v" scale="1mV" color="#28e945" timeScale="1ms" />
+            <Line id="AVBR" quantity="AVBR/0/GenericNeuronCell/v" scale="1mV" color="#490082" timeScale="1ms" />
+            <Line id="DB1" quantity="DB1/0/GenericNeuronCell/v" scale="1mV" color="#e897fb" timeScale="1ms" />
+            <Line id="DB2" quantity="DB2/0/GenericNeuronCell/v" scale="1mV" color="#d14789" timeScale="1ms" />
+            <Line id="DD1" quantity="DD1/0/GenericNeuronCell/v" scale="1mV" color="#80f1f4" timeScale="1ms" />
+            <Line id="DD2" quantity="DD2/0/GenericNeuronCell/v" scale="1mV" color="#81c6db" timeScale="1ms" />
+            <Line id="PVCL" quantity="PVCL/0/GenericNeuronCell/v" scale="1mV" color="#84bace" timeScale="1ms" />
+            <Line id="PVCR" quantity="PVCR/0/GenericNeuronCell/v" scale="1mV" color="#8c21c5" timeScale="1ms" />
+            <Line id="VB1" quantity="VB1/0/GenericNeuronCell/v" scale="1mV" color="#aab42e" timeScale="1ms" />
+            <Line id="VB2" quantity="VB2/0/GenericNeuronCell/v" scale="1mV" color="#d88f58" timeScale="1ms" />
+            <Line id="VD1" quantity="VD1/0/GenericNeuronCell/v" scale="1mV" color="#85f6a2" timeScale="1ms" />
+            <Line id="VD2" quantity="VD2/0/GenericNeuronCell/v" scale="1mV" color="#415371" timeScale="1ms" />
+            
+        </Display>
+      
+        <Display id="muscles" title="c302_C0_Muscles: Membrane potential of a number of muscles" timeScale="1ms" xmin="-100.0" xmax="1100.0" ymin="-60" ymax="25">
+            
+            <Line id="MDR01" quantity="MDR01/0/GenericMuscleCell/v" scale="1mV" color="#252179" timeScale="1ms" />
+            <Line id="MDR02" quantity="MDR02/0/GenericMuscleCell/v" scale="1mV" color="#c83450" timeScale="1ms" />
+            <Line id="MDR03" quantity="MDR03/0/GenericMuscleCell/v" scale="1mV" color="#fc4b5c" timeScale="1ms" />
+            <Line id="MDR04" quantity="MDR04/0/GenericMuscleCell/v" scale="1mV" color="#4dbe87" timeScale="1ms" />
+            <Line id="MDR05" quantity="MDR05/0/GenericMuscleCell/v" scale="1mV" color="#41f5af" timeScale="1ms" />
+            <Line id="MDR06" quantity="MDR06/0/GenericMuscleCell/v" scale="1mV" color="#58839d" timeScale="1ms" />
+            <Line id="MDR07" quantity="MDR07/0/GenericMuscleCell/v" scale="1mV" color="#aaa385" timeScale="1ms" />
+            <Line id="MDR08" quantity="MDR08/0/GenericMuscleCell/v" scale="1mV" color="#44f960" timeScale="1ms" />
+            <Line id="MDR09" quantity="MDR09/0/GenericMuscleCell/v" scale="1mV" color="#a690c9" timeScale="1ms" />
+            <Line id="MDR10" quantity="MDR10/0/GenericMuscleCell/v" scale="1mV" color="#b87da6" timeScale="1ms" />
+            <Line id="MDR11" quantity="MDR11/0/GenericMuscleCell/v" scale="1mV" color="#addecf" timeScale="1ms" />
+            <Line id="MDR12" quantity="MDR12/0/GenericMuscleCell/v" scale="1mV" color="#f3414c" timeScale="1ms" />
+            <Line id="MDR13" quantity="MDR13/0/GenericMuscleCell/v" scale="1mV" color="#4aac57" timeScale="1ms" />
+            <Line id="MDR14" quantity="MDR14/0/GenericMuscleCell/v" scale="1mV" color="#6be3bf" timeScale="1ms" />
+            <Line id="MDR15" quantity="MDR15/0/GenericMuscleCell/v" scale="1mV" color="#00e788" timeScale="1ms" />
+            <Line id="MDR16" quantity="MDR16/0/GenericMuscleCell/v" scale="1mV" color="#bc0096" timeScale="1ms" />
+            <Line id="MDR17" quantity="MDR17/0/GenericMuscleCell/v" scale="1mV" color="#f472fe" timeScale="1ms" />
+            <Line id="MDR18" quantity="MDR18/0/GenericMuscleCell/v" scale="1mV" color="#43359b" timeScale="1ms" />
+            <Line id="MDR19" quantity="MDR19/0/GenericMuscleCell/v" scale="1mV" color="#a6bc56" timeScale="1ms" />
+            <Line id="MDR20" quantity="MDR20/0/GenericMuscleCell/v" scale="1mV" color="#1d7400" timeScale="1ms" />
+            <Line id="MDR21" quantity="MDR21/0/GenericMuscleCell/v" scale="1mV" color="#c1bcaa" timeScale="1ms" />
+            <Line id="MDR22" quantity="MDR22/0/GenericMuscleCell/v" scale="1mV" color="#6b69aa" timeScale="1ms" />
+            <Line id="MDR23" quantity="MDR23/0/GenericMuscleCell/v" scale="1mV" color="#835d82" timeScale="1ms" />
+            <Line id="MDR24" quantity="MDR24/0/GenericMuscleCell/v" scale="1mV" color="#f7917d" timeScale="1ms" />
+            <Line id="MVR01" quantity="MVR01/0/GenericMuscleCell/v" scale="1mV" color="#78f925" timeScale="1ms" />
+            <Line id="MVR02" quantity="MVR02/0/GenericMuscleCell/v" scale="1mV" color="#dbe9e3" timeScale="1ms" />
+            <Line id="MVR03" quantity="MVR03/0/GenericMuscleCell/v" scale="1mV" color="#1694d6" timeScale="1ms" />
+            <Line id="MVR04" quantity="MVR04/0/GenericMuscleCell/v" scale="1mV" color="#198a3f" timeScale="1ms" />
+            <Line id="MVR05" quantity="MVR05/0/GenericMuscleCell/v" scale="1mV" color="#c5b8db" timeScale="1ms" />
+            <Line id="MVR06" quantity="MVR06/0/GenericMuscleCell/v" scale="1mV" color="#d6fde2" timeScale="1ms" />
+            <Line id="MVR07" quantity="MVR07/0/GenericMuscleCell/v" scale="1mV" color="#4784a7" timeScale="1ms" />
+            <Line id="MVR08" quantity="MVR08/0/GenericMuscleCell/v" scale="1mV" color="#001ce6" timeScale="1ms" />
+            <Line id="MVR09" quantity="MVR09/0/GenericMuscleCell/v" scale="1mV" color="#99d229" timeScale="1ms" />
+            <Line id="MVR10" quantity="MVR10/0/GenericMuscleCell/v" scale="1mV" color="#133275" timeScale="1ms" />
+            <Line id="MVR11" quantity="MVR11/0/GenericMuscleCell/v" scale="1mV" color="#64ec48" timeScale="1ms" />
+            <Line id="MVR12" quantity="MVR12/0/GenericMuscleCell/v" scale="1mV" color="#864fe0" timeScale="1ms" />
+            <Line id="MVR13" quantity="MVR13/0/GenericMuscleCell/v" scale="1mV" color="#88533e" timeScale="1ms" />
+            <Line id="MVR14" quantity="MVR14/0/GenericMuscleCell/v" scale="1mV" color="#661eea" timeScale="1ms" />
+            <Line id="MVR15" quantity="MVR15/0/GenericMuscleCell/v" scale="1mV" color="#94633f" timeScale="1ms" />
+            <Line id="MVR16" quantity="MVR16/0/GenericMuscleCell/v" scale="1mV" color="#3022f0" timeScale="1ms" />
+            <Line id="MVR17" quantity="MVR17/0/GenericMuscleCell/v" scale="1mV" color="#862192" timeScale="1ms" />
+            <Line id="MVR18" quantity="MVR18/0/GenericMuscleCell/v" scale="1mV" color="#3dc38c" timeScale="1ms" />
+            <Line id="MVR19" quantity="MVR19/0/GenericMuscleCell/v" scale="1mV" color="#23ce55" timeScale="1ms" />
+            <Line id="MVR20" quantity="MVR20/0/GenericMuscleCell/v" scale="1mV" color="#5ccfa3" timeScale="1ms" />
+            <Line id="MVR21" quantity="MVR21/0/GenericMuscleCell/v" scale="1mV" color="#146566" timeScale="1ms" />
+            <Line id="MVR22" quantity="MVR22/0/GenericMuscleCell/v" scale="1mV" color="#412223" timeScale="1ms" />
+            <Line id="MVR23" quantity="MVR23/0/GenericMuscleCell/v" scale="1mV" color="#6f6564" timeScale="1ms" />
+            <Line id="MVR24" quantity="MVR24/0/GenericMuscleCell/v" scale="1mV" color="#0000b3" timeScale="1ms" />
+            <Line id="MVL01" quantity="MVL01/0/GenericMuscleCell/v" scale="1mV" color="#2fb213" timeScale="1ms" />
+            <Line id="MVL02" quantity="MVL02/0/GenericMuscleCell/v" scale="1mV" color="#5e2472" timeScale="1ms" />
+            <Line id="MVL03" quantity="MVL03/0/GenericMuscleCell/v" scale="1mV" color="#7a7284" timeScale="1ms" />
+            <Line id="MVL04" quantity="MVL04/0/GenericMuscleCell/v" scale="1mV" color="#ce35f4" timeScale="1ms" />
+            <Line id="MVL05" quantity="MVL05/0/GenericMuscleCell/v" scale="1mV" color="#205b00" timeScale="1ms" />
+            <Line id="MVL06" quantity="MVL06/0/GenericMuscleCell/v" scale="1mV" color="#d4ecc3" timeScale="1ms" />
+            <Line id="MVL07" quantity="MVL07/0/GenericMuscleCell/v" scale="1mV" color="#56a364" timeScale="1ms" />
+            <Line id="MVL08" quantity="MVL08/0/GenericMuscleCell/v" scale="1mV" color="#e66321" timeScale="1ms" />
+            <Line id="MVL09" quantity="MVL09/0/GenericMuscleCell/v" scale="1mV" color="#00276d" timeScale="1ms" />
+            <Line id="MVL10" quantity="MVL10/0/GenericMuscleCell/v" scale="1mV" color="#94d8d5" timeScale="1ms" />
+            <Line id="MVL11" quantity="MVL11/0/GenericMuscleCell/v" scale="1mV" color="#509dbc" timeScale="1ms" />
+            <Line id="MVL12" quantity="MVL12/0/GenericMuscleCell/v" scale="1mV" color="#5c73f4" timeScale="1ms" />
+            <Line id="MVL13" quantity="MVL13/0/GenericMuscleCell/v" scale="1mV" color="#729cc4" timeScale="1ms" />
+            <Line id="MVL14" quantity="MVL14/0/GenericMuscleCell/v" scale="1mV" color="#37ff9a" timeScale="1ms" />
+            <Line id="MVL15" quantity="MVL15/0/GenericMuscleCell/v" scale="1mV" color="#d2f05f" timeScale="1ms" />
+            <Line id="MVL16" quantity="MVL16/0/GenericMuscleCell/v" scale="1mV" color="#4ebd72" timeScale="1ms" />
+            <Line id="MVL17" quantity="MVL17/0/GenericMuscleCell/v" scale="1mV" color="#9f80c3" timeScale="1ms" />
+            <Line id="MVL18" quantity="MVL18/0/GenericMuscleCell/v" scale="1mV" color="#00b3d8" timeScale="1ms" />
+            <Line id="MVL19" quantity="MVL19/0/GenericMuscleCell/v" scale="1mV" color="#baa3db" timeScale="1ms" />
+            <Line id="MVL20" quantity="MVL20/0/GenericMuscleCell/v" scale="1mV" color="#ca80e2" timeScale="1ms" />
+            <Line id="MVL21" quantity="MVL21/0/GenericMuscleCell/v" scale="1mV" color="#586e00" timeScale="1ms" />
+            <Line id="MVL22" quantity="MVL22/0/GenericMuscleCell/v" scale="1mV" color="#5e66da" timeScale="1ms" />
+            <Line id="MVL23" quantity="MVL23/0/GenericMuscleCell/v" scale="1mV" color="#007a84" timeScale="1ms" />
+            <Line id="MVL24" quantity="MVL24/0/GenericMuscleCell/v" scale="1mV" color="#a78b5d" timeScale="1ms" />
+            <Line id="MDL01" quantity="MDL01/0/GenericMuscleCell/v" scale="1mV" color="#f1b129" timeScale="1ms" />
+            <Line id="MDL02" quantity="MDL02/0/GenericMuscleCell/v" scale="1mV" color="#f0d358" timeScale="1ms" />
+            <Line id="MDL03" quantity="MDL03/0/GenericMuscleCell/v" scale="1mV" color="#eb7ea3" timeScale="1ms" />
+            <Line id="MDL04" quantity="MDL04/0/GenericMuscleCell/v" scale="1mV" color="#0069fc" timeScale="1ms" />
+            <Line id="MDL05" quantity="MDL05/0/GenericMuscleCell/v" scale="1mV" color="#b3f2a9" timeScale="1ms" />
+            <Line id="MDL06" quantity="MDL06/0/GenericMuscleCell/v" scale="1mV" color="#1c2fce" timeScale="1ms" />
+            <Line id="MDL07" quantity="MDL07/0/GenericMuscleCell/v" scale="1mV" color="#b3cdb9" timeScale="1ms" />
+            <Line id="MDL08" quantity="MDL08/0/GenericMuscleCell/v" scale="1mV" color="#f32b80" timeScale="1ms" />
+            <Line id="MDL09" quantity="MDL09/0/GenericMuscleCell/v" scale="1mV" color="#00fda6" timeScale="1ms" />
+            <Line id="MDL10" quantity="MDL10/0/GenericMuscleCell/v" scale="1mV" color="#a2d852" timeScale="1ms" />
+            <Line id="MDL11" quantity="MDL11/0/GenericMuscleCell/v" scale="1mV" color="#969f98" timeScale="1ms" />
+            <Line id="MDL12" quantity="MDL12/0/GenericMuscleCell/v" scale="1mV" color="#007596" timeScale="1ms" />
+            <Line id="MDL13" quantity="MDL13/0/GenericMuscleCell/v" scale="1mV" color="#71f612" timeScale="1ms" />
+            <Line id="MDL14" quantity="MDL14/0/GenericMuscleCell/v" scale="1mV" color="#e17000" timeScale="1ms" />
+            <Line id="MDL15" quantity="MDL15/0/GenericMuscleCell/v" scale="1mV" color="#db4bd5" timeScale="1ms" />
+            <Line id="MDL16" quantity="MDL16/0/GenericMuscleCell/v" scale="1mV" color="#8c28b0" timeScale="1ms" />
+            <Line id="MDL17" quantity="MDL17/0/GenericMuscleCell/v" scale="1mV" color="#93e219" timeScale="1ms" />
+            <Line id="MDL18" quantity="MDL18/0/GenericMuscleCell/v" scale="1mV" color="#68ae54" timeScale="1ms" />
+            <Line id="MDL19" quantity="MDL19/0/GenericMuscleCell/v" scale="1mV" color="#77595a" timeScale="1ms" />
+            <Line id="MDL20" quantity="MDL20/0/GenericMuscleCell/v" scale="1mV" color="#764400" timeScale="1ms" />
+            <Line id="MDL21" quantity="MDL21/0/GenericMuscleCell/v" scale="1mV" color="#f6fb8e" timeScale="1ms" />
+            <Line id="MDL22" quantity="MDL22/0/GenericMuscleCell/v" scale="1mV" color="#464f80" timeScale="1ms" />
+            <Line id="MDL23" quantity="MDL23/0/GenericMuscleCell/v" scale="1mV" color="#0017dc" timeScale="1ms" />
+            <Line id="MDL24" quantity="MDL24/0/GenericMuscleCell/v" scale="1mV" color="#c85980" timeScale="1ms" />
+
+        </Display>
+      
+        <Display id="activity_neurons" title="c302_C0_Muscles: Activity of a number of neurons" timeScale="1ms" xmin="-100.0" xmax="1100.0" ymin="-0.1" ymax="1.1">
+            
+            <Line id="AVBL" quantity="AVBL/0/GenericNeuronCell/caConc" scale="1" color="#27d8b9" timeScale="1ms" />
+            <Line id="AVBR" quantity="AVBR/0/GenericNeuronCell/caConc" scale="1" color="#16efb3" timeScale="1ms" />
+            <Line id="DB1" quantity="DB1/0/GenericNeuronCell/caConc" scale="1" color="#c1ff4c" timeScale="1ms" />
+            <Line id="DB2" quantity="DB2/0/GenericNeuronCell/caConc" scale="1" color="#9a5755" timeScale="1ms" />
+            <Line id="DD1" quantity="DD1/0/GenericNeuronCell/caConc" scale="1" color="#23889f" timeScale="1ms" />
+            <Line id="DD2" quantity="DD2/0/GenericNeuronCell/caConc" scale="1" color="#53b690" timeScale="1ms" />
+            <Line id="PVCL" quantity="PVCL/0/GenericNeuronCell/caConc" scale="1" color="#5f1aad" timeScale="1ms" />
+            <Line id="PVCR" quantity="PVCR/0/GenericNeuronCell/caConc" scale="1" color="#3db356" timeScale="1ms" />
+            <Line id="VB1" quantity="VB1/0/GenericNeuronCell/caConc" scale="1" color="#9344d5" timeScale="1ms" />
+            <Line id="VB2" quantity="VB2/0/GenericNeuronCell/caConc" scale="1" color="#aed19c" timeScale="1ms" />
+            <Line id="VD1" quantity="VD1/0/GenericNeuronCell/caConc" scale="1" color="#5532f3" timeScale="1ms" />
+            <Line id="VD2" quantity="VD2/0/GenericNeuronCell/caConc" scale="1" color="#50aaa0" timeScale="1ms" />
+
+        </Display>
+      
+        <Display id="activity_muscles" title="c302_C0_Muscles: Activity of a number of muscles" timeScale="1ms" xmin="-100.0" xmax="1100.0" ymin="-0.1" ymax="1.1">
+            
+            <Line id="MDR01" quantity="MDR01/0/GenericMuscleCell/caConc" scale="1" color="#dee100" timeScale="1ms" />
+            <Line id="MDR02" quantity="MDR02/0/GenericMuscleCell/caConc" scale="1" color="#41e96c" timeScale="1ms" />
+            <Line id="MDR03" quantity="MDR03/0/GenericMuscleCell/caConc" scale="1" color="#3b5034" timeScale="1ms" />
+            <Line id="MDR04" quantity="MDR04/0/GenericMuscleCell/caConc" scale="1" color="#fc87bc" timeScale="1ms" />
+            <Line id="MDR05" quantity="MDR05/0/GenericMuscleCell/caConc" scale="1" color="#2f9c00" timeScale="1ms" />
+            <Line id="MDR06" quantity="MDR06/0/GenericMuscleCell/caConc" scale="1" color="#741f14" timeScale="1ms" />
+            <Line id="MDR07" quantity="MDR07/0/GenericMuscleCell/caConc" scale="1" color="#1b53ed" timeScale="1ms" />
+            <Line id="MDR08" quantity="MDR08/0/GenericMuscleCell/caConc" scale="1" color="#680039" timeScale="1ms" />
+            <Line id="MDR09" quantity="MDR09/0/GenericMuscleCell/caConc" scale="1" color="#10105f" timeScale="1ms" />
+            <Line id="MDR10" quantity="MDR10/0/GenericMuscleCell/caConc" scale="1" color="#00d39f" timeScale="1ms" />
+            <Line id="MDR11" quantity="MDR11/0/GenericMuscleCell/caConc" scale="1" color="#1e478e" timeScale="1ms" />
+            <Line id="MDR12" quantity="MDR12/0/GenericMuscleCell/caConc" scale="1" color="#ca10bf" timeScale="1ms" />
+            <Line id="MDR13" quantity="MDR13/0/GenericMuscleCell/caConc" scale="1" color="#7aa400" timeScale="1ms" />
+            <Line id="MDR14" quantity="MDR14/0/GenericMuscleCell/caConc" scale="1" color="#36bac9" timeScale="1ms" />
+            <Line id="MDR15" quantity="MDR15/0/GenericMuscleCell/caConc" scale="1" color="#a47846" timeScale="1ms" />
+            <Line id="MDR16" quantity="MDR16/0/GenericMuscleCell/caConc" scale="1" color="#009b6c" timeScale="1ms" />
+            <Line id="MDR17" quantity="MDR17/0/GenericMuscleCell/caConc" scale="1" color="#e700a1" timeScale="1ms" />
+            <Line id="MDR18" quantity="MDR18/0/GenericMuscleCell/caConc" scale="1" color="#e9ce00" timeScale="1ms" />
+            <Line id="MDR19" quantity="MDR19/0/GenericMuscleCell/caConc" scale="1" color="#edfb14" timeScale="1ms" />
+            <Line id="MDR20" quantity="MDR20/0/GenericMuscleCell/caConc" scale="1" color="#6766d3" timeScale="1ms" />
+            <Line id="MDR21" quantity="MDR21/0/GenericMuscleCell/caConc" scale="1" color="#d35600" timeScale="1ms" />
+            <Line id="MDR22" quantity="MDR22/0/GenericMuscleCell/caConc" scale="1" color="#72f9ac" timeScale="1ms" />
+            <Line id="MDR23" quantity="MDR23/0/GenericMuscleCell/caConc" scale="1" color="#f49354" timeScale="1ms" />
+            <Line id="MDR24" quantity="MDR24/0/GenericMuscleCell/caConc" scale="1" color="#dd445c" timeScale="1ms" />
+            <Line id="MVR01" quantity="MVR01/0/GenericMuscleCell/caConc" scale="1" color="#f6df46" timeScale="1ms" />
+            <Line id="MVR02" quantity="MVR02/0/GenericMuscleCell/caConc" scale="1" color="#759445" timeScale="1ms" />
+            <Line id="MVR03" quantity="MVR03/0/GenericMuscleCell/caConc" scale="1" color="#7a5288" timeScale="1ms" />
+            <Line id="MVR04" quantity="MVR04/0/GenericMuscleCell/caConc" scale="1" color="#3518d0" timeScale="1ms" />
+            <Line id="MVR05" quantity="MVR05/0/GenericMuscleCell/caConc" scale="1" color="#ceb432" timeScale="1ms" />
+            <Line id="MVR06" quantity="MVR06/0/GenericMuscleCell/caConc" scale="1" color="#c4a759" timeScale="1ms" />
+            <Line id="MVR07" quantity="MVR07/0/GenericMuscleCell/caConc" scale="1" color="#007700" timeScale="1ms" />
+            <Line id="MVR08" quantity="MVR08/0/GenericMuscleCell/caConc" scale="1" color="#2e856e" timeScale="1ms" />
+            <Line id="MVR09" quantity="MVR09/0/GenericMuscleCell/caConc" scale="1" color="#7e12f9" timeScale="1ms" />
+            <Line id="MVR10" quantity="MVR10/0/GenericMuscleCell/caConc" scale="1" color="#761dab" timeScale="1ms" />
+            <Line id="MVR11" quantity="MVR11/0/GenericMuscleCell/caConc" scale="1" color="#12f600" timeScale="1ms" />
+            <Line id="MVR12" quantity="MVR12/0/GenericMuscleCell/caConc" scale="1" color="#2742b1" timeScale="1ms" />
+            <Line id="MVR13" quantity="MVR13/0/GenericMuscleCell/caConc" scale="1" color="#7288f0" timeScale="1ms" />
+            <Line id="MVR14" quantity="MVR14/0/GenericMuscleCell/caConc" scale="1" color="#d0b600" timeScale="1ms" />
+            <Line id="MVR15" quantity="MVR15/0/GenericMuscleCell/caConc" scale="1" color="#e6c1cf" timeScale="1ms" />
+            <Line id="MVR16" quantity="MVR16/0/GenericMuscleCell/caConc" scale="1" color="#b1004d" timeScale="1ms" />
+            <Line id="MVR17" quantity="MVR17/0/GenericMuscleCell/caConc" scale="1" color="#4b5173" timeScale="1ms" />
+            <Line id="MVR18" quantity="MVR18/0/GenericMuscleCell/caConc" scale="1" color="#6f2251" timeScale="1ms" />
+            <Line id="MVR19" quantity="MVR19/0/GenericMuscleCell/caConc" scale="1" color="#2c3542" timeScale="1ms" />
+            <Line id="MVR20" quantity="MVR20/0/GenericMuscleCell/caConc" scale="1" color="#49fb89" timeScale="1ms" />
+            <Line id="MVR21" quantity="MVR21/0/GenericMuscleCell/caConc" scale="1" color="#39d75c" timeScale="1ms" />
+            <Line id="MVR22" quantity="MVR22/0/GenericMuscleCell/caConc" scale="1" color="#f8dc75" timeScale="1ms" />
+            <Line id="MVR23" quantity="MVR23/0/GenericMuscleCell/caConc" scale="1" color="#114f9a" timeScale="1ms" />
+            <Line id="MVR24" quantity="MVR24/0/GenericMuscleCell/caConc" scale="1" color="#11b83b" timeScale="1ms" />
+            <Line id="MVL01" quantity="MVL01/0/GenericMuscleCell/caConc" scale="1" color="#c1c195" timeScale="1ms" />
+            <Line id="MVL02" quantity="MVL02/0/GenericMuscleCell/caConc" scale="1" color="#19c571" timeScale="1ms" />
+            <Line id="MVL03" quantity="MVL03/0/GenericMuscleCell/caConc" scale="1" color="#2386fa" timeScale="1ms" />
+            <Line id="MVL04" quantity="MVL04/0/GenericMuscleCell/caConc" scale="1" color="#803ce3" timeScale="1ms" />
+            <Line id="MVL05" quantity="MVL05/0/GenericMuscleCell/caConc" scale="1" color="#dc0026" timeScale="1ms" />
+            <Line id="MVL06" quantity="MVL06/0/GenericMuscleCell/caConc" scale="1" color="#37c250" timeScale="1ms" />
+            <Line id="MVL07" quantity="MVL07/0/GenericMuscleCell/caConc" scale="1" color="#1046a0" timeScale="1ms" />
+            <Line id="MVL08" quantity="MVL08/0/GenericMuscleCell/caConc" scale="1" color="#00d688" timeScale="1ms" />
+            <Line id="MVL09" quantity="MVL09/0/GenericMuscleCell/caConc" scale="1" color="#a586e7" timeScale="1ms" />
+            <Line id="MVL10" quantity="MVL10/0/GenericMuscleCell/caConc" scale="1" color="#97704d" timeScale="1ms" />
+            <Line id="MVL11" quantity="MVL11/0/GenericMuscleCell/caConc" scale="1" color="#ba2d8f" timeScale="1ms" />
+            <Line id="MVL12" quantity="MVL12/0/GenericMuscleCell/caConc" scale="1" color="#0086ec" timeScale="1ms" />
+            <Line id="MVL13" quantity="MVL13/0/GenericMuscleCell/caConc" scale="1" color="#3f1e86" timeScale="1ms" />
+            <Line id="MVL14" quantity="MVL14/0/GenericMuscleCell/caConc" scale="1" color="#a9431c" timeScale="1ms" />
+            <Line id="MVL15" quantity="MVL15/0/GenericMuscleCell/caConc" scale="1" color="#19e55f" timeScale="1ms" />
+            <Line id="MVL16" quantity="MVL16/0/GenericMuscleCell/caConc" scale="1" color="#1d49a4" timeScale="1ms" />
+            <Line id="MVL17" quantity="MVL17/0/GenericMuscleCell/caConc" scale="1" color="#f0f1dc" timeScale="1ms" />
+            <Line id="MVL18" quantity="MVL18/0/GenericMuscleCell/caConc" scale="1" color="#f300d9" timeScale="1ms" />
+            <Line id="MVL19" quantity="MVL19/0/GenericMuscleCell/caConc" scale="1" color="#3ae4b4" timeScale="1ms" />
+            <Line id="MVL20" quantity="MVL20/0/GenericMuscleCell/caConc" scale="1" color="#971f36" timeScale="1ms" />
+            <Line id="MVL21" quantity="MVL21/0/GenericMuscleCell/caConc" scale="1" color="#8bc0c8" timeScale="1ms" />
+            <Line id="MVL22" quantity="MVL22/0/GenericMuscleCell/caConc" scale="1" color="#522e6c" timeScale="1ms" />
+            <Line id="MVL23" quantity="MVL23/0/GenericMuscleCell/caConc" scale="1" color="#9357f4" timeScale="1ms" />
+            <Line id="MVL24" quantity="MVL24/0/GenericMuscleCell/caConc" scale="1" color="#ba2fc6" timeScale="1ms" />
+            <Line id="MDL01" quantity="MDL01/0/GenericMuscleCell/caConc" scale="1" color="#b3f6e3" timeScale="1ms" />
+            <Line id="MDL02" quantity="MDL02/0/GenericMuscleCell/caConc" scale="1" color="#98881a" timeScale="1ms" />
+            <Line id="MDL03" quantity="MDL03/0/GenericMuscleCell/caConc" scale="1" color="#d26dca" timeScale="1ms" />
+            <Line id="MDL04" quantity="MDL04/0/GenericMuscleCell/caConc" scale="1" color="#fad76a" timeScale="1ms" />
+            <Line id="MDL05" quantity="MDL05/0/GenericMuscleCell/caConc" scale="1" color="#9a5488" timeScale="1ms" />
+            <Line id="MDL06" quantity="MDL06/0/GenericMuscleCell/caConc" scale="1" color="#49c7d9" timeScale="1ms" />
+            <Line id="MDL07" quantity="MDL07/0/GenericMuscleCell/caConc" scale="1" color="#dc1346" timeScale="1ms" />
+            <Line id="MDL08" quantity="MDL08/0/GenericMuscleCell/caConc" scale="1" color="#dea42c" timeScale="1ms" />
+            <Line id="MDL09" quantity="MDL09/0/GenericMuscleCell/caConc" scale="1" color="#61a700" timeScale="1ms" />
+            <Line id="MDL10" quantity="MDL10/0/GenericMuscleCell/caConc" scale="1" color="#4c5a1d" timeScale="1ms" />
+            <Line id="MDL11" quantity="MDL11/0/GenericMuscleCell/caConc" scale="1" color="#a46c7d" timeScale="1ms" />
+            <Line id="MDL12" quantity="MDL12/0/GenericMuscleCell/caConc" scale="1" color="#00d012" timeScale="1ms" />
+            <Line id="MDL13" quantity="MDL13/0/GenericMuscleCell/caConc" scale="1" color="#41a7e7" timeScale="1ms" />
+            <Line id="MDL14" quantity="MDL14/0/GenericMuscleCell/caConc" scale="1" color="#8ac633" timeScale="1ms" />
+            <Line id="MDL15" quantity="MDL15/0/GenericMuscleCell/caConc" scale="1" color="#aa3ea0" timeScale="1ms" />
+            <Line id="MDL16" quantity="MDL16/0/GenericMuscleCell/caConc" scale="1" color="#00cc19" timeScale="1ms" />
+            <Line id="MDL17" quantity="MDL17/0/GenericMuscleCell/caConc" scale="1" color="#003a00" timeScale="1ms" />
+            <Line id="MDL18" quantity="MDL18/0/GenericMuscleCell/caConc" scale="1" color="#58d326" timeScale="1ms" />
+            <Line id="MDL19" quantity="MDL19/0/GenericMuscleCell/caConc" scale="1" color="#b5c81f" timeScale="1ms" />
+            <Line id="MDL20" quantity="MDL20/0/GenericMuscleCell/caConc" scale="1" color="#778471" timeScale="1ms" />
+            <Line id="MDL21" quantity="MDL21/0/GenericMuscleCell/caConc" scale="1" color="#be3cfa" timeScale="1ms" />
+            <Line id="MDL22" quantity="MDL22/0/GenericMuscleCell/caConc" scale="1" color="#968328" timeScale="1ms" />
+            <Line id="MDL23" quantity="MDL23/0/GenericMuscleCell/caConc" scale="1" color="#d10062" timeScale="1ms" />
+            <Line id="MDL24" quantity="MDL24/0/GenericMuscleCell/caConc" scale="1" color="#b74134" timeScale="1ms" />
+
+        </Display>
+
+        <OutputFile id="neurons_v" fileName="c302_C0_Muscles.dat">
+            <OutputColumn id="AS1_v" quantity="AS1/0/GenericNeuronCell/v"/>
+            <OutputColumn id="AS10_v" quantity="AS10/0/GenericNeuronCell/v"/>
+            <OutputColumn id="AS11_v" quantity="AS11/0/GenericNeuronCell/v"/>
+            <OutputColumn id="AS2_v" quantity="AS2/0/GenericNeuronCell/v"/>
+            <OutputColumn id="AS3_v" quantity="AS3/0/GenericNeuronCell/v"/>
+            <OutputColumn id="AS4_v" quantity="AS4/0/GenericNeuronCell/v"/>
+            <OutputColumn id="AS5_v" quantity="AS5/0/GenericNeuronCell/v"/>
+            <OutputColumn id="AS6_v" quantity="AS6/0/GenericNeuronCell/v"/>
+            <OutputColumn id="AS7_v" quantity="AS7/0/GenericNeuronCell/v"/>
+            <OutputColumn id="AS8_v" quantity="AS8/0/GenericNeuronCell/v"/>
+            <OutputColumn id="AS9_v" quantity="AS9/0/GenericNeuronCell/v"/>
+            <OutputColumn id="AVAL_v" quantity="AVAL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="AVAR_v" quantity="AVAR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="AVBL_v" quantity="AVBL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="AVBR_v" quantity="AVBR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="AVDL_v" quantity="AVDL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="AVDR_v" quantity="AVDR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="AVFL_v" quantity="AVFL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="AVFR_v" quantity="AVFR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="AVKR_v" quantity="AVKR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="AVL_v" quantity="AVL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="CEPVL_v" quantity="CEPVL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="CEPVR_v" quantity="CEPVR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DA1_v" quantity="DA1/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DA2_v" quantity="DA2/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DA3_v" quantity="DA3/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DA4_v" quantity="DA4/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DA5_v" quantity="DA5/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DA6_v" quantity="DA6/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DA7_v" quantity="DA7/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DA8_v" quantity="DA8/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DA9_v" quantity="DA9/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DB1_v" quantity="DB1/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DB2_v" quantity="DB2/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DB3_v" quantity="DB3/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DB4_v" quantity="DB4/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DB5_v" quantity="DB5/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DB6_v" quantity="DB6/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DB7_v" quantity="DB7/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DD1_v" quantity="DD1/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DD2_v" quantity="DD2/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DD3_v" quantity="DD3/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DD4_v" quantity="DD4/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DD5_v" quantity="DD5/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DD6_v" quantity="DD6/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DVB_v" quantity="DVB/0/GenericNeuronCell/v"/>
+            <OutputColumn id="HSNL_v" quantity="HSNL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="HSNR_v" quantity="HSNR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="IL1DL_v" quantity="IL1DL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="IL1DR_v" quantity="IL1DR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="IL1L_v" quantity="IL1L/0/GenericNeuronCell/v"/>
+            <OutputColumn id="IL1R_v" quantity="IL1R/0/GenericNeuronCell/v"/>
+            <OutputColumn id="IL1VL_v" quantity="IL1VL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="IL1VR_v" quantity="IL1VR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="PDA_v" quantity="PDA/0/GenericNeuronCell/v"/>
+            <OutputColumn id="PDB_v" quantity="PDB/0/GenericNeuronCell/v"/>
+            <OutputColumn id="PVCL_v" quantity="PVCL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="PVCR_v" quantity="PVCR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="PVNL_v" quantity="PVNL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="PVNR_v" quantity="PVNR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="RID_v" quantity="RID/0/GenericNeuronCell/v"/>
+            <OutputColumn id="RIML_v" quantity="RIML/0/GenericNeuronCell/v"/>
+            <OutputColumn id="RIMR_v" quantity="RIMR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="RIVL_v" quantity="RIVL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="RIVR_v" quantity="RIVR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="RMDDL_v" quantity="RMDDL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="RMDDR_v" quantity="RMDDR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="RMDL_v" quantity="RMDL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="RMDR_v" quantity="RMDR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="RMDVL_v" quantity="RMDVL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="RMDVR_v" quantity="RMDVR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="RMED_v" quantity="RMED/0/GenericNeuronCell/v"/>
+            <OutputColumn id="RMEL_v" quantity="RMEL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="RMER_v" quantity="RMER/0/GenericNeuronCell/v"/>
+            <OutputColumn id="RMEV_v" quantity="RMEV/0/GenericNeuronCell/v"/>
+            <OutputColumn id="RMFL_v" quantity="RMFL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="RMGL_v" quantity="RMGL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="RMGR_v" quantity="RMGR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="RMHL_v" quantity="RMHL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="RMHR_v" quantity="RMHR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="SMBDL_v" quantity="SMBDL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="SMBDR_v" quantity="SMBDR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="SMBVL_v" quantity="SMBVL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="SMBVR_v" quantity="SMBVR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="SMDDL_v" quantity="SMDDL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="SMDDR_v" quantity="SMDDR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="SMDVL_v" quantity="SMDVL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="SMDVR_v" quantity="SMDVR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="URADL_v" quantity="URADL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="URADR_v" quantity="URADR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="URAVL_v" quantity="URAVL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="URAVR_v" quantity="URAVR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VA1_v" quantity="VA1/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VA10_v" quantity="VA10/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VA11_v" quantity="VA11/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VA12_v" quantity="VA12/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VA2_v" quantity="VA2/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VA3_v" quantity="VA3/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VA4_v" quantity="VA4/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VA5_v" quantity="VA5/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VA6_v" quantity="VA6/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VA7_v" quantity="VA7/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VA8_v" quantity="VA8/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VA9_v" quantity="VA9/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VB1_v" quantity="VB1/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VB10_v" quantity="VB10/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VB11_v" quantity="VB11/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VB2_v" quantity="VB2/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VB3_v" quantity="VB3/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VB4_v" quantity="VB4/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VB5_v" quantity="VB5/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VB6_v" quantity="VB6/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VB7_v" quantity="VB7/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VB8_v" quantity="VB8/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VB9_v" quantity="VB9/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VC1_v" quantity="VC1/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VC2_v" quantity="VC2/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VC3_v" quantity="VC3/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VC4_v" quantity="VC4/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VC5_v" quantity="VC5/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VC6_v" quantity="VC6/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VD1_v" quantity="VD1/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VD10_v" quantity="VD10/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VD11_v" quantity="VD11/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VD12_v" quantity="VD12/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VD13_v" quantity="VD13/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VD2_v" quantity="VD2/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VD3_v" quantity="VD3/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VD4_v" quantity="VD4/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VD5_v" quantity="VD5/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VD6_v" quantity="VD6/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VD7_v" quantity="VD7/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VD8_v" quantity="VD8/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VD9_v" quantity="VD9/0/GenericNeuronCell/v"/>
+        </OutputFile>
+        
+        <OutputFile id="neurons_activity" fileName="c302_C0_Muscles.activity.dat">
+            <OutputColumn id="AS1_v" quantity="AS1/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="AS10_v" quantity="AS10/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="AS11_v" quantity="AS11/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="AS2_v" quantity="AS2/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="AS3_v" quantity="AS3/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="AS4_v" quantity="AS4/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="AS5_v" quantity="AS5/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="AS6_v" quantity="AS6/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="AS7_v" quantity="AS7/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="AS8_v" quantity="AS8/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="AS9_v" quantity="AS9/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="AVAL_v" quantity="AVAL/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="AVAR_v" quantity="AVAR/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="AVBL_v" quantity="AVBL/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="AVBR_v" quantity="AVBR/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="AVDL_v" quantity="AVDL/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="AVDR_v" quantity="AVDR/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="AVFL_v" quantity="AVFL/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="AVFR_v" quantity="AVFR/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="AVKR_v" quantity="AVKR/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="AVL_v" quantity="AVL/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="CEPVL_v" quantity="CEPVL/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="CEPVR_v" quantity="CEPVR/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DA1_v" quantity="DA1/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DA2_v" quantity="DA2/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DA3_v" quantity="DA3/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DA4_v" quantity="DA4/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DA5_v" quantity="DA5/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DA6_v" quantity="DA6/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DA7_v" quantity="DA7/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DA8_v" quantity="DA8/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DA9_v" quantity="DA9/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DB1_v" quantity="DB1/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DB2_v" quantity="DB2/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DB3_v" quantity="DB3/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DB4_v" quantity="DB4/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DB5_v" quantity="DB5/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DB6_v" quantity="DB6/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DB7_v" quantity="DB7/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DD1_v" quantity="DD1/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DD2_v" quantity="DD2/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DD3_v" quantity="DD3/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DD4_v" quantity="DD4/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DD5_v" quantity="DD5/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DD6_v" quantity="DD6/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DVB_v" quantity="DVB/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="HSNL_v" quantity="HSNL/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="HSNR_v" quantity="HSNR/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="IL1DL_v" quantity="IL1DL/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="IL1DR_v" quantity="IL1DR/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="IL1L_v" quantity="IL1L/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="IL1R_v" quantity="IL1R/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="IL1VL_v" quantity="IL1VL/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="IL1VR_v" quantity="IL1VR/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="PDA_v" quantity="PDA/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="PDB_v" quantity="PDB/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="PVCL_v" quantity="PVCL/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="PVCR_v" quantity="PVCR/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="PVNL_v" quantity="PVNL/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="PVNR_v" quantity="PVNR/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="RID_v" quantity="RID/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="RIML_v" quantity="RIML/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="RIMR_v" quantity="RIMR/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="RIVL_v" quantity="RIVL/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="RIVR_v" quantity="RIVR/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="RMDDL_v" quantity="RMDDL/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="RMDDR_v" quantity="RMDDR/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="RMDL_v" quantity="RMDL/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="RMDR_v" quantity="RMDR/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="RMDVL_v" quantity="RMDVL/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="RMDVR_v" quantity="RMDVR/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="RMED_v" quantity="RMED/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="RMEL_v" quantity="RMEL/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="RMER_v" quantity="RMER/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="RMEV_v" quantity="RMEV/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="RMFL_v" quantity="RMFL/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="RMGL_v" quantity="RMGL/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="RMGR_v" quantity="RMGR/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="RMHL_v" quantity="RMHL/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="RMHR_v" quantity="RMHR/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="SMBDL_v" quantity="SMBDL/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="SMBDR_v" quantity="SMBDR/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="SMBVL_v" quantity="SMBVL/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="SMBVR_v" quantity="SMBVR/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="SMDDL_v" quantity="SMDDL/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="SMDDR_v" quantity="SMDDR/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="SMDVL_v" quantity="SMDVL/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="SMDVR_v" quantity="SMDVR/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="URADL_v" quantity="URADL/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="URADR_v" quantity="URADR/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="URAVL_v" quantity="URAVL/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="URAVR_v" quantity="URAVR/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VA1_v" quantity="VA1/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VA10_v" quantity="VA10/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VA11_v" quantity="VA11/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VA12_v" quantity="VA12/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VA2_v" quantity="VA2/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VA3_v" quantity="VA3/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VA4_v" quantity="VA4/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VA5_v" quantity="VA5/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VA6_v" quantity="VA6/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VA7_v" quantity="VA7/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VA8_v" quantity="VA8/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VA9_v" quantity="VA9/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VB1_v" quantity="VB1/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VB10_v" quantity="VB10/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VB11_v" quantity="VB11/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VB2_v" quantity="VB2/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VB3_v" quantity="VB3/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VB4_v" quantity="VB4/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VB5_v" quantity="VB5/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VB6_v" quantity="VB6/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VB7_v" quantity="VB7/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VB8_v" quantity="VB8/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VB9_v" quantity="VB9/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VC1_v" quantity="VC1/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VC2_v" quantity="VC2/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VC3_v" quantity="VC3/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VC4_v" quantity="VC4/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VC5_v" quantity="VC5/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VC6_v" quantity="VC6/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VD1_v" quantity="VD1/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VD10_v" quantity="VD10/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VD11_v" quantity="VD11/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VD12_v" quantity="VD12/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VD13_v" quantity="VD13/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VD2_v" quantity="VD2/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VD3_v" quantity="VD3/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VD4_v" quantity="VD4/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VD5_v" quantity="VD5/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VD6_v" quantity="VD6/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VD7_v" quantity="VD7/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VD8_v" quantity="VD8/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VD9_v" quantity="VD9/0/GenericNeuronCell/caConc"/>
+        </OutputFile>
+        <OutputFile id="muscles_v" fileName="c302_C0_Muscles.muscles.dat">
+            <OutputColumn id="MDR01_v" quantity="MDR01/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR02_v" quantity="MDR02/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR03_v" quantity="MDR03/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR04_v" quantity="MDR04/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR05_v" quantity="MDR05/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR06_v" quantity="MDR06/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR07_v" quantity="MDR07/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR08_v" quantity="MDR08/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR09_v" quantity="MDR09/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR10_v" quantity="MDR10/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR11_v" quantity="MDR11/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR12_v" quantity="MDR12/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR13_v" quantity="MDR13/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR14_v" quantity="MDR14/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR15_v" quantity="MDR15/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR16_v" quantity="MDR16/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR17_v" quantity="MDR17/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR18_v" quantity="MDR18/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR19_v" quantity="MDR19/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR20_v" quantity="MDR20/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR21_v" quantity="MDR21/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR22_v" quantity="MDR22/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR23_v" quantity="MDR23/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR24_v" quantity="MDR24/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR01_v" quantity="MVR01/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR02_v" quantity="MVR02/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR03_v" quantity="MVR03/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR04_v" quantity="MVR04/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR05_v" quantity="MVR05/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR06_v" quantity="MVR06/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR07_v" quantity="MVR07/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR08_v" quantity="MVR08/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR09_v" quantity="MVR09/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR10_v" quantity="MVR10/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR11_v" quantity="MVR11/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR12_v" quantity="MVR12/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR13_v" quantity="MVR13/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR14_v" quantity="MVR14/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR15_v" quantity="MVR15/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR16_v" quantity="MVR16/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR17_v" quantity="MVR17/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR18_v" quantity="MVR18/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR19_v" quantity="MVR19/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR20_v" quantity="MVR20/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR21_v" quantity="MVR21/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR22_v" quantity="MVR22/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR23_v" quantity="MVR23/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR24_v" quantity="MVR24/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL01_v" quantity="MVL01/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL02_v" quantity="MVL02/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL03_v" quantity="MVL03/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL04_v" quantity="MVL04/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL05_v" quantity="MVL05/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL06_v" quantity="MVL06/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL07_v" quantity="MVL07/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL08_v" quantity="MVL08/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL09_v" quantity="MVL09/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL10_v" quantity="MVL10/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL11_v" quantity="MVL11/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL12_v" quantity="MVL12/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL13_v" quantity="MVL13/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL14_v" quantity="MVL14/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL15_v" quantity="MVL15/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL16_v" quantity="MVL16/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL17_v" quantity="MVL17/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL18_v" quantity="MVL18/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL19_v" quantity="MVL19/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL20_v" quantity="MVL20/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL21_v" quantity="MVL21/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL22_v" quantity="MVL22/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL23_v" quantity="MVL23/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL24_v" quantity="MVL24/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL01_v" quantity="MDL01/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL02_v" quantity="MDL02/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL03_v" quantity="MDL03/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL04_v" quantity="MDL04/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL05_v" quantity="MDL05/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL06_v" quantity="MDL06/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL07_v" quantity="MDL07/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL08_v" quantity="MDL08/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL09_v" quantity="MDL09/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL10_v" quantity="MDL10/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL11_v" quantity="MDL11/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL12_v" quantity="MDL12/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL13_v" quantity="MDL13/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL14_v" quantity="MDL14/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL15_v" quantity="MDL15/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL16_v" quantity="MDL16/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL17_v" quantity="MDL17/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL18_v" quantity="MDL18/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL19_v" quantity="MDL19/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL20_v" quantity="MDL20/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL21_v" quantity="MDL21/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL22_v" quantity="MDL22/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL23_v" quantity="MDL23/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL24_v" quantity="MDL24/0/GenericMuscleCell/v"/>
+        </OutputFile>
+        <OutputFile id="muscles_activity" fileName="c302_C0_Muscles.muscles.activity.dat">
+            <OutputColumn id="MDR01_v" quantity="MDR01/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR02_v" quantity="MDR02/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR03_v" quantity="MDR03/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR04_v" quantity="MDR04/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR05_v" quantity="MDR05/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR06_v" quantity="MDR06/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR07_v" quantity="MDR07/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR08_v" quantity="MDR08/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR09_v" quantity="MDR09/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR10_v" quantity="MDR10/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR11_v" quantity="MDR11/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR12_v" quantity="MDR12/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR13_v" quantity="MDR13/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR14_v" quantity="MDR14/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR15_v" quantity="MDR15/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR16_v" quantity="MDR16/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR17_v" quantity="MDR17/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR18_v" quantity="MDR18/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR19_v" quantity="MDR19/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR20_v" quantity="MDR20/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR21_v" quantity="MDR21/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR22_v" quantity="MDR22/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR23_v" quantity="MDR23/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR24_v" quantity="MDR24/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR01_v" quantity="MVR01/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR02_v" quantity="MVR02/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR03_v" quantity="MVR03/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR04_v" quantity="MVR04/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR05_v" quantity="MVR05/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR06_v" quantity="MVR06/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR07_v" quantity="MVR07/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR08_v" quantity="MVR08/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR09_v" quantity="MVR09/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR10_v" quantity="MVR10/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR11_v" quantity="MVR11/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR12_v" quantity="MVR12/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR13_v" quantity="MVR13/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR14_v" quantity="MVR14/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR15_v" quantity="MVR15/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR16_v" quantity="MVR16/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR17_v" quantity="MVR17/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR18_v" quantity="MVR18/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR19_v" quantity="MVR19/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR20_v" quantity="MVR20/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR21_v" quantity="MVR21/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR22_v" quantity="MVR22/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR23_v" quantity="MVR23/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR24_v" quantity="MVR24/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL01_v" quantity="MVL01/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL02_v" quantity="MVL02/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL03_v" quantity="MVL03/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL04_v" quantity="MVL04/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL05_v" quantity="MVL05/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL06_v" quantity="MVL06/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL07_v" quantity="MVL07/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL08_v" quantity="MVL08/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL09_v" quantity="MVL09/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL10_v" quantity="MVL10/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL11_v" quantity="MVL11/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL12_v" quantity="MVL12/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL13_v" quantity="MVL13/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL14_v" quantity="MVL14/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL15_v" quantity="MVL15/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL16_v" quantity="MVL16/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL17_v" quantity="MVL17/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL18_v" quantity="MVL18/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL19_v" quantity="MVL19/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL20_v" quantity="MVL20/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL21_v" quantity="MVL21/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL22_v" quantity="MVL22/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL23_v" quantity="MVL23/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL24_v" quantity="MVL24/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL01_v" quantity="MDL01/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL02_v" quantity="MDL02/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL03_v" quantity="MDL03/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL04_v" quantity="MDL04/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL05_v" quantity="MDL05/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL06_v" quantity="MDL06/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL07_v" quantity="MDL07/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL08_v" quantity="MDL08/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL09_v" quantity="MDL09/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL10_v" quantity="MDL10/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL11_v" quantity="MDL11/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL12_v" quantity="MDL12/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL13_v" quantity="MDL13/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL14_v" quantity="MDL14/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL15_v" quantity="MDL15/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL16_v" quantity="MDL16/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL17_v" quantity="MDL17/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL18_v" quantity="MDL18/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL19_v" quantity="MDL19/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL20_v" quantity="MDL20/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL21_v" quantity="MDL21/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL22_v" quantity="MDL22/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL23_v" quantity="MDL23/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL24_v" quantity="MDL24/0/GenericMuscleCell/caConc"/>
+        </OutputFile>
+    </Simulation>
+
+
+</Lems>

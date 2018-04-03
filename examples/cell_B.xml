@@ -1,0 +1,45 @@
+<neuroml xmlns="http://www.neuroml.org/schema/neuroml2"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2 https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2beta4.xsd" id="cell_B">
+
+    <!-- Definition of new model for Cell_B-->
+    
+    <ComponentType name="iafActivityCell"
+        extends="iafCell"
+        description="Integrate and fire cell with new activity variable">
+
+        <Exposure name="activity" dimension="none" description="some measure of activity of cell"/>
+        
+        <Parameter name="tau1" dimension="time"/>
+        
+        <Attachments name="synapses" type="basePointCurrent"/>
+
+        <Dynamics>
+
+            <StateVariable name="v" exposure="v" dimension="voltage"/>
+            <StateVariable name="activity" exposure="activity" dimension="none"/>
+
+            <DerivedVariable name="iSyn" dimension="current" exposure="iSyn" select="synapses[*]/i" reduce="add" />
+            <DerivedVariable name="iMemb" dimension="current" exposure="iMemb" value="leakConductance * (leakReversal - v) + iSyn"/>
+
+            <DerivedVariable name="target" dimension="none" value="(v - reset) / (thresh - reset)" />
+            
+            <TimeDerivative variable="v" value="iMemb / C"/>
+            <TimeDerivative variable="activity" value="(target-activity)/tau1"/>
+
+            <OnStart>
+                <StateAssignment variable="v" value="reset"/>
+            </OnStart>
+
+            <OnCondition test="activity .lt. 0">
+                <StateAssignment variable="activity" value="0"/>
+            </OnCondition>
+
+            <OnCondition test="v .gt. thresh">
+                <StateAssignment variable="v" value="reset"/>
+                <EventOut port="spike"/>
+            </OnCondition>
+
+        </Dynamics>
+
+    </ComponentType>
+    
+</neuroml>

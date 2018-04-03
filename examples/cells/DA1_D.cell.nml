@@ -1,0 +1,189 @@
+<neuroml xmlns="http://www.neuroml.org/schema/neuroml2"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2 https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2beta5.xsd" id="DA1">
+    <cell id="DA1">
+        <notes>Cell model created by c302 with custom electrical parameters</notes>
+        <morphology id="morphology_DA1">
+            <segment id="0" name="Seg0_soma_0">
+                <proximal x="-7.500000e-01" y="-2.270750e+02" z="3.425000e+00" diameter="3.8910155"/>
+                <distal x="-7.500000e-01" y="-2.270750e+02" z="3.425000e+00" diameter="3.8910155"/>
+            </segment>
+            <segment id="4" name="Seg0_axon_0">
+                <parent segment="0" fractionAlong="1"/>
+                <proximal x="-7.500000e-01" y="-2.270750e+02" z="3.425000e+00" diameter="0.67082036"/>
+                <distal x="-7.500000e-01" y="-2.282000e+02" z="4.200000e+00" diameter="0.67082036"/>
+            </segment>
+            <segment id="5" name="Seg5_axon_0">
+                <parent segment="4" fractionAlong="1"/>
+                <distal x="-8.000000e-01" y="-2.316500e+02" z="6.400000e+00" diameter="0.5744563"/>
+            </segment>
+            <segment id="6" name="Seg6_axon_0">
+                <parent segment="5" fractionAlong="1"/>
+                <distal x="-8.000000e-01" y="-2.380000e+02" z="1.090000e+01" diameter="0.6"/>
+            </segment>
+            <segment id="1" name="Seg0_dendrit_2">
+                <parent segment="0" fractionAlong="1"/>
+                <proximal x="-7.500000e-01" y="-2.270750e+02" z="3.425000e+00" diameter="0.76811457"/>
+                <distal x="-7.500000e-01" y="-2.259500e+02" z="2.650000e+00" diameter="0.76811457"/>
+            </segment>
+            <segment id="2" name="Seg2_dendrite_0">
+                <parent segment="1" fractionAlong="1"/>
+                <distal x="-7.500000e-01" y="-2.235500e+02" z="1.000000e+00" diameter="0.70710677"/>
+            </segment>
+            <segment id="3" name="Seg3_dendrite_0">
+                <parent segment="2" fractionAlong="1"/>
+                <distal x="-7.500000e-01" y="-2.210500e+02" z="-8.000000e-01" diameter="0.70710677"/>
+            </segment>
+            <segment id="7" name="Seg7_neurite_0">
+                <parent segment="6" fractionAlong="1"/>
+                <proximal x="-8.000000e-01" y="-2.380000e+02" z="1.090000e+01" diameter="0.6"/>
+                <distal x="-6.000000e-01" y="-2.382500e+02" z="1.102500e+01" diameter="0.71589106"/>
+            </segment>
+            <segment id="8" name="Seg8_neurite_0">
+                <parent segment="7" fractionAlong="1"/>
+                <distal x="-2.000000e-01" y="-2.382500e+02" z="1.105000e+01" diameter="0.50990194"/>
+            </segment>
+            <segment id="9" name="Seg9_neurite_0">
+                <parent segment="8" fractionAlong="1"/>
+                <distal x="3.100000e+00" y="-2.383500e+02" z="1.095000e+01" diameter="0.42426404"/>
+            </segment>
+            <segment id="10" name="Seg10_neurite_0">
+                <parent segment="9" fractionAlong="1"/>
+                <distal x="7.325000e+00" y="-2.382000e+02" z="1.132500e+01" diameter="0.6363961"/>
+            </segment>
+            <segment id="11" name="Seg11_neurite_0">
+                <parent segment="10" fractionAlong="1"/>
+                <distal x="1.490000e+01" y="-2.368000e+02" z="1.550000e+01" diameter="0.6"/>
+            </segment>
+            <segment id="12" name="Seg12_neurite_0">
+                <parent segment="11" fractionAlong="1"/>
+                <distal x="1.877500e+01" y="-2.345500e+02" z="2.220000e+01" diameter="0.5937171"/>
+            </segment>
+            <segment id="13" name="Seg13_neurite_0">
+                <parent segment="12" fractionAlong="1"/>
+                <distal x="2.040000e+01" y="-2.322250e+02" z="2.922500e+01" diameter="0.6041523"/>
+            </segment>
+            <segment id="14" name="Seg14_neurite_0">
+                <parent segment="13" fractionAlong="1"/>
+                <distal x="1.877500e+01" y="-2.299250e+02" z="3.622500e+01" diameter="0.6062178"/>
+            </segment>
+            <segment id="15" name="Seg15_neurite_0">
+                <parent segment="14" fractionAlong="1"/>
+                <distal x="1.490000e+01" y="-2.276750e+02" z="4.295000e+01" diameter="0.6576473"/>
+            </segment>
+            <segment id="16" name="Seg16_neurite_0">
+                <parent segment="15" fractionAlong="1"/>
+                <distal x="7.325000e+00" y="-2.263000e+02" z="4.715000e+01" diameter="0.7697402"/>
+            </segment>
+            <segment id="17" name="Seg17_neurite_0">
+                <parent segment="16" fractionAlong="1"/>
+                <distal x="3.100000e+00" y="-2.263000e+02" z="4.752500e+01" diameter="0.60207975"/>
+            </segment>
+            <segment id="18" name="Seg18_neurite_0">
+                <parent segment="17" fractionAlong="1"/>
+                <distal x="4.000000e-01" y="-2.270500e+02" z="4.752500e+01" diameter="0.4387482"/>
+            </segment>
+            <segment id="19" name="Seg19_neurite_0">
+                <parent segment="18" fractionAlong="1"/>
+                <distal x="-7.500000e-01" y="-2.286000e+02" z="4.770000e+01" diameter="0.64031243"/>
+            </segment>
+            <segment id="20" name="Seg20_neurite_0">
+                <parent segment="19" fractionAlong="1"/>
+                <distal x="-7.000000e-01" y="-2.409000e+02" z="5.250000e+01" diameter="0.56568545"/>
+            </segment>
+            <segment id="21" name="Seg21_neurite_0">
+                <parent segment="20" fractionAlong="1"/>
+                <distal x="-1.000000e+00" y="-2.722000e+02" z="6.150000e+01" diameter="0.56568545"/>
+            </segment>
+            <segment id="22" name="Seg22_neurite_0">
+                <parent segment="21" fractionAlong="1"/>
+                <distal x="-1.000000e+00" y="-2.757000e+02" z="6.250000e+01" diameter="0.56568545"/>
+            </segment>
+            <segment id="23" name="Seg23_neurite_0">
+                <parent segment="22" fractionAlong="1"/>
+                <distal x="-1.750000e+00" y="-2.903000e+02" z="6.470001e+01" diameter="0.64031243"/>
+            </segment>
+            <segment id="24" name="Seg24_neurite_0">
+                <parent segment="23" fractionAlong="1"/>
+                <distal x="-1.800000e+00" y="-2.935000e+02" z="6.510001e+01" diameter="0.56568545"/>
+            </segment>
+            <segment id="25" name="Seg25_neurite_0">
+                <parent segment="6" fractionAlong="1"/>
+                <proximal x="-8.000000e-01" y="-2.380000e+02" z="1.090000e+01" diameter="0.6"/>
+                <distal x="-8.000000e-01" y="-2.385000e+02" z="1.115000e+01" diameter="0.53851646"/>
+            </segment>
+            <segment id="26" name="Seg26_neurite_0">
+                <parent segment="25" fractionAlong="1"/>
+                <distal x="-8.000000e-01" y="-2.428000e+02" z="1.400000e+01" diameter="0.6"/>
+            </segment>
+            <segmentGroup neuroLexId="sao864921383" id="Soma">
+                <member segment="0"/>
+            </segmentGroup>
+            <segmentGroup neuroLexId="sao864921383" id="Axon">
+                <member segment="4"/>
+                <member segment="5"/>
+                <member segment="6"/>
+            </segmentGroup>
+            <segmentGroup neuroLexId="sao864921383" id="Dendrite2">
+                <member segment="1"/>
+                <member segment="2"/>
+                <member segment="3"/>
+            </segmentGroup>
+            <segmentGroup neuroLexId="sao864921383" id="Neurite3">
+                <member segment="7"/>
+                <member segment="8"/>
+                <member segment="9"/>
+                <member segment="10"/>
+                <member segment="11"/>
+                <member segment="12"/>
+                <member segment="13"/>
+                <member segment="14"/>
+                <member segment="15"/>
+                <member segment="16"/>
+                <member segment="17"/>
+                <member segment="18"/>
+                <member segment="19"/>
+                <member segment="20"/>
+                <member segment="21"/>
+                <member segment="22"/>
+                <member segment="23"/>
+                <member segment="24"/>
+            </segmentGroup>
+            <segmentGroup neuroLexId="sao864921383" id="Neurite4">
+                <member segment="25"/>
+                <member segment="26"/>
+            </segmentGroup>
+            <segmentGroup id="all">
+                <include segmentGroup="Soma"/>
+                <include segmentGroup="Axon"/>
+                <include segmentGroup="Dendrite2"/>
+                <include segmentGroup="Neurite3"/>
+                <include segmentGroup="Neurite4"/>
+            </segmentGroup>
+            <segmentGroup neuroLexId="GO:0043025" id="soma_group">
+                <include segmentGroup="Soma"/>
+            </segmentGroup>
+            <segmentGroup neuroLexId="GO:0030424" id="axon_group">
+                <include segmentGroup="Axon"/>
+            </segmentGroup>
+            <segmentGroup neuroLexId="GO:0030425" id="dendrite_group">
+                <include segmentGroup="Dendrite2"/>
+                <include segmentGroup="Neurite3"/>
+                <include segmentGroup="Neurite4"/>
+            </segmentGroup>
+        </morphology>
+        <biophysicalProperties id="biophys_DA1">
+            <membraneProperties>
+                <channelDensity id="Leak_all" ionChannel="Leak" condDensity="0.005 mS_per_cm2" erev="-50 mV" ion="non_specific"/>
+                <channelDensity id="k_slow_all" ionChannel="k_slow" condDensity="1.8333751019872582 mS_per_cm2" erev="-60 mV" ion="k"/>
+                <channelDensity id="k_fast_all" ionChannel="k_fast" condDensity="0.0711643917483308 mS_per_cm2" erev="-60 mV" ion="k"/>
+                <channelDensity id="ca_boyle_all" ionChannel="ca_boyle" condDensity="1.6862775772264702 mS_per_cm2" erev="40 mV" ion="ca"/>
+                <spikeThresh value="-26 mV"/>
+                <specificCapacitance value="1 uF_per_cm2"/>
+                <initMembPotential value="-45 mV"/>
+            </membraneProperties>
+            <intracellularProperties>
+                <species id="ca" concentrationModel="CaPool" ion="ca" initialConcentration="0 mM" initialExtConcentration="2E-6 mol_per_cm3"/>
+                <resistivity value="3 kohm_cm"/>
+            </intracellularProperties>
+        </biophysicalProperties>
+    </cell>
+</neuroml>

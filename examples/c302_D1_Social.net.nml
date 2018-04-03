@@ -1,0 +1,256 @@
+<neuroml xmlns="http://www.neuroml.org/schema/neuroml2"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2 https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2beta5.xsd" id="c302_D1_Social">
+    <notes>
+
+Parameters and setting used to generate this network:
+
+    Data reader:                    SpreadsheetDataReader
+    c302 version:                   0.6.0
+    Cells:                          ['RMGR', 'ASHR', 'ASKR', 'AWBR', 'IL2R', 'RMHR', 'URXR']
+    Cell stimulated:                []
+    Connection:                     []
+    Connection numbers overridden:  None
+    Connection numbers scaled:      None
+    Connection polarities override: None
+    Muscles:                        []
+
+    Known BioParameters:
+        BioParameter: ca_boyle_erev = 40 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: ca_conc_decay_time = 11.5943 ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: ca_conc_rho = 0.000238919 mol_per_m_per_A_per_s (SRC: BlindGuess, certainty 0.1)
+        BioParameter: cell_diameter = 5 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: exc_syn_ad = 20 per_s (SRC: BlindGuess, certainty 0.1)
+        BioParameter: exc_syn_ar = .5 per_s (SRC: BlindGuess, certainty 0.1)
+        BioParameter: exc_syn_beta = 0.25 per_mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: exc_syn_erev = 0 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: exc_syn_vth = -35 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: global_connectivity_power_scaling = 0 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: inh_syn_ad = 10 per_s (SRC: BlindGuess, certainty 0.1)
+        BioParameter: inh_syn_ar = .005 per_s (SRC: BlindGuess, certainty 0.1)
+        BioParameter: inh_syn_beta = 0.5 per_mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: inh_syn_erev = -80 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: inh_syn_vth = -55 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: initial_memb_pot = -45 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: k_fast_erev = -60 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: k_slow_erev = -60 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: leak_erev = -50 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_ca_boyle_cond_density = 4 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_k_fast_cond_density = 0.2 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_k_slow_cond_density = 4 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_leak_cond_density = 0.005 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_length = 20 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_spike_thresh = -26 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_ca_boyle_cond_density = 1.6862775772264702 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_k_fast_cond_density = 0.0711643917483308 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_k_slow_cond_density = 1.8333751019872582 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_leak_cond_density = 0.005 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_spike_thresh = -26 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_elec_syn_gbase = 0.0001 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_exc_syn_conductance = 2 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_inh_syn_conductance = 0.25 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_elec_syn_gbase = 0.005 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_exc_syn_conductance = 2 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_inh_syn_conductance = 26 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: resistivity = 3 kohm_cm (SRC: BlindGuess, certainty 0.1)
+        BioParameter: specific_capacitance = 1 uF_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: unphysiological_offset_current = 5 pA (SRC: KnownError, certainty 0)
+        BioParameter: unphysiological_offset_current_del = 0 ms (SRC: KnownError, certainty 0)
+        BioParameter: unphysiological_offset_current_dur = 2000 ms (SRC: KnownError, certainty 0)
+
+</notes>
+    <include href="cell_C.xml"></include>
+    <include href="custom_synapses.xml"></include>
+    <include href="cells/ASHR_D.cell.nml"></include>
+    <include href="cells/ASKR_D.cell.nml"></include>
+    <include href="cells/AWBR_D.cell.nml"></include>
+    <include href="cells/IL2R_D.cell.nml"></include>
+    <include href="cells/RMGR_D.cell.nml"></include>
+    <include href="cells/RMHR_D.cell.nml"></include>
+    <include href="cells/URXR_D.cell.nml"></include>
+    <fixedFactorConcentrationModel id="CaPool" ion="ca" restingConc="0 mM" decayConstant="11.5943 ms" rho="0.000238919 mol_per_m_per_A_per_s"/>
+    <gapJunction id="neuron_to_neuron_elec_syn" conductance="0.005 nS"/>
+    <silentSynapse id="silent"/>
+    <gradedSynapse2 id="neuron_to_neuron_exc_syn" conductance="2 nS" ar=".5 per_s" ad="20 per_s" beta="0.25 per_mV" vth="-35 mV" erev="0 mV"/>
+    <cell id="GenericMuscleCell">
+        <morphology id="morphology_GenericMuscleCell">
+            <segment id="0" name="soma">
+                <proximal x="0.000000e+00" y="0.000000e+00" z="0.000000e+00" diameter="5"/>
+                <distal x="0.000000e+00" y="2.000000e+01" z="0.000000e+00" diameter="5"/>
+            </segment>
+        </morphology>
+        <biophysicalProperties id="biophys_GenericMuscleCell">
+            <membraneProperties>
+                <channelDensity id="Leak_all" ionChannel="Leak" condDensity="0.005 mS_per_cm2" erev="-50 mV" ion="non_specific"/>
+                <channelDensity id="k_slow_all" ionChannel="k_slow" condDensity="4 mS_per_cm2" erev="-60 mV" ion="k"/>
+                <channelDensity id="k_fast_all" ionChannel="k_fast" condDensity="0.2 mS_per_cm2" erev="-60 mV" ion="k"/>
+                <channelDensity id="ca_boyle_all" ionChannel="ca_boyle" condDensity="4 mS_per_cm2" erev="40 mV" ion="ca"/>
+                <spikeThresh value="-26 mV"/>
+                <specificCapacitance value="1 uF_per_cm2"/>
+                <initMembPotential value="-45 mV"/>
+            </membraneProperties>
+            <intracellularProperties>
+                <species id="ca" concentrationModel="CaPool" ion="ca" initialConcentration="0 mM" initialExtConcentration="2E-6 mol_per_cm3"/>
+                <resistivity value="3 kohm_cm"/>
+            </intracellularProperties>
+        </biophysicalProperties>
+    </cell>
+    <pulseGenerator id="offset_current" delay="0 ms" duration="2000 ms" amplitude="5 pA"/>
+    <pulseGenerator id="stim_RMGR_1" delay="100ms" duration="200ms" amplitude="5pA"/>
+    <pulseGenerator id="stim_ASHR_1" delay="400ms" duration="200ms" amplitude="5pA"/>
+    <pulseGenerator id="stim_ASKR_1" delay="700ms" duration="200ms" amplitude="5pA"/>
+    <pulseGenerator id="stim_AWBR_1" delay="1000ms" duration="200ms" amplitude="5pA"/>
+    <pulseGenerator id="stim_IL2R_1" delay="1300ms" duration="200ms" amplitude="5pA"/>
+    <pulseGenerator id="stim_RMHR_1" delay="1600ms" duration="200ms" amplitude="5pA"/>
+    <pulseGenerator id="stim_URXR_1" delay="1900ms" duration="200ms" amplitude="5pA"/>
+    <network id="c302_D1_Social">
+        <population id="ASHR" component="ASHR" size="1" type="populationList">
+            <property tag="color" value="1 .2 1"/>
+            <property tag="type" value="sensory"/>
+            <property tag="receptor" value="DCAR-1; DOP-4; NPR-1; NPR-2; NTR-1; NTR-2; OCR-2; OCTR-1; OSM-9; SER-3; SER-5; SRA-6; SRB-6; TMC-1; TRPA-1; TYRA-2; UNC-8"/>
+            <property tag="neurotransmitter" value="Glutamate"/>
+            <instance id="0">
+                <location x="0." y="0." z="0."/>
+            </instance>
+        </population>
+        <population id="ASKR" component="ASKR" size="1" type="populationList">
+            <property tag="color" value="1 .2 1"/>
+            <property tag="type" value="sensory"/>
+            <property tag="receptor" value="DAF-11; DOP-3; NPR-5; OSM-9; SRA-7; SRA-9; SRG-2; SRG-8; TYRA-3"/>
+            <property tag="neurotransmitter" value="Glutamate"/>
+            <property tag="OpenWormBackerAssignedName" value="Z.B."/>
+            <instance id="0">
+                <location x="0." y="0." z="0."/>
+            </instance>
+        </population>
+        <population id="AWBR" component="AWBR" size="1" type="populationList">
+            <property tag="color" value="1 .2 1"/>
+            <property tag="type" value="sensory"/>
+            <property tag="receptor" value="AEX-2; DAF-11; NPR-5; SER-5; SER-6; STR-1"/>
+            <property tag="neurotransmitter" value=""/>
+            <instance id="0">
+                <location x="0." y="0." z="0."/>
+            </instance>
+        </population>
+        <population id="IL2R" component="IL2R" size="1" type="populationList">
+            <property tag="color" value="1 .2 1"/>
+            <property tag="type" value="sensory"/>
+            <property tag="receptor" value="DES-2; LGC-53; NPR-1; NPR-5"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
+            <instance id="0">
+                <location x="0." y="0." z="0."/>
+            </instance>
+        </population>
+        <population id="RMGR" component="RMGR" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron"/>
+            <property tag="receptor" value="NPR-1"/>
+            <property tag="neurotransmitter" value=""/>
+            <property tag="OpenWormBackerAssignedName" value="Bryan Nagle"/>
+            <instance id="0">
+                <location x="0." y="0." z="0."/>
+            </instance>
+        </population>
+        <population id="RMHR" component="RMHR" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="SER-1"/>
+            <property tag="neurotransmitter" value=""/>
+            <property tag="OpenWormBackerAssignedName" value="Martino"/>
+            <instance id="0">
+                <location x="0." y="0." z="0."/>
+            </instance>
+        </population>
+        <population id="URXR" component="URXR" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron; sensory"/>
+            <property tag="receptor" value="GCY-1; GCY-25; GCY-32; GCY-34; GCY-35; GCY-36; GCY-37; NPR-1; PDFR-1; SRA-10"/>
+            <property tag="neurotransmitter" value=""/>
+            <instance id="0">
+                <location x="0." y="0." z="0."/>
+            </instance>
+        </population>
+        <electricalProjection id="NC_ASHR_ASKR_Generic_GJ" presynapticPopulation="ASHR" postsynapticPopulation="ASKR">
+            <electricalConnectionInstanceW id="0" preCell="../ASHR/0/ASHR" preSegment="0" preFractionAlong="0.5" postCell="../ASKR/0/ASKR" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+        </electricalProjection>
+        <electricalProjection id="NC_ASHR_RMGR_Generic_GJ" presynapticPopulation="ASHR" postsynapticPopulation="RMGR">
+            <electricalConnectionInstanceW id="0" preCell="../ASHR/0/ASHR" preSegment="0" preFractionAlong="0.5" postCell="../RMGR/0/RMGR" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+        </electricalProjection>
+        <electricalProjection id="NC_ASKR_ASHR_Generic_GJ" presynapticPopulation="ASKR" postsynapticPopulation="ASHR">
+            <electricalConnectionInstanceW id="0" preCell="../ASKR/0/ASKR" preSegment="0" preFractionAlong="0.5" postCell="../ASHR/0/ASHR" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+        </electricalProjection>
+        <electricalProjection id="NC_ASKR_RMGR_Generic_GJ" presynapticPopulation="ASKR" postsynapticPopulation="RMGR">
+            <electricalConnectionInstanceW id="0" preCell="../ASKR/0/ASKR" preSegment="0" preFractionAlong="0.5" postCell="../RMGR/0/RMGR" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+        </electricalProjection>
+        <electricalProjection id="NC_AWBR_RMGR_Generic_GJ" presynapticPopulation="AWBR" postsynapticPopulation="RMGR">
+            <electricalConnectionInstanceW id="0" preCell="../AWBR/0/AWBR" preSegment="0" preFractionAlong="0.5" postCell="../RMGR/0/RMGR" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+        </electricalProjection>
+        <electricalProjection id="NC_IL2R_RMGR_Generic_GJ" presynapticPopulation="IL2R" postsynapticPopulation="RMGR">
+            <electricalConnectionInstanceW id="0" preCell="../IL2R/0/IL2R" preSegment="0" preFractionAlong="0.5" postCell="../RMGR/0/RMGR" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+        </electricalProjection>
+        <electricalProjection id="NC_IL2R_URXR_Generic_GJ" presynapticPopulation="IL2R" postsynapticPopulation="URXR">
+            <electricalConnectionInstanceW id="0" preCell="../IL2R/0/IL2R" preSegment="0" preFractionAlong="0.5" postCell="../URXR/0/URXR" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+        </electricalProjection>
+        <electricalProjection id="NC_RMGR_ASHR_Generic_GJ" presynapticPopulation="RMGR" postsynapticPopulation="ASHR">
+            <electricalConnectionInstanceW id="0" preCell="../RMGR/0/RMGR" preSegment="0" preFractionAlong="0.5" postCell="../ASHR/0/ASHR" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+        </electricalProjection>
+        <electricalProjection id="NC_RMGR_ASKR_Generic_GJ" presynapticPopulation="RMGR" postsynapticPopulation="ASKR">
+            <electricalConnectionInstanceW id="0" preCell="../RMGR/0/RMGR" preSegment="0" preFractionAlong="0.5" postCell="../ASKR/0/ASKR" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+        </electricalProjection>
+        <electricalProjection id="NC_RMGR_AWBR_Generic_GJ" presynapticPopulation="RMGR" postsynapticPopulation="AWBR">
+            <electricalConnectionInstanceW id="0" preCell="../RMGR/0/RMGR" preSegment="0" preFractionAlong="0.5" postCell="../AWBR/0/AWBR" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+        </electricalProjection>
+        <electricalProjection id="NC_RMGR_IL2R_Generic_GJ" presynapticPopulation="RMGR" postsynapticPopulation="IL2R">
+            <electricalConnectionInstanceW id="0" preCell="../RMGR/0/RMGR" preSegment="0" preFractionAlong="0.5" postCell="../IL2R/0/IL2R" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+        </electricalProjection>
+        <electricalProjection id="NC_RMGR_RMHR_Generic_GJ" presynapticPopulation="RMGR" postsynapticPopulation="RMHR">
+            <electricalConnectionInstanceW id="0" preCell="../RMGR/0/RMGR" preSegment="0" preFractionAlong="0.5" postCell="../RMHR/0/RMHR" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+        </electricalProjection>
+        <electricalProjection id="NC_RMGR_URXR_Generic_GJ" presynapticPopulation="RMGR" postsynapticPopulation="URXR">
+            <electricalConnectionInstanceW id="0" preCell="../RMGR/0/RMGR" preSegment="0" preFractionAlong="0.5" postCell="../URXR/0/URXR" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+        </electricalProjection>
+        <electricalProjection id="NC_RMHR_RMGR_Generic_GJ" presynapticPopulation="RMHR" postsynapticPopulation="RMGR">
+            <electricalConnectionInstanceW id="0" preCell="../RMHR/0/RMHR" preSegment="0" preFractionAlong="0.5" postCell="../RMGR/0/RMGR" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+        </electricalProjection>
+        <electricalProjection id="NC_URXR_IL2R_Generic_GJ" presynapticPopulation="URXR" postsynapticPopulation="IL2R">
+            <electricalConnectionInstanceW id="0" preCell="../URXR/0/URXR" preSegment="0" preFractionAlong="0.5" postCell="../IL2R/0/IL2R" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+        </electricalProjection>
+        <electricalProjection id="NC_URXR_RMGR_Generic_GJ" presynapticPopulation="URXR" postsynapticPopulation="RMGR">
+            <electricalConnectionInstanceW id="0" preCell="../URXR/0/URXR" preSegment="0" preFractionAlong="0.5" postCell="../RMGR/0/RMGR" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+        </electricalProjection>
+        <continuousProjection id="NC_ASHR_RMGR_Glutamate" presynapticPopulation="ASHR" postsynapticPopulation="RMGR">
+            <continuousConnectionInstanceW id="0" preCell="../ASHR/0/ASHR" preSegment="0" preFractionAlong="0.5" postCell="../RMGR/0/RMGR" postSegment="0" postFractionAlong="0.5" preComponent="silent" postComponent="neuron_to_neuron_exc_syn" weight="1."/>
+        </continuousProjection>
+        <continuousProjection id="NC_AWBR_ASHR_Glutamate" presynapticPopulation="AWBR" postsynapticPopulation="ASHR">
+            <continuousConnectionInstanceW id="0" preCell="../AWBR/0/AWBR" preSegment="0" preFractionAlong="0.5" postCell="../ASHR/0/ASHR" postSegment="0" postFractionAlong="0.5" preComponent="silent" postComponent="neuron_to_neuron_exc_syn" weight="1."/>
+        </continuousProjection>
+        <continuousProjection id="NC_RMGR_ASHR_FMRFamide" presynapticPopulation="RMGR" postsynapticPopulation="ASHR">
+            <continuousConnectionInstanceW id="0" preCell="../RMGR/0/RMGR" preSegment="0" preFractionAlong="0.5" postCell="../ASHR/0/ASHR" postSegment="0" postFractionAlong="0.5" preComponent="silent" postComponent="neuron_to_neuron_exc_syn" weight="1."/>
+        </continuousProjection>
+        <continuousProjection id="NC_RMGR_URXR_FMRFamide" presynapticPopulation="RMGR" postsynapticPopulation="URXR">
+            <continuousConnectionInstanceW id="0" preCell="../RMGR/0/RMGR" preSegment="0" preFractionAlong="0.5" postCell="../URXR/0/URXR" postSegment="0" postFractionAlong="0.5" preComponent="silent" postComponent="neuron_to_neuron_exc_syn" weight="1."/>
+        </continuousProjection>
+        <continuousProjection id="NC_URXR_RMGR_Glutamate" presynapticPopulation="URXR" postsynapticPopulation="RMGR">
+            <continuousConnectionInstanceW id="0" preCell="../URXR/0/URXR" preSegment="0" preFractionAlong="0.5" postCell="../RMGR/0/RMGR" postSegment="0" postFractionAlong="0.5" preComponent="silent" postComponent="neuron_to_neuron_exc_syn" weight="1."/>
+        </continuousProjection>
+        <inputList id="Input_RMGR_stim_RMGR_1" population="RMGR" component="stim_RMGR_1">
+            <input id="0" target="../RMGR/0/RMGR" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_ASHR_stim_ASHR_1" population="ASHR" component="stim_ASHR_1">
+            <input id="0" target="../ASHR/0/ASHR" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_ASKR_stim_ASKR_1" population="ASKR" component="stim_ASKR_1">
+            <input id="0" target="../ASKR/0/ASKR" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_AWBR_stim_AWBR_1" population="AWBR" component="stim_AWBR_1">
+            <input id="0" target="../AWBR/0/AWBR" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_IL2R_stim_IL2R_1" population="IL2R" component="stim_IL2R_1">
+            <input id="0" target="../IL2R/0/IL2R" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_RMHR_stim_RMHR_1" population="RMHR" component="stim_RMHR_1">
+            <input id="0" target="../RMHR/0/RMHR" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_URXR_stim_URXR_1" population="URXR" component="stim_URXR_1">
+            <input id="0" target="../URXR/0/URXR" destination="synapses"/>
+        </inputList>
+    </network>
+</neuroml>

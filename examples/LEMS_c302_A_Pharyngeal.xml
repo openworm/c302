@@ -1,0 +1,117 @@
+<Lems>
+    
+    <!--
+
+
+Parameters and setting used to generate this network:
+
+    Data reader:                    SpreadsheetDataReader
+    c302 version:                   0.6.0
+    Cells:                          ['M1', 'M2L', 'M2R', 'M3L', 'M3R', 'M4', 'M5', 'I1L', 'I1R', 'I2L', 'I2R', 'I3', 'I4', 'I5', 'I6', 'MI', 'NSML', 'NSMR', 'MCL', 'MCR']
+    Cell stimulated:                ['M1', 'M3R', 'M4', 'M5', 'I1L', 'I4', 'I5', 'I6', 'MCL', 'MCR']
+    Connection:                     []
+    Connection numbers overridden:  None
+    Connection numbers scaled:      None
+    Connection polarities override: None
+    Muscles:                        []
+
+    Known BioParameters:
+        BioParameter: chem_exc_syn_decay = 10ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: chem_exc_syn_erev = 0mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: chem_exc_syn_rise = 3ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: chem_inh_syn_decay = 10ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: chem_inh_syn_erev = -80mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: chem_inh_syn_rise = 3ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: elec_syn_decay = 10ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: elec_syn_erev = 0mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: elec_syn_rise = 3ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_iaf_C = 3pF (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_iaf_conductance = 0.1nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_iaf_leak_reversal = -50mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_iaf_reset = -50mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_iaf_thresh = -30mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_iaf_C = 3pF (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_iaf_conductance = 0.1nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_iaf_leak_reversal = -50mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_iaf_reset = -50mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_iaf_thresh = -30mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_chem_exc_syn_gbase = 0.01nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_chem_inh_syn_gbase = 0.01nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_elec_syn_gbase = 0nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_chem_exc_syn_gbase = 0.01nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_chem_inh_syn_gbase = 0.01nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_elec_syn_gbase = 0nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: unphysiological_offset_current = 2.5pA (SRC: KnownError, certainty 0)
+        BioParameter: unphysiological_offset_current_del = 0ms (SRC: KnownError, certainty 0)
+        BioParameter: unphysiological_offset_current_dur = 200ms (SRC: KnownError, certainty 0)
+
+   
+    -->
+
+    <Target component="sim_c302_A_Pharyngeal" />
+
+    <!-- Include core NeuroML2 ComponentType definitions -->
+
+    <Include file="Cells.xml" />
+    <Include file="Networks.xml" />
+    <Include file="Simulation.xml" />
+    
+    <Include file="c302_A_Pharyngeal.net.nml" />
+
+    <!-- End of NeuroML2 content -->
+    
+
+    <Simulation id="sim_c302_A_Pharyngeal" length="500ms" step="0.01ms" target="c302_A_Pharyngeal">
+
+        <Display id="neurons" title="c302_A_Pharyngeal: Membrane potential of a number of neurons" timeScale="1ms" xmin="-50.0" xmax="550.0" ymin="-72" ymax="-48">
+            
+            <Line id="I1L" quantity="I1L/0/generic_neuron_iaf_cell/v" scale="1mV" color="#8b779a" timeScale="1ms" />
+            <Line id="I1R" quantity="I1R/0/generic_neuron_iaf_cell/v" scale="1mV" color="#7b5b40" timeScale="1ms" />
+            <Line id="I2L" quantity="I2L/0/generic_neuron_iaf_cell/v" scale="1mV" color="#002479" timeScale="1ms" />
+            <Line id="I2R" quantity="I2R/0/generic_neuron_iaf_cell/v" scale="1mV" color="#25f0c6" timeScale="1ms" />
+            <Line id="I3" quantity="I3/0/generic_neuron_iaf_cell/v" scale="1mV" color="#cf2d27" timeScale="1ms" />
+            <Line id="I4" quantity="I4/0/generic_neuron_iaf_cell/v" scale="1mV" color="#5957d1" timeScale="1ms" />
+            <Line id="I5" quantity="I5/0/generic_neuron_iaf_cell/v" scale="1mV" color="#70c8d1" timeScale="1ms" />
+            <Line id="I6" quantity="I6/0/generic_neuron_iaf_cell/v" scale="1mV" color="#88d57c" timeScale="1ms" />
+            <Line id="M1" quantity="M1/0/generic_neuron_iaf_cell/v" scale="1mV" color="#d028e9" timeScale="1ms" />
+            <Line id="M2L" quantity="M2L/0/generic_neuron_iaf_cell/v" scale="1mV" color="#721265" timeScale="1ms" />
+            <Line id="M2R" quantity="M2R/0/generic_neuron_iaf_cell/v" scale="1mV" color="#efb351" timeScale="1ms" />
+            <Line id="M3L" quantity="M3L/0/generic_neuron_iaf_cell/v" scale="1mV" color="#3365b5" timeScale="1ms" />
+            <Line id="M3R" quantity="M3R/0/generic_neuron_iaf_cell/v" scale="1mV" color="#84b42c" timeScale="1ms" />
+            <Line id="M4" quantity="M4/0/generic_neuron_iaf_cell/v" scale="1mV" color="#c68d55" timeScale="1ms" />
+            <Line id="M5" quantity="M5/0/generic_neuron_iaf_cell/v" scale="1mV" color="#5300ad" timeScale="1ms" />
+            <Line id="MCL" quantity="MCL/0/generic_neuron_iaf_cell/v" scale="1mV" color="#bd35d3" timeScale="1ms" />
+            <Line id="MCR" quantity="MCR/0/generic_neuron_iaf_cell/v" scale="1mV" color="#6cb0d9" timeScale="1ms" />
+            <Line id="MI" quantity="MI/0/generic_neuron_iaf_cell/v" scale="1mV" color="#471d60" timeScale="1ms" />
+            <Line id="NSML" quantity="NSML/0/generic_neuron_iaf_cell/v" scale="1mV" color="#71c72a" timeScale="1ms" />
+            <Line id="NSMR" quantity="NSMR/0/generic_neuron_iaf_cell/v" scale="1mV" color="#7b667a" timeScale="1ms" />
+            
+        </Display>
+
+        <OutputFile id="neurons_v" fileName="c302_A_Pharyngeal.dat">
+            <OutputColumn id="I1L_v" quantity="I1L/0/generic_neuron_iaf_cell/v"/>
+            <OutputColumn id="I1R_v" quantity="I1R/0/generic_neuron_iaf_cell/v"/>
+            <OutputColumn id="I2L_v" quantity="I2L/0/generic_neuron_iaf_cell/v"/>
+            <OutputColumn id="I2R_v" quantity="I2R/0/generic_neuron_iaf_cell/v"/>
+            <OutputColumn id="I3_v" quantity="I3/0/generic_neuron_iaf_cell/v"/>
+            <OutputColumn id="I4_v" quantity="I4/0/generic_neuron_iaf_cell/v"/>
+            <OutputColumn id="I5_v" quantity="I5/0/generic_neuron_iaf_cell/v"/>
+            <OutputColumn id="I6_v" quantity="I6/0/generic_neuron_iaf_cell/v"/>
+            <OutputColumn id="M1_v" quantity="M1/0/generic_neuron_iaf_cell/v"/>
+            <OutputColumn id="M2L_v" quantity="M2L/0/generic_neuron_iaf_cell/v"/>
+            <OutputColumn id="M2R_v" quantity="M2R/0/generic_neuron_iaf_cell/v"/>
+            <OutputColumn id="M3L_v" quantity="M3L/0/generic_neuron_iaf_cell/v"/>
+            <OutputColumn id="M3R_v" quantity="M3R/0/generic_neuron_iaf_cell/v"/>
+            <OutputColumn id="M4_v" quantity="M4/0/generic_neuron_iaf_cell/v"/>
+            <OutputColumn id="M5_v" quantity="M5/0/generic_neuron_iaf_cell/v"/>
+            <OutputColumn id="MCL_v" quantity="MCL/0/generic_neuron_iaf_cell/v"/>
+            <OutputColumn id="MCR_v" quantity="MCR/0/generic_neuron_iaf_cell/v"/>
+            <OutputColumn id="MI_v" quantity="MI/0/generic_neuron_iaf_cell/v"/>
+            <OutputColumn id="NSML_v" quantity="NSML/0/generic_neuron_iaf_cell/v"/>
+            <OutputColumn id="NSMR_v" quantity="NSMR/0/generic_neuron_iaf_cell/v"/>
+        </OutputFile>
+        
+    </Simulation>
+
+
+</Lems>
