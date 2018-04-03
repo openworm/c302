@@ -37,6 +37,9 @@ before_install:
 install:
     # Required to run OMV tests
     - pip install git+https://github.com/OpenSourceBrain/osb-model-validation
+    
+    # NeuroML & main install
+    - pip install pyNeuroML
     - python setup.py install
 
 script:
