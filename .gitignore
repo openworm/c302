@@ -16,3 +16,4 @@
 /examples/x86_64/
 /examples/*_nrn.py
 /c302/__init__$py.class
+/c302/examples/*.dat
