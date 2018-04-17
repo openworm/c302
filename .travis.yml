@@ -22,9 +22,8 @@ virtualenv:
     system_site_packages: true 
 
 env:
-     #- OMV_ENGINE=jNeuroML
-     #- OMV_ENGINE=jNeuroML_NEURON
-     #- OMV_ENGINE=jNeuroML_validatev1
+     - OMV_ENGINE=jNeuroML
+     - OMV_ENGINE=jNeuroML_NEURON
      - OMV_ENGINE=jNeuroML_validate
      - OMV_ENGINE=NON_OMV_TESTS
      

@@ -1,0 +1,7 @@
+# Framework for running automated tests on Open Source Brain using Travis-CI.
+# See https://github.com/OpenSourceBrain/osb-model-validation for more details
+ 
+target: LEMS_c302_D_Pharyngeal.xml 
+engine: jNeuroML_NEURON
+
+

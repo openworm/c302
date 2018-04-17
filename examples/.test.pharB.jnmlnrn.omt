@@ -1,0 +1,19 @@
+# Framework for running automated tests on Open Source Brain using Travis-CI.
+# See https://github.com/OpenSourceBrain/osb-model-validation for more details
+ 
+target: LEMS_c302_B_Pharyngeal.xml 
+engine: jNeuroML_NEURON
+mep: .test.pharyngealB.mep
+experiments:
+  TestOneCell:
+    observables:
+      spike times:
+        file: 
+          path: c302_B_Pharyngeal.dat
+          columns: [0,7]
+          scaling: [1000, 1000]
+        spike detection: 
+          method: threshold
+          threshold: -31
+        tolerance: 0.00
+

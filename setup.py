@@ -7,7 +7,7 @@ import c302
 version = c302.__version__
 
 long_description = """
-c302 is a framework for generating network models in NeuroML 2 based on C elegans connectivity data.
+c302 is a framework for generating network models in NeuroML 2 based on C elegans connectivity data. Part of the OpenWorm project
 """
 
 setup(
@@ -27,7 +27,7 @@ setup(
             '*.xml',
             'data/*',
             'NeuroML2/*']},
-    description = 'c302',
+    description = 'c302 is a framework for generating models of the worm C. elegans',
     long_description = long_description,
     license = 'MIT',
     url='http://github.com/openworm/c302',
