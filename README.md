@@ -31,13 +31,13 @@ To test all of the working features of the framework run [test.sh](https://raw.g
 
 This package can be used to generate customised networks of varying size, with different cells stimulated, of varying duration from the command line:
 
-    ./c302/c302.py MyNetwork parameters_A -cells ["ADAL","AIBL","RIVR","RMEV"] -cellstostimulate ["ADAL","RIVR"] -duration 500
+    ./c302/__init__.py MyNetwork parameters_A -cells ["ADAL","AIBL","RIVR","RMEV"] -cellstostimulate ["ADAL","RIVR"] -duration 500
 
 This will create a NeuroML 2 file and a LEMS file to execute it, containing 4 cells, stimulating 2 of them, and with a duration of 500 ms
 
 More options can be found with
 
-    ./c302.py -h
+    ./c302/__init__.py -h
 
 ### Mapping to NEURON
 

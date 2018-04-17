@@ -1,10 +1,14 @@
-
+import os
 
 from setuptools import setup
 
 
-import c302
-version = c302.__version__
+here = os.path.abspath(os.path.dirname(__file__))
+about = {}
+with open(os.path.join(here, 'c302', '__version__.py')) as version_file:
+    exec (version_file.read(), about)
+version = about['__version__']
+
 
 long_description = """
 c302 is a framework for generating network models in NeuroML 2 based on C elegans connectivity data. Part of the OpenWorm project
@@ -20,7 +24,9 @@ setup(
         'numpy',
         'xlrd',
         'xlwt',
-        'pyNeuroML'
+        'libNeuroML>=0.2.39',
+        'pyNeuroML>=0.3.11',
+        'pyopenworm>=0.7.1'
     ],
     package_data={
         'c302': [

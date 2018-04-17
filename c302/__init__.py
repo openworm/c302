@@ -47,7 +47,11 @@ import sys
 #sys.path.append("..")
 #import SpreadsheetDataReader
 
-__version__ = '0.6.0'
+here = os.path.abspath(os.path.dirname(__file__))
+about = {}
+with open(os.path.join(here, '__version__.py')) as version_file:
+    exec (version_file.read(), about)
+__version__ = about['__version__']
 
 LEMS_TEMPLATE_FILE = "LEMS_c302_TEMPLATE.xml"
 
