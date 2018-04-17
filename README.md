@@ -58,6 +58,11 @@ then
     nrnivmodl
     nrngui -python LEMS_c302_A_Pharyngeal_nrn.py
 
+### Comparing activity across scales/parameter sets
+
+<a href="https://github.com/openworm/c302/blob/master/examples/summary/README.md"><img src="https://raw.githubusercontent.com/openworm/c302/master/images/activity.png" alt="activity"  height="250"/></a>
+
+See [here](https://github.com/openworm/c302/blob/master/examples/summary/README.md) for more details on this.
 
 ### Understanding how c302_Full.py works
 
