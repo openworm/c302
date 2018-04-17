@@ -105,51 +105,51 @@ Parameters and setting used to generate this network:
 
         <Display id="neurons" title="c302_C2_Pharyngeal: Membrane potential of a number of neurons" timeScale="1ms" xmin="-50.0" xmax="550.0" ymin="-60" ymax="25">
             
-            <Line id="I1L" quantity="I1L/0/GenericNeuronCell/v" scale="1mV" color="#f87100" timeScale="1ms" />
-            <Line id="I1R" quantity="I1R/0/GenericNeuronCell/v" scale="1mV" color="#ac15c4" timeScale="1ms" />
-            <Line id="I2L" quantity="I2L/0/GenericNeuronCell/v" scale="1mV" color="#58a09e" timeScale="1ms" />
-            <Line id="I2R" quantity="I2R/0/GenericNeuronCell/v" scale="1mV" color="#007df7" timeScale="1ms" />
-            <Line id="I3" quantity="I3/0/GenericNeuronCell/v" scale="1mV" color="#9a1694" timeScale="1ms" />
-            <Line id="I4" quantity="I4/0/GenericNeuronCell/v" scale="1mV" color="#7b5b40" timeScale="1ms" />
-            <Line id="I5" quantity="I5/0/GenericNeuronCell/v" scale="1mV" color="#008200" timeScale="1ms" />
-            <Line id="I6" quantity="I6/0/GenericNeuronCell/v" scale="1mV" color="#00962a" timeScale="1ms" />
-            <Line id="M1" quantity="M1/0/GenericNeuronCell/v" scale="1mV" color="#c6f524" timeScale="1ms" />
-            <Line id="M2L" quantity="M2L/0/GenericNeuronCell/v" scale="1mV" color="#cf2d27" timeScale="1ms" />
-            <Line id="M2R" quantity="M2R/0/GenericNeuronCell/v" scale="1mV" color="#006359" timeScale="1ms" />
-            <Line id="M3L" quantity="M3L/0/GenericNeuronCell/v" scale="1mV" color="#c979d2" timeScale="1ms" />
-            <Line id="M3R" quantity="M3R/0/GenericNeuronCell/v" scale="1mV" color="#d14b1f" timeScale="1ms" />
-            <Line id="M4" quantity="M4/0/GenericNeuronCell/v" scale="1mV" color="#88d57c" timeScale="1ms" />
-            <Line id="M5" quantity="M5/0/GenericNeuronCell/v" scale="1mV" color="#58b4d0" timeScale="1ms" />
-            <Line id="MCL" quantity="MCL/0/GenericNeuronCell/v" scale="1mV" color="#27d8b9" timeScale="1ms" />
-            <Line id="MCR" quantity="MCR/0/GenericNeuronCell/v" scale="1mV" color="#650049" timeScale="1ms" />
-            <Line id="MI" quantity="MI/0/GenericNeuronCell/v" scale="1mV" color="#efb351" timeScale="1ms" />
-            <Line id="NSML" quantity="NSML/0/GenericNeuronCell/v" scale="1mV" color="#126d33" timeScale="1ms" />
-            <Line id="NSMR" quantity="NSMR/0/GenericNeuronCell/v" scale="1mV" color="#80d25c" timeScale="1ms" />
+            <Line id="I1L" quantity="I1L/0/GenericNeuronCell/v" scale="1mV" color="#8b779a" timeScale="1ms" />
+            <Line id="I1R" quantity="I1R/0/GenericNeuronCell/v" scale="1mV" color="#ef7488" timeScale="1ms" />
+            <Line id="I2L" quantity="I2L/0/GenericNeuronCell/v" scale="1mV" color="#2a8f25" timeScale="1ms" />
+            <Line id="I2R" quantity="I2R/0/GenericNeuronCell/v" scale="1mV" color="#2d27f5" timeScale="1ms" />
+            <Line id="I3" quantity="I3/0/GenericNeuronCell/v" scale="1mV" color="#c979d2" timeScale="1ms" />
+            <Line id="I4" quantity="I4/0/GenericNeuronCell/v" scale="1mV" color="#1e88d5" timeScale="1ms" />
+            <Line id="I5" quantity="I5/0/GenericNeuronCell/v" scale="1mV" color="#e94527" timeScale="1ms" />
+            <Line id="I6" quantity="I6/0/GenericNeuronCell/v" scale="1mV" color="#008216" timeScale="1ms" />
+            <Line id="M1" quantity="M1/0/GenericNeuronCell/v" scale="1mV" color="#3365b5" timeScale="1ms" />
+            <Line id="M2L" quantity="M2L/0/GenericNeuronCell/v" scale="1mV" color="#964dd0" timeScale="1ms" />
+            <Line id="M2R" quantity="M2R/0/GenericNeuronCell/v" scale="1mV" color="#d81153" timeScale="1ms" />
+            <Line id="M3L" quantity="M3L/0/GenericNeuronCell/v" scale="1mV" color="#35d361" timeScale="1ms" />
+            <Line id="M3R" quantity="M3R/0/GenericNeuronCell/v" scale="1mV" color="#174269" timeScale="1ms" />
+            <Line id="M4" quantity="M4/0/GenericNeuronCell/v" scale="1mV" color="#e171c7" timeScale="1ms" />
+            <Line id="M5" quantity="M5/0/GenericNeuronCell/v" scale="1mV" color="#7a485e" timeScale="1ms" />
+            <Line id="MCL" quantity="MCL/0/GenericNeuronCell/v" scale="1mV" color="#baa91a" timeScale="1ms" />
+            <Line id="MCR" quantity="MCR/0/GenericNeuronCell/v" scale="1mV" color="#ff4cb0" timeScale="1ms" />
+            <Line id="MI" quantity="MI/0/GenericNeuronCell/v" scale="1mV" color="#575552" timeScale="1ms" />
+            <Line id="NSML" quantity="NSML/0/GenericNeuronCell/v" scale="1mV" color="#00fefa" timeScale="1ms" />
+            <Line id="NSMR" quantity="NSMR/0/GenericNeuronCell/v" scale="1mV" color="#b3e938" timeScale="1ms" />
             
         </Display>
       
         <Display id="activity_neurons" title="c302_C2_Pharyngeal: Activity of a number of neurons" timeScale="1ms" xmin="-50.0" xmax="550.0" ymin="-0.1" ymax="1.1">
             
-            <Line id="I1L" quantity="I1L/0/GenericNeuronCell/caConc" scale="1" color="#eaf195" timeScale="1ms" />
-            <Line id="I1R" quantity="I1R/0/GenericNeuronCell/caConc" scale="1" color="#3c00ca" timeScale="1ms" />
-            <Line id="I2L" quantity="I2L/0/GenericNeuronCell/caConc" scale="1" color="#262f1d" timeScale="1ms" />
-            <Line id="I2R" quantity="I2R/0/GenericNeuronCell/caConc" scale="1" color="#108b77" timeScale="1ms" />
-            <Line id="I3" quantity="I3/0/GenericNeuronCell/caConc" scale="1" color="#458fa5" timeScale="1ms" />
-            <Line id="I4" quantity="I4/0/GenericNeuronCell/caConc" scale="1" color="#ef7488" timeScale="1ms" />
-            <Line id="I5" quantity="I5/0/GenericNeuronCell/caConc" scale="1" color="#247960" timeScale="1ms" />
-            <Line id="I6" quantity="I6/0/GenericNeuronCell/caConc" scale="1" color="#8f25f0" timeScale="1ms" />
-            <Line id="M1" quantity="M1/0/GenericNeuronCell/caConc" scale="1" color="#4e0047" timeScale="1ms" />
-            <Line id="M2L" quantity="M2L/0/GenericNeuronCell/caConc" scale="1" color="#f527d6" timeScale="1ms" />
-            <Line id="M2R" quantity="M2R/0/GenericNeuronCell/caConc" scale="1" color="#57d17a" timeScale="1ms" />
-            <Line id="M3L" quantity="M3L/0/GenericNeuronCell/caConc" scale="1" color="#e270c8" timeScale="1ms" />
-            <Line id="M3R" quantity="M3R/0/GenericNeuronCell/caConc" scale="1" color="#2f701e" timeScale="1ms" />
-            <Line id="M4" quantity="M4/0/GenericNeuronCell/caConc" scale="1" color="#d2a8a4" timeScale="1ms" />
-            <Line id="M5" quantity="M5/0/GenericNeuronCell/caConc" scale="1" color="#28e945" timeScale="1ms" />
-            <Line id="MCL" quantity="MCL/0/GenericNeuronCell/caConc" scale="1" color="#cb7212" timeScale="1ms" />
-            <Line id="MCR" quantity="MCR/0/GenericNeuronCell/caConc" scale="1" color="#008216" timeScale="1ms" />
-            <Line id="MI" quantity="MI/0/GenericNeuronCell/caConc" scale="1" color="#f21142" timeScale="1ms" />
-            <Line id="NSML" quantity="NSML/0/GenericNeuronCell/caConc" scale="1" color="#65b5e4" timeScale="1ms" />
-            <Line id="NSMR" quantity="NSMR/0/GenericNeuronCell/caConc" scale="1" color="#dc84b4" timeScale="1ms" />
+            <Line id="I1L" quantity="I1L/0/GenericNeuronCell/caConc" scale="1" color="#169445" timeScale="1ms" />
+            <Line id="I1R" quantity="I1R/0/GenericNeuronCell/caConc" scale="1" color="#008200" timeScale="1ms" />
+            <Line id="I2L" quantity="I2L/0/GenericNeuronCell/caConc" scale="1" color="#f0c6f5" timeScale="1ms" />
+            <Line id="I2R" quantity="I2R/0/GenericNeuronCell/caConc" scale="1" color="#27d600" timeScale="1ms" />
+            <Line id="I3" quantity="I3/0/GenericNeuronCell/caConc" scale="1" color="#e270c8" timeScale="1ms" />
+            <Line id="I4" quantity="I4/0/GenericNeuronCell/caConc" scale="1" color="#7cd2a8" timeScale="1ms" />
+            <Line id="I5" quantity="I5/0/GenericNeuronCell/caConc" scale="1" color="#d8b9cb" timeScale="1ms" />
+            <Line id="I6" quantity="I6/0/GenericNeuronCell/caConc" scale="1" color="#efb351" timeScale="1ms" />
+            <Line id="M1" quantity="M1/0/GenericNeuronCell/caConc" scale="1" color="#e480d2" timeScale="1ms" />
+            <Line id="M2L" quantity="M2L/0/GenericNeuronCell/caConc" scale="1" color="#8980c6" timeScale="1ms" />
+            <Line id="M2R" quantity="M2R/0/GenericNeuronCell/caConc" scale="1" color="#00ada4" timeScale="1ms" />
+            <Line id="M3L" quantity="M3L/0/GenericNeuronCell/caConc" scale="1" color="#e0f68a" timeScale="1ms" />
+            <Line id="M3R" quantity="M3R/0/GenericNeuronCell/caConc" scale="1" color="#dc471d" timeScale="1ms" />
+            <Line id="M4" quantity="M4/0/GenericNeuronCell/caConc" scale="1" color="#2a4f12" timeScale="1ms" />
+            <Line id="M5" quantity="M5/0/GenericNeuronCell/caConc" scale="1" color="#9a3485" timeScale="1ms" />
+            <Line id="MCL" quantity="MCL/0/GenericNeuronCell/caConc" scale="1" color="#5ecc10" timeScale="1ms" />
+            <Line id="MCR" quantity="MCR/0/GenericNeuronCell/caConc" scale="1" color="#54f34b" timeScale="1ms" />
+            <Line id="MI" quantity="MI/0/GenericNeuronCell/caConc" scale="1" color="#44c397" timeScale="1ms" />
+            <Line id="NSML" quantity="NSML/0/GenericNeuronCell/caConc" scale="1" color="#abfe84" timeScale="1ms" />
+            <Line id="NSMR" quantity="NSMR/0/GenericNeuronCell/caConc" scale="1" color="#81a7d0" timeScale="1ms" />
 
         </Display>
 

@@ -150,12 +150,20 @@ Parameters and setting used to generate this network:
     <pulseGenerator id="stim_MDR01_6" delay="5100ms" duration="800ms" amplitude="6pA"/>
     <network id="c302_C2_IClamp">
         <population id="ADAL" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron"/>
+            <property tag="receptor" value=""/>
+            <property tag="neurotransmitter" value="Glutamate"/>
             <property tag="OpenWormBackerAssignedName" value="Xabe"/>
             <instance id="0">
                 <location x="8.65" y="-239.25" z="31.050000000000001"/>
             </instance>
         </population>
         <population id="PVCL" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron"/>
+            <property tag="receptor" value="PDFR-1; SER-2"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <property tag="OpenWormBackerAssignedName" value="Ramana Kumar"/>
             <instance id="0">
                 <location x="0.85" y="404.150019999999984" z="5.5"/>

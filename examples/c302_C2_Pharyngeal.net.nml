@@ -135,109 +135,189 @@ Parameters and setting used to generate this network:
     <pulseGenerator id="offset_current" delay="0 ms" duration="2000 ms" amplitude="5.135697186048022 pA"/>
     <network id="c302_C2_Pharyngeal">
         <population id="I1L" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron; sensory"/>
+            <property tag="receptor" value="DOP-4; FRPR-4; GLR-7; GLR-8; PDFR-1"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <property tag="OpenWormBackerAssignedName" value="sitructa"/>
             <instance id="0">
                 <location x="2.8999999" y="-300.350000000000023" z="53.149997999999997"/>
             </instance>
         </population>
         <population id="I1R" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron; sensory"/>
+            <property tag="receptor" value="DOP-4; FRPR-4; GLR-7; GLR-8; PDFR-1"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <property tag="OpenWormBackerAssignedName" value="Jesus Martinez"/>
             <instance id="0">
                 <location x="-7.1500006" y="-300.350000000000023" z="53.149997999999997"/>
             </instance>
         </population>
         <population id="I2L" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron; sensory"/>
+            <property tag="receptor" value="DOP-4; GLR-7; GLR-8; NTR-1; SER-7"/>
+            <property tag="neurotransmitter" value="Glutamate"/>
             <property tag="OpenWormBackerAssignedName" value="MetaMal"/>
             <instance id="0">
                 <location x="1.55" y="-311.649999999999977" z="54.450000000000003"/>
             </instance>
         </population>
         <population id="I2R" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron; sensory"/>
+            <property tag="receptor" value="DOP-4; GLR-7; GLR-8; NTR-1; SER-7"/>
+            <property tag="neurotransmitter" value=""/>
             <property tag="OpenWormBackerAssignedName" value="Flying Armbar"/>
             <instance id="0">
                 <location x="-5.7999997" y="-311.649999999999977" z="54.450000000000003"/>
             </instance>
         </population>
         <population id="I3" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron; sensory"/>
+            <property tag="receptor" value="GLR-7; GLR-8; SER-7"/>
+            <property tag="neurotransmitter" value=""/>
             <instance id="0">
                 <location x="-2.05" y="-296.550020000000018" z="58.25"/>
             </instance>
         </population>
         <population id="I4" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron"/>
+            <property tag="receptor" value="SER-7"/>
+            <property tag="neurotransmitter" value=""/>
             <instance id="0">
                 <location x="-2.05" y="-253.900010000000009" z="43.100000000000001"/>
             </instance>
         </population>
         <population id="I5" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron; sensory"/>
+            <property tag="receptor" value=""/>
+            <property tag="neurotransmitter" value="Serotonin; Glutamate"/>
             <property tag="OpenWormBackerAssignedName" value="yates"/>
             <instance id="0">
                 <location x="-2.1" y="-247.849989999999991" z="30.675000000000001"/>
             </instance>
         </population>
         <population id="I6" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron; sensory"/>
+            <property tag="receptor" value="GLR-7; GLR-8; SER-7"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="1.7" y="-251.650000000000006" z="43.049999999999997"/>
             </instance>
         </population>
         <population id="M1" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="AVR-14; GLR-2; SER-4"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <property tag="OpenWormBackerAssignedName" value="albertwenger"/>
             <instance id="0">
                 <location x="-0.86700004" y="-252.134999999999991" z="44.420001999999997"/>
             </instance>
         </population>
         <population id="M2L" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="SER-7"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="3.7" y="-254.349989999999991" z="38.649999999999999"/>
             </instance>
         </population>
         <population id="M2R" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="SER-7"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-8." y="-254.349989999999991" z="38.649999999999999"/>
             </instance>
         </population>
         <population id="M3L" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor; sensory"/>
+            <property tag="receptor" value="GLR-8; NPR-1; SER-7"/>
+            <property tag="neurotransmitter" value="Glutamate"/>
             <instance id="0">
                 <location x="3.7500002" y="-295.399999999999977" z="48.149999999999999"/>
             </instance>
         </population>
         <population id="M3R" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor; sensory"/>
+            <property tag="receptor" value="GLR-8; NPR-1; SER-7"/>
+            <property tag="neurotransmitter" value="Glutamate"/>
             <instance id="0">
                 <location x="-8.050000000000001" y="-295.399999999999977" z="48.149999999999999"/>
             </instance>
         </population>
         <population id="M4" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="GLR-8; SER-7; SER7b"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-2.033" y="-288.932979999999986" z="57.582999999999998"/>
             </instance>
         </population>
         <population id="M5" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="GLR-8; SER-7"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <property tag="OpenWormBackerAssignedName" value="Asher"/>
             <instance id="0">
                 <location x="-2.2" y="-241.449999999999989" z="41.800002999999997"/>
             </instance>
         </population>
         <population id="MCL" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor; sensory"/>
+            <property tag="receptor" value="GLR-8; SER-7; TYRA-2"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="3.2" y="-296.149999999999977" z="52.299999999999997"/>
             </instance>
         </population>
         <population id="MCR" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor; sensory"/>
+            <property tag="receptor" value="GLR-8; SER-7; TYRA-2"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
                 <location x="-7.25" y="-296.149999999999977" z="52.299999999999997"/>
             </instance>
         </population>
         <population id="MI" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="interneuron; motor"/>
+            <property tag="receptor" value=""/>
+            <property tag="neurotransmitter" value="Glutamate"/>
             <property tag="OpenWormBackerAssignedName" value="NeuroMind technology"/>
             <instance id="0">
                 <location x="-2.1539998" y="-293.512020000000007" z="56.707000000000001"/>
             </instance>
         </population>
         <population id="NSML" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor; sensory"/>
+            <property tag="receptor" value="AEX-2; DOP-3; GLR-7; GLR-8; SER-2; SER-4; TYRA-2"/>
+            <property tag="neurotransmitter" value="Serotonin"/>
             <instance id="0">
                 <location x="2.6000001" y="-292.25" z="51.799999999999997"/>
             </instance>
         </population>
         <population id="NSMR" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor; sensory"/>
+            <property tag="receptor" value="AEX-2; DOP-3; GLR-7; GLR-8; SER-2; SER-4; TYRA-2"/>
+            <property tag="neurotransmitter" value="Serotonin"/>
             <instance id="0">
                 <location x="-6.3500004" y="-292.25" z="51.799999999999997"/>
             </instance>

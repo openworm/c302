@@ -298,7 +298,7 @@ if __name__ == '__main__':
         html+='<tr>\n'
         html+='  <td>&nbsp;</td>\n'
         for p in durations.keys():
-            html+='  <td align="center"><b><a href="https://github.com/openworm/CElegansNeuroML/blob/master/CElegans/pythonScripts/c302/c302_%s.py">%s</a></b></td>\n'%(p,p)
+            html+='  <td align="center"><b><a href="https://github.com/openworm/c302/blob/master/c302/c302_%s.py">%s</a></b></td>\n'%(p,p)
 
         html+='</tr>\n'
         for c in levels:
@@ -307,7 +307,7 @@ if __name__ == '__main__':
             img_loc = save_image_dir
             
             html+='\n<tr>\n'
-            html+='  <td><b><a href="https://github.com/openworm/CElegansNeuroML/blob/master/CElegans/pythonScripts/c302/parameters_%s.py">Params %s</a></b></td>\n'%(c,c)
+            html+='  <td><b><a href="https://github.com/openworm/c302/blob/master/c302/parameters_%s.py">Params %s</a></b></td>\n'%(c,c)
             for p in durations.keys():
                 print('Params: %s'%p)
                 html2 = '<h2>c302 simulation</h2>\n'
@@ -317,8 +317,8 @@ if __name__ == '__main__':
                 html+='  <td><a href="summary_%s_%s.html">\n'%(c,p)
                 html+='    <img alt="?" src="%s/neurons_%s_%s.png" height="80"/></a>\n'%(img_loc,c,p)
                 
-                html+='    <br/><a href="https://github.com/openworm/CElegansNeuroML/blob/master/CElegans/pythonScripts/c302/examples/c302_%s_%s.net.nml">NML</a>\n'%(c,p)
-                html+='    &nbsp;<a href="http://opensourcebrain.org/projects/celegans?explorer=https://raw.githubusercontent.com/openworm/CElegansNeuroML/master/CElegans/pythonScripts/c302/examples/c302_%s_%s.net.nml">OSB</a>\n'%(c,p)
+                html+='    <br/><a href="https://github.com/openworm/c302/blob/master/examples/c302_%s_%s.net.nml">NML</a>\n'%(c,p)
+                html+='    &nbsp;<a href="http://opensourcebrain.org/projects/celegans?explorer=https://raw.githubusercontent.com/openworm/c302/master/examples/c302_%s_%s.net.nml">OSB</a>\n'%(c,p)
                 
                 pres = ['neurons_','neuron_activity_','muscles_','muscle_activity_']
                 for pre in pres:

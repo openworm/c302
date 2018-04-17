@@ -105,25 +105,25 @@ Parameters and setting used to generate this network:
 
         <Display id="neurons" title="c302_C2_Social: Membrane potential of a number of neurons" timeScale="1ms" xmin="-250.0" xmax="2750.0" ymin="-60" ymax="25">
             
-            <Line id="ASHR" quantity="ASHR/0/GenericNeuronCell/v" scale="1mV" color="#f87100" timeScale="1ms" />
-            <Line id="ASKR" quantity="ASKR/0/GenericNeuronCell/v" scale="1mV" color="#ac15c4" timeScale="1ms" />
-            <Line id="AWBR" quantity="AWBR/0/GenericNeuronCell/v" scale="1mV" color="#58a09e" timeScale="1ms" />
-            <Line id="IL2R" quantity="IL2R/0/GenericNeuronCell/v" scale="1mV" color="#007df7" timeScale="1ms" />
-            <Line id="RMGR" quantity="RMGR/0/GenericNeuronCell/v" scale="1mV" color="#9a1694" timeScale="1ms" />
-            <Line id="RMHR" quantity="RMHR/0/GenericNeuronCell/v" scale="1mV" color="#7b5b40" timeScale="1ms" />
-            <Line id="URXR" quantity="URXR/0/GenericNeuronCell/v" scale="1mV" color="#008200" timeScale="1ms" />
+            <Line id="ASHR" quantity="ASHR/0/GenericNeuronCell/v" scale="1mV" color="#8b779a" timeScale="1ms" />
+            <Line id="ASKR" quantity="ASKR/0/GenericNeuronCell/v" scale="1mV" color="#ef7488" timeScale="1ms" />
+            <Line id="AWBR" quantity="AWBR/0/GenericNeuronCell/v" scale="1mV" color="#2a8f25" timeScale="1ms" />
+            <Line id="IL2R" quantity="IL2R/0/GenericNeuronCell/v" scale="1mV" color="#2d27f5" timeScale="1ms" />
+            <Line id="RMGR" quantity="RMGR/0/GenericNeuronCell/v" scale="1mV" color="#c979d2" timeScale="1ms" />
+            <Line id="RMHR" quantity="RMHR/0/GenericNeuronCell/v" scale="1mV" color="#1e88d5" timeScale="1ms" />
+            <Line id="URXR" quantity="URXR/0/GenericNeuronCell/v" scale="1mV" color="#e94527" timeScale="1ms" />
             
         </Display>
       
         <Display id="activity_neurons" title="c302_C2_Social: Activity of a number of neurons" timeScale="1ms" xmin="-250.0" xmax="2750.0" ymin="-0.1" ymax="1.1">
             
-            <Line id="ASHR" quantity="ASHR/0/GenericNeuronCell/caConc" scale="1" color="#eaf195" timeScale="1ms" />
-            <Line id="ASKR" quantity="ASKR/0/GenericNeuronCell/caConc" scale="1" color="#3c00ca" timeScale="1ms" />
-            <Line id="AWBR" quantity="AWBR/0/GenericNeuronCell/caConc" scale="1" color="#262f1d" timeScale="1ms" />
-            <Line id="IL2R" quantity="IL2R/0/GenericNeuronCell/caConc" scale="1" color="#108b77" timeScale="1ms" />
-            <Line id="RMGR" quantity="RMGR/0/GenericNeuronCell/caConc" scale="1" color="#458fa5" timeScale="1ms" />
-            <Line id="RMHR" quantity="RMHR/0/GenericNeuronCell/caConc" scale="1" color="#ef7488" timeScale="1ms" />
-            <Line id="URXR" quantity="URXR/0/GenericNeuronCell/caConc" scale="1" color="#247960" timeScale="1ms" />
+            <Line id="ASHR" quantity="ASHR/0/GenericNeuronCell/caConc" scale="1" color="#169445" timeScale="1ms" />
+            <Line id="ASKR" quantity="ASKR/0/GenericNeuronCell/caConc" scale="1" color="#008200" timeScale="1ms" />
+            <Line id="AWBR" quantity="AWBR/0/GenericNeuronCell/caConc" scale="1" color="#f0c6f5" timeScale="1ms" />
+            <Line id="IL2R" quantity="IL2R/0/GenericNeuronCell/caConc" scale="1" color="#27d600" timeScale="1ms" />
+            <Line id="RMGR" quantity="RMGR/0/GenericNeuronCell/caConc" scale="1" color="#e270c8" timeScale="1ms" />
+            <Line id="RMHR" quantity="RMHR/0/GenericNeuronCell/caConc" scale="1" color="#7cd2a8" timeScale="1ms" />
+            <Line id="URXR" quantity="URXR/0/GenericNeuronCell/caConc" scale="1" color="#d8b9cb" timeScale="1ms" />
 
         </Display>
 

@@ -105,27 +105,27 @@ Parameters and setting used to generate this network:
 
         <Display id="neurons" title="c302_C2_IClamp: Membrane potential of a number of neurons" timeScale="1ms" xmin="-600.0" xmax="6600.0" ymin="-60" ymax="25">
             
-            <Line id="ADAL" quantity="ADAL/0/GenericNeuronCell/v" scale="1mV" color="#f87100" timeScale="1ms" />
-            <Line id="PVCL" quantity="PVCL/0/GenericNeuronCell/v" scale="1mV" color="#ac15c4" timeScale="1ms" />
+            <Line id="ADAL" quantity="ADAL/0/GenericNeuronCell/v" scale="1mV" color="#8b779a" timeScale="1ms" />
+            <Line id="PVCL" quantity="PVCL/0/GenericNeuronCell/v" scale="1mV" color="#ef7488" timeScale="1ms" />
             
         </Display>
       
         <Display id="muscles" title="c302_C2_IClamp: Membrane potential of a number of muscles" timeScale="1ms" xmin="-600.0" xmax="6600.0" ymin="-60" ymax="25">
             
-            <Line id="MDR01" quantity="MDR01/0/GenericMuscleCell/v" scale="1mV" color="#58a09e" timeScale="1ms" />
+            <Line id="MDR01" quantity="MDR01/0/GenericMuscleCell/v" scale="1mV" color="#247960" timeScale="1ms" />
 
         </Display>
       
         <Display id="activity_neurons" title="c302_C2_IClamp: Activity of a number of neurons" timeScale="1ms" xmin="-600.0" xmax="6600.0" ymin="-0.1" ymax="1.1">
             
-            <Line id="ADAL" quantity="ADAL/0/GenericNeuronCell/caConc" scale="1" color="#eaf195" timeScale="1ms" />
-            <Line id="PVCL" quantity="PVCL/0/GenericNeuronCell/caConc" scale="1" color="#3c00ca" timeScale="1ms" />
+            <Line id="ADAL" quantity="ADAL/0/GenericNeuronCell/caConc" scale="1" color="#169445" timeScale="1ms" />
+            <Line id="PVCL" quantity="PVCL/0/GenericNeuronCell/caConc" scale="1" color="#008200" timeScale="1ms" />
 
         </Display>
       
         <Display id="activity_muscles" title="c302_C2_IClamp: Activity of a number of muscles" timeScale="1ms" xmin="-600.0" xmax="6600.0" ymin="-0.1" ymax="1.1">
             
-            <Line id="MDR01" quantity="MDR01/0/GenericMuscleCell/caConc" scale="1" color="#262f1d" timeScale="1ms" />
+            <Line id="MDR01" quantity="MDR01/0/GenericMuscleCell/caConc" scale="1" color="#00962a" timeScale="1ms" />
 
         </Display>
 
