@@ -52,22 +52,22 @@ Parameters and setting used to generate this network:
         BioParameter: unphysiological_offset_current_dur = 2000 ms (SRC: KnownError, certainty 0)
 
 </notes>
-    <include href="cell_C.xml"></include>
-    <include href="cells/ASHR_D.cell.nml"></include>
-    <include href="cells/ASKR_D.cell.nml"></include>
-    <include href="cells/AWBR_D.cell.nml"></include>
-    <include href="cells/IL2R_D.cell.nml"></include>
-    <include href="cells/RMGR_D.cell.nml"></include>
-    <include href="cells/RMHR_D.cell.nml"></include>
-    <include href="cells/URXR_D.cell.nml"></include>
+    <include href="cell_C.xml"/>
+    <include href="cells/ASHR_D.cell.nml"/>
+    <include href="cells/ASKR_D.cell.nml"/>
+    <include href="cells/AWBR_D.cell.nml"/>
+    <include href="cells/IL2R_D.cell.nml"/>
+    <include href="cells/RMGR_D.cell.nml"/>
+    <include href="cells/RMHR_D.cell.nml"/>
+    <include href="cells/URXR_D.cell.nml"/>
     <fixedFactorConcentrationModel id="CaPool" ion="ca" restingConc="0 mM" decayConstant="11.5943 ms" rho="0.000238919 mol_per_m_per_A_per_s"/>
     <expTwoSynapse id="neuron_to_neuron_exc_syn" gbase=".01 nS" erev="0 mV" tauDecay="5 ms" tauRise="1 ms"/>
     <gapJunction id="neuron_to_neuron_elec_syn" conductance="0.0005 nS"/>
     <cell id="GenericMuscleCell">
         <morphology id="morphology_GenericMuscleCell">
             <segment id="0" name="soma">
-                <proximal x="0.000000e+00" y="0.000000e+00" z="0.000000e+00" diameter="5"/>
-                <distal x="0.000000e+00" y="2.000000e+01" z="0.000000e+00" diameter="5"/>
+                <proximal x="0.000000e+00" y="0.000000e+00" z="0.000000e+00" diameter="5.0"/>
+                <distal x="0.000000e+00" y="2.000000e+01" z="0.000000e+00" diameter="5.0"/>
             </segment>
         </morphology>
         <biophysicalProperties id="biophys_GenericMuscleCell">
@@ -162,67 +162,67 @@ Parameters and setting used to generate this network:
             </instance>
         </population>
         <projection id="NC_ASHR_RMGR_Glutamate" presynapticPopulation="ASHR" postsynapticPopulation="RMGR" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../ASHR/0/ASHR" preSegmentId="0" preFractionAlong="0.5" postCellId="../RMGR/0/RMGR" postSegmentId="0" postFractionAlong="0.5" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../ASHR/0/ASHR" postCellId="../RMGR/0/RMGR" weight="2." delay="0ms"/>
         </projection>
         <projection id="NC_AWBR_ASHR_Glutamate" presynapticPopulation="AWBR" postsynapticPopulation="ASHR" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../AWBR/0/AWBR" preSegmentId="0" preFractionAlong="0.5" postCellId="../ASHR/0/ASHR" postSegmentId="0" postFractionAlong="0.5" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../AWBR/0/AWBR" postCellId="../ASHR/0/ASHR" weight="2." delay="0ms"/>
         </projection>
         <projection id="NC_RMGR_ASHR_FMRFamide" presynapticPopulation="RMGR" postsynapticPopulation="ASHR" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../RMGR/0/RMGR" preSegmentId="0" preFractionAlong="0.5" postCellId="../ASHR/0/ASHR" postSegmentId="0" postFractionAlong="0.5" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../RMGR/0/RMGR" postCellId="../ASHR/0/ASHR" weight="1." delay="0ms"/>
         </projection>
         <projection id="NC_RMGR_URXR_FMRFamide" presynapticPopulation="RMGR" postsynapticPopulation="URXR" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../RMGR/0/RMGR" preSegmentId="0" preFractionAlong="0.5" postCellId="../URXR/0/URXR" postSegmentId="0" postFractionAlong="0.5" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../RMGR/0/RMGR" postCellId="../URXR/0/URXR" weight="1." delay="0ms"/>
         </projection>
         <projection id="NC_URXR_RMGR_Glutamate" presynapticPopulation="URXR" postsynapticPopulation="RMGR" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../URXR/0/URXR" preSegmentId="0" preFractionAlong="0.5" postCellId="../RMGR/0/RMGR" postSegmentId="0" postFractionAlong="0.5" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../URXR/0/URXR" postCellId="../RMGR/0/RMGR" weight="1." delay="0ms"/>
         </projection>
         <electricalProjection id="NC_ASHR_ASKR_Generic_GJ" presynapticPopulation="ASHR" postsynapticPopulation="ASKR">
-            <electricalConnectionInstanceW id="0" preCell="../ASHR/0/ASHR" preSegment="0" preFractionAlong="0.5" postCell="../ASKR/0/ASKR" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../ASHR/0/ASHR" postCell="../ASKR/0/ASKR" synapse="neuron_to_neuron_elec_syn" weight="1."/>
         </electricalProjection>
         <electricalProjection id="NC_ASHR_RMGR_Generic_GJ" presynapticPopulation="ASHR" postsynapticPopulation="RMGR">
-            <electricalConnectionInstanceW id="0" preCell="../ASHR/0/ASHR" preSegment="0" preFractionAlong="0.5" postCell="../RMGR/0/RMGR" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../ASHR/0/ASHR" postCell="../RMGR/0/RMGR" synapse="neuron_to_neuron_elec_syn" weight="1."/>
         </electricalProjection>
         <electricalProjection id="NC_ASKR_ASHR_Generic_GJ" presynapticPopulation="ASKR" postsynapticPopulation="ASHR">
-            <electricalConnectionInstanceW id="0" preCell="../ASKR/0/ASKR" preSegment="0" preFractionAlong="0.5" postCell="../ASHR/0/ASHR" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../ASKR/0/ASKR" postCell="../ASHR/0/ASHR" synapse="neuron_to_neuron_elec_syn" weight="1."/>
         </electricalProjection>
         <electricalProjection id="NC_ASKR_RMGR_Generic_GJ" presynapticPopulation="ASKR" postsynapticPopulation="RMGR">
-            <electricalConnectionInstanceW id="0" preCell="../ASKR/0/ASKR" preSegment="0" preFractionAlong="0.5" postCell="../RMGR/0/RMGR" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../ASKR/0/ASKR" postCell="../RMGR/0/RMGR" synapse="neuron_to_neuron_elec_syn" weight="1."/>
         </electricalProjection>
         <electricalProjection id="NC_AWBR_RMGR_Generic_GJ" presynapticPopulation="AWBR" postsynapticPopulation="RMGR">
-            <electricalConnectionInstanceW id="0" preCell="../AWBR/0/AWBR" preSegment="0" preFractionAlong="0.5" postCell="../RMGR/0/RMGR" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../AWBR/0/AWBR" postCell="../RMGR/0/RMGR" synapse="neuron_to_neuron_elec_syn" weight="1."/>
         </electricalProjection>
         <electricalProjection id="NC_IL2R_RMGR_Generic_GJ" presynapticPopulation="IL2R" postsynapticPopulation="RMGR">
-            <electricalConnectionInstanceW id="0" preCell="../IL2R/0/IL2R" preSegment="0" preFractionAlong="0.5" postCell="../RMGR/0/RMGR" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../IL2R/0/IL2R" postCell="../RMGR/0/RMGR" synapse="neuron_to_neuron_elec_syn" weight="1."/>
         </electricalProjection>
         <electricalProjection id="NC_IL2R_URXR_Generic_GJ" presynapticPopulation="IL2R" postsynapticPopulation="URXR">
-            <electricalConnectionInstanceW id="0" preCell="../IL2R/0/IL2R" preSegment="0" preFractionAlong="0.5" postCell="../URXR/0/URXR" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../IL2R/0/IL2R" postCell="../URXR/0/URXR" synapse="neuron_to_neuron_elec_syn" weight="1."/>
         </electricalProjection>
         <electricalProjection id="NC_RMGR_ASHR_Generic_GJ" presynapticPopulation="RMGR" postsynapticPopulation="ASHR">
-            <electricalConnectionInstanceW id="0" preCell="../RMGR/0/RMGR" preSegment="0" preFractionAlong="0.5" postCell="../ASHR/0/ASHR" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../RMGR/0/RMGR" postCell="../ASHR/0/ASHR" synapse="neuron_to_neuron_elec_syn" weight="1."/>
         </electricalProjection>
         <electricalProjection id="NC_RMGR_ASKR_Generic_GJ" presynapticPopulation="RMGR" postsynapticPopulation="ASKR">
-            <electricalConnectionInstanceW id="0" preCell="../RMGR/0/RMGR" preSegment="0" preFractionAlong="0.5" postCell="../ASKR/0/ASKR" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../RMGR/0/RMGR" postCell="../ASKR/0/ASKR" synapse="neuron_to_neuron_elec_syn" weight="1."/>
         </electricalProjection>
         <electricalProjection id="NC_RMGR_AWBR_Generic_GJ" presynapticPopulation="RMGR" postsynapticPopulation="AWBR">
-            <electricalConnectionInstanceW id="0" preCell="../RMGR/0/RMGR" preSegment="0" preFractionAlong="0.5" postCell="../AWBR/0/AWBR" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../RMGR/0/RMGR" postCell="../AWBR/0/AWBR" synapse="neuron_to_neuron_elec_syn" weight="1."/>
         </electricalProjection>
         <electricalProjection id="NC_RMGR_IL2R_Generic_GJ" presynapticPopulation="RMGR" postsynapticPopulation="IL2R">
-            <electricalConnectionInstanceW id="0" preCell="../RMGR/0/RMGR" preSegment="0" preFractionAlong="0.5" postCell="../IL2R/0/IL2R" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../RMGR/0/RMGR" postCell="../IL2R/0/IL2R" synapse="neuron_to_neuron_elec_syn" weight="1."/>
         </electricalProjection>
         <electricalProjection id="NC_RMGR_RMHR_Generic_GJ" presynapticPopulation="RMGR" postsynapticPopulation="RMHR">
-            <electricalConnectionInstanceW id="0" preCell="../RMGR/0/RMGR" preSegment="0" preFractionAlong="0.5" postCell="../RMHR/0/RMHR" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../RMGR/0/RMGR" postCell="../RMHR/0/RMHR" synapse="neuron_to_neuron_elec_syn" weight="1."/>
         </electricalProjection>
         <electricalProjection id="NC_RMGR_URXR_Generic_GJ" presynapticPopulation="RMGR" postsynapticPopulation="URXR">
-            <electricalConnectionInstanceW id="0" preCell="../RMGR/0/RMGR" preSegment="0" preFractionAlong="0.5" postCell="../URXR/0/URXR" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../RMGR/0/RMGR" postCell="../URXR/0/URXR" synapse="neuron_to_neuron_elec_syn" weight="1."/>
         </electricalProjection>
         <electricalProjection id="NC_RMHR_RMGR_Generic_GJ" presynapticPopulation="RMHR" postsynapticPopulation="RMGR">
-            <electricalConnectionInstanceW id="0" preCell="../RMHR/0/RMHR" preSegment="0" preFractionAlong="0.5" postCell="../RMGR/0/RMGR" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../RMHR/0/RMHR" postCell="../RMGR/0/RMGR" synapse="neuron_to_neuron_elec_syn" weight="1."/>
         </electricalProjection>
         <electricalProjection id="NC_URXR_IL2R_Generic_GJ" presynapticPopulation="URXR" postsynapticPopulation="IL2R">
-            <electricalConnectionInstanceW id="0" preCell="../URXR/0/URXR" preSegment="0" preFractionAlong="0.5" postCell="../IL2R/0/IL2R" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../URXR/0/URXR" postCell="../IL2R/0/IL2R" synapse="neuron_to_neuron_elec_syn" weight="1."/>
         </electricalProjection>
         <electricalProjection id="NC_URXR_RMGR_Generic_GJ" presynapticPopulation="URXR" postsynapticPopulation="RMGR">
-            <electricalConnectionInstanceW id="0" preCell="../URXR/0/URXR" preSegment="0" preFractionAlong="0.5" postCell="../RMGR/0/RMGR" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../URXR/0/URXR" postCell="../RMGR/0/RMGR" synapse="neuron_to_neuron_elec_syn" weight="1."/>
         </electricalProjection>
         <inputList id="Input_RMGR_stim_RMGR_1" population="RMGR" component="stim_RMGR_1">
             <input id="0" target="../RMGR/0/RMGR" destination="synapses"/>

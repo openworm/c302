@@ -7,59 +7,59 @@
                 <distal x="5.050000e+00" y="-2.799500e+02" z="4.755000e+01" diameter="3.6742344"/>
             </segment>
             <segment id="6" name="Seg0_axon_0">
-                <parent segment="0" fractionAlong="1"/>
+                <parent segment="0"/>
                 <proximal x="5.050000e+00" y="-2.799500e+02" z="4.755000e+01" diameter="0.8831761"/>
                 <distal x="5.050000e+00" y="-2.785000e+02" z="4.715000e+01" diameter="0.8831761"/>
             </segment>
             <segment id="7" name="Seg7_axon_0">
-                <parent segment="6" fractionAlong="1"/>
+                <parent segment="6"/>
                 <distal x="5.050000e+00" y="-2.749000e+02" z="4.655000e+01" diameter="0.8602325"/>
             </segment>
             <segment id="8" name="Seg8_axon_0">
-                <parent segment="7" fractionAlong="1"/>
+                <parent segment="7"/>
                 <distal x="4.700000e+00" y="-2.747000e+02" z="4.652500e+01" diameter="0.60207975"/>
             </segment>
             <segment id="9" name="Seg9_axon_0">
-                <parent segment="8" fractionAlong="1"/>
+                <parent segment="8"/>
                 <distal x="4.400000e+00" y="-2.747000e+02" z="4.652500e+01" diameter="0.60207975"/>
             </segment>
             <segment id="1" name="Seg0_dendrit_2">
-                <parent segment="0" fractionAlong="1"/>
+                <parent segment="0"/>
                 <proximal x="5.050000e+00" y="-2.799500e+02" z="4.755000e+01" diameter="0.8831761"/>
                 <distal x="5.050000e+00" y="-2.814000e+02" z="4.795000e+01" diameter="0.8831761"/>
             </segment>
             <segment id="2" name="Seg2_dendrite_0">
-                <parent segment="1" fractionAlong="1"/>
+                <parent segment="1"/>
                 <distal x="7.550000e+00" y="-2.909500e+02" z="5.155000e+01" diameter="0.8660254"/>
             </segment>
             <segment id="3" name="Seg3_dendrite_0">
-                <parent segment="2" fractionAlong="1"/>
+                <parent segment="2"/>
                 <distal x="7.900001e+00" y="-2.983500e+02" z="5.315000e+01" diameter="0.78740084"/>
             </segment>
             <segment id="4" name="Seg4_dendrite_0">
-                <parent segment="3" fractionAlong="1"/>
+                <parent segment="3"/>
                 <distal x="2.250000e+00" y="-3.402000e+02" z="5.825000e+01" diameter="0.8602325"/>
             </segment>
             <segment id="5" name="Seg5_dendrite_0">
-                <parent segment="4" fractionAlong="1"/>
+                <parent segment="4"/>
                 <distal x="2.250000e+00" y="-3.407500e+02" z="5.815000e+01" diameter="0.8660254"/>
             </segment>
             <segment id="10" name="Seg10_neurite_0">
-                <parent segment="9" fractionAlong="1"/>
+                <parent segment="9"/>
                 <proximal x="4.400000e+00" y="-2.747000e+02" z="4.652500e+01" diameter="0.60207975"/>
                 <distal x="4.150000e+00" y="-2.747000e+02" z="4.680000e+01" diameter="0.64031243"/>
             </segment>
             <segment id="11" name="Seg11_neurite_0">
-                <parent segment="10" fractionAlong="1"/>
+                <parent segment="10"/>
                 <distal x="3.500000e+00" y="-2.749250e+02" z="4.902500e+01" diameter="0.587367"/>
             </segment>
             <segment id="12" name="Seg12_neurite_0">
-                <parent segment="9" fractionAlong="1"/>
+                <parent segment="9"/>
                 <proximal x="4.400000e+00" y="-2.747000e+02" z="4.652500e+01" diameter="0.60207975"/>
                 <distal x="4.150000e+00" y="-2.747000e+02" z="4.625000e+01" diameter="0.6480741"/>
             </segment>
             <segment id="13" name="Seg13_neurite_0">
-                <parent segment="12" fractionAlong="1"/>
+                <parent segment="12"/>
                 <distal x="3.875000e+00" y="-2.744750e+02" z="4.417500e+01" diameter="0.5545268"/>
             </segment>
             <segmentGroup neuroLexId="sao864921383" id="Soma">

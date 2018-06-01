@@ -43,7 +43,7 @@ Parameters and setting used to generate this network:
         BioParameter: unphysiological_offset_current_dur = 200ms (SRC: KnownError, certainty 0)
 
 </notes>
-    <include href="cell_B.xml"></include>
+    <include href="cell_B.xml"/>
     <expTwoSynapse id="neuron_to_neuron_inh_syn" gbase="0.01nS" erev="-80mV" tauDecay="10ms" tauRise="3ms"/>
     <expTwoSynapse id="neuron_to_neuron_exc_syn" gbase="0.01nS" erev="0mV" tauDecay="10ms" tauRise="3ms"/>
     <expTwoSynapse id="neuron_to_muscle_exc_syn" gbase="0.01nS" erev="0mV" tauDecay="10ms" tauRise="3ms"/>
@@ -131,22 +131,22 @@ Parameters and setting used to generate this network:
             </instance>
         </population>
         <projection id="NC_VD12_VB11_GABA" presynapticPopulation="VD12" postsynapticPopulation="VB11" synapse="neuron_to_neuron_inh_syn">
-            <connectionWD id="0" preCellId="../VD12/0/generic_neuron_iaf_cell" preSegmentId="0" preFractionAlong="0.5" postCellId="../VB11/0/generic_neuron_iaf_cell" postSegmentId="0" postFractionAlong="0.5" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../VD12/0/generic_neuron_iaf_cell" postCellId="../VB11/0/generic_neuron_iaf_cell" weight="1." delay="0ms"/>
         </projection>
         <projection id="NC_URYDL_SMDDR_Glutamate" presynapticPopulation="URYDL" postsynapticPopulation="SMDDR" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../URYDL/0/generic_neuron_iaf_cell" preSegmentId="0" preFractionAlong="0.5" postCellId="../SMDDR/0/generic_neuron_iaf_cell" postSegmentId="0" postFractionAlong="0.5" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../URYDL/0/generic_neuron_iaf_cell" postCellId="../SMDDR/0/generic_neuron_iaf_cell" weight="1." delay="0ms"/>
         </projection>
         <projection id="NC_DA1_MDL08_Acetylcholine" presynapticPopulation="DA1" postsynapticPopulation="MDL08" synapse="neuron_to_muscle_exc_syn">
-            <connection id="0" preCellId="../DA1/0/generic_neuron_iaf_cell" preSegmentId="0" preFractionAlong="0.5" postCellId="../MDL08/0/generic_muscle_iaf_cell" postSegmentId="0" postFractionAlong="0.5"/>
+            <connection id="0" preCellId="../DA1/0/generic_neuron_iaf_cell" postCellId="../MDL08/0/generic_muscle_iaf_cell"/>
         </projection>
         <projection id="NC_SMDDR_MDL08_Acetylcholine" presynapticPopulation="SMDDR" postsynapticPopulation="MDL08" synapse="neuron_to_muscle_exc_syn">
-            <connection id="0" preCellId="../SMDDR/0/generic_neuron_iaf_cell" preSegmentId="0" preFractionAlong="0.5" postCellId="../MDL08/0/generic_muscle_iaf_cell" postSegmentId="0" postFractionAlong="0.5"/>
+            <connection id="0" preCellId="../SMDDR/0/generic_neuron_iaf_cell" postCellId="../MDL08/0/generic_muscle_iaf_cell"/>
         </projection>
         <electricalProjection id="NC_AIZL_ASHL_Generic_GJ" presynapticPopulation="AIZL" postsynapticPopulation="ASHL">
-            <electricalConnectionInstanceW id="0" preCell="../AIZL/0/generic_neuron_iaf_cell" preSegment="0" preFractionAlong="0.5" postCell="../ASHL/0/generic_neuron_iaf_cell" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../AIZL/0/generic_neuron_iaf_cell" postCell="../ASHL/0/generic_neuron_iaf_cell" synapse="neuron_to_neuron_elec_syn" weight="1."/>
         </electricalProjection>
         <electricalProjection id="NC_ASHL_AIZL_Generic_GJ" presynapticPopulation="ASHL" postsynapticPopulation="AIZL">
-            <electricalConnectionInstanceW id="0" preCell="../ASHL/0/generic_neuron_iaf_cell" preSegment="0" preFractionAlong="0.5" postCell="../AIZL/0/generic_neuron_iaf_cell" postSegment="0" postFractionAlong="0.5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../ASHL/0/generic_neuron_iaf_cell" postCell="../AIZL/0/generic_neuron_iaf_cell" synapse="neuron_to_neuron_elec_syn" weight="1."/>
         </electricalProjection>
         <inputList id="Input_URYDL_stim_URYDL_1" population="URYDL" component="stim_URYDL_1">
             <input id="0" target="../URYDL/0/generic_neuron_iaf_cell" destination="synapses"/>
