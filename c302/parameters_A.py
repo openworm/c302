@@ -73,7 +73,7 @@ class ParameterisedModel(c302ModelPrototype):
         self.add_bioparameter("elec_syn_decay", "10ms", "BlindGuess", "0.1")
 
 
-        self.add_bioparameter("unphysiological_offset_current", "2.5pA", "KnownError", "0")
+        self.add_bioparameter("unphysiological_offset_current", "0pA", "KnownError", "0") # Can be activated later
         self.add_bioparameter("unphysiological_offset_current_del", "0ms", "KnownError", "0")
         self.add_bioparameter("unphysiological_offset_current_dur", "200ms", "KnownError", "0")
 

@@ -14,6 +14,9 @@ def setup(parameter_set,
     exec('from parameters_%s import ParameterisedModel'%parameter_set, globals())
     params = ParameterisedModel()
     
+    params.set_bioparameter("unphysiological_offset_current", "2.2pA", "Testing Pharyngeal", "0")
+    params.set_bioparameter("unphysiological_offset_current_del", "50ms", "Testing Pharyngeal", "0")
+    params.set_bioparameter("unphysiological_offset_current_dur", "200ms", "Testing Pharyngeal", "0")
     
     cells = ["M1","M2L","M2R","M3L","M3R","M4","M5","I1L","I1R","I2L","I2R","I3","I4","I5","I6","MI","NSML","NSMR","MCL","MCR"]
     cells_to_stimulate = ["M1","M3R","M4","M5","I1L","I4","I5","I6","MCL","MCR"]

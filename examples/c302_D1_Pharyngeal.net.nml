@@ -52,9 +52,9 @@ Parameters and setting used to generate this network:
         BioParameter: neuron_to_neuron_inh_syn_conductance = 26 nS (SRC: BlindGuess, certainty 0.1)
         BioParameter: resistivity = 3 kohm_cm (SRC: BlindGuess, certainty 0.1)
         BioParameter: specific_capacitance = 1 uF_per_cm2 (SRC: BlindGuess, certainty 0.1)
-        BioParameter: unphysiological_offset_current = 5 pA (SRC: KnownError, certainty 0)
-        BioParameter: unphysiological_offset_current_del = 0 ms (SRC: KnownError, certainty 0)
-        BioParameter: unphysiological_offset_current_dur = 2000 ms (SRC: KnownError, certainty 0)
+        BioParameter: unphysiological_offset_current = 2.2pA (SRC: Testing Pharyngeal, certainty 0)
+        BioParameter: unphysiological_offset_current_del = 50ms (SRC: Testing Pharyngeal, certainty 0)
+        BioParameter: unphysiological_offset_current_dur = 200ms (SRC: Testing Pharyngeal, certainty 0)
 
 </notes>
     <include href="cell_C.xml"/>
@@ -106,7 +106,7 @@ Parameters and setting used to generate this network:
             </intracellularProperties>
         </biophysicalProperties>
     </cell>
-    <pulseGenerator id="offset_current" delay="0 ms" duration="2000 ms" amplitude="5 pA"/>
+    <pulseGenerator id="offset_current" delay="50ms" duration="200ms" amplitude="2.2pA"/>
     <network id="c302_D1_Pharyngeal">
         <population id="I1L" component="I1L" size="1" type="populationList">
             <property tag="color" value="1 0 .4"/>

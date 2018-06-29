@@ -38,7 +38,7 @@ Parameters and setting used to generate this network:
         BioParameter: neuron_to_neuron_chem_exc_syn_gbase = 0.01nS (SRC: BlindGuess, certainty 0.1)
         BioParameter: neuron_to_neuron_chem_inh_syn_gbase = 0.01nS (SRC: BlindGuess, certainty 0.1)
         BioParameter: neuron_to_neuron_elec_syn_gbase = 0.01 nS (SRC: BlindGuess, certainty 0.1)
-        BioParameter: unphysiological_offset_current = 2.5pA (SRC: KnownError, certainty 0)
+        BioParameter: unphysiological_offset_current = 0pA (SRC: KnownError, certainty 0)
         BioParameter: unphysiological_offset_current_del = 0ms (SRC: KnownError, certainty 0)
         BioParameter: unphysiological_offset_current_dur = 200ms (SRC: KnownError, certainty 0)
 
@@ -46,7 +46,7 @@ Parameters and setting used to generate this network:
     <include href="cell_B.xml"/>
     <iafCell type="iafActivityCell" id="generic_muscle_iaf_cell" C="3pF" thresh="-30mV" reset="-50mV" leakConductance="0.1nS" leakReversal="-50mV" tau1="50ms"/>
     <iafCell type="iafActivityCell" id="generic_neuron_iaf_cell" C="3pF" thresh="-30mV" reset="-50mV" leakConductance="0.1nS" leakReversal="-50mV" tau1="50ms"/>
-    <pulseGenerator id="offset_current" delay="0ms" duration="200ms" amplitude="2.5pA"/>
+    <pulseGenerator id="offset_current" delay="0ms" duration="200ms" amplitude="0pA"/>
     <pulseGenerator id="stim_ADAL_1" delay="100ms" duration="800ms" amplitude="1pA"/>
     <pulseGenerator id="stim_PVCL_1" delay="100ms" duration="800ms" amplitude="1pA"/>
     <pulseGenerator id="stim_MDR01_1" delay="100ms" duration="800ms" amplitude="1pA"/>

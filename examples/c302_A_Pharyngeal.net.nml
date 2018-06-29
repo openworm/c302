@@ -39,16 +39,16 @@ Parameters and setting used to generate this network:
         BioParameter: neuron_to_neuron_chem_exc_syn_gbase = 0.01nS (SRC: BlindGuess, certainty 0.1)
         BioParameter: neuron_to_neuron_chem_inh_syn_gbase = 0.01nS (SRC: BlindGuess, certainty 0.1)
         BioParameter: neuron_to_neuron_elec_syn_gbase = 0nS (SRC: BlindGuess, certainty 0.1)
-        BioParameter: unphysiological_offset_current = 2.5pA (SRC: KnownError, certainty 0)
-        BioParameter: unphysiological_offset_current_del = 0ms (SRC: KnownError, certainty 0)
-        BioParameter: unphysiological_offset_current_dur = 200ms (SRC: KnownError, certainty 0)
+        BioParameter: unphysiological_offset_current = 2.2pA (SRC: Testing Pharyngeal, certainty 0)
+        BioParameter: unphysiological_offset_current_del = 50ms (SRC: Testing Pharyngeal, certainty 0)
+        BioParameter: unphysiological_offset_current_dur = 200ms (SRC: Testing Pharyngeal, certainty 0)
 
 </notes>
     <expTwoSynapse id="neuron_to_neuron_elec_syn" gbase="0nS" erev="0mV" tauDecay="10ms" tauRise="3ms"/>
     <expTwoSynapse id="neuron_to_neuron_exc_syn" gbase="0.01nS" erev="0mV" tauDecay="10ms" tauRise="3ms"/>
     <iafCell id="generic_muscle_iaf_cell" leakReversal="-50mV" thresh="-30mV" reset="-50mV" C="3pF" leakConductance="0.1nS"/>
     <iafCell id="generic_neuron_iaf_cell" leakReversal="-50mV" thresh="-30mV" reset="-50mV" C="3pF" leakConductance="0.1nS"/>
-    <pulseGenerator id="offset_current" delay="0ms" duration="200ms" amplitude="2.5pA"/>
+    <pulseGenerator id="offset_current" delay="50ms" duration="200ms" amplitude="2.2pA"/>
     <network id="c302_A_Pharyngeal">
         <population id="I1L" component="generic_neuron_iaf_cell" size="1" type="populationList">
             <property tag="color" value="1 0 .4"/>

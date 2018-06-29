@@ -15,7 +15,7 @@ experiments:
         spike detection: 
           method: threshold
           threshold: -10
-        tolerance: 0.00026402640264
+        tolerance: 0.0002508308772811216
   M2L:
     observables:
       spike times:
@@ -26,7 +26,7 @@ experiments:
         spike detection: 
           method: threshold
           threshold: -30
-        tolerance: 0.000497388709276
+        tolerance: 0.0003788165770134962
   I2R:
     observables:
       spike times:
@@ -37,5 +37,5 @@ experiments:
         spike detection: 
           method: threshold
           threshold: -10
-        tolerance: 0.00031605562579
+        tolerance: 0.0002860084658504916
 
