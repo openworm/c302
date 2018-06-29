@@ -22,3 +22,5 @@
 /examples/summary/c302_C0_Muscles_exc_to_neurons.png
 /examples/summary/c302_C0_Muscles_inh_to_muscles.png
 /examples/summary/c302_C0_Muscles_inh_to_neurons.png
+/examples/*.gv
+/examples/*.gv.png

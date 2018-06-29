@@ -354,11 +354,13 @@ if __name__ == '__main__':
                 with open('examples/%s/summary_%s_%s.md'%(save_fig_dir,c,p),'w') as f3:
                     f3.write('### Parameter config summary \n%s'%html2)
 
+                dt = 0.05 if p!='Pharyngeal' else 0.01
+                
                 run_c302(p,
                          c,
                          '',
                          durations[p],
-                         0.05,
+                         dt,
                          'jNeuroML_NEURON',
                          save=True,
                          show_plot_already=False,

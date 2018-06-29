@@ -1,7 +1,7 @@
 ### Parameter config summary 
 <h2>c302 simulation</h2>
 <p>Parameter set: <b>B</b>; configuration: <b>Syns</b></p>
-<p>Generated on: Tue, 17 Apr 2018</p><br/>
+<p>Generated on: Fri, 29 Jun 2018</p><br/>
 <table>
 
 <tr>
