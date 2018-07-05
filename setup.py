@@ -26,7 +26,7 @@ setup(
         'xlwt',
         'libNeuroML>=0.2.39',
         'pyNeuroML>=0.3.11',
-        'pyopenworm>=0.7.1'
+        'pyopenworm==0.7.1'
     ],
     package_data={
         'c302': [
