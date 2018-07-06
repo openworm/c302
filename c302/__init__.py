@@ -80,7 +80,7 @@ def load_data_reader(data_reader="SpreadsheetDataReader"):
     Returns:
         reader (obj): The data reader object
     """
-    reader = importlib.import_module(data_reader)
+    reader = importlib.import_module('c302.%s'%data_reader)
     return reader
 
 def get_str_from_expnotation(num):
@@ -158,6 +158,13 @@ def process_args():
                         metavar='<conn-number-override>',
                         default=None,
                         help='Map of connection numbers to override, e.g. {"I1L-I3":2.5, "AVAR-AVBL_GJ":2} => use 2.5 connections from I1L to I3, use 2 connections for GJ AVAR-AVBL')
+
+
+    parser.add_argument('-paramoverride',
+                        type=str,
+                        metavar='<param-override>',
+                        default=None,
+                        help='Map of parameters to override, e.g. {"unphysiological_offset_current":"2pA", ...} => use 2pA for additional offset currnet')
 
     parser.add_argument('-connnumberscaling',
                         type=str,
@@ -1460,6 +1467,7 @@ def main():
              conn_number_override =   parse_dict_arg(args.connnumberoverride),
              conn_number_scaling =    parse_dict_arg(args.connnumberscaling),
              muscles_to_include =     parse_list_arg(args.musclestoinclude),
+             param_overrides =        parse_dict_arg(args.paramoverride),
              duration =               args.duration,
              dt =                     args.dt,
              vmin =                   args.vmin,

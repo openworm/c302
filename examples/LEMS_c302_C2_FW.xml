@@ -1,0 +1,935 @@
+<Lems>
+    
+    <!--
+
+
+Parameters and setting used to generate this network:
+
+    Data reader:                    UpdatedSpreadsheetDataReader
+    c302 version:                   0.6.0
+    Cells:                          ['AVBL', 'AVBR', 'DB1', 'DB2', 'DB3', 'DB4', 'DB5', 'DB6', 'DB7', 'VD1', 'VD2', 'VD3', 'VD4', 'VD5', 'VD6', 'VD7', 'VD8', 'VD9', 'VD10', 'VD11', 'VD12', 'VD13', 'VB1', 'VB2', 'VB3', 'VB4', 'VB5', 'VB6', 'VB7', 'VB8', 'VB9', 'VB10', 'VB11', 'DD1', 'DD2', 'DD3', 'DD4', 'DD5', 'DD6']
+    Cell stimulated:                []
+    Connection:                     []
+    Connection numbers overridden:  {'^.+-.+$': 1}
+    Connection numbers scaled:      None
+    Connection polarities override: {'^VB\\d+-VD\\d+$': 'inh', '^DB\\d+-DD\\d+$': 'inh'}
+    Muscles:                        True
+
+    Known BioParameters:
+        BioParameter: AVBL_to_DB2_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBL_to_DB3_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBL_to_DB4_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBL_to_DB5_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBL_to_DB6_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBL_to_DB7_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBL_to_VB10_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBL_to_VB11_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBL_to_VB1_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBL_to_VB2_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBL_to_VB2_exc_syn_conductance = 0 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBL_to_VB4_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBL_to_VB5_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBL_to_VB6_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBL_to_VB7_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBL_to_VB8_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBL_to_VB9_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBR_to_DB1_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBR_to_DB2_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBR_to_DB3_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBR_to_DB4_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBR_to_DB4_exc_syn_conductance = 0 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBR_to_DB5_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBR_to_DB6_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBR_to_DB7_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBR_to_MVL16_exc_syn_conductance = 0 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBR_to_VB10_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBR_to_VB11_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBR_to_VB2_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBR_to_VB3_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBR_to_VB4_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBR_to_VB5_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBR_to_VB6_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBR_to_VB7_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBR_to_VB8_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBR_to_VB9_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: AVBR_to_VD3_exc_syn_conductance = 0 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB1_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB1_to_DB2_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: DB1_to_MDL06_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB1_to_MDL08_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB1_to_MDL09_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB1_to_MDR08_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB1_to_MDR09_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB1_to_VB3_elec_syn_gbase = 0 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB2_to_AVBL_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB2_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB2_to_DB1_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: DB2_to_DB3_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: DB2_to_MDL09_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB2_to_MDL10_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB2_to_MDL11_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB2_to_MDL12_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB2_to_MDR09_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB2_to_MDR10_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB2_to_MDR11_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB2_to_VB4_elec_syn_gbase = 0 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB3_to_AVBL_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB3_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB3_to_DB2_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: DB3_to_DB4_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: DB3_to_DD3_elec_syn_gbase = 0 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB3_to_MDL11_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB3_to_MDL12_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB3_to_MDL13_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB3_to_MDL14_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB3_to_MDR11_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB3_to_MDR12_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB3_to_MDR13_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB3_to_VB6_elec_syn_gbase = 0 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB4_to_AVBL_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB4_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB4_to_DB3_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: DB4_to_DB5_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: DB4_to_DD3_elec_syn_gbase = 0 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB4_to_MDL13_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB4_to_MDL14_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB4_to_MDL15_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB4_to_MDL16_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB4_to_MDR13_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB4_to_MDR14_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB4_to_MDR15_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB4_to_MDR16_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB5_to_AVBL_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB5_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB5_to_DB4_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: DB5_to_DB6_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: DB5_to_MDL14_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB5_to_MDL15_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB5_to_MDL16_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB5_to_MDL17_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB5_to_MDL18_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB5_to_MDL19_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB5_to_MDR14_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB5_to_MDR15_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB5_to_MDR16_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB5_to_MDR17_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB5_to_MDR18_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB5_to_MDR19_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB6_to_AVBL_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB6_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB6_to_DB5_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: DB6_to_DB7_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: DB6_to_MDL16_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB6_to_MDL17_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB6_to_MDL18_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB6_to_MDL19_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB6_to_MDL20_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB6_to_MDL21_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB6_to_MDR16_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB6_to_MDR17_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB6_to_MDR18_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB6_to_MDR19_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB6_to_MDR20_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB6_to_MDR21_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB7_to_AVBL_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB7_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB7_to_DB6_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: DB7_to_MDL19_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB7_to_MDL20_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB7_to_MDL21_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB7_to_MDL22_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB7_to_MDL23_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB7_to_MDL24_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB7_to_MDR19_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB7_to_MDR20_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB7_to_MDR21_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB7_to_MDR22_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB7_to_MDR23_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB7_to_MDR24_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DD1_to_MVL08_elec_syn_gbase = 0 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DD1_to_VB2_inh_syn_conductance = 0 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DD3_to_DB3_elec_syn_gbase = 0 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DD3_to_DB4_elec_syn_gbase = 0 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: MDL09_to_VD2_elec_syn_gbase = 0 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: MVL08_to_DD1_elec_syn_gbase = 0 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB10_to_AVBL_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB10_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB10_to_MVL20_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB10_to_MVL21_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB10_to_MVL22_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB10_to_MVR20_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB10_to_MVR21_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB10_to_MVR22_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB10_to_VB11_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB10_to_VB9_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB10_to_VD11_elec_syn_gbase = 0 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB10_to_VD12_elec_syn_gbase = 0 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB11_to_AVBL_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB11_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB11_to_MVL21_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB11_to_MVL22_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB11_to_MVL23_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB11_to_MVR21_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB11_to_MVR22_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB11_to_MVR23_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB11_to_VB10_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB1_to_AVBL_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB1_to_MVL07_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB1_to_MVR07_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB1_to_MVR09_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB1_to_VB2_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB2_to_AVBL_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB2_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB2_to_MVL08_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB2_to_MVL09_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB2_to_MVL10_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB2_to_MVL11_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB2_to_MVR08_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB2_to_MVR10_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB2_to_MVR11_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB2_to_VB1_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB2_to_VB3_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB2_to_VB4_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB3_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB3_to_DB1_elec_syn_gbase = 0 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB3_to_MVL10_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB3_to_MVL11_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB3_to_MVL12_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB3_to_MVL13_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB3_to_MVR10_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB3_to_MVR11_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB3_to_MVR12_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB3_to_MVR13_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB3_to_VB2_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB3_to_VB4_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB4_to_AVBL_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB4_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB4_to_DB2_elec_syn_gbase = 0 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB4_to_MVL12_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB4_to_MVL13_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB4_to_MVR12_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB4_to_MVR13_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB4_to_MVR14_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB4_to_VB2_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB4_to_VB3_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB4_to_VB5_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB4_to_VB5_exc_syn_ad = 73 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB4_to_VB5_exc_syn_ar = 0.19 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB4_to_VB5_exc_syn_beta = 2.81 per_mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB4_to_VB5_exc_syn_conductance = 18 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB4_to_VB5_exc_syn_erev = 10 mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB4_to_VB5_exc_syn_vth = -22 mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB5_to_AVBL_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB5_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB5_to_MVL12_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB5_to_MVL13_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB5_to_MVL14_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB5_to_MVL15_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB5_to_MVR13_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB5_to_MVR14_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB5_to_MVR15_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB5_to_VB4_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB5_to_VB6_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB6_to_AVBL_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB6_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB6_to_DB3_elec_syn_gbase = 0 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB6_to_MVL15_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB6_to_MVL16_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB6_to_MVR14_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB6_to_MVR15_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB6_to_MVR16_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB6_to_VB5_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB6_to_VB7_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB7_to_AVBL_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB7_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB7_to_MVL16_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB7_to_MVL17_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB7_to_MVL18_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB7_to_MVR16_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB7_to_MVR17_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB7_to_MVR18_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB7_to_VB6_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB7_to_VB8_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB8_to_AVBL_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB8_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB8_to_MVL18_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB8_to_MVL19_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB8_to_MVL20_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB8_to_MVR18_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB8_to_MVR19_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB8_to_MVR20_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB8_to_VB7_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB8_to_VB9_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB9_to_AVBL_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB9_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB9_to_MVL19_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB9_to_MVL20_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB9_to_MVL21_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB9_to_MVR19_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB9_to_MVR20_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB9_to_MVR21_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB9_to_VB10_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB9_to_VB8_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VD11_to_VB10_elec_syn_gbase = 0 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VD12_to_VB10_elec_syn_gbase = 0 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VD2_to_MDL09_elec_syn_gbase = 0 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: ca_boyle_erev = 10 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: ca_conc_decay_time = 13.811870945509265 ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: ca_conc_decay_time_muscle = 60.8 ms (SRC: Set with param_overrides, certainty 0)
+        BioParameter: ca_conc_rho = 0.000238919 mol_per_m_per_A_per_s (SRC: BlindGuess, certainty 0.1)
+        BioParameter: ca_conc_rho_muscle = 0.002338919 mol_per_m_per_A_per_s (SRC: Set with param_overrides, certainty 0)
+        BioParameter: cell_diameter = 5 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: initial_memb_pot = -50 mV (SRC: Set with param_overrides, certainty 0)
+        BioParameter: k_fast_erev = -70 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: k_slow_erev = -60 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: leak_erev = -60 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_ca_boyle_cond_density = 0.812775772264702 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_ca_boyle_erev = 0 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_initial_memb_pot = -28 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_k_fast_cond_density = 0.042711643917483308 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_k_fast_erev = -30 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_k_slow_cond_density = 0.45833751019872582 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_k_slow_erev = -30 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_leak_cond_density = 0.002 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_leak_erev = -20 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_length = 20 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_specific_capacitance = 1 uF_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_spike_thresh = -10 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_to_muscle_elec_syn_gbase = 0 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_ca_boyle_cond_density = 1.812775772264702 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_k_fast_cond_density = 0.042711643917483308 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_k_slow_cond_density = 0.45833751019872582 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_leak_cond_density = 0.002 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_spike_thresh = -55 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_motor_delayed_elec_syn_gbase = 0.01252 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_motor_delayed_elec_syn_mu = -30 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_motor_delayed_elec_syn_sigma = 0.4 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_motor_delayed_elec_syn_weight = 1 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_elec_syn_gbase = 0.00152 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_exc_syn_conductance = 0.5 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: neuron_to_muscle_exc_syn_delta = 19 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_exc_syn_erev = 37 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_exc_syn_k = 1.205per_ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_exc_syn_mu = 5 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_exc_syn_sigma = 0.5 per_mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_exc_syn_vth = 37 mV (SRC: Set with param_overrides, certainty 0)
+        BioParameter: neuron_to_muscle_exc_syn_weight = 1 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_inh_syn_conductance = 0.6 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: neuron_to_muscle_inh_syn_delta = 5 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_inh_syn_erev = -35 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_inh_syn_k = 0.025per_ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_inh_syn_vth = 0 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_elec_syn_gbase = 0.01252 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_elec_syn_weight = 1 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_exc_syn_conductance = 0.49 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_exc_syn_delta = 5 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_exc_syn_erev = -10 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_exc_syn_k = 0.5per_ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_exc_syn_vth = 00 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_inh_syn_conductance = 0.2 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: neuron_to_neuron_inh_syn_delta = 5 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_inh_syn_erev = -70 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_inh_syn_k = 0.015per_ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_inh_syn_vth = 0 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: specific_capacitance = 5 uF_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: unphysiological_offset_current = 0pA (SRC: Testing TapWithdrawal, certainty 0)
+        BioParameter: unphysiological_offset_current_del = 0 ms (SRC: Testing TapWithdrawal, certainty 0)
+        BioParameter: unphysiological_offset_current_dur = 2000 ms (SRC: Testing TapWithdrawal, certainty 0)
+
+   
+    -->
+
+    <Target component="sim_c302_C2_FW" />
+
+    <!-- Include core NeuroML2 ComponentType definitions -->
+
+    <Include file="Cells.xml" />
+    <Include file="Networks.xml" />
+    <Include file="Simulation.xml" />
+    
+    <Include file="cell_C.xml" />
+    
+    <Include file="custom_muscle_components.xml" />
+    
+    <Include file="custom_synapses.xml" />
+    
+    <Include file="c302_C2_FW.net.nml" />
+
+    <!-- End of NeuroML2 content -->
+    
+
+    <Simulation id="sim_c302_C2_FW" length="2000ms" step="0.05ms" target="c302_C2_FW">
+
+        <Display id="neurons" title="c302_C2_FW: Membrane potential of a number of neurons" timeScale="1ms" xmin="-200.0" xmax="2200.0" ymin="-60" ymax="25">
+            
+            <Line id="AVBL" quantity="AVBL/0/GenericNeuronCell/v" scale="1mV" color="#8b779a" timeScale="1ms" />
+            <Line id="AVBR" quantity="AVBR/0/GenericNeuronCell/v" scale="1mV" color="#ef7488" timeScale="1ms" />
+            <Line id="DB1" quantity="DB1/0/GenericNeuronCell/v" scale="1mV" color="#2a8f25" timeScale="1ms" />
+            <Line id="DB2" quantity="DB2/0/GenericNeuronCell/v" scale="1mV" color="#2d27f5" timeScale="1ms" />
+            <Line id="DB3" quantity="DB3/0/GenericNeuronCell/v" scale="1mV" color="#c979d2" timeScale="1ms" />
+            <Line id="DB4" quantity="DB4/0/GenericNeuronCell/v" scale="1mV" color="#1e88d5" timeScale="1ms" />
+            <Line id="DB5" quantity="DB5/0/GenericNeuronCell/v" scale="1mV" color="#e94527" timeScale="1ms" />
+            <Line id="DB6" quantity="DB6/0/GenericNeuronCell/v" scale="1mV" color="#008216" timeScale="1ms" />
+            <Line id="DB7" quantity="DB7/0/GenericNeuronCell/v" scale="1mV" color="#3365b5" timeScale="1ms" />
+            <Line id="DD1" quantity="DD1/0/GenericNeuronCell/v" scale="1mV" color="#964dd0" timeScale="1ms" />
+            <Line id="DD2" quantity="DD2/0/GenericNeuronCell/v" scale="1mV" color="#d81153" timeScale="1ms" />
+            <Line id="DD3" quantity="DD3/0/GenericNeuronCell/v" scale="1mV" color="#35d361" timeScale="1ms" />
+            <Line id="DD4" quantity="DD4/0/GenericNeuronCell/v" scale="1mV" color="#174269" timeScale="1ms" />
+            <Line id="DD5" quantity="DD5/0/GenericNeuronCell/v" scale="1mV" color="#e171c7" timeScale="1ms" />
+            <Line id="DD6" quantity="DD6/0/GenericNeuronCell/v" scale="1mV" color="#7a485e" timeScale="1ms" />
+            <Line id="VB1" quantity="VB1/0/GenericNeuronCell/v" scale="1mV" color="#baa91a" timeScale="1ms" />
+            <Line id="VB10" quantity="VB10/0/GenericNeuronCell/v" scale="1mV" color="#ff4cb0" timeScale="1ms" />
+            <Line id="VB11" quantity="VB11/0/GenericNeuronCell/v" scale="1mV" color="#575552" timeScale="1ms" />
+            <Line id="VB2" quantity="VB2/0/GenericNeuronCell/v" scale="1mV" color="#00fefa" timeScale="1ms" />
+            <Line id="VB3" quantity="VB3/0/GenericNeuronCell/v" scale="1mV" color="#b3e938" timeScale="1ms" />
+            <Line id="VB4" quantity="VB4/0/GenericNeuronCell/v" scale="1mV" color="#f1f423" timeScale="1ms" />
+            <Line id="VB5" quantity="VB5/0/GenericNeuronCell/v" scale="1mV" color="#c6db53" timeScale="1ms" />
+            <Line id="VB6" quantity="VB6/0/GenericNeuronCell/v" scale="1mV" color="#ade39b" timeScale="1ms" />
+            <Line id="VB7" quantity="VB7/0/GenericNeuronCell/v" scale="1mV" color="#007314" timeScale="1ms" />
+            <Line id="VB8" quantity="VB8/0/GenericNeuronCell/v" scale="1mV" color="#5b5f2c" timeScale="1ms" />
+            <Line id="VB9" quantity="VB9/0/GenericNeuronCell/v" scale="1mV" color="#e9a700" timeScale="1ms" />
+            <Line id="VD1" quantity="VD1/0/GenericNeuronCell/v" scale="1mV" color="#50fd1e" timeScale="1ms" />
+            <Line id="VD10" quantity="VD10/0/GenericNeuronCell/v" scale="1mV" color="#b7a575" timeScale="1ms" />
+            <Line id="VD11" quantity="VD11/0/GenericNeuronCell/v" scale="1mV" color="#2cf396" timeScale="1ms" />
+            <Line id="VD12" quantity="VD12/0/GenericNeuronCell/v" scale="1mV" color="#5f1aad" timeScale="1ms" />
+            <Line id="VD13" quantity="VD13/0/GenericNeuronCell/v" scale="1mV" color="#3db356" timeScale="1ms" />
+            <Line id="VD2" quantity="VD2/0/GenericNeuronCell/v" scale="1mV" color="#527186" timeScale="1ms" />
+            <Line id="VD3" quantity="VD3/0/GenericNeuronCell/v" scale="1mV" color="#3300f9" timeScale="1ms" />
+            <Line id="VD4" quantity="VD4/0/GenericNeuronCell/v" scale="1mV" color="#b7e72a" timeScale="1ms" />
+            <Line id="VD5" quantity="VD5/0/GenericNeuronCell/v" scale="1mV" color="#28ec31" timeScale="1ms" />
+            <Line id="VD6" quantity="VD6/0/GenericNeuronCell/v" scale="1mV" color="#7e3f49" timeScale="1ms" />
+            <Line id="VD7" quantity="VD7/0/GenericNeuronCell/v" scale="1mV" color="#6e728d" timeScale="1ms" />
+            <Line id="VD8" quantity="VD8/0/GenericNeuronCell/v" scale="1mV" color="#c8f5b1" timeScale="1ms" />
+            <Line id="VD9" quantity="VD9/0/GenericNeuronCell/v" scale="1mV" color="#cd8024" timeScale="1ms" />
+            
+        </Display>
+      
+        <Display id="muscles" title="c302_C2_FW: Membrane potential of a number of muscles" timeScale="1ms" xmin="-200.0" xmax="2200.0" ymin="-60" ymax="25">
+            
+            <Line id="MDR01" quantity="MDR01/0/GenericMuscleCell/v" scale="1mV" color="#4d7dcd" timeScale="1ms" />
+            <Line id="MDR02" quantity="MDR02/0/GenericMuscleCell/v" scale="1mV" color="#f3dc79" timeScale="1ms" />
+            <Line id="MDR03" quantity="MDR03/0/GenericMuscleCell/v" scale="1mV" color="#3b4011" timeScale="1ms" />
+            <Line id="MDR04" quantity="MDR04/0/GenericMuscleCell/v" scale="1mV" color="#902565" timeScale="1ms" />
+            <Line id="MDR05" quantity="MDR05/0/GenericMuscleCell/v" scale="1mV" color="#36ba9e" timeScale="1ms" />
+            <Line id="MDR06" quantity="MDR06/0/GenericMuscleCell/v" scale="1mV" color="#31398e" timeScale="1ms" />
+            <Line id="MDR07" quantity="MDR07/0/GenericMuscleCell/v" scale="1mV" color="#af006c" timeScale="1ms" />
+            <Line id="MDR08" quantity="MDR08/0/GenericMuscleCell/v" scale="1mV" color="#85c2c6" timeScale="1ms" />
+            <Line id="MDR09" quantity="MDR09/0/GenericMuscleCell/v" scale="1mV" color="#9700b3" timeScale="1ms" />
+            <Line id="MDR10" quantity="MDR10/0/GenericMuscleCell/v" scale="1mV" color="#c36535" timeScale="1ms" />
+            <Line id="MDR11" quantity="MDR11/0/GenericMuscleCell/v" scale="1mV" color="#dc9cea" timeScale="1ms" />
+            <Line id="MDR12" quantity="MDR12/0/GenericMuscleCell/v" scale="1mV" color="#3a1061" timeScale="1ms" />
+            <Line id="MDR13" quantity="MDR13/0/GenericMuscleCell/v" scale="1mV" color="#82cdbb" timeScale="1ms" />
+            <Line id="MDR14" quantity="MDR14/0/GenericMuscleCell/v" scale="1mV" color="#00c1e2" timeScale="1ms" />
+            <Line id="MDR15" quantity="MDR15/0/GenericMuscleCell/v" scale="1mV" color="#e53e75" timeScale="1ms" />
+            <Line id="MDR16" quantity="MDR16/0/GenericMuscleCell/v" scale="1mV" color="#86004b" timeScale="1ms" />
+            <Line id="MDR17" quantity="MDR17/0/GenericMuscleCell/v" scale="1mV" color="#eab4a7" timeScale="1ms" />
+            <Line id="MDR18" quantity="MDR18/0/GenericMuscleCell/v" scale="1mV" color="#6d6f57" timeScale="1ms" />
+            <Line id="MDR19" quantity="MDR19/0/GenericMuscleCell/v" scale="1mV" color="#d6bc92" timeScale="1ms" />
+            <Line id="MDR20" quantity="MDR20/0/GenericMuscleCell/v" scale="1mV" color="#a96871" timeScale="1ms" />
+            <Line id="MDR21" quantity="MDR21/0/GenericMuscleCell/v" scale="1mV" color="#5597fa" timeScale="1ms" />
+            <Line id="MDR22" quantity="MDR22/0/GenericMuscleCell/v" scale="1mV" color="#5183a3" timeScale="1ms" />
+            <Line id="MDR23" quantity="MDR23/0/GenericMuscleCell/v" scale="1mV" color="#ba9d43" timeScale="1ms" />
+            <Line id="MDR24" quantity="MDR24/0/GenericMuscleCell/v" scale="1mV" color="#739d00" timeScale="1ms" />
+            <Line id="MVR01" quantity="MVR01/0/GenericMuscleCell/v" scale="1mV" color="#aab42e" timeScale="1ms" />
+            <Line id="MVR02" quantity="MVR02/0/GenericMuscleCell/v" scale="1mV" color="#c1d24f" timeScale="1ms" />
+            <Line id="MVR03" quantity="MVR03/0/GenericMuscleCell/v" scale="1mV" color="#568bbd" timeScale="1ms" />
+            <Line id="MVR04" quantity="MVR04/0/GenericMuscleCell/v" scale="1mV" color="#c70015" timeScale="1ms" />
+            <Line id="MVR05" quantity="MVR05/0/GenericMuscleCell/v" scale="1mV" color="#aed19c" timeScale="1ms" />
+            <Line id="MVR06" quantity="MVR06/0/GenericMuscleCell/v" scale="1mV" color="#595663" timeScale="1ms" />
+            <Line id="MVR07" quantity="MVR07/0/GenericMuscleCell/v" scale="1mV" color="#5cbf18" timeScale="1ms" />
+            <Line id="MVR08" quantity="MVR08/0/GenericMuscleCell/v" scale="1mV" color="#8f7e15" timeScale="1ms" />
+            <Line id="MVR09" quantity="MVR09/0/GenericMuscleCell/v" scale="1mV" color="#d76c50" timeScale="1ms" />
+            <Line id="MVR10" quantity="MVR10/0/GenericMuscleCell/v" scale="1mV" color="#b62c6f" timeScale="1ms" />
+            <Line id="MVR11" quantity="MVR11/0/GenericMuscleCell/v" scale="1mV" color="#7a934e" timeScale="1ms" />
+            <Line id="MVR12" quantity="MVR12/0/GenericMuscleCell/v" scale="1mV" color="#ffaaff" timeScale="1ms" />
+            <Line id="MVR13" quantity="MVR13/0/GenericMuscleCell/v" scale="1mV" color="#27a2f7" timeScale="1ms" />
+            <Line id="MVR14" quantity="MVR14/0/GenericMuscleCell/v" scale="1mV" color="#0059ca" timeScale="1ms" />
+            <Line id="MVR15" quantity="MVR15/0/GenericMuscleCell/v" scale="1mV" color="#9d30d4" timeScale="1ms" />
+            <Line id="MVR16" quantity="MVR16/0/GenericMuscleCell/v" scale="1mV" color="#ce51ed" timeScale="1ms" />
+            <Line id="MVR17" quantity="MVR17/0/GenericMuscleCell/v" scale="1mV" color="#7285f6" timeScale="1ms" />
+            <Line id="MVR18" quantity="MVR18/0/GenericMuscleCell/v" scale="1mV" color="#f35167" timeScale="1ms" />
+            <Line id="MVR19" quantity="MVR19/0/GenericMuscleCell/v" scale="1mV" color="#f1ad42" timeScale="1ms" />
+            <Line id="MVR20" quantity="MVR20/0/GenericMuscleCell/v" scale="1mV" color="#5c82f0" timeScale="1ms" />
+            <Line id="MVR21" quantity="MVR21/0/GenericMuscleCell/v" scale="1mV" color="#ecd6c8" timeScale="1ms" />
+            <Line id="MVR22" quantity="MVR22/0/GenericMuscleCell/v" scale="1mV" color="#699c41" timeScale="1ms" />
+            <Line id="MVR23" quantity="MVR23/0/GenericMuscleCell/v" scale="1mV" color="#aaa0d0" timeScale="1ms" />
+            <Line id="MVR24" quantity="MVR24/0/GenericMuscleCell/v" scale="1mV" color="#73c373" timeScale="1ms" />
+            <Line id="MVL01" quantity="MVL01/0/GenericMuscleCell/v" scale="1mV" color="#aad900" timeScale="1ms" />
+            <Line id="MVL02" quantity="MVL02/0/GenericMuscleCell/v" scale="1mV" color="#f19430" timeScale="1ms" />
+            <Line id="MVL03" quantity="MVL03/0/GenericMuscleCell/v" scale="1mV" color="#4a946f" timeScale="1ms" />
+            <Line id="MVL04" quantity="MVL04/0/GenericMuscleCell/v" scale="1mV" color="#c4f618" timeScale="1ms" />
+            <Line id="MVL05" quantity="MVL05/0/GenericMuscleCell/v" scale="1mV" color="#1d2521" timeScale="1ms" />
+            <Line id="MVL06" quantity="MVL06/0/GenericMuscleCell/v" scale="1mV" color="#00c834" timeScale="1ms" />
+            <Line id="MVL07" quantity="MVL07/0/GenericMuscleCell/v" scale="1mV" color="#6cfc4b" timeScale="1ms" />
+            <Line id="MVL08" quantity="MVL08/0/GenericMuscleCell/v" scale="1mV" color="#344dbe" timeScale="1ms" />
+            <Line id="MVL09" quantity="MVL09/0/GenericMuscleCell/v" scale="1mV" color="#bc41f5" timeScale="1ms" />
+            <Line id="MVL10" quantity="MVL10/0/GenericMuscleCell/v" scale="1mV" color="#005883" timeScale="1ms" />
+            <Line id="MVL11" quantity="MVL11/0/GenericMuscleCell/v" scale="1mV" color="#14aaa3" timeScale="1ms" />
+            <Line id="MVL12" quantity="MVL12/0/GenericMuscleCell/v" scale="1mV" color="#ed44f9" timeScale="1ms" />
+            <Line id="MVL13" quantity="MVL13/0/GenericMuscleCell/v" scale="1mV" color="#39a690" timeScale="1ms" />
+            <Line id="MVL14" quantity="MVL14/0/GenericMuscleCell/v" scale="1mV" color="#5fb87d" timeScale="1ms" />
+            <Line id="MVL15" quantity="MVL15/0/GenericMuscleCell/v" scale="1mV" color="#9fadde" timeScale="1ms" />
+            <Line id="MVL16" quantity="MVL16/0/GenericMuscleCell/v" scale="1mV" color="#8ef341" timeScale="1ms" />
+            <Line id="MVL17" quantity="MVL17/0/GenericMuscleCell/v" scale="1mV" color="#bf4aac" timeScale="1ms" />
+            <Line id="MVL18" quantity="MVL18/0/GenericMuscleCell/v" scale="1mV" color="#006be3" timeScale="1ms" />
+            <Line id="MVL19" quantity="MVL19/0/GenericMuscleCell/v" scale="1mV" color="#c900e7" timeScale="1ms" />
+            <Line id="MVL20" quantity="MVL20/0/GenericMuscleCell/v" scale="1mV" color="#46bc00" timeScale="1ms" />
+            <Line id="MVL21" quantity="MVL21/0/GenericMuscleCell/v" scale="1mV" color="#6cf472" timeScale="1ms" />
+            <Line id="MVL22" quantity="MVL22/0/GenericMuscleCell/v" scale="1mV" color="#a14335" timeScale="1ms" />
+            <Line id="MVL23" quantity="MVL23/0/GenericMuscleCell/v" scale="1mV" color="#00a6bc" timeScale="1ms" />
+            <Line id="MVL24" quantity="MVL24/0/GenericMuscleCell/v" scale="1mV" color="#141d74" timeScale="1ms" />
+            <Line id="MDL01" quantity="MDL01/0/GenericMuscleCell/v" scale="1mV" color="#d3c1bc" timeScale="1ms" />
+            <Line id="MDL02" quantity="MDL02/0/GenericMuscleCell/v" scale="1mV" color="#006b69" timeScale="1ms" />
+            <Line id="MDL03" quantity="MDL03/0/GenericMuscleCell/v" scale="1mV" color="#ac835d" timeScale="1ms" />
+            <Line id="MDL04" quantity="MDL04/0/GenericMuscleCell/v" scale="1mV" color="#54f791" timeScale="1ms" />
+            <Line id="MDL05" quantity="MDL05/0/GenericMuscleCell/v" scale="1mV" color="#5c78f9" timeScale="1ms" />
+            <Line id="MDL06" quantity="MDL06/0/GenericMuscleCell/v" scale="1mV" color="#46dbe9" timeScale="1ms" />
+            <Line id="MDL07" quantity="MDL07/0/GenericMuscleCell/v" scale="1mV" color="#451694" timeScale="1ms" />
+            <Line id="MDL08" quantity="MDL08/0/GenericMuscleCell/v" scale="1mV" color="#88198a" timeScale="1ms" />
+            <Line id="MDL09" quantity="MDL09/0/GenericMuscleCell/v" scale="1mV" color="#d0c5b8" timeScale="1ms" />
+            <Line id="MDL10" quantity="MDL10/0/GenericMuscleCell/v" scale="1mV" color="#32d6fd" timeScale="1ms" />
+            <Line id="MDL11" quantity="MDL11/0/GenericMuscleCell/v" scale="1mV" color="#594784" timeScale="1ms" />
+            <Line id="MDL12" quantity="MDL12/0/GenericMuscleCell/v" scale="1mV" color="#00001c" timeScale="1ms" />
+            <Line id="MDL13" quantity="MDL13/0/GenericMuscleCell/v" scale="1mV" color="#6e99d2" timeScale="1ms" />
+            <Line id="MDL14" quantity="MDL14/0/GenericMuscleCell/v" scale="1mV" color="#f91332" timeScale="1ms" />
+            <Line id="MDL15" quantity="MDL15/0/GenericMuscleCell/v" scale="1mV" color="#ab64ec" timeScale="1ms" />
+            <Line id="MDL16" quantity="MDL16/0/GenericMuscleCell/v" scale="1mV" color="#00864f" timeScale="1ms" />
+            <Line id="MDL17" quantity="MDL17/0/GenericMuscleCell/v" scale="1mV" color="#b18853" timeScale="1ms" />
+            <Line id="MDL18" quantity="MDL18/0/GenericMuscleCell/v" scale="1mV" color="#f0661e" timeScale="1ms" />
+            <Line id="MDL19" quantity="MDL19/0/GenericMuscleCell/v" scale="1mV" color="#009463" timeScale="1ms" />
+            <Line id="MDL20" quantity="MDL20/0/GenericMuscleCell/v" scale="1mV" color="#cf3022" timeScale="1ms" />
+            <Line id="MDL21" quantity="MDL21/0/GenericMuscleCell/v" scale="1mV" color="#4d8621" timeScale="1ms" />
+            <Line id="MDL22" quantity="MDL22/0/GenericMuscleCell/v" scale="1mV" color="#733dc3" timeScale="1ms" />
+            <Line id="MDL23" quantity="MDL23/0/GenericMuscleCell/v" scale="1mV" color="#5123ce" timeScale="1ms" />
+            <Line id="MDL24" quantity="MDL24/0/GenericMuscleCell/v" scale="1mV" color="#425ccf" timeScale="1ms" />
+
+        </Display>
+      
+        <Display id="activity_neurons" title="c302_C2_FW: Activity of a number of neurons" timeScale="1ms" xmin="-200.0" xmax="2200.0" ymin="-0.1" ymax="1.1">
+            
+            <Line id="AVBL" quantity="AVBL/0/GenericNeuronCell/caConc" scale="1" color="#169445" timeScale="1ms" />
+            <Line id="AVBR" quantity="AVBR/0/GenericNeuronCell/caConc" scale="1" color="#008200" timeScale="1ms" />
+            <Line id="DB1" quantity="DB1/0/GenericNeuronCell/caConc" scale="1" color="#f0c6f5" timeScale="1ms" />
+            <Line id="DB2" quantity="DB2/0/GenericNeuronCell/caConc" scale="1" color="#27d600" timeScale="1ms" />
+            <Line id="DB3" quantity="DB3/0/GenericNeuronCell/caConc" scale="1" color="#e270c8" timeScale="1ms" />
+            <Line id="DB4" quantity="DB4/0/GenericNeuronCell/caConc" scale="1" color="#7cd2a8" timeScale="1ms" />
+            <Line id="DB5" quantity="DB5/0/GenericNeuronCell/caConc" scale="1" color="#d8b9cb" timeScale="1ms" />
+            <Line id="DB6" quantity="DB6/0/GenericNeuronCell/caConc" scale="1" color="#efb351" timeScale="1ms" />
+            <Line id="DB7" quantity="DB7/0/GenericNeuronCell/caConc" scale="1" color="#e480d2" timeScale="1ms" />
+            <Line id="DD1" quantity="DD1/0/GenericNeuronCell/caConc" scale="1" color="#8980c6" timeScale="1ms" />
+            <Line id="DD2" quantity="DD2/0/GenericNeuronCell/caConc" scale="1" color="#00ada4" timeScale="1ms" />
+            <Line id="DD3" quantity="DD3/0/GenericNeuronCell/caConc" scale="1" color="#e0f68a" timeScale="1ms" />
+            <Line id="DD4" quantity="DD4/0/GenericNeuronCell/caConc" scale="1" color="#dc471d" timeScale="1ms" />
+            <Line id="DD5" quantity="DD5/0/GenericNeuronCell/caConc" scale="1" color="#2a4f12" timeScale="1ms" />
+            <Line id="DD6" quantity="DD6/0/GenericNeuronCell/caConc" scale="1" color="#9a3485" timeScale="1ms" />
+            <Line id="VB1" quantity="VB1/0/GenericNeuronCell/caConc" scale="1" color="#5ecc10" timeScale="1ms" />
+            <Line id="VB10" quantity="VB10/0/GenericNeuronCell/caConc" scale="1" color="#54f34b" timeScale="1ms" />
+            <Line id="VB11" quantity="VB11/0/GenericNeuronCell/caConc" scale="1" color="#44c397" timeScale="1ms" />
+            <Line id="VB2" quantity="VB2/0/GenericNeuronCell/caConc" scale="1" color="#abfe84" timeScale="1ms" />
+            <Line id="VB3" quantity="VB3/0/GenericNeuronCell/caConc" scale="1" color="#81a7d0" timeScale="1ms" />
+            <Line id="VB4" quantity="VB4/0/GenericNeuronCell/caConc" scale="1" color="#889f25" timeScale="1ms" />
+            <Line id="VB5" quantity="VB5/0/GenericNeuronCell/caConc" scale="1" color="#b69089" timeScale="1ms" />
+            <Line id="VB6" quantity="VB6/0/GenericNeuronCell/caConc" scale="1" color="#123ace" timeScale="1ms" />
+            <Line id="VB7" quantity="VB7/0/GenericNeuronCell/caConc" scale="1" color="#4bee26" timeScale="1ms" />
+            <Line id="VB8" quantity="VB8/0/GenericNeuronCell/caConc" scale="1" color="#a43632" timeScale="1ms" />
+            <Line id="VB9" quantity="VB9/0/GenericNeuronCell/caConc" scale="1" color="#ea7899" timeScale="1ms" />
+            <Line id="VD1" quantity="VD1/0/GenericNeuronCell/caConc" scale="1" color="#9ade89" timeScale="1ms" />
+            <Line id="VD10" quantity="VD10/0/GenericNeuronCell/caConc" scale="1" color="#eae1f8" timeScale="1ms" />
+            <Line id="VD11" quantity="VD11/0/GenericNeuronCell/caConc" scale="1" color="#d988c1" timeScale="1ms" />
+            <Line id="VD12" quantity="VD12/0/GenericNeuronCell/caConc" scale="1" color="#dad620" timeScale="1ms" />
+            <Line id="VD13" quantity="VD13/0/GenericNeuronCell/caConc" scale="1" color="#f5b65b" timeScale="1ms" />
+            <Line id="VD2" quantity="VD2/0/GenericNeuronCell/caConc" scale="1" color="#8afe16" timeScale="1ms" />
+            <Line id="VD3" quantity="VD3/0/GenericNeuronCell/caConc" scale="1" color="#511900" timeScale="1ms" />
+            <Line id="VD4" quantity="VD4/0/GenericNeuronCell/caConc" scale="1" color="#f90099" timeScale="1ms" />
+            <Line id="VD5" quantity="VD5/0/GenericNeuronCell/caConc" scale="1" color="#747280" timeScale="1ms" />
+            <Line id="VD6" quantity="VD6/0/GenericNeuronCell/caConc" scale="1" color="#f9e828" timeScale="1ms" />
+            <Line id="VD7" quantity="VD7/0/GenericNeuronCell/caConc" scale="1" color="#c8b8b8" timeScale="1ms" />
+            <Line id="VD8" quantity="VD8/0/GenericNeuronCell/caConc" scale="1" color="#d554d2" timeScale="1ms" />
+            <Line id="VD9" quantity="VD9/0/GenericNeuronCell/caConc" scale="1" color="#602d23" timeScale="1ms" />
+
+        </Display>
+      
+        <Display id="activity_muscles" title="c302_C2_FW: Activity of a number of muscles" timeScale="1ms" xmin="-200.0" xmax="2200.0" ymin="-0.1" ymax="1.1">
+            
+            <Line id="MDR01" quantity="MDR01/0/GenericMuscleCell/caConc" scale="1" color="#9a44eb" timeScale="1ms" />
+            <Line id="MDR02" quantity="MDR02/0/GenericMuscleCell/caConc" scale="1" color="#e02bcb" timeScale="1ms" />
+            <Line id="MDR03" quantity="MDR03/0/GenericMuscleCell/caConc" scale="1" color="#d4d1d5" timeScale="1ms" />
+            <Line id="MDR04" quantity="MDR04/0/GenericMuscleCell/caConc" scale="1" color="#379025" timeScale="1ms" />
+            <Line id="MDR05" quantity="MDR05/0/GenericMuscleCell/caConc" scale="1" color="#ae8558" timeScale="1ms" />
+            <Line id="MDR06" quantity="MDR06/0/GenericMuscleCell/caConc" scale="1" color="#005d71" timeScale="1ms" />
+            <Line id="MDR07" quantity="MDR07/0/GenericMuscleCell/caConc" scale="1" color="#6cf2a6" timeScale="1ms" />
+            <Line id="MDR08" quantity="MDR08/0/GenericMuscleCell/caConc" scale="1" color="#c8904e" timeScale="1ms" />
+            <Line id="MDR09" quantity="MDR09/0/GenericMuscleCell/caConc" scale="1" color="#1ff992" timeScale="1ms" />
+            <Line id="MDR10" quantity="MDR10/0/GenericMuscleCell/caConc" scale="1" color="#6e1c6a" timeScale="1ms" />
+            <Line id="MDR11" quantity="MDR11/0/GenericMuscleCell/caConc" scale="1" color="#b9cac0" timeScale="1ms" />
+            <Line id="MDR12" quantity="MDR12/0/GenericMuscleCell/caConc" scale="1" color="#20ad00" timeScale="1ms" />
+            <Line id="MDR13" quantity="MDR13/0/GenericMuscleCell/caConc" scale="1" color="#0000f3" timeScale="1ms" />
+            <Line id="MDR14" quantity="MDR14/0/GenericMuscleCell/caConc" scale="1" color="#3ba094" timeScale="1ms" />
+            <Line id="MDR15" quantity="MDR15/0/GenericMuscleCell/caConc" scale="1" color="#436bbe" timeScale="1ms" />
+            <Line id="MDR16" quantity="MDR16/0/GenericMuscleCell/caConc" scale="1" color="#a8f598" timeScale="1ms" />
+            <Line id="MDR17" quantity="MDR17/0/GenericMuscleCell/caConc" scale="1" color="#a19bec" timeScale="1ms" />
+            <Line id="MDR18" quantity="MDR18/0/GenericMuscleCell/caConc" scale="1" color="#4918e4" timeScale="1ms" />
+            <Line id="MDR19" quantity="MDR19/0/GenericMuscleCell/caConc" scale="1" color="#56879a" timeScale="1ms" />
+            <Line id="MDR20" quantity="MDR20/0/GenericMuscleCell/caConc" scale="1" color="#2e1be7" timeScale="1ms" />
+            <Line id="MDR21" quantity="MDR21/0/GenericMuscleCell/caConc" scale="1" color="#308565" timeScale="1ms" />
+            <Line id="MDR22" quantity="MDR22/0/GenericMuscleCell/caConc" scale="1" color="#f3a454" timeScale="1ms" />
+            <Line id="MDR23" quantity="MDR23/0/GenericMuscleCell/caConc" scale="1" color="#df13ea" timeScale="1ms" />
+            <Line id="MDR24" quantity="MDR24/0/GenericMuscleCell/caConc" scale="1" color="#009c1b" timeScale="1ms" />
+            <Line id="MVR01" quantity="MVR01/0/GenericMuscleCell/caConc" scale="1" color="#9344d5" timeScale="1ms" />
+            <Line id="MVR02" quantity="MVR02/0/GenericMuscleCell/caConc" scale="1" color="#f00093" timeScale="1ms" />
+            <Line id="MVR03" quantity="MVR03/0/GenericMuscleCell/caConc" scale="1" color="#16c6f0" timeScale="1ms" />
+            <Line id="MVR04" quantity="MVR04/0/GenericMuscleCell/caConc" scale="1" color="#d88f58" timeScale="1ms" />
+            <Line id="MVR05" quantity="MVR05/0/GenericMuscleCell/caConc" scale="1" color="#007538" timeScale="1ms" />
+            <Line id="MVR06" quantity="MVR06/0/GenericMuscleCell/caConc" scale="1" color="#b20022" timeScale="1ms" />
+            <Line id="MVR07" quantity="MVR07/0/GenericMuscleCell/caConc" scale="1" color="#44289e" timeScale="1ms" />
+            <Line id="MVR08" quantity="MVR08/0/GenericMuscleCell/caConc" scale="1" color="#cac0ad" timeScale="1ms" />
+            <Line id="MVR09" quantity="MVR09/0/GenericMuscleCell/caConc" scale="1" color="#8ba093" timeScale="1ms" />
+            <Line id="MVR10" quantity="MVR10/0/GenericMuscleCell/caConc" scale="1" color="#802380" timeScale="1ms" />
+            <Line id="MVR11" quantity="MVR11/0/GenericMuscleCell/caConc" scale="1" color="#472421" timeScale="1ms" />
+            <Line id="MVR12" quantity="MVR12/0/GenericMuscleCell/caConc" scale="1" color="#43504b" timeScale="1ms" />
+            <Line id="MVR13" quantity="MVR13/0/GenericMuscleCell/caConc" scale="1" color="#75435e" timeScale="1ms" />
+            <Line id="MVR14" quantity="MVR14/0/GenericMuscleCell/caConc" scale="1" color="#b40000" timeScale="1ms" />
+            <Line id="MVR15" quantity="MVR15/0/GenericMuscleCell/caConc" scale="1" color="#faa7ad" timeScale="1ms" />
+            <Line id="MVR16" quantity="MVR16/0/GenericMuscleCell/caConc" scale="1" color="#e96af0" timeScale="1ms" />
+            <Line id="MVR17" quantity="MVR17/0/GenericMuscleCell/caConc" scale="1" color="#a25532" timeScale="1ms" />
+            <Line id="MVR18" quantity="MVR18/0/GenericMuscleCell/caConc" scale="1" color="#5d6d63" timeScale="1ms" />
+            <Line id="MVR19" quantity="MVR19/0/GenericMuscleCell/caConc" scale="1" color="#ef9c74" timeScale="1ms" />
+            <Line id="MVR20" quantity="MVR20/0/GenericMuscleCell/caConc" scale="1" color="#2f6074" timeScale="1ms" />
+            <Line id="MVR21" quantity="MVR21/0/GenericMuscleCell/caConc" scale="1" color="#2260ed" timeScale="1ms" />
+            <Line id="MVR22" quantity="MVR22/0/GenericMuscleCell/caConc" scale="1" color="#537150" timeScale="1ms" />
+            <Line id="MVR23" quantity="MVR23/0/GenericMuscleCell/caConc" scale="1" color="#b98f2d" timeScale="1ms" />
+            <Line id="MVR24" quantity="MVR24/0/GenericMuscleCell/caConc" scale="1" color="#2a757d" timeScale="1ms" />
+            <Line id="MVL01" quantity="MVL01/0/GenericMuscleCell/caConc" scale="1" color="#4d3622" timeScale="1ms" />
+            <Line id="MVL02" quantity="MVL02/0/GenericMuscleCell/caConc" scale="1" color="#fbdf5f" timeScale="1ms" />
+            <Line id="MVL03" quantity="MVL03/0/GenericMuscleCell/caConc" scale="1" color="#78f293" timeScale="1ms" />
+            <Line id="MVL04" quantity="MVL04/0/GenericMuscleCell/caConc" scale="1" color="#fff9dc" timeScale="1ms" />
+            <Line id="MVL05" quantity="MVL05/0/GenericMuscleCell/caConc" scale="1" color="#79dee1" timeScale="1ms" />
+            <Line id="MVL06" quantity="MVL06/0/GenericMuscleCell/caConc" scale="1" color="#5041e9" timeScale="1ms" />
+            <Line id="MVL07" quantity="MVL07/0/GenericMuscleCell/caConc" scale="1" color="#5c3b50" timeScale="1ms" />
+            <Line id="MVL08" quantity="MVL08/0/GenericMuscleCell/caConc" scale="1" color="#87fc87" timeScale="1ms" />
+            <Line id="MVL09" quantity="MVL09/0/GenericMuscleCell/caConc" scale="1" color="#af2f9c" timeScale="1ms" />
+            <Line id="MVL10" quantity="MVL10/0/GenericMuscleCell/caConc" scale="1" color="#9d741f" timeScale="1ms" />
+            <Line id="MVL11" quantity="MVL11/0/GenericMuscleCell/caConc" scale="1" color="#851b53" timeScale="1ms" />
+            <Line id="MVL12" quantity="MVL12/0/GenericMuscleCell/caConc" scale="1" color="#606800" timeScale="1ms" />
+            <Line id="MVL13" quantity="MVL13/0/GenericMuscleCell/caConc" scale="1" color="#c91010" timeScale="1ms" />
+            <Line id="MVL14" quantity="MVL14/0/GenericMuscleCell/caConc" scale="1" color="#a600d3" timeScale="1ms" />
+            <Line id="MVL15" quantity="MVL15/0/GenericMuscleCell/caConc" scale="1" color="#cf1e47" timeScale="1ms" />
+            <Line id="MVL16" quantity="MVL16/0/GenericMuscleCell/caConc" scale="1" color="#4cca10" timeScale="1ms" />
+            <Line id="MVL17" quantity="MVL17/0/GenericMuscleCell/caConc" scale="1" color="#577aa4" timeScale="1ms" />
+            <Line id="MVL18" quantity="MVL18/0/GenericMuscleCell/caConc" scale="1" color="#bf36ba" timeScale="1ms" />
+            <Line id="MVL19" quantity="MVL19/0/GenericMuscleCell/caConc" scale="1" color="#88a478" timeScale="1ms" />
+            <Line id="MVL20" quantity="MVL20/0/GenericMuscleCell/caConc" scale="1" color="#96009b" timeScale="1ms" />
+            <Line id="MVL21" quantity="MVL21/0/GenericMuscleCell/caConc" scale="1" color="#fee700" timeScale="1ms" />
+            <Line id="MVL22" quantity="MVL22/0/GenericMuscleCell/caConc" scale="1" color="#9be9ce" timeScale="1ms" />
+            <Line id="MVL23" quantity="MVL23/0/GenericMuscleCell/caConc" scale="1" color="#56edfb" timeScale="1ms" />
+            <Line id="MVL24" quantity="MVL24/0/GenericMuscleCell/caConc" scale="1" color="#006766" timeScale="1ms" />
+            <Line id="MDL01" quantity="MDL01/0/GenericMuscleCell/caConc" scale="1" color="#aad356" timeScale="1ms" />
+            <Line id="MDL02" quantity="MDL02/0/GenericMuscleCell/caConc" scale="1" color="#aa72f9" timeScale="1ms" />
+            <Line id="MDL03" quantity="MDL03/0/GenericMuscleCell/caConc" scale="1" color="#82f493" timeScale="1ms" />
+            <Line id="MDL04" quantity="MDL04/0/GenericMuscleCell/caConc" scale="1" color="#7ddd44" timeScale="1ms" />
+            <Line id="MDL05" quantity="MDL05/0/GenericMuscleCell/caConc" scale="1" color="#25f6df" timeScale="1ms" />
+            <Line id="MDL06" quantity="MDL06/0/GenericMuscleCell/caConc" scale="1" color="#e37594" timeScale="1ms" />
+            <Line id="MDL07" quantity="MDL07/0/GenericMuscleCell/caConc" scale="1" color="#d67a52" timeScale="1ms" />
+            <Line id="MDL08" quantity="MDL08/0/GenericMuscleCell/caConc" scale="1" color="#3f3518" timeScale="1ms" />
+            <Line id="MDL09" quantity="MDL09/0/GenericMuscleCell/caConc" scale="1" color="#dbceb4" timeScale="1ms" />
+            <Line id="MDL10" quantity="MDL10/0/GenericMuscleCell/caConc" scale="1" color="#e2c4a7" timeScale="1ms" />
+            <Line id="MDL11" quantity="MDL11/0/GenericMuscleCell/caConc" scale="1" color="#a70077" timeScale="1ms" />
+            <Line id="MDL12" quantity="MDL12/0/GenericMuscleCell/caConc" scale="1" color="#e62e85" timeScale="1ms" />
+            <Line id="MDL13" quantity="MDL13/0/GenericMuscleCell/caConc" scale="1" color="#297e12" timeScale="1ms" />
+            <Line id="MDL14" quantity="MDL14/0/GenericMuscleCell/caConc" scale="1" color="#75761d" timeScale="1ms" />
+            <Line id="MDL15" quantity="MDL15/0/GenericMuscleCell/caConc" scale="1" color="#4812f6" timeScale="1ms" />
+            <Line id="MDL16" quantity="MDL16/0/GenericMuscleCell/caConc" scale="1" color="#e02742" timeScale="1ms" />
+            <Line id="MDL17" quantity="MDL17/0/GenericMuscleCell/caConc" scale="1" color="#3e7288" timeScale="1ms" />
+            <Line id="MDL18" quantity="MDL18/0/GenericMuscleCell/caConc" scale="1" color="#ead0b6" timeScale="1ms" />
+            <Line id="MDL19" quantity="MDL19/0/GenericMuscleCell/caConc" scale="1" color="#3fe6c1" timeScale="1ms" />
+            <Line id="MDL20" quantity="MDL20/0/GenericMuscleCell/caConc" scale="1" color="#f0b100" timeScale="1ms" />
+            <Line id="MDL21" quantity="MDL21/0/GenericMuscleCell/caConc" scale="1" color="#924b51" timeScale="1ms" />
+            <Line id="MDL22" quantity="MDL22/0/GenericMuscleCell/caConc" scale="1" color="#8c6f22" timeScale="1ms" />
+            <Line id="MDL23" quantity="MDL23/0/GenericMuscleCell/caConc" scale="1" color="#552c35" timeScale="1ms" />
+            <Line id="MDL24" quantity="MDL24/0/GenericMuscleCell/caConc" scale="1" color="#a349fb" timeScale="1ms" />
+
+        </Display>
+
+        <OutputFile id="neurons_v" fileName="c302_C2_FW.dat">
+            <OutputColumn id="AVBL_v" quantity="AVBL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="AVBR_v" quantity="AVBR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DB1_v" quantity="DB1/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DB2_v" quantity="DB2/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DB3_v" quantity="DB3/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DB4_v" quantity="DB4/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DB5_v" quantity="DB5/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DB6_v" quantity="DB6/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DB7_v" quantity="DB7/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DD1_v" quantity="DD1/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DD2_v" quantity="DD2/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DD3_v" quantity="DD3/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DD4_v" quantity="DD4/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DD5_v" quantity="DD5/0/GenericNeuronCell/v"/>
+            <OutputColumn id="DD6_v" quantity="DD6/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VB1_v" quantity="VB1/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VB10_v" quantity="VB10/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VB11_v" quantity="VB11/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VB2_v" quantity="VB2/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VB3_v" quantity="VB3/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VB4_v" quantity="VB4/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VB5_v" quantity="VB5/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VB6_v" quantity="VB6/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VB7_v" quantity="VB7/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VB8_v" quantity="VB8/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VB9_v" quantity="VB9/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VD1_v" quantity="VD1/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VD10_v" quantity="VD10/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VD11_v" quantity="VD11/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VD12_v" quantity="VD12/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VD13_v" quantity="VD13/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VD2_v" quantity="VD2/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VD3_v" quantity="VD3/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VD4_v" quantity="VD4/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VD5_v" quantity="VD5/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VD6_v" quantity="VD6/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VD7_v" quantity="VD7/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VD8_v" quantity="VD8/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VD9_v" quantity="VD9/0/GenericNeuronCell/v"/>
+        </OutputFile>
+        
+        <OutputFile id="neurons_activity" fileName="c302_C2_FW.activity.dat">
+            <OutputColumn id="AVBL_v" quantity="AVBL/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="AVBR_v" quantity="AVBR/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DB1_v" quantity="DB1/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DB2_v" quantity="DB2/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DB3_v" quantity="DB3/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DB4_v" quantity="DB4/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DB5_v" quantity="DB5/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DB6_v" quantity="DB6/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DB7_v" quantity="DB7/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DD1_v" quantity="DD1/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DD2_v" quantity="DD2/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DD3_v" quantity="DD3/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DD4_v" quantity="DD4/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DD5_v" quantity="DD5/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="DD6_v" quantity="DD6/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VB1_v" quantity="VB1/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VB10_v" quantity="VB10/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VB11_v" quantity="VB11/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VB2_v" quantity="VB2/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VB3_v" quantity="VB3/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VB4_v" quantity="VB4/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VB5_v" quantity="VB5/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VB6_v" quantity="VB6/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VB7_v" quantity="VB7/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VB8_v" quantity="VB8/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VB9_v" quantity="VB9/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VD1_v" quantity="VD1/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VD10_v" quantity="VD10/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VD11_v" quantity="VD11/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VD12_v" quantity="VD12/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VD13_v" quantity="VD13/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VD2_v" quantity="VD2/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VD3_v" quantity="VD3/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VD4_v" quantity="VD4/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VD5_v" quantity="VD5/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VD6_v" quantity="VD6/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VD7_v" quantity="VD7/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VD8_v" quantity="VD8/0/GenericNeuronCell/caConc"/>
+            <OutputColumn id="VD9_v" quantity="VD9/0/GenericNeuronCell/caConc"/>
+        </OutputFile>
+        <OutputFile id="muscles_v" fileName="c302_C2_FW.muscles.dat">
+            <OutputColumn id="MDR01_v" quantity="MDR01/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR02_v" quantity="MDR02/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR03_v" quantity="MDR03/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR04_v" quantity="MDR04/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR05_v" quantity="MDR05/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR06_v" quantity="MDR06/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR07_v" quantity="MDR07/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR08_v" quantity="MDR08/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR09_v" quantity="MDR09/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR10_v" quantity="MDR10/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR11_v" quantity="MDR11/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR12_v" quantity="MDR12/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR13_v" quantity="MDR13/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR14_v" quantity="MDR14/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR15_v" quantity="MDR15/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR16_v" quantity="MDR16/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR17_v" quantity="MDR17/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR18_v" quantity="MDR18/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR19_v" quantity="MDR19/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR20_v" quantity="MDR20/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR21_v" quantity="MDR21/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR22_v" quantity="MDR22/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR23_v" quantity="MDR23/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDR24_v" quantity="MDR24/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR01_v" quantity="MVR01/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR02_v" quantity="MVR02/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR03_v" quantity="MVR03/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR04_v" quantity="MVR04/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR05_v" quantity="MVR05/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR06_v" quantity="MVR06/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR07_v" quantity="MVR07/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR08_v" quantity="MVR08/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR09_v" quantity="MVR09/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR10_v" quantity="MVR10/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR11_v" quantity="MVR11/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR12_v" quantity="MVR12/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR13_v" quantity="MVR13/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR14_v" quantity="MVR14/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR15_v" quantity="MVR15/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR16_v" quantity="MVR16/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR17_v" quantity="MVR17/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR18_v" quantity="MVR18/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR19_v" quantity="MVR19/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR20_v" quantity="MVR20/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR21_v" quantity="MVR21/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR22_v" quantity="MVR22/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR23_v" quantity="MVR23/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVR24_v" quantity="MVR24/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL01_v" quantity="MVL01/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL02_v" quantity="MVL02/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL03_v" quantity="MVL03/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL04_v" quantity="MVL04/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL05_v" quantity="MVL05/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL06_v" quantity="MVL06/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL07_v" quantity="MVL07/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL08_v" quantity="MVL08/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL09_v" quantity="MVL09/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL10_v" quantity="MVL10/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL11_v" quantity="MVL11/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL12_v" quantity="MVL12/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL13_v" quantity="MVL13/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL14_v" quantity="MVL14/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL15_v" quantity="MVL15/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL16_v" quantity="MVL16/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL17_v" quantity="MVL17/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL18_v" quantity="MVL18/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL19_v" quantity="MVL19/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL20_v" quantity="MVL20/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL21_v" quantity="MVL21/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL22_v" quantity="MVL22/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL23_v" quantity="MVL23/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MVL24_v" quantity="MVL24/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL01_v" quantity="MDL01/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL02_v" quantity="MDL02/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL03_v" quantity="MDL03/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL04_v" quantity="MDL04/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL05_v" quantity="MDL05/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL06_v" quantity="MDL06/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL07_v" quantity="MDL07/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL08_v" quantity="MDL08/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL09_v" quantity="MDL09/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL10_v" quantity="MDL10/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL11_v" quantity="MDL11/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL12_v" quantity="MDL12/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL13_v" quantity="MDL13/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL14_v" quantity="MDL14/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL15_v" quantity="MDL15/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL16_v" quantity="MDL16/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL17_v" quantity="MDL17/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL18_v" quantity="MDL18/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL19_v" quantity="MDL19/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL20_v" quantity="MDL20/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL21_v" quantity="MDL21/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL22_v" quantity="MDL22/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL23_v" quantity="MDL23/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL24_v" quantity="MDL24/0/GenericMuscleCell/v"/>
+        </OutputFile>
+        <OutputFile id="muscles_activity" fileName="c302_C2_FW.muscles.activity.dat">
+            <OutputColumn id="MDR01_v" quantity="MDR01/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR02_v" quantity="MDR02/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR03_v" quantity="MDR03/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR04_v" quantity="MDR04/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR05_v" quantity="MDR05/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR06_v" quantity="MDR06/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR07_v" quantity="MDR07/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR08_v" quantity="MDR08/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR09_v" quantity="MDR09/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR10_v" quantity="MDR10/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR11_v" quantity="MDR11/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR12_v" quantity="MDR12/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR13_v" quantity="MDR13/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR14_v" quantity="MDR14/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR15_v" quantity="MDR15/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR16_v" quantity="MDR16/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR17_v" quantity="MDR17/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR18_v" quantity="MDR18/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR19_v" quantity="MDR19/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR20_v" quantity="MDR20/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR21_v" quantity="MDR21/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR22_v" quantity="MDR22/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR23_v" quantity="MDR23/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDR24_v" quantity="MDR24/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR01_v" quantity="MVR01/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR02_v" quantity="MVR02/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR03_v" quantity="MVR03/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR04_v" quantity="MVR04/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR05_v" quantity="MVR05/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR06_v" quantity="MVR06/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR07_v" quantity="MVR07/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR08_v" quantity="MVR08/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR09_v" quantity="MVR09/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR10_v" quantity="MVR10/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR11_v" quantity="MVR11/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR12_v" quantity="MVR12/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR13_v" quantity="MVR13/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR14_v" quantity="MVR14/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR15_v" quantity="MVR15/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR16_v" quantity="MVR16/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR17_v" quantity="MVR17/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR18_v" quantity="MVR18/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR19_v" quantity="MVR19/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR20_v" quantity="MVR20/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR21_v" quantity="MVR21/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR22_v" quantity="MVR22/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR23_v" quantity="MVR23/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVR24_v" quantity="MVR24/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL01_v" quantity="MVL01/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL02_v" quantity="MVL02/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL03_v" quantity="MVL03/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL04_v" quantity="MVL04/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL05_v" quantity="MVL05/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL06_v" quantity="MVL06/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL07_v" quantity="MVL07/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL08_v" quantity="MVL08/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL09_v" quantity="MVL09/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL10_v" quantity="MVL10/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL11_v" quantity="MVL11/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL12_v" quantity="MVL12/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL13_v" quantity="MVL13/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL14_v" quantity="MVL14/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL15_v" quantity="MVL15/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL16_v" quantity="MVL16/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL17_v" quantity="MVL17/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL18_v" quantity="MVL18/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL19_v" quantity="MVL19/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL20_v" quantity="MVL20/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL21_v" quantity="MVL21/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL22_v" quantity="MVL22/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL23_v" quantity="MVL23/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MVL24_v" quantity="MVL24/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL01_v" quantity="MDL01/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL02_v" quantity="MDL02/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL03_v" quantity="MDL03/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL04_v" quantity="MDL04/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL05_v" quantity="MDL05/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL06_v" quantity="MDL06/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL07_v" quantity="MDL07/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL08_v" quantity="MDL08/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL09_v" quantity="MDL09/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL10_v" quantity="MDL10/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL11_v" quantity="MDL11/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL12_v" quantity="MDL12/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL13_v" quantity="MDL13/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL14_v" quantity="MDL14/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL15_v" quantity="MDL15/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL16_v" quantity="MDL16/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL17_v" quantity="MDL17/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL18_v" quantity="MDL18/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL19_v" quantity="MDL19/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL20_v" quantity="MDL20/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL21_v" quantity="MDL21/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL22_v" quantity="MDL22/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL23_v" quantity="MDL23/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL24_v" quantity="MDL24/0/GenericMuscleCell/caConc"/>
+        </OutputFile>
+    </Simulation>
+
+
+</Lems>

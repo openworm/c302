@@ -55,6 +55,7 @@ python c302/c302_Pharyngeal.py C2
 python c302/c302_Full.py C2
 python c302/c302_Muscles.py C2
 python c302/c302_Oscillator.py C2
+python c302/c302_FW.py C2
 
 python c302/c302_IClamp.py D
 python c302/c302_Syns.py D
