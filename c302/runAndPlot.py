@@ -121,14 +121,14 @@ if __name__ == '__main__':
         run_c302('Full','D1','',1000,0.05,'jNeuroML_NEURON')
 
     elif '-fw' in sys.argv:
-        run_c302('AVB_FW','C2','',4000,0.05,'jNeuroML_NEURON', config_package="notebooks.configs.AVB", data_reader='UpdatedSpreadsheetDataReader')
+        run_c302('AVB_FW','C2','',4000,0.05,'jNeuroML_NEURON', config_package="notebooks.configs.AVB", data_reader='UpdatedSpreadsheetDataReader2')
 
     elif '-fw1' in sys.argv:
-        #run_c302('FW','C2','',1000,0.05,'jNeuroML_NEURON', data_reader='UpdatedSpreadsheetDataReader', save=True)
-        run_c302('FW','C2','',5000,0.005,'jNeuroML_NEURON', data_reader='UpdatedSpreadsheetDataReader', save=True, show_plot_already=False)
+        #run_c302('FW','C2','',1000,0.05,'jNeuroML_NEURON', data_reader='UpdatedSpreadsheetDataReader2', save=True)
+        run_c302('FW','C2','',5000,0.005,'jNeuroML_NEURON', data_reader='UpdatedSpreadsheetDataReader2', save=True, show_plot_already=False)
         
     elif '-fwTest' in sys.argv:
-        run_c302('FW','C2','',5000,0.05,'jNeuroML_NEURON', data_reader='UpdatedSpreadsheetDataReader', save=True, show_plot_already=True)
+        run_c302('FW','C2','',5000,0.05,'jNeuroML_NEURON', data_reader='UpdatedSpreadsheetDataReader2', save=True, show_plot_already=True)
         
     elif '-fullC2' in sys.argv:
         run_c302('Full','C2','',1000,0.05,'jNeuroML_NEURON')

@@ -15,7 +15,7 @@ def setup(parameter_set,
           duration=2000,
           dt=0.05,
           target_directory='examples',
-          data_reader="SpreadsheetDataReader",
+          data_reader="UpdatedSpreadsheetDataReader2",
           param_overrides={},
           verbose=True,
           config_param_overrides={}):
@@ -272,6 +272,6 @@ def setup(parameter_set,
 
 if __name__ == '__main__':
     parameter_set = sys.argv[1] if len(sys.argv) == 2 else 'C2'
-    data_reader = sys.argv[2] if len(sys.argv) == 3 else 'UpdatedSpreadsheetDataReader'
+    data_reader = sys.argv[2] if len(sys.argv) == 3 else 'UpdatedSpreadsheetDataReader2'
 
     setup(parameter_set, generate=True, data_reader=data_reader)

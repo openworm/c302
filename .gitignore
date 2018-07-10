@@ -27,3 +27,5 @@
 *.dat
 /LEMS_MyNetwork.xml
 /MyNetwork.net.nml
+/examples/LEMS_MyNetwork.xml
+/examples/MyNetwork.net.nml

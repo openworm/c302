@@ -3,7 +3,7 @@
 
 Parameters and setting used to generate this network:
 
-    Data reader:                    UpdatedSpreadsheetDataReader
+    Data reader:                    UpdatedSpreadsheetDataReader2
     c302 version:                   0.6.1
     Cells:                          ['AVBL', 'AVBR', 'DB1', 'DB2', 'DB3', 'DB4', 'DB5', 'DB6', 'DB7', 'VD1', 'VD2', 'VD3', 'VD4', 'VD5', 'VD6', 'VD7', 'VD8', 'VD9', 'VD10', 'VD11', 'VD12', 'VD13', 'VB1', 'VB2', 'VB3', 'VB4', 'VB5', 'VB6', 'VB7', 'VB8', 'VB9', 'VB10', 'VB11', 'DD1', 'DD2', 'DD3', 'DD4', 'DD5', 'DD6']
     Cell stimulated:                []
@@ -53,6 +53,12 @@ Parameters and setting used to generate this network:
         BioParameter: AVBR_to_VD3_exc_syn_conductance = 0 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: DB1_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: DB1_to_DB2_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: DB1_to_DB2_exc_syn_ad = 18 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB1_to_DB2_exc_syn_ar = 0.08 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB1_to_DB2_exc_syn_beta = 0.21 per_mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB1_to_DB2_exc_syn_conductance = 20 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB1_to_DB2_exc_syn_erev = 10 mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB1_to_DB2_exc_syn_vth = -10 mV (SRC: Add with param_overrides, certainty 0)
         BioParameter: DB1_to_MDL06_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: DB1_to_MDL08_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: DB1_to_MDL09_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
@@ -63,6 +69,12 @@ Parameters and setting used to generate this network:
         BioParameter: DB2_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: DB2_to_DB1_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
         BioParameter: DB2_to_DB3_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: DB2_to_DB3_exc_syn_ad = 18 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB2_to_DB3_exc_syn_ar = 0.08 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB2_to_DB3_exc_syn_beta = 0.21 per_mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB2_to_DB3_exc_syn_conductance = 20 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB2_to_DB3_exc_syn_erev = 10 mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB2_to_DB3_exc_syn_vth = -10 mV (SRC: Add with param_overrides, certainty 0)
         BioParameter: DB2_to_MDL09_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: DB2_to_MDL10_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: DB2_to_MDL11_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
@@ -75,6 +87,12 @@ Parameters and setting used to generate this network:
         BioParameter: DB3_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: DB3_to_DB2_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
         BioParameter: DB3_to_DB4_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: DB3_to_DB4_exc_syn_ad = 18 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB3_to_DB4_exc_syn_ar = 0.08 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB3_to_DB4_exc_syn_beta = 0.21 per_mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB3_to_DB4_exc_syn_conductance = 20 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB3_to_DB4_exc_syn_erev = 10 mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB3_to_DB4_exc_syn_vth = -10 mV (SRC: Add with param_overrides, certainty 0)
         BioParameter: DB3_to_DD3_elec_syn_gbase = 0 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: DB3_to_MDL11_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: DB3_to_MDL12_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
@@ -88,6 +106,12 @@ Parameters and setting used to generate this network:
         BioParameter: DB4_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: DB4_to_DB3_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
         BioParameter: DB4_to_DB5_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: DB4_to_DB5_exc_syn_ad = 18 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB4_to_DB5_exc_syn_ar = 0.08 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB4_to_DB5_exc_syn_beta = 0.21 per_mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB4_to_DB5_exc_syn_conductance = 20 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB4_to_DB5_exc_syn_erev = 10 mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB4_to_DB5_exc_syn_vth = -10 mV (SRC: Add with param_overrides, certainty 0)
         BioParameter: DB4_to_DD3_elec_syn_gbase = 0 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: DB4_to_MDL13_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: DB4_to_MDL14_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
@@ -101,6 +125,12 @@ Parameters and setting used to generate this network:
         BioParameter: DB5_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: DB5_to_DB4_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
         BioParameter: DB5_to_DB6_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: DB5_to_DB6_exc_syn_ad = 18 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB5_to_DB6_exc_syn_ar = 0.08 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB5_to_DB6_exc_syn_beta = 0.21 per_mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB5_to_DB6_exc_syn_conductance = 20 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB5_to_DB6_exc_syn_erev = 10 mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB5_to_DB6_exc_syn_vth = -10 mV (SRC: Add with param_overrides, certainty 0)
         BioParameter: DB5_to_MDL14_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: DB5_to_MDL15_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: DB5_to_MDL16_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
@@ -117,6 +147,12 @@ Parameters and setting used to generate this network:
         BioParameter: DB6_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: DB6_to_DB5_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
         BioParameter: DB6_to_DB7_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: DB6_to_DB7_exc_syn_ad = 18 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB6_to_DB7_exc_syn_ar = 0.08 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB6_to_DB7_exc_syn_beta = 0.21 per_mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB6_to_DB7_exc_syn_conductance = 20 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB6_to_DB7_exc_syn_erev = 10 mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: DB6_to_DB7_exc_syn_vth = -10 mV (SRC: Add with param_overrides, certainty 0)
         BioParameter: DB6_to_MDL16_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: DB6_to_MDL17_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: DB6_to_MDL18_exc_syn_conductance = 0.4 nS (SRC: Add with param_overrides, certainty 0)
@@ -159,6 +195,12 @@ Parameters and setting used to generate this network:
         BioParameter: VB10_to_MVR21_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB10_to_MVR22_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB10_to_VB11_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB10_to_VB11_exc_syn_ad = 73 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB10_to_VB11_exc_syn_ar = 0.19 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB10_to_VB11_exc_syn_beta = 2.81 per_mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB10_to_VB11_exc_syn_conductance = 18 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB10_to_VB11_exc_syn_erev = 10 mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB10_to_VB11_exc_syn_vth = -22 mV (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB10_to_VB9_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
         BioParameter: VB10_to_VD11_elec_syn_gbase = 0 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB10_to_VD12_elec_syn_gbase = 0 nS (SRC: Add with param_overrides, certainty 0)
@@ -176,6 +218,12 @@ Parameters and setting used to generate this network:
         BioParameter: VB1_to_MVR07_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB1_to_MVR09_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB1_to_VB2_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB1_to_VB2_exc_syn_ad = 73 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB1_to_VB2_exc_syn_ar = 0.19 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB1_to_VB2_exc_syn_beta = 2.81 per_mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB1_to_VB2_exc_syn_conductance = 18 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB1_to_VB2_exc_syn_erev = 10 mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB1_to_VB2_exc_syn_vth = -22 mV (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB2_to_AVBL_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB2_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB2_to_MVL08_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
@@ -187,6 +235,12 @@ Parameters and setting used to generate this network:
         BioParameter: VB2_to_MVR11_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB2_to_VB1_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
         BioParameter: VB2_to_VB3_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB2_to_VB3_exc_syn_ad = 73 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB2_to_VB3_exc_syn_ar = 0.19 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB2_to_VB3_exc_syn_beta = 2.81 per_mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB2_to_VB3_exc_syn_conductance = 18 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB2_to_VB3_exc_syn_erev = 10 mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB2_to_VB3_exc_syn_vth = -22 mV (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB2_to_VB4_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
         BioParameter: VB3_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB3_to_DB1_elec_syn_gbase = 0 nS (SRC: Add with param_overrides, certainty 0)
@@ -200,6 +254,12 @@ Parameters and setting used to generate this network:
         BioParameter: VB3_to_MVR13_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB3_to_VB2_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
         BioParameter: VB3_to_VB4_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB3_to_VB4_exc_syn_ad = 73 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB3_to_VB4_exc_syn_ar = 0.19 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB3_to_VB4_exc_syn_beta = 2.81 per_mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB3_to_VB4_exc_syn_conductance = 18 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB3_to_VB4_exc_syn_erev = 10 mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB3_to_VB4_exc_syn_vth = -22 mV (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB4_to_AVBL_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB4_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB4_to_DB2_elec_syn_gbase = 0 nS (SRC: Add with param_overrides, certainty 0)
@@ -228,6 +288,12 @@ Parameters and setting used to generate this network:
         BioParameter: VB5_to_MVR15_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB5_to_VB4_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
         BioParameter: VB5_to_VB6_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB5_to_VB6_exc_syn_ad = 73 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB5_to_VB6_exc_syn_ar = 0.19 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB5_to_VB6_exc_syn_beta = 2.81 per_mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB5_to_VB6_exc_syn_conductance = 18 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB5_to_VB6_exc_syn_erev = 10 mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB5_to_VB6_exc_syn_vth = -22 mV (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB6_to_AVBL_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB6_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB6_to_DB3_elec_syn_gbase = 0 nS (SRC: Add with param_overrides, certainty 0)
@@ -238,6 +304,12 @@ Parameters and setting used to generate this network:
         BioParameter: VB6_to_MVR16_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB6_to_VB5_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
         BioParameter: VB6_to_VB7_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB6_to_VB7_exc_syn_ad = 73 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB6_to_VB7_exc_syn_ar = 0.19 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB6_to_VB7_exc_syn_beta = 2.81 per_mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB6_to_VB7_exc_syn_conductance = 18 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB6_to_VB7_exc_syn_erev = 10 mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB6_to_VB7_exc_syn_vth = -22 mV (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB7_to_AVBL_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB7_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB7_to_MVL16_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
@@ -248,6 +320,12 @@ Parameters and setting used to generate this network:
         BioParameter: VB7_to_MVR18_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB7_to_VB6_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
         BioParameter: VB7_to_VB8_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB7_to_VB8_exc_syn_ad = 73 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB7_to_VB8_exc_syn_ar = 0.19 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB7_to_VB8_exc_syn_beta = 2.81 per_mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB7_to_VB8_exc_syn_conductance = 18 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB7_to_VB8_exc_syn_erev = 10 mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB7_to_VB8_exc_syn_vth = -22 mV (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB8_to_AVBL_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB8_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB8_to_MVL18_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
@@ -258,6 +336,12 @@ Parameters and setting used to generate this network:
         BioParameter: VB8_to_MVR20_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB8_to_VB7_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
         BioParameter: VB8_to_VB9_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB8_to_VB9_exc_syn_ad = 73 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB8_to_VB9_exc_syn_ar = 0.19 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB8_to_VB9_exc_syn_beta = 2.81 per_mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB8_to_VB9_exc_syn_conductance = 18 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB8_to_VB9_exc_syn_erev = 10 mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB8_to_VB9_exc_syn_vth = -22 mV (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB9_to_AVBL_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB9_to_AVBR_elec_syn_gbase = 0.001 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB9_to_MVL19_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
@@ -267,6 +351,12 @@ Parameters and setting used to generate this network:
         BioParameter: VB9_to_MVR20_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB9_to_MVR21_exc_syn_conductance = 0.6 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB9_to_VB10_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
+        BioParameter: VB9_to_VB10_exc_syn_ad = 73 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB9_to_VB10_exc_syn_ar = 0.19 per_s (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB9_to_VB10_exc_syn_beta = 2.81 per_mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB9_to_VB10_exc_syn_conductance = 18 nS (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB9_to_VB10_exc_syn_erev = 10 mV (SRC: Add with param_overrides, certainty 0)
+        BioParameter: VB9_to_VB10_exc_syn_vth = -22 mV (SRC: Add with param_overrides, certainty 0)
         BioParameter: VB9_to_VB8_elec_syn_gbase = 0.001 nS (SRC: Set with param_overrides, certainty 0)
         BioParameter: VD11_to_VB10_elec_syn_gbase = 0 nS (SRC: Add with param_overrides, certainty 0)
         BioParameter: VD12_to_VB10_elec_syn_gbase = 0 nS (SRC: Add with param_overrides, certainty 0)
@@ -463,7 +553,22 @@ Parameters and setting used to generate this network:
     <gradedSynapse id="AVBR_to_VD3_exc_syn" conductance="0 nS" delta="5 mV" Vth="00 mV" k="0.5per_ms" erev="-10 mV"/>
     <gradedSynapse id="neuron_to_neuron_inh_syn" conductance="0.2 nS" delta="5 mV" Vth="0 mV" k="0.015per_ms" erev="-70 mV"/>
     <gradedSynapse id="DD1_to_VB2_inh_syn" conductance="0 nS" delta="5 mV" Vth="0 mV" k="0.015per_ms" erev="-70 mV"/>
+    <gradedSynapse2 id="DB1_to_DB2_exc_syn" conductance="20 nS" ar="0.08 per_s" ad="18 per_s" beta="0.21 per_mV" vth="-10 mV" erev="10 mV"/>
+    <gradedSynapse2 id="DB2_to_DB3_exc_syn" conductance="20 nS" ar="0.08 per_s" ad="18 per_s" beta="0.21 per_mV" vth="-10 mV" erev="10 mV"/>
+    <gradedSynapse2 id="DB3_to_DB4_exc_syn" conductance="20 nS" ar="0.08 per_s" ad="18 per_s" beta="0.21 per_mV" vth="-10 mV" erev="10 mV"/>
+    <gradedSynapse2 id="DB4_to_DB5_exc_syn" conductance="20 nS" ar="0.08 per_s" ad="18 per_s" beta="0.21 per_mV" vth="-10 mV" erev="10 mV"/>
+    <gradedSynapse2 id="DB5_to_DB6_exc_syn" conductance="20 nS" ar="0.08 per_s" ad="18 per_s" beta="0.21 per_mV" vth="-10 mV" erev="10 mV"/>
+    <gradedSynapse2 id="DB6_to_DB7_exc_syn" conductance="20 nS" ar="0.08 per_s" ad="18 per_s" beta="0.21 per_mV" vth="-10 mV" erev="10 mV"/>
+    <gradedSynapse2 id="VB1_to_VB2_exc_syn" conductance="18 nS" ar="0.19 per_s" ad="73 per_s" beta="2.81 per_mV" vth="-22 mV" erev="10 mV"/>
+    <gradedSynapse2 id="VB2_to_VB3_exc_syn" conductance="18 nS" ar="0.19 per_s" ad="73 per_s" beta="2.81 per_mV" vth="-22 mV" erev="10 mV"/>
+    <gradedSynapse2 id="VB3_to_VB4_exc_syn" conductance="18 nS" ar="0.19 per_s" ad="73 per_s" beta="2.81 per_mV" vth="-22 mV" erev="10 mV"/>
     <gradedSynapse2 id="VB4_to_VB5_exc_syn" conductance="18 nS" ar="0.19 per_s" ad="73 per_s" beta="2.81 per_mV" vth="-22 mV" erev="10 mV"/>
+    <gradedSynapse2 id="VB5_to_VB6_exc_syn" conductance="18 nS" ar="0.19 per_s" ad="73 per_s" beta="2.81 per_mV" vth="-22 mV" erev="10 mV"/>
+    <gradedSynapse2 id="VB6_to_VB7_exc_syn" conductance="18 nS" ar="0.19 per_s" ad="73 per_s" beta="2.81 per_mV" vth="-22 mV" erev="10 mV"/>
+    <gradedSynapse2 id="VB7_to_VB8_exc_syn" conductance="18 nS" ar="0.19 per_s" ad="73 per_s" beta="2.81 per_mV" vth="-22 mV" erev="10 mV"/>
+    <gradedSynapse2 id="VB8_to_VB9_exc_syn" conductance="18 nS" ar="0.19 per_s" ad="73 per_s" beta="2.81 per_mV" vth="-22 mV" erev="10 mV"/>
+    <gradedSynapse2 id="VB9_to_VB10_exc_syn" conductance="18 nS" ar="0.19 per_s" ad="73 per_s" beta="2.81 per_mV" vth="-22 mV" erev="10 mV"/>
+    <gradedSynapse2 id="VB10_to_VB11_exc_syn" conductance="18 nS" ar="0.19 per_s" ad="73 per_s" beta="2.81 per_mV" vth="-22 mV" erev="10 mV"/>
     <gradedSynapse id="AVBR_to_MVL16_exc_syn" conductance="0 nS" delta="19 mV" Vth="37 mV" k="1.205per_ms" erev="37 mV"/>
     <gradedSynapse id="DB1_to_MDL06_exc_syn" conductance="0.4 nS" delta="19 mV" Vth="37 mV" k="1.205per_ms" erev="37 mV"/>
     <gradedSynapse id="DB1_to_MDL08_exc_syn" conductance="0.4 nS" delta="19 mV" Vth="37 mV" k="1.205per_ms" erev="37 mV"/>
@@ -3248,9 +3353,6 @@ Parameters and setting used to generate this network:
         <continuousProjection id="NC_VB4_DD3_Acetylcholine" presynapticPopulation="VB4" postsynapticPopulation="DD3">
             <continuousConnectionInstanceW id="0" preCell="../VB4/0/GenericNeuronCell" postCell="../DD3/0/GenericNeuronCell" preComponent="silent" postComponent="neuron_to_neuron_exc_syn" weight="1."/>
         </continuousProjection>
-        <continuousProjection id="NC_VB4_VB5_Acetylcholine" presynapticPopulation="VB4" postsynapticPopulation="VB5">
-            <continuousConnectionInstanceW id="0" preCell="../VB4/0/GenericNeuronCell" postCell="../VB5/0/GenericNeuronCell" preComponent="silent" postComponent="VB4_to_VB5_exc_syn" weight="1."/>
-        </continuousProjection>
         <continuousProjection id="NC_VB4_VD4_Acetylcholine" presynapticPopulation="VB4" postsynapticPopulation="VD4">
             <continuousConnectionInstanceW id="0" preCell="../VB4/0/GenericNeuronCell" postCell="../VD4/0/GenericNeuronCell" preComponent="silent" postComponent="neuron_to_neuron_inh_syn" weight="1."/>
         </continuousProjection>
@@ -3388,6 +3490,54 @@ Parameters and setting used to generate this network:
         </continuousProjection>
         <continuousProjection id="NC_VD13_VD12_GABA" presynapticPopulation="VD13" postsynapticPopulation="VD12">
             <continuousConnectionInstanceW id="0" preCell="../VD13/0/GenericNeuronCell" postCell="../VD12/0/GenericNeuronCell" preComponent="silent" postComponent="neuron_to_neuron_inh_syn" weight="1."/>
+        </continuousProjection>
+        <continuousProjection id="NC_DB1_DB2_Acetylcholine" presynapticPopulation="DB1" postsynapticPopulation="DB2">
+            <continuousConnectionInstanceW id="0" preCell="../DB1/0/GenericNeuronCell" postCell="../DB2/0/GenericNeuronCell" preComponent="silent" postComponent="DB1_to_DB2_exc_syn" weight="1."/>
+        </continuousProjection>
+        <continuousProjection id="NC_DB2_DB3_Acetylcholine" presynapticPopulation="DB2" postsynapticPopulation="DB3">
+            <continuousConnectionInstanceW id="0" preCell="../DB2/0/GenericNeuronCell" postCell="../DB3/0/GenericNeuronCell" preComponent="silent" postComponent="DB2_to_DB3_exc_syn" weight="1."/>
+        </continuousProjection>
+        <continuousProjection id="NC_DB3_DB4_Acetylcholine" presynapticPopulation="DB3" postsynapticPopulation="DB4">
+            <continuousConnectionInstanceW id="0" preCell="../DB3/0/GenericNeuronCell" postCell="../DB4/0/GenericNeuronCell" preComponent="silent" postComponent="DB3_to_DB4_exc_syn" weight="1."/>
+        </continuousProjection>
+        <continuousProjection id="NC_DB4_DB5_Acetylcholine" presynapticPopulation="DB4" postsynapticPopulation="DB5">
+            <continuousConnectionInstanceW id="0" preCell="../DB4/0/GenericNeuronCell" postCell="../DB5/0/GenericNeuronCell" preComponent="silent" postComponent="DB4_to_DB5_exc_syn" weight="1."/>
+        </continuousProjection>
+        <continuousProjection id="NC_DB5_DB6_Acetylcholine" presynapticPopulation="DB5" postsynapticPopulation="DB6">
+            <continuousConnectionInstanceW id="0" preCell="../DB5/0/GenericNeuronCell" postCell="../DB6/0/GenericNeuronCell" preComponent="silent" postComponent="DB5_to_DB6_exc_syn" weight="1."/>
+        </continuousProjection>
+        <continuousProjection id="NC_DB6_DB7_Acetylcholine" presynapticPopulation="DB6" postsynapticPopulation="DB7">
+            <continuousConnectionInstanceW id="0" preCell="../DB6/0/GenericNeuronCell" postCell="../DB7/0/GenericNeuronCell" preComponent="silent" postComponent="DB6_to_DB7_exc_syn" weight="1."/>
+        </continuousProjection>
+        <continuousProjection id="NC_VB1_VB2_Acetylcholine" presynapticPopulation="VB1" postsynapticPopulation="VB2">
+            <continuousConnectionInstanceW id="0" preCell="../VB1/0/GenericNeuronCell" postCell="../VB2/0/GenericNeuronCell" preComponent="silent" postComponent="VB1_to_VB2_exc_syn" weight="1."/>
+        </continuousProjection>
+        <continuousProjection id="NC_VB2_VB3_Acetylcholine" presynapticPopulation="VB2" postsynapticPopulation="VB3">
+            <continuousConnectionInstanceW id="0" preCell="../VB2/0/GenericNeuronCell" postCell="../VB3/0/GenericNeuronCell" preComponent="silent" postComponent="VB2_to_VB3_exc_syn" weight="1."/>
+        </continuousProjection>
+        <continuousProjection id="NC_VB3_VB4_Acetylcholine" presynapticPopulation="VB3" postsynapticPopulation="VB4">
+            <continuousConnectionInstanceW id="0" preCell="../VB3/0/GenericNeuronCell" postCell="../VB4/0/GenericNeuronCell" preComponent="silent" postComponent="VB3_to_VB4_exc_syn" weight="1."/>
+        </continuousProjection>
+        <continuousProjection id="NC_VB4_VB5_Acetylcholine" presynapticPopulation="VB4" postsynapticPopulation="VB5">
+            <continuousConnectionInstanceW id="0" preCell="../VB4/0/GenericNeuronCell" postCell="../VB5/0/GenericNeuronCell" preComponent="silent" postComponent="VB4_to_VB5_exc_syn" weight="1."/>
+        </continuousProjection>
+        <continuousProjection id="NC_VB5_VB6_Acetylcholine" presynapticPopulation="VB5" postsynapticPopulation="VB6">
+            <continuousConnectionInstanceW id="0" preCell="../VB5/0/GenericNeuronCell" postCell="../VB6/0/GenericNeuronCell" preComponent="silent" postComponent="VB5_to_VB6_exc_syn" weight="1."/>
+        </continuousProjection>
+        <continuousProjection id="NC_VB6_VB7_Acetylcholine" presynapticPopulation="VB6" postsynapticPopulation="VB7">
+            <continuousConnectionInstanceW id="0" preCell="../VB6/0/GenericNeuronCell" postCell="../VB7/0/GenericNeuronCell" preComponent="silent" postComponent="VB6_to_VB7_exc_syn" weight="1."/>
+        </continuousProjection>
+        <continuousProjection id="NC_VB7_VB8_Acetylcholine" presynapticPopulation="VB7" postsynapticPopulation="VB8">
+            <continuousConnectionInstanceW id="0" preCell="../VB7/0/GenericNeuronCell" postCell="../VB8/0/GenericNeuronCell" preComponent="silent" postComponent="VB7_to_VB8_exc_syn" weight="1."/>
+        </continuousProjection>
+        <continuousProjection id="NC_VB8_VB9_Acetylcholine" presynapticPopulation="VB8" postsynapticPopulation="VB9">
+            <continuousConnectionInstanceW id="0" preCell="../VB8/0/GenericNeuronCell" postCell="../VB9/0/GenericNeuronCell" preComponent="silent" postComponent="VB8_to_VB9_exc_syn" weight="1."/>
+        </continuousProjection>
+        <continuousProjection id="NC_VB9_VB10_Acetylcholine" presynapticPopulation="VB9" postsynapticPopulation="VB10">
+            <continuousConnectionInstanceW id="0" preCell="../VB9/0/GenericNeuronCell" postCell="../VB10/0/GenericNeuronCell" preComponent="silent" postComponent="VB9_to_VB10_exc_syn" weight="1."/>
+        </continuousProjection>
+        <continuousProjection id="NC_VB10_VB11_Acetylcholine" presynapticPopulation="VB10" postsynapticPopulation="VB11">
+            <continuousConnectionInstanceW id="0" preCell="../VB10/0/GenericNeuronCell" postCell="../VB11/0/GenericNeuronCell" preComponent="silent" postComponent="VB10_to_VB11_exc_syn" weight="1."/>
         </continuousProjection>
         <continuousProjection id="NC_AVBR_MVL16_Acetylcholine" presynapticPopulation="AVBR" postsynapticPopulation="MVL16">
             <continuousConnectionInstanceW id="0" preCell="../AVBR/0/GenericNeuronCell" postCell="../MVL16/0/GenericMuscleCell" preComponent="silent" postComponent="AVBR_to_MVL16_exc_syn" weight="1."/>
