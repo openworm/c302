@@ -8,14 +8,14 @@
         <gateHHtauInf id="m" instances="1">
 
             <timeCourse type="fixedTimeCourse" tau="30 ms"/>
-            <steadyState type="MuscleSigmoidVariable" rate="1" scale="6.859 mV" midpoint="10.237 mV"/>
+            <steadyState type="MuscleSigmoidVariable" scale="6.859 mV" midpoint="10.237 mV"/>
 
         </gateHHtauInf>
 
         <!--<gateHHtauInf id="n" instances="2">
 
             <timeCourse type="fixedTimeCourse" tau="30 ms"/>
-            <steadyState type="MuscleSigmoidVariable" rate="1" scale="6.859 mV" midpoint="5.237 mV"/>
+            <steadyState type="MuscleSigmoidVariable" scale="6.859 mV" midpoint="5.237 mV"/>
 
         </gateHHtauInf>-->
 
@@ -28,7 +28,7 @@
         <gateHHtauInf id="m" instances="1">
 
             <timeCourse type="fixedTimeCourse" tau="10 ms"/>
-            <steadyState type="MuscleSigmoidVariable" rate="1" scale="6.859 mV" midpoint="13.237 mV"/>
+            <steadyState type="MuscleSigmoidVariable" scale="6.859 mV" midpoint="13.237 mV"/>
 
         </gateHHtauInf>
 
@@ -69,7 +69,7 @@
         <gateHHtauInf id="n" instances="4">
     
             <timeCourse type="fixedTimeCourse" tau="190 ms"/>
-            <steadyState type="MuscleSigmoidVariable" rate="1" scale="6.859 mV" midpoint="1.237 mV"/>
+            <steadyState type="MuscleSigmoidVariable" scale="6.859 mV" midpoint="1.237 mV"/>
             
         </gateHHtauInf>
         

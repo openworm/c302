@@ -582,9 +582,7 @@ def generate(net_id,
     params.create_models()
     
     if vmin==None:
-        if params.is_level_A():
-            vmin=-72
-        elif params.is_level_B():
+        if params.is_level_A() or params.is_level_B():
             vmin=-52 
         elif params.is_level_C():
             vmin=-60
@@ -595,9 +593,7 @@ def generate(net_id,
             
     
     if vmax==None:
-        if params.is_level_A():
-            vmax=-48
-        elif params.is_level_B():
+        if params.is_level_A() or params.is_level_B():
             vmax=-28
         elif params.is_level_C():
             vmax=25

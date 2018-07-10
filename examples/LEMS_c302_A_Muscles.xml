@@ -6,7 +6,7 @@
 Parameters and setting used to generate this network:
 
     Data reader:                    SpreadsheetDataReader
-    c302 version:                   0.6.0
+    c302 version:                   0.6.1
     Cells:                          ['AS1', 'AS10', 'AS11', 'AS2', 'AS3', 'AS4', 'AS5', 'AS6', 'AS7', 'AS8', 'AS9', 'AVFL', 'AVFR', 'AVKR', 'AVL', 'CEPVL', 'CEPVR', 'DA1', 'DA2', 'DA3', 'DA4', 'DA5', 'DA6', 'DA7', 'DA8', 'DA9', 'DB1', 'DB2', 'DB3', 'DB4', 'DB5', 'DB6', 'DB7', 'DD1', 'DD2', 'DD3', 'DD4', 'DD5', 'DD6', 'DVB', 'HSNL', 'HSNR', 'IL1DL', 'IL1DR', 'IL1L', 'IL1R', 'IL1VL', 'IL1VR', 'PDA', 'PDB', 'PVNL', 'PVNR', 'RID', 'RIML', 'RIMR', 'RIVL', 'RIVR', 'RMDDL', 'RMDDR', 'RMDL', 'RMDR', 'RMDVL', 'RMDVR', 'RMED', 'RMEL', 'RMER', 'RMEV', 'RMFL', 'RMGL', 'RMGR', 'RMHL', 'RMHR', 'SMBDL', 'SMBDR', 'SMBVL', 'SMBVR', 'SMDDL', 'SMDDR', 'SMDVL', 'SMDVR', 'URADL', 'URADR', 'URAVL', 'URAVR', 'VA1', 'VA10', 'VA11', 'VA12', 'VA2', 'VA3', 'VA4', 'VA5', 'VA6', 'VA7', 'VA8', 'VA9', 'VB1', 'VB10', 'VB11', 'VB2', 'VB3', 'VB4', 'VB5', 'VB6', 'VB7', 'VB8', 'VB9', 'VC1', 'VC2', 'VC3', 'VC4', 'VC5', 'VC6', 'VD1', 'VD10', 'VD11', 'VD12', 'VD13', 'VD2', 'VD3', 'VD4', 'VD5', 'VD6', 'VD7', 'VD8', 'VD9', 'AVAL', 'AVAR', 'AVBL', 'AVBR', 'AVDL', 'AVDR', 'PVCL', 'PVCR']
     Cell stimulated:                ['AVBL', 'AVBR']
     Connection:                     []
@@ -63,7 +63,7 @@ Parameters and setting used to generate this network:
 
     <Simulation id="sim_c302_A_Muscles" length="1000ms" step="0.05ms" target="c302_A_Muscles">
 
-        <Display id="neurons" title="c302_A_Muscles: Membrane potential of a number of neurons" timeScale="1ms" xmin="-100.0" xmax="1100.0" ymin="-72" ymax="-48">
+        <Display id="neurons" title="c302_A_Muscles: Membrane potential of a number of neurons" timeScale="1ms" xmin="-100.0" xmax="1100.0" ymin="-52" ymax="-28">
             
             <Line id="AVBL" quantity="AVBL/0/generic_neuron_iaf_cell/v" scale="1mV" color="#28e945" timeScale="1ms" />
             <Line id="AVBR" quantity="AVBR/0/generic_neuron_iaf_cell/v" scale="1mV" color="#126500" timeScale="1ms" />
@@ -80,7 +80,7 @@ Parameters and setting used to generate this network:
             
         </Display>
       
-        <Display id="muscles" title="c302_A_Muscles: Membrane potential of a number of muscles" timeScale="1ms" xmin="-100.0" xmax="1100.0" ymin="-72" ymax="-48">
+        <Display id="muscles" title="c302_A_Muscles: Membrane potential of a number of muscles" timeScale="1ms" xmin="-100.0" xmax="1100.0" ymin="-52" ymax="-28">
             
             <Line id="MDR01" quantity="MDR01/0/generic_muscle_iaf_cell/v" scale="1mV" color="#a0d0b9" timeScale="1ms" />
             <Line id="MDR02" quantity="MDR02/0/generic_muscle_iaf_cell/v" scale="1mV" color="#8f2d73" timeScale="1ms" />

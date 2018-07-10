@@ -28,6 +28,8 @@ setup(
         'pyNeuroML>=0.3.11',
         'pyopenworm==0.7.1'
     ],
+    entry_points={
+        'console_scripts': ['c302 = c302.__init__:main']},
     package_data={
         'c302': [
             '*.xml',

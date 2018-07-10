@@ -6,7 +6,7 @@
 Parameters and setting used to generate this network:
 
     Data reader:                    SpreadsheetDataReader
-    c302 version:                   0.6.0
+    c302 version:                   0.6.1
     Cells:                          ['DB2', 'VB2', 'DD2', 'VD2', 'DB3', 'VB3', 'DD3', 'VD3', 'DA2', 'VA2', 'DA3', 'VA3', 'AVBL', 'AVBR']
     Cell stimulated:                ['AVBL', 'AVBR']
     Connection:                     []
@@ -63,7 +63,7 @@ Parameters and setting used to generate this network:
 
     <Simulation id="sim_c302_A_Oscillator" length="1000ms" step="0.05ms" target="c302_A_Oscillator">
 
-        <Display id="neurons" title="c302_A_Oscillator: Membrane potential of a number of neurons" timeScale="1ms" xmin="-100.0" xmax="1100.0" ymin="-72" ymax="-48">
+        <Display id="neurons" title="c302_A_Oscillator: Membrane potential of a number of neurons" timeScale="1ms" xmin="-100.0" xmax="1100.0" ymin="-52" ymax="-28">
             
             <Line id="AVBL" quantity="AVBL/0/generic_neuron_iaf_cell/v" scale="1mV" color="#8b779a" timeScale="1ms" />
             <Line id="AVBR" quantity="AVBR/0/generic_neuron_iaf_cell/v" scale="1mV" color="#7b5b40" timeScale="1ms" />

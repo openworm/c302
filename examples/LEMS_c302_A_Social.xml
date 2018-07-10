@@ -6,7 +6,7 @@
 Parameters and setting used to generate this network:
 
     Data reader:                    SpreadsheetDataReader
-    c302 version:                   0.6.0
+    c302 version:                   0.6.1
     Cells:                          ['RMGR', 'ASHR', 'ASKR', 'AWBR', 'IL2R', 'RMHR', 'URXR']
     Cell stimulated:                []
     Connection:                     []
@@ -63,7 +63,7 @@ Parameters and setting used to generate this network:
 
     <Simulation id="sim_c302_A_Social" length="2500ms" step="0.05ms" target="c302_A_Social">
 
-        <Display id="neurons" title="c302_A_Social: Membrane potential of a number of neurons" timeScale="1ms" xmin="-250.0" xmax="2750.0" ymin="-72" ymax="-48">
+        <Display id="neurons" title="c302_A_Social: Membrane potential of a number of neurons" timeScale="1ms" xmin="-250.0" xmax="2750.0" ymin="-52" ymax="-28">
             
             <Line id="ASHR" quantity="ASHR/0/generic_neuron_iaf_cell/v" scale="1mV" color="#8b779a" timeScale="1ms" />
             <Line id="ASKR" quantity="ASKR/0/generic_neuron_iaf_cell/v" scale="1mV" color="#7b5b40" timeScale="1ms" />
