@@ -50,27 +50,30 @@ def plots(a_n, info, cells, dt):
     #ax = fig.gca()
     downscale = 10
     
+    fig.set_size_inches(8, 7, forward=True)
+    fig.set_size_inches(8, 14, forward=True)
+    
     a_n_ = a_n[:,::downscale]
 
     plot0 = ax.pcolormesh(a_n_)
     ax.set_yticks(np.arange(a_n_.shape[0]) + 0.5, minor=False)
     ax.set_yticklabels(cells)
-    ax.tick_params(axis='y', labelsize=6)
+    ax.tick_params(axis='y', labelsize=8)
     #plt.setp(ax.get_yticklabels(), rotation=45)
 
     
-    fig.colorbar(plot0)
+    fig.colorbar(plot0, orientation="horizontal", label="Membrane potential (mV)" if 'Memb' in info else 'Calcium concentration (mM)')
     
     fig.canvas.set_window_title(info)
     plt.title(info)
-    plt.xlabel('Time (ms)')
+    plt.xlabel('Time (s)')
  
     fig.canvas.draw()
 
     labels = [] #issue is with unicode
     for label in ax.get_xticklabels():
         if(len(label.get_text()) >0):
-            labels.append(float( str((label.get_text())) )*dt*downscale*1000)
+            labels.append(float( str((label.get_text())) )*dt*downscale)
         # except:
         #     print "Error value on forming axis values, value: ", label.get_text(), ", length: ",len(label.get_text())
     
@@ -93,7 +96,7 @@ def generate_traces_plot(config,parameter_set,xvals,yvals,info,labels,save,save_
                         yvals,
                         info,
                         labels=labels,
-                        xaxis="Time (ms)",
+                        xaxis="Time (s)",
                         yaxis="Membrane potential (mV)" if voltage else "Activity",
                         show_plot_already=False,
                         save_figure_to=(None if not save else save_fig_path%(file_name)),
@@ -111,7 +114,7 @@ def plot_c302_results(lems_results,
                       plot_ca=True):
     
     
-    params = {'legend.fontsize': 8,
+    params = {'legend.fontsize': 12,
               'font.size': 10}
     plt.rcParams.update(params)
 
@@ -122,7 +125,7 @@ def plot_c302_results(lems_results,
     #c302.print_("Reloaded data: %s"%lems_results.keys())
     cells = []
     muscles = []
-    times = [t*1000 for t in lems_results['t']]
+    times = [t for t in lems_results['t']]
     for cm in lems_results.keys():
         if not cm=='t' and cm.endswith('/v'):
             if c302.is_muscle(cm):
@@ -165,7 +168,7 @@ def plot_c302_results(lems_results,
                 volts_n = np.append(volts_n,[[vv*1000 for vv in v]],axis=0)
             yvals.append(volts_n[-1])
             
-        info = 'Membrane potentials of %i neuron(s) (%s %s)'%(len(cells),config,parameter_set)
+        info = 'Membrane potentials of %i neurons '%(len(cells))
 
         #tasks.append((volts_n, info, cells, dt))
         plots(volts_n, info, cells, dt)
@@ -303,7 +306,7 @@ def plot_c302_results(lems_results,
         yvals = []
         labels = []
 
-        info = '%s of %i muscles (%s %s)'%(description, len(muscles),config,parameter_set)
+        info = '%s of %i muscles'%(description, len(muscles))
         for m in muscles:
             a = lems_results[template_m.format(m,variable)]
             
