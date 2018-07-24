@@ -62,7 +62,7 @@ def plots(a_n, info, cells, dt):
     #plt.setp(ax.get_yticklabels(), rotation=45)
 
     
-    fig.colorbar(plot0, orientation="horizontal", label="Membrane potential (mV)" if 'Memb' in info else 'Calcium concentration (mM)')
+    fig.colorbar(plot0, orientation="horizontal", label="Membrane potential (mV)" if 'Memb' in info else 'Calcium concentration (nM)')
     
     fig.canvas.set_window_title(info)
     plt.title(info)
@@ -260,7 +260,7 @@ def plot_c302_results(lems_results,
 
         info = '%s of %i neurons (%s %s)'%(description, len(cells),config,parameter_set)
         for cell in cells:
-            a = lems_results[template.format(cell,variable)]
+            a = [v*1e6 for v in lems_results[template.format(cell,variable)]]
             
             xvals.append(times)
             yvals.append(a)
@@ -308,7 +308,7 @@ def plot_c302_results(lems_results,
 
         info = '%s of %i muscles'%(description, len(muscles))
         for m in muscles:
-            a = lems_results[template_m.format(m,variable)]
+            a = [v*1e6 for v in lems_results[template_m.format(m,variable)]]
             
             xvals.append(times)
             yvals.append(a)
