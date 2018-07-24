@@ -1,4 +1,4 @@
-# c302
+# The c302 modelling framework for *C. elegans*
 
 *The c302 framework is in the process of moving here from https://github.com/openworm/CElegansNeuroML/tree/master/CElegans/pythonScripts/c302*
 
