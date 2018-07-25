@@ -77,38 +77,38 @@ cd examples
 
 ## Validate generated NeuroML 2
 
-jnml -validate c302_A_Full.net.nml
-jnml -validate c302_A_Pharyngeal.net.nml
-jnml -validate c302_A_Syns.net.nml
-jnml -validate c302_A_Social.net.nml
-jnml -validate c302_A_Muscles.net.nml
+pynml -validate c302_A_Full.net.nml
+pynml -validate c302_A_Pharyngeal.net.nml
+pynml -validate c302_A_Syns.net.nml
+pynml -validate c302_A_Social.net.nml
+pynml -validate c302_A_Muscles.net.nml
 
 # Not validating B files as they use non NeuroML 2 compliant IaFCell model with activity...
 
-jnml -validate c302_C_Full.net.nml
-jnml -validate c302_C_Pharyngeal.net.nml
+pynml -validate c302_C_Full.net.nml
+pynml -validate c302_C_Pharyngeal.net.nml
 
-jnml -validate c302_C1_Full.net.nml
-jnml -validate c302_C1_Pharyngeal.net.nml
+pynml -validate c302_C1_Full.net.nml
+pynml -validate c302_C1_Pharyngeal.net.nml
 
-jnml -validate c302_D_Full.net.nml
-jnml -validate c302_D_Pharyngeal.net.nml
+pynml -validate c302_D_Full.net.nml
+pynml -validate c302_D_Pharyngeal.net.nml
 
-#jnml -validate c302_D1_Full.net.nml
-#jnml -validate c302_D1_Pharyngeal.net.nml
+#pynml -validate c302_D1_Full.net.nml
+#pynml -validate c302_D1_Pharyngeal.net.nml
 
 
 ## Try running these in jNeuroML with no GUI
 
-#jnml LEMS_c302_A_Full.xml -nogui    #  Takes 2 mins to run!
-jnml LEMS_c302_A_Pharyngeal.xml -nogui
-jnml LEMS_c302_A_Syns.xml -nogui
-jnml LEMS_c302_A_Social.xml -nogui
+#pynml LEMS_c302_A_Full.xml -nogui    #  Takes 2 mins to run!
+pynml LEMS_c302_A_Pharyngeal.xml -nogui
+pynml LEMS_c302_A_Syns.xml -nogui
+pynml LEMS_c302_A_Social.xml -nogui
 
-#jnml LEMS_c302_B_Full.xml -nogui    #  Takes 2 mins to run!
-jnml LEMS_c302_B_Pharyngeal.xml -nogui
-jnml LEMS_c302_B_Syns.xml -nogui
-jnml LEMS_c302_B_Social.xml -nogui
+#pynml LEMS_c302_B_Full.xml -nogui    #  Takes 2 mins to run!
+pynml LEMS_c302_B_Pharyngeal.xml -nogui
+pynml LEMS_c302_B_Syns.xml -nogui
+pynml LEMS_c302_B_Social.xml -nogui
 
 ## Try regenerating using command line options
 
@@ -127,9 +127,9 @@ cd examples
 
 ## Try converting some to NEURON
 
-jnml LEMS_c302_A_Full.xml -neuron
-jnml LEMS_c302_B_Pharyngeal.xml -neuron
-jnml LEMS_c302_C_Syns.xml -neuron
+pynml LEMS_c302_A_Full.xml -neuron
+pynml LEMS_c302_B_Pharyngeal.xml -neuron
+pynml LEMS_c302_C_Syns.xml -neuron
 nrnivmodl
 
 cd -

@@ -1,7 +1,5 @@
 ## The c302 modelling framework for *C. elegans*
 
-
-
 c302 is a framework for generating network models in NeuroML 2 based on C elegans connectivity data. *Note: the c302 framework has recently moved to this repository from https://github.com/openworm/CElegansNeuroML/tree/master/CElegans/pythonScripts/c302*.
 
 ![c302 structure](https://raw.githubusercontent.com/openworm/CElegansNeuroML/master/CElegans/pythonScripts/c302/images/c302.png)
@@ -16,12 +14,17 @@ a network in valid NeuroML, which can be run in [jNeuroML](https://github.com/Ne
 
 The full set of dependencies for c302 can be installed with the following (see also the [Travis-CI script](https://github.com/openworm/c302/blob/master/.travis.yml)):
 
+    git clone https://github.com/openworm/c302.git
+    cd c302
     python setup.py install
+
+This will install c302 as well as all dependencies, including [pyNeuroML](https://github.com/NeuroML/pyNeuroML) 
+and [PyOpenWorm](https://github.com/openworm/PyOpenWorm).
 
 To regenerate a set of NeuroML & LEMS files for one instance of the model and execute it:
 
-    python c302/c302_Full.py                         # To regenerate the NeuroML & LEMS files
-    pynml examples/LEMS_c302_A_Full.xml         # Run a simulation with jNeuroML via pyNeuroML
+    python c302/c302_Full.py                        # To regenerate the NeuroML & LEMS files
+    pynml examples/LEMS_c302_A_Full.xml             # Run a simulation with jNeuroML via pyNeuroML
 
 To test all of the working features of the framework run [test.sh](https://raw.githubusercontent.com/openworm/CElegansNeuroML/master/CElegans/pythonScripts/c302/test.sh):
 
