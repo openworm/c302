@@ -1420,11 +1420,8 @@ def generate(net_id,
     returns:  ["AVAL", "AVBL"]
 '''
 def parse_list_arg(list_arg):
-    print 555522
-    print list_arg
     if list_arg==None: return None
     if list_arg==[]: return []
-    print 4444 
     entries = list_arg[1:-1].split(',')
     ret = [e for e in entries]
     print_("Command line argument %s parsed as: %s"%(list_arg,ret))

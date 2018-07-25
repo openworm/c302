@@ -21,14 +21,32 @@ The full set of dependencies for c302 can be installed with the following (see a
 This will install c302 as well as all dependencies, including [pyNeuroML](https://github.com/NeuroML/pyNeuroML) 
 and [PyOpenWorm](https://github.com/openworm/PyOpenWorm).
 
-To regenerate a set of NeuroML & LEMS files for one instance of the model and execute it:
 
-    python c302/c302_Full.py                        # To regenerate the NeuroML & LEMS files
-    pynml examples/LEMS_c302_A_Full.xml             # Run a simulation with jNeuroML via pyNeuroML
+#### Quick test
+
+To ensure everything is set up correctly try:
+
+1) Regenerate the NeuroML & LEMS files for one instance of the model:
+
+       python c302/c302_Pharyngeal.py B   # generate the pharyngeal subnetwork using parameter set C            
+
+2) Run a simulation with pyNeuroML:
+
+       pynml examples/LEMS_c302_B_Pharyngeal.xml      
 
 To test all of the working features of the framework run [test.sh](https://raw.githubusercontent.com/openworm/CElegansNeuroML/master/CElegans/pythonScripts/c302/test.sh):
 
-    ./test.sh
+     ./test.sh  # or ./test3.sh if you use Python 3
+
+
+### Usage Examples
+
+#### 1) Run standard examples with pyNeuroML
+
+There are a number of [example models](https://github.com/openworm/c302/tree/master/examples) included with the standard distribution. 
+
+
+
 
 ### Command line interface
 

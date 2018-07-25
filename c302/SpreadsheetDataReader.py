@@ -18,6 +18,8 @@ import os
 
 spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/data/"
 
+from c302 import print_
+
 def readDataFromSpreadsheet(include_nonconnected_cells=False, neuron_connect=False):
 
 
@@ -28,7 +30,7 @@ def readDataFromSpreadsheet(include_nonconnected_cells=False, neuron_connect=Fal
         cells = []
         filename = "%sNeuronConnectFormatted.xlsx"%spreadsheet_location
         rb = open_workbook(filename)
-        print("Opened Excel file: " + filename)
+        print_("Opened Excel file: " + filename)
 
         for row in range(1,rb.sheet_by_index(0).nrows):
             pre = str(rb.sheet_by_index(0).cell(row,0).value)
@@ -51,7 +53,7 @@ def readDataFromSpreadsheet(include_nonconnected_cells=False, neuron_connect=Fal
         filename = "%sCElegansNeuronTables.xls"%spreadsheet_location
         rb = open_workbook(filename)
 
-        print("Opened Excel file: " + filename)
+        print_("Opened Excel file: " + filename)
 
         known_nonconnected_cells = ['CANL', 'CANR', 'VC6']
 
@@ -83,7 +85,7 @@ def readMuscleDataFromSpreadsheet():
     filename = "%sCElegansNeuronTables.xls"%spreadsheet_location
     rb = open_workbook(filename)
 
-    print("Opened Excel file: "+ filename)
+    print_("Opened Excel file: "+ filename)
 
     sheet = rb.sheet_by_index(1)
 
@@ -109,7 +111,7 @@ def main():
 
     cells, conns = readDataFromSpreadsheet()
 
-    print("%i cells in spreadsheet: %s..."%(len(cells),sorted(cells)[0:3]))
+    print_("%i cells in spreadsheet: %s..."%(len(cells),sorted(cells)[0:3]))
 
     from os import listdir
     from os.path import isfile
@@ -118,26 +120,26 @@ def main():
     cell_names.remove('MDL08') # muscle
 
     s_c = sorted(cell_names)
-    print("%i cell morphologies found: %s..."%(len(cell_names),s_c[0:3]))
+    print_("%i cell morphologies found: %s..."%(len(cell_names),s_c[0:3]))
 
     for c in cells: cell_names.remove(c)
 
-    print("Difference: %s"%cell_names)
+    print_("Difference: %s"%cell_names)
 
     cells2, conns2 = readDataFromSpreadsheet(include_nonconnected_cells=True)
 
     assert(len(cells2) == 302)
 
-    print("Lengths are equal if include_nonconnected_cells=True")
+    print_("Lengths are equal if include_nonconnected_cells=True")
     
     
-    print("Found %s connections: %s..."%(len(conns2),conns2[0]))
+    print_("Found %s connections: %s..."%(len(conns2),conns2[0]))
 
     neurons, muscles, conns = readMuscleDataFromSpreadsheet()
 
-    print("Found %i neurons connected to muscles: %s"%(len(neurons), sorted(neurons)))
-    print("Found %i muscles connected to neurons: %s"%(len(muscles), sorted(muscles)))
-    print("Found %i connections between neurons and muscles, e.g. %s"%(len(conns), conns[0]))
+    print_("Found %i neurons connected to muscles: %s"%(len(neurons), sorted(neurons)))
+    print_("Found %i muscles connected to neurons: %s"%(len(muscles), sorted(muscles)))
+    print_("Found %i connections between neurons and muscles, e.g. %s"%(len(conns), conns[0]))
 
 if __name__ == '__main__':
 
