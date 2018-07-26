@@ -27,8 +27,8 @@ def setup(parameter_set,
     inh_post = "VB11"
     gap_1 = "AIZL"
     gap_2 = "ASHL"
-    moto_pre = "DA1"
-    muscle_post = "MDL08"
+    moto_pre = "AS2"
+    muscle_post = "MDL07"
     
     cells = [exc_pre, exc_post, inh_pre, inh_post, moto_pre]
     cells_to_stimulate_extra      = [exc_pre, inh_pre,moto_pre]

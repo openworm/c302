@@ -73,9 +73,9 @@ Parameters and setting used to generate this network:
         BioParameter: neuron_to_neuron_inh_syn_k = 0.015per_ms (SRC: BlindGuess, certainty 0.1)
         BioParameter: neuron_to_neuron_inh_syn_vth = 0 mV (SRC: BlindGuess, certainty 0.1)
         BioParameter: specific_capacitance = 5 uF_per_cm2 (SRC: BlindGuess, certainty 0.1)
-        BioParameter: unphysiological_offset_current = 2pA (SRC: Testing Osc, certainty 0)
-        BioParameter: unphysiological_offset_current_del = 10 ms (SRC: Testing Osc, certainty 0)
-        BioParameter: unphysiological_offset_current_dur = 2500 ms (SRC: Testing Osc, certainty 0)
+        BioParameter: unphysiological_offset_current = 4pA (SRC: Testing Osc, certainty 0)
+        BioParameter: unphysiological_offset_current_del = 100 ms (SRC: Testing Osc, certainty 0)
+        BioParameter: unphysiological_offset_current_dur = 800 ms (SRC: Testing Osc, certainty 0)
 
 </notes>
     <include href="cell_C.xml"/>
@@ -133,7 +133,7 @@ Parameters and setting used to generate this network:
             </intracellularProperties>
         </biophysicalProperties>
     </cell>
-    <pulseGenerator id="offset_current" delay="10 ms" duration="2500 ms" amplitude="2pA"/>
+    <pulseGenerator id="offset_current" delay="100 ms" duration="800 ms" amplitude="4pA"/>
     <network id="c302_C2_Oscillator">
         <population id="AVBL" component="GenericNeuronCell" size="1" type="populationList">
             <property tag="color" value="1 0 .4"/>

@@ -7,13 +7,13 @@ Parameters and setting used to generate this network:
 
     Data reader:                    SpreadsheetDataReader
     c302 version:                   0.6.1
-    Cells:                          ['URYDL', 'SMDDR', 'VD12', 'VB11', 'DA1', 'AIZL', 'ASHL']
+    Cells:                          ['URYDL', 'SMDDR', 'VD12', 'VB11', 'AS2', 'AIZL', 'ASHL']
     Cell stimulated:                []
     Connection:                     []
     Connection numbers overridden:  None
     Connection numbers scaled:      None
     Connection polarities override: None
-    Muscles:                        ['MDL08']
+    Muscles:                        ['MDL07']
 
     Known BioParameters:
         BioParameter: ca_boyle_erev = 40 mV (SRC: BlindGuess, certainty 0.1)
@@ -68,9 +68,9 @@ Parameters and setting used to generate this network:
     
     <Include file="cells/AIZL_D.cell.nml" />
     
-    <Include file="cells/ASHL_D.cell.nml" />
+    <Include file="cells/AS2_D.cell.nml" />
     
-    <Include file="cells/DA1_D.cell.nml" />
+    <Include file="cells/ASHL_D.cell.nml" />
     
     <Include file="cells/SMDDR_D.cell.nml" />
     
@@ -90,8 +90,8 @@ Parameters and setting used to generate this network:
         <Display id="neurons" title="c302_D_Syns: Membrane potential of a number of neurons" timeScale="1ms" xmin="-360.0" xmax="3960.0" ymin="-60" ymax="25">
             
             <Line id="AIZL" quantity="AIZL/0/AIZL/v" scale="1mV" color="#8b779a" timeScale="1ms" />
-            <Line id="ASHL" quantity="ASHL/0/ASHL/v" scale="1mV" color="#ef7488" timeScale="1ms" />
-            <Line id="DA1" quantity="DA1/0/DA1/v" scale="1mV" color="#2a8f25" timeScale="1ms" />
+            <Line id="AS2" quantity="AS2/0/AS2/v" scale="1mV" color="#ef7488" timeScale="1ms" />
+            <Line id="ASHL" quantity="ASHL/0/ASHL/v" scale="1mV" color="#2a8f25" timeScale="1ms" />
             <Line id="SMDDR" quantity="SMDDR/0/SMDDR/v" scale="1mV" color="#2d27f5" timeScale="1ms" />
             <Line id="URYDL" quantity="URYDL/0/URYDL/v" scale="1mV" color="#c979d2" timeScale="1ms" />
             <Line id="VB11" quantity="VB11/0/VB11/v" scale="1mV" color="#1e88d5" timeScale="1ms" />
@@ -101,15 +101,15 @@ Parameters and setting used to generate this network:
       
         <Display id="muscles" title="c302_D_Syns: Membrane potential of a number of muscles" timeScale="1ms" xmin="-360.0" xmax="3960.0" ymin="-60" ymax="25">
             
-            <Line id="MDL08" quantity="MDL08/0/GenericMuscleCell/v" scale="1mV" color="#721265" timeScale="1ms" />
+            <Line id="MDL07" quantity="MDL07/0/GenericMuscleCell/v" scale="1mV" color="#721265" timeScale="1ms" />
 
         </Display>
       
         <Display id="activity_neurons" title="c302_D_Syns: Activity of a number of neurons" timeScale="1ms" xmin="-360.0" xmax="3960.0" ymin="-0.1" ymax="1.1">
             
             <Line id="AIZL" quantity="AIZL/0/AIZL/caConc" scale="1" color="#169445" timeScale="1ms" />
-            <Line id="ASHL" quantity="ASHL/0/ASHL/caConc" scale="1" color="#008200" timeScale="1ms" />
-            <Line id="DA1" quantity="DA1/0/DA1/caConc" scale="1" color="#f0c6f5" timeScale="1ms" />
+            <Line id="AS2" quantity="AS2/0/AS2/caConc" scale="1" color="#008200" timeScale="1ms" />
+            <Line id="ASHL" quantity="ASHL/0/ASHL/caConc" scale="1" color="#f0c6f5" timeScale="1ms" />
             <Line id="SMDDR" quantity="SMDDR/0/SMDDR/caConc" scale="1" color="#27d600" timeScale="1ms" />
             <Line id="URYDL" quantity="URYDL/0/URYDL/caConc" scale="1" color="#e270c8" timeScale="1ms" />
             <Line id="VB11" quantity="VB11/0/VB11/caConc" scale="1" color="#7cd2a8" timeScale="1ms" />
@@ -119,14 +119,14 @@ Parameters and setting used to generate this network:
       
         <Display id="activity_muscles" title="c302_D_Syns: Activity of a number of muscles" timeScale="1ms" xmin="-360.0" xmax="3960.0" ymin="-0.1" ymax="1.1">
             
-            <Line id="MDL08" quantity="MDL08/0/GenericMuscleCell/caConc" scale="1" color="#004900" timeScale="1ms" />
+            <Line id="MDL07" quantity="MDL07/0/GenericMuscleCell/caConc" scale="1" color="#004900" timeScale="1ms" />
 
         </Display>
 
         <OutputFile id="neurons_v" fileName="c302_D_Syns.dat">
             <OutputColumn id="AIZL_v" quantity="AIZL/0/AIZL/v"/>
+            <OutputColumn id="AS2_v" quantity="AS2/0/AS2/v"/>
             <OutputColumn id="ASHL_v" quantity="ASHL/0/ASHL/v"/>
-            <OutputColumn id="DA1_v" quantity="DA1/0/DA1/v"/>
             <OutputColumn id="SMDDR_v" quantity="SMDDR/0/SMDDR/v"/>
             <OutputColumn id="URYDL_v" quantity="URYDL/0/URYDL/v"/>
             <OutputColumn id="VB11_v" quantity="VB11/0/VB11/v"/>
@@ -135,18 +135,18 @@ Parameters and setting used to generate this network:
         
         <OutputFile id="neurons_activity" fileName="c302_D_Syns.activity.dat">
             <OutputColumn id="AIZL_v" quantity="AIZL/0/AIZL/caConc"/>
+            <OutputColumn id="AS2_v" quantity="AS2/0/AS2/caConc"/>
             <OutputColumn id="ASHL_v" quantity="ASHL/0/ASHL/caConc"/>
-            <OutputColumn id="DA1_v" quantity="DA1/0/DA1/caConc"/>
             <OutputColumn id="SMDDR_v" quantity="SMDDR/0/SMDDR/caConc"/>
             <OutputColumn id="URYDL_v" quantity="URYDL/0/URYDL/caConc"/>
             <OutputColumn id="VB11_v" quantity="VB11/0/VB11/caConc"/>
             <OutputColumn id="VD12_v" quantity="VD12/0/VD12/caConc"/>
         </OutputFile>
         <OutputFile id="muscles_v" fileName="c302_D_Syns.muscles.dat">
-            <OutputColumn id="MDL08_v" quantity="MDL08/0/GenericMuscleCell/v"/>
+            <OutputColumn id="MDL07_v" quantity="MDL07/0/GenericMuscleCell/v"/>
         </OutputFile>
         <OutputFile id="muscles_activity" fileName="c302_D_Syns.muscles.activity.dat">
-            <OutputColumn id="MDL08_v" quantity="MDL08/0/GenericMuscleCell/caConc"/>
+            <OutputColumn id="MDL07_v" quantity="MDL07/0/GenericMuscleCell/caConc"/>
         </OutputFile>
     </Simulation>
 

@@ -5,13 +5,13 @@ Parameters and setting used to generate this network:
 
     Data reader:                    SpreadsheetDataReader
     c302 version:                   0.6.1
-    Cells:                          ['URYDL', 'SMDDR', 'VD12', 'VB11', 'DA1', 'AIZL', 'ASHL']
+    Cells:                          ['URYDL', 'SMDDR', 'VD12', 'VB11', 'AS2', 'AIZL', 'ASHL']
     Cell stimulated:                []
     Connection:                     []
     Connection numbers overridden:  None
     Connection numbers scaled:      None
     Connection polarities override: None
-    Muscles:                        ['MDL08']
+    Muscles:                        ['MDL07']
 
     Known BioParameters:
         BioParameter: chem_exc_syn_decay = 10ms (SRC: BlindGuess, certainty 0.1)
@@ -53,11 +53,11 @@ Parameters and setting used to generate this network:
     <pulseGenerator id="offset_current" delay="50 ms" duration="200ms" amplitude="0pA"/>
     <pulseGenerator id="stim_URYDL_1" delay="500ms" duration="800ms" amplitude="2pA"/>
     <pulseGenerator id="stim_VD12_1" delay="500ms" duration="800ms" amplitude="2pA"/>
-    <pulseGenerator id="stim_DA1_1" delay="500ms" duration="800ms" amplitude="2pA"/>
+    <pulseGenerator id="stim_AS2_1" delay="500ms" duration="800ms" amplitude="2pA"/>
     <pulseGenerator id="stim_AIZL_1" delay="500ms" duration="800ms" amplitude="2pA"/>
     <pulseGenerator id="stim_URYDL_2" delay="1900ms" duration="800ms" amplitude="5pA"/>
     <pulseGenerator id="stim_VD12_2" delay="1900ms" duration="800ms" amplitude="5pA"/>
-    <pulseGenerator id="stim_DA1_2" delay="1900ms" duration="800ms" amplitude="5pA"/>
+    <pulseGenerator id="stim_AS2_2" delay="1900ms" duration="800ms" amplitude="5pA"/>
     <pulseGenerator id="stim_AIZL_2" delay="1900ms" duration="800ms" amplitude="5pA"/>
     <network id="c302_B_Syns">
         <population id="AIZL" component="generic_neuron_iaf_cell" size="1" type="populationList">
@@ -69,6 +69,16 @@ Parameters and setting used to generate this network:
                 <location x="5.6000004" y="-258.75" z="37.450000000000003"/>
             </instance>
         </population>
+        <population id="AS2" component="generic_neuron_iaf_cell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="ACR-14; ACR-15; CKR-2; DOP-1; DOP-3; LGC-46; NPR-3; UNC-63"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
+            <property tag="OpenWormBackerAssignedName" value="Geraldine"/>
+            <instance id="0">
+                <location x="-1.8750001" y="-203.875" z="-12.725"/>
+            </instance>
+        </population>
         <population id="ASHL" component="generic_neuron_iaf_cell" size="1" type="populationList">
             <property tag="color" value="1 .2 1"/>
             <property tag="type" value="sensory"/>
@@ -76,16 +86,6 @@ Parameters and setting used to generate this network:
             <property tag="neurotransmitter" value="Glutamate"/>
             <instance id="0">
                 <location x="5.55" y="-265.625" z="41."/>
-            </instance>
-        </population>
-        <population id="DA1" component="generic_neuron_iaf_cell" size="1" type="populationList">
-            <property tag="color" value=".5 .4 1"/>
-            <property tag="type" value="motor"/>
-            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3; SER-2; UNC-8"/>
-            <property tag="neurotransmitter" value="Acetylcholine"/>
-            <property tag="OpenWormBackerAssignedName" value="KR"/>
-            <instance id="0">
-                <location x="-0.75" y="-227.075009999999992" z="3.425"/>
             </instance>
         </population>
         <population id="SMDDR" component="generic_neuron_iaf_cell" size="1" type="populationList">
@@ -124,10 +124,10 @@ Parameters and setting used to generate this network:
                 <location x="-0.75" y="345.5" z="-23.149999999999999"/>
             </instance>
         </population>
-        <population id="MDL08" component="generic_muscle_iaf_cell" size="1" type="populationList">
+        <population id="MDL07" component="generic_muscle_iaf_cell" size="1" type="populationList">
             <property tag="color" value="0 .6 0"/>
             <instance id="0">
-                <location x="80." y="-60." z="80."/>
+                <location x="80." y="-90." z="80."/>
             </instance>
         </population>
         <projection id="NC_VD12_VB11_GABA" presynapticPopulation="VD12" postsynapticPopulation="VB11" synapse="neuron_to_neuron_inh_syn">
@@ -136,11 +136,8 @@ Parameters and setting used to generate this network:
         <projection id="NC_URYDL_SMDDR_Glutamate" presynapticPopulation="URYDL" postsynapticPopulation="SMDDR" synapse="neuron_to_neuron_exc_syn">
             <connectionWD id="0" preCellId="../URYDL/0/generic_neuron_iaf_cell" postCellId="../SMDDR/0/generic_neuron_iaf_cell" weight="1." delay="0ms"/>
         </projection>
-        <projection id="NC_DA1_MDL08_Acetylcholine" presynapticPopulation="DA1" postsynapticPopulation="MDL08" synapse="neuron_to_muscle_exc_syn">
-            <connection id="0" preCellId="../DA1/0/generic_neuron_iaf_cell" postCellId="../MDL08/0/generic_muscle_iaf_cell"/>
-        </projection>
-        <projection id="NC_SMDDR_MDL08_Acetylcholine" presynapticPopulation="SMDDR" postsynapticPopulation="MDL08" synapse="neuron_to_muscle_exc_syn">
-            <connection id="0" preCellId="../SMDDR/0/generic_neuron_iaf_cell" postCellId="../MDL08/0/generic_muscle_iaf_cell"/>
+        <projection id="NC_AS2_MDL07_Acetylcholine" presynapticPopulation="AS2" postsynapticPopulation="MDL07" synapse="neuron_to_muscle_exc_syn">
+            <connection id="0" preCellId="../AS2/0/generic_neuron_iaf_cell" postCellId="../MDL07/0/generic_muscle_iaf_cell"/>
         </projection>
         <electricalProjection id="NC_AIZL_ASHL_Generic_GJ" presynapticPopulation="AIZL" postsynapticPopulation="ASHL">
             <electricalConnectionInstanceW id="0" preCell="../AIZL/0/generic_neuron_iaf_cell" postCell="../ASHL/0/generic_neuron_iaf_cell" synapse="neuron_to_neuron_elec_syn" weight="1."/>
@@ -154,8 +151,8 @@ Parameters and setting used to generate this network:
         <inputList id="Input_VD12_stim_VD12_1" population="VD12" component="stim_VD12_1">
             <input id="0" target="../VD12/0/generic_neuron_iaf_cell" destination="synapses"/>
         </inputList>
-        <inputList id="Input_DA1_stim_DA1_1" population="DA1" component="stim_DA1_1">
-            <input id="0" target="../DA1/0/generic_neuron_iaf_cell" destination="synapses"/>
+        <inputList id="Input_AS2_stim_AS2_1" population="AS2" component="stim_AS2_1">
+            <input id="0" target="../AS2/0/generic_neuron_iaf_cell" destination="synapses"/>
         </inputList>
         <inputList id="Input_AIZL_stim_AIZL_1" population="AIZL" component="stim_AIZL_1">
             <input id="0" target="../AIZL/0/generic_neuron_iaf_cell" destination="synapses"/>
@@ -166,8 +163,8 @@ Parameters and setting used to generate this network:
         <inputList id="Input_VD12_stim_VD12_2" population="VD12" component="stim_VD12_2">
             <input id="0" target="../VD12/0/generic_neuron_iaf_cell" destination="synapses"/>
         </inputList>
-        <inputList id="Input_DA1_stim_DA1_2" population="DA1" component="stim_DA1_2">
-            <input id="0" target="../DA1/0/generic_neuron_iaf_cell" destination="synapses"/>
+        <inputList id="Input_AS2_stim_AS2_2" population="AS2" component="stim_AS2_2">
+            <input id="0" target="../AS2/0/generic_neuron_iaf_cell" destination="synapses"/>
         </inputList>
         <inputList id="Input_AIZL_stim_AIZL_2" population="AIZL" component="stim_AIZL_2">
             <input id="0" target="../AIZL/0/generic_neuron_iaf_cell" destination="synapses"/>
