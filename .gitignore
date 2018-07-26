@@ -37,3 +37,5 @@
 /examples/summary/images/traces_muscles_activity_FW_C2.png
 /examples/summary/images/traces_neuron_FW_C2.png
 /examples/summary/images/traces_neuron_activity_FW_C2.png
+/*.gv
+*.gv.png

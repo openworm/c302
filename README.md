@@ -28,7 +28,7 @@ To ensure everything is set up correctly try:
 
 1) Regenerate the NeuroML & LEMS files for one instance of the model:
 
-       python c302/c302_Pharyngeal.py B   # generate the pharyngeal subnetwork using parameter set C            
+       python c302/c302_Pharyngeal.py B  # generate pharyngeal network (see fig. above) using parameter set B
 
 2) Run a simulation with pyNeuroML:
 
@@ -41,11 +41,46 @@ To test all of the working features of the framework run [test.sh](https://raw.g
 
 ### Usage Examples
 
-#### 1) Run standard examples with pyNeuroML
+#### 1a) Run standard examples with pyNeuroML
 
 There are a number of [example models](https://github.com/openworm/c302/tree/master/examples) included with the standard distribution. 
+These consist of: A) generated NeuroML 2 network description file ([example](https://github.com/openworm/c302/blob/master/examples/c302_A_IClamp.net.nml)), 
+containing the definitions of the cells to use (e.g. **iafCell** for an integrate and fire cell), any inputs (e.g. **pulseGenerator**) as well as the 
+**populations**, **projections** and **inputLists** contained within the **network** (for a full description of the NeuroML elements see 
+[here](https://www.neuroml.org/NeuroML2CoreTypes/Networks.html)); and B) a LEMS simulation file 
+([example](https://github.com/openworm/c302/blob/master/examples/LEMS_c302_A_IClamp.xml)) describing how long to simulate, the timestep and what to plot/record.
 
+       # generate 2 neurons & 1 muscle with current inputs using parameter set A
+       pynml examples/LEMS_c302_A_IClamp.xml      
 
+       # generate full scale network using parameter set C
+       pynml examples/LEMS_c302_C_Full.xml    
+
+       # generate pharyngeal network using parameter set B
+       pynml examples/LEMS_c302_B_Pharyngeal.xml
+
+Screenshots of a simulation with pyNeuroML of c302_B_Pharyngeal are shown below:
+
+![c302_B_Pharyngeal](images/c302_B_Pharyngeal.png)
+
+#### 1b) Run standard examples with Neuron
+
+The models can also be run using the Neuron simulator. This should be installed as outlined [here](https://www.neuron.yale.edu/neuron/download). 
+
+       cd examples
+       pynml LEMS_c302_A_IClamp.xml -neuron   # Generate the Neuron files (Python/hoc/mod)
+       nrnivmodl                              # Compile the mod files (used for cell/ion channel definitions)
+       nrngui LEMS_c302_A_IClamp_nrn.py       # Run the main Python file for the simulation using Neuron
+
+Note: models with the D parameter set can only be run using Neuron (not pyNeuroML), simnce they consist of multicompartmental Neurons, e.g.
+
+       pynml LEMS_c302_D_Pharyngeal.xml -neuron  
+       nrnivmodl                         
+       nrngui LEMS_c302_D_Pharyngeal_nrn.py
+
+This produces the following (3D view on right can be produced by selecting in the Neuron main menu: Graph -> Shape plot)
+
+![Neuron](images/Neuron.png)
 
 
 ### Command line interface
