@@ -101,29 +101,35 @@ To see the structure of the network, use pyNeuroML:
 ![MyNetwork](images/MyNetwork.png)
 
 
-
 More options for using the **c302** command can be found with
 
     c302 -h
 
-### Mapping to NEURON
 
-Due to the fact that the cells are in pure NeuroML2, they can be mapped to other formats using the export feature of jNeuroML. [Install NEURON](http://www.neuron.yale.edu/neuron/download) and map the network to this format using:
+#### 3) Change parameters in a file
 
-    cd examples
+To investigate how the behaviour of a model changes when parameters are varied, it is possible to change the parameters in the parameters_X.py files and regenerate.
+
+For example in [parameters_C.py](https://github.com/openworm/c302/blob/master/c302/parameters_C.py) there are lists of parameters like:
+
+        self.add_bioparameter("muscle_leak_cond_density", "5e-7 S_per_cm2", "BlindGuess", "0.1")
+        self.add_bioparameter("neuron_leak_cond_density", "0.005 mS_per_cm2", "BlindGuess", "0.1")
+        self.add_bioparameter("leak_erev", "-50 mV", "BlindGuess", "0.1")
+
+To change the model behaviour alter one of these values, e.g. 
+
+        self.add_bioparameter("neuron_leak_cond_density", "0.02 mS_per_cm2", "BlindGuess", "0.1")
+
+and look at the behaviour afterwards (note the package needs to be reinstalled)
+
+        sudo python setup.py install           # reinstall package after change
+        python c302/c302_IClamp.py C           # regenerate c302_C_IClamp
+        jnml examples/LEMS_c302_C_IClamp.xml   # run simulation
+
+The plots below show the neuron's activity before (left) and after (right) the change, indicating how increasing the leak conductance removes the spiking:
+
+<p><img src="images/changePre.png" width=400/> <img src="images/changePost.png" width=400/></p>
     
-for jNeuroML:
-
-    jnml LEMS_c302_A_Pharyngeal.xml -neuron
-    
-or instead for pyNeuroML:    
-
-    pynml LEMS_c302_A_Pharyngeal.xml -neuron
-    
-then
-
-    nrnivmodl
-    nrngui -python LEMS_c302_A_Pharyngeal_nrn.py
 
 ### Comparing activity across scales/parameter sets
 
@@ -131,7 +137,7 @@ then
 
 See [here](https://github.com/openworm/c302/blob/master/examples/summary/README.md) for more details on this.
 
-### Understanding how c302_Full.py works
+### Background info: Understanding how c302_Full.py works
 
 <a href="https://docs.google.com/drawings/d/1urLRCe--ymaFTevRWp-etS06E9Rl82b627lC4RmUumI/edit?usp=sharing"><img src="https://docs.google.com/drawings/d/1urLRCe--ymaFTevRWp-etS06E9Rl82b627lC4RmUumI/pub?w=1307&amp;h=712"></a>
 

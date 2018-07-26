@@ -674,7 +674,6 @@ def generate(net_id,
         if isinstance(params.custom_component_types_definitions, str):
             params.custom_component_types_definitions = [params.custom_component_types_definitions]
         for ctd in params.custom_component_types_definitions:
-            lems_info["includes"].append(ctd)
             if target_directory != './':
                 # def_file = './%s' % ctd
                 def_file = "%s/%s" % (os.path.dirname(os.path.abspath(__file__)), ctd)
@@ -700,6 +699,11 @@ def generate(net_id,
                     etree.ElementTree(root).write(os.path.join(target_directory, ctd), pretty_print=True)
                 else:
                     shutil.copy(def_file, target_directory)
+                    
+            if target_directory == './' and not os.path.isfile(ctd):
+                ctd = '%s/%s'%(os.path.dirname(__file__),ctd)
+
+            lems_info["includes"].append(ctd)
             nml_doc.includes.append(IncludeType(href=ctd))
     
     
