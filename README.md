@@ -83,17 +83,28 @@ This produces the following (3D view on right can be produced by selecting in th
 ![Neuron](images/Neuron.png)
 
 
-### Command line interface
+#### 2) Use command line interface
 
-This package can be used to generate customised networks of varying size, with different cells stimulated, of varying duration from the command line:
+The **c302** command line utility can be used to generate customised networks of varying size, with different cells stimulated, of varying duration from the command line:
 
-    ./c302/__init__.py MyNetwork parameters_A -cells ["ADAL","AIBL","RIVR","RMEV"] -cellstostimulate ["ADAL","RIVR"] -duration 500
+    c302 MyNetwork parameters_C -cells ["AVBR","VD3"] -cellstostimulate ["AVBR"] -paramoverride {"unphysiological_offset_current":"2.9pA"} -duration 300
 
-This will create a NeuroML 2 file and a LEMS file to execute it, containing 4 cells, stimulating 2 of them, and with a duration of 500 ms
+This will create a NeuroML 2 file and a LEMS file to execute it, containing 2 cells, stimulating 1 of them, and with a duration of 300 ms. It can be run with:
 
-More options can be found with
+    pynml LEMS_MyNetwork.xml 
 
-    ./c302/__init__.py -h
+To see the structure of the network, use pyNeuroML:
+
+    pynml MyNetwork.net.nml -graph 4c  # Try other options like 1, 2f, 5c for varying levels of detail
+
+
+![MyNetwork](images/MyNetwork.png)
+
+
+
+More options for using the **c302** command can be found with
+
+    c302 -h
 
 ### Mapping to NEURON
 
