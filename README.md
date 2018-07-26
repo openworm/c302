@@ -114,24 +114,81 @@ To investigate how the behaviour of a model changes when parameters are varied, 
 
 For example in [parameters_C.py](https://github.com/openworm/c302/blob/master/c302/parameters_C.py) there are lists of parameters like:
 
-        self.add_bioparameter("muscle_leak_cond_density", "5e-7 S_per_cm2", "BlindGuess", "0.1")
-        self.add_bioparameter("neuron_leak_cond_density", "0.005 mS_per_cm2", "BlindGuess", "0.1")
-        self.add_bioparameter("leak_erev", "-50 mV", "BlindGuess", "0.1")
+```python
+self.add_bioparameter("muscle_leak_cond_density", "5e-7 S_per_cm2", "BlindGuess", "0.1")
+self.add_bioparameter("neuron_leak_cond_density", "0.005 mS_per_cm2", "BlindGuess", "0.1")
+self.add_bioparameter("leak_erev", "-50 mV", "BlindGuess", "0.1")
+```
 
 To change the model behaviour alter one of these values, e.g. 
 
-        self.add_bioparameter("neuron_leak_cond_density", "0.02 mS_per_cm2", "BlindGuess", "0.1")
+```python
+self.add_bioparameter("neuron_leak_cond_density", "0.02 mS_per_cm2", "BlindGuess", "0.1")
+```
 
 and look at the behaviour afterwards (note the package needs to be reinstalled)
 
-        sudo python setup.py install           # reinstall package after change
-        python c302/c302_IClamp.py C           # regenerate c302_C_IClamp
-        pynml examples/LEMS_c302_C_IClamp.xml  # run simulation
+    sudo python setup.py install           # reinstall package after change
+    python c302/c302_IClamp.py C           # regenerate c302_C_IClamp
+    pynml examples/LEMS_c302_C_IClamp.xml  # run simulation
 
 The plots below show the neuron's membrane potential on application of 6 increasing pulses of current before (left) and after (right) the change, indicating how increasing the leak conductance removes the spiking:
 
 <p><img src="images/changePre.png" width=400/> <img src="images/changePost.png" width=400/></p>
     
+#### 4) Adding a new input type to NeuroML model
+
+The structure of the model generated can be altered by modifying the NeuroML model returned in the c302_XXX.py script. 
+As an example, say we want to add a sine wave current to the Muscles network 
+(specified by [c302_Muscles.py](https://github.com/openworm/c302/blob/master/c302/c302_Muscles.py)), as opposed to the steady current clamp input. 
+This can be achieved by setting the "unphysiological_offset_current" to zero:
+
+```python
+params.set_bioparameter("unphysiological_offset_current", "0pA", "Disabling offset current", "0")
+```
+
+and (after calling c302.generate()) adding the new NeuroML element for the current and adding the input to a cell:
+
+```python
+# Import from libNeuroML      
+from neuroml import SineGenerator, InputList, Input
+import neuroml.writers as writers
+
+# Create the sine wave current generator & add to NeuroML document
+sw_input = SineGenerator(id='NewSineWaveInput', 
+                      delay='100ms', 
+                      phase='0', 
+                      duration='800ms', 
+                      amplitude='4.5pA', 
+                      period='200ms')
+
+nml_doc.sine_generators.append(sw_input)
+
+# Which cell to stimulate
+cell = 'AVBL'
+
+# create an InputList and add one Input to that cell
+input_list = InputList(id="Input_%s_%s" % (cell, sw_input.id), component=sw_input.id, populations='%s' % cell)
+input_list.input.append(Input(id=0, target="../%s/0/GenericNeuronCell"%cell, destination="synapses"))
+nml_doc.networks[0].input_lists.append(input_list)
+
+# Write over network file created already...
+nml_file = target_directory+'/'+reference+'.net.nml'
+writers.NeuroMLWriter.write(nml_doc, nml_file) 
+```
+
+These changes are made in [c302_MusclesSine.py](https://github.com/openworm/c302/blob/master/c302/c302_MusclesSine.py)) and can be run with:
+
+    python c302/c302_MusclesSine.py C
+    pynml examples/LEMS_c302_C_MusclesSine.xml 
+
+Membrane potential of neurons (left; stimulated AVBL cell in green) and muscles (right) shown below:
+
+![sine](images/sine.png)
+
+Other types of NeuroML input elements are defined [here](https://www.neuroml.org/NeuroML2CoreTypes/Inputs.html) 
+and examples are shown [here](https://github.com/NeuroML/NeuroML2/blob/master/examples/NML2_Inputs.nml).
+
 
 ### Comparing activity across scales/parameter sets
 
