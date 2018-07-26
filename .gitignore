@@ -39,3 +39,5 @@
 /examples/summary/images/traces_neuron_activity_FW_C2.png
 /*.gv
 *.gv.png
+/examples/LEMS_c302_C_MusclesSine.xml
+/examples/c302_C_MusclesSine.net.nml

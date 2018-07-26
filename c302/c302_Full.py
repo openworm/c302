@@ -25,6 +25,10 @@ def setup(parameter_set,
     cells_to_plot      = ["ADAL", "ADAR", "PVDR", "BDUR","I1R","I2L"]
     cells_to_plot      = ['AVBL','AVBR','PVCL', 'PVCR', 'DB1','DB2','VB1','VB2','DD1','DD2','VD1','VD2']
     
+    params.set_bioparameter("unphysiological_offset_current", "5pA", "Testing Full net", "0")
+    params.set_bioparameter("unphysiological_offset_current_del", "50 ms", "Testing Full net", "0")
+    params.set_bioparameter("unphysiological_offset_current_dur", "900 ms", "Testing Full net", "0")
+    
     reference = "c302_%s_Full"%parameter_set
     
     cell_names, conns = c302.get_cell_names_and_connection()

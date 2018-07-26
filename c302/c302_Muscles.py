@@ -14,9 +14,9 @@ def setup(parameter_set,
     exec('from parameters_%s import ParameterisedModel'%parameter_set, globals())
     params = ParameterisedModel()
     
-    #params.set_bioparameter("unphysiological_offset_current", "4pA", "Testing IClamp", "0")
-    params.set_bioparameter("unphysiological_offset_current_del", "5 ms", "Testing IClamp", "0")
-    params.set_bioparameter("unphysiological_offset_current_dur", "10000 ms", "Testing IClamp", "0")
+    params.set_bioparameter("unphysiological_offset_current", "5pA", "Testing IClamp", "0")
+    params.set_bioparameter("unphysiological_offset_current_del", "50 ms", "Testing IClamp", "0")
+    params.set_bioparameter("unphysiological_offset_current_dur", "900 ms", "Testing IClamp", "0")
     
     #params.set_bioparameter("exc_syn_conductance", ".20 nS", "BlindGuess", "0.1")  
     params.set_bioparameter("chem_exc_syn_decay", "5 ms", "BlindGuess", "0.1")

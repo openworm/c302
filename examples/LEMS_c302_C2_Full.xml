@@ -75,9 +75,9 @@ Parameters and setting used to generate this network:
         BioParameter: neuron_to_neuron_inh_syn_k = 0.015per_ms (SRC: BlindGuess, certainty 0.1)
         BioParameter: neuron_to_neuron_inh_syn_vth = 0 mV (SRC: BlindGuess, certainty 0.1)
         BioParameter: specific_capacitance = 5 uF_per_cm2 (SRC: BlindGuess, certainty 0.1)
-        BioParameter: unphysiological_offset_current = 5.135697186048022 pA (SRC: KnownError, certainty 0)
-        BioParameter: unphysiological_offset_current_del = 0 ms (SRC: KnownError, certainty 0)
-        BioParameter: unphysiological_offset_current_dur = 2000 ms (SRC: KnownError, certainty 0)
+        BioParameter: unphysiological_offset_current = 5pA (SRC: Testing Full net, certainty 0)
+        BioParameter: unphysiological_offset_current_del = 50 ms (SRC: Testing Full net, certainty 0)
+        BioParameter: unphysiological_offset_current_dur = 900 ms (SRC: Testing Full net, certainty 0)
 
    
     -->

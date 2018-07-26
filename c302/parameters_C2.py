@@ -159,8 +159,7 @@ class ParameterisedModel(ParameterisedModel_C):
         self.add_bioparameter("neuron_to_motor_delayed_elec_syn_mu", "-30", "BlindGuess", "0.1")
 
 
-
-        self.add_bioparameter("unphysiological_offset_current", "5.135697186048022 pA", "KnownError", "0")
+        self.add_bioparameter("unphysiological_offset_current", "0 pA", "KnownError", "0")  # Can be activated later
         self.add_bioparameter("unphysiological_offset_current_del", "0 ms", "KnownError", "0")
         self.add_bioparameter("unphysiological_offset_current_dur", "2000 ms", "KnownError", "0")
 

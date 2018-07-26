@@ -59,7 +59,9 @@ containing the definitions of the cells to use (e.g. **iafCell** for an integrat
        # generate pharyngeal network using parameter set B
        pynml examples/LEMS_c302_B_Pharyngeal.xml
 
-Screenshots of a simulation with pyNeuroML of c302_B_Pharyngeal are shown below:
+Screenshots of a simulation with pyNeuroML of c302_B_Pharyngeal are shown below (left: 
+membrane potential of 20 cells, right: "activity" of 20 cells - a value from 0-1 
+showing time smoothed activity of each cell):
 
 ![c302_B_Pharyngeal](images/c302_B_Pharyngeal.png)
 
@@ -78,12 +80,12 @@ Note: models with the D parameter set can only be run using Neuron (not pyNeuroM
        nrnivmodl                         
        nrngui LEMS_c302_D_Pharyngeal_nrn.py
 
-This produces the following (3D view on right can be produced by selecting in the Neuron main menu: Graph -> Shape plot)
+This produces the following (graph on top is [Ca2+], bottom is membrane potential; 3D view on right can be produced by selecting in the Neuron main menu: Graph -> Shape plot)
 
 ![Neuron](images/Neuron.png)
 
 
-#### 2) Use command line interface
+#### 2) Use command line interface to create new network
 
 The **c302** command line utility can be used to generate customised networks of varying size, with different cells stimulated, of varying duration from the command line:
 
@@ -124,9 +126,9 @@ and look at the behaviour afterwards (note the package needs to be reinstalled)
 
         sudo python setup.py install           # reinstall package after change
         python c302/c302_IClamp.py C           # regenerate c302_C_IClamp
-        jnml examples/LEMS_c302_C_IClamp.xml   # run simulation
+        pynml examples/LEMS_c302_C_IClamp.xml  # run simulation
 
-The plots below show the neuron's activity before (left) and after (right) the change, indicating how increasing the leak conductance removes the spiking:
+The plots below show the neuron's membrane potential on application of 6 increasing pulses of current before (left) and after (right) the change, indicating how increasing the leak conductance removes the spiking:
 
 <p><img src="images/changePre.png" width=400/> <img src="images/changePost.png" width=400/></p>
     

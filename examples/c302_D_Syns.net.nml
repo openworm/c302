@@ -47,7 +47,7 @@ Parameters and setting used to generate this network:
         BioParameter: neuron_to_neuron_elec_syn_gbase = 0.0005 nS (SRC: BlindGuess, certainty 0.1)
         BioParameter: resistivity = 12 kohm_cm (SRC: BlindGuess, certainty 0.1)
         BioParameter: specific_capacitance = 1 uF_per_cm2 (SRC: BlindGuess, certainty 0.1)
-        BioParameter: unphysiological_offset_current = 5 pA (SRC: KnownError, certainty 0)
+        BioParameter: unphysiological_offset_current = 0 pA (SRC: KnownError, certainty 0)
         BioParameter: unphysiological_offset_current_del = 50 ms (SRC: Testing IClamp, certainty 0)
         BioParameter: unphysiological_offset_current_dur = 2000 ms (SRC: KnownError, certainty 0)
 
@@ -88,7 +88,7 @@ Parameters and setting used to generate this network:
             </intracellularProperties>
         </biophysicalProperties>
     </cell>
-    <pulseGenerator id="offset_current" delay="50 ms" duration="2000 ms" amplitude="5 pA"/>
+    <pulseGenerator id="offset_current" delay="50 ms" duration="2000 ms" amplitude="0 pA"/>
     <pulseGenerator id="stim_URYDL_1" delay="500ms" duration="800ms" amplitude="2pA"/>
     <pulseGenerator id="stim_VD12_1" delay="500ms" duration="800ms" amplitude="2pA"/>
     <pulseGenerator id="stim_DA1_1" delay="500ms" duration="800ms" amplitude="2pA"/>

@@ -49,7 +49,7 @@ Parameters and setting used to generate this network:
         BioParameter: neuron_to_neuron_elec_syn_gbase = 0.05 nS (SRC: BlindGuess, certainty 0.1)
         BioParameter: neuron_to_neuron_exc_syn_conductance = 5 nS (SRC: BlindGuess, certainty 0.1)
         BioParameter: neuron_to_neuron_inh_syn_conductance = 260 nS (SRC: BlindGuess, certainty 0.1)
-        BioParameter: unphysiological_offset_current = 5 pA (SRC: KnownError, certainty 0)
+        BioParameter: unphysiological_offset_current = 0 pA (SRC: KnownError, certainty 0)
         BioParameter: unphysiological_offset_current_del = 0 ms (SRC: KnownError, certainty 0)
         BioParameter: unphysiological_offset_current_dur = 2000 ms (SRC: KnownError, certainty 0)
 
@@ -104,7 +104,7 @@ Parameters and setting used to generate this network:
             </intracellularProperties>
         </biophysicalProperties>
     </cell>
-    <pulseGenerator id="offset_current" delay="0 ms" duration="2000 ms" amplitude="5 pA"/>
+    <pulseGenerator id="offset_current" delay="0 ms" duration="2000 ms" amplitude="0 pA"/>
     <pulseGenerator id="stim_RMGR_1" delay="100ms" duration="200ms" amplitude="5pA"/>
     <pulseGenerator id="stim_ASHR_1" delay="400ms" duration="200ms" amplitude="5pA"/>
     <pulseGenerator id="stim_ASKR_1" delay="700ms" duration="200ms" amplitude="5pA"/>
