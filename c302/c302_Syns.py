@@ -16,7 +16,7 @@ def setup(parameter_set,
     exec('from parameters_%s import ParameterisedModel'%parameter_set, globals())
     params = ParameterisedModel()
     
-    stim_amplitudes = ["2pA","5pA"]
+    stim_amplitudes = ["1pA","5pA"]
     duration = (len(stim_amplitudes))*1800
     
     params.set_bioparameter("unphysiological_offset_current_del", "50 ms", "Testing IClamp", "0")

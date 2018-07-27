@@ -89,10 +89,10 @@ Parameters and setting used to generate this network:
         </biophysicalProperties>
     </cell>
     <pulseGenerator id="offset_current" delay="50 ms" duration="2000 ms" amplitude="0 pA"/>
-    <pulseGenerator id="stim_URYDL_1" delay="500ms" duration="800ms" amplitude="2pA"/>
-    <pulseGenerator id="stim_VD12_1" delay="500ms" duration="800ms" amplitude="2pA"/>
-    <pulseGenerator id="stim_AS2_1" delay="500ms" duration="800ms" amplitude="2pA"/>
-    <pulseGenerator id="stim_AIZL_1" delay="500ms" duration="800ms" amplitude="2pA"/>
+    <pulseGenerator id="stim_URYDL_1" delay="500ms" duration="800ms" amplitude="1pA"/>
+    <pulseGenerator id="stim_VD12_1" delay="500ms" duration="800ms" amplitude="1pA"/>
+    <pulseGenerator id="stim_AS2_1" delay="500ms" duration="800ms" amplitude="1pA"/>
+    <pulseGenerator id="stim_AIZL_1" delay="500ms" duration="800ms" amplitude="1pA"/>
     <pulseGenerator id="stim_URYDL_2" delay="1900ms" duration="800ms" amplitude="5pA"/>
     <pulseGenerator id="stim_VD12_2" delay="1900ms" duration="800ms" amplitude="5pA"/>
     <pulseGenerator id="stim_AS2_2" delay="1900ms" duration="800ms" amplitude="5pA"/>
