@@ -84,7 +84,7 @@ class ParameterisedModel(ParameterisedModel_C):
         self.add_bioparameter("global_connectivity_power_scaling", "0", "BlindGuess", "0.1")
 
         self.add_bioparameter("neuron_to_neuron_exc_syn_conductance", "5 nS", "BlindGuess", "0.1")
-        self.add_bioparameter("neuron_to_muscle_exc_syn_conductance", "13 nS", "BlindGuess", "0.1")
+        self.add_bioparameter("neuron_to_muscle_exc_syn_conductance", "22.3 nS", "BlindGuess", "0.1")
         
         self.add_bioparameter("exc_syn_ar", ".5 per_s", "BlindGuess", "0.1")
         self.add_bioparameter("exc_syn_ad", "20 per_s", "BlindGuess", "0.1")

@@ -190,11 +190,46 @@ Other types of NeuroML input elements are defined [here](https://www.neuroml.org
 and examples are shown [here](https://github.com/NeuroML/NeuroML2/blob/master/examples/NML2_Inputs.nml).
 
 
+#### 5) View and execute the models on Open Source Brain
+
+The Github repository for c302 is linked to a project on Open Source Brain: http://www.opensourcebrain.org/projects/c302. 
+This allows exploration of the generated NeuroML 2 networks through the Geppetto enabled OSB 3D Explorer. 
+
+To see a list of the networks which can be visuaised, click on the **More** button on the top right of the page. 
+As an example, the Pharyngeal network with parameter set D can be selected (c302_D_Pharyngeal.net.nml in the Network list, direct link 
+[here](http://www.opensourcebrain.org/projects/c302/models?explorer=https%253A%252F%252Fraw.githubusercontent.com%252Fopenworm%252Fc302%252Fmaster%252Fexamples%252Fc302_D_Pharyngeal.net.nml)).
+
+The initial view of the network is shown on the left below.
+
+<p><img src="images/pharDpre.png" width=400/> <img src="images/pharDpost.png" width=400/></p>
+
+To get the view on the right:
+- change the background to white by clicking the paintbrush icon (bottom icon on left)
+- open the connectivity matrix (Connectivity button, top left) showing the connections present between cells in an adjacency matrix
+- press Connectivity button again and select Force-directed layout
+- Run a simulation of the network
+    - Persist project so simulations can be run (star on top middle). You will need to have [signed up for OSB](http://www.opensourcebrain.org/account/register) & logged in!
+    - Press Run button; set duration to 0.4 seconds; press Submit
+    - When dialog appears asking what to record, select all membrane potentials at somas. Simulation will be set running.
+- After circle on Experiments tab has turned green, plot some of the recorded traces: 
+    - press the Control Panel icon (four horizontal lines, forth icon from botton on left)
+    - show the list of state variables: x<sup>2</sup> button on top of this dialog. Ensure target button is selected (first of four buttons on right) to only show recorded variables
+    - all recorded variables are shown, e.g. c302_D_Pharyngeal.I1L[0].Seg0_soma_0_0.v: membrane potential of soma in cell I1L. select which to plot with icons on right
+- Replay the simulation:
+    - use the time varying voltage of cells to color the corresponding 3D objects: Results -> Apply voltage colouring to morphologies
+    - open the dialog for the simulation time: Results -> Show simulation time
+    - replay the simulation: Results -> Play step by step (10x)
+
+
+
 ### Comparing activity across scales/parameter sets
+
+This page shows a set of generated simulations at each of the subnetwork/parameter set configurations, and 
+provides a quick overview of the activity of the different instances of c302:
 
 <a href="https://github.com/openworm/c302/blob/master/examples/summary/README.md"><img src="https://raw.githubusercontent.com/openworm/c302/master/images/activity.png" alt="activity"  height="250"/></a>
 
-See [here](https://github.com/openworm/c302/blob/master/examples/summary/README.md) for more details on this.
+**Note that c302 is still in active development and not all of the configurations are producing sensible results.**
 
 ### Background info: Understanding how c302_Full.py works
 
