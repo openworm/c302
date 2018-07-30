@@ -229,9 +229,11 @@ provides a quick overview of the activity of the different instances of c302:
 
 <a href="https://github.com/openworm/c302/blob/master/examples/summary/README.md"><img src="https://raw.githubusercontent.com/openworm/c302/master/images/activity.png" alt="activity"  height="250"/></a>
 
-**Note that c302 is still in active development and not all of the configurations are producing sensible results.**
+**Note that c302 is still in active development and not all of the configurations are producing physiologically realistic results.**
 
 ### Background info: Understanding how c302_Full.py works
+
+Overview of the files and packages used in the framework:
 
 <a href="https://docs.google.com/drawings/d/1urLRCe--ymaFTevRWp-etS06E9Rl82b627lC4RmUumI/edit?usp=sharing"><img src="https://docs.google.com/drawings/d/1urLRCe--ymaFTevRWp-etS06E9Rl82b627lC4RmUumI/pub?w=1307&amp;h=712"></a>
 
