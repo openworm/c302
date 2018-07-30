@@ -84,7 +84,7 @@ class ParameterisedModel(ParameterisedModel_C):
         self.add_bioparameter("global_connectivity_power_scaling", "0", "BlindGuess", "0.1")
 
         self.add_bioparameter("neuron_to_neuron_exc_syn_conductance", "5 nS", "BlindGuess", "0.1")
-        self.add_bioparameter("neuron_to_muscle_exc_syn_conductance", "13 nS", "BlindGuess", "0.1")
+        self.add_bioparameter("neuron_to_muscle_exc_syn_conductance", "22.3 nS", "BlindGuess", "0.1")
         
         self.add_bioparameter("exc_syn_ar", ".5 per_s", "BlindGuess", "0.1")
         self.add_bioparameter("exc_syn_ad", "20 per_s", "BlindGuess", "0.1")
@@ -107,7 +107,7 @@ class ParameterisedModel(ParameterisedModel_C):
         self.add_bioparameter("neuron_to_neuron_elec_syn_gbase", "0.05 nS", "BlindGuess", "0.1")
         self.add_bioparameter("neuron_to_muscle_elec_syn_gbase", "0.0001 nS", "BlindGuess", "0.1")
 
-        self.add_bioparameter("unphysiological_offset_current", "5 pA", "KnownError", "0")
+        self.add_bioparameter("unphysiological_offset_current", "0 pA", "KnownError", "0") # Can be activated later
         self.add_bioparameter("unphysiological_offset_current_del", "0 ms", "KnownError", "0")
         self.add_bioparameter("unphysiological_offset_current_dur", "2000 ms", "KnownError", "0")
 

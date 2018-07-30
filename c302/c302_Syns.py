@@ -16,7 +16,7 @@ def setup(parameter_set,
     exec('from parameters_%s import ParameterisedModel'%parameter_set, globals())
     params = ParameterisedModel()
     
-    stim_amplitudes = ["2pA","5pA"]
+    stim_amplitudes = ["1pA","5pA"]
     duration = (len(stim_amplitudes))*1800
     
     params.set_bioparameter("unphysiological_offset_current_del", "50 ms", "Testing IClamp", "0")
@@ -27,8 +27,8 @@ def setup(parameter_set,
     inh_post = "VB11"
     gap_1 = "AIZL"
     gap_2 = "ASHL"
-    moto_pre = "DA1"
-    muscle_post = "MDL08"
+    moto_pre = "AS2"
+    muscle_post = "MDL07"
     
     cells = [exc_pre, exc_post, inh_pre, inh_post, moto_pre]
     cells_to_stimulate_extra      = [exc_pre, inh_pre,moto_pre]
@@ -65,7 +65,7 @@ def setup(parameter_set,
     nml_file = target_directory+'/'+reference+'.net.nml'
     writers.NeuroMLWriter.write(nml_doc, nml_file) # Write over network file written above...
     
-    print("(Re)written network file to: "+nml_file)
+    c302.print_("(Re)written network file to: "+nml_file)
     
              
     return cells, cells_to_stimulate_extra, params, [], nml_doc

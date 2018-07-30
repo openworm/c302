@@ -79,7 +79,7 @@ class ParameterisedModel(c302ModelPrototype):
         self.add_bioparameter("neuron_to_neuron_elec_syn_gbase", "0.3 nS", "BlindGuess", "0.1")
         self.add_bioparameter("neuron_to_muscle_elec_syn_gbase", "0.3 nS", "BlindGuess", "0.1")
 
-        self.add_bioparameter("unphysiological_offset_current", "0.35 nA", "KnownError", "0")
+        self.add_bioparameter("unphysiological_offset_current", "0 nA", "KnownError", "0") # Can be activated later
         self.add_bioparameter("unphysiological_offset_current_del", "0 ms", "KnownError", "0")
         self.add_bioparameter("unphysiological_offset_current_dur", "2000 ms", "KnownError", "0")
 

@@ -14,9 +14,9 @@ def setup(parameter_set,
     exec('from parameters_%s import ParameterisedModel'%parameter_set, globals())
     params = ParameterisedModel()
     
-    #params.set_bioparameter("unphysiological_offset_current", "2pA", "Testing Osc", "0")
-    params.set_bioparameter("unphysiological_offset_current_del", "10 ms", "Testing Osc", "0")
-    params.set_bioparameter("unphysiological_offset_current_dur", "2500 ms", "Testing Osc", "0")
+    params.set_bioparameter("unphysiological_offset_current", "4pA", "Testing Osc", "0")
+    params.set_bioparameter("unphysiological_offset_current_del", "100 ms", "Testing Osc", "0")
+    params.set_bioparameter("unphysiological_offset_current_dur", "800 ms", "Testing Osc", "0")
     
     #params.set_bioparameter("chem_exc_syn_gbase", ".02 nS", "BlindGuess", "0.1")
     params.set_bioparameter("chem_exc_syn_decay", "5 ms", "BlindGuess", "0.1")

@@ -76,7 +76,7 @@ class ParameterisedModelPrototype(object):
         self.bioparameters.append(bioparameter)
 
 
-    def get_bioparameter(self, name, warn_if_missing=True):
+    def get_bioparameter(self, name, warn_if_missing=False):
         for bp in self.bioparameters:
             if bp.name == name:
                 return bp

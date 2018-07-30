@@ -38,9 +38,9 @@ Parameters and setting used to generate this network:
         BioParameter: neuron_to_neuron_chem_exc_syn_gbase = 0.01nS (SRC: BlindGuess, certainty 0.1)
         BioParameter: neuron_to_neuron_chem_inh_syn_gbase = 0.01nS (SRC: BlindGuess, certainty 0.1)
         BioParameter: neuron_to_neuron_elec_syn_gbase = 0.01 nS (SRC: BlindGuess, certainty 0.1)
-        BioParameter: unphysiological_offset_current = 0pA (SRC: KnownError, certainty 0)
-        BioParameter: unphysiological_offset_current_del = 10 ms (SRC: Testing Osc, certainty 0)
-        BioParameter: unphysiological_offset_current_dur = 2500 ms (SRC: Testing Osc, certainty 0)
+        BioParameter: unphysiological_offset_current = 4pA (SRC: Testing Osc, certainty 0)
+        BioParameter: unphysiological_offset_current_del = 100 ms (SRC: Testing Osc, certainty 0)
+        BioParameter: unphysiological_offset_current_dur = 800 ms (SRC: Testing Osc, certainty 0)
 
 </notes>
     <include href="cell_B.xml"/>
@@ -49,7 +49,7 @@ Parameters and setting used to generate this network:
     <gapJunction id="neuron_to_neuron_elec_syn" conductance="0.01 nS"/>
     <iafCell type="iafActivityCell" id="generic_muscle_iaf_cell" C="3pF" thresh="-30mV" reset="-50mV" leakConductance="0.1nS" leakReversal="-50mV" tau1="50ms"/>
     <iafCell type="iafActivityCell" id="generic_neuron_iaf_cell" C="3pF" thresh="-30mV" reset="-50mV" leakConductance="0.1nS" leakReversal="-50mV" tau1="50ms"/>
-    <pulseGenerator id="offset_current" delay="10 ms" duration="2500 ms" amplitude="0pA"/>
+    <pulseGenerator id="offset_current" delay="100 ms" duration="800 ms" amplitude="4pA"/>
     <network id="c302_B_Oscillator">
         <population id="AVBL" component="generic_neuron_iaf_cell" size="1" type="populationList">
             <property tag="color" value="1 0 .4"/>

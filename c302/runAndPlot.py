@@ -233,7 +233,7 @@ if __name__ == '__main__':
         run_c302('OscillatorM','C0','',2000,0.025,'jNeuroML_NEURON')
         
     elif '-test' in sys.argv:
-        run_c302('Oscillator','C0','',2000,0.025,'jNeuroML_NEURON',show_plot_already=False)
+        run_c302('Oscillator','C0','',2000,0.025,'jNeuroML',show_plot_already=False)
         
     elif '-oscC' in sys.argv:
         run_c302('Oscillator','C','',2000,0.05,'jNeuroML_NEURON')

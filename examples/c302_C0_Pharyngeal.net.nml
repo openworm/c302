@@ -44,7 +44,7 @@ Parameters and setting used to generate this network:
         BioParameter: neuron_specific_capacitance = 5 uF_per_cm2 (SRC: BlindGuess, certainty 0.1)
         BioParameter: neuron_spike_thresh = -20 mV (SRC: BlindGuess, certainty 0.1)
         BioParameter: neuron_to_muscle_elec_syn_gbase = 0.0001 nS (SRC: BlindGuess, certainty 0.1)
-        BioParameter: neuron_to_muscle_exc_syn_conductance = 13 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_exc_syn_conductance = 22.3 nS (SRC: BlindGuess, certainty 0.1)
         BioParameter: neuron_to_muscle_inh_syn_conductance = 0.25 nS (SRC: BlindGuess, certainty 0.1)
         BioParameter: neuron_to_neuron_elec_syn_gbase = 0.05 nS (SRC: BlindGuess, certainty 0.1)
         BioParameter: neuron_to_neuron_exc_syn_conductance = 5 nS (SRC: BlindGuess, certainty 0.1)
