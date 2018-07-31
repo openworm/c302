@@ -1,7 +1,7 @@
 ### Parameter config summary 
 <h2>c302 simulation</h2>
 <p>Parameter set: <b>A</b>; configuration: <b>Social</b></p>
-<p>Generated on: Thu, 26 Jul 2018</p><br/>
+<p>Generated on: Tue, 31 Jul 2018 with c302 v0.7.0</p><br/>
 <table>
 
 <tr>

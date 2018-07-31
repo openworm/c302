@@ -4,7 +4,7 @@
 Parameters and setting used to generate this network:
 
     Data reader:                    UpdatedSpreadsheetDataReader2
-    c302 version:                   0.6.1
+    c302 version:                   0.7.0
     Cells:                          ['AVBL', 'AVBR', 'DB1', 'DB2', 'DB3', 'DB4', 'DB5', 'DB6', 'DB7', 'VD1', 'VD2', 'VD3', 'VD4', 'VD5', 'VD6', 'VD7', 'VD8', 'VD9', 'VD10', 'VD11', 'VD12', 'VD13', 'VB1', 'VB2', 'VB3', 'VB4', 'VB5', 'VB6', 'VB7', 'VB8', 'VB9', 'VB10', 'VB11', 'DD1', 'DD2', 'DD3', 'DD4', 'DD5', 'DD6']
     Cell stimulated:                []
     Connection:                     []
@@ -1152,8 +1152,8 @@ Parameters and setting used to generate this network:
     <pulseGenerator id="stim_MVR06_15" delay="11750ms" duration="250ms" amplitude="4pA"/>
     <pulseGenerator id="stim_MDL07_15" delay="11380ms" duration="250ms" amplitude="4pA"/>
     <pulseGenerator id="stim_MDR07_15" delay="11380ms" duration="250ms" amplitude="4pA"/>
-    <pulseGenerator id="stim_AVBL_1" delay="0ms" duration="5000ms" amplitude="15pA"/>
-    <pulseGenerator id="stim_AVBR_1" delay="0ms" duration="5000ms" amplitude="15pA"/>
+    <pulseGenerator id="stim_AVBL_1" delay="0ms" duration="1e9ms" amplitude="15pA"/>
+    <pulseGenerator id="stim_AVBR_1" delay="0ms" duration="1e9ms" amplitude="15pA"/>
     <pulseGenerator id="stim_DB1_1" delay="190ms" duration="250ms" amplitude="3pA"/>
     <pulseGenerator id="stim_VB1_1" delay="590ms" duration="250ms" amplitude="3pA"/>
     <pulseGenerator id="stim_DB1_2" delay="990ms" duration="250ms" amplitude="3pA"/>

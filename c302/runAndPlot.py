@@ -312,7 +312,7 @@ if __name__ == '__main__':
                 print('Params: %s'%p)
                 html2 = '<h2>c302 simulation</h2>\n'
                 html2 += '<p>Parameter set: <b>%s</b>; configuration: <b>%s</b></p>\n'%(c,p)
-                html2 += '<p>Generated on: %s</p><br/>\n'%(time.strftime("%a, %d %b %Y", time.gmtime()))
+                html2 += '<p>Generated on: %s with c302 v%s</p><br/>\n'%(time.strftime("%a, %d %b %Y", time.gmtime()), c302.__version__)
                 html2 += '<table>\n'
                 html+='  <td><a href="summary_%s_%s.html">\n'%(c,p)
                 html+='    <img alt="?" src="%s/neurons_%s_%s.png" height="80"/></a>\n'%(img_loc,c,p)

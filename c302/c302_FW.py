@@ -137,8 +137,8 @@ def setup(parameter_set,
     start = 190
     motor_dur = '250ms'
 
-    input_list.append(('AVBL', '0ms', '%sms'%duration, '15pA'))
-    input_list.append(('AVBR', '0ms', '%sms'%duration, '15pA'))
+    input_list.append(('AVBL', '0ms', '1e9ms', '15pA'))
+    input_list.append(('AVBR', '0ms', '1e9ms', '15pA'))
     input_list.append(('DB1', '%sms'%(start), motor_dur, '3pA'))
     input_list.append(('VB1', '%sms'%(start+d_v_delay), motor_dur, '3pA'))
 
