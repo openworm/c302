@@ -220,7 +220,9 @@ To get the view on the right:
     - open the dialog for the simulation time: Results -> Show simulation time
     - replay the simulation: Results -> Play step by step (10x)
 
+It is also possible to view and analyse other configurations, e.g. [c302_D_Full](http://www.opensourcebrain.org/projects/c302/repository/revisions/master/show/examples?explorer=https%253A%252F%252Fraw.githubusercontent.com%252Fopenworm%252Fc302%252Fmaster%252Fexamples%252Fc302_D_Full.net.nml):
 
+![c302_D_Full](images/c302_D_Full.png)
 
 ### Comparing activity across scales/parameter sets
 
