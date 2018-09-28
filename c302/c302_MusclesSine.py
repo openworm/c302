@@ -61,19 +61,19 @@ def setup(parameter_set,
             cells_to_stimulate.append(cell)'''
     #cells_to_stimulate = ['DB1', 'VB1']
     
-    cells_to_stimulate = ['PVCL', 'AVBL']
-    cells_to_stimulate.extend(['DB1', 'VB1'])
-    cells_to_stimulate = ['PVCL','PVCR']
-    cells_to_stimulate = ['PLML','PLMR']
+    #cells_to_stimulate = ['PVCL', 'AVBL']
+    #cells_to_stimulate.extend(['DB1', 'VB1'])
+    #cells_to_stimulate = ['PVCL','PVCR']
+    #cells_to_stimulate = ['PLML','PLMR']
     cells_to_stimulate = ['AVBL','AVBR']
     
     # Plot some directly stimulated & some not stimulated
-    cells_to_plot      = ['AS1', 'AS10', 'AVFL', 'DA1','DB1','DB4','DB7','IL1DL','RID', 'RIML','SMBDL', 'SMBDR', 'VB1', 'VB5', 'VB10','VC1', 'VC2']
+    #cells_to_plot      = ['AS1', 'AS10', 'AVFL', 'DA1','DB1','DB4','DB7','IL1DL','RID', 'RIML','SMBDL', 'SMBDR', 'VB1', 'VB5', 'VB10','VC1', 'VC2']
     cells_to_plot      = ['AVBL','AVBR','PVCL', 'PVCR', 'DB1','DB2','VB1','VB2','DD1','DD2','VD1','VD2']
     
     reference = "c302_%s_MusclesSine"%parameter_set
     
-    muscles_to_include = None
+    muscles_to_include = True #includes all muscles in plots
     nml_doc = None
     
     if generate:
