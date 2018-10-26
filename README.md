@@ -9,6 +9,11 @@ It uses information on the synaptic connectivity of the network (from
 [libNeuroML](https://github.com/NeuralEnsemble/libNeuroML) to generate
 a network in valid NeuroML, which can be run in [jNeuroML](https://github.com/NeuroML/jNeuroML) or [pyNeuroML](https://github.com/NeuroML/pyNeuroML).
 
+**The c302 paper has recently been published!**
+
+*c302: a multiscale framework for modelling the nervous system of Caenorhabditis elegans*
+Padraig Gleeson, David Lung, Radu Grosu, Ramin Hasani, Stephen D. Larson, [Phil. Trans. R. Soc. B 2018 373 20170379](http://rstb.royalsocietypublishing.org/content/373/1758/20170379); DOI: 10.1098/rstb.2017.0379.
+
 
 ### To install & test
 
