@@ -2,7 +2,7 @@ set -e
 
 ##   Install
 
-sudo python setup.py install
+python setup.py install
 
 ##   (Re)generate NeuroML 2 & LEMS files from the python scripts
 

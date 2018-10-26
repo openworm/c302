@@ -1,0 +1,12 @@
+{
+    "Sim_IClamp_GenericMuscleCell": {
+        "version": "NeuroMLlite v0.1.4", 
+        "network": "IClamp_GenericMuscleCell.json", 
+        "duration": 3000.0, 
+        "dt": 0.025, 
+        "seed": 12345, 
+        "recordTraces": {
+            "all": "*"
+        }
+    }
+}

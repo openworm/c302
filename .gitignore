@@ -44,3 +44,5 @@
 /examples/*MusclesSine.*ml
 /examples/console.txt
 .DS_Store
+/examples/parametersweep/*.gv*
+/examples/parametersweep/report.*.txt
