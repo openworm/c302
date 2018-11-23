@@ -1,4 +1,4 @@
-### BBP cell summary 
+### c302 cell summary 
 <table>
 <tr>
   <td width=30><b>GenericNeuronCell</b></td>
