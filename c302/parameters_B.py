@@ -146,6 +146,6 @@ class IafActivityCell():
         
         
     
-    def export(self, outfile, level, namespace, name_, pretty_print=True):
+    def export(self, outfile, level, namespace, name_, pretty_print=True, **kwargs_):
         outfile.write('    '*level + '<iafCell type="iafActivityCell" id="%s" C="%s" thresh="%s" reset="%s" leakConductance="%s" leakReversal="%s" tau1="%s"/>\n'%(self.id, self.C, self.thresh, self.reset, self.leak_conductance, self.leak_reversal, self.tau1))
 

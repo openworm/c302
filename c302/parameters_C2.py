@@ -882,7 +882,7 @@ class SwitchedGapJunction():
         self.conductance = conductance
         self.delay = delay
 
-    def export(self, outfile, level, namespace, name_, pretty_print=True):
+    def export(self, outfile, level, namespace, name_, pretty_print=True, **kwargs_):
         outfile.write(
             '    ' * level + '<switchedGapJunction id="%s" conductance="%s" delay="%s" />\n' % (
             self.id, self.conductance, self.delay))
@@ -896,7 +896,7 @@ class DelayedGapJunction():
         self.sigma = sigma
         self.mu = mu
 
-    def export(self, outfile, level, namespace, name_, pretty_print=True):
+    def export(self, outfile, level, namespace, name_, pretty_print=True, **kwargs_):
         outfile.write(
             '    ' * level + '<delayedGapJunction id="%s" weight="%s" conductance="%s" sigma="%s" mu="%s" />\n'
             % (self.id, self.weight, self.conductance, self.sigma, self.mu))
@@ -914,7 +914,7 @@ class ProprioGapJunction():
         self.sigma = sigma
         self.mu = mu
 
-    def export(self, outfile, level, namespace, name_, pretty_print=True):
+    def export(self, outfile, level, namespace, name_, pretty_print=True, **kwargs_):
         outfile.write(
             '    ' * level + '<proprioGapJunction id="%s" weight="%s" conductance="%s" p_conductance="%s" sigma="%s" mu="%s" />\n'
             % (self.id, self.weight, self.conductance, self.p_conductance, self.sigma, self.mu))
@@ -936,7 +936,7 @@ class ProprioGapJunction2():
         self.vth = vth
         self.erev = erev
 
-    def export(self, outfile, level, namespace, name_, pretty_print=True):
+    def export(self, outfile, level, namespace, name_, pretty_print=True, **kwargs_):
         outfile.write(
             '    ' * level + '<proprioGapJunction2 id="%s" weight="%s" ar="%s" ad="%s" beta="%s" vth="%s" erev="%s" conductance="%s" p_conductance="%s" sigma="%s" mu="%s" />\n'
             % (self.id, self.weight, self.ar, self.ad, self.beta, self.vth, self.erev, self.conductance, self.p_conductance, self.sigma, self.mu))
@@ -957,7 +957,7 @@ class DelayedGradedSynapse():
         self.sigma = sigma
         self.mu = mu
 
-    def export(self, outfile, level, namespace, name_, pretty_print=True):
+    def export(self, outfile, level, namespace, name_, pretty_print=True, **kwargs_):
         outfile.write(
             '    ' * level + '<delayedGradedSynapse id="%s" weight="%s" conductance="%s" delta="%s" vth="%s" k="%s" erev="%s" sigma="%s" mu="%s" />\n'
             % (self.id, self.weight, self.conductance, self.delta, self.vth, self.k, self.erev, self.sigma, self.mu))
@@ -977,7 +977,7 @@ class NeuronMuscle():
         self.cath = cath
         self.erev = erev
 
-    def export(self, outfile, level, namespace, name_, pretty_print=True):
+    def export(self, outfile, level, namespace, name_, pretty_print=True, **kwargs_):
         outfile.write(
             '    ' * level + '<proprio id="%s" conductance="%s" ar="%s" ad="%s" beta="%s" cath="%s" erev="%s"/>\n' % (
             self.id, self.conductance, self.ar, self.ad, self.beta, self.cath, self.erev))
@@ -992,7 +992,7 @@ class MuscleConcentrationModel():
         self.rho = rho
 
 
-    def export(self, outfile, level, namespace, name_, pretty_print=True):
+    def export(self, outfile, level, namespace, name_, pretty_print=True, **kwargs_):
         outfile.write(
             '    ' * level + '<muscleConcentrationModel id="%s" ion="%s" restingConc="%s" decayConstant="%s" rho="%s" />\n'
             % (self.id, self.ion, self.resting_conc, self.decay_constant, self.rho))
@@ -1018,7 +1018,7 @@ class MuscleConcentrationModel2():
         self.xrest = xrest
 
 
-    def export(self, outfile, level, namespace, name_, pretty_print=True):
+    def export(self, outfile, level, namespace, name_, pretty_print=True, **kwargs_):
         outfile.write(
             '    ' * level + '<muscleConcentrationModel2 id="%s" ion="%s" restingConc="%s" decayConstant="%s" rho="%s" xRho="%s" iCaSigmoidMid="%s" iCaSigmoidSlope="%s" xSigmoidMid="%s" xSigmoidSlope="%s" xDecay="%s" xrest="%s" />\n'
             % (self.id, self.ion, self.resting_conc, self.decay_constant, self.rho, self.xRho, self.iCaSigmoidMid, self.iCaSigmoidSlope, self.xSigmoidMid, self.xSigmoidSlope, self.xDecay, self.xrest))
@@ -1037,7 +1037,7 @@ class GradedSynapse2():
         self.vth = vth
         self.erev = erev
 
-    def export(self, outfile, level, namespace, name_, pretty_print=True):
+    def export(self, outfile, level, namespace, name_, pretty_print=True, **kwargs_):
         outfile.write(
             '    ' * level + '<gradedSynapse2 id="%s" conductance="%s" ar="%s" ad="%s" beta="%s" vth="%s" erev="%s"/>\n' % (
             self.id, self.conductance, self.ar, self.ad, self.beta, self.vth, self.erev))

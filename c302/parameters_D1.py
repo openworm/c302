@@ -293,6 +293,6 @@ class GradedSynapse2():
         self.erev = erev
         
     
-    def export(self, outfile, level, namespace, name_, pretty_print=True):
+    def export(self, outfile, level, namespace, name_, pretty_print=True, **kwargs_):
         outfile.write('    '*level + '<gradedSynapse2 id="%s" conductance="%s" ar="%s" ad="%s" beta="%s" vth="%s" erev="%s"/>\n'%(self.id, self.conductance, self.ar, self.ad, self.beta, self.vth, self.erev))
 
