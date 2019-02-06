@@ -173,37 +173,20 @@ def readMuscleDataFromSpreadsheet():
 
 def main():
     
-    cells, conns = readDataFromSpreadsheet()
+    cells, conns = readDataFromSpreadsheet(include_nonconnected_cells=True)
 
-    print_("%i cells in spreadsheet: %s..."%(len(cells),sorted(cells)[0:3]))
-
-    from os import listdir
-    cell_names = [f[:-9] for f in listdir('%s/CElegans/morphologies/' % spreadsheet_location) if
-                  f.endswith('.java.xml')]
-
-    cell_names.remove('MDL08')  # muscle
-
-    s_c = sorted(cell_names)
-    print_("%i cell morphologies found: %s..."%(len(cell_names),s_c[0:3]))
-
-    for c in cells: cell_names.remove(c)
-
-    print_("Difference: %s"%cell_names)
-
-    cells2, conns2 = readDataFromSpreadsheet(include_nonconnected_cells=True)
-
-    assert(len(cells2) == 302)
+    assert(len(cells) == 302)
 
     print_("Lengths are equal if include_nonconnected_cells=True")
     
-    
-    print_("Found %s connections: %s..."%(len(conns2),conns2[0]))
+    print_("Found %s cells: %s..."%(len(cells),cells))
+    print_("Found %s connections: %s..."%(len(conns),conns[0]))
 
     neurons, muscles, conns = readMuscleDataFromSpreadsheet()
 
-    print_("Found %i neurons connected to muscles: %s\n" % (len(neurons), sorted(neurons)))
-    print_("Found %i muscles connected to neurons: %s\n" % (len(muscles), sorted(muscles)))
-    print_("Found %i connections between neurons and muscles, e.g. %s" % (len(conns), conns[0]))
+    print_("Found %i neurons connected to muscles: %s"%(len(neurons), sorted(neurons)))
+    print_("Found %i muscles connected to neurons: %s"%(len(muscles), sorted(muscles)))
+    print_("Found %i connections between neurons and muscles, e.g. %s"%(len(conns), conns[0]))
 
 
 if __name__ == '__main__':
