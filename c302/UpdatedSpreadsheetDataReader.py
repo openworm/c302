@@ -88,7 +88,7 @@ def parse_row(row):
     synclass = get_synclass(pre, syntype)
     return pre, post, num, syntype, synclass
 
-def readDataFromSpreadsheet(include_nonconnected_cells=False):
+def read_data(include_nonconnected_cells=False):
     """
     Args:
         include_nonconnected_cells (bool): Also append neurons without known connections to other neurons to the 'cells' list. True if they should get appended, False otherwise.
@@ -130,7 +130,7 @@ def readDataFromSpreadsheet(include_nonconnected_cells=False):
     return cells, conns
 
 
-def readMuscleDataFromSpreadsheet():
+def read_muscle_data():
     """
     Returns:
         neurons (:obj:`list` of :obj:`str`): List of motor neurons. Each neuron has at least one connection with a post-synaptic muscle cell.
@@ -173,7 +173,7 @@ def readMuscleDataFromSpreadsheet():
 
 def main():
     
-    cells, conns = readDataFromSpreadsheet(include_nonconnected_cells=True)
+    cells, conns = read_data(include_nonconnected_cells=True)
 
     assert(len(cells) == 302)
 
@@ -182,7 +182,7 @@ def main():
     print_("Found %s cells: %s..."%(len(cells),cells))
     print_("Found %s connections: %s..."%(len(conns),conns[0]))
 
-    neurons, muscles, conns = readMuscleDataFromSpreadsheet()
+    neurons, muscles, conns = read_muscle_data()
 
     print_("Found %i neurons connected to muscles: %s"%(len(neurons), sorted(neurons)))
     print_("Found %i muscles connected to neurons: %s"%(len(muscles), sorted(muscles)))

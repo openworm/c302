@@ -20,7 +20,7 @@ spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/data/"
 
 from c302 import print_
 
-def readDataFromSpreadsheet(include_nonconnected_cells=False, neuron_connect=False):
+def read_data(include_nonconnected_cells=False, neuron_connect=False):
 
 
     
@@ -76,7 +76,7 @@ def readDataFromSpreadsheet(include_nonconnected_cells=False, neuron_connect=Fal
 
         return cells, conns
 
-def readMuscleDataFromSpreadsheet():
+def read_muscle_data():
 
     conns = []
     neurons = []
@@ -109,7 +109,7 @@ def readMuscleDataFromSpreadsheet():
 
 def main():
 
-    cells, conns = readDataFromSpreadsheet(include_nonconnected_cells=True)
+    cells, conns = read_data(include_nonconnected_cells=True)
 
     assert(len(cells) == 302)
 
@@ -118,7 +118,7 @@ def main():
     print_("Found %s cells: %s..."%(len(cells),cells))
     print_("Found %s connections: %s..."%(len(conns),conns[0]))
 
-    neurons, muscles, conns = readMuscleDataFromSpreadsheet()
+    neurons, muscles, conns = read_muscle_data()
 
     print_("Found %i neurons connected to muscles: %s"%(len(neurons), sorted(neurons)))
     print_("Found %i muscles connected to neurons: %s"%(len(muscles), sorted(muscles)))

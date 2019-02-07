@@ -6,7 +6,8 @@
 Parameters and setting used to generate this network:
 
     Data reader:                    SpreadsheetDataReader
-    c302 version:                   0.7.0
+    c302 version:                   0.7.2
+    PyOpenWorm version:             0.7.1
     Cells:                          All cells
     Cell stimulated:                ['PLML', 'PLMR']
     Connection:                     []

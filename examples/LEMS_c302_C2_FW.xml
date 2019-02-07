@@ -6,7 +6,8 @@
 Parameters and setting used to generate this network:
 
     Data reader:                    UpdatedSpreadsheetDataReader2
-    c302 version:                   0.7.0
+    c302 version:                   0.7.2
+    PyOpenWorm version:             0.7.1
     Cells:                          ['AVBL', 'AVBR', 'DB1', 'DB2', 'DB3', 'DB4', 'DB5', 'DB6', 'DB7', 'VD1', 'VD2', 'VD3', 'VD4', 'VD5', 'VD6', 'VD7', 'VD8', 'VD9', 'VD10', 'VD11', 'VD12', 'VD13', 'VB1', 'VB2', 'VB3', 'VB4', 'VB5', 'VB6', 'VB7', 'VB8', 'VB9', 'VB10', 'VB11', 'DD1', 'DD2', 'DD3', 'DD4', 'DD5', 'DD6']
     Cell stimulated:                []
     Connection:                     []

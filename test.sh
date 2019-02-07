@@ -4,6 +4,14 @@ set -e
 
 python setup.py install
 
+##   Test readers
+
+python c302/SpreadsheetDataReader.py 
+python c302/UpdatedSpreadsheetDataReader.py                                                                                                                                                                      
+python c302/UpdatedSpreadsheetDataReader2.py                                                                                                                                                                  
+python c302/OpenWormReader.py 
+
+
 ##   (Re)generate NeuroML 2 & LEMS files from the python scripts
 
 python c302/c302_IClamp.py A

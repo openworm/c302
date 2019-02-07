@@ -4,7 +4,8 @@
 Parameters and setting used to generate this network:
 
     Data reader:                    SpreadsheetDataReader
-    c302 version:                   0.7.0
+    c302 version:                   0.7.2
+    PyOpenWorm version:             0.7.1
     Cells:                          ['DB2', 'VB2', 'DD2', 'VD2', 'DB3', 'VB3', 'DD3', 'VD3', 'DA2', 'VA2', 'DA3', 'VA3', 'AVBL', 'AVBR']
     Cell stimulated:                ['AVBL', 'AVBR']
     Connection:                     []

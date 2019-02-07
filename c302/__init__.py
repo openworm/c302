@@ -389,7 +389,7 @@ def get_cell_names_and_connection(data_reader="SpreadsheetDataReader", test=Fals
     
     spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/data/"
 
-    cell_names, conns = load_data_reader(data_reader).readDataFromSpreadsheet(include_nonconnected_cells=True)
+    cell_names, conns = load_data_reader(data_reader).read_data(include_nonconnected_cells=True)
 
     cell_names.sort()
     
@@ -400,7 +400,7 @@ def get_cell_muscle_names_and_connection(data_reader="SpreadsheetDataReader", te
     
     #spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/../../../"
 
-    mneurons, all_muscles, muscle_conns = load_data_reader(data_reader).readMuscleDataFromSpreadsheet()
+    mneurons, all_muscles, muscle_conns = load_data_reader(data_reader).read_muscle_data()
 
     all_muscles = get_muscle_names()
         
@@ -606,8 +606,10 @@ def generate(net_id,
 
     info = "\n\nParameters and setting used to generate this network:\n\n"+\
            "    Data reader:                    %s\n" % data_reader+\
-           "    c302 version:                   %s\n" % __version__+\
-           "    Cells:                          %s\n" % (cells if cells is not None else "All cells")+\
+           "    c302 version:                   %s\n" % __version__
+    if P:
+        info+= "    PyOpenWorm version:             %s\n" % P.__version__
+    info+= "    Cells:                          %s\n" % (cells if cells is not None else "All cells")+\
            "    Cell stimulated:                %s\n" % (cells_to_stimulate if cells_to_stimulate is not None else "All neurons")+\
            "    Connection:                     %s\n" % (conns_to_include if conns_to_include is not None else "All connections") + \
            "    Connection numbers overridden:  %s\n" % (conn_number_override if conn_number_override is not None else "None")+\
