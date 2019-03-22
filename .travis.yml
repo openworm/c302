@@ -58,6 +58,7 @@ script:
     
     # Testing c302
     - cd c302 
+    - mkdir examples
     - python c302_IClamp.py A    
     #- omv install NEURON # Need to install NEURON
     #- export NEURON_HOME=/home/travis/neuron/nrn/x86_64/
