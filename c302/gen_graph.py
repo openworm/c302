@@ -1,4 +1,5 @@
 #!/usr/bin/python
+from __future__ import print_function
 '''
 Utility for converting NeuroML descriptions to graphs
 
@@ -13,7 +14,7 @@ from subprocess import call
 
 
 def usage(script):
-    print 'USAGE: python %s directory [r]' % (script)
+    print('USAGE: python %s directory [r]' % (script))
     sys.exit(-1)
 
 
@@ -45,14 +46,14 @@ def get_elec_conns(root):
         for conn in elec_conns:
             if "%s -> %s" % (post, pre) in conn:
                 append = False
-        
+
 
         #if is_muscle(pre) or is_muscle(post):
         #    continue
 
         if append:
             elec_conns.append('%s -> %s [style="dashed" minlen=2 arrowhead="none"]' % (pre, post))
-    return elec_conns    
+    return elec_conns
 
 
 def get_chem_conns(root):
@@ -95,9 +96,9 @@ def write_graph_file(filename, cells, elec_conns, chem_conns, layout="neato"):
                 graph.write('[color="slategray1"]')
             else:
                 graph.write('[color="thistle2"]')
-                
+
             graph.write(';\n')
-            
+
         graph.write('\n')
 
         for elec in elec_conns:
@@ -106,9 +107,9 @@ def write_graph_file(filename, cells, elec_conns, chem_conns, layout="neato"):
         for chem in chem_conns:
             graph.write('%s;\n' % chem)
 
-        
+
         graph.write('}')
-        
+
     print("Written file: %s"%filename)
 
 
@@ -120,7 +121,7 @@ def find_nml_files(directory='.', recursive=False):
 
     if recursive:
         return [y for x in os.walk(directory) for y in glob(os.path.join(x[0], '*.nml'))]
-    
+
     return files
 
 
@@ -130,8 +131,8 @@ def execute_graph_generator(graphviz_file, fig_file):
     print("Converted file: %s using neato to %s"%(graphviz_file,graphviz_file.replace('gv','png')))
     os.system('dot -Gsplines=none %s | neato -Gsplines=true -Tpng -o%s' % (graphviz_file, fig_file))
     print("Converted file: %s using dot to %s"%(graphviz_file,graphviz_file.replace('gv','png')))
-    
-        
+
+
 
 
 def main():
@@ -140,14 +141,14 @@ def main():
         filenames = find_nml_files(sys.argv[1], recursive=True)
     else:
         if os.path.isfile(sys.argv[1]):
-            
+
             filenames = [sys.argv[1]]
         else:
             filenames = find_nml_files(sys.argv[1])
 
     for filename in sorted(filenames)[:5]:
         if filename.endswith('nml') and not filename.endswith('cell.nml'):
-            print "=============================\nCreating graph for %s" % filename
+            print("=============================\nCreating graph for %s" % filename)
             dirname = os.path.dirname(filename)
             tree = ET.parse(filename)
             root = tree.getroot()
@@ -170,7 +171,7 @@ def main():
 
             write_graph_file(os.path.join(dirname, graphviz_file2), cells, elec_conns, chem_conns, layout='neato')
             execute_graph_generator(os.path.join(dirname, graphviz_file2), os.path.join(dirname, fig_file2))
-    
+
 
 if __name__ == '__main__':
 
@@ -178,5 +179,5 @@ if __name__ == '__main__':
         usage(sys.argv[0])
 
     main()
-    
+
 

@@ -1,8 +1,10 @@
+from __future__ import print_function
 __author__ = 'Ari'
 
 from operator import itemgetter
 import xlrd
 import os
+
 
 def comparitor(fName1, fName2):
 
@@ -26,15 +28,15 @@ def comparitor(fName1, fName2):
     matches, col1, col2 = matchLists(cols1, cols2, indexName1, indexName2)
 
     # Print results. Give number of pairs that are matched, remained from unmatched files, and associated pairs.
-    print "Number of matching pairs: " + str(len(matches[indexName2[0]]))
+    print("Number of matching pairs: " + str(len(matches[indexName2[0]])))
     for p in range(len(matches[indexName2[0]])):
-        print str(matches[indexName2[0]][p])+" -> "+str(matches[indexName2[1]][p])+" ("+str(matches[indexName2[2]][p])+", "+str(matches[indexName2[3]][p])+")"
-    print "\nNumber of pairs unmatched in " + fName1 + " is: " + str(len(col1[indexName2[0]]))
+        print(str(matches[indexName2[0]][p])+" -> "+str(matches[indexName2[1]][p])+" ("+str(matches[indexName2[2]][p])+", "+str(matches[indexName2[3]][p])+")")
+    print("\nNumber of pairs unmatched in " + fName1 + " is: " + str(len(col1[indexName2[0]])))
     for p in range(len(col1[indexName2[0]])):
-        print str(col1[indexName2[0]][p])+" -> "+str(col1[indexName2[1]][p])+" ("+str(col1[indexName2[2]][p])+", "+str(col1[indexName2[3]][p])+")"
-    print "\nNumber of pairs unmatched in " + fName2 + " is: " + str(len(col2[indexName1[0]]))
+        print(str(col1[indexName2[0]][p])+" -> "+str(col1[indexName2[1]][p])+" ("+str(col1[indexName2[2]][p])+", "+str(col1[indexName2[3]][p])+")")
+    print("\nNumber of pairs unmatched in " + fName2 + " is: " + str(len(col2[indexName1[0]])))
     for p in range(len(col2[indexName1[0]])):
-        print str(col2[indexName1[0]][p])+" -> "+str(col2[indexName1[1]][p])+" ("+str(col2[indexName1[2]][p])+", "+str(col2[indexName1[3]][p])+")"
+        print(str(col2[indexName1[0]][p])+" -> "+str(col2[indexName1[1]][p])+" ("+str(col2[indexName1[2]][p])+", "+str(col2[indexName1[3]][p])+")")
 
 
 # Get columns from .txt files
