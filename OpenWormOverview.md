@@ -10,4 +10,4 @@ See below for the relation of this to other OpenWorm subprojects:
 - [ChannelWorm](https://github.com/openworm/ChannelWorm2) (see also [here](https://github.com/openworm/ChannelWorm))
 - [Geppetto](https://github.com/openworm/org.geppetto)
 - [Sibernetic](https://github.com/openworm/sibernetic)
-- [Movement vlaidation](https://github.com/openworm/open-worm-analysis-toolbox)
+- [Movement validation](https://github.com/openworm/open-worm-analysis-toolbox)
