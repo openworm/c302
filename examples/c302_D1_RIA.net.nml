@@ -1,0 +1,144 @@
+<neuroml xmlns="http://www.neuroml.org/schema/neuroml2"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2 https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2beta5.xsd" id="c302_D1_RIA">
+    <notes>
+
+Parameters and setting used to generate this network:
+
+    Data reader:                    SpreadsheetDataReader
+    c302 version:                   0.7.2
+    PyOpenWorm version:             0.7.1
+    Cells:                          ['RIAL', 'SMDDL', 'SMDVL']
+    Cell stimulated:                []
+    Connection:                     []
+    Connection numbers overridden:  None
+    Connection numbers scaled:      None
+    Connection polarities override: None
+    Muscles:                        []
+
+    Known BioParameters:
+        BioParameter: ca_boyle_erev = 40 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: ca_conc_decay_time = 11.5943 ms (SRC: BlindGuess, certainty 0.1)
+        BioParameter: ca_conc_rho = 0.000238919 mol_per_m_per_A_per_s (SRC: BlindGuess, certainty 0.1)
+        BioParameter: cell_diameter = 5 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: exc_syn_ad = 20 per_s (SRC: BlindGuess, certainty 0.1)
+        BioParameter: exc_syn_ar = .5 per_s (SRC: BlindGuess, certainty 0.1)
+        BioParameter: exc_syn_beta = 0.25 per_mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: exc_syn_erev = 0 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: exc_syn_vth = -35 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: global_connectivity_power_scaling = 0 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: inh_syn_ad = 10 per_s (SRC: BlindGuess, certainty 0.1)
+        BioParameter: inh_syn_ar = .005 per_s (SRC: BlindGuess, certainty 0.1)
+        BioParameter: inh_syn_beta = 0.5 per_mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: inh_syn_erev = -80 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: inh_syn_vth = -55 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: initial_memb_pot = -45 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: k_fast_erev = -60 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: k_slow_erev = -60 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: leak_erev = -50 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_ca_boyle_cond_density = 4 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_k_fast_cond_density = 0.2 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_k_slow_cond_density = 4 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_leak_cond_density = 0.005 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_length = 20 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: muscle_spike_thresh = -26 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_ca_boyle_cond_density = 1.6862775772264702 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_k_fast_cond_density = 0.0711643917483308 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_k_slow_cond_density = 1.8333751019872582 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_leak_cond_density = 0.005 mS_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_spike_thresh = -26 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_elec_syn_gbase = 0.0001 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_exc_syn_conductance = 2 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_inh_syn_conductance = 0.25 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_elec_syn_gbase = 0.005 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_exc_syn_conductance = 2 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_inh_syn_conductance = 26 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: resistivity = 3 kohm_cm (SRC: BlindGuess, certainty 0.1)
+        BioParameter: specific_capacitance = 1 uF_per_cm2 (SRC: BlindGuess, certainty 0.1)
+        BioParameter: unphysiological_offset_current = 0 pA (SRC: KnownError, certainty 0)
+        BioParameter: unphysiological_offset_current_del = 0 ms (SRC: KnownError, certainty 0)
+        BioParameter: unphysiological_offset_current_dur = 2000 ms (SRC: KnownError, certainty 0)
+
+</notes>
+    <include href="cell_C.xml"/>
+    <include href="custom_synapses.xml"/>
+    <include href="cells/RIAL_D.cell.nml"/>
+    <include href="cells/SMDDL_D.cell.nml"/>
+    <include href="cells/SMDVL_D.cell.nml"/>
+    <fixedFactorConcentrationModel id="CaPool" ion="ca" restingConc="0 mM" decayConstant="11.5943 ms" rho="0.000238919 mol_per_m_per_A_per_s"/>
+    <silentSynapse id="silent"/>
+    <gradedSynapse2 id="neuron_to_neuron_inh_syn" conductance="26 nS" ar=".005 per_s" ad="10 per_s" beta="0.5 per_mV" vth="-55 mV" erev="-80 mV"/>
+    <gradedSynapse2 id="neuron_to_neuron_exc_syn" conductance="2 nS" ar=".5 per_s" ad="20 per_s" beta="0.25 per_mV" vth="-35 mV" erev="0 mV"/>
+    <cell id="GenericMuscleCell">
+        <morphology id="morphology_GenericMuscleCell">
+            <segment id="0" name="soma">
+                <proximal x="0.000000e+00" y="0.000000e+00" z="0.000000e+00" diameter="5.0"/>
+                <distal x="0.000000e+00" y="2.000000e+01" z="0.000000e+00" diameter="5.0"/>
+            </segment>
+        </morphology>
+        <biophysicalProperties id="biophys_GenericMuscleCell">
+            <membraneProperties>
+                <channelDensity id="Leak_all" ionChannel="Leak" condDensity="0.005 mS_per_cm2" erev="-50 mV" ion="non_specific"/>
+                <channelDensity id="k_slow_all" ionChannel="k_slow" condDensity="4 mS_per_cm2" erev="-60 mV" ion="k"/>
+                <channelDensity id="k_fast_all" ionChannel="k_fast" condDensity="0.2 mS_per_cm2" erev="-60 mV" ion="k"/>
+                <channelDensity id="ca_boyle_all" ionChannel="ca_boyle" condDensity="4 mS_per_cm2" erev="40 mV" ion="ca"/>
+                <spikeThresh value="-26 mV"/>
+                <specificCapacitance value="1 uF_per_cm2"/>
+                <initMembPotential value="-45 mV"/>
+            </membraneProperties>
+            <intracellularProperties>
+                <species id="ca" concentrationModel="CaPool" ion="ca" initialConcentration="0 mM" initialExtConcentration="2E-6 mol_per_cm3"/>
+                <resistivity value="3 kohm_cm"/>
+            </intracellularProperties>
+        </biophysicalProperties>
+    </cell>
+    <pulseGenerator id="offset_current" delay="0 ms" duration="2000 ms" amplitude="0 pA"/>
+    <pulseGenerator id="stim_SMDDL_1" delay="100ms" duration="100ms" amplitude="4pA"/>
+    <pulseGenerator id="stim_SMDVL_1" delay="400ms" duration="100ms" amplitude="4pA"/>
+    <network id="c302_D1_RIA">
+        <population id="RIAL" component="RIAL" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron"/>
+            <property tag="receptor" value="DOP-2; FRPR-4; SER-1; SER-2"/>
+            <property tag="neurotransmitter" value="Glutamate"/>
+            <property tag="OpenWormBackerAssignedName" value="Sara"/>
+            <instance id="0">
+                <location x="0." y="0." z="0."/>
+            </instance>
+        </population>
+        <population id="SMDDL" component="SMDDL" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="LGC-55; NTR-2"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
+            <instance id="0">
+                <location x="0." y="0." z="0."/>
+            </instance>
+        </population>
+        <population id="SMDVL" component="SMDVL" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="LGC-55; NTR-2"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
+            <instance id="0">
+                <location x="0." y="0." z="0."/>
+            </instance>
+        </population>
+        <continuousProjection id="NC_RIAL_SMDDL_GABA" presynapticPopulation="RIAL" postsynapticPopulation="SMDDL">
+            <continuousConnectionInstanceW id="0" preCell="../RIAL/0/RIAL" postCell="../SMDDL/0/SMDDL" preComponent="silent" postComponent="neuron_to_neuron_inh_syn" weight="1."/>
+        </continuousProjection>
+        <continuousProjection id="NC_RIAL_SMDVL_GABA" presynapticPopulation="RIAL" postsynapticPopulation="SMDVL">
+            <continuousConnectionInstanceW id="0" preCell="../RIAL/0/RIAL" postCell="../SMDVL/0/SMDVL" preComponent="silent" postComponent="neuron_to_neuron_inh_syn" weight="1."/>
+        </continuousProjection>
+        <continuousProjection id="NC_SMDDL_RIAL_Acetylcholine" presynapticPopulation="SMDDL" postsynapticPopulation="RIAL">
+            <continuousConnectionInstanceW id="0" preCell="../SMDDL/0/SMDDL" postCell="../RIAL/0/RIAL" preComponent="silent" postComponent="neuron_to_neuron_exc_syn" weight="1."/>
+        </continuousProjection>
+        <continuousProjection id="NC_SMDVL_RIAL_Acetylcholine" presynapticPopulation="SMDVL" postsynapticPopulation="RIAL">
+            <continuousConnectionInstanceW id="0" preCell="../SMDVL/0/SMDVL" postCell="../RIAL/0/RIAL" preComponent="silent" postComponent="neuron_to_neuron_exc_syn" weight="1."/>
+        </continuousProjection>
+        <inputList id="Input_SMDDL_stim_SMDDL_1" population="SMDDL" component="stim_SMDDL_1">
+            <input id="0" target="../SMDDL/0/SMDDL" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_SMDVL_stim_SMDVL_1" population="SMDVL" component="stim_SMDVL_1">
+            <input id="0" target="../SMDVL/0/SMDVL" destination="synapses"/>
+        </inputList>
+    </network>
+</neuroml>
