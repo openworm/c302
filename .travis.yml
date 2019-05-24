@@ -41,6 +41,7 @@ install:
     - git clone https://github.com/openworm/PyOpenWorm.git
     - cd PyOpenWorm
     - git checkout pg_tests
+    - pip install pyparsing==2.0.3
     - python setup.py install
     - pow clone https://github.com/openworm/OpenWormData.git
     - cd examples
