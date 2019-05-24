@@ -40,8 +40,11 @@ install:
     # Install specific version of PyOpenWorm
     - git clone https://github.com/openworm/PyOpenWorm.git
     - cd PyOpenWorm
-    - git checkout v0.7.1
+    - git checkout pg_tests
     - python setup.py install
+    - pow clone https://github.com/openworm/OpenWormData.git
+    - cd examples
+    - python NetworkInfo.py # test example...
     - cd ..
     
     # NeuroML & main install
