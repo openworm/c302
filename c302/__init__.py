@@ -65,7 +65,7 @@ def print_(msg, print_it=True): # print_it=False when not verbose
 try:
     import PyOpenWorm as P
     print_("Connecting to the PyOpenWorm database...")
-    P.connect()
+    pyopenworm_conn = P.connect('./pyopenworm.conf')
 except Exception as e:
     P = None
     print_("Can't connect to PyOpenWorm: ...")
@@ -443,19 +443,22 @@ def elem_in_coll_matches_conn(coll, conn):
 
 
 def _get_cell_info(cells):
-
     if P==None:
-        #print_("Couldn't connect to PyOpenWorm...")
+        print_("Couldn't connect to PyOpenWorm...")
         return None, None
     #Get the worm object.
-    worm = P.Worm()
-
+    
+    from PyOpenWorm.context import Context
+    from PyOpenWorm.worm import Worm
+    from PyOpenWorm.neuron import Neuron
+    ctx = Context(ident="http://openworm.org/data", conf=pyopenworm_conn.conf).stored
+    worm = ctx(Worm)()
     #Extract the network object from the worm object.
     net = worm.neuron_network()
 
     #Go through our list and get the neuron object associated with each name.
     #Store these in another list.
-    some_neurons = [P.Neuron(name) for name in cells]
+    some_neurons = [ctx(Neuron)(name) for name in cells]
     all_neuron_info = collections.OrderedDict()
     all_muscle_info = collections.OrderedDict()
     
@@ -745,8 +748,9 @@ def generate(net_id,
                 recps = sorted(all_neuron_info[cell][2])
                 pop0.properties.append(Property("receptor", str('; '.join(recps))))
                 pop0.properties.append(Property("neurotransmitter", str('; '.join(all_neuron_info[cell][3]))))  
-            except:
+            except Exception as e:
                 # It's only metadata...
+                print e
                 pass
             
             pop0.instances.append(inst)
