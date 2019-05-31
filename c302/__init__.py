@@ -55,7 +55,8 @@ __version__ = about['__version__']
 
 LEMS_TEMPLATE_FILE = "LEMS_c302_TEMPLATE.xml"
 
-
+worm = None
+pyow_ctx = None
 
 def print_(msg, print_it=True): # print_it=False when not verbose
     if print_it:
@@ -64,13 +65,31 @@ def print_(msg, print_it=True): # print_it=False when not verbose
 
 try:
     import PyOpenWorm as P
-    print_("Connecting to the PyOpenWorm database...")
+    print_("Connecting to the database of PyOpenWorm ...")
     pyopenworm_conn = P.connect('./pyopenworm.conf')
+    print_("Connected to the PyOpenWorm database...")
 except Exception as e:
     P = None
     print_("Can't connect to PyOpenWorm: ...")
     print(e)
     
+def get_pyopenworm_worm():
+    
+    global worm, pyow_ctx
+    
+    if worm:
+        return worm, pyow_ctx
+        
+    if P==None:
+        print_("Couldn't connect to PyOpenWorm...")
+        return None
+    
+    from PyOpenWorm.context import Context
+    from PyOpenWorm.worm import Worm
+    pyow_ctx = Context(ident="http://openworm.org/data", conf=pyopenworm_conn.conf).stored
+    worm = pyow_ctx(Worm)()
+    
+    return worm, pyow_ctx
 
 def load_data_reader(data_reader="SpreadsheetDataReader"):
     """
@@ -443,16 +462,12 @@ def elem_in_coll_matches_conn(coll, conn):
 
 
 def _get_cell_info(cells):
-    if P==None:
-        print_("Couldn't connect to PyOpenWorm...")
+
+    from PyOpenWorm.neuron import Neuron    
+    worm, ctx = get_pyopenworm_worm()
+    if worm==None:
         return None, None
-    #Get the worm object.
     
-    from PyOpenWorm.context import Context
-    from PyOpenWorm.worm import Worm
-    from PyOpenWorm.neuron import Neuron
-    ctx = Context(ident="http://openworm.org/data", conf=pyopenworm_conn.conf).stored
-    worm = ctx(Worm)()
     #Extract the network object from the worm object.
     net = worm.neuron_network()
 
