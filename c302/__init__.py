@@ -77,10 +77,10 @@ def get_pyopenworm_worm():
     
     global worm, pyow_ctx
     
-    if worm:
+    if worm is not None:
         return worm, pyow_ctx
         
-    if P==None:
+    if P is None:
         print_("Couldn't connect to PyOpenWorm...")
         return None
     
@@ -465,7 +465,7 @@ def _get_cell_info(cells):
 
     from PyOpenWorm.neuron import Neuron    
     worm, ctx = get_pyopenworm_worm()
-    if worm==None:
+    if worm is None:
         return None, None
     
     #Extract the network object from the worm object.
@@ -599,7 +599,7 @@ def generate(net_id,
 
     params.create_models()
     
-    if vmin==None:
+    if vmin is None:
         if params.is_level_A() or params.is_level_B():
             vmin=-52 
         elif params.is_level_C():
@@ -610,7 +610,7 @@ def generate(net_id,
             vmin=-52 
             
     
-    if vmax==None:
+    if vmax is None:
         if params.is_level_A() or params.is_level_B():
             vmax=-28
         elif params.is_level_C():
@@ -881,7 +881,7 @@ def generate(net_id,
     #if data_reader == "SpreadsheetDataReader":
     #    all_muscles = get_muscle_names()
         
-    if muscles_to_include == None or muscles_to_include == True:
+    if muscles_to_include is None or muscles_to_include == True:
         muscles_to_include = all_muscles
     elif muscles_to_include == False:
         muscles_to_include = []
@@ -962,7 +962,7 @@ def generate(net_id,
 
             muscle_count+=1
             
-            if cells_to_stimulate!=None and muscle in cells_to_stimulate:
+            if cells_to_stimulate is not None and muscle in cells_to_stimulate:
 
                 target = "../%s/0/%s"%(pop0.id, params.generic_muscle_cell.id)
                 if params.is_level_D():
@@ -1445,7 +1445,7 @@ def generate(net_id,
     returns:  ["AVAL", "AVBL"]
 '''
 def parse_list_arg(list_arg):
-    if list_arg==None: return None
+    if list_arg is None: return None
     if list_arg==[]: return []
     entries = list_arg[1:-1].split(',')
     ret = [e for e in entries]
@@ -1457,7 +1457,7 @@ def parse_list_arg(list_arg):
     returns:  {}
 '''
 def parse_dict_arg(dict_arg):
-    if not dict_arg or dict_arg == "None": return None
+    if dict_arg is None or dict_arg == "None": return None
     ret = {}
     entries = str(dict_arg[1:-1]).split(',')
     for e in entries:

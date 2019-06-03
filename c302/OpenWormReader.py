@@ -30,7 +30,7 @@ def read_data(include_nonconnected_cells=False):
     net = worm.neuron_network()
     
 
-    print_("Finished initialising OpenWormReader, worm: %s, network: %s"%(worm, net))
+    print_("Finished initialising OpenWormReader")
 
     all_connections = net.synapses()
 
