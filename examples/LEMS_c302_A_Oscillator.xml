@@ -6,8 +6,8 @@
 Parameters and setting used to generate this network:
 
     Data reader:                    SpreadsheetDataReader
-    c302 version:                   0.7.2
-    PyOpenWorm version:             0.7.1
+    c302 version:                   0.7.3
+    PyOpenWorm version:             0.10.0.post0
     Cells:                          ['DB2', 'VB2', 'DD2', 'VD2', 'DB3', 'VB3', 'DD3', 'VD3', 'DA2', 'VA2', 'DA3', 'VA3', 'AVBL', 'AVBR']
     Cell stimulated:                ['AVBL', 'AVBR']
     Connection:                     []
@@ -66,20 +66,20 @@ Parameters and setting used to generate this network:
 
         <Display id="neurons" title="c302_A_Oscillator: Membrane potential of a number of neurons" timeScale="1ms" xmin="-100.0" xmax="1100.0" ymin="-52" ymax="-28">
             
-            <Line id="AVBL" quantity="AVBL/0/generic_neuron_iaf_cell/v" scale="1mV" color="#8b779a" timeScale="1ms" />
-            <Line id="AVBR" quantity="AVBR/0/generic_neuron_iaf_cell/v" scale="1mV" color="#7b5b40" timeScale="1ms" />
-            <Line id="DA2" quantity="DA2/0/generic_neuron_iaf_cell/v" scale="1mV" color="#002479" timeScale="1ms" />
-            <Line id="DA3" quantity="DA3/0/generic_neuron_iaf_cell/v" scale="1mV" color="#25f0c6" timeScale="1ms" />
-            <Line id="DB2" quantity="DB2/0/generic_neuron_iaf_cell/v" scale="1mV" color="#cf2d27" timeScale="1ms" />
-            <Line id="DB3" quantity="DB3/0/generic_neuron_iaf_cell/v" scale="1mV" color="#5957d1" timeScale="1ms" />
-            <Line id="DD2" quantity="DD2/0/generic_neuron_iaf_cell/v" scale="1mV" color="#70c8d1" timeScale="1ms" />
-            <Line id="DD3" quantity="DD3/0/generic_neuron_iaf_cell/v" scale="1mV" color="#88d57c" timeScale="1ms" />
-            <Line id="VA2" quantity="VA2/0/generic_neuron_iaf_cell/v" scale="1mV" color="#d028e9" timeScale="1ms" />
-            <Line id="VA3" quantity="VA3/0/generic_neuron_iaf_cell/v" scale="1mV" color="#721265" timeScale="1ms" />
-            <Line id="VB2" quantity="VB2/0/generic_neuron_iaf_cell/v" scale="1mV" color="#efb351" timeScale="1ms" />
-            <Line id="VB3" quantity="VB3/0/generic_neuron_iaf_cell/v" scale="1mV" color="#3365b5" timeScale="1ms" />
-            <Line id="VD2" quantity="VD2/0/generic_neuron_iaf_cell/v" scale="1mV" color="#84b42c" timeScale="1ms" />
-            <Line id="VD3" quantity="VD3/0/generic_neuron_iaf_cell/v" scale="1mV" color="#c68d55" timeScale="1ms" />
+            <Line id="AVBL" quantity="AVBL/0/generic_neuron_iaf_cell/v" scale="1mV" color="#f87100" timeScale="1ms" />
+            <Line id="AVBR" quantity="AVBR/0/generic_neuron_iaf_cell/v" scale="1mV" color="#eaf195" timeScale="1ms" />
+            <Line id="DA2" quantity="DA2/0/generic_neuron_iaf_cell/v" scale="1mV" color="#ac15c4" timeScale="1ms" />
+            <Line id="DA3" quantity="DA3/0/generic_neuron_iaf_cell/v" scale="1mV" color="#3c00ca" timeScale="1ms" />
+            <Line id="DB2" quantity="DB2/0/generic_neuron_iaf_cell/v" scale="1mV" color="#58a09e" timeScale="1ms" />
+            <Line id="DB3" quantity="DB3/0/generic_neuron_iaf_cell/v" scale="1mV" color="#262f1d" timeScale="1ms" />
+            <Line id="DD2" quantity="DD2/0/generic_neuron_iaf_cell/v" scale="1mV" color="#007df7" timeScale="1ms" />
+            <Line id="DD3" quantity="DD3/0/generic_neuron_iaf_cell/v" scale="1mV" color="#108b77" timeScale="1ms" />
+            <Line id="VA2" quantity="VA2/0/generic_neuron_iaf_cell/v" scale="1mV" color="#9a1694" timeScale="1ms" />
+            <Line id="VA3" quantity="VA3/0/generic_neuron_iaf_cell/v" scale="1mV" color="#458fa5" timeScale="1ms" />
+            <Line id="VB2" quantity="VB2/0/generic_neuron_iaf_cell/v" scale="1mV" color="#7b5b40" timeScale="1ms" />
+            <Line id="VB3" quantity="VB3/0/generic_neuron_iaf_cell/v" scale="1mV" color="#ef7488" timeScale="1ms" />
+            <Line id="VD2" quantity="VD2/0/generic_neuron_iaf_cell/v" scale="1mV" color="#008200" timeScale="1ms" />
+            <Line id="VD3" quantity="VD3/0/generic_neuron_iaf_cell/v" scale="1mV" color="#247960" timeScale="1ms" />
             
         </Display>
 

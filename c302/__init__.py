@@ -55,7 +55,8 @@ __version__ = about['__version__']
 
 LEMS_TEMPLATE_FILE = "LEMS_c302_TEMPLATE.xml"
 
-
+worm = None
+pyow_ctx = None
 
 def print_(msg, print_it=True): # print_it=False when not verbose
     if print_it:
@@ -64,13 +65,31 @@ def print_(msg, print_it=True): # print_it=False when not verbose
 
 try:
     import PyOpenWorm as P
-    print_("Connecting to the PyOpenWorm database...")
-    P.connect()
+    print_("Connecting to the database of PyOpenWorm ...")
+    pyopenworm_conn = P.connect('./pyopenworm.conf')
+    print_("Connected to the PyOpenWorm database...")
 except Exception as e:
     P = None
     print_("Can't connect to PyOpenWorm: ...")
     print(e)
     
+def get_pyopenworm_worm():
+    
+    global worm, pyow_ctx
+    
+    if worm is not None:
+        return worm, pyow_ctx
+        
+    if P is None:
+        print_("Couldn't connect to PyOpenWorm...")
+        return None
+    
+    from PyOpenWorm.context import Context
+    from PyOpenWorm.worm import Worm
+    pyow_ctx = Context(ident="http://openworm.org/data", conf=pyopenworm_conn.conf).stored
+    worm = pyow_ctx(Worm)()
+    
+    return worm, pyow_ctx
 
 def load_data_reader(data_reader="SpreadsheetDataReader"):
     """
@@ -444,18 +463,17 @@ def elem_in_coll_matches_conn(coll, conn):
 
 def _get_cell_info(cells):
 
-    if P==None:
-        #print_("Couldn't connect to PyOpenWorm...")
+    from PyOpenWorm.neuron import Neuron    
+    worm, ctx = get_pyopenworm_worm()
+    if worm is None:
         return None, None
-    #Get the worm object.
-    worm = P.Worm()
-
+    
     #Extract the network object from the worm object.
     net = worm.neuron_network()
 
     #Go through our list and get the neuron object associated with each name.
     #Store these in another list.
-    some_neurons = [P.Neuron(name) for name in cells]
+    some_neurons = [ctx(Neuron)(name) for name in cells]
     all_neuron_info = collections.OrderedDict()
     all_muscle_info = collections.OrderedDict()
     
@@ -581,7 +599,7 @@ def generate(net_id,
 
     params.create_models()
     
-    if vmin==None:
+    if vmin is None:
         if params.is_level_A() or params.is_level_B():
             vmin=-52 
         elif params.is_level_C():
@@ -592,7 +610,7 @@ def generate(net_id,
             vmin=-52 
             
     
-    if vmax==None:
+    if vmax is None:
         if params.is_level_A() or params.is_level_B():
             vmax=-28
         elif params.is_level_C():
@@ -745,8 +763,9 @@ def generate(net_id,
                 recps = sorted(all_neuron_info[cell][2])
                 pop0.properties.append(Property("receptor", str('; '.join(recps))))
                 pop0.properties.append(Property("neurotransmitter", str('; '.join(all_neuron_info[cell][3]))))  
-            except:
+            except Exception as e:
                 # It's only metadata...
+                print e
                 pass
             
             pop0.instances.append(inst)
@@ -862,7 +881,7 @@ def generate(net_id,
     #if data_reader == "SpreadsheetDataReader":
     #    all_muscles = get_muscle_names()
         
-    if muscles_to_include == None or muscles_to_include == True:
+    if muscles_to_include is None or muscles_to_include == True:
         muscles_to_include = all_muscles
     elif muscles_to_include == False:
         muscles_to_include = []
@@ -943,7 +962,7 @@ def generate(net_id,
 
             muscle_count+=1
             
-            if cells_to_stimulate!=None and muscle in cells_to_stimulate:
+            if cells_to_stimulate is not None and muscle in cells_to_stimulate:
 
                 target = "../%s/0/%s"%(pop0.id, params.generic_muscle_cell.id)
                 if params.is_level_D():
@@ -1426,7 +1445,7 @@ def generate(net_id,
     returns:  ["AVAL", "AVBL"]
 '''
 def parse_list_arg(list_arg):
-    if list_arg==None: return None
+    if list_arg is None: return None
     if list_arg==[]: return []
     entries = list_arg[1:-1].split(',')
     ret = [e for e in entries]
@@ -1438,7 +1457,7 @@ def parse_list_arg(list_arg):
     returns:  {}
 '''
 def parse_dict_arg(dict_arg):
-    if not dict_arg or dict_arg == "None": return None
+    if dict_arg is None or dict_arg == "None": return None
     ret = {}
     entries = str(dict_arg[1:-1]).split(',')
     for e in entries:

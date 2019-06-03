@@ -1,7 +1,6 @@
 from NeuroMLUtilities import ConnectionInfo
-import PyOpenWorm as P
 
-from c302 import print_
+from c302 import print_, get_pyopenworm_worm
 
 ############################################################
 
@@ -23,10 +22,17 @@ def get_cells_in_model(net):
 def read_data(include_nonconnected_cells=False):
 
     print_("Initialising OpenWormReader")
-    P.connect()
-    net = P.Worm().get_neuron_network()
-    all_connections = net.synapses()
+    from PyOpenWorm.neuron import Neuron    
+    
+    worm, ctx = get_pyopenworm_worm()
+   
+    #Extract the network object from the worm object.
+    net = worm.neuron_network()
+    
+
     print_("Finished initialising OpenWormReader")
+
+    all_connections = net.synapses()
 
     conns = []
     cells = []
@@ -37,7 +43,7 @@ def read_data(include_nonconnected_cells=False):
         pre = str(s.pre_cell().name())
         post = str(s.post_cell().name())
 
-        if isinstance(s.post_cell(), P.Neuron) and pre in cell_names and post in cell_names:  
+        if isinstance(s.post_cell(), Neuron) and pre in cell_names and post in cell_names:  
             syntype = str(s.syntype())
             syntype = syntype[0].upper()+syntype[1:]
             num = int(s.number())
@@ -51,7 +57,6 @@ def read_data(include_nonconnected_cells=False):
 
     print_("Total cells %i (%i with connections)" % (len(cell_names), len(cells)))
     print_("Total connections found %i " % len(conns)) 
-    P.disconnect()
 
     if include_nonconnected_cells:
         return cell_names, conns

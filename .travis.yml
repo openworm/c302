@@ -40,9 +40,13 @@ install:
     # Install specific version of PyOpenWorm
     - git clone https://github.com/openworm/PyOpenWorm.git
     - cd PyOpenWorm
-    - git checkout v0.7.1
+    - git checkout pg_tests
+    - pip install pyparsing==2.0.3
     - python setup.py install
-    - cd ..
+    - pow clone https://github.com/openworm/OpenWormData.git
+    - cd examples
+    - python NetworkInfo.py # test example...
+    - cd ../..
     
     # NeuroML & main install
     - pip install pyNeuroML
@@ -51,6 +55,7 @@ install:
 script:
     - omv all -V; export OMV_SUCCESS=$?; echo $OMV_SUCCESS
     - echo "Finished all OMV tests"
+    - omv list -V
     - if [[ ${OMV_ENGINE} == "NON_OMV_TESTS" ]]; then echo "Continuing with tests not under OMV..."; else exit $OMV_SUCCESS; fi
     - echo "Running non OMV tests..."
     - python setup.py install

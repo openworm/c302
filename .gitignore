@@ -46,3 +46,5 @@
 .DS_Store
 /examples/parametersweep/*.gv*
 /examples/parametersweep/report.*.txt
+/getpyow.sh
+/test_c2_fw.sh

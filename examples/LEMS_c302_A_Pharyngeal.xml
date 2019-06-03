@@ -6,8 +6,8 @@
 Parameters and setting used to generate this network:
 
     Data reader:                    SpreadsheetDataReader
-    c302 version:                   0.7.2
-    PyOpenWorm version:             0.7.1
+    c302 version:                   0.7.3
+    PyOpenWorm version:             0.10.0.post0
     Cells:                          ['M1', 'M2L', 'M2R', 'M3L', 'M3R', 'M4', 'M5', 'I1L', 'I1R', 'I2L', 'I2R', 'I3', 'I4', 'I5', 'I6', 'MI', 'NSML', 'NSMR', 'MCL', 'MCR']
     Cell stimulated:                ['M1', 'M3R', 'M4', 'M5', 'I1L', 'I4', 'I5', 'I6', 'MCL', 'MCR']
     Connection:                     []
@@ -66,26 +66,26 @@ Parameters and setting used to generate this network:
 
         <Display id="neurons" title="c302_A_Pharyngeal: Membrane potential of a number of neurons" timeScale="1ms" xmin="-50.0" xmax="550.0" ymin="-52" ymax="-28">
             
-            <Line id="I1L" quantity="I1L/0/generic_neuron_iaf_cell/v" scale="1mV" color="#8b779a" timeScale="1ms" />
-            <Line id="I1R" quantity="I1R/0/generic_neuron_iaf_cell/v" scale="1mV" color="#7b5b40" timeScale="1ms" />
-            <Line id="I2L" quantity="I2L/0/generic_neuron_iaf_cell/v" scale="1mV" color="#002479" timeScale="1ms" />
-            <Line id="I2R" quantity="I2R/0/generic_neuron_iaf_cell/v" scale="1mV" color="#25f0c6" timeScale="1ms" />
-            <Line id="I3" quantity="I3/0/generic_neuron_iaf_cell/v" scale="1mV" color="#cf2d27" timeScale="1ms" />
-            <Line id="I4" quantity="I4/0/generic_neuron_iaf_cell/v" scale="1mV" color="#5957d1" timeScale="1ms" />
-            <Line id="I5" quantity="I5/0/generic_neuron_iaf_cell/v" scale="1mV" color="#70c8d1" timeScale="1ms" />
-            <Line id="I6" quantity="I6/0/generic_neuron_iaf_cell/v" scale="1mV" color="#88d57c" timeScale="1ms" />
-            <Line id="M1" quantity="M1/0/generic_neuron_iaf_cell/v" scale="1mV" color="#d028e9" timeScale="1ms" />
-            <Line id="M2L" quantity="M2L/0/generic_neuron_iaf_cell/v" scale="1mV" color="#721265" timeScale="1ms" />
-            <Line id="M2R" quantity="M2R/0/generic_neuron_iaf_cell/v" scale="1mV" color="#efb351" timeScale="1ms" />
-            <Line id="M3L" quantity="M3L/0/generic_neuron_iaf_cell/v" scale="1mV" color="#3365b5" timeScale="1ms" />
-            <Line id="M3R" quantity="M3R/0/generic_neuron_iaf_cell/v" scale="1mV" color="#84b42c" timeScale="1ms" />
-            <Line id="M4" quantity="M4/0/generic_neuron_iaf_cell/v" scale="1mV" color="#c68d55" timeScale="1ms" />
-            <Line id="M5" quantity="M5/0/generic_neuron_iaf_cell/v" scale="1mV" color="#5300ad" timeScale="1ms" />
-            <Line id="MCL" quantity="MCL/0/generic_neuron_iaf_cell/v" scale="1mV" color="#bd35d3" timeScale="1ms" />
-            <Line id="MCR" quantity="MCR/0/generic_neuron_iaf_cell/v" scale="1mV" color="#6cb0d9" timeScale="1ms" />
-            <Line id="MI" quantity="MI/0/generic_neuron_iaf_cell/v" scale="1mV" color="#471d60" timeScale="1ms" />
-            <Line id="NSML" quantity="NSML/0/generic_neuron_iaf_cell/v" scale="1mV" color="#71c72a" timeScale="1ms" />
-            <Line id="NSMR" quantity="NSMR/0/generic_neuron_iaf_cell/v" scale="1mV" color="#7b667a" timeScale="1ms" />
+            <Line id="I1L" quantity="I1L/0/generic_neuron_iaf_cell/v" scale="1mV" color="#f87100" timeScale="1ms" />
+            <Line id="I1R" quantity="I1R/0/generic_neuron_iaf_cell/v" scale="1mV" color="#eaf195" timeScale="1ms" />
+            <Line id="I2L" quantity="I2L/0/generic_neuron_iaf_cell/v" scale="1mV" color="#ac15c4" timeScale="1ms" />
+            <Line id="I2R" quantity="I2R/0/generic_neuron_iaf_cell/v" scale="1mV" color="#3c00ca" timeScale="1ms" />
+            <Line id="I3" quantity="I3/0/generic_neuron_iaf_cell/v" scale="1mV" color="#58a09e" timeScale="1ms" />
+            <Line id="I4" quantity="I4/0/generic_neuron_iaf_cell/v" scale="1mV" color="#262f1d" timeScale="1ms" />
+            <Line id="I5" quantity="I5/0/generic_neuron_iaf_cell/v" scale="1mV" color="#007df7" timeScale="1ms" />
+            <Line id="I6" quantity="I6/0/generic_neuron_iaf_cell/v" scale="1mV" color="#108b77" timeScale="1ms" />
+            <Line id="M1" quantity="M1/0/generic_neuron_iaf_cell/v" scale="1mV" color="#9a1694" timeScale="1ms" />
+            <Line id="M2L" quantity="M2L/0/generic_neuron_iaf_cell/v" scale="1mV" color="#458fa5" timeScale="1ms" />
+            <Line id="M2R" quantity="M2R/0/generic_neuron_iaf_cell/v" scale="1mV" color="#7b5b40" timeScale="1ms" />
+            <Line id="M3L" quantity="M3L/0/generic_neuron_iaf_cell/v" scale="1mV" color="#ef7488" timeScale="1ms" />
+            <Line id="M3R" quantity="M3R/0/generic_neuron_iaf_cell/v" scale="1mV" color="#008200" timeScale="1ms" />
+            <Line id="M4" quantity="M4/0/generic_neuron_iaf_cell/v" scale="1mV" color="#247960" timeScale="1ms" />
+            <Line id="M5" quantity="M5/0/generic_neuron_iaf_cell/v" scale="1mV" color="#00962a" timeScale="1ms" />
+            <Line id="MCL" quantity="MCL/0/generic_neuron_iaf_cell/v" scale="1mV" color="#8f25f0" timeScale="1ms" />
+            <Line id="MCR" quantity="MCR/0/generic_neuron_iaf_cell/v" scale="1mV" color="#c6f524" timeScale="1ms" />
+            <Line id="MI" quantity="MI/0/generic_neuron_iaf_cell/v" scale="1mV" color="#4e0047" timeScale="1ms" />
+            <Line id="NSML" quantity="NSML/0/generic_neuron_iaf_cell/v" scale="1mV" color="#cf2d27" timeScale="1ms" />
+            <Line id="NSMR" quantity="NSMR/0/generic_neuron_iaf_cell/v" scale="1mV" color="#f527d6" timeScale="1ms" />
             
         </Display>
 
