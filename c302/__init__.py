@@ -82,7 +82,7 @@ def get_pyopenworm_worm():
         
     if P is None:
         print_("Couldn't connect to PyOpenWorm...")
-        return None
+        return None, None
     
     from PyOpenWorm.context import Context
     from PyOpenWorm.worm import Worm

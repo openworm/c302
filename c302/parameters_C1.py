@@ -24,7 +24,7 @@ class ParameterisedModel(ParameterisedModel_C):
         self.custom_component_types_definitions = 'cell_C.xml'
         
         self.set_default_bioparameters()
-        print("Set default parameters for %s"%self.level)
+        self.print_("Set default parameters for %s"%self.level)
         
 
     def set_default_bioparameters(self):
