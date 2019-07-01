@@ -5,19 +5,14 @@ c302 is a framework for generating network models in NeuroML 2 based on *C. eleg
 
 <p align="center"><a href="OpenWormOverview.md"><img width="200" alt="c302_in_overview" src="https://user-images.githubusercontent.com/1573896/44876490-42fca100-ac6f-11e8-95ab-76dc8a2d80e1.png"></a></p>
 
-*Note: the c302 framework has recently moved to this repository from https://github.com/openworm/CElegansNeuroML/tree/master/CElegans/pythonScripts/c302*.
 
 ![c302 structure](https://raw.githubusercontent.com/openworm/CElegansNeuroML/master/CElegans/pythonScripts/c302/images/c302.png)
 
-It uses information on the synaptic connectivity of the network (from
-[here](https://github.com/openworm/c302/blob/master/c302/data/CElegansNeuronTables.xls)) and uses
-[libNeuroML](https://github.com/NeuralEnsemble/libNeuroML) to generate
-a network in valid NeuroML, which can be run in [jNeuroML](https://github.com/NeuroML/jNeuroML) or [pyNeuroML](https://github.com/NeuroML/pyNeuroML).
+It uses information on the synaptic connectivity of the network (from [here](https://github.com/openworm/c302/blob/master/c302/data/CElegansNeuronTables.xls)) and uses [libNeuroML](https://github.com/NeuralEnsemble/libNeuroML) to generate a network in valid NeuroML, which can be run in [jNeuroML](https://github.com/NeuroML/jNeuroML) or [pyNeuroML](https://github.com/NeuroML/pyNeuroML).
 
 **The c302 paper has recently been published!**
 
-*c302: a multiscale framework for modelling the nervous system of Caenorhabditis elegans*
-Padraig Gleeson, David Lung, Radu Grosu, Ramin Hasani, Stephen D. Larson, [Phil. Trans. R. Soc. B 2018 373 20170379](http://rstb.royalsocietypublishing.org/content/373/1758/20170379); DOI: 10.1098/rstb.2017.0379.
+*c302: a multiscale framework for modelling the nervous system of Caenorhabditis elegans* Padraig Gleeson, David Lung, Radu Grosu, Ramin Hasani, Stephen D. Larson, [Phil. Trans. R. Soc. B 2018 373 20170379](http://rstb.royalsocietypublishing.org/content/373/1758/20170379); DOI: 10.1098/rstb.2017.0379.
 
 
 ### To install & test
@@ -28,8 +23,7 @@ The full set of dependencies for c302 can be installed with the following (see a
     cd c302
     python setup.py install
 
-This will install c302 as well as all dependencies, including [pyNeuroML](https://github.com/NeuroML/pyNeuroML)
-and [PyOpenWorm](https://github.com/openworm/PyOpenWorm).
+This will install c302 as well as all dependencies, including [pyNeuroML](https://github.com/NeuroML/pyNeuroML) and [PyOpenWorm](https://github.com/openworm/PyOpenWorm).
 
 
 #### Quick test
@@ -53,12 +47,7 @@ To test all of the working features of the framework run [test.sh](https://raw.g
 
 #### 1a) Run standard examples with pyNeuroML
 
-There are a number of [example models](https://github.com/openworm/c302/tree/master/examples) included with the standard distribution.
-These consist of: A) generated NeuroML 2 network description file ([example](https://github.com/openworm/c302/blob/master/examples/c302_A_IClamp.net.nml)),
-containing the definitions of the cells to use (e.g. **iafCell** for an integrate and fire cell), any inputs (e.g. **pulseGenerator**) as well as the
-**populations**, **projections** and **inputLists** contained within the **network** (for a full description of the NeuroML elements see
-[here](https://www.neuroml.org/NeuroML2CoreTypes/Networks.html)); and B) a LEMS simulation file
-([example](https://github.com/openworm/c302/blob/master/examples/LEMS_c302_A_IClamp.xml)) describing how long to simulate, the timestep and what to plot/record.
+There are a number of [example models](https://github.com/openworm/c302/tree/master/examples) included with the standard distribution. These consist of: A) generated NeuroML 2 network description file ([example](https://github.com/openworm/c302/blob/master/examples/c302_A_IClamp.net.nml)), containing the definitions of the cells to use (e.g. **iafCell** for an integrate and fire cell), any inputs (e.g. **pulseGenerator**) as well as the **populations**, **projections** and **inputLists** contained within the **network** (for a full description of the NeuroML elements see [here](https://www.neuroml.org/NeuroML2CoreTypes/Networks.html)); and B) a LEMS simulation file ([example](https://github.com/openworm/c302/blob/master/examples/LEMS_c302_A_IClamp.xml)) describing how long to simulate, the timestep and what to plot/record.
 
        # generate 2 neurons & 1 muscle with current inputs using parameter set A
        pynml examples/LEMS_c302_A_IClamp.xml      
@@ -69,11 +58,9 @@ containing the definitions of the cells to use (e.g. **iafCell** for an integrat
        # generate pharyngeal network using parameter set B
        pynml examples/LEMS_c302_B_Pharyngeal.xml
 
-Screenshots of a simulation with pyNeuroML of c302_B_Pharyngeal are shown below (left:
-membrane potential of 20 cells, right: "activity" of 20 cells - a value from 0-1
-showing time smoothed activity of each cell):
+Screenshots of a simulation with pyNeuroML of c302_B_Pharyngeal are shown below (left: membrane potential of 20 cells, right: "activity" of 20 cells - a value from 0-1 showing time smoothed activity of each cell):
 
-![c302_B_Pharyngeal](images/c302_B_Pharyngeal.png)
+![c302_B_Pharyngeal](https://raw.githubusercontent.com/openworm/c302/master/images/c302_B_Pharyngeal.png)
 
 #### 1b) Run standard examples with Neuron
 
@@ -92,7 +79,7 @@ Note: models with the D parameter set can only be run using Neuron (not pyNeuroM
 
 This produces the following (graph on top is [Ca2+], bottom is membrane potential; 3D view on right can be produced by selecting in the Neuron main menu: Graph -> Shape plot)
 
-![Neuron](images/Neuron.png)
+![Neuron](https://raw.githubusercontent.com/openworm/c302/master/images/Neuron.png)
 
 
 #### 2) Use command line interface to create new network
@@ -110,7 +97,7 @@ To see the structure of the network, use pyNeuroML:
     pynml MyNetwork.net.nml -graph 4c  # Try other options like 1, 2f, 5c for varying levels of detail
 
 
-![MyNetwork](images/MyNetwork.png)
+![MyNetwork](https://raw.githubusercontent.com/openworm/c302/master/images/MyNetwork.png)
 
 
 More options for using the **c302** command can be found with
@@ -144,14 +131,12 @@ and look at the behaviour afterwards (note the package needs to be reinstalled)
 
 The plots below show the neuron's membrane potential on application of 6 increasing pulses of current before (left) and after (right) the change, indicating how increasing the leak conductance removes the spiking:
 
-<p><img src="images/changePre.png" width=400/> <img src="images/changePost.png" width=400/></p>
+<p><img src="https://raw.githubusercontent.com/openworm/c302/master/images/changePre.png" width=400/> <img src="https://raw.githubusercontent.com/openworm/c302/master/images/changePost.png" width=400/></p>
 
 #### 4) Adding a new input type to NeuroML model
 
 The structure of the model generated can be altered by modifying the NeuroML model returned in the c302_XXX.py script.
-As an example, say we want to add a sine wave current to the Muscles network
-(specified by [c302_Muscles.py](https://github.com/openworm/c302/blob/master/c302/c302_Muscles.py)), as opposed to the steady current clamp input.
-This can be achieved by setting the "unphysiological_offset_current" to zero:
+As an example, say we want to add a sine wave current to the Muscles network (specified by [c302_Muscles.py](https://github.com/openworm/c302/blob/master/c302/c302_Muscles.py)), as opposed to the steady current clamp input. This can be achieved by setting the "unphysiological_offset_current" to zero:
 
 ```python
 params.set_bioparameter("unphysiological_offset_current", "0pA", "Disabling offset current", "0")
@@ -194,7 +179,7 @@ These changes are made in [c302_MusclesSine.py](https://github.com/openworm/c302
 
 Membrane potential of neurons (left; stimulated AVBL cell in green) and muscles (right) shown below:
 
-![sine](images/sine.png)
+![sine](https://raw.githubusercontent.com/openworm/c302/master/images/sine.png)
 
 Other types of NeuroML input elements are defined [here](https://www.neuroml.org/NeuroML2CoreTypes/Inputs.html)
 and examples are shown [here](https://github.com/NeuroML/NeuroML2/blob/master/examples/NML2_Inputs.nml).
@@ -202,16 +187,13 @@ and examples are shown [here](https://github.com/NeuroML/NeuroML2/blob/master/ex
 
 #### 5) View and execute the models on Open Source Brain
 
-The Github repository for c302 is linked to a project on Open Source Brain: http://www.opensourcebrain.org/projects/c302.
-This allows exploration of the generated NeuroML 2 networks through the Geppetto enabled OSB 3D Explorer.
+The Github repository for c302 is linked to a project on Open Source Brain: http://www.opensourcebrain.org/projects/c302. This allows exploration of the generated NeuroML 2 networks through the Geppetto enabled OSB 3D Explorer.
 
-To see a list of the networks which can be visuaised, click on the **More** button on the top right of the page.
-As an example, the Pharyngeal network with parameter set D can be selected (c302_D_Pharyngeal.net.nml in the Network list, direct link
-[here](http://www.opensourcebrain.org/projects/c302/models?explorer=https%253A%252F%252Fraw.githubusercontent.com%252Fopenworm%252Fc302%252Fmaster%252Fexamples%252Fc302_D_Pharyngeal.net.nml)).
+To see a list of the networks which can be visuaised, click on the **More** button on the top right of the page. As an example, the Pharyngeal network with parameter set D can be selected (c302_D_Pharyngeal.net.nml in the Network list, direct link [here](http://www.opensourcebrain.org/projects/c302/models?explorer=https%253A%252F%252Fraw.githubusercontent.com%252Fopenworm%252Fc302%252Fmaster%252Fexamples%252Fc302_D_Pharyngeal.net.nml)).
 
 The initial view of the network is shown on the left below.
 
-<p><img src="images/pharDpre.png" width=400/> <img src="images/pharDpost.png" width=400/></p>
+<p><img src="https://raw.githubusercontent.com/openworm/c302/master/images/pharDpre.png" width=400/> <img src="https://raw.githubusercontent.com/openworm/c302/master/images/pharDpost.png" width=400/></p>
 
 To get the view on the right:
 - change the background to white by clicking the paintbrush icon (bottom icon on left)
@@ -232,7 +214,7 @@ To get the view on the right:
 
 It is also possible to view and analyse other configurations, e.g. [c302_D_Full](http://www.opensourcebrain.org/projects/c302/repository/revisions/master/show/examples?explorer=https%253A%252F%252Fraw.githubusercontent.com%252Fopenworm%252Fc302%252Fmaster%252Fexamples%252Fc302_D_Full.net.nml):
 
-![c302_D_Full](images/c302_D_Full.png)
+![c302_D_Full](https://raw.githubusercontent.com/openworm/c302/master/images/c302_D_Full.png)
 
 ### Comparing activity across scales/parameter sets
 
