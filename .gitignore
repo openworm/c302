@@ -48,3 +48,9 @@
 /examples/parametersweep/report.*.txt
 /getpyow.sh
 /test_c2_fw.sh
+/examples/*.svg
+/examples/parametersweep/x86_64
+/examples/parametersweep/*.mod
+/examples/parametersweep/*.hoc
+*netpyne.py
+*_nrn.py
