@@ -13,6 +13,7 @@ addons:
     - python-tornado
     - python-matplotlib 
     - python-tk
+    - python-dev
 
 language: python
 python:
