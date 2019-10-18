@@ -765,7 +765,7 @@ def generate(net_id,
                 pop0.properties.append(Property("neurotransmitter", str('; '.join(all_neuron_info[cell][3]))))  
             except Exception as e:
                 # It's only metadata...
-                print e
+                print (e)
                 pass
             
             pop0.instances.append(inst)
