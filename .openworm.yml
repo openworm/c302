@@ -1,0 +1,26 @@
+repo: openworm/c302
+shortDescription: "NeuroML based model of C elegans nervous system"
+coordinator: p.gleeson@gmail.com
+documentation: "https://github.com/openworm/c302/blob/master/README.md"
+inputs: 
+  - openworm/ChannelWorm
+  - openworm/muscle_model
+  - openworm/JohnsonMailler_MuscleModel
+keywords: 
+  - cells
+  - channels
+  - synapses
+  - neurons
+  - simulation
+  - conductance-based models
+  - gap junctions
+  - neurotransmitters
+languages: 
+  - python
+members: 
+  - p.gleeson@gmail.com
+outputs: 
+  - openworm/sibernetic
+parent: 
+  - openworm/OpenWorm
+tests: true
