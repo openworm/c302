@@ -30,7 +30,7 @@ from neuroml import ExpTwoSynapse
 from neuroml import GapJunction
 from neuroml import PulseGenerator
 
-from bioparameters import c302ModelPrototype
+from c302.bioparameters import c302ModelPrototype
 
 class ParameterisedModel(c302ModelPrototype):
 

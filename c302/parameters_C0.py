@@ -27,7 +27,7 @@ from neuroml import SpikeThresh
 from neuroml import GapJunction
 
 
-from parameters_C import ParameterisedModel as ParameterisedModel_C
+from c302.parameters_C import ParameterisedModel as ParameterisedModel_C
 
 
 class ParameterisedModel(ParameterisedModel_C):

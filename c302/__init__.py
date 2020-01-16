@@ -23,7 +23,7 @@ from neuroml import SilentSynapse
 import neuroml.writers as writers
 import neuroml.loaders as loaders
 
-import bioparameters
+import c302.bioparameters
 
 import airspeed
 
@@ -728,8 +728,8 @@ def generate(net_id,
     
     
 
-    import backers
-    cells_vs_name = backers.get_adopted_cell_names()
+    import c302.backers
+    cells_vs_name = c302.backers.get_adopted_cell_names()
 
 
     count = 0
@@ -1124,9 +1124,9 @@ def generate(net_id,
             
             if number_syns != conn.number:
                 if analog_conn or elect_conn:
-                    magnitude, unit = bioparameters.split_neuroml_quantity(syn0.conductance)
+                    magnitude, unit = c302.bioparameters.split_neuroml_quantity(syn0.conductance)
                 else:
-                    magnitude, unit = bioparameters.split_neuroml_quantity(syn0.gbase)
+                    magnitude, unit = c302.bioparameters.split_neuroml_quantity(syn0.gbase)
                 cond0 = "%s%s"%(magnitude*conn.number, unit)
                 cond1 = "%s%s" % (get_str_from_expnotation(magnitude * number_syns), unit)
                 gj = "" if not elect_conn else " GapJunction"
@@ -1352,9 +1352,9 @@ def generate(net_id,
             if number_syns != conn.number:
 
                 if analog_conn or elect_conn:
-                    magnitude, unit = bioparameters.split_neuroml_quantity(syn0.conductance)
+                    magnitude, unit = c302.bioparameters.split_neuroml_quantity(syn0.conductance)
                 else:
-                    magnitude, unit = bioparameters.split_neuroml_quantity(syn0.gbase)
+                    magnitude, unit = c302.bioparameters.split_neuroml_quantity(syn0.gbase)
                 cond0 = "%s%s"%(magnitude*conn.number, unit)
                 cond1 = "%s%s" % (get_str_from_expnotation(magnitude * number_syns), unit)
                 gj = "" if not elect_conn else " GapJunction"
@@ -1472,7 +1472,7 @@ def main():
 
     args = process_args()
     
-    exec('from %s import ParameterisedModel'%args.parameters, globals())
+    exec('from c302.%s import ParameterisedModel'%args.parameters, globals())
     params = ParameterisedModel()
 
     generate(args.reference,

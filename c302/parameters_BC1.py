@@ -28,9 +28,9 @@ from neuroml import GradedSynapse
 from neuroml import GapJunction
 from neuroml import PulseGenerator
 
-from bioparameters import c302ModelPrototype
+from c302.bioparameters import c302ModelPrototype
 
-from parameters_B import IafActivityCell
+from c302.parameters_B import IafActivityCell
 
 
 class ParameterisedModel(c302ModelPrototype):

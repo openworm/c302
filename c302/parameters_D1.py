@@ -31,7 +31,7 @@ from neuroml import FixedFactorConcentrationModel
 from neuroml import GapJunction
 from neuroml import PulseGenerator
 
-from parameters_D import ParameterisedModel as ParameterisedModel_D
+from c302.parameters_D import ParameterisedModel as ParameterisedModel_D
 
 class ParameterisedModel(ParameterisedModel_D):
 
