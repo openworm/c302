@@ -1,0 +1,107 @@
+{
+    "Canonical_C": {
+        "version": "NeuroMLlite v0.1.9", 
+        "parameters": {
+            "weight_in_mn": 1, 
+            "stim_amp": "350pA"
+        }, 
+        "cells": [
+            {
+                "GenericNeuronCell": {
+                    "neuroml2_source_file": "GenericNeuronCell.cell.nml"
+                }
+            }
+        ], 
+        "synapses": [
+            {
+                "neuron_to_neuron_exc_syn": {
+                    "neuroml2_source_file": "test_syns.xml"
+                }
+            }
+        ], 
+        "input_sources": [
+            {
+                "iclamp_0": {
+                    "neuroml2_input": "PulseGenerator", 
+                    "parameters": {
+                        "delay": "500ms", 
+                        "duration": "2000ms", 
+                        "amplitude": "stim_amp"
+                    }
+                }
+            }
+        ], 
+        "regions": [
+            {
+                "interneurons": {
+                    "x": 0.0, 
+                    "y": 0.0, 
+                    "z": 0.0, 
+                    "width": 1000.0, 
+                    "height": 100.0, 
+                    "depth": 1000.0
+                }
+            }, 
+            {
+                "motorneurons": {
+                    "x": 0.0, 
+                    "y": 0.0, 
+                    "z": 0.0, 
+                    "width": 1000.0, 
+                    "height": 100.0, 
+                    "depth": 1000.0
+                }
+            }
+        ], 
+        "populations": [
+            {
+                "AVB": {
+                    "size": 1, 
+                    "component": "GenericNeuronCell", 
+                    "properties": {
+                        "color": "0 0 0.8"
+                    }, 
+                    "random_layout": {
+                        "region": "interneurons"
+                    }
+                }
+            }, 
+            {
+                "VB": {
+                    "size": 1, 
+                    "component": "GenericNeuronCell", 
+                    "properties": {
+                        "color": "0 0 0.8"
+                    }, 
+                    "random_layout": {
+                        "region": "motorneurons"
+                    }
+                }
+            }
+        ], 
+        "projections": [
+            {
+                "proj0": {
+                    "presynaptic": "AVB", 
+                    "postsynaptic": "VB", 
+                    "synapse": "neuron_to_neuron_exc_syn", 
+                    "type": "continuousProjection", 
+                    "delay": 0, 
+                    "weight": "weight_in_mn", 
+                    "random_connectivity": {
+                        "probability": 1
+                    }
+                }
+            }
+        ], 
+        "inputs": [
+            {
+                "stim": {
+                    "input_source": "iclamp_0", 
+                    "population": "AVB", 
+                    "percentage": 100.0
+                }
+            }
+        ]
+    }
+}

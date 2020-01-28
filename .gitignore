@@ -55,3 +55,4 @@
 /examples/parametersweep/*_nrn.py
 /examples/parametersweep/LEMS_Sim_IClamp_GenericMuscleCell.xml
 /examples/parametersweep/LEMS_Sim_IClamp_GenericNeuronCell.xml
+/examples/parametersweep/LEMS_SimCanonical_C.xml
