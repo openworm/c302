@@ -31,6 +31,7 @@ import random
 import argparse
 import shutil
 import os
+import logging
 import importlib
 import math
 from lxml import etree
@@ -38,6 +39,7 @@ import re
 
 import collections
 
+import PyOpenWorm
 from PyOpenWorm import connect as pyow_connect, __version__ as pyow_version, ConnectionFailError
 from PyOpenWorm.context import Context
 from PyOpenWorm.neuron import Neuron
@@ -1440,6 +1442,9 @@ def parse_dict_arg(dict_arg):
 
 
 def main():
+    # Suppress logs from PyOpenWorm connection failures
+    logger = logging.getLogger('PyOpenWorm.data')
+    logger.addFilter(PyOpenWormConnectionFailFilter())
 
     args = process_args()
 
@@ -1460,6 +1465,31 @@ def main():
              dt=args.dt,
              vmin=args.vmin,
              vmax=args.vmax)
+
+
+class PyOpenWormConnectionFailFilter(logging.Filter):
+    '''
+    Filters out a couple of error messages from PyOpenWorm.data that we don't need to see
+    more than once
+    '''
+    def __init__(self, *args, **kwargs):
+        super(PyOpenWormConnectionFailFilter, self).__init__(*args, **kwargs)
+        self.failures_seen = set()
+
+    def filter(self, record):
+        try:
+            msg = record.getMessage()
+        except Exception:
+            msg = ''
+        try:
+            if ((msg.startswith('Failed to open the data source') or
+                    msg.startswith('Failed to create')) and
+                    msg in self.failures_seen):
+                return False
+        except Exception as e:
+            pass
+        self.failures_seen.add(msg)
+        return True
 
 
 if __name__ == '__main__':
