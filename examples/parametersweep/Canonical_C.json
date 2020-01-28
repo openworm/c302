@@ -2,8 +2,10 @@
     "Canonical_C": {
         "version": "NeuroMLlite v0.1.9", 
         "parameters": {
-            "weight_in_mn": 1, 
-            "stim_amp": "350pA"
+            "weight_IN_MN": 3, 
+            "stim_amp": "3pA", 
+            "weight_MN_MN_Exc": 10, 
+            "weight_MN_MN_Inh": 20
         }, 
         "cells": [
             {
@@ -15,6 +17,11 @@
         "synapses": [
             {
                 "neuron_to_neuron_exc_syn": {
+                    "neuroml2_source_file": "test_syns.xml"
+                }
+            }, 
+            {
+                "neuron_to_neuron_inh_syn": {
                     "neuroml2_source_file": "test_syns.xml"
                 }
             }
@@ -37,14 +44,24 @@
                     "x": 0.0, 
                     "y": 0.0, 
                     "z": 0.0, 
-                    "width": 1000.0, 
+                    "width": 100.0, 
                     "height": 100.0, 
-                    "depth": 1000.0
+                    "depth": 100.0
                 }
             }, 
             {
                 "motorneurons": {
-                    "x": 0.0, 
+                    "x": 200.0, 
+                    "y": 0.0, 
+                    "z": 0.0, 
+                    "width": 100.0, 
+                    "height": 100.0, 
+                    "depth": 100.0
+                }
+            }, 
+            {
+                "muscles": {
+                    "x": 300.0, 
                     "y": 0.0, 
                     "z": 0.0, 
                     "width": 1000.0, 
@@ -59,7 +76,7 @@
                     "size": 1, 
                     "component": "GenericNeuronCell", 
                     "properties": {
-                        "color": "0 0 0.8"
+                        "color": "1 0 .4"
                     }, 
                     "random_layout": {
                         "region": "interneurons"
@@ -71,7 +88,43 @@
                     "size": 1, 
                     "component": "GenericNeuronCell", 
                     "properties": {
-                        "color": "0 0 0.8"
+                        "color": ".5 .4 1"
+                    }, 
+                    "random_layout": {
+                        "region": "motorneurons"
+                    }
+                }
+            }, 
+            {
+                "DB": {
+                    "size": 1, 
+                    "component": "GenericNeuronCell", 
+                    "properties": {
+                        "color": ".5 .4 1"
+                    }, 
+                    "random_layout": {
+                        "region": "motorneurons"
+                    }
+                }
+            }, 
+            {
+                "VD": {
+                    "size": 1, 
+                    "component": "GenericNeuronCell", 
+                    "properties": {
+                        "color": ".5 .4 1"
+                    }, 
+                    "random_layout": {
+                        "region": "motorneurons"
+                    }
+                }
+            }, 
+            {
+                "DD": {
+                    "size": 1, 
+                    "component": "GenericNeuronCell", 
+                    "properties": {
+                        "color": ".5 .4 1"
                     }, 
                     "random_layout": {
                         "region": "motorneurons"
@@ -81,13 +134,91 @@
         ], 
         "projections": [
             {
-                "proj0": {
+                "proj_AVB_VB": {
                     "presynaptic": "AVB", 
                     "postsynaptic": "VB", 
                     "synapse": "neuron_to_neuron_exc_syn", 
                     "type": "continuousProjection", 
                     "delay": 0, 
-                    "weight": "weight_in_mn", 
+                    "weight": "weight_IN_MN", 
+                    "random_connectivity": {
+                        "probability": 1
+                    }
+                }
+            }, 
+            {
+                "proj_AVB_DB": {
+                    "presynaptic": "AVB", 
+                    "postsynaptic": "DB", 
+                    "synapse": "neuron_to_neuron_exc_syn", 
+                    "type": "continuousProjection", 
+                    "delay": 0, 
+                    "weight": "weight_IN_MN", 
+                    "random_connectivity": {
+                        "probability": 1
+                    }
+                }
+            }, 
+            {
+                "proj_DB_VD": {
+                    "presynaptic": "DB", 
+                    "postsynaptic": "VD", 
+                    "synapse": "neuron_to_neuron_exc_syn", 
+                    "type": "continuousProjection", 
+                    "delay": 0, 
+                    "weight": "weight_MN_MN_Exc", 
+                    "random_connectivity": {
+                        "probability": 1
+                    }
+                }
+            }, 
+            {
+                "proj_DB_DD": {
+                    "presynaptic": "DB", 
+                    "postsynaptic": "DD", 
+                    "synapse": "neuron_to_neuron_exc_syn", 
+                    "type": "continuousProjection", 
+                    "delay": 0, 
+                    "weight": "weight_MN_MN_Exc", 
+                    "random_connectivity": {
+                        "probability": 1
+                    }
+                }
+            }, 
+            {
+                "proj_VD_VB": {
+                    "presynaptic": "VD", 
+                    "postsynaptic": "VB", 
+                    "synapse": "neuron_to_neuron_inh_syn", 
+                    "type": "continuousProjection", 
+                    "delay": 0, 
+                    "weight": "weight_MN_MN_Inh", 
+                    "random_connectivity": {
+                        "probability": 1
+                    }
+                }
+            }, 
+            {
+                "proj_VB_VD": {
+                    "presynaptic": "VB", 
+                    "postsynaptic": "VD", 
+                    "synapse": "neuron_to_neuron_exc_syn", 
+                    "type": "continuousProjection", 
+                    "delay": 0, 
+                    "weight": "weight_MN_MN_Exc", 
+                    "random_connectivity": {
+                        "probability": 1
+                    }
+                }
+            }, 
+            {
+                "proj_VB_DD": {
+                    "presynaptic": "VB", 
+                    "postsynaptic": "DD", 
+                    "synapse": "neuron_to_neuron_exc_syn", 
+                    "type": "continuousProjection", 
+                    "delay": 0, 
+                    "weight": "weight_MN_MN_Exc", 
                     "random_connectivity": {
                         "probability": 1
                     }

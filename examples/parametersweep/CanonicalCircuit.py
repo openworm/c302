@@ -5,8 +5,50 @@ import sys
 
 sys.path.append("..")
 
+INTERNEURON = 'interneuron'
+MOTORNEURON = 'motorneuron'
+MUSCLE = 'muscle'
 
-colors = {'GenericNeuronCell':'0 0 0.8', 'GenericMuscleCell':'0.8 0 0'}
+
+neuron_id = 'GenericNeuronCell'
+neuron_nmllite = Cell(id=neuron_id, neuroml2_source_file='%s.cell.nml'%(neuron_id))
+
+muscle_id = 'GenericMuscleCell'
+muscle_nmllite = Cell(id=muscle_id, neuroml2_source_file='%s.cell.nml'%(muscle_id))
+
+interneuron_region = RectangularRegion(id='%ss'%INTERNEURON, x=0,y=0,z=0,width=100,height=100,depth=100)
+motorneurons_region = RectangularRegion(id='%ss'%MOTORNEURON, x=200,y=0,z=0,width=100,height=100,depth=100)
+muscles_region = RectangularRegion(id='%ss'%MUSCLE, x=300,y=0,z=0,width=1000,height=100,depth=1000)
+
+regions = {INTERNEURON:interneuron_region, MOTORNEURON:motorneurons_region, MUSCLE:muscles_region}
+
+colors = {INTERNEURON:'1 0 .4', MOTORNEURON:'.5 .4 1', MUSCLE:'0 0.6 0'}
+
+all_cell_pops = {}
+
+def add_cell(net, name, type):
+    
+    cell_pop = Population(id=name, 
+                          size=1, 
+                          component=neuron_nmllite.id, 
+                          properties={'color':colors[type]},
+                          random_layout = RandomLayout(region=regions[type].id))
+                          
+    all_cell_pops[name] = cell_pop
+    net.populations.append(cell_pop)
+    
+    
+def add_connection(net, pre, post, syn, weight):
+    
+    net.projections.append(Projection(id='proj_%s_%s'%(pre,post),
+                                      presynaptic=pre, 
+                                      postsynaptic=post,
+                                      synapse=syn.id,
+                                      delay=0,
+                                      weight=weight,
+                                      type='continuousProjection',
+                                      random_connectivity=RandomConnectivity(probability=1)))
+    
 
 def generate(duration=1000):
     
@@ -18,46 +60,40 @@ def generate(duration=1000):
     net = Network(id=reference)
     net.parameters = {}
 
-    neuron_id = 'GenericNeuronCell'
-    neuron_nmllite = Cell(id=neuron_id, neuroml2_source_file='%s.cell.nml'%(neuron_id))
     net.cells.append(neuron_nmllite)
-    muscle_id = 'GenericMuscleCell'
-    muscle_nmllite = Cell(id=muscle_id, neuroml2_source_file='%s.cell.nml'%(muscle_id))
     #net.cells.append(muscle_nmllite)
 
-    interneurons = RectangularRegion(id='interneurons', x=0,y=0,z=0,width=1000,height=100,depth=1000)
-    net.regions.append(interneurons)
-    
-    motorneurons = RectangularRegion(id='motorneurons', x=0,y=0,z=0,width=1000,height=100,depth=1000)
-    net.regions.append(motorneurons)
-    
-    muscles = RectangularRegion(id='muscles', x=0,y=0,z=0,width=1000,height=100,depth=1000)
-    #net.regions.append(muscles)
+
+    net.regions.append(interneuron_region)    
+    net.regions.append(motorneurons_region)
+    net.regions.append(muscles_region)
     
     
-    avb = Population(id='AVB', size=1, component=neuron_nmllite.id, properties={'color':colors[neuron_nmllite.id]},random_layout = RandomLayout(region=interneurons.id))
-    net.populations.append(avb)
     
-    vb = Population(id='VB', size=1, component=neuron_nmllite.id, properties={'color':colors[neuron_nmllite.id]},random_layout = RandomLayout(region=motorneurons.id))
-    net.populations.append(vb)
+    add_cell(net, 'AVB', INTERNEURON)
+    add_cell(net, 'VB', MOTORNEURON)
+    add_cell(net, 'DB', MOTORNEURON)
+    add_cell(net, 'VD', MOTORNEURON)
+    add_cell(net, 'DD', MOTORNEURON)
     
     
     exc_syn = Synapse(id='neuron_to_neuron_exc_syn', neuroml2_source_file='test_syns.xml')
     net.synapses.append(exc_syn)
-    net.parameters['weight_in_mn'] = 1
+    inh_syn = Synapse(id='neuron_to_neuron_inh_syn', neuroml2_source_file='test_syns.xml')
+    net.synapses.append(inh_syn)
+    net.parameters['weight_IN_MN'] = 3
+    net.parameters['weight_MN_MN_Exc'] = 10
+    net.parameters['weight_MN_MN_Inh'] = 20
     
+    add_connection(net, 'AVB', 'VB', exc_syn, 'weight_IN_MN')
+    add_connection(net, 'AVB', 'DB', exc_syn, 'weight_IN_MN')
+    add_connection(net, 'DB', 'VD', exc_syn, 'weight_MN_MN_Exc')
+    add_connection(net, 'DB', 'DD', exc_syn, 'weight_MN_MN_Exc')
+    add_connection(net, 'VD', 'VB', inh_syn, 'weight_MN_MN_Inh')
+    add_connection(net, 'VB', 'VD', exc_syn, 'weight_MN_MN_Exc')
+    add_connection(net, 'VB', 'DD', exc_syn, 'weight_MN_MN_Exc')
 
-    net.projections.append(Projection(id='proj0',
-                                      presynaptic=avb.id, 
-                                      postsynaptic=vb.id,
-                                      synapse=exc_syn.id,
-                                      delay=0,
-                                      weight='weight_in_mn',
-                                      type='continuousProjection'))
-    net.projections[0].random_connectivity=RandomConnectivity(probability=1)
-    
-
-    net.parameters['stim_amp'] = '350pA'
+    net.parameters['stim_amp'] = '3pA'
 
     input_source = InputSource(id='iclamp_0', 
                                neuroml2_input='PulseGenerator', 
@@ -67,7 +103,7 @@ def generate(duration=1000):
 
     net.inputs.append(Input(id='stim',
                             input_source=input_source.id,
-                            population=avb.id,
+                            population='AVB',
                             percentage=100))
                             
     print(net.to_json())
@@ -80,7 +116,7 @@ def generate(duration=1000):
     sim = Simulation(id='Sim%s'%net.id,
                      network=new_file,
                      duration=duration,
-                     dt='0.01',
+                     dt='0.025',
                      recordTraces={'all':'*'})
 
     sim.to_json_file()
