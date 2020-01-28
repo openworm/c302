@@ -81,23 +81,28 @@ def generate(duration=1000):
     net.synapses.append(exc_syn)
     inh_syn = Synapse(id='neuron_to_neuron_inh_syn', neuroml2_source_file='test_syns.xml')
     net.synapses.append(inh_syn)
+    
+    
+    net.parameters['stim_duration'] = '2000ms'
+    net.parameters['stim_amp'] = '2.5pA'
     net.parameters['weight_IN_MN'] = 3
-    net.parameters['weight_MN_MN_Exc'] = 10
-    net.parameters['weight_MN_MN_Inh'] = 20
+    net.parameters['weight_MN_MN_Exc'] = 15
+    net.parameters['weight_MN_MN_Inh'] = 35
     
     add_connection(net, 'AVB', 'VB', exc_syn, 'weight_IN_MN')
-    add_connection(net, 'AVB', 'DB', exc_syn, 'weight_IN_MN')
+    add_connection(net, 'AVB', 'DB', exc_syn, 'weight_IN_MN * 0.9')
     add_connection(net, 'DB', 'VD', exc_syn, 'weight_MN_MN_Exc')
     add_connection(net, 'DB', 'DD', exc_syn, 'weight_MN_MN_Exc')
-    add_connection(net, 'VD', 'VB', inh_syn, 'weight_MN_MN_Inh')
     add_connection(net, 'VB', 'VD', exc_syn, 'weight_MN_MN_Exc')
     add_connection(net, 'VB', 'DD', exc_syn, 'weight_MN_MN_Exc')
+    
+    add_connection(net, 'VD', 'VB', inh_syn, 'weight_MN_MN_Inh')
+    add_connection(net, 'DD', 'DB', inh_syn, 'weight_MN_MN_Inh')
 
-    net.parameters['stim_amp'] = '3pA'
 
     input_source = InputSource(id='iclamp_0', 
                                neuroml2_input='PulseGenerator', 
-                               parameters={'amplitude':'stim_amp', 'delay':'500ms', 'duration':'2000ms'})
+                               parameters={'amplitude':'stim_amp', 'delay':'500ms', 'duration':'stim_duration'})
                                    
     net.input_sources.append(input_source)
 
@@ -116,7 +121,7 @@ def generate(duration=1000):
     sim = Simulation(id='Sim%s'%net.id,
                      network=new_file,
                      duration=duration,
-                     dt='0.025',
+                     dt='0.1',
                      recordTraces={'all':'*'})
 
     sim.to_json_file()

@@ -2,10 +2,11 @@
     "Canonical_C": {
         "version": "NeuroMLlite v0.1.9", 
         "parameters": {
+            "stim_amp": "2.5pA", 
             "weight_IN_MN": 3, 
-            "stim_amp": "3pA", 
-            "weight_MN_MN_Exc": 10, 
-            "weight_MN_MN_Inh": 20
+            "stim_duration": "2000ms", 
+            "weight_MN_MN_Inh": 35, 
+            "weight_MN_MN_Exc": 15
         }, 
         "cells": [
             {
@@ -32,7 +33,7 @@
                     "neuroml2_input": "PulseGenerator", 
                     "parameters": {
                         "delay": "500ms", 
-                        "duration": "2000ms", 
+                        "duration": "stim_duration", 
                         "amplitude": "stim_amp"
                     }
                 }
@@ -153,7 +154,7 @@
                     "synapse": "neuron_to_neuron_exc_syn", 
                     "type": "continuousProjection", 
                     "delay": 0, 
-                    "weight": "weight_IN_MN", 
+                    "weight": "weight_IN_MN * 0.9", 
                     "random_connectivity": {
                         "probability": 1
                     }
@@ -186,19 +187,6 @@
                 }
             }, 
             {
-                "proj_VD_VB": {
-                    "presynaptic": "VD", 
-                    "postsynaptic": "VB", 
-                    "synapse": "neuron_to_neuron_inh_syn", 
-                    "type": "continuousProjection", 
-                    "delay": 0, 
-                    "weight": "weight_MN_MN_Inh", 
-                    "random_connectivity": {
-                        "probability": 1
-                    }
-                }
-            }, 
-            {
                 "proj_VB_VD": {
                     "presynaptic": "VB", 
                     "postsynaptic": "VD", 
@@ -219,6 +207,32 @@
                     "type": "continuousProjection", 
                     "delay": 0, 
                     "weight": "weight_MN_MN_Exc", 
+                    "random_connectivity": {
+                        "probability": 1
+                    }
+                }
+            }, 
+            {
+                "proj_VD_VB": {
+                    "presynaptic": "VD", 
+                    "postsynaptic": "VB", 
+                    "synapse": "neuron_to_neuron_inh_syn", 
+                    "type": "continuousProjection", 
+                    "delay": 0, 
+                    "weight": "weight_MN_MN_Inh", 
+                    "random_connectivity": {
+                        "probability": 1
+                    }
+                }
+            }, 
+            {
+                "proj_DD_DB": {
+                    "presynaptic": "DD", 
+                    "postsynaptic": "DB", 
+                    "synapse": "neuron_to_neuron_inh_syn", 
+                    "type": "continuousProjection", 
+                    "delay": 0, 
+                    "weight": "weight_MN_MN_Inh", 
                     "random_connectivity": {
                         "probability": 1
                     }
