@@ -1,6 +1,6 @@
 {
     "IClamp_GenericMuscleCell": {
-        "version": "NeuroMLlite v0.1.4", 
+        "version": "NeuroMLlite v0.1.9", 
         "temperature": 34.0, 
         "parameters": {
             "stim_amp": "1pA"

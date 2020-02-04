@@ -48,3 +48,11 @@
 /examples/parametersweep/report.*.txt
 /getpyow.sh
 /test_c2_fw.sh
+/examples/parametersweep/*.mod
+/examples/parametersweep/*_netpyne.py
+/examples/parametersweep/x86_64
+/examples/parametersweep/*.hoc
+/examples/parametersweep/*_nrn.py
+/examples/parametersweep/LEMS_Sim_IClamp_GenericMuscleCell.xml
+/examples/parametersweep/LEMS_Sim_IClamp_GenericNeuronCell.xml
+/examples/parametersweep/LEMS_SimCanonical_C.xml
