@@ -442,60 +442,57 @@ def elem_in_coll_matches_conn(coll, conn):
     return False
 
 
-def _get_cell_info(cells):
+def _get_cell_info(pow_conn, cells):
 
-    try:
-        conn = pyopenworm_connect()
-    except Exception:
+    if pow_conn is None:
         return None, None
 
-    with conn:
-        ctx = Context(ident="http://openworm.org/data", conf=conn.conf).stored
-        #Go through our list and get the neuron object associated with each name.
-        #Store these in another list.
-        some_neurons = [ctx(Neuron)(name) for name in cells]
-        all_neuron_info = collections.OrderedDict()
-        all_muscle_info = collections.OrderedDict()
+    ctx = Context(ident="http://openworm.org/data", conf=pow_conn.conf).stored
+    #Go through our list and get the neuron object associated with each name.
+    #Store these in another list.
+    some_neurons = [ctx(Neuron)(name) for name in cells]
+    all_neuron_info = collections.OrderedDict()
+    all_muscle_info = collections.OrderedDict()
 
 
-        for neuron in some_neurons:
-            #print("=====Checking properties of: %s"%neuron)
-            #print neuron.triples()
-            #print neuron.__class__
-            short = ') %s'%neuron.name()
+    for neuron in some_neurons:
+        #print("=====Checking properties of: %s"%neuron)
+        #print neuron.triples()
+        #print neuron.__class__
+        short = ') %s'%neuron.name()
 
-            color = '.5 0 0'
-            if 'sensory' in neuron.type():
-                short = 'Se%s'%short
-                color = '1 .2 1'
-            if 'interneuron' in neuron.type():
-                short = 'In%s'%short
-                color = '1 0 .4'
-            if 'motor' in neuron.type():
-                short = 'Mo%s'%short
-                color = '.5 .4 1'
-            if is_muscle(neuron.name()):
-                short = 'Mu%s'%short
-                color = '0 0.6 0'
-
-
-            short = '(%s'%short
+        color = '.5 0 0'
+        if 'sensory' in neuron.type():
+            short = 'Se%s'%short
+            color = '1 .2 1'
+        if 'interneuron' in neuron.type():
+            short = 'In%s'%short
+            color = '1 0 .4'
+        if 'motor' in neuron.type():
+            short = 'Mo%s'%short
+            color = '.5 .4 1'
+        if is_muscle(neuron.name()):
+            short = 'Mu%s'%short
+            color = '0 0.6 0'
 
 
-            if 'GABA' in neuron.neurotransmitter():
-                short = '- %s'%short
-            elif len(neuron.neurotransmitter()) == 0:
-                short = '? %s'%short
-            else:
-                short = '+ %s'%short
+        short = '(%s'%short
 
-            info = (neuron, neuron.type(), neuron.receptor(), neuron.neurotransmitter(), short, color)
-            #print dir(neuron)
 
-            if is_muscle(neuron.name()):
-                all_muscle_info[neuron.name()] = info
-            else:
-                all_neuron_info[neuron.name()] = info
+        if 'GABA' in neuron.neurotransmitter():
+            short = '- %s'%short
+        elif len(neuron.neurotransmitter()) == 0:
+            short = '? %s'%short
+        else:
+            short = '+ %s'%short
+
+        info = (neuron, neuron.type(), neuron.receptor(), neuron.neurotransmitter(), short, color)
+        #print dir(neuron)
+
+        if is_muscle(neuron.name()):
+            all_muscle_info[neuron.name()] = info
+        else:
+            all_neuron_info[neuron.name()] = info
     return all_neuron_info, all_muscle_info
 
 
@@ -704,13 +701,16 @@ def generate(net_id,
             lems_info["includes"].append(ctd)
             nml_doc.includes.append(IncludeType(href=ctd))
 
-
-
     import c302.backers
     cells_vs_name = c302.backers.get_adopted_cell_names()
 
-
     count = 0
+    try:
+        pow_conn = pyopenworm_connect()
+    except Exception as e:
+        print_('Unable to connect to PyOpenWorm database: %s' % e)
+        pow_conn = None
+
     for cell in cell_names:
 
         if cells is None or cell in cells:
@@ -732,7 +732,7 @@ def generate(net_id,
                                   size="1")
                 cell_id = cell
 
-            all_neuron_info, _ = _get_cell_info([cell])
+            all_neuron_info, _ = _get_cell_info(pow_conn, [cell])
             if all_neuron_info is not None:
                 #neuron, neuron.type(), neuron.receptor(), neuron.neurotransmitter(), short, color
                 pop0.properties.append(Property("color", all_neuron_info[cell][5]))
