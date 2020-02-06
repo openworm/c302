@@ -43,6 +43,7 @@ install:
     - cd PyOpenWorm
     - git checkout ow-0.9
     - pip install pyparsing==2.0.3
+    - pip install Jinja2==2.11.1
     - python setup.py install
     - pow clone https://github.com/openworm/OpenWormData.git
     - cd examples
