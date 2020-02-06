@@ -710,6 +710,8 @@ def generate(net_id,
     except Exception as e:
         print_('Unable to connect to PyOpenWorm database: %s' % e)
         pow_conn = None
+        
+    all_neuron_info, _ = _get_cell_info(pow_conn, cell_names)
 
     for cell in cell_names:
 
@@ -732,7 +734,6 @@ def generate(net_id,
                                   size="1")
                 cell_id = cell
 
-            all_neuron_info, _ = _get_cell_info(pow_conn, [cell])
             if all_neuron_info is not None:
                 #neuron, neuron.type(), neuron.receptor(), neuron.neurotransmitter(), short, color
                 pop0.properties.append(Property("color", all_neuron_info[cell][5]))
