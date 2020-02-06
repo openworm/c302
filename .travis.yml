@@ -1,7 +1,7 @@
 # Framework for running automated tests on Open Source Brain using Travis-CI.
 # See https://github.com/OpenSourceBrain/osb-model-validation for more details
 
-dist: trusty
+dist: xenial
 sudo: false
 
 addons:
