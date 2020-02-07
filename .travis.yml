@@ -29,10 +29,10 @@ env:
      - OMV_ENGINE=NON_OMV_TESTS
      
 
-before_install:
+#before_install:
     # To run tests requiring a graphical user interface on Travis CI, use xvfb (X Virtual Framebuffer) to imitate a display.
-    - "export DISPLAY=:99.0"
-    - "sh -e /etc/init.d/xvfb start"
+    #- "export DISPLAY=:99.0"
+    #- "sh -e /etc/init.d/xvfb start"
 
 install:
     # Required to run OMV tests
