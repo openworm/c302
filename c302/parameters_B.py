@@ -24,7 +24,7 @@
 from neuroml import ExpTwoSynapse
 from neuroml import GapJunction
 
-from parameters_A import ParameterisedModel as ParameterisedModel_A
+from c302.parameters_A import ParameterisedModel as ParameterisedModel_A
 
 class ParameterisedModel(ParameterisedModel_A):
 

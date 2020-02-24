@@ -23,7 +23,7 @@ from neuroml import SilentSynapse
 import neuroml.writers as writers
 import neuroml.loaders as loaders
 
-import bioparameters
+import c302.bioparameters
 
 import airspeed
 
@@ -31,12 +31,19 @@ import random
 import argparse
 import shutil
 import os
+import logging
 import importlib
 import math
 from lxml import etree
 import re
 
 import collections
+
+import PyOpenWorm
+from PyOpenWorm import connect as pyow_connect, __version__ as pyow_version, ConnectionFailError
+from PyOpenWorm.context import Context
+from PyOpenWorm.neuron import Neuron
+from PyOpenWorm.worm import Worm
 
 try:
     from urllib2 import URLError  # Python 2
@@ -55,41 +62,15 @@ __version__ = about['__version__']
 
 LEMS_TEMPLATE_FILE = "LEMS_c302_TEMPLATE.xml"
 
-worm = None
-pyow_ctx = None
-
 def print_(msg, print_it=True): # print_it=False when not verbose
     if print_it:
         pre = "c302      >>> "
         print('%s %s'%(pre,msg.replace('\n','\n'+pre)))
 
-try:
-    import PyOpenWorm as P
-    print_("Connecting to the database of PyOpenWorm ...")
-    pyopenworm_conn = P.connect('./pyopenworm.conf')
-    print_("Connected to the PyOpenWorm database...")
-except Exception as e:
-    P = None
-    print_("Can't connect to PyOpenWorm: ...")
-    print(e)
-    
-def get_pyopenworm_worm():
-    
-    global worm, pyow_ctx
-    
-    if worm is not None:
-        return worm, pyow_ctx
-        
-    if P is None:
-        print_("Couldn't connect to PyOpenWorm...")
-        return None, None
-    
-    from PyOpenWorm.context import Context
-    from PyOpenWorm.worm import Worm
-    pyow_ctx = Context(ident="http://openworm.org/data", conf=pyopenworm_conn.conf).stored
-    worm = pyow_ctx(Worm)()
-    
-    return worm, pyow_ctx
+
+def pyopenworm_connect():
+    return pyow_connect('./pyopenworm.conf')
+
 
 def load_data_reader(data_reader="SpreadsheetDataReader"):
     """
@@ -118,7 +99,7 @@ def get_muscle_position(muscle, data_reader="SpreadsheetDataReader"):
         z = 80 * (-1 if muscle[4] == 'L' else 1)
         y = -300 + 30 * int(muscle[5:7])
         return x, y, z"""
-    
+
     x = 80 * (1 if muscle[2] == 'L' else -1)
     z = 80 * (-1 if muscle[1] == 'V' else 1)
     y = -300 + 30 * int(muscle[3:5])
@@ -232,7 +213,7 @@ quadrant3 = 'MDL'
 # soma positions from http://www.wormatlas.org/neuronalwiring.html - 2.2 Neuron Description (Neuron Types)
 VB_soma_pos = {
     'VB1':0.21,
-    'VB2':0.19,       
+    'VB2':0.19,
     'VB3':0.28,
     'VB4':0.32,
     'VB5':0.38,
@@ -246,7 +227,7 @@ VB_soma_pos = {
 
 DB_soma_pos = {
     'DB1':0.24,
-    'DB2':0.21,       
+    'DB2':0.21,
     'DB3':0.3,
     'DB4':0.39,
     'DB5':0.51,
@@ -267,7 +248,7 @@ def get_next_stim_id(nml_doc, cell):
 def get_cell_position(cell):
     root_dir = os.path.dirname(os.path.abspath(__file__))
     #cell_file_path = root_dir + "/../../../" if test else root_dir + "/../../"  # if running test
-    cell_file_path = root_dir + "/" 
+    cell_file_path = root_dir + "/"
     cell_file = cell_file_path + 'NeuroML2/%s.cell.nml' % cell
     doc = loaders.NeuroMLLoader.load(cell_file)
     location = doc.cells[0].morphology.segments[0].proximal
@@ -286,7 +267,7 @@ def append_input_to_nml_input_list(stim, nml_doc, cell, params):
 
 def add_new_sinusoidal_input(nml_doc, cell, delay, duration, amplitude, period, params):
     id = get_next_stim_id(nml_doc, cell)
-    
+
     if cell.startswith("VB"):
         phase = VB_soma_pos[cell]
     else:
@@ -294,21 +275,21 @@ def add_new_sinusoidal_input(nml_doc, cell, delay, duration, amplitude, period, 
     #phase = get_cell_position(cell).x
     phase = phase * -0.886
     print_("### CELL %s PHASE: %s" % (cell, phase))
-    
+
     if cell.startswith("VB"):
         if amplitude.startswith("-"):
             amplitude = amplitude[1:]
         else:
             amplitude = "-" + amplitude
-            
-    
-    
+
+
+
     input = SineGenerator(id=id, delay=delay, phase=phase, duration=duration, amplitude=amplitude, period=period)
     nml_doc.sine_generators.append(input)
 
     append_input_to_nml_input_list(input, nml_doc, cell, params)
-    
-    
+
+
 
 def add_new_input(nml_doc, cell, delay, duration, amplitude, params):
     id = get_next_stim_id(nml_doc, cell)
@@ -339,11 +320,11 @@ def merge_with_template(model, templfile):
 
 
 
-def write_to_file(nml_doc, 
-                  lems_info, 
-                  reference, 
-                  template_path='', 
-                  validate=True, 
+def write_to_file(nml_doc,
+                  lems_info,
+                  reference,
+                  template_path='',
+                  validate=True,
                   verbose=True,
                   target_directory='.'):
 
@@ -353,7 +334,7 @@ def write_to_file(nml_doc,
     print_("Writing generated network to: %s"%os.path.realpath(nml_file))
     writers.NeuroMLWriter.write(nml_doc, nml_file)
 
-    if verbose: 
+    if verbose:
         print_("Written network file to: "+nml_file)
 
     lems_file_name = target_directory+'/'+'LEMS_%s.xml'%reference
@@ -362,7 +343,7 @@ def write_to_file(nml_doc,
         merged = merge_with_template(lems_info, template_path+LEMS_TEMPLATE_FILE)
         lems.write(merged)
 
-    if verbose: 
+    if verbose:
         print_("Written LEMS file to: "+lems_file_name)
 
     if validate:
@@ -395,34 +376,34 @@ def get_random_colour_hex():
 
 
 def get_file_name_relative_to_c302(file_name):
-    
+
     if 'C302_HOME' in os.environ:
         return os.path.relpath(os.environ['C302_HOME'],file_name)
-    
-    
+
+
 def get_cell_names_and_connection(data_reader="SpreadsheetDataReader", test=False):
-    
+
     # Use the spreadsheet reader to give a list of all cells and a list of all connections
     # This could be replaced with a call to "DatabaseReader" or "OpenWormNeuroLexReader" in future...
     # If called from unittest folder ammend path to "../../../../"
-    
+
     spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/data/"
 
     cell_names, conns = load_data_reader(data_reader).read_data(include_nonconnected_cells=True)
 
     cell_names.sort()
-    
+
     return cell_names, conns
 
 
 def get_cell_muscle_names_and_connection(data_reader="SpreadsheetDataReader", test=False):
-    
+
     #spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/../../../"
 
     mneurons, all_muscles, muscle_conns = load_data_reader(data_reader).read_muscle_data()
 
     all_muscles = get_muscle_names()
-        
+
     return mneurons, all_muscles, muscle_conns
 
 
@@ -438,7 +419,7 @@ def get_cell_id_string(cell, params, muscle=False):
             return "../%s/0/%s"%(cell, params.generic_neuron_cell.id)
         else:
             return "../%s/0/%s"%(cell, params.generic_muscle_cell.id)
-    
+
     else:
         if not muscle:
             return "../%s/0/%s"%(cell, cell)
@@ -461,29 +442,25 @@ def elem_in_coll_matches_conn(coll, conn):
     return False
 
 
-def _get_cell_info(cells):
+def _get_cell_info(pow_conn, cells):
 
-    from PyOpenWorm.neuron import Neuron    
-    worm, ctx = get_pyopenworm_worm()
-    if worm is None:
+    if pow_conn is None:
         return None, None
-    
-    #Extract the network object from the worm object.
-    net = worm.neuron_network()
 
+    ctx = Context(ident="http://openworm.org/data", conf=pow_conn.conf).stored
     #Go through our list and get the neuron object associated with each name.
     #Store these in another list.
     some_neurons = [ctx(Neuron)(name) for name in cells]
     all_neuron_info = collections.OrderedDict()
     all_muscle_info = collections.OrderedDict()
-    
-    
-    for neuron in some_neurons: 
+
+
+    for neuron in some_neurons:
         #print("=====Checking properties of: %s"%neuron)
         #print neuron.triples()
         #print neuron.__class__
         short = ') %s'%neuron.name()
-        
+
         color = '.5 0 0'
         if 'sensory' in neuron.type():
             short = 'Se%s'%short
@@ -497,28 +474,27 @@ def _get_cell_info(cells):
         if is_muscle(neuron.name()):
             short = 'Mu%s'%short
             color = '0 0.6 0'
-            
-            
+
+
         short = '(%s'%short
-        
-        
+
+
         if 'GABA' in neuron.neurotransmitter():
             short = '- %s'%short
-        elif len(neuron.neurotransmitter())==0:
+        elif len(neuron.neurotransmitter()) == 0:
             short = '? %s'%short
         else:
             short = '+ %s'%short
-            
+
         info = (neuron, neuron.type(), neuron.receptor(), neuron.neurotransmitter(), short, color)
         #print dir(neuron)
-        
+
         if is_muscle(neuron.name()):
             all_muscle_info[neuron.name()] = info
         else:
             all_neuron_info[neuron.name()] = info
-        
     return all_neuron_info, all_muscle_info
-  
+
 
 def set_param(params, param, value):
     v = params.get_bioparameter(param,warn_if_missing=False)
@@ -547,7 +523,7 @@ def mirror_param(params, k, v):
     set_param(params, override_key1, v)
     set_param(params, override_key2, v)
 
-    
+
 def generate(net_id,
              params,
              data_reader = "SpreadsheetDataReader",
@@ -570,9 +546,9 @@ def generate(net_id,
              print_connections=False,
              param_overrides={},
              target_directory='./'):
-                 
+
     validate = not (params.is_level_B() or params.is_level_C0() or params.is_level_C2 or params.is_level_D1())
-                
+
     root_dir = os.path.dirname(os.path.abspath(__file__))
 
     regex_param_overrides = {'mirrored_elec_conn_params':{}}
@@ -598,18 +574,18 @@ def generate(net_id,
 
 
     params.create_models()
-    
+
     if vmin is None:
         if params.is_level_A() or params.is_level_B():
-            vmin=-52 
+            vmin=-52
         elif params.is_level_C():
             vmin=-60
         elif params.is_level_D():
             vmin=-60
         else:
-            vmin=-52 
-            
-    
+            vmin=-52
+
+
     if vmax is None:
         if params.is_level_A() or params.is_level_B():
             vmax=-28
@@ -619,15 +595,14 @@ def generate(net_id,
             vmax=25
         else:
             vmax=-28
-    
+
     random.seed(seed)
 
     info = "\n\nParameters and setting used to generate this network:\n\n"+\
            "    Data reader:                    %s\n" % data_reader+\
-           "    c302 version:                   %s\n" % __version__
-    if P:
-        info+= "    PyOpenWorm version:             %s\n" % P.__version__
-    info+= "    Cells:                          %s\n" % (cells if cells is not None else "All cells")+\
+           "    c302 version:                   %s\n" % __version__+\
+           "    PyOpenWorm version:             %s\n" % pyow_version+\
+           "    Cells:                          %s\n" % (cells if cells is not None else "All cells")+\
            "    Cell stimulated:                %s\n" % (cells_to_stimulate if cells_to_stimulate is not None else "All neurons")+\
            "    Connection:                     %s\n" % (conns_to_include if conns_to_include is not None else "All connections") + \
            "    Connection numbers overridden:  %s\n" % (conn_number_override if conn_number_override is not None else "None")+\
@@ -642,14 +617,14 @@ def generate(net_id,
     nml_doc = NeuroMLDocument(id=net_id, notes=info)
 
     if params.is_level_A() or params.is_level_B() or params.level == "BC1":
-        nml_doc.iaf_cells.append(params.generic_muscle_cell) 
-        nml_doc.iaf_cells.append(params.generic_neuron_cell) 
+        nml_doc.iaf_cells.append(params.generic_muscle_cell)
+        nml_doc.iaf_cells.append(params.generic_neuron_cell)
     elif params.is_level_C():
         nml_doc.cells.append(params.generic_muscle_cell)
         nml_doc.cells.append(params.generic_neuron_cell)
     elif params.is_level_D():
         nml_doc.cells.append(params.generic_muscle_cell)
-         
+
 
     net = Network(id=net_id)
 
@@ -719,20 +694,25 @@ def generate(net_id,
                     etree.ElementTree(root).write(os.path.join(target_directory, ctd), pretty_print=True)
                 else:
                     shutil.copy(def_file, target_directory)
-                    
+
             if target_directory == './' and not os.path.isfile(ctd):
                 ctd = '%s/%s'%(os.path.dirname(__file__),ctd)
 
             lems_info["includes"].append(ctd)
             nml_doc.includes.append(IncludeType(href=ctd))
-    
-    
 
-    import backers
-    cells_vs_name = backers.get_adopted_cell_names()
-
+    import c302.backers
+    cells_vs_name = c302.backers.get_adopted_cell_names()
 
     count = 0
+    try:
+        pow_conn = pyopenworm_connect()
+    except Exception as e:
+        print_('Unable to connect to PyOpenWorm database: %s' % e)
+        pow_conn = None
+        
+    all_neuron_info, _ = _get_cell_info(pow_conn, cell_names)
+
     for cell in cell_names:
 
         if cells is None or cell in cells:
@@ -753,28 +733,21 @@ def generate(net_id,
                                   type="populationList",
                                   size="1")
                 cell_id = cell
-                     
-            try:
-                all_neuron_info, all_muscle_info = _get_cell_info([cell])
+
+            if all_neuron_info is not None:
                 #neuron, neuron.type(), neuron.receptor(), neuron.neurotransmitter(), short, color
-                pop0.properties.append(Property("color", all_neuron_info[cell][5]))  
+                pop0.properties.append(Property("color", all_neuron_info[cell][5]))
                 types = sorted(all_neuron_info[cell][1])
-                pop0.properties.append(Property("type", str('; '.join(types)))) 
+                pop0.properties.append(Property("type", str('; '.join(types))))
                 recps = sorted(all_neuron_info[cell][2])
                 pop0.properties.append(Property("receptor", str('; '.join(recps))))
-                pop0.properties.append(Property("neurotransmitter", str('; '.join(all_neuron_info[cell][3]))))  
-            except Exception as e:
-                # It's only metadata...
-                print e
-                pass
-            
+                pop0.properties.append(Property("neurotransmitter", str('; '.join(all_neuron_info[cell][3]))))
+
             pop0.instances.append(inst)
-
-
 
             # put that Population into the Network data structure from above
             net.populations.append(pop0)
-            
+
             if cell in cells_vs_name:
                 p = Property(tag="OpenWormBackerAssignedName", value=cells_vs_name[cell])
                 pop0.properties.append(p)
@@ -785,44 +758,44 @@ def generate(net_id,
             cell_file = cell_file_path+'NeuroML2/%s.cell.nml'%cell
             doc = loaders.NeuroMLLoader.load(cell_file)
             all_cells[cell] = doc.cells[0]
-            
-            
+
+
             if params.is_level_D():
                 new_cell = params.create_neuron_cell(cell, doc.cells[0].morphology)
-                
+
                 nml_cell_doc = NeuroMLDocument(id=cell)
                 nml_cell_doc.cells.append(new_cell)
                 new_cell_file = 'cells/'+cell+'_D.cell.nml'
                 nml_file = target_directory+'/'+new_cell_file
                 print_("Writing new cell to: %s"%os.path.realpath(nml_file))
                 writers.NeuroMLWriter.write(nml_cell_doc, nml_file)
-                
+
                 nml_doc.includes.append(IncludeType(href=new_cell_file))
                 lems_info["includes"].append(new_cell_file)
-                
+
                 inst.location = Location(0,0,0)
             else:
                 location = doc.cells[0].morphology.segments[0].proximal
-            
+
                 inst.location = Location(float(location.x), float(location.y), float(location.z))
-            
-            if verbose: 
+
+            if verbose:
                 print_("Loaded morphology: %s; id: %s; placing at location: (%s, %s, %s)"%(os.path.realpath(cell_file), all_cells[cell].id, inst.location.x, inst.location.y, inst.location.z))
 
 
-                
+
             if cells_to_stimulate is None or cell in cells_to_stimulate:
 
                 target = "../%s/0/%s"%(pop0.id, cell_id)
                 if params.is_level_D():
                     target+="/0"
-                
+
                 input_list = InputList(id="Input_%s_%s"%(cell,params.offset_current.id),
                                      component=params.offset_current.id,
                                      populations='%s'%cell)
 
-                input_list.input.append(Input(id=0, 
-                              target=target, 
+                input_list.input.append(Input(id=0,
+                              target=target,
                               destination="synapses"))
 
                 net.input_lists.append(input_list)
@@ -872,20 +845,20 @@ def generate(net_id,
 
             count+=1
 
-    if verbose: 
+    if verbose:
         print_("Finished loading %i cells"%count)
 
-    
+
     mneurons, all_muscles, muscle_conns = get_cell_muscle_names_and_connection(data_reader)
 
     #if data_reader == "SpreadsheetDataReader":
     #    all_muscles = get_muscle_names()
-        
+
     if muscles_to_include is None or muscles_to_include == True:
         muscles_to_include = all_muscles
     elif muscles_to_include == False:
         muscles_to_include = []
-        
+
     for m in muscles_to_include:
         assert m in all_muscles
 
@@ -933,7 +906,7 @@ def generate(net_id,
                 plot["colour"] = get_random_colour_hex()
                 plot["quantity"] = "%s/0/%s/activity" % (muscle, params.generic_muscle_cell.id)
                 lems_info["muscle_activity_plots"].append(plot)
-                
+
             if params.generic_muscle_cell.__class__.__name__ == 'Cell':
                 plot = {}
 
@@ -961,27 +934,27 @@ def generate(net_id,
             lems_info["muscles"].append(muscle)
 
             muscle_count+=1
-            
+
             if cells_to_stimulate is not None and muscle in cells_to_stimulate:
 
                 target = "../%s/0/%s"%(pop0.id, params.generic_muscle_cell.id)
                 if params.is_level_D():
                     target+="/0"
-                
+
                 input_list = InputList(id="Input_%s_%s"%(muscle,params.offset_current.id),
                                      component=params.offset_current.id,
                                      populations='%s'%pop0.id)
 
-                input_list.input.append(Input(id=0, 
-                              target=target, 
+                input_list.input.append(Input(id=0,
+                              target=target,
                               destination="synapses"))
 
                 net.input_lists.append(input_list)
 
-        if verbose: 
+        if verbose:
             print_("Finished creating %i muscles"%muscle_count)
-        
-    
+
+
     existing_synapses = {}
 
     for conn in conns:
@@ -999,7 +972,7 @@ def generate(net_id,
             conn_pol = "exc"
 
             orig_pol = "exc"
-            
+
             if 'GABA' in conn.synclass:
                 conn_pol = "inh"
                 orig_pol = "inh"
@@ -1121,16 +1094,16 @@ def generate(net_id,
                 print "%s num:%s" % (conn_shorthand, number_syns)
             else:
                 print "%s %s num:%s" % (conn_shorthand, orig_pol, number_syns)"""
-            
+
             if number_syns != conn.number:
                 if analog_conn or elect_conn:
-                    magnitude, unit = bioparameters.split_neuroml_quantity(syn0.conductance)
+                    magnitude, unit = c302.bioparameters.split_neuroml_quantity(syn0.conductance)
                 else:
-                    magnitude, unit = bioparameters.split_neuroml_quantity(syn0.gbase)
+                    magnitude, unit = c302.bioparameters.split_neuroml_quantity(syn0.gbase)
                 cond0 = "%s%s"%(magnitude*conn.number, unit)
                 cond1 = "%s%s" % (get_str_from_expnotation(magnitude * number_syns), unit)
                 gj = "" if not elect_conn else " GapJunction"
-                if verbose: 
+                if verbose:
                     print_(">> Changing number of effective synapses connection %s -> %s%s: was: %s (total cond: %s), becomes %s (total cond: %s)" % \
                      (conn.pre_cell, conn.post_cell, gj, conn.number, cond0, number_syns, cond1))
 
@@ -1162,9 +1135,9 @@ def generate(net_id,
                            weight=number_syns)
 
                 proj0.electrical_connection_instance_ws.append(conn0)
-                
+
             elif analog_conn:
-        
+
                 proj0 = ContinuousProjection(id=proj_id, \
                                    presynaptic_population=conn.pre_cell,
                                    postsynaptic_population=conn.post_cell)
@@ -1182,8 +1155,8 @@ def generate(net_id,
                            weight=number_syns)
 
                 proj0.continuous_connection_instance_ws.append(conn0)
-                
-                
+
+
             else:
 
                 proj0 = Projection(id=proj_id, \
@@ -1320,7 +1293,7 @@ def generate(net_id,
                 scale = params.get_bioparameter('global_connectivity_power_scaling').x()
                 #print("Scaling by %s"%scale)
                 number_syns = math.pow(number_syns,scale)
-            
+
             if conn_number_override:
                 for conn_num_override in conn_number_override.keys():
                     if conn_num_override == conn_shorthand:
@@ -1352,9 +1325,9 @@ def generate(net_id,
             if number_syns != conn.number:
 
                 if analog_conn or elect_conn:
-                    magnitude, unit = bioparameters.split_neuroml_quantity(syn0.conductance)
+                    magnitude, unit = c302.bioparameters.split_neuroml_quantity(syn0.conductance)
                 else:
-                    magnitude, unit = bioparameters.split_neuroml_quantity(syn0.gbase)
+                    magnitude, unit = c302.bioparameters.split_neuroml_quantity(syn0.gbase)
                 cond0 = "%s%s"%(magnitude*conn.number, unit)
                 cond1 = "%s%s" % (get_str_from_expnotation(magnitude * number_syns), unit)
                 gj = "" if not elect_conn else " GapJunction"
@@ -1386,7 +1359,7 @@ def generate(net_id,
                            weight=number_syns)
 
                 proj0.electrical_connection_instance_ws.append(conn0)
-                
+
             elif analog_conn:
 
                 proj0 = ContinuousProjection(id=proj_id, \
@@ -1468,35 +1441,57 @@ def parse_dict_arg(dict_arg):
     print_("Command line argument %s parsed as: %s"%(dict_arg,ret))
     return ret
 
+
 def main():
+    # Suppress logs from PyOpenWorm connection failures
+    logger = logging.getLogger('PyOpenWorm.data')
+    logger.addFilter(PyOpenWormConnectionFailFilter())
 
     args = process_args()
-    
-    exec('from %s import ParameterisedModel'%args.parameters, globals())
-    params = ParameterisedModel()
 
+    exec('from c302.%s import ParameterisedModel' % args.parameters, globals())
+    params = ParameterisedModel()
     generate(args.reference,
              params,
-             data_reader =            args.datareader,
-             cells =                  parse_list_arg(args.cells),
-             cells_to_plot =          parse_list_arg(args.cellstoplot),
-             cells_to_stimulate =     parse_list_arg(args.cellstostimulate),
-             conn_polarity_override = parse_dict_arg(args.connpolarityoverride),
-             conn_number_override =   parse_dict_arg(args.connnumberoverride),
-             conn_number_scaling =    parse_dict_arg(args.connnumberscaling),
-             muscles_to_include =     parse_list_arg(args.musclestoinclude),
-             param_overrides =        parse_dict_arg(args.paramoverride),
-             duration =               args.duration,
-             dt =                     args.dt,
-             vmin =                   args.vmin,
-             vmax =                   args.vmax)
+             data_reader=args.datareader,
+             cells=parse_list_arg(args.cells),
+             cells_to_plot=parse_list_arg(args.cellstoplot),
+             cells_to_stimulate=parse_list_arg(args.cellstostimulate),
+             conn_polarity_override=parse_dict_arg(args.connpolarityoverride),
+             conn_number_override=parse_dict_arg(args.connnumberoverride),
+             conn_number_scaling=parse_dict_arg(args.connnumberscaling),
+             muscles_to_include=parse_list_arg(args.musclestoinclude),
+             param_overrides=parse_dict_arg(args.paramoverride),
+             duration=args.duration,
+             dt=args.dt,
+             vmin=args.vmin,
+             vmax=args.vmax)
 
 
+class PyOpenWormConnectionFailFilter(logging.Filter):
+    '''
+    Filters out a couple of error messages from PyOpenWorm.data that we don't need to see
+    more than once
+    '''
+    def __init__(self, *args, **kwargs):
+        super(PyOpenWormConnectionFailFilter, self).__init__(*args, **kwargs)
+        self.failures_seen = set()
+
+    def filter(self, record):
+        try:
+            msg = record.getMessage()
+        except Exception:
+            msg = ''
+        try:
+            if ((msg.startswith('Failed to open the data source') or
+                    msg.startswith('Failed to create')) and
+                    msg in self.failures_seen):
+                return False
+        except Exception as e:
+            pass
+        self.failures_seen.add(msg)
+        return True
 
 
 if __name__ == '__main__':
-
     main()
-
-
-

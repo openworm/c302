@@ -6,8 +6,8 @@ import os
 
 def comparitor(fName1, fName2):
 
-    path1 = "../../../" + fName1
-    path2 = "../../../" + fName2
+    path1 = fName1
+    path2 = fName2
     dir = os.path.dirname(__file__)
     file1 = os.path.join(dir, path1)
     file2 = os.path.join(dir, path2)
@@ -26,15 +26,15 @@ def comparitor(fName1, fName2):
     matches, col1, col2 = matchLists(cols1, cols2, indexName1, indexName2)
 
     # Print results. Give number of pairs that are matched, remained from unmatched files, and associated pairs.
-    print "Number of matching pairs: " + str(len(matches[indexName2[0]]))
+    print("Number of matching pairs: " + str(len(matches[indexName2[0]])))
     for p in range(len(matches[indexName2[0]])):
-        print str(matches[indexName2[0]][p])+" -> "+str(matches[indexName2[1]][p])+" ("+str(matches[indexName2[2]][p])+", "+str(matches[indexName2[3]][p])+")"
-    print "\nNumber of pairs unmatched in " + fName1 + " is: " + str(len(col1[indexName2[0]]))
+        print(str(matches[indexName2[0]][p])+" -> "+str(matches[indexName2[1]][p])+" ("+str(matches[indexName2[2]][p])+", "+str(matches[indexName2[3]][p])+")")
+    print("\nNumber of pairs unmatched in " + fName1 + " is: " + str(len(col1[indexName2[0]])))
     for p in range(len(col1[indexName2[0]])):
-        print str(col1[indexName2[0]][p])+" -> "+str(col1[indexName2[1]][p])+" ("+str(col1[indexName2[2]][p])+", "+str(col1[indexName2[3]][p])+")"
-    print "\nNumber of pairs unmatched in " + fName2 + " is: " + str(len(col2[indexName1[0]]))
+        print(str(col1[indexName2[0]][p])+" -> "+str(col1[indexName2[1]][p])+" ("+str(col1[indexName2[2]][p])+", "+str(col1[indexName2[3]][p])+")")
+    print("\nNumber of pairs unmatched in " + fName2 + " is: " + str(len(col2[indexName1[0]])))
     for p in range(len(col2[indexName1[0]])):
-        print str(col2[indexName1[0]][p])+" -> "+str(col2[indexName1[1]][p])+" ("+str(col2[indexName1[2]][p])+", "+str(col2[indexName1[3]][p])+")"
+        print(str(col2[indexName1[0]][p])+" -> "+str(col2[indexName1[1]][p])+" ("+str(col2[indexName1[2]][p])+", "+str(col2[indexName1[3]][p])+")")
 
 
 # Get columns from .txt files
@@ -77,18 +77,18 @@ def getColumnsXls(fileIn):
     for c in range(4):
         indexName[c] = str(worksheet.cell_value(curr_row, c))
         cols[indexName[c]] = []
-        # print indexName[c]
+        # print(indexName[c])
     while curr_row < num_rows:
         curr_row += 1
         row = worksheet.row(curr_row)
-        # print 'Row:', curr_row
+        # print('Row:', curr_row)
         curr_cell = -1
         while curr_cell < num_cells:
             curr_cell += 1
             # Cell Types: 0=Empty, 1=Text, 2=Number, 3=Date, 4=Boolean, 5=Error, 6=Blank
             cell_type = worksheet.cell_type(curr_row, curr_cell)
             cell_value = str(worksheet.cell_value(curr_row, curr_cell))
-            # print '	', cell_type, ':', cell_value
+            # print('	', cell_type, ':', cell_value)
             cols[indexName[curr_cell]] += [cell_value]
     return cols, indexName
 
@@ -135,11 +135,11 @@ def matchLists(cols1, cols2, indexName1, indexName2):
                     index2 = p2
             # If matches array does not contain current pair from long array, add it
             if not zip(matches[indexNames1[0]], matches[indexNames1[1]]).__contains__(([pair[0]],[pair[1]])):
-                # print matches[indexNames1[0]], matches[indexNames1[1]]
+                # print(matches[indexNames1[0]], matches[indexNames1[1]])
                 for i in range(len(indexNames1)):
                     if col1[indexNames1[i]][index1] == col2[indexNames2[i]][index2]:
                         # if i < 2 & len(col1[indexNames1[i]][index1]):
-                        #     print "HO"
+                        #     print("HO")
                         matches[indexNames1[i]] += [[col1[indexNames1[i]][index1]]]
                         del col2[indexNames2[i]][index2]
                         del col1[indexNames1[i]][index1]
@@ -184,12 +184,12 @@ def matchLists(cols1, cols2, indexName1, indexName2):
             if x4 == ([pair[1]], [pair[0]]):
                 index4 = p4
         if zip(matches[indexNames1[0]], matches[indexNames1[1]]).__contains__(([pair[1]], [pair[0]])):
-            # print zip(matches[indexNames1[0]], matches[indexNames1[1]])
-            # print ([pair[1]], [pair[0]])
+            # print(zip(matches[indexNames1[0]], matches[indexNames1[1]]))
+            # print(([pair[1]], [pair[0]]))
             for i in range(len(indexNames1)):
                 if i > 1:
-                    # print len(matches[indexNames1[i]]), index4
-                    # print len(col1[indexNames1[i]]), index1
+                    # print(len(matches[indexNames1[i]]), index4)
+                    # print(len(col1[indexNames1[i]]), index1)
                     matches[indexNames1[i]][index4] += [col1[indexNames1[i]][index1]]
                 del col1[indexNames1[i]][index1]
 
