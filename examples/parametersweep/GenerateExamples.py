@@ -60,13 +60,15 @@ if __name__ == "__main__":
     
     if '-all' in sys.argv:
         for cell in colors:
-            generate(cell, 3000, config="IClamp",parameters={'stim_amp':'1pA'})
+            generate(cell, 3000, config="IClamp",parameters={'stim_amp':'4pA'})
             
         
     else:
         
         #sim, net = generate('cADpyr229_L23_PC_c292d67a2e_0_0', 3000, config="IClamp")
         sim, net = generate('GenericMuscleCell', 3000, config="IClamp",parameters={'stim_amp':'1pA'})
+        check_to_generate_or_run(sys.argv, sim)
+        
         sim, net = generate('GenericNeuronCell', 3000, config="IClamp",parameters={'stim_amp':'1pA'})
         
         check_to_generate_or_run(sys.argv, sim)
