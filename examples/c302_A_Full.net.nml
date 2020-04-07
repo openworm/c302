@@ -4,7 +4,7 @@
 Parameters and setting used to generate this network:
 
     Data reader:                    SpreadsheetDataReader
-    c302 version:                   0.7.4
+    c302 version:                   0.7.6
     PyOpenWorm version:             0.10.0.post0
     Cells:                          All cells
     Cell stimulated:                ['PLML', 'PLMR']
@@ -54,6 +54,8 @@ Parameters and setting used to generate this network:
     <iafCell id="generic_neuron_iaf_cell" leakReversal="-50mV" thresh="-30mV" reset="-50mV" C="3pF" leakConductance="0.1nS"/>
     <pulseGenerator id="offset_current" delay="50 ms" duration="900 ms" amplitude="5pA"/>
     <network id="c302_A_Full">
+        <property tag="recommended_duration_ms" value="1000"/>
+        <property tag="recommended_dt_ms" value="0.05"/>
         <population id="ADAL" component="generic_neuron_iaf_cell" size="1" type="populationList">
             <property tag="color" value="1 0 .4"/>
             <property tag="type" value="interneuron"/>

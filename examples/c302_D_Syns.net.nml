@@ -4,7 +4,7 @@
 Parameters and setting used to generate this network:
 
     Data reader:                    SpreadsheetDataReader
-    c302 version:                   0.7.4
+    c302 version:                   0.7.6
     PyOpenWorm version:             0.10.0.post0
     Cells:                          ['URYDL', 'SMDDR', 'VD12', 'VB11', 'AS2', 'AIZL', 'ASHL']
     Cell stimulated:                []
@@ -99,6 +99,8 @@ Parameters and setting used to generate this network:
     <pulseGenerator id="stim_AS2_2" delay="1900ms" duration="800ms" amplitude="5pA"/>
     <pulseGenerator id="stim_AIZL_2" delay="1900ms" duration="800ms" amplitude="5pA"/>
     <network id="c302_D_Syns">
+        <property tag="recommended_duration_ms" value="3600"/>
+        <property tag="recommended_dt_ms" value="0.05"/>
         <population id="AIZL" component="AIZL" size="1" type="populationList">
             <property tag="color" value="1 0 .4"/>
             <property tag="type" value="interneuron"/>

@@ -630,6 +630,9 @@ def generate(net_id,
 
 
     nml_doc.networks.append(net)
+    
+    net.properties.append(Property('recommended_duration_ms',duration))
+    net.properties.append(Property('recommended_dt_ms',dt))
 
     nml_doc.pulse_generators.append(params.offset_current)
 

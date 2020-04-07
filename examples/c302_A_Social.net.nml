@@ -4,7 +4,7 @@
 Parameters and setting used to generate this network:
 
     Data reader:                    SpreadsheetDataReader
-    c302 version:                   0.7.4
+    c302 version:                   0.7.6
     PyOpenWorm version:             0.10.0.post0
     Cells:                          ['RMGR', 'ASHR', 'ASKR', 'AWBR', 'IL2R', 'RMHR', 'URXR']
     Cell stimulated:                []
@@ -58,6 +58,8 @@ Parameters and setting used to generate this network:
     <pulseGenerator id="stim_RMHR_1" delay="1600ms" duration="200ms" amplitude="5pA"/>
     <pulseGenerator id="stim_URXR_1" delay="1900ms" duration="200ms" amplitude="5pA"/>
     <network id="c302_A_Social">
+        <property tag="recommended_duration_ms" value="2500"/>
+        <property tag="recommended_dt_ms" value="0.05"/>
         <population id="ASHR" component="generic_neuron_iaf_cell" size="1" type="populationList">
             <property tag="color" value="1 .2 1"/>
             <property tag="type" value="sensory"/>
