@@ -42,7 +42,7 @@ if __name__ == '__main__':
                     ps = ParameterSweep(nmllr, 
                                         vary, 
                                         fixed,
-                                        num_parallel_runs=16,
+                                        num_parallel_runs=6,
                                         save_plot_all_to='firing_rates_%s.png'%type,
                                         heatmap_all=True,
                                         save_heatmap_to='heatmap_%s.png'%type,
@@ -166,7 +166,7 @@ if __name__ == '__main__':
             pass
 
         ps = ParameterSweep(nmllr, vary, fixed,
-                            num_parallel_runs=16,
+                            num_parallel_runs=6,
                                   plot_all=True, 
                                   save_plot_all_to='firing_rates_%s.png'%type,
                                   heatmap_all=True,

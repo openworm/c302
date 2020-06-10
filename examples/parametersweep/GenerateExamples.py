@@ -66,10 +66,10 @@ if __name__ == "__main__":
     else:
         
         #sim, net = generate('cADpyr229_L23_PC_c292d67a2e_0_0', 3000, config="IClamp")
-        sim, net = generate('GenericMuscleCell', 3000, config="IClamp",parameters={'stim_amp':'1pA'})
+        sim, net = generate('GenericMuscleCell', 3000, config="IClamp",parameters={'stim_amp':'4pA'})
         check_to_generate_or_run(sys.argv, sim)
         
-        sim, net = generate('GenericNeuronCell', 3000, config="IClamp",parameters={'stim_amp':'1pA'})
+        sim, net = generate('GenericNeuronCell', 3000, config="IClamp",parameters={'stim_amp':'4pA'})
         
         check_to_generate_or_run(sys.argv, sim)
     

@@ -3,7 +3,7 @@
         "version": "NeuroMLlite v0.2.0", 
         "temperature": 34.0, 
         "parameters": {
-            "stim_amp": "1pA"
+            "stim_amp": "4pA"
         }, 
         "notes": "A network model: IClamp_GenericMuscleCell", 
         "cells": [

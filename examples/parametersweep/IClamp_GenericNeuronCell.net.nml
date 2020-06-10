@@ -3,9 +3,9 @@
     Generated network: IClamp_GenericNeuronCell
     Generation seed: 1234
     NeuroMLlite parameters: 
-        stim_amp = 1pA</notes>
+        stim_amp = 4pA</notes>
     <include href="GenericNeuronCell.cell.nml"/>
-    <pulseGenerator id="iclamp_0" delay="500ms" duration="2000ms" amplitude="1pA"/>
+    <pulseGenerator id="iclamp_0" delay="500ms" duration="2000ms" amplitude="4pA"/>
     <network id="IClamp_GenericNeuronCell" type="networkWithTemperature" temperature="34.0degC">
         <notes>A network model: IClamp_GenericNeuronCell</notes>
         <property tag="recommended_dt_ms" value="0.025"/>
