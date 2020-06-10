@@ -50,11 +50,11 @@ def add_connection(net, pre, post, syn, weight):
                                       random_connectivity=RandomConnectivity(probability=1)))
     
 
-def generate(duration=1000):
+def generate(duration=1000, paramset='C'):
     
     #reference = "%s_%s"%(config, cell)
     
-    reference = "Canonical_C"  #%(config, cell)
+    reference = "Canonical_%s"%paramset  #%(config, cell)
     
     
     net = Network(id=reference)
@@ -84,19 +84,21 @@ def generate(duration=1000):
     
     
     net.parameters['stim_duration'] = '2000ms'
-    net.parameters['stim_amp'] = '2.5pA'
+    net.parameters['stim_amp'] = '3.5pA'
     net.parameters['weight_IN_MN'] = 3
-    net.parameters['weight_MN_MN_Exc'] = 15
-    net.parameters['weight_MN_MN_Inh'] = 35
+    net.parameters['weight_MN_MN_Exc'] = 20
+    net.parameters['weight_MN_MN_Inh'] = 40
+    net.parameters['scaleDinout'] = 0.5
     
     add_connection(net, 'AVB', 'VB', exc_syn, 'weight_IN_MN')
-    add_connection(net, 'AVB', 'DB', exc_syn, 'weight_IN_MN * 0.9')
+    add_connection(net, 'AVB', 'DB', exc_syn, 'weight_IN_MN * scaleDinout')
     add_connection(net, 'DB', 'VD', exc_syn, 'weight_MN_MN_Exc')
     add_connection(net, 'DB', 'DD', exc_syn, 'weight_MN_MN_Exc')
     add_connection(net, 'VB', 'VD', exc_syn, 'weight_MN_MN_Exc')
     add_connection(net, 'VB', 'DD', exc_syn, 'weight_MN_MN_Exc')
     
     add_connection(net, 'VD', 'VB', inh_syn, 'weight_MN_MN_Inh')
+    #
     add_connection(net, 'DD', 'DB', inh_syn, 'weight_MN_MN_Inh')
 
 
@@ -122,7 +124,9 @@ def generate(duration=1000):
                      network=new_file,
                      duration=duration,
                      dt='0.1',
-                     recordTraces={'all':'*'})
+                     recordTraces={'all':'*'},
+                     plots2D={'DB-VB':{'x_axis':'DB/0/GenericNeuronCell/v',
+                                    'y_axis':'VB/0/GenericNeuronCell/v'}})
 
     sim.to_json_file()
     
@@ -135,6 +139,14 @@ if __name__ == "__main__":
     if '-all' in sys.argv:
         for cell in colors:
             generate(cell, 3000, config="IClamp",parameters={'stim_amp':'1pA'})
+            
+    
+    if '-d' in sys.argv:
+        
+        sim, net = generate(duration=3000, paramset='D')
+        
+        check_to_generate_or_run(sys.argv, sim)
+    
             
         
     else:
