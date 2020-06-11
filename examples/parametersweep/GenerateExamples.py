@@ -6,7 +6,7 @@ import sys
 sys.path.append("..")
 
 
-colors = {'GenericNeuronCell':'0 0 0.8', 'GenericMuscleCell':'0.8 0 0'}
+colors = {'GenericNeuronCell':'0 0 0.8', 'GenericNeuronCellX':'0 0 0.8', 'GenericMuscleCell':'0.8 0 0'}
 
 def generate(cell, duration=3000, config='IClamp',parameters = None):
     

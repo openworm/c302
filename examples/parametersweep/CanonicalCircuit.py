@@ -7,6 +7,8 @@ sys.path.append("..")
 
 INTERNEURON = 'interneuron'
 MOTORNEURON = 'motorneuron'
+MOTORNEURON_DORSAL = 'motorneuronD'
+MOTORNEURON_VENTRAL = 'motorneuronV'
 MUSCLE = 'muscle'
 
 
@@ -17,22 +19,27 @@ muscle_id = 'GenericMuscleCell'
 muscle_nmllite = Cell(id=muscle_id, neuroml2_source_file='%s.cell.nml'%(muscle_id))
 
 interneuron_region = RectangularRegion(id='%ss'%INTERNEURON, x=0,y=0,z=0,width=100,height=100,depth=100)
-motorneurons_region = RectangularRegion(id='%ss'%MOTORNEURON, x=200,y=0,z=0,width=100,height=100,depth=100)
+motorneurons_d_region = RectangularRegion(id='Dorsal %ss'%MOTORNEURON, x=200,y=0,z=0,width=100,height=100,depth=100)
+motorneurons_v_region = RectangularRegion(id='Ventral %ss'%MOTORNEURON, x=200,y=200,z=0,width=100,height=100,depth=100)
 muscles_region = RectangularRegion(id='%ss'%MUSCLE, x=300,y=0,z=0,width=1000,height=100,depth=1000)
 
-regions = {INTERNEURON:interneuron_region, MOTORNEURON:motorneurons_region, MUSCLE:muscles_region}
+regions = {INTERNEURON:interneuron_region, 
+           MOTORNEURON_DORSAL:motorneurons_d_region, 
+           MOTORNEURON_VENTRAL:motorneurons_v_region, 
+           MUSCLE:muscles_region}
 
 colors = {INTERNEURON:'1 0 .4', MOTORNEURON:'.5 .4 1', MUSCLE:'0 0.6 0'}
 
 all_cell_pops = {}
 
-def add_cell(net, name, type):
+def add_cell(net, name, type, region=None):
     
+    region = regions[type] if region==None else regions[region]
     cell_pop = Population(id=name, 
                           size=1, 
                           component=neuron_nmllite.id, 
                           properties={'color':colors[type]},
-                          random_layout = RandomLayout(region=regions[type].id))
+                          random_layout = RandomLayout(region=region.id))
                           
     all_cell_pops[name] = cell_pop
     net.populations.append(cell_pop)
@@ -52,6 +59,8 @@ def add_connection(net, pre, post, syn, weight):
 
 def generate(duration=1000, paramset='C'):
     
+    global neuron_id
+    global neuron_nmllite
     #reference = "%s_%s"%(config, cell)
     
     reference = "Canonical_%s"%paramset  #%(config, cell)
@@ -59,28 +68,38 @@ def generate(duration=1000, paramset='C'):
     
     net = Network(id=reference)
     net.parameters = {}
+    if paramset=='X':
+        neuron_id = 'GenericNeuronCellX'
+        neuron_nmllite = Cell(id=neuron_id, neuroml2_source_file='%s.cell.nml'%(neuron_id))
+
+        exc_syn = Synapse(id='neuron_to_neuron_exc_syn_x', neuroml2_source_file='test_syns.xml')
+        net.synapses.append(exc_syn)
+        inh_syn = Synapse(id='neuron_to_neuron_inh_syn_x', neuroml2_source_file='test_syns.xml')
+        net.synapses.append(inh_syn)
+        
+    else:
+
+        exc_syn = Synapse(id='neuron_to_neuron_exc_syn', neuroml2_source_file='test_syns.xml')
+        net.synapses.append(exc_syn)
+        inh_syn = Synapse(id='neuron_to_neuron_inh_syn', neuroml2_source_file='test_syns.xml')
+        net.synapses.append(inh_syn)
 
     net.cells.append(neuron_nmllite)
     #net.cells.append(muscle_nmllite)
 
 
     net.regions.append(interneuron_region)    
-    net.regions.append(motorneurons_region)
+    net.regions.append(motorneurons_d_region) 
+    net.regions.append(motorneurons_v_region)
     net.regions.append(muscles_region)
     
     
     
     add_cell(net, 'AVB', INTERNEURON)
-    add_cell(net, 'VB', MOTORNEURON)
-    add_cell(net, 'DB', MOTORNEURON)
-    add_cell(net, 'VD', MOTORNEURON)
-    add_cell(net, 'DD', MOTORNEURON)
-    
-    
-    exc_syn = Synapse(id='neuron_to_neuron_exc_syn', neuroml2_source_file='test_syns.xml')
-    net.synapses.append(exc_syn)
-    inh_syn = Synapse(id='neuron_to_neuron_inh_syn', neuroml2_source_file='test_syns.xml')
-    net.synapses.append(inh_syn)
+    add_cell(net, 'VB', MOTORNEURON, MOTORNEURON_VENTRAL)
+    add_cell(net, 'DB', MOTORNEURON, MOTORNEURON_DORSAL)
+    add_cell(net, 'VD', MOTORNEURON, MOTORNEURON_VENTRAL)
+    add_cell(net, 'DD', MOTORNEURON, MOTORNEURON_DORSAL)
     
     
     net.parameters['stim_duration'] = '2000ms'
@@ -125,8 +144,8 @@ def generate(duration=1000, paramset='C'):
                      duration=duration,
                      dt='0.1',
                      recordTraces={'all':'*'},
-                     plots2D={'DB-VB':{'x_axis':'DB/0/GenericNeuronCell/v',
-                                    'y_axis':'VB/0/GenericNeuronCell/v'}})
+                     plots2D={'DB-VB':{'x_axis':'DB/0/%s/v'%neuron_id,
+                                    'y_axis':'VB/0/%s/v'%neuron_id}})
 
     sim.to_json_file()
     
@@ -141,7 +160,13 @@ if __name__ == "__main__":
             generate(cell, 3000, config="IClamp",parameters={'stim_amp':'1pA'})
             
     
-    if '-d' in sys.argv:
+    elif '-x' in sys.argv:
+        
+        sim, net = generate(duration=3000, paramset='X')
+        
+        check_to_generate_or_run(sys.argv, sim)
+    
+    elif '-d' in sys.argv:
         
         sim, net = generate(duration=3000, paramset='D')
         

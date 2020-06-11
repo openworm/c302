@@ -61,3 +61,13 @@
 /clean.sh
 /tests.log
 /examples/parametersweep/ParamSweep_*
+/examples/parametersweep/Canonical_X.net.png
+/examples/parametersweep/Sim_IClamp_GenericNeuronCellX.json
+/examples/parametersweep/IClamp_GenericNeuronCellX.json
+/examples/parametersweep/IClamp_GenericNeuronCellX.net.nml
+/examples/parametersweep/LEMS_SimCanonical_X.xml
+/examples/parametersweep/LEMS_Sim_IClamp_GenericNeuronCellX.xml
+/examples/parametersweep/average_last_1percent_GenericNeuronCell.png
+/private/cache/retriever/catalog.xml
+/private/cache/retriever/raw.githubusercontent.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2beta4.xsd
+/examples/parametersweep/custom_synapses.xml
