@@ -1,9 +1,10 @@
 from c302.NeuroMLUtilities import ConnectionInfo
-from c302 import print_, pyopenworm_connect
+from c302 import print_
 
-from PyOpenWorm.context import Context
-from PyOpenWorm.neuron import Neuron
-from PyOpenWorm.worm import Worm
+from owmeta_core.bundle import Bundle
+from owmeta_core.context import Context
+from owmeta.neuron import Neuron
+from owmeta.worm import Worm
 
 ############################################################
 
@@ -25,8 +26,8 @@ def get_cells_in_model(net):
 def read_data(include_nonconnected_cells=False):
     print_("Initialising OpenWormReader")
 
-    with pyopenworm_connect() as conn:
-        ctx = Context(ident="http://openworm.org/data", conf=conn.conf).stored
+    with Bundle('openworm/owmeta-data') as bnd:
+        ctx = bnd(Context)(ident="http://openworm.org/data")
         #Extract the network object from the worm object.
         net = ctx(Worm)().neuron_network()
         all_connections = net.synapses()
