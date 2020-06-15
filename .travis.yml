@@ -37,21 +37,11 @@ before_install:
 install:
     # Required to run OMV tests
     - pip install git+https://github.com/OpenSourceBrain/osb-model-validation
-    
-    # Install specific version of PyOpenWorm
-    - git clone https://github.com/openworm/PyOpenWorm.git
-    - cd PyOpenWorm
-    - git checkout ow-0.9
-    - pip install pyparsing==2.0.3
-    - python setup.py install
-    - pow clone https://github.com/openworm/OpenWormData.git
-    - cd examples
-    - python NetworkInfo.py # test example...
-    - cd ../..
-    
     # NeuroML & main install
     - pip install pyNeuroML
     - python setup.py install
+    # Add openworm bundle owmeta remote
+    - owm bundle remote --user add mw-google-drive https://drive.google.com/uc?id=1NYAcKdcvoFu5c7Nz3l4hK5UacG_eD56V&authuser=0&export=download
 
 script:
     - omv all -V; export OMV_SUCCESS=$?; echo $OMV_SUCCESS

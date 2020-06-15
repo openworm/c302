@@ -39,11 +39,11 @@ import re
 
 import collections
 
-import PyOpenWorm
-from PyOpenWorm import connect as pyow_connect, __version__ as pyow_version, ConnectionFailError
-from PyOpenWorm.context import Context
-from PyOpenWorm.neuron import Neuron
-from PyOpenWorm.worm import Worm
+from owmeta_core import __version__ as owc_version, ConnectionFailError
+from owmeta_core.bundle import Bundle
+from owmeta_core.context import Context
+from owmeta.neuron import Neuron
+from owmeta.worm import Worm
 
 try:
     from urllib2 import URLError  # Python 2
@@ -53,6 +53,7 @@ except:
 import sys
 #sys.path.append("..")
 #import SpreadsheetDataReader
+logging.basicConfig()
 
 here = os.path.abspath(os.path.dirname(__file__))
 about = {}
@@ -66,10 +67,6 @@ def print_(msg, print_it=True): # print_it=False when not verbose
     if print_it:
         pre = "c302      >>> "
         print('%s %s'%(pre,msg.replace('\n','\n'+pre)))
-
-
-def pyopenworm_connect():
-    return pyow_connect('./pyopenworm.conf')
 
 
 def load_data_reader(data_reader="SpreadsheetDataReader"):
@@ -442,59 +439,50 @@ def elem_in_coll_matches_conn(coll, conn):
     return False
 
 
-def _get_cell_info(pow_conn, cells):
+def _get_cell_info(bnd, cells):
 
-    if pow_conn is None:
+    if bnd is None:
         return None, None
-
-    ctx = Context(ident="http://openworm.org/data", conf=pow_conn.conf).stored
-    #Go through our list and get the neuron object associated with each name.
-    #Store these in another list.
+    ctx = bnd(Context)(ident="http://openworm.org/data")
+    # Go through our list and get the neuron object associated with each name.
+    # Store these in another list.
     some_neurons = [ctx(Neuron)(name) for name in cells]
     all_neuron_info = collections.OrderedDict()
     all_muscle_info = collections.OrderedDict()
 
-
     for neuron in some_neurons:
-        #print("=====Checking properties of: %s"%neuron)
-        #print neuron.triples()
-        #print neuron.__class__
-        short = ') %s'%neuron.name()
-
+        short = ') %s' % neuron.name()
         color = '.5 0 0'
         if 'sensory' in neuron.type():
-            short = 'Se%s'%short
+            short = 'Se%s' % short
             color = '1 .2 1'
         if 'interneuron' in neuron.type():
-            short = 'In%s'%short
+            short = 'In%s' % short
             color = '1 0 .4'
         if 'motor' in neuron.type():
-            short = 'Mo%s'%short
+            short = 'Mo%s' % short
             color = '.5 .4 1'
         if is_muscle(neuron.name()):
-            short = 'Mu%s'%short
+            short = 'Mu%s' % short
             color = '0 0.6 0'
 
-
-        short = '(%s'%short
-
+        short = '(%s' % short
 
         if 'GABA' in neuron.neurotransmitter():
-            short = '- %s'%short
+            short = '- %s' % short
         elif len(neuron.neurotransmitter()) == 0:
-            short = '? %s'%short
+            short = '? %s' % short
         else:
-            short = '+ %s'%short
+            short = '+ %s' % short
 
         info = (neuron, neuron.type(), neuron.receptor(), neuron.neurotransmitter(), short, color)
-        #print dir(neuron)
+        # print dir(neuron)
 
         if is_muscle(neuron.name()):
             all_muscle_info[neuron.name()] = info
         else:
             all_neuron_info[neuron.name()] = info
     return all_neuron_info, all_muscle_info
-
 
 def set_param(params, param, value):
     v = params.get_bioparameter(param,warn_if_missing=False)
@@ -601,7 +589,7 @@ def generate(net_id,
     info = "\n\nParameters and setting used to generate this network:\n\n"+\
            "    Data reader:                    %s\n" % data_reader+\
            "    c302 version:                   %s\n" % __version__+\
-           "    PyOpenWorm version:             %s\n" % pyow_version+\
+           "    owmeta_core version:            %s\n" % owc_version+\
            "    Cells:                          %s\n" % (cells if cells is not None else "All cells")+\
            "    Cell stimulated:                %s\n" % (cells_to_stimulate if cells_to_stimulate is not None else "All neurons")+\
            "    Connection:                     %s\n" % (conns_to_include if conns_to_include is not None else "All connections") + \
@@ -625,9 +613,7 @@ def generate(net_id,
     elif params.is_level_D():
         nml_doc.cells.append(params.generic_muscle_cell)
 
-
     net = Network(id=net_id)
-
 
     nml_doc.networks.append(net)
 
@@ -706,10 +692,10 @@ def generate(net_id,
 
     count = 0
     try:
-        pow_conn = pyopenworm_connect()
+        bnd = Bundle('openworm/owmeta-data')
     except Exception as e:
-        print_('Unable to connect to PyOpenWorm database: %s' % e)
-        pow_conn = None
+        print_('Unable to open "openworm/owmeta-data" bundle: %s' % e)
+        bnd = None
 
     for cell in cell_names:
 
@@ -732,7 +718,7 @@ def generate(net_id,
                                   size="1")
                 cell_id = cell
 
-            all_neuron_info, _ = _get_cell_info(pow_conn, [cell])
+            all_neuron_info, _ = _get_cell_info(bnd, [cell])
             if all_neuron_info is not None:
                 #neuron, neuron.type(), neuron.receptor(), neuron.neurotransmitter(), short, color
                 pop0.properties.append(Property("color", all_neuron_info[cell][5]))
@@ -1442,10 +1428,6 @@ def parse_dict_arg(dict_arg):
 
 
 def main():
-    # Suppress logs from PyOpenWorm connection failures
-    logger = logging.getLogger('PyOpenWorm.data')
-    logger.addFilter(PyOpenWormConnectionFailFilter())
-
     args = process_args()
 
     exec('from c302.%s import ParameterisedModel' % args.parameters, globals())
@@ -1465,31 +1447,6 @@ def main():
              dt=args.dt,
              vmin=args.vmin,
              vmax=args.vmax)
-
-
-class PyOpenWormConnectionFailFilter(logging.Filter):
-    '''
-    Filters out a couple of error messages from PyOpenWorm.data that we don't need to see
-    more than once
-    '''
-    def __init__(self, *args, **kwargs):
-        super(PyOpenWormConnectionFailFilter, self).__init__(*args, **kwargs)
-        self.failures_seen = set()
-
-    def filter(self, record):
-        try:
-            msg = record.getMessage()
-        except Exception:
-            msg = ''
-        try:
-            if ((msg.startswith('Failed to open the data source') or
-                    msg.startswith('Failed to create')) and
-                    msg in self.failures_seen):
-                return False
-        except Exception as e:
-            pass
-        self.failures_seen.add(msg)
-        return True
 
 
 if __name__ == '__main__':
