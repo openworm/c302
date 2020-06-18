@@ -27,7 +27,7 @@ def read_data(include_nonconnected_cells=False):
     print_("Initialising OpenWormReader")
 
     with Bundle('openworm/owmeta-data') as bnd:
-        ctx = bnd(Context)(ident="http://openworm.org/data")
+        ctx = bnd(Context)(ident="http://openworm.org/data").stored
         #Extract the network object from the worm object.
         net = ctx(Worm)().neuron_network()
         all_connections = net.synapses()
