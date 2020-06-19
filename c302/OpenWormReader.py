@@ -5,6 +5,7 @@ from owmeta_core.bundle import Bundle
 from owmeta_core.context import Context
 from owmeta.neuron import Neuron
 from owmeta.worm import Worm
+import time
 
 ############################################################
 
