@@ -441,15 +441,13 @@ def elem_in_coll_matches_conn(coll, conn):
 
 
 def _get_cell_info(bnd, cells):
-
+    all_neuron_info = collections.OrderedDict()
     if bnd is None:
-        return None, None
-    ctx = bnd(Context)(ident="http://openworm.org/data")
+        return all_neuron_info
+    ctx = bnd(Context)(ident="http://openworm.org/data").stored
     # Go through our list and get the neuron object associated with each name.
     # Store these in another list.
     some_neurons = [ctx(Neuron)(name) for name in cells]
-    all_neuron_info = collections.OrderedDict()
-    all_muscle_info = collections.OrderedDict()
 
     for neuron in some_neurons:
         short = ') %s' % neuron.name()
@@ -463,9 +461,6 @@ def _get_cell_info(bnd, cells):
         if 'motor' in neuron.type():
             short = 'Mo%s' % short
             color = '.5 .4 1'
-        if is_muscle(neuron.name()):
-            short = 'Mu%s' % short
-            color = '0 0.6 0'
 
         short = '(%s' % short
 
@@ -479,11 +474,8 @@ def _get_cell_info(bnd, cells):
         info = (neuron, neuron.type(), neuron.receptor(), neuron.neurotransmitter(), short, color)
         # print dir(neuron)
 
-        if is_muscle(neuron.name()):
-            all_muscle_info[neuron.name()] = info
-        else:
-            all_neuron_info[neuron.name()] = info
-    return all_neuron_info, all_muscle_info
+        all_neuron_info[neuron.name()] = info
+    return all_neuron_info
 
 def set_param(params, param, value):
     v = params.get_bioparameter(param,warn_if_missing=False)
@@ -698,10 +690,9 @@ def generate(net_id,
         print_('Unable to open "openworm/owmeta-data" bundle: %s' % e)
         bundle = nullcontext()
     with bundle as bnd:
+        all_neuron_info = _get_cell_info(bnd, set(cell_names))
         for cell in cell_names:
-
             if cells is None or cell in cells:
-
                 inst = Instance(id="0")
 
                 if not params.is_level_D():
@@ -719,15 +710,13 @@ def generate(net_id,
                                       size="1")
                     cell_id = cell
 
-                all_neuron_info, _ = _get_cell_info(bnd, [cell])
-                if all_neuron_info is not None:
-                    #neuron, neuron.type(), neuron.receptor(), neuron.neurotransmitter(), short, color
-                    pop0.properties.append(Property("color", all_neuron_info[cell][5]))
-                    types = sorted(all_neuron_info[cell][1])
-                    pop0.properties.append(Property("type", str('; '.join(types))))
-                    recps = sorted(all_neuron_info[cell][2])
-                    pop0.properties.append(Property("receptor", str('; '.join(recps))))
-                    pop0.properties.append(Property("neurotransmitter", str('; '.join(all_neuron_info[cell][3]))))
+                #neuron, neuron.type(), neuron.receptor(), neuron.neurotransmitter(), short, color
+                pop0.properties.append(Property("color", all_neuron_info[cell][5]))
+                types = sorted(all_neuron_info[cell][1])
+                pop0.properties.append(Property("type", str('; '.join(types))))
+                recps = sorted(all_neuron_info[cell][2])
+                pop0.properties.append(Property("receptor", str('; '.join(recps))))
+                pop0.properties.append(Property("neurotransmitter", str('; '.join(all_neuron_info[cell][3]))))
 
                 pop0.instances.append(inst)
 
