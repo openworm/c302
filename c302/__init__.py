@@ -27,7 +27,14 @@ import c302.bioparameters
 
 import airspeed
 
-from contextlib import nullcontext
+try:
+    from contextlib import nullcontext
+except ImportError:
+    class nullcontext(object):
+        def __init__(self, enter_result=None): self.enter_result = enter_result
+        def __enter__(self): return self.enter_result
+        def __exit__(self, *excinfo): pass
+
 import random
 import argparse
 import shutil
@@ -40,20 +47,16 @@ import re
 
 import collections
 
-from owmeta_core import __version__ as owc_version, ConnectionFailError
+from owmeta_core import __version__ as owc_version
 from owmeta_core.bundle import Bundle
 from owmeta_core.context import Context
 from owmeta.neuron import Neuron
-from owmeta.worm import Worm
 
 try:
     from urllib2 import URLError  # Python 2
 except:
     from urllib.error import URLError  # Python 3
 
-import sys
-#sys.path.append("..")
-#import SpreadsheetDataReader
 logging.basicConfig()
 
 here = os.path.abspath(os.path.dirname(__file__))
