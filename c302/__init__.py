@@ -608,10 +608,16 @@ def generate(net_id,
         nml_doc.cells.append(params.generic_neuron_cell)
     elif params.is_level_D():
         nml_doc.cells.append(params.generic_muscle_cell)
+    elif params.is_level_X():
+        nml_doc.cells.append(params.generic_muscle_cell)
+        nml_doc.cells.append(params.generic_neuron_cell)
 
     net = Network(id=net_id)
 
     nml_doc.networks.append(net)
+    
+    net.properties.append(Property('recommended_duration_ms',duration))
+    net.properties.append(Property('recommended_dt_ms',dt))
 
     nml_doc.pulse_generators.append(params.offset_current)
 

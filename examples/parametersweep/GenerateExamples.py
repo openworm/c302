@@ -6,7 +6,7 @@ import sys
 sys.path.append("..")
 
 
-colors = {'GenericNeuronCell':'0 0 0.8', 'GenericMuscleCell':'0.8 0 0'}
+colors = {'GenericNeuronCell':'0 0 0.8', 'GenericNeuronCellX':'0 0 0.8', 'GenericMuscleCell':'0.8 0 0'}
 
 def generate(cell, duration=3000, config='IClamp',parameters = None):
     
@@ -60,14 +60,16 @@ if __name__ == "__main__":
     
     if '-all' in sys.argv:
         for cell in colors:
-            generate(cell, 3000, config="IClamp",parameters={'stim_amp':'1pA'})
+            generate(cell, 3000, config="IClamp",parameters={'stim_amp':'4pA'})
             
         
     else:
         
         #sim, net = generate('cADpyr229_L23_PC_c292d67a2e_0_0', 3000, config="IClamp")
-        sim, net = generate('GenericMuscleCell', 3000, config="IClamp",parameters={'stim_amp':'1pA'})
-        sim, net = generate('GenericNeuronCell', 3000, config="IClamp",parameters={'stim_amp':'1pA'})
+        sim, net = generate('GenericMuscleCell', 3000, config="IClamp",parameters={'stim_amp':'4pA'})
+        check_to_generate_or_run(sys.argv, sim)
+        
+        sim, net = generate('GenericNeuronCell', 3000, config="IClamp",parameters={'stim_amp':'4pA'})
         
         check_to_generate_or_run(sys.argv, sim)
     

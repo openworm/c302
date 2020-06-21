@@ -3,7 +3,7 @@
 
 ...
 </notes>
-    <include href="../cell_C.xml"/>
+    <include href="cell_C.xml"/>
     
     <fixedFactorConcentrationModel id="CaPool" ion="ca" restingConc="0 mM" decayConstant="20 ms" rho="0.0002 mol_per_m_per_A_per_s"/>
     <cell id="GenericMuscleCell">

@@ -1,10 +1,10 @@
-<neuroml xmlns="http://www.neuroml.org/schema/neuroml2"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2 https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2.0.xsd" id="c302_D_Oscillator">
+<neuroml xmlns="http://www.neuroml.org/schema/neuroml2"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2 https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2.1.xsd" id="c302_D_Oscillator">
     <notes>
 
 Parameters and setting used to generate this network:
 
     Data reader:                    SpreadsheetDataReader
-    c302 version:                   0.7.4
+    c302 version:                   0.7.6
     PyOpenWorm version:             0.10.0.post0
     Cells:                          ['DB2', 'VB2', 'DD2', 'VD2', 'DB3', 'VB3', 'DD3', 'VD3', 'DA2', 'VA2', 'DA3', 'VA3', 'AVBL', 'AVBR']
     Cell stimulated:                ['AVBL', 'AVBR']
@@ -97,6 +97,8 @@ Parameters and setting used to generate this network:
     </cell>
     <pulseGenerator id="offset_current" delay="100 ms" duration="800 ms" amplitude="4pA"/>
     <network id="c302_D_Oscillator">
+        <property tag="recommended_duration_ms" value="1000"/>
+        <property tag="recommended_dt_ms" value="0.05"/>
         <population id="AVBL" component="AVBL" size="1" type="populationList">
             <property tag="color" value="1 0 .4"/>
             <property tag="type" value="interneuron"/>

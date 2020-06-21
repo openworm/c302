@@ -136,6 +136,9 @@ class c302ModelPrototype(ParameterisedModelPrototype):
     
     def is_level_D(self):
         return self.level.startswith('D')
+    
+    def is_level_X(self):
+        return self.level.startswith('X')
 
 
     def get_conn_param(self, pre_cell, post_cell, specific_conn_template, default_conn_template, param_name):

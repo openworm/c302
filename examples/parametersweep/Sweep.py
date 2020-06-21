@@ -42,7 +42,7 @@ if __name__ == '__main__':
                     ps = ParameterSweep(nmllr, 
                                         vary, 
                                         fixed,
-                                        num_parallel_runs=16,
+                                        num_parallel_runs=6,
                                         save_plot_all_to='firing_rates_%s.png'%type,
                                         heatmap_all=True,
                                         save_heatmap_to='heatmap_%s.png'%type,
@@ -137,6 +137,54 @@ if __name__ == '__main__':
             plt.show()
             
         
+    elif '-iv' in sys.argv:
+        
+        fixed = {'dt':0.025, 'duration':2000}
+
+        quick = False
+        #quick=True
+
+        vary = {'stim_amp':standard_stim_amps}
+        
+        #vary = {'number_per_cell':[i for i in xrange(0,250,10)]}
+        vary = {'stim_amp':['-1pA','0pA','1.5pA','2pA']}
+        vary = {'stim_amp':['%spA'%(i/10.0) for i in xrange(-20,60,5)]}
+
+        type = 'GenericMuscleCell'
+        type = 'GenericNeuronCell'
+        #type='poolosyn'
+        config = 'IClamp'
+        #config = 'PoissonFiringSynapse'
+
+        nmllr = NeuroMLliteRunner('Sim_%s_%s.json'%(config,type),
+                                  simulator='jNeuroML_NEURON')
+
+        if quick:
+            pass
+
+        ps = ParameterSweep(nmllr, vary, fixed,
+                            num_parallel_runs=6,
+                                  plot_all=True, 
+                                  save_plot_all_to='firing_rates_%s.png'%type,
+                                  heatmap_all=True,
+                                  save_heatmap_to='heatmap_%s.png'%type,
+                                  heatmap_lims=heatmap_lims,
+                                  show_plot_already=False)
+
+        report = ps.run()
+        ps.print_report()
+
+        ps.plotLines('stim_amp','average_last_1percent',save_figure_to='average_last_1percent_%s.png'%type)
+        ps.plotLines('stim_amp','mean_spike_frequency',save_figure_to='mean_spike_frequency_%s.png'%type)
+        #ps.plotLines('dt','mean_spike_frequency',save_figure_to='mean_spike_frequency_%s.png'%type, logx=True)
+        #ps.plotLines('number_per_cell','mean_spike_frequency',save_figure_to='poisson_mean_spike_frequency_%s.png'%type)
+
+        import matplotlib.pyplot as plt
+        if not '-nogui' in sys.argv:
+            print("Showing plots")
+            plt.show()
+
+        
     else:
         
         fixed = {'dt':0.025, 'duration':3000}
@@ -166,7 +214,7 @@ if __name__ == '__main__':
             pass
 
         ps = ParameterSweep(nmllr, vary, fixed,
-                            num_parallel_runs=16,
+                            num_parallel_runs=6,
                                   plot_all=True, 
                                   save_plot_all_to='firing_rates_%s.png'%type,
                                   heatmap_all=True,

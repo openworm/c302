@@ -13,7 +13,7 @@ from subprocess import call
 
 
 def usage(script):
-    print 'USAGE: python %s directory [r]' % (script)
+    print('USAGE: python %s directory [r]' % (script))
     sys.exit(-1)
 
 
@@ -147,7 +147,7 @@ def main():
 
     for filename in sorted(filenames)[:5]:
         if filename.endswith('nml') and not filename.endswith('cell.nml'):
-            print "=============================\nCreating graph for %s" % filename
+            print("=============================\nCreating graph for %s" % filename)
             dirname = os.path.dirname(filename)
             tree = ET.parse(filename)
             root = tree.getroot()

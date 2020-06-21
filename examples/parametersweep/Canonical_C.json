@@ -1,12 +1,13 @@
 {
     "Canonical_C": {
-        "version": "NeuroMLlite v0.1.9", 
+        "version": "NeuroMLlite v0.2.0", 
         "parameters": {
-            "stim_amp": "2.5pA", 
             "weight_IN_MN": 3, 
-            "stim_duration": "2000ms", 
-            "weight_MN_MN_Inh": 35, 
-            "weight_MN_MN_Exc": 15
+            "scaleDinout": 0.5, 
+            "stim_amp": "3.5pA", 
+            "weight_MN_MN_Exc": 20, 
+            "weight_MN_MN_Inh": 40, 
+            "stim_duration": "2000ms"
         }, 
         "cells": [
             {
@@ -51,9 +52,19 @@
                 }
             }, 
             {
-                "motorneurons": {
+                "Dorsal motorneurons": {
                     "x": 200.0, 
                     "y": 0.0, 
+                    "z": 0.0, 
+                    "width": 100.0, 
+                    "height": 100.0, 
+                    "depth": 100.0
+                }
+            }, 
+            {
+                "Ventral motorneurons": {
+                    "x": 200.0, 
+                    "y": 200.0, 
                     "z": 0.0, 
                     "width": 100.0, 
                     "height": 100.0, 
@@ -92,7 +103,7 @@
                         "color": ".5 .4 1"
                     }, 
                     "random_layout": {
-                        "region": "motorneurons"
+                        "region": "Ventral motorneurons"
                     }
                 }
             }, 
@@ -104,7 +115,7 @@
                         "color": ".5 .4 1"
                     }, 
                     "random_layout": {
-                        "region": "motorneurons"
+                        "region": "Dorsal motorneurons"
                     }
                 }
             }, 
@@ -116,7 +127,7 @@
                         "color": ".5 .4 1"
                     }, 
                     "random_layout": {
-                        "region": "motorneurons"
+                        "region": "Ventral motorneurons"
                     }
                 }
             }, 
@@ -128,7 +139,7 @@
                         "color": ".5 .4 1"
                     }, 
                     "random_layout": {
-                        "region": "motorneurons"
+                        "region": "Dorsal motorneurons"
                     }
                 }
             }
@@ -154,7 +165,7 @@
                     "synapse": "neuron_to_neuron_exc_syn", 
                     "type": "continuousProjection", 
                     "delay": 0, 
-                    "weight": "weight_IN_MN * 0.9", 
+                    "weight": "weight_IN_MN * scaleDinout", 
                     "random_connectivity": {
                         "probability": 1
                     }
