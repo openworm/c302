@@ -441,7 +441,14 @@ def generate_conn_matrix(nml_doc, save_fig_dir=None, verbose=False):
             
     all_cells = sorted(all_cells)
     
-    all_neuron_info, all_muscle_info = c302._get_cell_info(all_cells)
+    try:
+        from PyOpenWorm import connect as pyow_connect
+        pow_conn = pyow_connect('./pyopenworm.conf')
+    except Exception as e:
+        c302.print_('Unable to connect to PyOpenWorm database: %s' % e)
+        pow_conn = None
+    
+    all_neuron_info, all_muscle_info = c302._get_cell_info(pow_conn, all_cells)
     all_neurons = [] 
     all_muscles = []
     for c in all_cells:
