@@ -1,0 +1,27 @@
+<neuroml xmlns="http://www.neuroml.org/schema/neuroml2"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2 https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2beta5.xsd" id="GenericCell">
+    <notes>
+...
+</notes>
+    <include href="../cell_X.xml"/>
+ 
+    <cell id="GenericNeuronCellX">
+        <morphology id="morphology_GenericNeuronCell">
+            <segment id="0" name="soma">
+                <proximal x="0.000000e+00" y="0.000000e+00" z="0.000000e+00" diameter="5.641895835477563"/>
+                <distal x="0.000000e+00" y="0.000000e+00" z="0.000000e+00" diameter="5.641895835477563"/>
+            </segment>
+        </morphology>
+        <biophysicalProperties id="biophys_GenericNeuronCell">
+            <membraneProperties>
+                <channelDensity id="Leak_all" ionChannel="Leak" condDensity="0.01 mS_per_cm2" erev="-35 mV" ion="non_specific"/>
+                <spikeThresh value="-20 mV"/>
+                <specificCapacitance value="1 uF_per_cm2"/>
+                <initMembPotential value="-40 mV"/>
+            </membraneProperties>
+            <intracellularProperties>
+                <resistivity value="0.1 kohm_cm"/>
+            </intracellularProperties>
+        </biophysicalProperties>
+    </cell>
+    
+</neuroml>

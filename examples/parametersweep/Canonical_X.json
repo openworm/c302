@@ -4,10 +4,10 @@
         "parameters": {
             "weight_IN_MN": 1, 
             "scaleDinout": 0.5, 
-            "stim_amp": "3.5pA", 
+            "stim_amp": "1pA", 
             "weight_MN_MN_Exc": 1, 
             "weight_MN_MN_Inh": 1, 
-            "stim_duration": "2000ms"
+            "stim_duration": "250ms"
         }, 
         "cells": [
             {
@@ -161,84 +161,6 @@
             {
                 "proj_AVB_DB": {
                     "presynaptic": "AVB", 
-                    "postsynaptic": "DB", 
-                    "synapse": "neuron_to_neuron_exc_syn_x", 
-                    "type": "continuousProjection", 
-                    "delay": 0, 
-                    "weight": "weight_IN_MN * scaleDinout", 
-                    "random_connectivity": {
-                        "probability": 1
-                    }
-                }
-            }, 
-            {
-                "proj_DB_VD": {
-                    "presynaptic": "DB", 
-                    "postsynaptic": "VD", 
-                    "synapse": "neuron_to_neuron_exc_syn_x", 
-                    "type": "continuousProjection", 
-                    "delay": 0, 
-                    "weight": "weight_MN_MN_Exc", 
-                    "random_connectivity": {
-                        "probability": 1
-                    }
-                }
-            }, 
-            {
-                "proj_DB_DD": {
-                    "presynaptic": "DB", 
-                    "postsynaptic": "DD", 
-                    "synapse": "neuron_to_neuron_exc_syn_x", 
-                    "type": "continuousProjection", 
-                    "delay": 0, 
-                    "weight": "weight_MN_MN_Exc", 
-                    "random_connectivity": {
-                        "probability": 1
-                    }
-                }
-            }, 
-            {
-                "proj_VB_VD": {
-                    "presynaptic": "VB", 
-                    "postsynaptic": "VD", 
-                    "synapse": "neuron_to_neuron_exc_syn_x", 
-                    "type": "continuousProjection", 
-                    "delay": 0, 
-                    "weight": "weight_MN_MN_Exc", 
-                    "random_connectivity": {
-                        "probability": 1
-                    }
-                }
-            }, 
-            {
-                "proj_VB_DD": {
-                    "presynaptic": "VB", 
-                    "postsynaptic": "DD", 
-                    "synapse": "neuron_to_neuron_exc_syn_x", 
-                    "type": "continuousProjection", 
-                    "delay": 0, 
-                    "weight": "weight_MN_MN_Exc", 
-                    "random_connectivity": {
-                        "probability": 1
-                    }
-                }
-            }, 
-            {
-                "proj_VD_VB": {
-                    "presynaptic": "VD", 
-                    "postsynaptic": "VB", 
-                    "synapse": "neuron_to_neuron_inh_syn_x", 
-                    "type": "continuousProjection", 
-                    "delay": 0, 
-                    "weight": "weight_MN_MN_Inh", 
-                    "random_connectivity": {
-                        "probability": 1
-                    }
-                }
-            }, 
-            {
-                "proj_DD_DB": {
-                    "presynaptic": "DD", 
                     "postsynaptic": "DB", 
                     "synapse": "neuron_to_neuron_inh_syn_x", 
                     "type": "continuousProjection", 

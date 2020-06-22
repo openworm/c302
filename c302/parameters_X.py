@@ -34,46 +34,48 @@ class ParameterisedModel(c302ModelPrototype):
     def __init__(self):
         super(ParameterisedModel, self).__init__()
         self.level = "X"
-        self.custom_component_types_definitions = 'cell_X.xml'
+        self.custom_component_types_definitions = ['cell_X.xml','custom_synapses.xml']
         
         self.set_default_bioparameters()
         self.print_("Set default parameters for %s"%self.level)
 
     def set_default_bioparameters(self):
 
-        self.add_bioparameter("cell_diameter", "5", "BlindGuess", "0.1")
-        self.add_bioparameter("muscle_length", "20", "BlindGuess", "0.1")
+        self.add_bioparameter("cell_diameter", "5.641895835477563", "BlindGuess", "0.1")
+        self.add_bioparameter("muscle_length", "5.641895835477563", "BlindGuess", "0.1")
 
-        self.add_bioparameter("initial_memb_pot", "-45 mV", "BlindGuess", "0.1")
+        self.add_bioparameter("initial_memb_pot", "-40 mV", "BlindGuess", "0.1")
         
         self.add_bioparameter("specific_capacitance", "1 uF_per_cm2", "BlindGuess", "0.1")
 
         self.add_bioparameter("muscle_spike_thresh", "-20 mV", "BlindGuess", "0.1")
         self.add_bioparameter("neuron_spike_thresh", "-20 mV", "BlindGuess", "0.1")
 
-        self.add_bioparameter("muscle_leak_cond_density", "5e-7 S_per_cm2", "BlindGuess", "0.1")
+        self.add_bioparameter("muscle_leak_cond_density", "0.01 mS_per_cm2", "BlindGuess", "0.1")
         self.add_bioparameter("neuron_leak_cond_density", "0.01 mS_per_cm2", "BlindGuess", "0.1")
         
         self.add_bioparameter("leak_erev", "-35 mV", "BlindGuess", "0.1")
         
-        self.add_bioparameter("neuron_to_neuron_exc_syn_conductance", "0.00001 nS", "BlindGuess", "0.1")
-        self.add_bioparameter("neuron_to_muscle_exc_syn_conductance", "0.000 nS", "BlindGuess", "0.1")
+        self.add_bioparameter("neuron_to_neuron_exc_syn_conductance", "100 pS", "BlindGuess", "0.1")
+        self.add_bioparameter("neuron_to_muscle_exc_syn_conductance", "0.00 pS", "BlindGuess", "0.1")
         
-        self.add_bioparameter("exc_syn_delta", "5 mV", "BlindGuess", "0.1")
-        self.add_bioparameter("exc_syn_vth", "-25 mV", "BlindGuess", "0.1")
+        self.add_bioparameter("exc_syn_ar", "1 per_s", "BlindGuess", "0.1")
+        self.add_bioparameter("exc_syn_ad", "5 per_s", "BlindGuess", "0.1")
+        self.add_bioparameter("exc_syn_beta", "0.125 per_mV", "BlindGuess", "0.1")
+        self.add_bioparameter("exc_syn_vth", "0 mV", "BlindGuess", "0.1")
         self.add_bioparameter("exc_syn_erev", "0 mV", "BlindGuess", "0.1")
-        self.add_bioparameter("exc_syn_k", "0.025per_ms", "BlindGuess", "0.1")
 
-        self.add_bioparameter("neuron_to_neuron_inh_syn_conductance", "0.00 nS", "BlindGuess", "0.1")
+        self.add_bioparameter("neuron_to_neuron_inh_syn_conductance", "100 pS", "BlindGuess", "0.1")
         self.add_bioparameter("neuron_to_muscle_inh_syn_conductance", "0.00 nS", "BlindGuess", "0.1")
         
-        self.add_bioparameter("inh_syn_delta", "5 mV", "BlindGuess", "0.1")
-        self.add_bioparameter("inh_syn_vth", "-25 mV", "BlindGuess", "0.1")
+        self.add_bioparameter("inh_syn_ar", "1 per_s", "BlindGuess", "0.1")
+        self.add_bioparameter("inh_syn_ad", "5 per_s", "BlindGuess", "0.1")
+        self.add_bioparameter("inh_syn_beta", "0.125 per_mV", "BlindGuess", "0.1")
+        self.add_bioparameter("inh_syn_vth", "0 mV", "BlindGuess", "0.1")
         self.add_bioparameter("inh_syn_erev", "-45 mV", "BlindGuess", "0.1")
-        self.add_bioparameter("inh_syn_k", "0.025per_ms", "BlindGuess", "0.1")
         
-        self.add_bioparameter("neuron_to_neuron_elec_syn_gbase", "0.00052 nS", "BlindGuess", "0.1")
-        self.add_bioparameter("neuron_to_muscle_elec_syn_gbase", "0.00052 nS", "BlindGuess", "0.1")
+        self.add_bioparameter("neuron_to_neuron_elec_syn_gbase", "100 pS", "BlindGuess", "0.1")
+        self.add_bioparameter("neuron_to_muscle_elec_syn_gbase", "100 pS", "BlindGuess", "0.1")
 
 
         self.add_bioparameter("unphysiological_offset_current", "0 pA", "KnownError", "0") # Can be activated later
@@ -189,20 +191,22 @@ class ParameterisedModel(c302ModelPrototype):
     
 
     def create_neuron_to_neuron_syn(self):
-        self.neuron_to_neuron_exc_syn = GradedSynapse(id="neuron_to_neuron_exc_syn",
+        self.neuron_to_neuron_exc_syn = GradedSynapse2(id="neuron_to_neuron_exc_syn",
                                 conductance =        self.get_bioparameter("neuron_to_neuron_exc_syn_conductance").value,
-                                delta =              self.get_bioparameter("exc_syn_delta").value,
-                                Vth =                self.get_bioparameter("exc_syn_vth").value,
-                                erev =               self.get_bioparameter("exc_syn_erev").value,
-                                k =                  self.get_bioparameter("exc_syn_k").value)
+                                ar =                 self.get_bioparameter("exc_syn_ar").value,
+                                ad =                 self.get_bioparameter("exc_syn_ad").value,
+                                beta =               self.get_bioparameter("exc_syn_beta").value,
+                                vth =                self.get_bioparameter("exc_syn_vth").value,
+                                erev =               self.get_bioparameter("exc_syn_erev").value)
 
 
-        self.neuron_to_neuron_inh_syn = GradedSynapse(id="neuron_to_neuron_inh_syn",
+        self.neuron_to_neuron_inh_syn = GradedSynapse2(id="neuron_to_neuron_inh_syn",
                                 conductance =        self.get_bioparameter("neuron_to_neuron_inh_syn_conductance").value,
-                                delta =              self.get_bioparameter("inh_syn_delta").value,
-                                Vth =                self.get_bioparameter("inh_syn_vth").value,
-                                erev =               self.get_bioparameter("inh_syn_erev").value,
-                                k =                  self.get_bioparameter("inh_syn_k").value)
+                                ar =                 self.get_bioparameter("inh_syn_ar").value,
+                                ad =                 self.get_bioparameter("inh_syn_ad").value,
+                                beta =               self.get_bioparameter("inh_syn_beta").value,
+                                vth =                self.get_bioparameter("inh_syn_vth").value,
+                                erev =               self.get_bioparameter("inh_syn_erev").value)
 
         self.neuron_to_neuron_elec_syn = GapJunction(id="neuron_to_neuron_elec_syn",
                                conductance =    self.get_bioparameter("neuron_to_neuron_elec_syn_gbase").value)
@@ -210,24 +214,25 @@ class ParameterisedModel(c302ModelPrototype):
 
 
     def create_neuron_to_muscle_syn(self):
-        self.neuron_to_muscle_exc_syn = GradedSynapse(id="neuron_to_muscle_exc_syn",
+        self.neuron_to_muscle_exc_syn = GradedSynapse2(id="neuron_to_muscle_exc_syn",
                                 conductance =        self.get_bioparameter("neuron_to_muscle_exc_syn_conductance").value,
-                                delta =              self.get_bioparameter("exc_syn_delta").value,
-                                Vth =                self.get_bioparameter("exc_syn_vth").value,
-                                erev =               self.get_bioparameter("exc_syn_erev").value,
-                                k =                  self.get_bioparameter("exc_syn_k").value)
+                                ar =                 self.get_bioparameter("exc_syn_ar").value,
+                                ad =                 self.get_bioparameter("exc_syn_ad").value,
+                                beta =               self.get_bioparameter("exc_syn_beta").value,
+                                vth =                self.get_bioparameter("exc_syn_vth").value,
+                                erev =               self.get_bioparameter("exc_syn_erev").value)
 
 
-        self.neuron_to_muscle_inh_syn = GradedSynapse(id="neuron_to_muscle_inh_syn",
+        self.neuron_to_muscle_inh_syn = GradedSynapse2(id="neuron_to_muscle_inh_syn",
                                 conductance =        self.get_bioparameter("neuron_to_muscle_inh_syn_conductance").value,
-                                delta =              self.get_bioparameter("inh_syn_delta").value,
-                                Vth =                self.get_bioparameter("inh_syn_vth").value,
-                                erev =               self.get_bioparameter("inh_syn_erev").value,
-                                k =                  self.get_bioparameter("inh_syn_k").value)
+                                ar =                 self.get_bioparameter("inh_syn_ar").value,
+                                ad =                 self.get_bioparameter("inh_syn_ad").value,
+                                beta =               self.get_bioparameter("inh_syn_beta").value,
+                                vth =                self.get_bioparameter("inh_syn_vth").value,
+                                erev =               self.get_bioparameter("inh_syn_erev").value)
 
         self.neuron_to_muscle_elec_syn = GapJunction(id="neuron_to_muscle_elec_syn",
                                conductance =    self.get_bioparameter("neuron_to_muscle_elec_syn_gbase").value)
-
 
 
     def get_elec_syn(self, pre_cell, post_cell, type):
@@ -252,16 +257,17 @@ class ParameterisedModel(c302ModelPrototype):
         specific_param_template = '%s_to_%s_exc_syn_%s'
         if type == 'neuron_to_neuron':
             conductance = self.get_conn_param(pre_cell, post_cell, specific_param_template,
-                                                                    'neuron_to_neuron_exc_syn_%s', 'conductance')
-            erev = self.get_conn_param(pre_cell, post_cell, specific_param_template, 'exc_syn_%s',
-                                                             'erev')
-            delta = self.get_conn_param(pre_cell, post_cell, specific_param_template,'exc_syn_%s',
-                                                              'delta')
+                                                              'neuron_to_neuron_exc_syn_%s', 'conductance')
+            erev = self.get_conn_param(pre_cell, post_cell, specific_param_template, 'exc_syn_%s', 'erev')
+            ar = self.get_conn_param(pre_cell, post_cell, specific_param_template, 'exc_syn_%s',
+                                                             'ar')
+            ad = self.get_conn_param(pre_cell, post_cell, specific_param_template, 'exc_syn_%s',
+                                                             'ad')
+            beta = self.get_conn_param(pre_cell, post_cell, specific_param_template, 'exc_syn_%s',
+                                                             'beta')
             vth = self.get_conn_param(pre_cell, post_cell, specific_param_template, 'exc_syn_%s',
-                                                            'vth')
-            k = self.get_conn_param(pre_cell, post_cell, specific_param_template, 'exc_syn_%s',
-                                                          'k')
-            
+                                                             'vth')
+
             conn_id = 'neuron_to_neuron_exc_syn'
 
         elif type == 'neuron_to_muscle':
@@ -269,24 +275,26 @@ class ParameterisedModel(c302ModelPrototype):
                                                                     'neuron_to_muscle_exc_syn_%s', 'conductance')
             erev = self.get_conn_param(pre_cell, post_cell, specific_param_template, 'exc_syn_%s',
                                                              'erev')
-            delta = self.get_conn_param(pre_cell, post_cell, specific_param_template,'exc_syn_%s',
-                                                              'delta')
+            ar = self.get_conn_param(pre_cell, post_cell, specific_param_template, 'exc_syn_%s',
+                                                           'ar')
+            ad = self.get_conn_param(pre_cell, post_cell, specific_param_template, 'exc_syn_%s',
+                                                           'ad')
+            beta = self.get_conn_param(pre_cell, post_cell, specific_param_template, 'exc_syn_%s',
+                                                             'beta')
             vth = self.get_conn_param(pre_cell, post_cell, specific_param_template, 'exc_syn_%s',
                                                             'vth')
-            k = self.get_conn_param(pre_cell, post_cell, specific_param_template, 'exc_syn_%s',
-                                                          'k')
-            
             conn_id = 'neuron_to_muscle_exc_syn'
 
         if self.found_specific_param:
             conn_id = '%s_to_%s_exc_syn' % (pre_cell, post_cell)
 
-        return GradedSynapse(id=conn_id,
-                             conductance=conductance,
-                             delta=delta,
-                             Vth=vth,
-                             erev=erev,
-                             k=k)
+        return GradedSynapse2(id=conn_id,
+                              conductance=conductance,
+                              ar=ar,
+                              ad=ad,
+                              beta=beta,
+                              vth=vth,
+                              erev=erev)
 
     def get_inh_syn(self, pre_cell, post_cell, type):
         self.found_specific_param = False
@@ -297,14 +305,15 @@ class ParameterisedModel(c302ModelPrototype):
                                                                     'neuron_to_neuron_inh_syn_%s', 'conductance')
             erev = self.get_conn_param(pre_cell, post_cell, specific_param_template, 'inh_syn_%s',
                                                              'erev')
-            delta = self.get_conn_param(pre_cell, post_cell, specific_param_template,
-                                                              'inh_syn_%s',
-                                                              'delta')
+            ar = self.get_conn_param(pre_cell, post_cell, specific_param_template, 'inh_syn_%s',
+                                                           'ar')
+            ad = self.get_conn_param(pre_cell, post_cell, specific_param_template, 'inh_syn_%s',
+                                                           'ad')
+            beta = self.get_conn_param(pre_cell, post_cell, specific_param_template, 'inh_syn_%s',
+                                                             'beta')
             vth = self.get_conn_param(pre_cell, post_cell, specific_param_template, 'inh_syn_%s',
                                                             'vth')
-            k = self.get_conn_param(pre_cell, post_cell, specific_param_template, 'inh_syn_%s',
-                                                          'k')
-            
+
             conn_id = 'neuron_to_neuron_inh_syn'
 
         elif type == 'neuron_to_muscle':
@@ -312,21 +321,58 @@ class ParameterisedModel(c302ModelPrototype):
                                                                     'neuron_to_muscle_inh_syn_%s', 'conductance')
             erev = self.get_conn_param(pre_cell, post_cell, specific_param_template, 'inh_syn_%s',
                                                              'erev')
-            delta = self.get_conn_param(pre_cell, post_cell, specific_param_template, 'inh_syn_%s',
-                                                           'delta')
+            ar = self.get_conn_param(pre_cell, post_cell, specific_param_template, 'inh_syn_%s',
+                                                           'ar')
+            ad = self.get_conn_param(pre_cell, post_cell, specific_param_template, 'inh_syn_%s',
+                                                           'ad')
+            beta = self.get_conn_param(pre_cell, post_cell, specific_param_template, 'inh_syn_%s',
+                                                             'beta')
             vth = self.get_conn_param(pre_cell, post_cell, specific_param_template, 'inh_syn_%s',
                                                             'vth')
-            k = self.get_conn_param(pre_cell, post_cell, specific_param_template, 'inh_syn_%s',
-                                                            'k')
-            
+
             conn_id = 'neuron_to_muscle_inh_syn'
 
         if self.found_specific_param:
             conn_id = '%s_to_%s_inh_syn' % (pre_cell, post_cell)
 
-        return GradedSynapse(id=conn_id,
-                             conductance=conductance,
-                             delta=delta,
-                             Vth=vth,
-                             erev=erev,
-                             k=k)
+        return GradedSynapse2(id=conn_id,
+                              conductance=conductance,
+                              ar=ar,
+                              ad=ad,
+                              beta=beta,
+                              vth=vth,
+                              erev=erev)
+
+
+    def create_n_connection_synapse(self, prototype_syn, n, nml_doc, existing_synapses):
+        if prototype_syn.id in existing_synapses:
+            return existing_synapses[prototype_syn.id]
+
+        if isinstance(prototype_syn, GradedSynapse2):
+            existing_synapses[prototype_syn.id] = prototype_syn
+            nml_doc.graded_synapses.append(prototype_syn)
+            return prototype_syn
+        else:
+            return super(ParameterisedModel, self).create_n_connection_synapse(prototype_syn, n, nml_doc, existing_synapses)
+
+    def is_analog_conn(self, syn):
+        return super(ParameterisedModel, self).is_analog_conn(syn) or isinstance(syn, GradedSynapse2)
+
+
+
+class GradedSynapse2():
+    
+    def __init__(self, id, conductance, ar, ad, beta, vth, erev):
+        self.id = id
+        self.conductance = conductance
+        self.ar = ar
+        self.ad = ad
+        self.beta = beta
+        self.vth = vth
+        self.erev = erev
+        
+    
+    def export(self, outfile, level, namespace, name_, pretty_print=True, **kwargs_):
+        outfile.write('    '*level + '<gradedSynapse2 id="%s" conductance="%s" ar="%s" ad="%s" beta="%s" vth="%s" erev="%s"/>\n'%(self.id, self.conductance, self.ar, self.ad, self.beta, self.vth, self.erev))
+
+

@@ -8,8 +8,8 @@
     <gradedSynapse id="neuron_to_neuron_inh_syn" conductance="0.09 nS" delta="5 mV" Vth="0 mV" k="0.025per_ms" erev="-70 mV"/>
    
     
-    <gradedSynapse2 id="neuron_to_neuron_exc_syn_x" conductance="0.01 nS" ar="1 per_ms" ad="0.2 per_ms" beta="0.125per_mV" vth="0 mV" erev="0 mV"/>
+    <gradedSynapse2 id="neuron_to_neuron_exc_syn_x" conductance="100 pS" ar="1 per_s" ad="5 per_s" beta="0.125per_mV" vth="0 mV" erev="0 mV"/>
  
-    <gradedSynapse2 id="neuron_to_neuron_inh_syn_x" conductance="0.01 nS" ar="1 per_ms" ad="0.2 per_ms" beta="0.125per_mV" vth="0 mV" erev="-70 mV"/>
+    <gradedSynapse2 id="neuron_to_neuron_inh_syn_x" conductance="100 pS" ar="1 per_s" ad="5 per_s" beta="0.125per_mV" vth="0 mV" erev="-45 mV"/>
     
 </neuroml>

@@ -71,3 +71,17 @@
 /private/cache/retriever/catalog.xml
 /private/cache/retriever/raw.githubusercontent.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2beta4.xsd
 /examples/parametersweep/custom_synapses.xml
+/examples/LEMS_c302_X_Full.xml
+/examples/LEMS_c302_X_IClamp.xml
+/examples/LEMS_c302_X_Muscles.xml
+/examples/LEMS_c302_X_Pharyngeal.xml
+/examples/LEMS_c302_X_Social.xml
+/examples/LEMS_c302_X_Syns.xml
+/examples/c302_X_Full.net.nml
+/examples/c302_X_IClamp.net.nml
+/examples/c302_X_Muscles.net.nml
+/examples/c302_X_Pharyngeal.net.nml
+/examples/c302_X_Social.net.nml
+/examples/c302_X_Syns.net.nml
+/examples/LEMS_c302_X_Oscillator.xml
+/examples/c302_X_Oscillator.net.nml
