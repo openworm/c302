@@ -33,40 +33,39 @@ def read_data(include_nonconnected_cells=False):
     with Bundle('openworm/owmeta-data') as bnd:
         ctx = bnd(Context)(ident="http://openworm.org/data").stored
         # Extract the network object from the worm object.
-        graph = ctx.rdf_graph()
         net = ctx(Worm)().neuron_network()
-        connlist = list(graph.objects(net.identifier, Network.synapse.link))
 
+        syn = net.synapse.expr
+        pre = syn.pre_cell
+        post = syn.post_cell
+
+        post_is_neuron = {cell: (cell, rdflib.RDF.type, Neuron.rdf_type) in post.rdf
+                          for cell in post}
+
+        connlist = syn.to_terms()
+        conn_cell_names = (pre | post).name()
+        pre_cells = pre()
+        post_cells = post()
+        syntypes = syn.syntype()
+        synclasses = syn.synclass()
+        numbers = syn.number()
+
+        cell_names = get_cells_in_model(net)
         conns = []
         cells = set()
 
-        cell_names = get_cells_in_model(net)
-        triples_choices = graph.triples_choices
-        pre_cells = {c[0]: c[2]
-                     for c in triples_choices((connlist, Connection.pre_cell.link, None))}
-        post_cells = {c[0]: c[2]
-                      for c in triples_choices((connlist, Connection.post_cell.link, None))}
-        post_is_neuron = {conn: ((cell, rdflib.RDF.type, Neuron.rdf_type) in graph)
-                          for conn, cell in post_cells.items()}
-        conn_cells = list(chain(pre_cells.values(), post_cells.values()))
-        conn_cell_names = {c[0]: str(c[2]) for c in
-                           triples_choices((conn_cells, Neuron.name.link, None))}
-        syntypes = {c[0]: str(c[2])
-                    for c in triples_choices((connlist, Connection.syntype.link, None))}
-        synclasses = {c[0]: str(c[2])
-                      for c in triples_choices((connlist, Connection.synclass.link, None))}
-        numbers = {c[0]: int(c[2])
-                   for c in triples_choices((connlist, Connection.number.link, None))}
-
         for conn in connlist:
-            pre = conn_cell_names[pre_cells[conn]]
-            post = conn_cell_names[post_cells[conn]]
-            if (post_is_neuron and
+            pre = conn_cell_names[pre_cells[conn]].toPython()
+            post_uri = post_cells[conn]
+            post = conn_cell_names[post_uri].toPython()
+            if (post_is_neuron[post_uri] and
                     pre in cell_names and
                     post in cell_names):
-                num = numbers[conn]
+                num = numbers[conn].toPython()
                 syntype = syntypes.get(conn)
+                syntype = syntype.toPython() if syntype else None
                 synclass = synclasses.get(conn)
+                synclass = synclass.toPython() if synclass else None
                 ci = ConnectionInfo(pre, post, num, syntype, synclass)
                 conns.append(ci)
                 cells.add(pre)
