@@ -81,8 +81,7 @@ def load_data_reader(data_reader="SpreadsheetDataReader"):
     Returns:
         reader (obj): The data reader object
     """
-    reader = importlib.import_module('c302.%s'%data_reader)
-    return reader
+    return importlib.import_module('c302.%s'%data_reader)
 
 def get_str_from_expnotation(num):
     """
@@ -615,7 +614,7 @@ def generate(net_id,
     net = Network(id=net_id)
 
     nml_doc.networks.append(net)
-    
+
     net.properties.append(Property('recommended_duration_ms',duration))
     net.properties.append(Property('recommended_dt_ms',dt))
 
