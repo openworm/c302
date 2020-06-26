@@ -53,15 +53,16 @@ class OpenWormReader(object):
                 pre = syn.pre_cell
                 post = syn.post_cell
 
-                self.cell_type = (pre | post).property(RDFTypeProperty)()
+                (pre | post).rdf_type_property()
 
-                self.connlist = syn.to_terms()
-                self.conn_cell_names = (pre | post).name()
-                self.pre_cells = pre()
-                self.post_cells = post()
-                self.syntypes = syn.syntype()
-                self.synclasses = syn.synclass()
-                self.numbers = syn.number()
+                (pre | post).name()
+                pre()
+                post()
+                syn.syntype()
+                syn.synclass()
+                syn.number()
+                self.connlist = syn.to_objects()
+
                 self.cell_names = self.get_cells_in_model(net)
                 self.cached = True
 
@@ -76,18 +77,16 @@ class OpenWormReader(object):
         pre_cell_names = set()
         post_cell_names = set()
         for conn in self.connlist:
-            pre_uri = self.pre_cells[conn]
-            pre_name = self.conn_cell_names[pre_uri].toPython()
-            post_uri = self.post_cells[conn]
-            post_name = self.conn_cell_names[post_uri].toPython()
-            if self.cell_type[pre_uri] == Neuron.rdf_type and self.cell_type[post_uri] == term_type:
-                num = self.numbers[conn].toPython()
-                syntype = self.syntypes.get(conn)
-                syntype = syntype.toPython() if syntype else ''
-                synclass = self.synclasses.get(conn)
-                synclass = synclass.toPython() if synclass else ''
-                ci = ConnectionInfo(pre_name, post_name, num, syntype, synclass)
-                conns.append(ci)
+            pre_name = conn.pre_cell.name.toPython()
+            post_name = conn.post_cell.name.toPython()
+            if (conn.pre_cell.rdf_type_property == Neuron.rdf_type and
+                    conn.post_cell.rdf_type_property == term_type):
+                num = conn.number.toPython()
+                syntype = conn.syntype.toPython() if conn.syntype else ''
+                synclass = conn.synclass.toPython() if conn.synclass else ''
+
+                conns.append(ConnectionInfo(pre_name, post_name, num, syntype, synclass))
+
                 pre_cell_names.add(pre_name)
                 post_cell_names.add(post_name)
 
