@@ -387,8 +387,6 @@ def get_cell_names_and_connection(data_reader="SpreadsheetDataReader", test=Fals
     # This could be replaced with a call to "DatabaseReader" or "OpenWormNeuroLexReader" in future...
     # If called from unittest folder ammend path to "../../../../"
 
-    spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/data/"
-
     cell_names, conns = load_data_reader(data_reader).read_data(include_nonconnected_cells=True)
 
     cell_names.sort()
@@ -454,26 +452,28 @@ def _get_cell_info(bnd, cells):
     for neuron in some_neurons:
         short = ') %s' % neuron.name()
         color = '.5 0 0'
-        if 'sensory' in neuron.type():
+        neuron_types = neuron.type()
+        if 'sensory' in neuron_types:
             short = 'Se%s' % short
             color = '1 .2 1'
-        if 'interneuron' in neuron.type():
+        if 'interneuron' in neuron_types:
             short = 'In%s' % short
             color = '1 0 .4'
-        if 'motor' in neuron.type():
+        if 'motor' in neuron_types:
             short = 'Mo%s' % short
             color = '.5 .4 1'
 
         short = '(%s' % short
 
-        if 'GABA' in neuron.neurotransmitter():
+        neurotransmitter = neuron.neurotransmitter()
+        if 'GABA' in neurotransmitter:
             short = '- %s' % short
-        elif len(neuron.neurotransmitter()) == 0:
+        elif len(neurotransmitter) == 0:
             short = '? %s' % short
         else:
             short = '+ %s' % short
 
-        info = (neuron, neuron.type(), neuron.receptor(), neuron.neurotransmitter(), short, color)
+        info = (neuron, neuron_types, neuron.receptor(), neurotransmitter, short, color)
         # print dir(neuron)
 
         all_neuron_info[neuron.name()] = info
