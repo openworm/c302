@@ -1,7 +1,6 @@
 from c302.NeuroMLUtilities import ConnectionInfo
 from c302 import print_
 
-from owmeta_core.dataobject import RDFTypeProperty
 from owmeta_core.bundle import Bundle
 from owmeta_core.context import Context
 from owmeta.neuron import Neuron
@@ -53,7 +52,7 @@ class OpenWormReader(object):
                 pre = syn.pre_cell
                 post = syn.post_cell
 
-                (pre | post).rdf_type_property()
+                (pre | post).rdf_type(multiple=True)
 
                 (pre | post).name()
                 pre()
@@ -77,13 +76,13 @@ class OpenWormReader(object):
         pre_cell_names = set()
         post_cell_names = set()
         for conn in self.connlist:
-            pre_name = conn.pre_cell.name.toPython()
-            post_name = conn.post_cell.name.toPython()
-            if (conn.pre_cell.rdf_type_property == Neuron.rdf_type and
-                    conn.post_cell.rdf_type_property == term_type):
-                num = conn.number.toPython()
-                syntype = conn.syntype.toPython() if conn.syntype else ''
-                synclass = conn.synclass.toPython() if conn.synclass else ''
+            if (Neuron.rdf_type in conn.pre_cell.rdf_type and
+                    term_type in conn.post_cell.rdf_type):
+                num = conn.number
+                syntype = conn.syntype or ''
+                synclass = conn.synclass or ''
+                pre_name = conn.pre_cell.name
+                post_name = conn.post_cell.name
 
                 conns.append(ConnectionInfo(pre_name, post_name, num, syntype, synclass))
 
