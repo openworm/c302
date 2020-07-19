@@ -25,7 +25,7 @@ class OpenWormReader(object):
         for n in net.neurons():
             cell_names.add(str(n.name()))
 
-        return list(cell_names)
+        return cell_names
 
     def read_data(self, include_nonconnected_cells=False):
         print_("Initialising OpenWormReader")
@@ -46,7 +46,7 @@ class OpenWormReader(object):
             if not self.cached:
                 ctx = bnd(Context)(ident="http://openworm.org/data").stored
                 # Extract the network object from the worm object.
-                net = ctx(Worm)().neuron_network()
+                net = ctx(Worm).query().neuron_network()
 
                 syn = net.synapse.expr
                 pre = syn.pre_cell
@@ -94,7 +94,7 @@ class OpenWormReader(object):
             len(pre_cell_names | post_cell_names)))
         print_("Total connections found %i " % len(conns))
 
-        return self.cell_names, pre_cell_names, post_cell_names, conns
+        return list(self.cell_names), pre_cell_names, post_cell_names, conns
 
 
 READER = OpenWormReader()
