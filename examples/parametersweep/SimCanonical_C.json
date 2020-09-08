@@ -1,6 +1,6 @@
 {
     "SimCanonical_C": {
-        "version": "NeuroMLlite v0.2.0", 
+        "version": "NeuroMLlite v0.2.1", 
         "network": "Canonical_C.json", 
         "duration": 3000.0, 
         "dt": 0.1, 

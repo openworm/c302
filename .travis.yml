@@ -4,6 +4,10 @@
 dist: xenial
 sudo: false
 
+services:
+  # to prevent error with gui elements
+  - xvfb 
+
 addons:
   apt:
     packages:
@@ -60,11 +64,11 @@ script:
 
     
     # Testing c302
-    - cd c302 
-    - mkdir examples
-    - python c302_IClamp.py A    
+
+    - python c302/c302_IClamp.py A    
     - omv install NEURON # Need to install NEURON
+    - omv list -V
     - export NEURON_HOME=/home/travis/neuron/nrn/x86_64/
-    - python runAndPlot.py -test
-    - python c302_utils.py -nogui
+    - python c302/runAndPlot.py -test
+    - python c302/c302_utils.py -nogui
 

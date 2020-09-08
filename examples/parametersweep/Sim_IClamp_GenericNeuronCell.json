@@ -1,6 +1,6 @@
 {
     "Sim_IClamp_GenericNeuronCell": {
-        "version": "NeuroMLlite v0.2.0", 
+        "version": "NeuroMLlite v0.2.1", 
         "network": "IClamp_GenericNeuronCell.json", 
         "duration": 3000.0, 
         "dt": 0.025, 

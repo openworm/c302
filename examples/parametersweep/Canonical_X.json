@@ -1,6 +1,6 @@
 {
     "Canonical_X": {
-        "version": "NeuroMLlite v0.2.0", 
+        "version": "NeuroMLlite v0.2.1", 
         "parameters": {
             "weight_IN_MN": 1, 
             "scaleDinout": 0.5, 
