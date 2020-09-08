@@ -23,8 +23,6 @@ python:
 
 env:
      - OMV_ENGINE=jNeuroML
-     - OMV_ENGINE=jNeuroML_NEURON
-     - OMV_ENGINE=jNeuroML_validate
      - OMV_ENGINE=NON_OMV_TESTS
      
 
@@ -65,8 +63,8 @@ script:
     - cd c302 
     - mkdir examples
     - python c302_IClamp.py A    
-    #- omv install NEURON # Need to install NEURON
-    #- export NEURON_HOME=/home/travis/neuron/nrn/x86_64/
-    #- python runAndPlot.py -test
-    #- python c302_utils.py -nogui
+    - omv install NEURON # Need to install NEURON
+    - export NEURON_HOME=/home/travis/neuron/nrn/x86_64/
+    - python runAndPlot.py -test
+    - python c302_utils.py -nogui
 
