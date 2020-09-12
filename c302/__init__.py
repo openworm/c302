@@ -1192,7 +1192,7 @@ def generate(net_id,
                 conn_pol = "inh"
                 orig_pol = "inh"
 
-            if '_GJ' in conn.synclass :
+            if '_GJ' in conn.synclass:
                 conn_pol = "elec"
                 orig_pol = "elec"
                 elect_conn = params.is_elec_conn(params.neuron_to_neuron_elec_syn)

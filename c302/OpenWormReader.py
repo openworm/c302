@@ -90,7 +90,7 @@ class OpenWormReader(object):
                 post_cell_names.add(post_name)
 
         print_("Total cells %i (%i with connections)" % (
-            len(self.cell_names),
+            len(self.cell_names | pre_cell_names | post_cell_names),
             len(pre_cell_names | post_cell_names)))
         print_("Total connections found %i " % len(conns))
 
