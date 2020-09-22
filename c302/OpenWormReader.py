@@ -87,7 +87,7 @@ if __name__ == "__main__":
 
     maxn = 30000
 
-    refs_OWR = conn_map_OWR.keys()
+    refs_OWR = list(conn_map_OWR.keys())
 
     matching = 0
 
@@ -107,7 +107,7 @@ if __name__ == "__main__":
 
     matching = 0
 
-    refs_USR = conn_map_USR.keys()
+    refs_USR = list(conn_map_USR.keys())
 
     for i in range(min(maxn, len(refs_USR))):
         #print("\n-----  Connection in USR: %s"%refs[i])
