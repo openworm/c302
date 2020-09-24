@@ -11,7 +11,7 @@ if __name__ == '__main__':
     
     parameter_set = sys.argv[1] if len(sys.argv)==2 else 'A'
     
-    exec('from parameters_%s import ParameterisedModel'%parameter_set, globals())
+    exec('from c302.parameters_%s import ParameterisedModel'%parameter_set, globals())
     params = ParameterisedModel()
     
     cells = ["URYDL", "SMDDR", "ADAL", "RIML", "IL2VL", "RIPL"]
