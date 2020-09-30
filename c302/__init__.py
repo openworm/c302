@@ -42,6 +42,7 @@ import collections
 from owmeta_core import __version__ as owc_version
 from owmeta_core.bundle import Bundle
 from owmeta_core.context import Context
+from owmeta import __version__ as owmeta_version
 from owmeta.neuron import Neuron
 
 try:
@@ -575,6 +576,7 @@ def generate(net_id,
     info = "\n\nParameters and setting used to generate this network:\n\n"+\
            "    Data reader:                    %s\n" % data_reader+\
            "    c302 version:                   %s\n" % __version__+\
+           "    owmeta version:                 %s\n" % owmeta_version+\
            "    owmeta_core version:            %s\n" % owc_version+\
            "    Cells:                          %s\n" % (cells if cells is not None else "All cells")+\
            "    Cell stimulated:                %s\n" % (cells_to_stimulate if cells_to_stimulate is not None else "All neurons")+\
