@@ -474,7 +474,6 @@ def _get_cell_info(bnd, cells):
             short = '+ %s' % short
 
         info = (neuron, neuron_types, neuron.receptor(), neurotransmitter, short, color)
-        # print dir(neuron)
 
         all_neuron_info[neuron.name()] = info
     return all_neuron_info
