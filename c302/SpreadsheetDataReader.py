@@ -5,7 +5,7 @@
 #    A simple script to read the values in CElegansNeuronTables.xls.
 
 #    Note: this file will be replaced with a call to PyOpenWorm
-#    when that package is updated to read all of this data from the
+#    when that package is updated to read all of this data from the 
 #    spreadseet
 
 ############################################################
@@ -20,9 +20,11 @@ spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/data/"
 
 from c302 import print_
 
-
 def read_data(include_nonconnected_cells=False, neuron_connect=False):
-    # reading the NeuronConnect.xls file if neuron_connect = True
+
+
+    
+# reading the NeuronConnect.xls file if neuron_connect = True
     if neuron_connect:
         conns = []
         cells = []
@@ -74,7 +76,6 @@ def read_data(include_nonconnected_cells=False, neuron_connect=False):
 
         return cells, conns
 
-
 def read_muscle_data():
 
     conns = []
@@ -105,6 +106,7 @@ def read_muscle_data():
     return neurons, muscles, conns
 
 
+
 def main():
 
     cells, conns = read_data(include_nonconnected_cells=True)
@@ -112,7 +114,7 @@ def main():
     assert(len(cells) == 302)
 
     print_("Lengths are equal if include_nonconnected_cells=True")
-
+    
     print_("Found %s cells: %s..."%(len(cells),cells))
     print_("Found %s connections: %s..."%(len(conns),conns[0]))
 
