@@ -27,14 +27,6 @@ import c302.bioparameters
 
 import airspeed
 
-try:
-    from contextlib import nullcontext
-except ImportError:
-    class nullcontext(object):
-        def __init__(self, enter_result=None): self.enter_result = enter_result
-        def __enter__(self): return self.enter_result
-        def __exit__(self, *excinfo): pass
-
 import random
 import argparse
 import shutil
@@ -692,140 +684,140 @@ def generate(net_id,
 
     count = 0
     try:
-        bundle = Bundle('openworm/owmeta-data')
+        bundle = Bundle('openworm/owmeta-data', version=4)
+        with bundle as bnd:
+            all_neuron_info = _get_cell_info(bnd, set(cell_names))
     except Exception as e:
         print_('Unable to open "openworm/owmeta-data" bundle: %s' % e)
-        bundle = nullcontext()
-    with bundle as bnd:
-        all_neuron_info = _get_cell_info(bnd, set(cell_names))
-        for cell in cell_names:
-            if cells is None or cell in cells:
-                inst = Instance(id="0")
 
-                if not params.is_level_D():
-                    # build a Population data structure out of the cell name
-                    pop0 = Population(id=cell,
-                                      component=params.generic_neuron_cell.id,
-                                      type="populationList",
-                                      size="1")
-                    cell_id = params.generic_neuron_cell.id
-                else:
-                    # build a Population data structure out of the cell name
-                    pop0 = Population(id=cell,
-                                      component=cell,
-                                      type="populationList",
-                                      size="1")
-                    cell_id = cell
+    for cell in cell_names:
+        if cells is None or cell in cells:
+            inst = Instance(id="0")
 
-                #neuron, neuron.type(), neuron.receptor(), neuron.neurotransmitter(), short, color
-                pop0.properties.append(Property("color", all_neuron_info[cell][5]))
-                types = sorted(all_neuron_info[cell][1])
-                pop0.properties.append(Property("type", str('; '.join(types))))
-                recps = sorted(all_neuron_info[cell][2])
-                pop0.properties.append(Property("receptor", str('; '.join(recps))))
-                pop0.properties.append(Property("neurotransmitter", str('; '.join(all_neuron_info[cell][3]))))
+            if not params.is_level_D():
+                # build a Population data structure out of the cell name
+                pop0 = Population(id=cell,
+                                  component=params.generic_neuron_cell.id,
+                                  type="populationList",
+                                  size="1")
+                cell_id = params.generic_neuron_cell.id
+            else:
+                # build a Population data structure out of the cell name
+                pop0 = Population(id=cell,
+                                  component=cell,
+                                  type="populationList",
+                                  size="1")
+                cell_id = cell
 
-                pop0.instances.append(inst)
+            #neuron, neuron.type(), neuron.receptor(), neuron.neurotransmitter(), short, color
+            pop0.properties.append(Property("color", all_neuron_info[cell][5]))
+            types = sorted(all_neuron_info[cell][1])
+            pop0.properties.append(Property("type", str('; '.join(types))))
+            recps = sorted(all_neuron_info[cell][2])
+            pop0.properties.append(Property("receptor", str('; '.join(recps))))
+            pop0.properties.append(Property("neurotransmitter", str('; '.join(all_neuron_info[cell][3]))))
 
-                # put that Population into the Network data structure from above
-                net.populations.append(pop0)
+            pop0.instances.append(inst)
 
-                if cell in cells_vs_name:
-                    p = Property(tag="OpenWormBackerAssignedName", value=cells_vs_name[cell])
-                    pop0.properties.append(p)
+            # put that Population into the Network data structure from above
+            net.populations.append(pop0)
 
-                # also use the cell name to grab the morphology file, as a NeuroML data structure
-                #  into the 'all_cells' dict
-                cell_file_path = root_dir+"/../" if test else root_dir+"/" #if running test
-                cell_file = cell_file_path+'NeuroML2/%s.cell.nml'%cell
-                doc = loaders.NeuroMLLoader.load(cell_file)
-                all_cells[cell] = doc.cells[0]
+            if cell in cells_vs_name:
+                p = Property(tag="OpenWormBackerAssignedName", value=cells_vs_name[cell])
+                pop0.properties.append(p)
+
+            # also use the cell name to grab the morphology file, as a NeuroML data structure
+            #  into the 'all_cells' dict
+            cell_file_path = root_dir+"/../" if test else root_dir+"/" #if running test
+            cell_file = cell_file_path+'NeuroML2/%s.cell.nml'%cell
+            doc = loaders.NeuroMLLoader.load(cell_file)
+            all_cells[cell] = doc.cells[0]
 
 
+            if params.is_level_D():
+                new_cell = params.create_neuron_cell(cell, doc.cells[0].morphology)
+
+                nml_cell_doc = NeuroMLDocument(id=cell)
+                nml_cell_doc.cells.append(new_cell)
+                new_cell_file = 'cells/'+cell+'_D.cell.nml'
+                nml_file = target_directory+'/'+new_cell_file
+                print_("Writing new cell to: %s"%os.path.realpath(nml_file))
+                writers.NeuroMLWriter.write(nml_cell_doc, nml_file)
+
+                nml_doc.includes.append(IncludeType(href=new_cell_file))
+                lems_info["includes"].append(new_cell_file)
+
+                inst.location = Location(0,0,0)
+            else:
+                location = doc.cells[0].morphology.segments[0].proximal
+
+                inst.location = Location(float(location.x), float(location.y), float(location.z))
+
+            if verbose:
+                print_("Loaded morphology: %s; id: %s; placing at location: (%s, %s, %s)"%(os.path.realpath(cell_file), all_cells[cell].id, inst.location.x, inst.location.y, inst.location.z))
+
+
+
+            if cells_to_stimulate is None or cell in cells_to_stimulate:
+
+                target = "../%s/0/%s"%(pop0.id, cell_id)
                 if params.is_level_D():
-                    new_cell = params.create_neuron_cell(cell, doc.cells[0].morphology)
+                    target+="/0"
 
-                    nml_cell_doc = NeuroMLDocument(id=cell)
-                    nml_cell_doc.cells.append(new_cell)
-                    new_cell_file = 'cells/'+cell+'_D.cell.nml'
-                    nml_file = target_directory+'/'+new_cell_file
-                    print_("Writing new cell to: %s"%os.path.realpath(nml_file))
-                    writers.NeuroMLWriter.write(nml_cell_doc, nml_file)
+                input_list = InputList(id="Input_%s_%s"%(cell,params.offset_current.id),
+                                     component=params.offset_current.id,
+                                     populations='%s'%cell)
 
-                    nml_doc.includes.append(IncludeType(href=new_cell_file))
-                    lems_info["includes"].append(new_cell_file)
+                input_list.input.append(Input(id=0,
+                              target=target,
+                              destination="synapses"))
 
-                    inst.location = Location(0,0,0)
-                else:
-                    location = doc.cells[0].morphology.segments[0].proximal
-
-                    inst.location = Location(float(location.x), float(location.y), float(location.z))
-
-                if verbose:
-                    print_("Loaded morphology: %s; id: %s; placing at location: (%s, %s, %s)"%(os.path.realpath(cell_file), all_cells[cell].id, inst.location.x, inst.location.y, inst.location.z))
+                net.input_lists.append(input_list)
 
 
+            if cells_to_plot is None or cell in cells_to_plot:
+                plot = {}
 
-                if cells_to_stimulate is None or cell in cells_to_stimulate:
+                plot["cell"] = cell
+                plot["colour"] = get_random_colour_hex()
+                plot["quantity"] = "%s/0/%s/v" % (cell, cell_id)
+                lems_info["plots"].append(plot)
 
-                    target = "../%s/0/%s"%(pop0.id, cell_id)
-                    if params.is_level_D():
-                        target+="/0"
-
-                    input_list = InputList(id="Input_%s_%s"%(cell,params.offset_current.id),
-                                         component=params.offset_current.id,
-                                         populations='%s'%cell)
-
-                    input_list.input.append(Input(id=0,
-                                  target=target,
-                                  destination="synapses"))
-
-                    net.input_lists.append(input_list)
-
-
-                if cells_to_plot is None or cell in cells_to_plot:
+                if params.is_level_B():
                     plot = {}
 
                     plot["cell"] = cell
                     plot["colour"] = get_random_colour_hex()
-                    plot["quantity"] = "%s/0/%s/v" % (cell, cell_id)
-                    lems_info["plots"].append(plot)
+                    plot["quantity"] = "%s/0/%s/activity" % (cell, cell_id)
+                    lems_info["activity_plots"].append(plot)
 
-                    if params.is_level_B():
-                        plot = {}
+                if is_cond_based_cell(params):
+                    plot = {}
 
-                        plot["cell"] = cell
-                        plot["colour"] = get_random_colour_hex()
-                        plot["quantity"] = "%s/0/%s/activity" % (cell, cell_id)
-                        lems_info["activity_plots"].append(plot)
+                    plot["cell"] = cell
+                    plot["colour"] = get_random_colour_hex()
+                    plot["quantity"] = "%s/0/%s/caConc" % (cell, cell_id)
+                    lems_info["activity_plots"].append(plot)
 
-                    if is_cond_based_cell(params):
-                        plot = {}
+            save = {}
+            save["cell"] = cell
+            save["quantity"] = "%s/0/%s/v" % (cell, cell_id)
+            lems_info["to_save"].append(save)
 
-                        plot["cell"] = cell
-                        plot["colour"] = get_random_colour_hex()
-                        plot["quantity"] = "%s/0/%s/caConc" % (cell, cell_id)
-                        lems_info["activity_plots"].append(plot)
-
+            if params.is_level_B():
                 save = {}
                 save["cell"] = cell
-                save["quantity"] = "%s/0/%s/v" % (cell, cell_id)
-                lems_info["to_save"].append(save)
+                save["quantity"] = "%s/0/%s/activity" % (cell, cell_id)
+                lems_info["activity_to_save"].append(save)
+            if is_cond_based_cell(params):
+                save = {}
+                save["cell"] = cell
+                save["quantity"] = "%s/0/%s/caConc" % (cell, cell_id)
+                lems_info["activity_to_save"].append(save)
 
-                if params.is_level_B():
-                    save = {}
-                    save["cell"] = cell
-                    save["quantity"] = "%s/0/%s/activity" % (cell, cell_id)
-                    lems_info["activity_to_save"].append(save)
-                if is_cond_based_cell(params):
-                    save = {}
-                    save["cell"] = cell
-                    save["quantity"] = "%s/0/%s/caConc" % (cell, cell_id)
-                    lems_info["activity_to_save"].append(save)
+            lems_info["cells"].append(cell)
 
-                lems_info["cells"].append(cell)
-
-                count+=1
+            count+=1
 
     if verbose:
         print_("Finished loading %i cells"%count)
