@@ -433,9 +433,9 @@ def elem_in_coll_matches_conn(coll, conn):
 
 
 def _get_cell_info(bnd, cells):
-    all_neuron_info = collections.OrderedDict()
     if bnd is None:
-        return all_neuron_info
+        return None
+    all_neuron_info = collections.OrderedDict()
     ctx = bnd(Context)(ident="http://openworm.org/data").stored
     # Go through our list and get the neuron object associated with each name.
     # Store these in another list.
@@ -710,12 +710,13 @@ def generate(net_id,
                 cell_id = cell
 
             #neuron, neuron.type(), neuron.receptor(), neuron.neurotransmitter(), short, color
-            pop0.properties.append(Property("color", all_neuron_info[cell][5]))
-            types = sorted(all_neuron_info[cell][1])
-            pop0.properties.append(Property("type", str('; '.join(types))))
-            recps = sorted(all_neuron_info[cell][2])
-            pop0.properties.append(Property("receptor", str('; '.join(recps))))
-            pop0.properties.append(Property("neurotransmitter", str('; '.join(all_neuron_info[cell][3]))))
+            if all_neuron_info is not None:
+                pop0.properties.append(Property("color", all_neuron_info[cell][5]))
+                types = sorted(all_neuron_info[cell][1])
+                pop0.properties.append(Property("type", str('; '.join(types))))
+                recps = sorted(all_neuron_info[cell][2])
+                pop0.properties.append(Property("receptor", str('; '.join(recps))))
+                pop0.properties.append(Property("neurotransmitter", str('; '.join(all_neuron_info[cell][3]))))
 
             pop0.instances.append(inst)
 
