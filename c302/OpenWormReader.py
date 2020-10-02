@@ -84,6 +84,14 @@ class OpenWormReader(object):
                 pre_name = conn.pre_cell.name
                 post_name = conn.post_cell.name
 
+                if not synclass:
+                    # Hack/guess
+                    if syntype == "GapJunction":
+                        synclass = "Generic_GJ"
+                    else:
+                        if pre_name.startswith("DD") or pre_name.startswith("VD"):
+                            synclass = "GABA"
+                        synclass = "Acetylcholine"
                 conns.append(ConnectionInfo(pre_name, post_name, num, syntype, synclass))
 
                 pre_cell_names.add(pre_name)
