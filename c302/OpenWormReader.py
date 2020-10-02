@@ -1,3 +1,6 @@
+import logging
+import re
+
 from c302.NeuroMLUtilities import ConnectionInfo
 from c302 import print_
 
@@ -13,6 +16,8 @@ from owmeta.worm import Worm
 #   Originally written by Mark Watts (github.com/mwatts15)
 
 ############################################################
+
+LOGGER = logging.getLogger(__name__)
 
 
 class OpenWormReader(object):
@@ -83,6 +88,8 @@ class OpenWormReader(object):
                 synclass = conn.synclass or ''
                 pre_name = conn.pre_cell.name
                 post_name = conn.post_cell.name
+                if Muscle.rdf_type in conn.post_cell.rdf_type:
+                    post_name = format_muscle_name(post_name)
 
                 if not synclass:
                     # Hack/guess
@@ -103,6 +110,21 @@ class OpenWormReader(object):
         print_("Total connections found %i " % len(conns))
 
         return list(self.cell_names), pre_cell_names, post_cell_names, conns
+
+
+def format_muscle_name(muscle_name):
+    pat1 = r'M([VD][LR])(\d+)'
+    pat2 = r'([VD][LR])(\d+)'
+    md = re.fullmatch(pat1, muscle_name)
+    if md:
+        return muscle_name
+    else:
+        md = re.fullmatch(pat2, muscle_name)
+        if md:
+            return 'M{0}{1:02d}'.format(md.group(1), int(md.group(2)))
+        else:
+            LOGGER.debug('Unrecognized muscle name format in %s', muscle_name)
+            return muscle_name
 
 
 READER = OpenWormReader()

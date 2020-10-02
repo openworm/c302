@@ -866,9 +866,9 @@ def generate(net_id,
     #if data_reader == "SpreadsheetDataReader":
     #    all_muscles = get_muscle_names()
 
-    if muscles_to_include is None or muscles_to_include == True:
+    if muscles_to_include is None or muscles_to_include is True:
         muscles_to_include = all_muscles
-    elif muscles_to_include == False:
+    elif muscles_to_include is False:
         muscles_to_include = []
 
     for m in muscles_to_include:
@@ -1190,13 +1190,11 @@ def generate(net_id,
 
                 proj0.connection_wds.append(conn0)
 
-
-
     if len(muscles_to_include) > 0:
         for conn in muscle_conns:
-            if not conn.post_cell in muscles_to_include:#
-                continue#
-            if not conn.pre_cell in lems_info["cells"] and not conn.pre_cell in muscles_to_include:
+            if conn.post_cell not in muscles_to_include:
+                continue
+            if conn.pre_cell not in lems_info["cells"] and conn.pre_cell not in muscles_to_include:
                 continue
 
             # take information about each connection and package it into a
