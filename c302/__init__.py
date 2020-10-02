@@ -88,6 +88,7 @@ def get_str_from_expnotation(num):
     """
     return '{0:.15f}'.format(num)
 
+
 def get_muscle_position(muscle, data_reader="SpreadsheetDataReader"):
     """if data_reader == "UpdatedSpreadsheetDataReader":
         x = 80 * (-1 if muscle[0] == 'v' else 1)
@@ -95,10 +96,24 @@ def get_muscle_position(muscle, data_reader="SpreadsheetDataReader"):
         y = -300 + 30 * int(muscle[5:7])
         return x, y, z"""
 
-    x = 80 * (1 if muscle[2] == 'L' else -1)
-    z = 80 * (-1 if muscle[1] == 'V' else 1)
-    y = -300 + 30 * int(muscle[3:5])
+    pat1 = r'M([VD])([LR])(\d+)'
+    pat2 = r'([VD])([LR])(\d+)'
+    md = re.fullmatch(pat1, muscle)
+    if not md:
+        md = re.fullmatch(pat2, muscle)
+
+    if not md:
+        raise Exception('Unrecognized muscle name format: %s. Cannot calculate a muscle'
+                        ' position' % muscle)
+
+    dv = md.group(1)
+    lr = md.group(2)
+    idx = md.group(3)
+    x = 80 * (1 if lr == 'L' else -1)
+    z = 80 * (-1 if dv == 'V' else 1)
+    y = -300 + 30 * int(idx)
     return x, y, z
+
 
 def is_muscle(cell_name):
     return cell_name.startswith('MDL') or \
@@ -250,7 +265,9 @@ def get_cell_position(cell):
     #print "%s, %s, %s" %(location.x, location.y, location.z)
     return location
 
+
 def append_input_to_nml_input_list(stim, nml_doc, cell, params):
+    # XXX: Don't use is_muscle for this!! We know which cells are muscles already
     target = get_cell_id_string(cell, params, muscle=is_muscle(cell))
 
     input_list = InputList(id="Input_%s_%s" % (cell, stim.id), component=stim.id, populations='%s' % cell)
@@ -390,14 +407,8 @@ def get_cell_names_and_connection(data_reader="SpreadsheetDataReader", test=Fals
 
 
 def get_cell_muscle_names_and_connection(data_reader="SpreadsheetDataReader", test=False):
-
-    #spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/../../../"
-
     mneurons, all_muscles, muscle_conns = load_data_reader(data_reader).read_muscle_data()
-
-    all_muscles = get_muscle_names()
-
-    return mneurons, all_muscles, muscle_conns
+    return mneurons, sorted(all_muscles), muscle_conns
 
 
 def is_cond_based_cell(params):
@@ -850,7 +861,6 @@ def generate(net_id,
     if verbose:
         print_("Finished loading %i cells"%count)
 
-
     mneurons, all_muscles, muscle_conns = get_cell_muscle_names_and_connection(data_reader)
 
     #if data_reader == "SpreadsheetDataReader":
@@ -862,9 +872,10 @@ def generate(net_id,
         muscles_to_include = []
 
     for m in muscles_to_include:
-        assert m in all_muscles
+        if m not in all_muscles:
+            raise Exception('%s is not among the known muscles' % m)
 
-    if len(muscles_to_include)>0:
+    if len(muscles_to_include) > 0:
 
         muscle_count = 0
         for muscle in muscles_to_include:
@@ -1187,8 +1198,6 @@ def generate(net_id,
                 continue#
             if not conn.pre_cell in lems_info["cells"] and not conn.pre_cell in muscles_to_include:
                 continue
-
-
 
             # take information about each connection and package it into a
             # NeuroML Projection data structure
