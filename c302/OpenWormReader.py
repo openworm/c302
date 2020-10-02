@@ -9,7 +9,7 @@ from owmeta.worm import Worm
 
 ############################################################
 
-#   A simple script to read the values in PyOpenWorm
+#   A simple script to read the values in owmeta
 #   Originally written by Mark Watts (github.com/mwatts15)
 
 ############################################################
@@ -30,7 +30,7 @@ class OpenWormReader(object):
     def read_data(self, include_nonconnected_cells=False):
         print_("Initialising OpenWormReader")
 
-        cell_names, pre, post, conns = self._read_connections('neuron')
+        cell_names, pre, post, conns = self._read_connections()
 
         if include_nonconnected_cells:
             return cell_names, conns
@@ -41,7 +41,7 @@ class OpenWormReader(object):
         cell_names, neurons, muscles, conns = self._read_connections('muscle')
         return neurons, muscles, conns
 
-    def _read_connections(self, termination):
+    def _read_connections(self, termination=None):
         with Bundle('openworm/owmeta-data', version=4) as bnd:
             if not self.cached:
                 ctx = bnd(Context)(ident="http://openworm.org/data").stored
@@ -66,18 +66,18 @@ class OpenWormReader(object):
                 self.cached = True
 
         if termination == 'neuron':
-            term_type = Neuron.rdf_type
+            term_type = set([Neuron.rdf_type])
         elif termination == 'muscle':
-            term_type = Muscle.rdf_type
+            term_type = set([Muscle.rdf_type])
         else:
-            raise Exception("Unrecognized termination {}".format(termination))
+            term_type = set([Neuron.rdf_type, Muscle.rdf_type])
 
         conns = []
         pre_cell_names = set()
         post_cell_names = set()
         for conn in self.connlist:
             if (Neuron.rdf_type in conn.pre_cell.rdf_type and
-                    term_type in conn.post_cell.rdf_type):
+                    term_type & set(conn.post_cell.rdf_type)):
                 num = conn.number
                 syntype = conn.syntype or ''
                 synclass = conn.synclass or ''

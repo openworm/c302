@@ -43,7 +43,9 @@ from owmeta_core import __version__ as owc_version
 from owmeta_core.bundle import Bundle
 from owmeta_core.context import Context
 from owmeta import __version__ as owmeta_version
+from owmeta.cell import Cell
 from owmeta.neuron import Neuron
+from owmeta.muscle import Muscle
 
 try:
     from urllib2 import URLError  # Python 2
@@ -437,28 +439,44 @@ def _get_cell_info(bnd, cells):
     if bnd is None:
         return None
     all_neuron_info = collections.OrderedDict()
+    all_muscle_info = collections.OrderedDict()
     ctx = bnd(Context)(ident="http://openworm.org/data").stored
     # Go through our list and get the neuron object associated with each name.
     # Store these in another list.
-    some_neurons = [ctx(Neuron)(name) for name in cells]
+    some_cells = [ctx(Cell).query(name=name) for name in cells]
 
-    for neuron in some_neurons:
-        short = ') %s' % neuron.name()
+    for cellq in some_cells:
+        cell = next(cellq.load(), None)
+        if cell is None:
+            print_("No matching cell for %s" % cellq)
+            continue
+
+        normalized_name = cell.name()
+        short = ') %s' % normalized_name
         color = '.5 0 0'
-        neuron_types = neuron.type()
-        if 'sensory' in neuron_types:
-            short = 'Se%s' % short
-            color = '1 .2 1'
-        if 'interneuron' in neuron_types:
-            short = 'In%s' % short
-            color = '1 0 .4'
-        if 'motor' in neuron_types:
-            short = 'Mo%s' % short
-            color = '.5 .4 1'
+        if isinstance(cell, Neuron):
+            neuron_types = cell.type()
+            if 'sensory' in neuron_types:
+                short = 'Se%s' % short
+                color = '1 .2 1'
+            if 'interneuron' in neuron_types:
+                short = 'In%s' % short
+                color = '1 0 .4'
+            if 'motor' in neuron_types:
+                short = 'Mo%s' % short
+                color = '.5 .4 1'
+
+            neurotransmitter = cell.neurotransmitter()
+        elif isinstance(cell, Muscle):
+            neuron_types = ()
+            neurotransmitter = ()
+        else:
+            # At this point, we should only have Neurons and Muscles because the reader
+            # filters them out
+            raise Exception('Got an unexpected cell type')
 
         short = '(%s' % short
-
-        neurotransmitter = neuron.neurotransmitter()
+        receptor = cell.receptor()
         if 'GABA' in neurotransmitter:
             short = '- %s' % short
         elif len(neurotransmitter) == 0:
@@ -466,10 +484,15 @@ def _get_cell_info(bnd, cells):
         else:
             short = '+ %s' % short
 
-        info = (neuron, neuron_types, neuron.receptor(), neurotransmitter, short, color)
+        info = (cell, neuron_types, receptor, neurotransmitter, short, color)
 
-        all_neuron_info[neuron.name()] = info
-    return all_neuron_info
+        if isinstance(cell, Muscle):
+            all_muscle_info[cell.name()] = info
+        elif isinstance(cell, Neuron):
+            all_neuron_info[cell.name()] = info
+
+    return all_neuron_info, all_muscle_info
+
 
 def set_param(params, param, value):
     v = params.get_bioparameter(param,warn_if_missing=False)
@@ -688,9 +711,11 @@ def generate(net_id,
     try:
         bundle = Bundle('openworm/owmeta-data', version=4)
         with bundle as bnd:
-            all_neuron_info = _get_cell_info(bnd, set(cell_names))
+            all_neuron_info, all_muscle_info = _get_cell_info(bnd, set(cell_names))
     except Exception as e:
         print_('Unable to open "openworm/owmeta-data" bundle: %s' % e)
+        all_neuron_info = None
+        all_muscle_info = None
 
     for cell in cell_names:
         if cells is None or cell in cells:
@@ -1156,7 +1181,7 @@ def generate(net_id,
 
 
 
-    if len(muscles_to_include)>0:
+    if len(muscles_to_include) > 0:
         for conn in muscle_conns:
             if not conn.post_cell in muscles_to_include:#
                 continue#
