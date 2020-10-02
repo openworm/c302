@@ -30,7 +30,7 @@ class OpenWormReader(object):
     def read_data(self, include_nonconnected_cells=False):
         print_("Initialising OpenWormReader")
 
-        cell_names, pre, post, conns = self._read_connections()
+        cell_names, pre, post, conns = self._read_connections('neuron')
 
         if include_nonconnected_cells:
             return cell_names, conns
@@ -42,8 +42,8 @@ class OpenWormReader(object):
         return neurons, muscles, conns
 
     def _read_connections(self, termination=None):
-        with Bundle('openworm/owmeta-data', version=4) as bnd:
-            if not self.cached:
+        if not self.cached:
+            with Bundle('openworm/owmeta-data', version=4) as bnd:
                 ctx = bnd(Context)(ident="http://openworm.org/data").stored
                 # Extract the network object from the worm object.
                 net = ctx(Worm).query().neuron_network()
@@ -63,7 +63,7 @@ class OpenWormReader(object):
                 self.connlist = syn.to_objects()
 
                 self.cell_names = self.get_cells_in_model(net)
-                self.cached = True
+            self.cached = True
 
         if termination == 'neuron':
             term_type = set([Neuron.rdf_type])
@@ -120,9 +120,9 @@ if __name__ == "__main__":
 
     conn_map_OWR = {}
     for c in conns:
-        conn_map_OWR[c.short()] = c
+        conn_map_OWR[c.short().lower()] = c
 
-    from UpdatedSpreadsheetDataReader import read_data as read_data_usr
+    from .UpdatedSpreadsheetDataReader import read_data as read_data_usr
     #from SpreadsheetDataReader import read_data as read_data_usr
 
     cells2, conns2 = read_data_usr(include_nonconnected_cells=True)
@@ -132,7 +132,7 @@ if __name__ == "__main__":
 
     conn_map_USR = {}
     for c2 in conns2:
-        conn_map_USR[c2.short()] = c2
+        conn_map_USR[c2.short().lower()] = c2
 
     maxn = 30000
 
@@ -141,8 +141,6 @@ if __name__ == "__main__":
     matching = 0
 
     for i in range(min(maxn, len(refs_OWR))):
-        #print("\n-----  Connection in OWR: %s"%refs[i])
-        # print cm[refs[i]]
         ref = refs_OWR[i]
         if ref in conn_map_USR:
             if conn_map_OWR[ref].number != conn_map_USR[ref].number:
