@@ -9,8 +9,10 @@ import c302
 import re
 import collections
 
+from owmeta_core.bundle import Bundle
 
-natsort = lambda s: [int(t) if t.isdigit() else t for t in re.split('(\d+)', s)]
+
+natsort = lambda s: [int(t) if t.isdigit() else t for t in re.split(r'(\d+)', s)]
 
 
 def plots(a_n, info, cells, dt):
@@ -443,11 +445,13 @@ def generate_conn_matrix(nml_doc, save_fig_dir=None, verbose=False):
 
     try:
         bundle = Bundle('openworm/owmeta-data', version=4)
+
+        with bundle:
+            all_neuron_info, all_muscle_info = c302._get_cell_info(bundle, all_cells)
     except Exception as e:
-        c302.print_('Unable to connect to PyOpenWorm database: %s' % e)
+        c302.print_('Unable to connect to owmeta bundle: %s' % e)
         pow_conn = None
 
-    all_neuron_info, all_muscle_info = c302._get_cell_info(bundle, all_cells)
     all_neurons = []
     all_muscles = []
     for c in all_cells:
