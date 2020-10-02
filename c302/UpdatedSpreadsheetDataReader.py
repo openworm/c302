@@ -12,7 +12,7 @@
 
 import csv
 
-from NeuroMLUtilities import ConnectionInfo
+from .NeuroMLUtilities import ConnectionInfo
 import os
 
 from c302 import print_
