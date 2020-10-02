@@ -15,7 +15,7 @@ def setup(parameter_set,
     reference = "c302_%s_IClamp"%parameter_set
     c302.print_("Setting up %s"%reference)
     
-    exec('from parameters_%s import ParameterisedModel'%parameter_set, globals())
+    exec('from c302.parameters_%s import ParameterisedModel'%parameter_set, globals())
     params = ParameterisedModel()
     
     stim_amplitudes = ["1pA","2pA","3pA","4pA","5pA","6pA"]

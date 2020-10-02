@@ -20,7 +20,7 @@ def setup(parameter_set,
           verbose=True,
           config_param_overrides={}):
 
-    exec('from parameters_%s import ParameterisedModel'%parameter_set, globals())
+    exec('from c302.parameters_%s import ParameterisedModel'%parameter_set, globals())
     params = ParameterisedModel()
 
     params.set_bioparameter("unphysiological_offset_current", "0pA", "Testing TapWithdrawal", "0")

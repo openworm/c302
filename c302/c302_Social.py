@@ -26,7 +26,7 @@ def setup(parameter_set,
           config_param_overrides={},
           verbose=True):
     
-    exec('from parameters_%s import ParameterisedModel'%parameter_set, globals())
+    exec('from c302.parameters_%s import ParameterisedModel'%parameter_set, globals())
     params = ParameterisedModel()
     
     cells = ["RMGR","ASHR","ASKR","AWBR","IL2R","RMHR","URXR"]
