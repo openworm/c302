@@ -1,6 +1,5 @@
 ## The c302 modelling framework for *C. elegans*
 
-
 c302 is a framework for generating network models in NeuroML 2 based on *C. elegans* connectivity data. It is primarily intended as a way to generate neuronal networks at multiple levels of detail for the [OpenWorm project](http://www.openworm.org). To see how c302 relates to other OpenWorm subprojects click on the image below:
 
 <p align="center"><a href="OpenWormOverview.md"><img width="200" alt="c302_in_overview" src="https://user-images.githubusercontent.com/1573896/44876490-42fca100-ac6f-11e8-95ab-76dc8a2d80e1.png"></a></p>
@@ -41,6 +40,12 @@ To ensure everything is set up correctly try:
 To test all of the working features of the framework run [test.sh](https://raw.githubusercontent.com/openworm/CElegansNeuroML/master/CElegans/pythonScripts/c302/test.sh):
 
      ./test.sh  # or ./test3.sh if you use Python 3
+
+### Docker image
+
+c302 is included in the **Docker** image which contains the complete OpenWorm simulation stack. Click on the image below for more details.
+
+<p align="center"><a href="https://github.com/openworm/OpenWorm/blob/master/README.md#quickstart"><img width="400" alt="Worm Crawling" src="https://raw.githubusercontent.com/openworm/OpenWorm/master/img/worm-crawling.gif"></a></p>
 
 
 ### Usage Examples
