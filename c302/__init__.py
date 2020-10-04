@@ -62,6 +62,9 @@ __version__ = about['__version__']
 
 LEMS_TEMPLATE_FILE = "LEMS_c302_TEMPLATE.xml"
 
+MUSCLE_RE = re.compile(r'M([VD][LR])(\d+)')
+
+
 def print_(msg, print_it=True): # print_it=False when not verbose
     if print_it:
         pre = "c302      >>> "
@@ -78,6 +81,7 @@ def load_data_reader(data_reader="SpreadsheetDataReader"):
     """
     return importlib.import_module('c302.%s'%data_reader)
 
+
 def get_str_from_expnotation(num):
     """
     Returns a formatted string representing a floating point number, e.g. 1*0.00001 would result into 1e-05. Returning 0.00001.
@@ -90,42 +94,34 @@ def get_str_from_expnotation(num):
 
 
 def get_muscle_position(muscle, data_reader="SpreadsheetDataReader"):
-    """if data_reader == "UpdatedSpreadsheetDataReader":
-        x = 80 * (-1 if muscle[0] == 'v' else 1)
-        z = 80 * (-1 if muscle[4] == 'L' else 1)
-        y = -300 + 30 * int(muscle[5:7])
-        return x, y, z"""
-
+    # TODO: Pull these positions from openworm/owmeta-data
     pat1 = r'M([VD])([LR])(\d+)'
     pat2 = r'([VD])([LR])(\d+)'
     md = re.fullmatch(pat1, muscle)
     if not md:
         md = re.fullmatch(pat2, muscle)
 
-    if not md:
-        raise Exception('Unrecognized muscle name format: %s. Cannot calculate a muscle'
-                        ' position' % muscle)
+    if md:
+        dv = md.group(1)
+        lr = md.group(2)
+        idx = md.group(3)
+        x = 80 * (1 if lr == 'L' else -1)
+        z = 80 * (-1 if dv == 'V' else 1)
+        y = -300 + 30 * int(idx)
+        return x, y, z
 
-    dv = md.group(1)
-    lr = md.group(2)
-    idx = md.group(3)
-    x = 80 * (1 if lr == 'L' else -1)
-    z = 80 * (-1 if dv == 'V' else 1)
-    y = -300 + 30 * int(idx)
-    return x, y, z
+    raise Exception('Unrecognized muscle name format %s' % muscle)
 
 
 def is_muscle(cell_name):
-    return cell_name.startswith('MDL') or \
-           cell_name.startswith('MDR') or  \
-           cell_name.startswith('MVL') or  \
-           cell_name.startswith('MVR')
+    return MUSCLE_RE.fullmatch(cell_name)
+
 
 def process_args():
     """
     Parse command-line arguments.
     """
-    parser = argparse.ArgumentParser(description="A script which can generate NeuroML2 compliant networks based on the C elegans connectome, along with LEMS files to run them")
+    parser = argparse.ArgumentParser('c302', description="A script which can generate NeuroML2 compliant networks based on the C elegans connectome, along with LEMS files to run them")
 
     parser.add_argument('reference', type=str, metavar='<reference>',
                         help='Unique reference for new network')
@@ -267,7 +263,6 @@ def get_cell_position(cell):
 
 
 def append_input_to_nml_input_list(stim, nml_doc, cell, params):
-    # XXX: Don't use is_muscle for this!! We know which cells are muscles already
     target = get_cell_id_string(cell, params, muscle=is_muscle(cell))
 
     input_list = InputList(id="Input_%s_%s" % (cell, stim.id), component=stim.id, populations='%s' % cell)
@@ -454,6 +449,10 @@ def _get_cell_info(bnd, cells):
     ctx = bnd(Context)(ident="http://openworm.org/data").stored
     # Go through our list and get the neuron object associated with each name.
     # Store these in another list.
+    match = is_muscle(name)
+    if match:
+        name = match.group(1) + str(int(match.group(2)))
+
     some_cells = [ctx(Cell).query(name=name) for name in cells]
 
     for cellq in some_cells:
@@ -720,7 +719,7 @@ def generate(net_id,
 
     count = 0
     try:
-        bundle = Bundle('openworm/owmeta-data', version=4)
+        bundle = Bundle('openworm/owmeta-data', version=5)
         with bundle as bnd:
             all_neuron_info, all_muscle_info = _get_cell_info(bnd, set(cell_names))
     except Exception as e:
@@ -890,7 +889,6 @@ def generate(net_id,
             pop0.properties.append(Property("color", '0 .6 0'))
             pop0.instances.append(inst)
 
-
             # put that Population into the Network data structure from above
             net.populations.append(pop0)
 
@@ -901,7 +899,7 @@ def generate(net_id,
 
             x, y, z = get_muscle_position(muscle, data_reader)
             #print_('Positioning muscle: %s at (%s,%s,%s)'%(muscle,x,y,z))
-            inst.location = Location(x,y,z)
+            inst.location = Location(x, y, z)
 
             #target = "%s/0/%s"%(pop0.id, params.generic_muscle_cell.id) # unused
 
