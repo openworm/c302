@@ -2,12 +2,12 @@ import logging
 import re
 
 from c302.NeuroMLUtilities import ConnectionInfo
-from c302 import print_
+from c302 import print_, MUSCLE_RE
 
 from owmeta_core.bundle import Bundle
 from owmeta_core.context import Context
 from owmeta.neuron import Neuron
-from owmeta.muscle import Muscle
+from owmeta.muscle import BodyWallMuscle
 from owmeta.worm import Worm
 
 ############################################################
@@ -48,7 +48,7 @@ class OpenWormReader(object):
 
     def _read_connections(self, termination=None):
         if not self.cached:
-            with Bundle('openworm/owmeta-data', version=4) as bnd:
+            with Bundle('openworm/owmeta-data', version=5) as bnd:
                 ctx = bnd(Context)(ident="http://openworm.org/data").stored
                 # Extract the network object from the worm object.
                 net = ctx(Worm).query().neuron_network()
@@ -73,9 +73,9 @@ class OpenWormReader(object):
         if termination == 'neuron':
             term_type = set([Neuron.rdf_type])
         elif termination == 'muscle':
-            term_type = set([Muscle.rdf_type])
+            term_type = set([BodyWallMuscle.rdf_type])
         else:
-            term_type = set([Neuron.rdf_type, Muscle.rdf_type])
+            term_type = set([Neuron.rdf_type, BodyWallMuscle.rdf_type])
 
         conns = []
         pre_cell_names = set()
@@ -88,12 +88,12 @@ class OpenWormReader(object):
                 synclass = conn.synclass or ''
                 pre_name = conn.pre_cell.name
                 post_name = conn.post_cell.name
-                if Muscle.rdf_type in conn.post_cell.rdf_type:
+                if BodyWallMuscle.rdf_type in conn.post_cell.rdf_type:
                     post_name = format_muscle_name(post_name)
 
                 if not synclass:
                     # Hack/guess
-                    if syntype == "GapJunction":
+                    if syntype and syntype.lower() == "gapjunction":
                         synclass = "Generic_GJ"
                     else:
                         if pre_name.startswith("DD") or pre_name.startswith("VD"):
@@ -113,13 +113,11 @@ class OpenWormReader(object):
 
 
 def format_muscle_name(muscle_name):
-    pat1 = r'M([VD][LR])(\d+)'
-    pat2 = r'([VD][LR])(\d+)'
-    md = re.fullmatch(pat1, muscle_name)
+    md = MUSCLE_RE.fullmatch(muscle_name)
     if md:
         return muscle_name
     else:
-        md = re.fullmatch(pat2, muscle_name)
+        md = re.fullmatch(r'([VD][LR])(\d+)', muscle_name)
         if md:
             return 'M{0}{1:02d}'.format(md.group(1), int(md.group(2)))
         else:
