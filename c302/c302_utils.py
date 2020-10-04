@@ -1,15 +1,16 @@
 import sys
 import os
-from pyneuroml import pynml
+import re
+import collections
+import traceback
+
 import matplotlib.pyplot as plt
 import numpy as np
+from pyneuroml import pynml
+from owmeta_core.bundle import Bundle
 
 import c302
 
-import re
-import collections
-
-from owmeta_core.bundle import Bundle
 
 
 natsort = lambda s: [int(t) if t.isdigit() else t for t in re.split(r'(\d+)', s)]
@@ -127,10 +128,11 @@ def plot_c302_results(lems_results,
     times = [t*1000 for t in lems_results['t']]
     for cm in lems_results.keys():
         if not cm=='t' and cm.endswith('/v'):
-            if c302.is_muscle(cm):
-                muscles.append(cm.split('/')[0])
+            cell_name_part = cm.split('/')[0]
+            if c302.is_muscle(cell_name_part):
+                muscles.append(cell_name_part)
             else:
-                cells.append(cm.split('/')[0])
+                cells.append(cell_name_part)
 
     cells.sort(key=natsort)
     cells.reverse()
@@ -400,6 +402,8 @@ def _show_conn_matrix(data, t, all_info_pre,all_info_post, type, save_figure_to=
     if save_figure_to:
         c302.print_("Saving connectivity figure to: %s"%save_figure_to)
         plt.savefig(save_figure_to,bbox_inches='tight')
+    else:
+        c302.print_("Not saving figure")
 
 def generate_conn_matrix(nml_doc, save_fig_dir=None, verbose=False):
 
@@ -444,13 +448,11 @@ def generate_conn_matrix(nml_doc, save_fig_dir=None, verbose=False):
     all_cells = sorted(all_cells)
 
     try:
-        bundle = Bundle('openworm/owmeta-data', version=4)
-
-        with bundle:
-            all_neuron_info, all_muscle_info = c302._get_cell_info(bundle, all_cells)
+        with Bundle('openworm/owmeta-data', version=6) as bnd:
+            all_neuron_info, all_muscle_info = c302._get_cell_info(bnd, all_cells)
     except Exception as e:
         c302.print_('Unable to connect to owmeta bundle: %s' % e)
-        pow_conn = None
+        traceback.print_exc()
 
     all_neurons = []
     all_muscles = []

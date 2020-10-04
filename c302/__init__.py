@@ -449,14 +449,15 @@ def _get_cell_info(bnd, cells):
     ctx = bnd(Context)(ident="http://openworm.org/data").stored
     # Go through our list and get the neuron object associated with each name.
     # Store these in another list.
-    match = is_muscle(name)
-    if match:
-        name = match.group(1) + str(int(match.group(2)))
+    fixed_up_names = []
+    for name in cells:
+        match = is_muscle(name)
+        if match:
+            name = match.group(1) + str(int(match.group(2)))
+        fixed_up_names.append(name)
 
-    some_cells = [ctx(Cell).query(name=name) for name in cells]
-
-    for cellq in some_cells:
-        cell = next(cellq.load(), None)
+    for cellq in fixed_up_names:
+        cell = next(ctx(Cell).query(name=name).load(), None)
         if cell is None:
             print_("No matching cell for %s" % cellq)
             continue
@@ -719,8 +720,7 @@ def generate(net_id,
 
     count = 0
     try:
-        bundle = Bundle('openworm/owmeta-data', version=5)
-        with bundle as bnd:
+        with Bundle('openworm/owmeta-data', version=6) as bnd:
             all_neuron_info, all_muscle_info = _get_cell_info(bnd, set(cell_names))
     except Exception as e:
         print_('Unable to open "openworm/owmeta-data" bundle: %s' % e)

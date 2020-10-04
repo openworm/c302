@@ -48,7 +48,7 @@ class OpenWormReader(object):
 
     def _read_connections(self, termination=None):
         if not self.cached:
-            with Bundle('openworm/owmeta-data', version=5) as bnd:
+            with Bundle('openworm/owmeta-data', version=6) as bnd:
                 ctx = bnd(Context)(ident="http://openworm.org/data").stored
                 # Extract the network object from the worm object.
                 net = ctx(Worm).query().neuron_network()
