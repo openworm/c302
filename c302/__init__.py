@@ -456,10 +456,10 @@ def _get_cell_info(bnd, cells):
             name = match.group(1) + str(int(match.group(2)))
         fixed_up_names.append(name)
 
-    for cellq in fixed_up_names:
+    for name in fixed_up_names:
         cell = next(ctx(Cell).query(name=name).load(), None)
         if cell is None:
-            print_("No matching cell for %s" % cellq)
+            print_("No matching cell for %s" % name)
             continue
 
         normalized_name = cell.name()

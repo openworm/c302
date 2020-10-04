@@ -26,8 +26,8 @@ def setup(parameter_set,
     my_cells = ["ADAL","PVCL"]
     muscles_to_include = ['MDR01']
 
-    cells               = my_cells
-    cells_total  = my_cells + muscles_to_include
+    cells = my_cells
+    cells_total = my_cells + muscles_to_include
 
 
     nml_doc = None
