@@ -2,7 +2,6 @@
 # See https://github.com/OpenSourceBrain/osb-model-validation for more details
 
 dist: xenial
-sudo: false
 
 addons:
   apt:
