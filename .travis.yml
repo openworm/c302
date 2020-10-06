@@ -38,7 +38,7 @@ install:
     - pip install git+https://github.com/OpenSourceBrain/osb-model-validation
     # NeuroML & main install
     - pip install pyNeuroML
-    - python setup.py install
+    - pip install .
     # Add openworm bundle owmeta remote
     - owm bundle remote --user add ow-google-drive 'https://drive.google.com/uc?id=1NYAcKdcvoFu5c7Nz3l4hK5UacG_eD56V&authuser=0&export=download'
 
