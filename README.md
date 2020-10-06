@@ -21,7 +21,7 @@ The full set of dependencies for c302 can be installed with the following (see a
     git clone https://github.com/openworm/c302.git
     cd c302
     python setup.py install
-    owm bundle remote --user add ow-google-drive https://drive.google.com/uc?id=1NYAcKdcvoFu5c7Nz3l4hK5UacG_eD56V&authuser=0&export=download
+    owm bundle remote --user add ow-google-drive 'https://drive.google.com/uc?id=1NYAcKdcvoFu5c7Nz3l4hK5UacG_eD56V&authuser=0&export=download'
 
 This will install c302 as well as all dependencies, including [pyNeuroML](https://github.com/NeuroML/pyNeuroML) and [owmeta](https://github.com/openworm/owmeta).
 
