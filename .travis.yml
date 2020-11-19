@@ -40,7 +40,7 @@ install:
     - pip install pyNeuroML
     - pip install .
     # Add openworm bundle owmeta remote
-    - owm bundle remote --user add ow-google-drive 'https://drive.google.com/uc?id=1NYAcKdcvoFu5c7Nz3l4hK5UacG_eD56V&authuser=0&export=download'
+    - owm bundle remote --user add ow 'https://raw.githubusercontent.com/openworm/owmeta-bundles/master/index.json'
 
 script:
     - omv all -V; export OMV_SUCCESS=$?; echo $OMV_SUCCESS
