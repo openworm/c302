@@ -26,7 +26,7 @@ setup(
         'xlwt',
         'libNeuroML>=0.2.39',
         'pyNeuroML>=0.3.11',
-        'owmeta_core>=0.11.0',
+        'owmeta_core>=0.13.0',
         'owmeta'
     ],
     entry_points={
