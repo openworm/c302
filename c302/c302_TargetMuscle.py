@@ -12,7 +12,7 @@ def setup(parameter_set,
           config_param_overrides={},
           verbose=True):
 
-    exec('from parameters_%s import ParameterisedModel'%parameter_set, globals())
+    exec('from c302.parameters_%s import ParameterisedModel'%parameter_set, globals())
     params = ParameterisedModel()
     
     params.set_bioparameter("unphysiological_offset_current", "15pA", "Testing IClamp", "0")
