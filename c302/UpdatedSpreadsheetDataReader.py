@@ -4,15 +4,15 @@
 
 #    A simple script to read the values in herm_full_edgelist.csv.
 
-#    Note: this file will be replaced with a call to PyOpenWorm
-#    when that package is updated to read all of this data from the 
+#    Note: this file will be replaced with a call to owmeta
+#    when that package is updated to read all of this data from the
 #    spreadseet
 
 ############################################################
 
 import csv
 
-from NeuroMLUtilities import ConnectionInfo
+from c302.NeuroMLUtilities import ConnectionInfo
 import os
 
 from c302 import print_
@@ -70,7 +70,7 @@ def get_syntype(syntype):
         return "Send"
     else:
         raise NotImplementedError("Cannot parse syntype '%s'" % syntype)
-    
+
 def get_synclass(cell, syntype):
     #dirty hack
     if syntype == "GapJunction":
@@ -114,7 +114,7 @@ def read_data(include_nonconnected_cells=False):
 
             pre = remove_leading_index_zero(pre)
             post = remove_leading_index_zero(post)
-            
+
             conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
             #print ConnectionInfo(pre, post, num, syntype, synclass)
             if pre not in cells:
@@ -149,8 +149,7 @@ def read_muscle_data():
         for row in reader:
             pre, post, num, syntype, synclass = parse_row(row)
 
-            if (not is_neuron(pre) and not is_body_wall_muscle(pre)) or not is_body_wall_muscle(post):
-                # Don't add connections unless pre=neuron and post=body_wall_muscle
+            if not (is_neuron(pre) or is_body_wall_muscle(pre)) or not is_body_wall_muscle(post):
                 continue
 
             if is_neuron(pre):
@@ -160,7 +159,6 @@ def read_muscle_data():
             post = get_old_muscle_name(post)
 
             conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
-            #print ConnectionInfo(pre, post, num, syntype, synclass)
             if is_neuron(pre) and pre not in neurons:
                 neurons.append(pre)
             elif is_body_wall_muscle(pre) and pre not in muscles:
@@ -172,13 +170,13 @@ def read_muscle_data():
 
 
 def main():
-    
+
     cells, conns = read_data(include_nonconnected_cells=True)
 
     assert(len(cells) == 302)
 
     print_("Lengths are equal if include_nonconnected_cells=True")
-    
+
     print_("Found %s cells: %s..."%(len(cells),cells))
     print_("Found %s connections: %s..."%(len(conns),conns[0]))
 

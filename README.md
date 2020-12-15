@@ -22,7 +22,7 @@ The full set of dependencies for c302 can be installed with the following (see a
     cd c302
     python setup.py install
 
-This will install c302 as well as all dependencies, including [pyNeuroML](https://github.com/NeuroML/pyNeuroML) and [PyOpenWorm](https://github.com/openworm/PyOpenWorm).
+This will install c302 as well as all dependencies, including [pyNeuroML](https://github.com/NeuroML/pyNeuroML) and [owmeta](https://github.com/openworm/owmeta).
 
 
 #### Quick test

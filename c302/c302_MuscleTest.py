@@ -80,7 +80,7 @@ def setup(parameter_set,
 
     input_list = []
 
-    
+
     #input_list.append(('MDL02', '0ms', '250ms', '3pA'))
     #input_list.append(('MDL03', '0ms', '250ms', '3pA'))
     #input_list.append(('MDR02', '0ms', '250ms', '3pA'))
@@ -92,7 +92,7 @@ def setup(parameter_set,
     input_list.append(('MVR13', '0ms', '250ms', '3pA'))
     input_list.append(('MVR14', '0ms', '250ms', '2pA'))
     input_list.append(('MVR15', '0ms', '250ms', '1pA'))
-    
+
     input_list.append(('MVL10', '0ms', '250ms', '1pA'))
     input_list.append(('MVL11', '0ms', '250ms', '2pA'))
     input_list.append(('MVL12', '0ms', '250ms', '3pA'))
@@ -153,7 +153,7 @@ def setup(parameter_set,
                                 param_overrides=param_overrides,
                                 verbose=verbose)
 
-        if config_param_overrides.has_key('input'):
+        if 'input' in config_param_overrides:
             input_list = config_param_overrides['input']
 
         for stim_input in input_list:
@@ -165,12 +165,13 @@ def setup(parameter_set,
 
         c302.print_("(Re)written network file to: " + nml_file)
 
-
     return cells, cells_to_stimulate, params, muscles_to_include, nml_doc
 
 
 if __name__ == '__main__':
     parameter_set = sys.argv[1] if len(sys.argv) == 2 else 'C2'
-    data_reader = sys.argv[2] if len(sys.argv) == 3 else 'UpdatedSpreadsheetDataReader'
+    setup_kwargs = dict()
+    if len(sys.argv) == 3:
+        setup_kwargs['data_reader'] = sys.argv[2]
 
     setup(parameter_set, generate=True, data_reader=data_reader)
