@@ -2,16 +2,15 @@
 # See https://github.com/OpenSourceBrain/osb-model-validation for more details
 
 dist: xenial
-sudo: false
 
 addons:
   apt:
     packages:
        # Requirements for Neuron/OMV/etc
-    - python-numpy 
-    - python-scipy 
+    - python-numpy
+    - python-scipy
     - python-tornado
-    - python-matplotlib 
+    - python-matplotlib
     - python-tk
     - python-dev
 
@@ -26,7 +25,7 @@ env:
      - OMV_ENGINE=jNeuroML_NEURON
      - OMV_ENGINE=jNeuroML_validate
      - OMV_ENGINE=NON_OMV_TESTS
-     
+
 
 #before_install:
     # To run tests requiring a graphical user interface on Travis CI, use xvfb (X Virtual Framebuffer) to imitate a display.
@@ -60,11 +59,11 @@ script:
     - echo "Running non OMV tests..."
     - python setup.py install
 
-    
+
     # Testing c302
-    - cd c302 
+    - cd c302
     - mkdir examples
-    - python c302_IClamp.py A    
+    - python c302_IClamp.py A
     #- omv install NEURON # Need to install NEURON
     #- export NEURON_HOME=/home/travis/neuron/nrn/x86_64/
     #- python runAndPlot.py -test

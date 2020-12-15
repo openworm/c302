@@ -7,7 +7,7 @@ def setup(parameter_set,
           dt=0.05,
           target_directory='examples',
           muscles_to_include = None, # None => All!
-          data_reader="OpenWormReader",
+          data_reader="SpreadsheetDataReader",
           param_overrides={},
           config_param_overrides={},
           verbose=True):
