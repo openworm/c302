@@ -29,6 +29,15 @@ class ConnectionInfo:
     def short(self):
         return "Connection from %s to %s (%s)"%(self.pre_cell, self.post_cell, self.syntype)
     
+    def __eq__(self, other):
+        return other.pre_cell == self.pre_cell and other.post_cell == self.post_cell and  other.number == self.number and other.syntype == self.syntype and other.synclass == self.synclass 
+        
+    def __lt__(self, other):
+        if other.pre_cell+other.post_cell > self.pre_cell+self.post_cell:
+            return True
+        else: 
+            return False
+    
     def __repr__(self):
         return self.__str__()
 

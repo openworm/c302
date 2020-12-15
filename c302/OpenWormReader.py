@@ -65,21 +65,25 @@ if __name__ == "__main__":
 
     cells, conns = read_data(include_nonconnected_cells=True)
 
-    print_("%i cells found using OpenWormReader: %s..."%(len(cells),sorted(cells)[0:3]))
+    print_("%i cells found using OpenWormReader: %s, etc..." % (len(cells), sorted(cells)[0:3]))
 
-    print_("Found %s connections using OpenWormReader: %s..."%(len(conns),conns[0]))
+    print_("Found %s connections using OpenWormReader, First few: " % (len(conns), ))
+    for c in sorted(conns)[:min(len(conns),5)]:
+        print_('  %s'%c)
 
     conn_map_OWR = {}
     for c in conns:
         conn_map_OWR[c.short()] = c
 
-    from UpdatedSpreadsheetDataReader import read_data as read_data_usr
+    from c302.UpdatedSpreadsheetDataReader2 import read_data as read_data_usr
     #from SpreadsheetDataReader import read_data as read_data_usr
 
     cells2, conns2 = read_data_usr(include_nonconnected_cells=True)
 
-    print_("%i cells found using UpdatedSpreadsheetDataReader: %s..."%(len(cells2),sorted(cells2)[0:3]))
-    print_("Found %s connections using UpdatedSpreadsheetDataReader: %s..."%(len(conns2),conns2[0]))
+    print_("%i cells found using UpdatedSpreadsheetDataReader2: %s..." % (len(cells2), sorted(cells2)[0:3]))
+    print_("Found %s connections using UpdatedSpreadsheetDataReader2, First few: " % (len(conns2), ))
+    for c in sorted(conns2)[:min(len(conns2),5)]:
+        print_('  %s'%c)
 
     conn_map_USR = {}
     for c2 in conns2:
