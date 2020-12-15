@@ -1,65 +1,134 @@
-from c302.NeuroMLUtilities import ConnectionInfo
-from c302 import print_, pyopenworm_connect
+import logging
+import re
 
-from PyOpenWorm.context import Context
-from PyOpenWorm.neuron import Neuron
-from PyOpenWorm.worm import Worm
+from c302.NeuroMLUtilities import ConnectionInfo
+from c302 import print_, MUSCLE_RE
+
+from owmeta_core.bundle import Bundle
+from owmeta_core.context import Context
+from owmeta.neuron import Neuron
+from owmeta.muscle import BodyWallMuscle
+from owmeta.worm import Worm
 
 ############################################################
 
-#   A simple script to read the values in PyOpenWorm
+#   A simple script to read the values in owmeta
 #   Originally written by Mark Watts (github.com/mwatts15)
 
 ############################################################
 
-
-def get_cells_in_model(net):
-
-    cell_names = []
-    for n in set(net.neurons()):
-        cell_names.append(str(n.name()))
-
-    return sorted(cell_names)
+LOGGER = logging.getLogger(__name__)
 
 
-def read_data(include_nonconnected_cells=False):
-    print_("Initialising OpenWormReader")
+class OpenWormReader(object):
+    def __init__(self):
+        self.cached = False
 
-    with pyopenworm_connect() as conn:
-        ctx = Context(ident="http://openworm.org/data", conf=conn.conf).stored
-        #Extract the network object from the worm object.
-        net = ctx(Worm)().neuron_network()
-        all_connections = net.synapses()
+    def get_cells_in_model(self, net):
 
-        conns = []
-        cells = []
+        cell_names = set()
+        for n in net.neurons():
+            cell_names.add(str(n.name()))
 
-        cell_names = get_cells_in_model(net)
+        return cell_names
 
-        for s in all_connections:
-            pre = str(s.pre_cell().name())
-            post = str(s.post_cell().name())
+    def read_data(self, include_nonconnected_cells=False):
+        print_("Initialising OpenWormReader")
 
-            if isinstance(s.post_cell(), Neuron) and pre in cell_names and post in cell_names:
-                syntype = str(s.syntype())
-                syntype = syntype[0].upper()+syntype[1:]
-                num = int(s.number())
-                synclass = str(s.synclass())
-                ci = ConnectionInfo(pre, post, num, syntype, synclass)
-                conns.append(ci)
-                if pre not in cells:
-                    cells.append(pre)
-                if post not in cells:
-                    cells.append(post)
-
-        print_("Total cells %i (%i with connections)" % (len(cell_names), len(cells)))
-        print_("Total connections found %i " % len(conns))
+        cell_names, pre, post, conns = self._read_connections('neuron')
 
         if include_nonconnected_cells:
             return cell_names, conns
         else:
-            return cells, conns
+            return pre + post, conns
 
+    def read_muscle_data(self):
+        cell_names, neurons, muscles, conns = self._read_connections('muscle')
+        return neurons, muscles, conns
+
+    def _read_connections(self, termination=None):
+        if not self.cached:
+            with Bundle('openworm/owmeta-data', version=6) as bnd:
+                ctx = bnd(Context)(ident="http://openworm.org/data").stored
+                # Extract the network object from the worm object.
+                net = ctx(Worm).query().neuron_network()
+
+                syn = net.synapse.expr
+                pre = syn.pre_cell
+                post = syn.post_cell
+
+                (pre | post).rdf_type(multiple=True)
+
+                (pre | post).name()
+                pre()
+                post()
+                syn.syntype()
+                syn.synclass()
+                syn.number()
+                self.connlist = syn.to_objects()
+
+                self.cell_names = self.get_cells_in_model(net)
+            self.cached = True
+
+        if termination == 'neuron':
+            term_type = set([Neuron.rdf_type])
+        elif termination == 'muscle':
+            term_type = set([BodyWallMuscle.rdf_type])
+        else:
+            term_type = set([Neuron.rdf_type, BodyWallMuscle.rdf_type])
+
+        conns = []
+        pre_cell_names = set()
+        post_cell_names = set()
+        for conn in self.connlist:
+            if (Neuron.rdf_type in conn.pre_cell.rdf_type and
+                    term_type & set(conn.post_cell.rdf_type)):
+                num = conn.number
+                syntype = conn.syntype or ''
+                synclass = conn.synclass or ''
+                pre_name = conn.pre_cell.name
+                post_name = conn.post_cell.name
+                if BodyWallMuscle.rdf_type in conn.post_cell.rdf_type:
+                    post_name = format_muscle_name(post_name)
+
+                if not synclass:
+                    # Hack/guess
+                    if syntype and syntype.lower() == "gapjunction":
+                        synclass = "Generic_GJ"
+                    else:
+                        if pre_name.startswith("DD") or pre_name.startswith("VD"):
+                            synclass = "GABA"
+                        synclass = "Acetylcholine"
+                conns.append(ConnectionInfo(pre_name, post_name, num, syntype, synclass))
+
+                pre_cell_names.add(pre_name)
+                post_cell_names.add(post_name)
+
+        print_("Total cells %i (%i with connections)" % (
+            len(self.cell_names | pre_cell_names | post_cell_names),
+            len(pre_cell_names | post_cell_names)))
+        print_("Total connections found %i " % len(conns))
+
+        return list(self.cell_names), pre_cell_names, post_cell_names, conns
+
+
+def format_muscle_name(muscle_name):
+    md = MUSCLE_RE.fullmatch(muscle_name)
+    if md:
+        return muscle_name
+    else:
+        md = re.fullmatch(r'([VD][LR])(\d+)', muscle_name)
+        if md:
+            return 'M{0}{1:02d}'.format(md.group(1), int(md.group(2)))
+        else:
+            LOGGER.debug('Unrecognized muscle name format in %s', muscle_name)
+            return muscle_name
+
+
+READER = OpenWormReader()
+
+read_data = READER.read_data
+read_muscle_data = READER.read_muscle_data
 
 if __name__ == "__main__":
 
@@ -73,7 +142,7 @@ if __name__ == "__main__":
 
     conn_map_OWR = {}
     for c in conns:
-        conn_map_OWR[c.short()] = c
+        conn_map_OWR[c.short().lower()] = c
 
     from c302.UpdatedSpreadsheetDataReader2 import read_data as read_data_usr
     #from SpreadsheetDataReader import read_data as read_data_usr
@@ -87,7 +156,7 @@ if __name__ == "__main__":
 
     conn_map_USR = {}
     for c2 in conns2:
-        conn_map_USR[c2.short()] = c2
+        conn_map_USR[c2.short().lower()] = c2
 
     maxn = 30000
 
@@ -96,18 +165,16 @@ if __name__ == "__main__":
     matching = 0
 
     for i in range(min(maxn, len(refs_OWR))):
-        #print("\n-----  Connection in OWR: %s"%refs[i])
-        #print cm[refs[i]]
         ref = refs_OWR[i]
         if ref in conn_map_USR:
             if conn_map_OWR[ref].number != conn_map_USR[ref].number:
-                print_("Mismatch: %s != %s"%(conn_map_OWR[ref],conn_map_USR[ref]))
+                print_("Mismatch: %s != %s" % (conn_map_OWR[ref], conn_map_USR[ref]))
             else:
-                matching+=1
+                matching += 1
         else:
-            print_("Missing from UpdatedSpreadsheetDataReader: %s"%(conn_map_OWR[ref]))
+            print_("Missing from UpdatedSpreadsheetDataReader: %s" % (conn_map_OWR[ref]))
 
-    print_('Number matching: %i'%matching)
+    print_('Number matching: %i' % matching)
 
     matching = 0
 
@@ -115,14 +182,14 @@ if __name__ == "__main__":
 
     for i in range(min(maxn, len(refs_USR))):
         #print("\n-----  Connection in USR: %s"%refs[i])
-        #print cm2[refs[i]]
+        # print cm2[refs[i]]
         ref = refs_USR[i]
         if ref in conn_map_OWR:
             if conn_map_OWR[ref].number != conn_map_USR[ref].number:
-                print_("Mismatch: %s != %s"%(conn_map_OWR[ref],conn_map_USR[ref]))
+                print_("Mismatch: %s != %s" % (conn_map_OWR[ref], conn_map_USR[ref]))
             else:
-                matching+=1
+                matching += 1
         else:
-            print_("* Missing from OpenWormReader: %s"%conn_map_USR[ref])
+            print_("* Missing from OpenWormReader: %s" % conn_map_USR[ref])
 
-    print_('Number matching: %i'%matching)
+    print_('Number matching: %i' % matching)

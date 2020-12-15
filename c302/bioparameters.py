@@ -3,7 +3,7 @@ from decimal import Decimal
 from neuroml import ExpTwoSynapse, GapJunction, GradedSynapse
 
 '''
-    Subject to much change & refactoring once PyOpenWorm is stable...
+    Subject to much change & refactoring once owmeta is stable...
 '''
 
 
@@ -27,20 +27,20 @@ class BioParameter():
         self.name = name
         self.value = value
         self.source = source
-        self.certainty = certainty 
-    
+        self.certainty = certainty
+
     def __str__(self):
         return "BioParameter: %s = %s (SRC: %s, certainty %s)"%(self.name, self.value, self.source, self.certainty)
-    
+
     def __repr__(self):
         return self.__str__()
-    
+
     def change_magnitude(self, magnitude):
-        
+
         self.value = '%s %s'%(Decimal(magnitude), split_neuroml_quantity(self.value)[1])
-        
+
     def x(self):
-        
+
         return split_neuroml_quantity(self.value)[0]
 
 
@@ -72,7 +72,7 @@ class ParameterisedModelPrototype(object):
         for bp in self.bioparameters:
             if bp.name == bioparameter.name:
                 self.bioparameters.remove(bp)
-                
+
         self.bioparameters.append(bioparameter)
 
 
@@ -98,8 +98,8 @@ class ParameterisedModelPrototype(object):
         for bp in sorted(self.bioparameters, key=lambda x: x.name):
             info += indent+indent+"%s\n"%bp
         return info
-    
-    
+
+
 class c302ModelPrototype(ParameterisedModelPrototype):
 
     def __init__(self):
@@ -115,28 +115,28 @@ class c302ModelPrototype(ParameterisedModelPrototype):
         self.offset_current = None
         self.concentration_model = None
         self.found_specific_param = False
-    
+
     def is_level_A(self):
         return self.level.startswith('A')
-    
+
     def is_level_B(self):
         return self.level.startswith('B')
-    
+
     def is_level_C(self):
         return self.level.startswith('C')
-    
+
     def is_level_C0(self):
         return self.level == 'C0'
 
     def is_level_C2(self):
         return self.level == 'C2'
-    
+
     def is_level_D1(self):
         return self.level == 'D1'
-    
+
     def is_level_D(self):
         return self.level.startswith('D')
-    
+
     def is_level_X(self):
         return self.level.startswith('X')
 

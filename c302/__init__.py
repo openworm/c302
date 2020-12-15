@@ -39,20 +39,20 @@ import re
 
 import collections
 
-import PyOpenWorm
-from PyOpenWorm import connect as pyow_connect, __version__ as pyow_version, ConnectionFailError
-from PyOpenWorm.context import Context
-from PyOpenWorm.neuron import Neuron
-from PyOpenWorm.worm import Worm
+from owmeta_core import __version__ as owc_version
+from owmeta_core.bundle import Bundle
+from owmeta_core.context import Context
+from owmeta import __version__ as owmeta_version
+from owmeta.cell import Cell
+from owmeta.neuron import Neuron
+from owmeta.muscle import Muscle
 
 try:
     from urllib2 import URLError  # Python 2
 except:
     from urllib.error import URLError  # Python 3
 
-import sys
-#sys.path.append("..")
-#import SpreadsheetDataReader
+logging.basicConfig()
 
 here = os.path.abspath(os.path.dirname(__file__))
 about = {}
@@ -62,14 +62,13 @@ __version__ = about['__version__']
 
 LEMS_TEMPLATE_FILE = "LEMS_c302_TEMPLATE.xml"
 
+MUSCLE_RE = re.compile(r'M([VD][LR])(\d+)')
+
+
 def print_(msg, print_it=True): # print_it=False when not verbose
     if print_it:
         pre = "c302      >>> "
         print('%s %s'%(pre,msg.replace('\n','\n'+pre)))
-
-
-def pyopenworm_connect():
-    return pyow_connect('./pyopenworm.conf')
 
 
 def load_data_reader(data_reader="SpreadsheetDataReader"):
@@ -80,8 +79,8 @@ def load_data_reader(data_reader="SpreadsheetDataReader"):
     Returns:
         reader (obj): The data reader object
     """
-    reader = importlib.import_module('c302.%s'%data_reader)
-    return reader
+    return importlib.import_module('c302.%s'%data_reader)
+
 
 def get_str_from_expnotation(num):
     """
@@ -93,29 +92,36 @@ def get_str_from_expnotation(num):
     """
     return '{0:.15f}'.format(num)
 
-def get_muscle_position(muscle, data_reader="SpreadsheetDataReader"):
-    """if data_reader == "UpdatedSpreadsheetDataReader":
-        x = 80 * (-1 if muscle[0] == 'v' else 1)
-        z = 80 * (-1 if muscle[4] == 'L' else 1)
-        y = -300 + 30 * int(muscle[5:7])
-        return x, y, z"""
 
-    x = 80 * (1 if muscle[2] == 'L' else -1)
-    z = 80 * (-1 if muscle[1] == 'V' else 1)
-    y = -300 + 30 * int(muscle[3:5])
-    return x, y, z
+def get_muscle_position(muscle, data_reader="SpreadsheetDataReader"):
+    # TODO: Pull these positions from openworm/owmeta-data
+    pat1 = r'M([VD])([LR])(\d+)'
+    pat2 = r'([VD])([LR])(\d+)'
+    md = re.fullmatch(pat1, muscle)
+    if not md:
+        md = re.fullmatch(pat2, muscle)
+
+    if md:
+        dv = md.group(1)
+        lr = md.group(2)
+        idx = md.group(3)
+        x = 80 * (1 if lr == 'L' else -1)
+        z = 80 * (-1 if dv == 'V' else 1)
+        y = -300 + 30 * int(idx)
+        return x, y, z
+
+    raise Exception('Unrecognized muscle name format %s' % muscle)
+
 
 def is_muscle(cell_name):
-    return cell_name.startswith('MDL') or \
-           cell_name.startswith('MDR') or  \
-           cell_name.startswith('MVL') or  \
-           cell_name.startswith('MVR')
+    return MUSCLE_RE.fullmatch(cell_name)
+
 
 def process_args():
     """
     Parse command-line arguments.
     """
-    parser = argparse.ArgumentParser(description="A script which can generate NeuroML2 compliant networks based on the C elegans connectome, along with LEMS files to run them")
+    parser = argparse.ArgumentParser('c302', description="A script which can generate NeuroML2 compliant networks based on the C elegans connectome, along with LEMS files to run them")
 
     parser.add_argument('reference', type=str, metavar='<reference>',
                         help='Unique reference for new network')
@@ -255,6 +261,7 @@ def get_cell_position(cell):
     #print "%s, %s, %s" %(location.x, location.y, location.z)
     return location
 
+
 def append_input_to_nml_input_list(stim, nml_doc, cell, params):
     target = get_cell_id_string(cell, params, muscle=is_muscle(cell))
 
@@ -387,8 +394,6 @@ def get_cell_names_and_connection(data_reader="SpreadsheetDataReader", test=Fals
     # This could be replaced with a call to "DatabaseReader" or "OpenWormNeuroLexReader" in future...
     # If called from unittest folder ammend path to "../../../../"
 
-    spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/data/"
-
     cell_names, conns = load_data_reader(data_reader).read_data(include_nonconnected_cells=True)
 
     cell_names.sort()
@@ -397,14 +402,8 @@ def get_cell_names_and_connection(data_reader="SpreadsheetDataReader", test=Fals
 
 
 def get_cell_muscle_names_and_connection(data_reader="SpreadsheetDataReader", test=False):
-
-    #spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/../../../"
-
     mneurons, all_muscles, muscle_conns = load_data_reader(data_reader).read_muscle_data()
-
-    all_muscles = get_muscle_names()
-
-    return mneurons, all_muscles, muscle_conns
+    return mneurons, sorted(all_muscles), muscle_conns
 
 
 def is_cond_based_cell(params):
@@ -442,57 +441,67 @@ def elem_in_coll_matches_conn(coll, conn):
     return False
 
 
-def _get_cell_info(pow_conn, cells):
-
-    if pow_conn is None:
-        return None, None
-
-    ctx = Context(ident="http://openworm.org/data", conf=pow_conn.conf).stored
-    #Go through our list and get the neuron object associated with each name.
-    #Store these in another list.
-    some_neurons = [ctx(Neuron)(name) for name in cells]
+def _get_cell_info(bnd, cells):
+    if bnd is None:
+        return None
     all_neuron_info = collections.OrderedDict()
     all_muscle_info = collections.OrderedDict()
+    ctx = bnd(Context)(ident="http://openworm.org/data").stored
+    # Go through our list and get the neuron object associated with each name.
+    # Store these in another list.
+    fixed_up_names = []
+    for name in cells:
+        match = is_muscle(name)
+        if match:
+            name = match.group(1) + str(int(match.group(2)))
+        fixed_up_names.append(name)
 
+    for name in fixed_up_names:
+        cell = next(ctx(Cell).query(name=name).load(), None)
+        if cell is None:
+            print_("No matching cell for %s" % name)
+            continue
 
-    for neuron in some_neurons:
-        #print("=====Checking properties of: %s"%neuron)
-        #print neuron.triples()
-        #print neuron.__class__
-        short = ') %s'%neuron.name()
-
+        normalized_name = cell.name()
+        short = ') %s' % normalized_name
         color = '.5 0 0'
-        if 'sensory' in neuron.type():
-            short = 'Se%s'%short
-            color = '1 .2 1'
-        if 'interneuron' in neuron.type():
-            short = 'In%s'%short
-            color = '1 0 .4'
-        if 'motor' in neuron.type():
-            short = 'Mo%s'%short
-            color = '.5 .4 1'
-        if is_muscle(neuron.name()):
-            short = 'Mu%s'%short
-            color = '0 0.6 0'
+        if isinstance(cell, Neuron):
+            neuron_types = cell.type()
+            if 'sensory' in neuron_types:
+                short = 'Se%s' % short
+                color = '1 .2 1'
+            if 'interneuron' in neuron_types:
+                short = 'In%s' % short
+                color = '1 0 .4'
+            if 'motor' in neuron_types:
+                short = 'Mo%s' % short
+                color = '.5 .4 1'
 
-
-        short = '(%s'%short
-
-
-        if 'GABA' in neuron.neurotransmitter():
-            short = '- %s'%short
-        elif len(neuron.neurotransmitter()) == 0:
-            short = '? %s'%short
+            neurotransmitter = cell.neurotransmitter()
+        elif isinstance(cell, Muscle):
+            neuron_types = ()
+            neurotransmitter = ()
         else:
-            short = '+ %s'%short
+            # At this point, we should only have Neurons and Muscles because the reader
+            # filters them out
+            raise Exception('Got an unexpected cell type')
 
-        info = (neuron, neuron.type(), neuron.receptor(), neuron.neurotransmitter(), short, color)
-        #print dir(neuron)
-
-        if is_muscle(neuron.name()):
-            all_muscle_info[neuron.name()] = info
+        short = '(%s' % short
+        receptor = cell.receptor()
+        if 'GABA' in neurotransmitter:
+            short = '- %s' % short
+        elif len(neurotransmitter) == 0:
+            short = '? %s' % short
         else:
-            all_neuron_info[neuron.name()] = info
+            short = '+ %s' % short
+
+        info = (cell, neuron_types, receptor, neurotransmitter, short, color)
+
+        if isinstance(cell, Muscle):
+            all_muscle_info[cell.name()] = info
+        elif isinstance(cell, Neuron):
+            all_neuron_info[cell.name()] = info
+
     return all_neuron_info, all_muscle_info
 
 
@@ -601,7 +610,8 @@ def generate(net_id,
     info = "\n\nParameters and setting used to generate this network:\n\n"+\
            "    Data reader:                    %s\n" % data_reader+\
            "    c302 version:                   %s\n" % __version__+\
-           "    PyOpenWorm version:             %s\n" % pyow_version+\
+           "    owmeta version:                 %s\n" % owmeta_version+\
+           "    owmeta_core version:            %s\n" % owc_version+\
            "    Cells:                          %s\n" % (cells if cells is not None else "All cells")+\
            "    Cell stimulated:                %s\n" % (cells_to_stimulate if cells_to_stimulate is not None else "All neurons")+\
            "    Connection:                     %s\n" % (conns_to_include if conns_to_include is not None else "All connections") + \
@@ -628,12 +638,10 @@ def generate(net_id,
         nml_doc.cells.append(params.generic_muscle_cell)
         nml_doc.cells.append(params.generic_neuron_cell)
 
-
     net = Network(id=net_id)
 
-
     nml_doc.networks.append(net)
-    
+
     net.properties.append(Property('recommended_duration_ms',duration))
     net.properties.append(Property('recommended_dt_ms',dt))
 
@@ -712,17 +720,15 @@ def generate(net_id,
 
     count = 0
     try:
-        pow_conn = pyopenworm_connect()
+        with Bundle('openworm/owmeta-data', version=6) as bnd:
+            all_neuron_info, all_muscle_info = _get_cell_info(bnd, set(cell_names))
     except Exception as e:
-        print_('Unable to connect to PyOpenWorm database: %s' % e)
-        pow_conn = None
-        
-    all_neuron_info, _ = _get_cell_info(pow_conn, cell_names)
+        print_('Unable to open "openworm/owmeta-data" bundle: %s' % e)
+        all_neuron_info = None
+        all_muscle_info = None
 
     for cell in cell_names:
-
         if cells is None or cell in cells:
-
             inst = Instance(id="0")
 
             if not params.is_level_D():
@@ -740,8 +746,8 @@ def generate(net_id,
                                   size="1")
                 cell_id = cell
 
+            #neuron, neuron.type(), neuron.receptor(), neuron.neurotransmitter(), short, color
             if all_neuron_info is not None:
-                #neuron, neuron.type(), neuron.receptor(), neuron.neurotransmitter(), short, color
                 pop0.properties.append(Property("color", all_neuron_info[cell][5]))
                 types = sorted(all_neuron_info[cell][1])
                 pop0.properties.append(Property("type", str('; '.join(types))))
@@ -854,21 +860,21 @@ def generate(net_id,
     if verbose:
         print_("Finished loading %i cells"%count)
 
-
     mneurons, all_muscles, muscle_conns = get_cell_muscle_names_and_connection(data_reader)
 
     #if data_reader == "SpreadsheetDataReader":
     #    all_muscles = get_muscle_names()
 
-    if muscles_to_include is None or muscles_to_include == True:
+    if muscles_to_include is None or muscles_to_include is True:
         muscles_to_include = all_muscles
-    elif muscles_to_include == False:
+    elif muscles_to_include is False:
         muscles_to_include = []
 
     for m in muscles_to_include:
-        assert m in all_muscles
+        if m not in all_muscles:
+            raise Exception('%s is not among the known muscles' % m)
 
-    if len(muscles_to_include)>0:
+    if len(muscles_to_include) > 0:
 
         muscle_count = 0
         for muscle in muscles_to_include:
@@ -883,7 +889,6 @@ def generate(net_id,
             pop0.properties.append(Property("color", '0 .6 0'))
             pop0.instances.append(inst)
 
-
             # put that Population into the Network data structure from above
             net.populations.append(pop0)
 
@@ -894,7 +899,7 @@ def generate(net_id,
 
             x, y, z = get_muscle_position(muscle, data_reader)
             #print_('Positioning muscle: %s at (%s,%s,%s)'%(muscle,x,y,z))
-            inst.location = Location(x,y,z)
+            inst.location = Location(x, y, z)
 
             #target = "%s/0/%s"%(pop0.id, params.generic_muscle_cell.id) # unused
 
@@ -1183,16 +1188,12 @@ def generate(net_id,
 
                 proj0.connection_wds.append(conn0)
 
-
-
-    if len(muscles_to_include)>0:
+    if len(muscles_to_include) > 0:
         for conn in muscle_conns:
-            if not conn.post_cell in muscles_to_include:#
-                continue#
-            if not conn.pre_cell in lems_info["cells"] and not conn.pre_cell in muscles_to_include:
+            if conn.post_cell not in muscles_to_include:
                 continue
-
-
+            if conn.pre_cell not in lems_info["cells"] and conn.pre_cell not in muscles_to_include:
+                continue
 
             # take information about each connection and package it into a
             # NeuroML Projection data structure
@@ -1215,7 +1216,7 @@ def generate(net_id,
                 conn_pol = "inh"
                 orig_pol = "inh"
 
-            if '_GJ' in conn.synclass :
+            if '_GJ' in conn.synclass:
                 conn_pol = "elec"
                 orig_pol = "elec"
                 elect_conn = params.is_elec_conn(params.neuron_to_neuron_elec_syn)
@@ -1449,10 +1450,6 @@ def parse_dict_arg(dict_arg):
 
 
 def main():
-    # Suppress logs from PyOpenWorm connection failures
-    logger = logging.getLogger('PyOpenWorm.data')
-    logger.addFilter(PyOpenWormConnectionFailFilter())
-
     args = process_args()
 
     exec('from c302.%s import ParameterisedModel' % args.parameters, globals())
@@ -1472,31 +1469,6 @@ def main():
              dt=args.dt,
              vmin=args.vmin,
              vmax=args.vmax)
-
-
-class PyOpenWormConnectionFailFilter(logging.Filter):
-    '''
-    Filters out a couple of error messages from PyOpenWorm.data that we don't need to see
-    more than once
-    '''
-    def __init__(self, *args, **kwargs):
-        super(PyOpenWormConnectionFailFilter, self).__init__(*args, **kwargs)
-        self.failures_seen = set()
-
-    def filter(self, record):
-        try:
-            msg = record.getMessage()
-        except Exception:
-            msg = ''
-        try:
-            if ((msg.startswith('Failed to open the data source') or
-                    msg.startswith('Failed to create')) and
-                    msg in self.failures_seen):
-                return False
-        except Exception as e:
-            pass
-        self.failures_seen.add(msg)
-        return True
 
 
 if __name__ == '__main__':
