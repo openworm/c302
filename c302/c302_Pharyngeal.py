@@ -6,7 +6,7 @@ def setup(parameter_set,
           duration=500,
           dt=0.01,
           target_directory='examples',
-          data_reader="OpenWormReader",
+          data_reader="SpreadsheetDataReader",
           param_overrides={},
           config_param_overrides={},
           verbose=True):
