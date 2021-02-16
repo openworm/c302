@@ -5,7 +5,7 @@
 #    A simple script to read the values in CElegansNeuronTables.xls.
 
 #    Note: this file will be replaced with a call to PyOpenWorm
-#    when that package is updated to read all of this data from the 
+#    when that package is updated to read all of this data from the
 #    spreadseet
 
 ############################################################
@@ -23,7 +23,7 @@ from c302 import print_
 def read_data(include_nonconnected_cells=False, neuron_connect=False):
 
 
-    
+
 # reading the NeuronConnect.xls file if neuron_connect = True
     if neuron_connect:
         conns = []
@@ -114,15 +114,18 @@ def main():
     assert(len(cells) == 302)
 
     print_("Lengths are equal if include_nonconnected_cells=True")
-    
-    print_("Found %s cells: %s..."%(len(cells),cells))
-    print_("Found %s connections: %s..."%(len(conns),conns[0]))
+
+    print_("Found %s cells: %s...\n"%(len(cells),cells))
+
+    print_("Found %s connections..."%(len(conns)))
+    for c in conns[:5]: print_("   %s"%c)
+    print_("   ...\n")
 
     neurons, muscles, conns = read_muscle_data()
 
-    print_("Found %i neurons connected to muscles: %s"%(len(neurons), sorted(neurons)))
-    print_("Found %i muscles connected to neurons: %s"%(len(muscles), sorted(muscles)))
-    print_("Found %i connections between neurons and muscles, e.g. %s"%(len(conns), conns[0]))
+    print_("Found %i neurons connected to muscles: %s\n"%(len(neurons), sorted(neurons)))
+    print_("Found %i muscles connected to neurons: %s\n"%(len(muscles), sorted(muscles)))
+    print_("Found %i connections between neurons and muscles, e.g. %s\n"%(len(conns), conns[0]))
 
 if __name__ == '__main__':
 

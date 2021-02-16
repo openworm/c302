@@ -135,17 +135,25 @@ if __name__ == "__main__":
     cells, conns = read_data(include_nonconnected_cells=True)
 
     print_("%i cells found using OpenWormReader: %s, etc..." % (len(cells), sorted(cells)[0:3]))
+    print_("Found %s cells: %s...\n"%(len(cells),cells))
 
     print_("Found %s connections using OpenWormReader, First few: " % (len(conns), ))
     for c in sorted(conns)[:min(len(conns),5)]:
         print_('  %s'%c)
 
+    neurons, muscles, conns = read_muscle_data()
+
+    print_("Found %i neurons connected to muscles: %s\n"%(len(neurons), sorted(neurons)))
+    print_("Found %i muscles connected to neurons: %s\n"%(len(muscles), sorted(muscles)))
+    print_("Found %i connections between neurons and muscles, e.g. %s\n\n"%(len(conns), conns[0]))
+
+
     conn_map_OWR = {}
     for c in conns:
         conn_map_OWR[c.short().lower()] = c
 
-    from c302.UpdatedSpreadsheetDataReader2 import read_data as read_data_usr
-    #from SpreadsheetDataReader import read_data as read_data_usr
+    from c302.UpdatedSpreadsheetDataReader import read_data as read_data_usr
+    #from c302.SpreadsheetDataReader import read_data as read_data_usr
 
     cells2, conns2 = read_data_usr(include_nonconnected_cells=True)
 
@@ -158,7 +166,7 @@ if __name__ == "__main__":
     for c2 in conns2:
         conn_map_USR[c2.short().lower()] = c2
 
-    maxn = 30000
+    maxn = 3
 
     refs_OWR = list(conn_map_OWR.keys())
 
