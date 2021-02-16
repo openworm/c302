@@ -94,6 +94,8 @@ def get_str_from_expnotation(num):
 
 
 def get_muscle_position(muscle, data_reader="SpreadsheetDataReader"):
+    if muscle=='MANAL' or muscle=='MVULVA':
+        return 0,0,0
     # TODO: Pull these positions from openworm/owmeta-data
     pat1 = r'M([VD])([LR])(\d+)'
     pat2 = r'([VD])([LR])(\d+)'
@@ -403,6 +405,8 @@ def get_cell_names_and_connection(data_reader="SpreadsheetDataReader", test=Fals
 
 def get_cell_muscle_names_and_connection(data_reader="SpreadsheetDataReader", test=False):
     mneurons, all_muscles, muscle_conns = load_data_reader(data_reader).read_muscle_data()
+    if 'MANAL' in all_muscles: all_muscles.remove('MANAL')
+    if 'MVULVA' in all_muscles: all_muscles.remove('MVULVA')
     return mneurons, sorted(all_muscles), muscle_conns
 
 
@@ -455,6 +459,8 @@ def _get_cell_info(bnd, cells):
         if match:
             name = match.group(1) + str(int(match.group(2)))
         fixed_up_names.append(name)
+    #fixed_up_names.remove('MANAL')
+    #fixed_up_names.remove('MVULVA')
 
     for name in fixed_up_names:
         cell = next(ctx(Cell).query(name=name).load(), None)
@@ -481,6 +487,8 @@ def _get_cell_info(bnd, cells):
         elif isinstance(cell, Muscle):
             neuron_types = ()
             neurotransmitter = ()
+            color = '0 0.6 0'
+            short = 'Mu%s' % short
         else:
             # At this point, we should only have Neurons and Muscles because the reader
             # filters them out
@@ -862,6 +870,7 @@ def generate(net_id,
 
     mneurons, all_muscles, muscle_conns = get_cell_muscle_names_and_connection(data_reader)
 
+    #print(all_muscles)
     #if data_reader == "SpreadsheetDataReader":
     #    all_muscles = get_muscle_names()
 
@@ -1450,6 +1459,7 @@ def parse_dict_arg(dict_arg):
 
 
 def main():
+    print("Starting c302 v%s..."%__version__)
     args = process_args()
 
     exec('from c302.%s import ParameterisedModel' % args.parameters, globals())

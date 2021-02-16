@@ -552,10 +552,11 @@ if __name__ == '__main__':
 
     configs = ['c302_C0_Syns.net.nml', 'c302_C0_Social.net.nml','c302_C0_Muscles.net.nml','c302_C0_Pharyngeal.net.nml','c302_C0_Oscillator.net.nml','c302_C0_Full.net.nml']
     configs = ['c302_C0_Syns.net.nml', 'c302_C0_Social.net.nml']
-    #configs = ['c302_C0_Syns.net.nml']
+    #
+    configs = ['c302_C0_Syns.net.nml']
+    configs = ['c302_C0_Oscillator.net.nml']
     configs = ['c302_C0_Muscles.net.nml']
-    #configs = ['c302_C0_Oscillator.net.nml']
-
+    
     if '-phar' in sys.argv:
 
         configs = ['c302_C0_Pharyngeal.net.nml']
