@@ -16,9 +16,9 @@ addons:
 
 language: python
 python:
-     - "3.6"
      - "3.7"
      - "3.8"
+     - "3.9"
 
 
 env:
@@ -59,4 +59,3 @@ script:
     #- export NEURON_HOME=/home/travis/neuron/nrn/x86_64/
     #- python runAndPlot.py -test
     #- python c302_utils.py -nogui
-
