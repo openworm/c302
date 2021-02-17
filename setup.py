@@ -26,7 +26,8 @@ setup(
         'xlwt',
         'libNeuroML>=0.2.39',
         'pyNeuroML>=0.3.11',
-        'pyopenworm>=0.10.0'
+        'owmeta_core>=0.13.0',
+        'owmeta'
     ],
     entry_points={
         'console_scripts': ['c302 = c302.__init__:main']},
