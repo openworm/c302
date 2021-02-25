@@ -4,8 +4,9 @@
 Parameters and setting used to generate this network:
 
     Data reader:                    SpreadsheetDataReader
-    c302 version:                   0.7.7
-    PyOpenWorm version:             0.10.0.post0
+    c302 version:                   0.7.8
+    owmeta version:                 0.12.3.dev0
+    owmeta_core version:            0.12.2
     Cells:                          ['AS1', 'AS10', 'AS11', 'AS2', 'AS3', 'AS4', 'AS5', 'AS6', 'AS7', 'AS8', 'AS9', 'AVFL', 'AVFR', 'AVKR', 'AVL', 'CEPVL', 'CEPVR', 'DA1', 'DA2', 'DA3', 'DA4', 'DA5', 'DA6', 'DA7', 'DA8', 'DA9', 'DB1', 'DB2', 'DB3', 'DB4', 'DB5', 'DB6', 'DB7', 'DD1', 'DD2', 'DD3', 'DD4', 'DD5', 'DD6', 'DVB', 'HSNL', 'HSNR', 'IL1DL', 'IL1DR', 'IL1L', 'IL1R', 'IL1VL', 'IL1VR', 'PDA', 'PDB', 'PVNL', 'PVNR', 'RID', 'RIML', 'RIMR', 'RIVL', 'RIVR', 'RMDDL', 'RMDDR', 'RMDL', 'RMDR', 'RMDVL', 'RMDVR', 'RMED', 'RMEL', 'RMER', 'RMEV', 'RMFL', 'RMGL', 'RMGR', 'RMHL', 'RMHR', 'SMBDL', 'SMBDR', 'SMBVL', 'SMBVR', 'SMDDL', 'SMDDR', 'SMDVL', 'SMDVR', 'URADL', 'URADR', 'URAVL', 'URAVR', 'VA1', 'VA10', 'VA11', 'VA12', 'VA2', 'VA3', 'VA4', 'VA5', 'VA6', 'VA7', 'VA8', 'VA9', 'VB1', 'VB10', 'VB11', 'VB2', 'VB3', 'VB4', 'VB5', 'VB6', 'VB7', 'VB8', 'VB9', 'VC1', 'VC2', 'VC3', 'VC4', 'VC5', 'VC6', 'VD1', 'VD10', 'VD11', 'VD12', 'VD13', 'VD2', 'VD3', 'VD4', 'VD5', 'VD6', 'VD7', 'VD8', 'VD9', 'AVAL', 'AVAR', 'AVBL', 'AVBR', 'AVDL', 'AVDR', 'PVCL', 'PVCR']
     Cell stimulated:                ['AVBL', 'AVBR']
     Connection:                     []
@@ -789,7 +790,7 @@ Parameters and setting used to generate this network:
             <property tag="color" value=".5 .4 1"/>
             <property tag="type" value="interneuron; motor"/>
             <property tag="receptor" value="DOP-1; MOD-1; SER-4"/>
-            <property tag="neurotransmitter" value="Tyramine; Acetylcholine; Glutamate"/>
+            <property tag="neurotransmitter" value="Acetylcholine; Glutamate; Tyramine"/>
             <instance id="0">
                 <location x="0." y="0." z="0."/>
             </instance>
@@ -798,7 +799,7 @@ Parameters and setting used to generate this network:
             <property tag="color" value=".5 .4 1"/>
             <property tag="type" value="interneuron; motor"/>
             <property tag="receptor" value="DOP-1; MOD-1; SER-4"/>
-            <property tag="neurotransmitter" value="Tyramine; Acetylcholine; Glutamate"/>
+            <property tag="neurotransmitter" value="Acetylcholine; Glutamate; Tyramine"/>
             <instance id="0">
                 <location x="0." y="0." z="0."/>
             </instance>
@@ -1313,7 +1314,7 @@ Parameters and setting used to generate this network:
             <property tag="color" value=".5 .4 1"/>
             <property tag="type" value="motor"/>
             <property tag="receptor" value="GLR-5"/>
-            <property tag="neurotransmitter" value="Serotonin; Acetylcholine"/>
+            <property tag="neurotransmitter" value="Acetylcholine; Serotonin"/>
             <property tag="OpenWormBackerAssignedName" value="Klob Le Grand"/>
             <instance id="0">
                 <location x="0." y="0." z="0."/>
@@ -1323,7 +1324,7 @@ Parameters and setting used to generate this network:
             <property tag="color" value=".5 .4 1"/>
             <property tag="type" value="motor"/>
             <property tag="receptor" value="GLR-5"/>
-            <property tag="neurotransmitter" value="Serotonin; Acetylcholine"/>
+            <property tag="neurotransmitter" value="Acetylcholine; Serotonin"/>
             <instance id="0">
                 <location x="0." y="0." z="0."/>
             </instance>
@@ -1453,6 +1454,150 @@ Parameters and setting used to generate this network:
             <property tag="neurotransmitter" value="GABA"/>
             <instance id="0">
                 <location x="0." y="0." z="0."/>
+            </instance>
+        </population>
+        <population id="MDL01" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="-270." z="80."/>
+            </instance>
+        </population>
+        <population id="MDL02" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="-240." z="80."/>
+            </instance>
+        </population>
+        <population id="MDL03" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="-210." z="80."/>
+            </instance>
+        </population>
+        <population id="MDL04" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="-180." z="80."/>
+            </instance>
+        </population>
+        <population id="MDL05" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="-150." z="80."/>
+            </instance>
+        </population>
+        <population id="MDL06" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="-120." z="80."/>
+            </instance>
+        </population>
+        <population id="MDL07" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="-90." z="80."/>
+            </instance>
+        </population>
+        <population id="MDL08" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="-60." z="80."/>
+            </instance>
+        </population>
+        <population id="MDL09" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="-30." z="80."/>
+            </instance>
+        </population>
+        <population id="MDL10" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="0." z="80."/>
+            </instance>
+        </population>
+        <population id="MDL11" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="30." z="80."/>
+            </instance>
+        </population>
+        <population id="MDL12" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="60." z="80."/>
+            </instance>
+        </population>
+        <population id="MDL13" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="90." z="80."/>
+            </instance>
+        </population>
+        <population id="MDL14" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="120." z="80."/>
+            </instance>
+        </population>
+        <population id="MDL15" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="150." z="80."/>
+            </instance>
+        </population>
+        <population id="MDL16" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="180." z="80."/>
+            </instance>
+        </population>
+        <population id="MDL17" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="210." z="80."/>
+            </instance>
+        </population>
+        <population id="MDL18" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="240." z="80."/>
+            </instance>
+        </population>
+        <population id="MDL19" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="270." z="80."/>
+            </instance>
+        </population>
+        <population id="MDL20" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="300." z="80."/>
+            </instance>
+        </population>
+        <population id="MDL21" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="330." z="80."/>
+            </instance>
+        </population>
+        <population id="MDL22" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="360." z="80."/>
+            </instance>
+        </population>
+        <population id="MDL23" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="390." z="80."/>
+            </instance>
+        </population>
+        <population id="MDL24" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="420." z="80."/>
             </instance>
         </population>
         <population id="MDR01" component="GenericMuscleCell" size="1" type="populationList">
@@ -1599,6 +1744,144 @@ Parameters and setting used to generate this network:
                 <location x="-80." y="420." z="80."/>
             </instance>
         </population>
+        <population id="MVL01" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="-270." z="-80."/>
+            </instance>
+        </population>
+        <population id="MVL02" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="-240." z="-80."/>
+            </instance>
+        </population>
+        <population id="MVL03" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="-210." z="-80."/>
+            </instance>
+        </population>
+        <population id="MVL04" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="-180." z="-80."/>
+            </instance>
+        </population>
+        <population id="MVL05" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="-150." z="-80."/>
+            </instance>
+        </population>
+        <population id="MVL06" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="-120." z="-80."/>
+            </instance>
+        </population>
+        <population id="MVL07" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="-90." z="-80."/>
+            </instance>
+        </population>
+        <population id="MVL08" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="-60." z="-80."/>
+            </instance>
+        </population>
+        <population id="MVL09" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="-30." z="-80."/>
+            </instance>
+        </population>
+        <population id="MVL10" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="0." z="-80."/>
+            </instance>
+        </population>
+        <population id="MVL11" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="30." z="-80."/>
+            </instance>
+        </population>
+        <population id="MVL12" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="60." z="-80."/>
+            </instance>
+        </population>
+        <population id="MVL13" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="90." z="-80."/>
+            </instance>
+        </population>
+        <population id="MVL14" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="120." z="-80."/>
+            </instance>
+        </population>
+        <population id="MVL15" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="150." z="-80."/>
+            </instance>
+        </population>
+        <population id="MVL16" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="180." z="-80."/>
+            </instance>
+        </population>
+        <population id="MVL17" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="210." z="-80."/>
+            </instance>
+        </population>
+        <population id="MVL18" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="240." z="-80."/>
+            </instance>
+        </population>
+        <population id="MVL19" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="270." z="-80."/>
+            </instance>
+        </population>
+        <population id="MVL20" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="300." z="-80."/>
+            </instance>
+        </population>
+        <population id="MVL21" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="330." z="-80."/>
+            </instance>
+        </population>
+        <population id="MVL22" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="360." z="-80."/>
+            </instance>
+        </population>
+        <population id="MVL23" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80." y="390." z="-80."/>
+            </instance>
+        </population>
         <population id="MVR01" component="GenericMuscleCell" size="1" type="populationList">
             <property tag="color" value="0 .6 0"/>
             <instance id="0">
@@ -1741,294 +2024,6 @@ Parameters and setting used to generate this network:
             <property tag="color" value="0 .6 0"/>
             <instance id="0">
                 <location x="-80." y="420." z="-80."/>
-            </instance>
-        </population>
-        <population id="MVL01" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="-270." z="-80."/>
-            </instance>
-        </population>
-        <population id="MVL02" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="-240." z="-80."/>
-            </instance>
-        </population>
-        <population id="MVL03" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="-210." z="-80."/>
-            </instance>
-        </population>
-        <population id="MVL04" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="-180." z="-80."/>
-            </instance>
-        </population>
-        <population id="MVL05" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="-150." z="-80."/>
-            </instance>
-        </population>
-        <population id="MVL06" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="-120." z="-80."/>
-            </instance>
-        </population>
-        <population id="MVL07" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="-90." z="-80."/>
-            </instance>
-        </population>
-        <population id="MVL08" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="-60." z="-80."/>
-            </instance>
-        </population>
-        <population id="MVL09" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="-30." z="-80."/>
-            </instance>
-        </population>
-        <population id="MVL10" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="0." z="-80."/>
-            </instance>
-        </population>
-        <population id="MVL11" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="30." z="-80."/>
-            </instance>
-        </population>
-        <population id="MVL12" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="60." z="-80."/>
-            </instance>
-        </population>
-        <population id="MVL13" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="90." z="-80."/>
-            </instance>
-        </population>
-        <population id="MVL14" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="120." z="-80."/>
-            </instance>
-        </population>
-        <population id="MVL15" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="150." z="-80."/>
-            </instance>
-        </population>
-        <population id="MVL16" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="180." z="-80."/>
-            </instance>
-        </population>
-        <population id="MVL17" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="210." z="-80."/>
-            </instance>
-        </population>
-        <population id="MVL18" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="240." z="-80."/>
-            </instance>
-        </population>
-        <population id="MVL19" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="270." z="-80."/>
-            </instance>
-        </population>
-        <population id="MVL20" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="300." z="-80."/>
-            </instance>
-        </population>
-        <population id="MVL21" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="330." z="-80."/>
-            </instance>
-        </population>
-        <population id="MVL22" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="360." z="-80."/>
-            </instance>
-        </population>
-        <population id="MVL23" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="390." z="-80."/>
-            </instance>
-        </population>
-        <population id="MVL24" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="420." z="-80."/>
-            </instance>
-        </population>
-        <population id="MDL01" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="-270." z="80."/>
-            </instance>
-        </population>
-        <population id="MDL02" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="-240." z="80."/>
-            </instance>
-        </population>
-        <population id="MDL03" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="-210." z="80."/>
-            </instance>
-        </population>
-        <population id="MDL04" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="-180." z="80."/>
-            </instance>
-        </population>
-        <population id="MDL05" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="-150." z="80."/>
-            </instance>
-        </population>
-        <population id="MDL06" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="-120." z="80."/>
-            </instance>
-        </population>
-        <population id="MDL07" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="-90." z="80."/>
-            </instance>
-        </population>
-        <population id="MDL08" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="-60." z="80."/>
-            </instance>
-        </population>
-        <population id="MDL09" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="-30." z="80."/>
-            </instance>
-        </population>
-        <population id="MDL10" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="0." z="80."/>
-            </instance>
-        </population>
-        <population id="MDL11" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="30." z="80."/>
-            </instance>
-        </population>
-        <population id="MDL12" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="60." z="80."/>
-            </instance>
-        </population>
-        <population id="MDL13" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="90." z="80."/>
-            </instance>
-        </population>
-        <population id="MDL14" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="120." z="80."/>
-            </instance>
-        </population>
-        <population id="MDL15" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="150." z="80."/>
-            </instance>
-        </population>
-        <population id="MDL16" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="180." z="80."/>
-            </instance>
-        </population>
-        <population id="MDL17" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="210." z="80."/>
-            </instance>
-        </population>
-        <population id="MDL18" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="240." z="80."/>
-            </instance>
-        </population>
-        <population id="MDL19" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="270." z="80."/>
-            </instance>
-        </population>
-        <population id="MDL20" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="300." z="80."/>
-            </instance>
-        </population>
-        <population id="MDL21" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="330." z="80."/>
-            </instance>
-        </population>
-        <population id="MDL22" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="360." z="80."/>
-            </instance>
-        </population>
-        <population id="MDL23" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="390." z="80."/>
-            </instance>
-        </population>
-        <population id="MDL24" component="GenericMuscleCell" size="1" type="populationList">
-            <property tag="color" value="0 .6 0"/>
-            <instance id="0">
-                <location x="80." y="420." z="80."/>
             </instance>
         </population>
         <projection id="NC_AS1_DA1_Acetylcholine" presynapticPopulation="AS1" postsynapticPopulation="DA1" synapse="neuron_to_neuron_exc_syn">

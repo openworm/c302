@@ -6,8 +6,9 @@
 Parameters and setting used to generate this network:
 
     Data reader:                    SpreadsheetDataReader
-    c302 version:                   0.7.7
-    PyOpenWorm version:             0.10.0.post0
+    c302 version:                   0.7.8
+    owmeta version:                 0.12.3.dev0
+    owmeta_core version:            0.12.2
     Cells:                          ['URYDL', 'SMDDR', 'VD12', 'VB11', 'AS2', 'AIZL', 'ASHL']
     Cell stimulated:                []
     Connection:                     []
@@ -95,39 +96,39 @@ Parameters and setting used to generate this network:
 
     <Simulation id="sim_c302_D1_Syns" length="3600ms" step="0.05ms" target="c302_D1_Syns">
 
-        <Display id="neurons" title="c302_D1_Syns: Membrane potential of a number of neurons" timeScale="1ms" xmin="-360.0" xmax="3960.0" ymin="-60" ymax="25">
+        <Display id="neurons" title="c302_D1_Syns: Membrane potential of a number of neurons" timeScale="1ms" xmin="-360.0" xmax="3960.0000000000005" ymin="-60" ymax="25">
             
-            <Line id="AIZL" quantity="AIZL/0/AIZL/v" scale="1mV" color="#f87100" timeScale="1ms" />
-            <Line id="AS2" quantity="AS2/0/AS2/v" scale="1mV" color="#ac15c4" timeScale="1ms" />
-            <Line id="ASHL" quantity="ASHL/0/ASHL/v" scale="1mV" color="#58a09e" timeScale="1ms" />
-            <Line id="SMDDR" quantity="SMDDR/0/SMDDR/v" scale="1mV" color="#007df7" timeScale="1ms" />
-            <Line id="URYDL" quantity="URYDL/0/URYDL/v" scale="1mV" color="#9a1694" timeScale="1ms" />
-            <Line id="VB11" quantity="VB11/0/VB11/v" scale="1mV" color="#7b5b40" timeScale="1ms" />
-            <Line id="VD12" quantity="VD12/0/VD12/v" scale="1mV" color="#008200" timeScale="1ms" />
+            <Line id="AIZL" quantity="AIZL/0/AIZL/v" scale="1mV" color="#e13b00" timeScale="1ms" />
+            <Line id="AS2" quantity="AS2/0/AS2/v" scale="1mV" color="#32b579" timeScale="1ms" />
+            <Line id="ASHL" quantity="ASHL/0/ASHL/v" scale="1mV" color="#b1f7ed" timeScale="1ms" />
+            <Line id="SMDDR" quantity="SMDDR/0/SMDDR/v" scale="1mV" color="#3a00f9" timeScale="1ms" />
+            <Line id="URYDL" quantity="URYDL/0/URYDL/v" scale="1mV" color="#232d17" timeScale="1ms" />
+            <Line id="VB11" quantity="VB11/0/VB11/v" scale="1mV" color="#f6b588" timeScale="1ms" />
+            <Line id="VD12" quantity="VD12/0/VD12/v" scale="1mV" color="#002400" timeScale="1ms" />
             
         </Display>
       
-        <Display id="muscles" title="c302_D1_Syns: Membrane potential of a number of muscles" timeScale="1ms" xmin="-360.0" xmax="3960.0" ymin="-60" ymax="25">
+        <Display id="muscles" title="c302_D1_Syns: Membrane potential of a number of muscles" timeScale="1ms" xmin="-360.0" xmax="3960.0000000000005" ymin="-60" ymax="25">
             
-            <Line id="MDL07" quantity="MDL07/0/GenericMuscleCell/v" scale="1mV" color="#00962a" timeScale="1ms" />
+            <Line id="MDL07" quantity="MDL07/0/GenericMuscleCell/v" scale="1mV" color="#c1551b" timeScale="1ms" />
 
         </Display>
       
-        <Display id="activity_neurons" title="c302_D1_Syns: Activity of a number of neurons" timeScale="1ms" xmin="-360.0" xmax="3960.0" ymin="-0.1" ymax="1.1">
+        <Display id="activity_neurons" title="c302_D1_Syns: Activity of a number of neurons" timeScale="1ms" xmin="-360.0" xmax="3960.0000000000005" ymin="-0.1" ymax="1.1">
             
-            <Line id="AIZL" quantity="AIZL/0/AIZL/caConc" scale="1" color="#eaf195" timeScale="1ms" />
-            <Line id="AS2" quantity="AS2/0/AS2/caConc" scale="1" color="#3c00ca" timeScale="1ms" />
-            <Line id="ASHL" quantity="ASHL/0/ASHL/caConc" scale="1" color="#262f1d" timeScale="1ms" />
-            <Line id="SMDDR" quantity="SMDDR/0/SMDDR/caConc" scale="1" color="#108b77" timeScale="1ms" />
-            <Line id="URYDL" quantity="URYDL/0/URYDL/caConc" scale="1" color="#458fa5" timeScale="1ms" />
-            <Line id="VB11" quantity="VB11/0/VB11/caConc" scale="1" color="#ef7488" timeScale="1ms" />
-            <Line id="VD12" quantity="VD12/0/VD12/caConc" scale="1" color="#247960" timeScale="1ms" />
+            <Line id="AIZL" quantity="AIZL/0/AIZL/caConc" scale="1" color="#2e112a" timeScale="1ms" />
+            <Line id="AS2" quantity="AS2/0/AS2/caConc" scale="1" color="#000000" timeScale="1ms" />
+            <Line id="ASHL" quantity="ASHL/0/ASHL/caConc" scale="1" color="#4c2e5d" timeScale="1ms" />
+            <Line id="SMDDR" quantity="SMDDR/0/SMDDR/caConc" scale="1" color="#7f21ee" timeScale="1ms" />
+            <Line id="URYDL" quantity="URYDL/0/URYDL/caConc" scale="1" color="#8a209a" timeScale="1ms" />
+            <Line id="VB11" quantity="VB11/0/VB11/caConc" scale="1" color="#7f66e8" timeScale="1ms" />
+            <Line id="VD12" quantity="VD12/0/VD12/caConc" scale="1" color="#aa49f2" timeScale="1ms" />
 
         </Display>
       
-        <Display id="activity_muscles" title="c302_D1_Syns: Activity of a number of muscles" timeScale="1ms" xmin="-360.0" xmax="3960.0" ymin="-0.1" ymax="1.1">
+        <Display id="activity_muscles" title="c302_D1_Syns: Activity of a number of muscles" timeScale="1ms" xmin="-360.0" xmax="3960.0000000000005" ymin="-0.1" ymax="1.1">
             
-            <Line id="MDL07" quantity="MDL07/0/GenericMuscleCell/caConc" scale="1" color="#8f25f0" timeScale="1ms" />
+            <Line id="MDL07" quantity="MDL07/0/GenericMuscleCell/caConc" scale="1" color="#27fe53" timeScale="1ms" />
 
         </Display>
 

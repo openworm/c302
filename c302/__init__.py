@@ -761,7 +761,8 @@ def generate(net_id,
                 pop0.properties.append(Property("type", str('; '.join(types))))
                 recps = sorted(all_neuron_info[cell][2])
                 pop0.properties.append(Property("receptor", str('; '.join(recps))))
-                pop0.properties.append(Property("neurotransmitter", str('; '.join(all_neuron_info[cell][3]))))
+                nt_sorted = sorted(all_neuron_info[cell][3])
+                pop0.properties.append(Property("neurotransmitter", str('; '.join(nt_sorted))))
 
             pop0.instances.append(inst)
 

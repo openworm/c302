@@ -4,8 +4,9 @@
 Parameters and setting used to generate this network:
 
     Data reader:                    SpreadsheetDataReader
-    c302 version:                   0.7.7
-    PyOpenWorm version:             0.10.0.post0
+    c302 version:                   0.7.8
+    owmeta version:                 0.12.3.dev0
+    owmeta_core version:            0.12.2
     Cells:                          ['M1', 'M2L', 'M2R', 'M3L', 'M3R', 'M4', 'M5', 'I1L', 'I1R', 'I2L', 'I2R', 'I3', 'I4', 'I5', 'I6', 'MI', 'NSML', 'NSMR', 'MCL', 'MCR']
     Cell stimulated:                ['M1', 'M3R', 'M4', 'M5', 'I1L', 'I4', 'I5', 'I6', 'MCL', 'MCR']
     Connection:                     []
@@ -199,7 +200,7 @@ Parameters and setting used to generate this network:
             <property tag="color" value="1 0 .4"/>
             <property tag="type" value="interneuron; sensory"/>
             <property tag="receptor" value=""/>
-            <property tag="neurotransmitter" value="Serotonin; Glutamate"/>
+            <property tag="neurotransmitter" value="Glutamate; Serotonin"/>
             <property tag="OpenWormBackerAssignedName" value="yates"/>
             <instance id="0">
                 <location x="-2.1" y="-247.849989999999991" z="30.675000000000001"/>
