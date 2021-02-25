@@ -4,15 +4,16 @@
 
 #    A simple script to read the values in herm_full_edgelist.csv.
 
-#    Note: this file will be replaced with a call to PyOpenWorm
-#    when that package is updated to read all of this data from the 
+#    Note: this file will be replaced with a call to owmeta
+#    when that package is updated to read all of this data from the
 #    spreadseet
 
 ############################################################
 
 import csv
 
-from NeuroMLUtilities import ConnectionInfo
+
+from c302.NeuroMLUtilities import ConnectionInfo
 import os
 
 from c302 import print_
@@ -70,7 +71,7 @@ def get_syntype(syntype):
         return "Send"
     else:
         raise NotImplementedError("Cannot parse syntype '%s'" % syntype)
-    
+
 def get_synclass(cell, syntype):
     #dirty hack
     if syntype == "GapJunction":
@@ -114,7 +115,7 @@ def read_data(include_nonconnected_cells=False):
 
             pre = remove_leading_index_zero(pre)
             post = remove_leading_index_zero(post)
-            
+
             conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
             #print ConnectionInfo(pre, post, num, syntype, synclass)
             if pre not in cells:
@@ -172,21 +173,24 @@ def read_muscle_data():
 
 
 def main():
-    
+
     cells, conns = read_data(include_nonconnected_cells=True)
 
     assert(len(cells) == 302)
 
     print_("Lengths are equal if include_nonconnected_cells=True")
-    
-    print_("Found %s cells: %s..."%(len(cells),cells))
-    print_("Found %s connections: %s..."%(len(conns),conns[0]))
+
+    print_("Found %s cells: %s...\n"%(len(cells),cells))
+
+    print_("Found %s connections..."%(len(conns)))
+    for c in conns[:5]: print_("   %s"%c)
+    print_("   ...\n")
 
     neurons, muscles, conns = read_muscle_data()
 
-    print_("Found %i neurons connected to muscles: %s"%(len(neurons), sorted(neurons)))
-    print_("Found %i muscles connected to neurons: %s"%(len(muscles), sorted(muscles)))
-    print_("Found %i connections between neurons and muscles, e.g. %s"%(len(conns), conns[0]))
+    print_("Found %i neurons connected to muscles: %s\n"%(len(neurons), sorted(neurons)))
+    print_("Found %i muscles connected to neurons: %s\n"%(len(muscles), sorted(muscles)))
+    print_("Found %i connections between neurons and muscles, e.g. %s\n"%(len(conns), conns[0]))
 
 
 if __name__ == '__main__':

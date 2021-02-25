@@ -1,4 +1,4 @@
-set -e
+set -ex
 
 ##   Install
 
@@ -6,80 +6,80 @@ python setup.py install
 
 ##   Test readers
 
-python c302/SpreadsheetDataReader.py 
-python c302/UpdatedSpreadsheetDataReader.py                                                                                                                                                                      
-python c302/UpdatedSpreadsheetDataReader2.py                                                                                                                                                                  
-python c302/OpenWormReader.py 
+python -m c302.SpreadsheetDataReader 
+python -m c302.UpdatedSpreadsheetDataReader                                                                                                                                                                      
+python -m c302.UpdatedSpreadsheetDataReader2                                                                                                                                                                  
+python -m c302.OpenWormReader 
 
 
 ##   (Re)generate NeuroML 2 & LEMS files from the python scripts
 
-python c302/c302_IClamp.py A
-python c302/c302_Syns.py A
-python c302/c302_Social.py A
-python c302/c302_Pharyngeal.py A
-python c302/c302_Full.py A
-python c302/c302_Muscles.py A
-python c302/c302_Oscillator.py A
+python -m c302.c302_IClamp A
+python -m c302.c302_Syns A
+python -m c302.c302_Social A
+python -m c302.c302_Pharyngeal A
+python -m c302.c302_Full A
+python -m c302.c302_Muscles A
+python -m c302.c302_Oscillator A
 
 
-python c302/c302_IClamp.py B
-python c302/c302_Syns.py B
-python c302/c302_Social.py B
-python c302/c302_Pharyngeal.py B
-python c302/c302_Full.py B
-python c302/c302_Muscles.py B
-python c302/c302_Oscillator.py B
+python -m c302.c302_IClamp B
+python -m c302.c302_Syns B
+python -m c302.c302_Social B
+python -m c302.c302_Pharyngeal B
+python -m c302.c302_Full B
+python -m c302.c302_Muscles B
+python -m c302.c302_Oscillator B
 
 
-python c302/c302_IClamp.py C
-python c302/c302_Syns.py C
-python c302/c302_Social.py C
-python c302/c302_Pharyngeal.py C
-python c302/c302_Full.py C
-python c302/c302_Muscles.py C
-python c302/c302_Oscillator.py C
+python -m c302.c302_IClamp C
+python -m c302.c302_Syns C
+python -m c302.c302_Social C
+python -m c302.c302_Pharyngeal C
+python -m c302.c302_Full C
+python -m c302.c302_Muscles C
+python -m c302.c302_Oscillator C
 
-python c302/c302_IClamp.py C0
-python c302/c302_Syns.py C0
-python c302/c302_Social.py C0
-python c302/c302_Pharyngeal.py C0
-python c302/c302_Full.py C0
-python c302/c302_Muscles.py C0
-python c302/c302_Oscillator.py C0
+python -m c302.c302_IClamp C0
+python -m c302.c302_Syns C0
+python -m c302.c302_Social C0
+python -m c302.c302_Pharyngeal C0
+python -m c302.c302_Full C0
+python -m c302.c302_Muscles C0
+python -m c302.c302_Oscillator C0
 
-python c302/c302_IClamp.py C1
-python c302/c302_Syns.py C1
-python c302/c302_Social.py C1
-python c302/c302_Pharyngeal.py C1
-python c302/c302_Full.py C1
-python c302/c302_Muscles.py C1
-python c302/c302_Oscillator.py C1
+python -m c302.c302_IClamp C1
+python -m c302.c302_Syns C1
+python -m c302.c302_Social C1
+python -m c302.c302_Pharyngeal C1
+python -m c302.c302_Full C1
+python -m c302.c302_Muscles C1
+python -m c302.c302_Oscillator C1
 
-python c302/c302_IClamp.py C2
-python c302/c302_Syns.py C2
-python c302/c302_Social.py C2
-python c302/c302_Pharyngeal.py C2
-python c302/c302_Full.py C2
-python c302/c302_Muscles.py C2
-python c302/c302_Oscillator.py C2
-python c302/c302_FW.py C2
+python -m c302.c302_IClamp C2
+python -m c302.c302_Syns C2
+python -m c302.c302_Social C2
+python -m c302.c302_Pharyngeal C2
+python -m c302.c302_Full C2
+python -m c302.c302_Muscles C2
+python -m c302.c302_Oscillator C2
+python -m c302.c302_FW C2
 
-python c302/c302_IClamp.py D
-python c302/c302_Syns.py D
-python c302/c302_Social.py D
-python c302/c302_Pharyngeal.py D
-python c302/c302_Full.py D
-python c302/c302_Muscles.py D
-python c302/c302_Oscillator.py D
+python -m c302.c302_IClamp D
+python -m c302.c302_Syns D
+python -m c302.c302_Social D
+python -m c302.c302_Pharyngeal D
+python -m c302.c302_Full D
+python -m c302.c302_Muscles D
+python -m c302.c302_Oscillator D
 
-python c302/c302_IClamp.py D1
-python c302/c302_Syns.py D1
-python c302/c302_Social.py D1
-python c302/c302_Pharyngeal.py D1
-python c302/c302_Full.py D1
-python c302/c302_Muscles.py D1
-python c302/c302_Oscillator.py D1
+python -m c302.c302_IClamp D1
+python -m c302.c302_Syns D1
+python -m c302.c302_Social D1
+python -m c302.c302_Pharyngeal D1
+python -m c302.c302_Full D1
+python -m c302.c302_Muscles D1
+python -m c302.c302_Oscillator D1
 
 cd examples
 
@@ -124,15 +124,15 @@ cd ..
 
 c302 MyNetwork parameters_C -cells ["AVBR","VD3"] -cellstostimulate ["AVBR"] -paramoverride {"unphysiological_offset_current":"2.9pA"} -duration 300
 
-python  c302/__init__.py c302_A_Syns2 parameters_A -cells ["ADAL","AIBL","RIVR","RMEV"] -cellstostimulate ["ADAL","RIVR"] -duration 500 -dt 0.1 -vmin -72 -vmax -48
+c302 c302_A_Syns2 parameters_A -cells ["ADAL","AIBL","RIVR","RMEV"] -cellstostimulate ["ADAL","RIVR"] -duration 500 -dt 0.1 -vmin -72 -vmax -48
 
-python  c302/__init__.py c302_A_Weights parameters_A -cells ["ADAL","AIBL","I1L","I3","DB5","PVCR"] -cellstostimulate ["ADAL","I1L","PVCR"] -connnumberoverride=["I1L-I3":2.5] -connnumberscaling=["PVCR-DB5":5] -duration 500 -dt 0.1 -vmin -72 -vmax -48
+c302 c302_A_Weights parameters_A -cells ["ADAL","AIBL","I1L","I3","DB5","PVCR"] -cellstostimulate ["ADAL","I1L","PVCR"] -connnumberoverride=["I1L-I3":2.5] -connnumberscaling=["PVCR-DB5":5] -duration 500 -dt 0.1 -vmin -72 -vmax -48
 
-python  c302/__init__.py c302_C1_Test parameters_C1 -cellstostimulate AFDL -connnumberscaling {"I1L-I3":2}
+c302 c302_C1_Test parameters_C1 -cellstostimulate AFDL -connnumberscaling {"I1L-I3":2}
 
 mkdir -p cells
 
-python  c302/__init__.py c302_D1_Weights parameters_D1 -cells ["ADAL","AIBL","I1L","I3","DB5","PVCR"] -cellstostimulate ["ADAL","I1L","PVCR"] -connnumberoverride=["I1L-I3":2.5] -connnumberscaling=["PVCR-DB5":5] -duration 500 -dt 0.1
+c302 c302_D1_Weights parameters_D1 -cells ["ADAL","AIBL","I1L","I3","DB5","PVCR"] -cellstostimulate ["ADAL","I1L","PVCR"] -connnumberoverride=["I1L-I3":2.5] -connnumberscaling=["PVCR-DB5":5] -duration 500 -dt 0.1
 
 cd examples
 
@@ -147,9 +147,9 @@ cd -
 
 ## Try helper scripts
 
-python c302/runAndPlot.py -test
+python -m c302.runAndPlot -test
 
-python c302/c302_utils.py -nogui
+python -m c302.c302_utils -nogui
 
 echo
 echo "  Successfully completed all c302 tests!"

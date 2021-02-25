@@ -2,23 +2,23 @@
 # See https://github.com/OpenSourceBrain/osb-model-validation for more details
 
 dist: xenial
-sudo: false
 
 addons:
   apt:
     packages:
        # Requirements for Neuron/OMV/etc
-    - python-numpy 
-    - python-scipy 
+    - python-numpy
+    - python-scipy
     - python-tornado
-    - python-matplotlib 
+    - python-matplotlib
     - python-tk
     - python-dev
 
 language: python
 python:
-     - "2.7"
-     - "3.6"
+     - "3.7"
+     - "3.8"
+     # - "3.9" # does version of neuron in omv work with py3.9?
 
 
 env:
@@ -26,7 +26,7 @@ env:
      - OMV_ENGINE=jNeuroML_NEURON
      - OMV_ENGINE=jNeuroML_validate
      - OMV_ENGINE=NON_OMV_TESTS
-     
+
 
 #before_install:
     # To run tests requiring a graphical user interface on Travis CI, use xvfb (X Virtual Framebuffer) to imitate a display.
@@ -36,21 +36,11 @@ env:
 install:
     # Required to run OMV tests
     - pip install git+https://github.com/OpenSourceBrain/osb-model-validation
-    
-    # Install specific version of PyOpenWorm
-    - git clone https://github.com/openworm/PyOpenWorm.git
-    - cd PyOpenWorm
-    - git checkout ow-0.9
-    - pip install pyparsing==2.0.3 Jinja2==2.11.1 configparser==4.0.2 GitPython==2.1.11 gitdb2==2.0.6 numpydoc==0.9.2
-    - python setup.py install
-    - pow clone https://github.com/openworm/OpenWormData.git
-    - cd examples
-    - python NetworkInfo.py # test example...
-    - cd ../..
-    
     # NeuroML & main install
     - pip install pyNeuroML
-    - python setup.py install
+    - pip install .
+    # Add openworm bundle owmeta remote
+    - owm bundle remote --user add ow 'https://raw.githubusercontent.com/openworm/owmeta-bundles/master/index.json'
 
 script:
     - omv all -V; export OMV_SUCCESS=$?; echo $OMV_SUCCESS
@@ -60,13 +50,12 @@ script:
     - echo "Running non OMV tests..."
     - python setup.py install
 
-    
+
     # Testing c302
-    - cd c302 
+    - cd c302
     - mkdir examples
-    - python c302_IClamp.py A    
+    - python c302_IClamp.py A
     #- omv install NEURON # Need to install NEURON
     #- export NEURON_HOME=/home/travis/neuron/nrn/x86_64/
     #- python runAndPlot.py -test
     #- python c302_utils.py -nogui
-

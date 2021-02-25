@@ -1,47 +1,47 @@
 import c302
 import sys
 import neuroml.writers as writers
-    
-def setup(parameter_set, 
+
+def setup(parameter_set,
           generate=False,
-          duration=None, 
+          duration=None,
           dt=0.05,
           target_directory='examples',
           data_reader="SpreadsheetDataReader",
           param_overrides={},
           config_param_overrides={},
           verbose=True):
-              
+
     reference = "c302_%s_IClamp"%parameter_set
     c302.print_("Setting up %s"%reference)
-    
+
     exec('from c302.parameters_%s import ParameterisedModel'%parameter_set, globals())
     params = ParameterisedModel()
-    
+
     stim_amplitudes = ["1pA","2pA","3pA","4pA","5pA","6pA"]
     if duration==None:
         duration = (len(stim_amplitudes))*1000
-    
-    
+
+
     my_cells = ["ADAL","PVCL"]
     muscles_to_include = ['MDR01']
-    
-    cells               = my_cells
-    cells_total  = my_cells + muscles_to_include
-    
-    
+
+    cells = my_cells
+    cells_total = my_cells + muscles_to_include
+
+
     nml_doc = None
-    
+
     if generate:
         c302.print_("Generating %s"%reference)
-        
-        nml_doc = c302.generate(reference, 
-                    params, 
-                    cells=cells, 
-                    cells_to_stimulate=[], 
+
+        nml_doc = c302.generate(reference,
+                    params,
+                    cells=cells,
+                    cells_to_stimulate=[],
                     muscles_to_include = muscles_to_include,
-                    duration=duration, 
-                    dt=dt, 
+                    duration=duration,
+                    dt=dt,
                     target_directory=target_directory,
                     param_overrides=param_overrides,
                     verbose=verbose,
@@ -57,11 +57,11 @@ def setup(parameter_set,
         writers.NeuroMLWriter.write(nml_doc, nml_file) # Write over network file written above...
 
         c302.print_("(Re)written network file to: "+nml_file)
-                    
+
     return cells, cells_total, params, muscles_to_include, nml_doc
-             
+
 if __name__ == '__main__':
-    
+
     parameter_set = sys.argv[1] if len(sys.argv)==2 else 'A'
-    
+
     setup(parameter_set, generate=True)
