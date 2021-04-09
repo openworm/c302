@@ -1,263 +1,219 @@
 {
     "Canonical_C": {
-        "version": "NeuroMLlite v0.2.0", 
+        "version": "NeuroMLlite v0.3.0",
         "parameters": {
-            "weight_IN_MN": 3, 
-            "scaleDinout": 0.5, 
-            "stim_amp": "3.5pA", 
-            "weight_MN_MN_Exc": 20, 
-            "weight_MN_MN_Inh": 40, 
-            "stim_duration": "2000ms"
-        }, 
-        "cells": [
-            {
-                "GenericNeuronCell": {
-                    "neuroml2_source_file": "GenericNeuronCell.cell.nml"
+            "stim_duration": "2000ms",
+            "stim_amp": "3.5pA",
+            "weight_IN_MN": 3,
+            "weight_MN_MN_Exc": 20,
+            "weight_MN_MN_Inh": 40,
+            "scaleDinout": 0.5
+        },
+        "cells": {
+            "GenericNeuronCell": {
+                "neuroml2_source_file": "GenericNeuronCell.cell.nml"
+            }
+        },
+        "synapses": {
+            "neuron_to_neuron_exc_syn": {
+                "neuroml2_source_file": "test_syns.xml"
+            },
+            "neuron_to_neuron_inh_syn": {
+                "neuroml2_source_file": "test_syns.xml"
+            }
+        },
+        "input_sources": {
+            "iclamp_0": {
+                "neuroml2_input": "PulseGenerator",
+                "parameters": {
+                    "amplitude": "stim_amp",
+                    "delay": "500ms",
+                    "duration": "stim_duration"
                 }
             }
-        ], 
-        "synapses": [
-            {
-                "neuron_to_neuron_exc_syn": {
-                    "neuroml2_source_file": "test_syns.xml"
+        },
+        "regions": {
+            "interneurons": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "width": 100.0,
+                "height": 100.0,
+                "depth": 100.0
+            },
+            "Dorsal motorneurons": {
+                "x": 200.0,
+                "y": 0.0,
+                "z": 0.0,
+                "width": 100.0,
+                "height": 100.0,
+                "depth": 100.0
+            },
+            "Ventral motorneurons": {
+                "x": 200.0,
+                "y": 200.0,
+                "z": 0.0,
+                "width": 100.0,
+                "height": 100.0,
+                "depth": 100.0
+            },
+            "muscles": {
+                "x": 300.0,
+                "y": 0.0,
+                "z": 0.0,
+                "width": 1000.0,
+                "height": 100.0,
+                "depth": 1000.0
+            }
+        },
+        "populations": {
+            "AVB": {
+                "size": 1,
+                "component": "GenericNeuronCell",
+                "properties": {
+                    "color": "1 0 .4"
+                },
+                "random_layout": {
+                    "region": "interneurons"
                 }
-            }, 
-            {
-                "neuron_to_neuron_inh_syn": {
-                    "neuroml2_source_file": "test_syns.xml"
+            },
+            "VB": {
+                "size": 1,
+                "component": "GenericNeuronCell",
+                "properties": {
+                    "color": ".5 .4 1"
+                },
+                "random_layout": {
+                    "region": "Ventral motorneurons"
+                }
+            },
+            "DB": {
+                "size": 1,
+                "component": "GenericNeuronCell",
+                "properties": {
+                    "color": ".5 .4 1"
+                },
+                "random_layout": {
+                    "region": "Dorsal motorneurons"
+                }
+            },
+            "VD": {
+                "size": 1,
+                "component": "GenericNeuronCell",
+                "properties": {
+                    "color": ".5 .4 1"
+                },
+                "random_layout": {
+                    "region": "Ventral motorneurons"
+                }
+            },
+            "DD": {
+                "size": 1,
+                "component": "GenericNeuronCell",
+                "properties": {
+                    "color": ".5 .4 1"
+                },
+                "random_layout": {
+                    "region": "Dorsal motorneurons"
                 }
             }
-        ], 
-        "input_sources": [
-            {
-                "iclamp_0": {
-                    "neuroml2_input": "PulseGenerator", 
-                    "parameters": {
-                        "delay": "500ms", 
-                        "duration": "stim_duration", 
-                        "amplitude": "stim_amp"
-                    }
+        },
+        "projections": {
+            "proj_AVB_VB": {
+                "presynaptic": "AVB",
+                "postsynaptic": "VB",
+                "synapse": "neuron_to_neuron_exc_syn",
+                "type": "continuousProjection",
+                "delay": 0,
+                "weight": "weight_IN_MN",
+                "random_connectivity": {
+                    "probability": 1
+                }
+            },
+            "proj_AVB_DB": {
+                "presynaptic": "AVB",
+                "postsynaptic": "DB",
+                "synapse": "neuron_to_neuron_exc_syn",
+                "type": "continuousProjection",
+                "delay": 0,
+                "weight": "weight_IN_MN * scaleDinout",
+                "random_connectivity": {
+                    "probability": 1
+                }
+            },
+            "proj_DB_VD": {
+                "presynaptic": "DB",
+                "postsynaptic": "VD",
+                "synapse": "neuron_to_neuron_exc_syn",
+                "type": "continuousProjection",
+                "delay": 0,
+                "weight": "weight_MN_MN_Exc",
+                "random_connectivity": {
+                    "probability": 1
+                }
+            },
+            "proj_DB_DD": {
+                "presynaptic": "DB",
+                "postsynaptic": "DD",
+                "synapse": "neuron_to_neuron_exc_syn",
+                "type": "continuousProjection",
+                "delay": 0,
+                "weight": "weight_MN_MN_Exc",
+                "random_connectivity": {
+                    "probability": 1
+                }
+            },
+            "proj_VB_VD": {
+                "presynaptic": "VB",
+                "postsynaptic": "VD",
+                "synapse": "neuron_to_neuron_exc_syn",
+                "type": "continuousProjection",
+                "delay": 0,
+                "weight": "weight_MN_MN_Exc",
+                "random_connectivity": {
+                    "probability": 1
+                }
+            },
+            "proj_VB_DD": {
+                "presynaptic": "VB",
+                "postsynaptic": "DD",
+                "synapse": "neuron_to_neuron_exc_syn",
+                "type": "continuousProjection",
+                "delay": 0,
+                "weight": "weight_MN_MN_Exc",
+                "random_connectivity": {
+                    "probability": 1
+                }
+            },
+            "proj_VD_VB": {
+                "presynaptic": "VD",
+                "postsynaptic": "VB",
+                "synapse": "neuron_to_neuron_inh_syn",
+                "type": "continuousProjection",
+                "delay": 0,
+                "weight": "weight_MN_MN_Inh",
+                "random_connectivity": {
+                    "probability": 1
+                }
+            },
+            "proj_DD_DB": {
+                "presynaptic": "DD",
+                "postsynaptic": "DB",
+                "synapse": "neuron_to_neuron_inh_syn",
+                "type": "continuousProjection",
+                "delay": 0,
+                "weight": "weight_MN_MN_Inh",
+                "random_connectivity": {
+                    "probability": 1
                 }
             }
-        ], 
-        "regions": [
-            {
-                "interneurons": {
-                    "x": 0.0, 
-                    "y": 0.0, 
-                    "z": 0.0, 
-                    "width": 100.0, 
-                    "height": 100.0, 
-                    "depth": 100.0
-                }
-            }, 
-            {
-                "Dorsal motorneurons": {
-                    "x": 200.0, 
-                    "y": 0.0, 
-                    "z": 0.0, 
-                    "width": 100.0, 
-                    "height": 100.0, 
-                    "depth": 100.0
-                }
-            }, 
-            {
-                "Ventral motorneurons": {
-                    "x": 200.0, 
-                    "y": 200.0, 
-                    "z": 0.0, 
-                    "width": 100.0, 
-                    "height": 100.0, 
-                    "depth": 100.0
-                }
-            }, 
-            {
-                "muscles": {
-                    "x": 300.0, 
-                    "y": 0.0, 
-                    "z": 0.0, 
-                    "width": 1000.0, 
-                    "height": 100.0, 
-                    "depth": 1000.0
-                }
+        },
+        "inputs": {
+            "stim": {
+                "input_source": "iclamp_0",
+                "population": "AVB",
+                "percentage": 100.0
             }
-        ], 
-        "populations": [
-            {
-                "AVB": {
-                    "size": 1, 
-                    "component": "GenericNeuronCell", 
-                    "properties": {
-                        "color": "1 0 .4"
-                    }, 
-                    "random_layout": {
-                        "region": "interneurons"
-                    }
-                }
-            }, 
-            {
-                "VB": {
-                    "size": 1, 
-                    "component": "GenericNeuronCell", 
-                    "properties": {
-                        "color": ".5 .4 1"
-                    }, 
-                    "random_layout": {
-                        "region": "Ventral motorneurons"
-                    }
-                }
-            }, 
-            {
-                "DB": {
-                    "size": 1, 
-                    "component": "GenericNeuronCell", 
-                    "properties": {
-                        "color": ".5 .4 1"
-                    }, 
-                    "random_layout": {
-                        "region": "Dorsal motorneurons"
-                    }
-                }
-            }, 
-            {
-                "VD": {
-                    "size": 1, 
-                    "component": "GenericNeuronCell", 
-                    "properties": {
-                        "color": ".5 .4 1"
-                    }, 
-                    "random_layout": {
-                        "region": "Ventral motorneurons"
-                    }
-                }
-            }, 
-            {
-                "DD": {
-                    "size": 1, 
-                    "component": "GenericNeuronCell", 
-                    "properties": {
-                        "color": ".5 .4 1"
-                    }, 
-                    "random_layout": {
-                        "region": "Dorsal motorneurons"
-                    }
-                }
-            }
-        ], 
-        "projections": [
-            {
-                "proj_AVB_VB": {
-                    "presynaptic": "AVB", 
-                    "postsynaptic": "VB", 
-                    "synapse": "neuron_to_neuron_exc_syn", 
-                    "type": "continuousProjection", 
-                    "delay": 0, 
-                    "weight": "weight_IN_MN", 
-                    "random_connectivity": {
-                        "probability": 1
-                    }
-                }
-            }, 
-            {
-                "proj_AVB_DB": {
-                    "presynaptic": "AVB", 
-                    "postsynaptic": "DB", 
-                    "synapse": "neuron_to_neuron_exc_syn", 
-                    "type": "continuousProjection", 
-                    "delay": 0, 
-                    "weight": "weight_IN_MN * scaleDinout", 
-                    "random_connectivity": {
-                        "probability": 1
-                    }
-                }
-            }, 
-            {
-                "proj_DB_VD": {
-                    "presynaptic": "DB", 
-                    "postsynaptic": "VD", 
-                    "synapse": "neuron_to_neuron_exc_syn", 
-                    "type": "continuousProjection", 
-                    "delay": 0, 
-                    "weight": "weight_MN_MN_Exc", 
-                    "random_connectivity": {
-                        "probability": 1
-                    }
-                }
-            }, 
-            {
-                "proj_DB_DD": {
-                    "presynaptic": "DB", 
-                    "postsynaptic": "DD", 
-                    "synapse": "neuron_to_neuron_exc_syn", 
-                    "type": "continuousProjection", 
-                    "delay": 0, 
-                    "weight": "weight_MN_MN_Exc", 
-                    "random_connectivity": {
-                        "probability": 1
-                    }
-                }
-            }, 
-            {
-                "proj_VB_VD": {
-                    "presynaptic": "VB", 
-                    "postsynaptic": "VD", 
-                    "synapse": "neuron_to_neuron_exc_syn", 
-                    "type": "continuousProjection", 
-                    "delay": 0, 
-                    "weight": "weight_MN_MN_Exc", 
-                    "random_connectivity": {
-                        "probability": 1
-                    }
-                }
-            }, 
-            {
-                "proj_VB_DD": {
-                    "presynaptic": "VB", 
-                    "postsynaptic": "DD", 
-                    "synapse": "neuron_to_neuron_exc_syn", 
-                    "type": "continuousProjection", 
-                    "delay": 0, 
-                    "weight": "weight_MN_MN_Exc", 
-                    "random_connectivity": {
-                        "probability": 1
-                    }
-                }
-            }, 
-            {
-                "proj_VD_VB": {
-                    "presynaptic": "VD", 
-                    "postsynaptic": "VB", 
-                    "synapse": "neuron_to_neuron_inh_syn", 
-                    "type": "continuousProjection", 
-                    "delay": 0, 
-                    "weight": "weight_MN_MN_Inh", 
-                    "random_connectivity": {
-                        "probability": 1
-                    }
-                }
-            }, 
-            {
-                "proj_DD_DB": {
-                    "presynaptic": "DD", 
-                    "postsynaptic": "DB", 
-                    "synapse": "neuron_to_neuron_inh_syn", 
-                    "type": "continuousProjection", 
-                    "delay": 0, 
-                    "weight": "weight_MN_MN_Inh", 
-                    "random_connectivity": {
-                        "probability": 1
-                    }
-                }
-            }
-        ], 
-        "inputs": [
-            {
-                "stim": {
-                    "input_source": "iclamp_0", 
-                    "population": "AVB", 
-                    "percentage": 100.0
-                }
-            }
-        ]
+        }
     }
 }
