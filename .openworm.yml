@@ -1,5 +1,5 @@
 repo: openworm/c302
-shortDescription: "NeuroML based model of C elegans nervous system"
+shortDescription: "NeuroML based model of C. elegans nervous system"
 coordinator: p.gleeson@gmail.com
 documentation: "https://github.com/openworm/c302/blob/master/README.md"
 inputs: 
@@ -16,7 +16,7 @@ keywords:
   - gap junctions
   - neurotransmitters
 languages: 
-  - python
+  - Python
 members: 
   - p.gleeson@gmail.com
 outputs: 
