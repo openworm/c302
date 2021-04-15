@@ -98,6 +98,16 @@ This will create a NeuroML 2 file and a LEMS file to execute it, containing 2 ce
 
     pynml LEMS_MyNetwork.xml
 
+This produces two plots: One is neuron activity, measured as calcium ion concentration. You will likely need to click "Frame" in the "View" menu to scale the plot.
+
+![activity](images/LEMS_MyNetwork-activity.png)
+
+
+The other shows membrane potential for each neuron in the network.
+
+![membrane potential](images/LEMS_MyNetwork-membranePotential.png)
+
+
 To see the structure of the network, use pyNeuroML:
 
     pynml MyNetwork.net.nml -graph 4c  # Try other options like 1, 2f, 5c for varying levels of detail
