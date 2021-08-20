@@ -1,0 +1,35 @@
+name: Continuous builds
+
+on:
+  push:
+    branches: [ master, development, experimental ]
+  pull_request:
+    branches: [ master, development, experimental ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [ 3.7, 3.9 ]
+        engine: [ jNeuroML, jNeuroML_NEURON, jNeuroML_validate ] #, NON_OMV_TESTS ]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python  ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version:  ${{ matrix.python-version }}
+    - name: Install OMV
+      run: |
+        pip install git+https://github.com/OpenSourceBrain/osb-model-validation
+        pip install scipy sympy matplotlib cython pandas tables
+    - name: Run OMV tests on engine ${{ matrix.engine }}
+      run: |
+        omv all -V --engine=${{ matrix.engine }}; export OMV_SUCCESS=$?; echo $OMV_SUCCESS
+        echo "Finished all OMV tests"
+        omv list -V
+        if [[ ${OMV_ENGINE} == "NON_OMV_TESTS" ]]; then echo "Continuing with tests not under OMV..."; else exit $OMV_SUCCESS; fi
+        echo "Running non OMV tests..."
+        python setup.py install
