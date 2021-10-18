@@ -34,7 +34,8 @@ jobs:
         omv list -V 
         omv install NEURON # Need to install NEURON
         which nrnivmodl
-        #- export NEURON_HOME=/home/travis/neuron/nrn/x86_64/
-        #- python runAndPlot.py -test
+        export NEURON_HOME=$RUNNER_TOOL_CACHE/Python/3.9.7/x64/
+        env
+        python runAndPlot.py -test
         #- python c302_utils.py -nogui
         pip freeze
