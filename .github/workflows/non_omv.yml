@@ -1,0 +1,35 @@
+name: Non OMV tests
+
+on:
+  push:
+    branches: [ master, development, experimental ]
+  pull_request:
+    branches: [ master, development, experimental ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [ 3.7, 3.9 ]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python  ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version:  ${{ matrix.python-version }}
+    - name: Install c302
+      run: |
+        pip install .
+    - name: Run some examples
+      run: |
+        cd c302
+        mkdir examples
+        python c302_IClamp.py A
+        #- omv install NEURON # Need to install NEURON
+        #- export NEURON_HOME=/home/travis/neuron/nrn/x86_64/
+        #- python runAndPlot.py -test
+        #- python c302_utils.py -nogui
+        pip freeze
