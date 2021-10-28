@@ -24,7 +24,10 @@ jobs:
       run: |
         pip install rdflib==4.1.2
         pip install owmeta
+        cd /home/runner/
         owm clone https://github.com/openworm/OpenWormData.git
+        ls -alt
+        ls -alt .owmeta/bundles/openworm%2Fowmeta-core/*/
     - name: Install c302
       run: |
         pip install .
