@@ -22,7 +22,7 @@ jobs:
         python-version:  ${{ matrix.python-version }}
     - name: Install owmeta
       run: |
-        pip install rdflib<6.0.0
+        pip install rdflib==5.0.0
         pip install owmeta
         cd /home/runner/
         owm clone https://github.com/openworm/OpenWormData.git
