@@ -20,12 +20,25 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version:  ${{ matrix.python-version }}
+    - name: Install owmeta
+      run: |
+        pip install rdflib==4.1.2
+        pip install owmeta
+        owm clone https://github.com/openworm/OpenWormData.git
     - name: Install c302
       run: |
         pip install .
+        pip list
+    - name: Test OpenWormReader with owmeta
+      run: |
+        ls -alt
+        python -m c302.OpenWormReader
+
+
     - name: Install OMV
       run: |
         pip install git+https://github.com/OpenSourceBrain/osb-model-validation
+
     - name: Run some examples
       run: |
         cd c302
