@@ -36,8 +36,10 @@ jobs:
         which nrnivmodl
         export NEURON_HOME=$RUNNER_TOOL_CACHE/Python/3.9.7/x64/
         env
+        pip freeze
     - name: Run more examples
       run: |
-        python runAndPlot.py -test
-        python c302_utils.py -nogui
-        pip freeze
+        pwd
+        python c302/runAndPlot.py -test
+        ls -alth examples
+        python c302/c302_utils.py -nogui
