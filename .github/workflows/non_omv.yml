@@ -42,4 +42,4 @@ jobs:
         pwd
         python c302/runAndPlot.py -test
         ls -alth examples
-        python c302/c302_utils.py -nogui
+        #python c302/c302_utils.py -nogui
