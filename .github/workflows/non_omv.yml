@@ -23,13 +23,23 @@ jobs:
     - name: Install c302
       run: |
         pip install .
+    - name: Install OMV
+      run: |
+        pip install git+https://github.com/OpenSourceBrain/osb-model-validation
     - name: Run some examples
       run: |
         cd c302
         mkdir examples
         python c302_IClamp.py A
-        #- omv install NEURON # Need to install NEURON
-        #- export NEURON_HOME=/home/travis/neuron/nrn/x86_64/
-        #- python runAndPlot.py -test
-        #- python c302_utils.py -nogui
+        omv list -V
+        omv install NEURON # Need to install NEURON
+        which nrnivmodl
+        export NEURON_HOME=$RUNNER_TOOL_CACHE/Python/3.9.7/x64/
+        env
         pip freeze
+    - name: Run more examples
+      run: |
+        pwd
+        python c302/runAndPlot.py -test
+        ls -alth examples
+        #python c302/c302_utils.py -nogui
