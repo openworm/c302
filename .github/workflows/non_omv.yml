@@ -35,7 +35,7 @@ jobs:
     - name: Test OpenWormReader with owmeta
       run: |
         ls -alt
-        ls -alt .owmeta/bundles/openworm%2Fowmeta-core/
+        ls -alt /home/runner/.owmeta/bundles/openworm%2Fowmeta-core/
         python -m c302.OpenWormReader
 
 
