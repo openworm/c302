@@ -24,10 +24,8 @@ setup(
         'numpy',
         'xlrd',
         'xlwt',
-        'libNeuroML>=0.2.39',
-        'pyNeuroML>=0.3.11',
-        'owmeta_core>=0.13.0',
-        'owmeta'
+        'pyNeuroML>=0.5.11',
+        'owmeta>=0.12.3',
     ],
     entry_points={
         'console_scripts': ['c302 = c302.__init__:main']},
