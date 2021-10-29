@@ -20,22 +20,13 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version:  ${{ matrix.python-version }}
-    - name: Install owmeta
-      run: |
-        pip install rdflib==5.0.0
-        pip install owmeta
-        cd /home/runner/
-        owm clone https://github.com/openworm/OpenWormData.git
-        ls -alt
-        ls -alt .owmeta/bundles/openworm%2Fowmeta-core/*/
     - name: Install c302
       run: |
         pip install .
         pip list
     - name: Test OpenWormReader with owmeta
       run: |
-        ls -alt
-        ls -alt /home/runner/.owmeta/bundles/openworm%2Fowmeta-core/
+        owm bundle remote --user add ow 'https://raw.githubusercontent.com/openworm/owmeta-bundles/master/index.json'
         python -m c302.OpenWormReader
 
 
