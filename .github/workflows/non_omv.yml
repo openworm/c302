@@ -26,6 +26,7 @@ jobs:
         pip install owmeta
         cd /home/runner/
         owm clone https://github.com/openworm/OpenWormData.git
+        owm bundle remote --user add ow 'https://raw.githubusercontent.com/openworm/owmeta-bundles/master/index.json'
         ls -alt
         ls -alt .owmeta/bundles/openworm%2Fowmeta-core/*/
     - name: Install c302
