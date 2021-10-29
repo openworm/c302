@@ -45,15 +45,6 @@ jobs:
         export NEURON_HOME=$RUNNER_TOOL_CACHE/Python/3.9.7/x64/
         env
         pip freeze
-    - name: Run reader examples
+    - name: Run test script
       run: |
-        python -m c302.SpreadsheetDataReader
-        python -m c302.UpdatedSpreadsheetDataReader
-        python -m c302.UpdatedSpreadsheetDataReader2
-        python -m c302.OpenWormReader
-    - name: Run more examples
-      run: |
-        pwd
-        python c302/runAndPlot.py -test
-        ls -alth examples
-        python c302/c302_utils.py -nogui
+        ./test.sh
