@@ -1,6 +1,6 @@
 ## The c302 modelling framework for *C. elegans*
 
-[![Continuous builds](https://github.com/openworm/c302/actions/workflows/ci.yml/badge.svg)](https://github.com/openworm/c302/actions/workflows/ci.yml)
+[![Continuous builds](https://github.com/openworm/c302/actions/workflows/ci.yml/badge.svg)](https://github.com/openworm/c302/actions/workflows/ci.yml) [![Non OMV tests](https://github.com/openworm/c302/actions/workflows/non_omv.yml/badge.svg)](https://github.com/openworm/c302/actions/workflows/non_omv.yml)
 
 c302 is a framework for generating network models in NeuroML 2 based on *C. elegans* connectivity data. It is primarily intended as a way to generate neuronal networks at multiple levels of detail for the [OpenWorm project](http://www.openworm.org). To see how c302 relates to other OpenWorm subprojects click on the image below:
 
