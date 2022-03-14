@@ -68,8 +68,8 @@ Parameters and setting used to generate this network:
     <cell id="GenericMuscleCell">
         <morphology id="morphology_GenericMuscleCell">
             <segment id="0" name="soma">
-                <proximal x="0.000000e+00" y="0.000000e+00" z="0.000000e+00" diameter="5.0"/>
-                <distal x="0.000000e+00" y="2.000000e+01" z="0.000000e+00" diameter="5.0"/>
+                <proximal x="0.0" y="0.0" z="0.0" diameter="5.0"/>
+                <distal x="0.0" y="20.0" z="0.0" diameter="5.0"/>
             </segment>
         </morphology>
         <biophysicalProperties id="biophys_GenericMuscleCell">
@@ -90,8 +90,8 @@ Parameters and setting used to generate this network:
     <cell id="GenericNeuronCell">
         <morphology id="morphology_GenericNeuronCell">
             <segment id="0" name="soma">
-                <proximal x="0.000000e+00" y="0.000000e+00" z="0.000000e+00" diameter="5.0"/>
-                <distal x="0.000000e+00" y="0.000000e+00" z="0.000000e+00" diameter="5.0"/>
+                <proximal x="0.0" y="0.0" z="0.0" diameter="5.0"/>
+                <distal x="0.0" y="0.0" z="0.0" diameter="5.0"/>
             </segment>
         </morphology>
         <biophysicalProperties id="biophys_GenericNeuronCell">

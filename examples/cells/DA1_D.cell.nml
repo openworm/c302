@@ -3,116 +3,116 @@
         <notes>Cell model created by c302 with custom electrical parameters</notes>
         <morphology id="morphology_DA1">
             <segment id="0" name="Seg0_soma_0">
-                <proximal x="-7.500000e-01" y="-2.270750e+02" z="3.425000e+00" diameter="3.8910155"/>
-                <distal x="-7.500000e-01" y="-2.270750e+02" z="3.425000e+00" diameter="3.8910155"/>
+                <proximal x="-0.75" y="-227.07501" z="3.425" diameter="3.8910155"/>
+                <distal x="-0.75" y="-227.07501" z="3.425" diameter="3.8910155"/>
             </segment>
             <segment id="4" name="Seg0_axon_0">
                 <parent segment="0"/>
-                <proximal x="-7.500000e-01" y="-2.270750e+02" z="3.425000e+00" diameter="0.67082036"/>
-                <distal x="-7.500000e-01" y="-2.282000e+02" z="4.200000e+00" diameter="0.67082036"/>
+                <proximal x="-0.75" y="-227.07501" z="3.425" diameter="0.67082036"/>
+                <distal x="-0.75" y="-228.20001" z="4.2" diameter="0.67082036"/>
             </segment>
             <segment id="5" name="Seg5_axon_0">
                 <parent segment="4"/>
-                <distal x="-8.000000e-01" y="-2.316500e+02" z="6.400000e+00" diameter="0.5744563"/>
+                <distal x="-0.8" y="-231.65" z="6.4" diameter="0.5744563"/>
             </segment>
             <segment id="6" name="Seg6_axon_0">
                 <parent segment="5"/>
-                <distal x="-8.000000e-01" y="-2.380000e+02" z="1.090000e+01" diameter="0.6"/>
+                <distal x="-0.8" y="-238.00002" z="10.9" diameter="0.6"/>
             </segment>
             <segment id="1" name="Seg0_dendrit_2">
                 <parent segment="0"/>
-                <proximal x="-7.500000e-01" y="-2.270750e+02" z="3.425000e+00" diameter="0.76811457"/>
-                <distal x="-7.500000e-01" y="-2.259500e+02" z="2.650000e+00" diameter="0.76811457"/>
+                <proximal x="-0.75" y="-227.07501" z="3.425" diameter="0.76811457"/>
+                <distal x="-0.75" y="-225.95" z="2.6499999" diameter="0.76811457"/>
             </segment>
             <segment id="2" name="Seg2_dendrite_0">
                 <parent segment="1"/>
-                <distal x="-7.500000e-01" y="-2.235500e+02" z="1.000000e+00" diameter="0.70710677"/>
+                <distal x="-0.75" y="-223.55" z="1.0" diameter="0.70710677"/>
             </segment>
             <segment id="3" name="Seg3_dendrite_0">
                 <parent segment="2"/>
-                <distal x="-7.500000e-01" y="-2.210500e+02" z="-8.000000e-01" diameter="0.70710677"/>
+                <distal x="-0.75" y="-221.05" z="-0.8" diameter="0.70710677"/>
             </segment>
             <segment id="7" name="Seg7_neurite_0">
                 <parent segment="6"/>
-                <proximal x="-8.000000e-01" y="-2.380000e+02" z="1.090000e+01" diameter="0.6"/>
-                <distal x="-6.000000e-01" y="-2.382500e+02" z="1.102500e+01" diameter="0.71589106"/>
+                <proximal x="-0.8" y="-238.00002" z="10.9" diameter="0.6"/>
+                <distal x="-0.6" y="-238.25" z="11.025001" diameter="0.71589106"/>
             </segment>
             <segment id="8" name="Seg8_neurite_0">
                 <parent segment="7"/>
-                <distal x="-2.000000e-01" y="-2.382500e+02" z="1.105000e+01" diameter="0.50990194"/>
+                <distal x="-0.2" y="-238.25" z="11.05" diameter="0.50990194"/>
             </segment>
             <segment id="9" name="Seg9_neurite_0">
                 <parent segment="8"/>
-                <distal x="3.100000e+00" y="-2.383500e+02" z="1.095000e+01" diameter="0.42426404"/>
+                <distal x="3.1" y="-238.35" z="10.95" diameter="0.42426404"/>
             </segment>
             <segment id="10" name="Seg10_neurite_0">
                 <parent segment="9"/>
-                <distal x="7.325000e+00" y="-2.382000e+02" z="1.132500e+01" diameter="0.6363961"/>
+                <distal x="7.3250003" y="-238.2" z="11.325" diameter="0.6363961"/>
             </segment>
             <segment id="11" name="Seg11_neurite_0">
                 <parent segment="10"/>
-                <distal x="1.490000e+01" y="-2.368000e+02" z="1.550000e+01" diameter="0.6"/>
+                <distal x="14.900001" y="-236.8" z="15.5" diameter="0.6"/>
             </segment>
             <segment id="12" name="Seg12_neurite_0">
                 <parent segment="11"/>
-                <distal x="1.877500e+01" y="-2.345500e+02" z="2.220000e+01" diameter="0.5937171"/>
+                <distal x="18.775" y="-234.55" z="22.2" diameter="0.5937171"/>
             </segment>
             <segment id="13" name="Seg13_neurite_0">
                 <parent segment="12"/>
-                <distal x="2.040000e+01" y="-2.322250e+02" z="2.922500e+01" diameter="0.6041523"/>
+                <distal x="20.4" y="-232.22499" z="29.225" diameter="0.6041523"/>
             </segment>
             <segment id="14" name="Seg14_neurite_0">
                 <parent segment="13"/>
-                <distal x="1.877500e+01" y="-2.299250e+02" z="3.622500e+01" diameter="0.6062178"/>
+                <distal x="18.775" y="-229.92499" z="36.225" diameter="0.6062178"/>
             </segment>
             <segment id="15" name="Seg15_neurite_0">
                 <parent segment="14"/>
-                <distal x="1.490000e+01" y="-2.276750e+02" z="4.295000e+01" diameter="0.6576473"/>
+                <distal x="14.900001" y="-227.675" z="42.95" diameter="0.6576473"/>
             </segment>
             <segment id="16" name="Seg16_neurite_0">
                 <parent segment="15"/>
-                <distal x="7.325000e+00" y="-2.263000e+02" z="4.715000e+01" diameter="0.7697402"/>
+                <distal x="7.3250003" y="-226.3" z="47.15" diameter="0.7697402"/>
             </segment>
             <segment id="17" name="Seg17_neurite_0">
                 <parent segment="16"/>
-                <distal x="3.100000e+00" y="-2.263000e+02" z="4.752500e+01" diameter="0.60207975"/>
+                <distal x="3.1" y="-226.3" z="47.525" diameter="0.60207975"/>
             </segment>
             <segment id="18" name="Seg18_neurite_0">
                 <parent segment="17"/>
-                <distal x="4.000000e-01" y="-2.270500e+02" z="4.752500e+01" diameter="0.4387482"/>
+                <distal x="0.4" y="-227.04999" z="47.525" diameter="0.4387482"/>
             </segment>
             <segment id="19" name="Seg19_neurite_0">
                 <parent segment="18"/>
-                <distal x="-7.500000e-01" y="-2.286000e+02" z="4.770000e+01" diameter="0.64031243"/>
+                <distal x="-0.75" y="-228.6" z="47.7" diameter="0.64031243"/>
             </segment>
             <segment id="20" name="Seg20_neurite_0">
                 <parent segment="19"/>
-                <distal x="-7.000000e-01" y="-2.409000e+02" z="5.250000e+01" diameter="0.56568545"/>
+                <distal x="-0.70000005" y="-240.9" z="52.499996" diameter="0.56568545"/>
             </segment>
             <segment id="21" name="Seg21_neurite_0">
                 <parent segment="20"/>
-                <distal x="-1.000000e+00" y="-2.722000e+02" z="6.150000e+01" diameter="0.56568545"/>
+                <distal x="-1.0" y="-272.19998" z="61.5" diameter="0.56568545"/>
             </segment>
             <segment id="22" name="Seg22_neurite_0">
                 <parent segment="21"/>
-                <distal x="-1.000000e+00" y="-2.757000e+02" z="6.250000e+01" diameter="0.56568545"/>
+                <distal x="-1.0" y="-275.7" z="62.5" diameter="0.56568545"/>
             </segment>
             <segment id="23" name="Seg23_neurite_0">
                 <parent segment="22"/>
-                <distal x="-1.750000e+00" y="-2.903000e+02" z="6.470001e+01" diameter="0.64031243"/>
+                <distal x="-1.75" y="-290.30002" z="64.700005" diameter="0.64031243"/>
             </segment>
             <segment id="24" name="Seg24_neurite_0">
                 <parent segment="23"/>
-                <distal x="-1.800000e+00" y="-2.935000e+02" z="6.510001e+01" diameter="0.56568545"/>
+                <distal x="-1.8" y="-293.5" z="65.100006" diameter="0.56568545"/>
             </segment>
             <segment id="25" name="Seg25_neurite_0">
                 <parent segment="6"/>
-                <proximal x="-8.000000e-01" y="-2.380000e+02" z="1.090000e+01" diameter="0.6"/>
-                <distal x="-8.000000e-01" y="-2.385000e+02" z="1.115000e+01" diameter="0.53851646"/>
+                <proximal x="-0.8" y="-238.00002" z="10.9" diameter="0.6"/>
+                <distal x="-0.8" y="-238.5" z="11.150001" diameter="0.53851646"/>
             </segment>
             <segment id="26" name="Seg26_neurite_0">
                 <parent segment="25"/>
-                <distal x="-8.000000e-01" y="-2.428000e+02" z="1.400000e+01" diameter="0.6"/>
+                <distal x="-0.8" y="-242.8" z="14.0" diameter="0.6"/>
             </segment>
             <segmentGroup neuroLexId="sao864921383" id="Soma">
                 <member segment="0"/>
