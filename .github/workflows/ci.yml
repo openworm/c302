@@ -2,9 +2,9 @@ name: OMV tests
 
 on:
   push:
-    branches: [ master, development, experimental ]
+    branches: [ master, development, experimental, ow* ]
   pull_request:
-    branches: [ master, development, experimental ]
+    branches: [ master, development, experimental, ow* ]
 
 jobs:
   build:
