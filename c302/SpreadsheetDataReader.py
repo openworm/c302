@@ -30,7 +30,7 @@ def read_data(include_nonconnected_cells=False, neuron_connect=False):
         cells = []
         filename = "%sNeuronConnectFormatted.xlsx"%spreadsheet_location
         rb = open_workbook(filename)
-        print_("Opened Excel file: " + filename)
+        print_("Opened the Excel file: " + filename)
 
         for row in range(1,rb.sheet_by_index(0).nrows):
             pre = str(rb.sheet_by_index(0).cell(row,0).value)
@@ -53,7 +53,7 @@ def read_data(include_nonconnected_cells=False, neuron_connect=False):
         filename = "%sCElegansNeuronTables.xls"%spreadsheet_location
         rb = open_workbook(filename)
 
-        print_("Opened Excel file: " + filename)
+        print_("Opened Excel file..: " + filename)
 
         known_nonconnected_cells = ['CANL', 'CANR', 'VC6']
 
