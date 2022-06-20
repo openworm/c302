@@ -24,7 +24,7 @@ setup(
         'numpy',
         'xlrd',
         'xlwt',
-        'pyNeuroML>=0.5.11',
+        'pyNeuroML',
         'owmeta>=0.12.3',
     ],
     entry_points={
