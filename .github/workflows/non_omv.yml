@@ -44,8 +44,12 @@ jobs:
         omv install NEURON # Need to install NEURON
         which nrnivmodl
         export NEURON_HOME=$RUNNER_TOOL_CACHE/Python/3.9.7/x64/
-        env
-        pip freeze
+        
     - name: Run test script
       run: |
         ./test.sh
+        
+    - name: Final version info
+      run: |
+        pip list
+        env
