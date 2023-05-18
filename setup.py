@@ -11,7 +11,7 @@ version = about['__version__']
 
 
 long_description = """
-c302 is a framework for generating network models in NeuroML 2 based on C elegans connectivity data. Part of the OpenWorm project
+c302 is a framework for generating network models in NeuroML 2 based on C elegans connectivity data. Part of the OpenWorm project.
 """
 
 setup(
