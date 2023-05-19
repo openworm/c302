@@ -64,7 +64,7 @@ def plots(a_n, info, cells, dt):
 
     fig.colorbar(plot0)
 
-    fig.canvas.set_window_title(info)
+    fig.canvas.manager.set_window_title(info)
     plt.title(info)
     plt.xlabel('Time (ms)')
 
