@@ -367,7 +367,7 @@ def _show_conn_matrix(data, t, all_info_pre,all_info_post, type, save_figure_to=
     fig, ax = plt.subplots()
     title = '%s: %s'%(type,t)
     plt.title(title)
-    fig.canvas.set_window_title(title)
+    fig.canvas.manager.set_window_title(title)
     import matplotlib
     cm = matplotlib.cm.get_cmap('gist_stern_r')
 
