@@ -35,7 +35,13 @@ class OpenWormReader(object):
     def read_data(self, include_nonconnected_cells=False):
         print_("Initialising OpenWormReader")
 
-        cell_names, pre, post, conns = self._read_connections('neuron')
+        try:
+            cell_names, pre, post, conns = self._read_connections('neuron')
+        except:
+            print('\nProblem loading connections via owmeta! The package is installed however. You may need to try running:'+
+                  "\n\n    owm bundle remote --user add ow 'https://raw.githubusercontent.com/openworm/owmeta-bundles/master/index.json'\n")
+        
+            exit()
 
         if include_nonconnected_cells:
             return cell_names, conns
