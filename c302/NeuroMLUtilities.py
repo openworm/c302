@@ -6,6 +6,7 @@
 
 ############################################################
 
+from c302 import print_
 
 class ConnectionInfo:
 
@@ -71,3 +72,52 @@ def get3DPosition(cell, segment_index, fraction_along):
 
 def fract(a, b, f):
     return a+(b-a)*f
+
+
+def analyse_connections(cells, neuron_conns, neurons2muscles, muscles, muscle_conns):
+
+    print_("Found %s cells: %s\n"%(len(cells),sorted(cells)))
+    #assert(len(cells) == 302)
+    #print_("Expected number of cells correct if include_nonconnected_cells=True")
+
+
+    print_("Found %s connections..."%(len(neuron_conns)))
+    for c in neuron_conns[:5]: print_("   %s"%c)
+
+    print_("   ...\n")
+    nts = {}
+    nts_tot = {}
+    for c in neuron_conns:
+        nt = c.synclass
+        if not nt in nts:
+            nts[nt] = 0
+            nts_tot[nt] = 0
+        nts[nt]+=1
+        nts_tot[nt]+=c.number
+    
+    for nt in sorted(nts.keys()):
+        print_("   %s present in %s connections, %s synapses total (avg %.3f syns per conn)"%(nt, nts[nt], nts_tot[nt], nts_tot[nt]/nts[nt]))
+
+    print_("")
+    print_("   ---  Muscles  ---")
+    print_("")
+
+
+    print_("Found %i neurons connected to muscles: %s\n"%(len(neurons2muscles), sorted(neurons2muscles)))
+    print_("Found %i muscles connected to neurons: %s\n"%(len(muscles), sorted(muscles)))
+    print_("Found %i connections between neurons and muscles, e.g. %s\n"%(len(muscle_conns), muscle_conns[0]))
+
+    nts = {}
+    nts_tot = {}
+    for c in muscle_conns:
+        nt = c.synclass
+        if not nt in nts:
+            nts[nt] = 0
+            nts_tot[nt] = 0
+        nts[nt]+=1
+        nts_tot[nt]+=c.number
+    
+    for nt in nts:
+        print_("  %s present in %s connections, %s synapses total (avg %.3f syns per conn)"%(nt, nts[nt], nts_tot[nt], nts_tot[nt]/nts[nt]))
+
+    print_("")

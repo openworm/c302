@@ -2,6 +2,7 @@ import logging
 import re
 
 from c302.NeuroMLUtilities import ConnectionInfo
+from c302.NeuroMLUtilities import analyse_connections
 from c302 import print_, MUSCLE_RE
 
 from owmeta_core.bundle import Bundle
@@ -138,20 +139,13 @@ read_muscle_data = READER.read_muscle_data
 
 if __name__ == "__main__":
 
-    cells, conns = read_data(include_nonconnected_cells=True)
+   
+    cells, neuron_conns = read_data(include_nonconnected_cells=True)
+    neurons2muscles, muscles, muscle_conns = read_muscle_data()
 
-    print_("%i cells found using OpenWormReader: %s, etc..." % (len(cells), sorted(cells)[0:3]))
-    print_("Found %s cells: %s...\n"%(len(cells),cells))
+    analyse_connections(cells, neuron_conns, neurons2muscles, muscles, muscle_conns)
 
-    print_("Found %s connections using OpenWormReader, First few: " % (len(conns), ))
-    for c in sorted(conns)[:min(len(conns),5)]:
-        print_('  %s'%c)
-
-    neurons, muscles, conns = read_muscle_data()
-
-    print_("Found %i neurons connected to muscles: %s\n"%(len(neurons), sorted(neurons)))
-    print_("Found %i muscles connected to neurons: %s\n"%(len(muscles), sorted(muscles)))
-    print_("Found %i connections between neurons and muscles, e.g. %s\n\n"%(len(conns), conns[0]))
+    exit()
 
 
     conn_map_OWR = {}
