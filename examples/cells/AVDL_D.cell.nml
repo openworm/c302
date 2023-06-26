@@ -1,4 +1,4 @@
-<neuroml xmlns="http://www.neuroml.org/schema/neuroml2"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2 https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2.2.xsd" id="AVDL">
+<neuroml xmlns="http://www.neuroml.org/schema/neuroml2"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2 https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2.3.xsd" id="AVDL">
     <cell id="AVDL">
         <notes>Cell model created by c302 with custom electrical parameters</notes>
         <morphology id="morphology_AVDL">
@@ -233,10 +233,10 @@
                 <parent segment="15"/>
                 <distal x="-4.8500004" y="-275.3" z="52.824997" diameter="0.48218253"/>
             </segment>
-            <segmentGroup neuroLexId="sao864921383" id="Soma">
+            <segmentGroup id="Soma" neuroLexId="sao864921383">
                 <member segment="0"/>
             </segmentGroup>
-            <segmentGroup neuroLexId="sao864921383" id="Axon">
+            <segmentGroup id="Axon" neuroLexId="sao864921383">
                 <member segment="17"/>
                 <member segment="18"/>
                 <member segment="19"/>
@@ -278,7 +278,7 @@
                 <member segment="55"/>
                 <member segment="56"/>
             </segmentGroup>
-            <segmentGroup neuroLexId="sao864921383" id="Dendrite2">
+            <segmentGroup id="Dendrite2" neuroLexId="sao864921383">
                 <member segment="1"/>
                 <member segment="2"/>
                 <member segment="3"/>
@@ -288,7 +288,7 @@
                 <member segment="7"/>
                 <member segment="8"/>
             </segmentGroup>
-            <segmentGroup neuroLexId="sao864921383" id="Dendrite3">
+            <segmentGroup id="Dendrite3" neuroLexId="sao864921383">
                 <member segment="9"/>
                 <member segment="10"/>
                 <member segment="11"/>
@@ -304,13 +304,13 @@
                 <include segmentGroup="Dendrite2"/>
                 <include segmentGroup="Dendrite3"/>
             </segmentGroup>
-            <segmentGroup neuroLexId="GO:0043025" id="soma_group">
+            <segmentGroup id="soma_group" neuroLexId="GO:0043025">
                 <include segmentGroup="Soma"/>
             </segmentGroup>
-            <segmentGroup neuroLexId="GO:0030424" id="axon_group">
+            <segmentGroup id="axon_group" neuroLexId="GO:0030424">
                 <include segmentGroup="Axon"/>
             </segmentGroup>
-            <segmentGroup neuroLexId="GO:0030425" id="dendrite_group">
+            <segmentGroup id="dendrite_group" neuroLexId="GO:0030425">
                 <include segmentGroup="Dendrite2"/>
                 <include segmentGroup="Dendrite3"/>
             </segmentGroup>

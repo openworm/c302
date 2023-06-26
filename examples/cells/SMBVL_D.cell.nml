@@ -1,4 +1,4 @@
-<neuroml xmlns="http://www.neuroml.org/schema/neuroml2"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2 https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2.2.xsd" id="SMBVL">
+<neuroml xmlns="http://www.neuroml.org/schema/neuroml2"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2 https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2.3.xsd" id="SMBVL">
     <cell id="SMBVL">
         <notes>Cell model created by c302 with custom electrical parameters</notes>
         <morphology id="morphology_SMBVL">
@@ -231,10 +231,10 @@
                 <parent segment="55"/>
                 <distal x="7.9000006" y="397.225" z="4.3" diameter="0.32015622"/>
             </segment>
-            <segmentGroup neuroLexId="sao864921383" id="Soma">
+            <segmentGroup id="Soma" neuroLexId="sao864921383">
                 <member segment="0"/>
             </segmentGroup>
-            <segmentGroup neuroLexId="sao864921383" id="Axon">
+            <segmentGroup id="Axon" neuroLexId="sao864921383">
                 <member segment="1"/>
                 <member segment="2"/>
                 <member segment="3"/>
@@ -296,10 +296,10 @@
                 <include segmentGroup="Soma"/>
                 <include segmentGroup="Axon"/>
             </segmentGroup>
-            <segmentGroup neuroLexId="GO:0043025" id="soma_group">
+            <segmentGroup id="soma_group" neuroLexId="GO:0043025">
                 <include segmentGroup="Soma"/>
             </segmentGroup>
-            <segmentGroup neuroLexId="GO:0030424" id="axon_group">
+            <segmentGroup id="axon_group" neuroLexId="GO:0030424">
                 <include segmentGroup="Axon"/>
             </segmentGroup>
         </morphology>
