@@ -4,9 +4,8 @@
 
 #    A simple script to read the values in herm_full_edgelist.csv.
 
-#    Note: this file cam be replaced with a call to owmeta
-#    when that package is updated to read all of this data from the
-#    spreadsheet, see OpenWormReader.py
+#    This is on of a number of interchangeable "Readers" which can 
+#    be used to get connection data for c302
 
 ############################################################
 

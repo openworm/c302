@@ -4,14 +4,14 @@
 
 #    A simple script to read the values in CElegansNeuronTables.xls.
 
-#    Note: this file will be replaced with a call to PyOpenWorm
-#    when that package is updated to read all of this data from the
-#    spreadseet
+#    This is on of a number of interchangeable "Readers" which can 
+#    be used to get connection data for c302
 
 ############################################################
 
 
 from c302.NeuroMLUtilities import ConnectionInfo
+from c302.NeuroMLUtilities import analyse_connections
 
 from xlrd import open_workbook
 import os
@@ -109,23 +109,10 @@ def read_muscle_data():
 
 def main():
 
-    cells, conns = read_data(include_nonconnected_cells=True)
+    cells, neuron_conns = read_data(include_nonconnected_cells=True)
+    neurons2muscles, muscles, muscle_conns = read_muscle_data()
 
-    assert(len(cells) == 302)
-
-    print_("Lengths are equal if include_nonconnected_cells=True")
-
-    print_("Found %s cells: %s...\n"%(len(cells),cells))
-
-    print_("Found %s connections..."%(len(conns)))
-    for c in conns[:5]: print_("   %s"%c)
-    print_("   ...\n")
-
-    neurons, muscles, conns = read_muscle_data()
-
-    print_("Found %i neurons connected to muscles: %s\n"%(len(neurons), sorted(neurons)))
-    print_("Found %i muscles connected to neurons: %s\n"%(len(muscles), sorted(muscles)))
-    print_("Found %i connections between neurons and muscles, e.g. %s\n"%(len(conns), conns[0]))
+    analyse_connections(cells, neuron_conns, neurons2muscles, muscles, muscle_conns)
 
 if __name__ == '__main__':
 
