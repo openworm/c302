@@ -1,11 +1,10 @@
 {
     "IClamp_GenericMuscleCell": {
-        "version": "NeuroMLlite v0.3.0",
-        "temperature": 34.0,
+        "version": "NeuroMLlite v0.5.6",
+        "notes": "A network model: IClamp_GenericMuscleCell",
         "parameters": {
             "stim_amp": "4pA"
         },
-        "notes": "A network model: IClamp_GenericMuscleCell",
         "cells": {
             "GenericMuscleCell": {
                 "neuroml2_source_file": "GenericMuscleCell.cell.nml"
@@ -13,12 +12,12 @@
         },
         "input_sources": {
             "iclamp_0": {
-                "neuroml2_input": "PulseGenerator",
                 "parameters": {
                     "amplitude": "stim_amp",
                     "delay": "500ms",
                     "duration": "2000ms"
-                }
+                },
+                "neuroml2_input": "PulseGenerator"
             }
         },
         "regions": {
@@ -49,6 +48,7 @@
                 "population": "pop_GenericMuscleCell",
                 "percentage": 100.0
             }
-        }
+        },
+        "temperature": 34.0
     }
 }
