@@ -1,3 +1,4 @@
+
 import c302
 import sys
 import neuroml.writers as writers
@@ -16,7 +17,7 @@ def setup(parameter_set,
     
     
     
-    my_cells = ['RIAL', 'SMDDL','SMDVL']
+    my_cells = ['RIAL', 'RIAR', 'SMDDL','SMDVL']
     muscles_to_include = []
     
     cells               = my_cells
