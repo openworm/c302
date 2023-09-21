@@ -4,7 +4,7 @@
 Parameters and setting used to generate this network:
 
     Data reader:                    SpreadsheetDataReader
-    c302 version:                   0.7.10
+    c302 version:                   0.7.11
     owmeta version:                 0.12.3
     owmeta_core version:            0.13.5
     Cells:                          ['ADAL', 'PVCL']
@@ -148,7 +148,7 @@ Parameters and setting used to generate this network:
         <population id="MDR01" component="GenericMuscleCell" size="1" type="populationList">
             <property tag="color" value="0 .6 0"/>
             <instance id="0">
-                <location x="-80." y="-270." z="80."/>
+                <location x="-80.0" y="-270.0" z="80.0"/>
             </instance>
         </population>
         <inputList id="Input_ADAL_stim_ADAL_1" population="ADAL" component="stim_ADAL_1">

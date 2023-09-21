@@ -4,7 +4,7 @@
 Parameters and setting used to generate this network:
 
     Data reader:                    SpreadsheetDataReader
-    c302 version:                   0.7.10
+    c302 version:                   0.7.11
     owmeta version:                 0.12.3
     owmeta_core version:            0.13.5
     Cells:                          ['DB2', 'VB2', 'DD2', 'VD2', 'DB3', 'VB3', 'DD3', 'VD3', 'DA2', 'VA2', 'DA3', 'VA3', 'AVBL', 'AVBR']
@@ -210,7 +210,7 @@ Parameters and setting used to generate this network:
             <property tag="neurotransmitter" value="Acetylcholine"/>
             <property tag="OpenWormBackerAssignedName" value="Bloodgood"/>
             <instance id="0">
-                <location x="-2." y="-253.300000000000011" z="19.850000000000001"/>
+                <location x="-2.0" y="-253.300000000000011" z="19.850000000000001"/>
             </instance>
         </population>
         <population id="VB3" component="GenericNeuronCell" size="1" type="populationList">
@@ -242,169 +242,169 @@ Parameters and setting used to generate this network:
             </instance>
         </population>
         <projection id="NC_AVBL_AVBR_Glutamate" presynapticPopulation="AVBL" postsynapticPopulation="AVBR" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../AVBL/0/GenericNeuronCell" postCellId="../AVBR/0/GenericNeuronCell" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../AVBL/0/GenericNeuronCell" postCellId="../AVBR/0/GenericNeuronCell" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_AVBL_VA2_Glutamate" presynapticPopulation="AVBL" postsynapticPopulation="VA2" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../AVBL/0/GenericNeuronCell" postCellId="../VA2/0/GenericNeuronCell" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../AVBL/0/GenericNeuronCell" postCellId="../VA2/0/GenericNeuronCell" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_AVBL_VB2_Glutamate" presynapticPopulation="AVBL" postsynapticPopulation="VB2" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../AVBL/0/GenericNeuronCell" postCellId="../VB2/0/GenericNeuronCell" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../AVBL/0/GenericNeuronCell" postCellId="../VB2/0/GenericNeuronCell" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_AVBR_AVBL_Glutamate" presynapticPopulation="AVBR" postsynapticPopulation="AVBL" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../AVBR/0/GenericNeuronCell" postCellId="../AVBL/0/GenericNeuronCell" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../AVBR/0/GenericNeuronCell" postCellId="../AVBL/0/GenericNeuronCell" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_AVBR_VD3_Glutamate" presynapticPopulation="AVBR" postsynapticPopulation="VD3" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../AVBR/0/GenericNeuronCell" postCellId="../VD3/0/GenericNeuronCell" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../AVBR/0/GenericNeuronCell" postCellId="../VD3/0/GenericNeuronCell" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_DA2_VD2_Acetylcholine" presynapticPopulation="DA2" postsynapticPopulation="VD2" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../DA2/0/GenericNeuronCell" postCellId="../VD2/0/GenericNeuronCell" weight="11." delay="0ms"/>
+            <connectionWD id="0" preCellId="../DA2/0/GenericNeuronCell" postCellId="../VD2/0/GenericNeuronCell" weight="11.0" delay="0ms"/>
         </projection>
         <projection id="NC_DA2_VD3_Acetylcholine" presynapticPopulation="DA2" postsynapticPopulation="VD3" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../DA2/0/GenericNeuronCell" postCellId="../VD3/0/GenericNeuronCell" weight="5." delay="0ms"/>
+            <connectionWD id="0" preCellId="../DA2/0/GenericNeuronCell" postCellId="../VD3/0/GenericNeuronCell" weight="5.0" delay="0ms"/>
         </projection>
         <projection id="NC_DA3_DB3_Acetylcholine" presynapticPopulation="DA3" postsynapticPopulation="DB3" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../DA3/0/GenericNeuronCell" postCellId="../DB3/0/GenericNeuronCell" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../DA3/0/GenericNeuronCell" postCellId="../DB3/0/GenericNeuronCell" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_DA3_DD2_Acetylcholine" presynapticPopulation="DA3" postsynapticPopulation="DD2" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../DA3/0/GenericNeuronCell" postCellId="../DD2/0/GenericNeuronCell" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../DA3/0/GenericNeuronCell" postCellId="../DD2/0/GenericNeuronCell" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_DA3_VD3_Acetylcholine" presynapticPopulation="DA3" postsynapticPopulation="VD3" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../DA3/0/GenericNeuronCell" postCellId="../VD3/0/GenericNeuronCell" weight="25." delay="0ms"/>
+            <connectionWD id="0" preCellId="../DA3/0/GenericNeuronCell" postCellId="../VD3/0/GenericNeuronCell" weight="25.0" delay="0ms"/>
         </projection>
         <projection id="NC_DB2_DA3_Acetylcholine" presynapticPopulation="DB2" postsynapticPopulation="DA3" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../DB2/0/GenericNeuronCell" postCellId="../DA3/0/GenericNeuronCell" weight="5." delay="0ms"/>
+            <connectionWD id="0" preCellId="../DB2/0/GenericNeuronCell" postCellId="../DA3/0/GenericNeuronCell" weight="5.0" delay="0ms"/>
         </projection>
         <projection id="NC_DB2_DD2_Acetylcholine" presynapticPopulation="DB2" postsynapticPopulation="DD2" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../DB2/0/GenericNeuronCell" postCellId="../DD2/0/GenericNeuronCell" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../DB2/0/GenericNeuronCell" postCellId="../DD2/0/GenericNeuronCell" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_DB2_VD3_Acetylcholine" presynapticPopulation="DB2" postsynapticPopulation="VD3" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../DB2/0/GenericNeuronCell" postCellId="../VD3/0/GenericNeuronCell" weight="23." delay="0ms"/>
+            <connectionWD id="0" preCellId="../DB2/0/GenericNeuronCell" postCellId="../VD3/0/GenericNeuronCell" weight="23.0" delay="0ms"/>
         </projection>
         <projection id="NC_DB3_DD2_Acetylcholine" presynapticPopulation="DB3" postsynapticPopulation="DD2" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../DB3/0/GenericNeuronCell" postCellId="../DD2/0/GenericNeuronCell" weight="4." delay="0ms"/>
+            <connectionWD id="0" preCellId="../DB3/0/GenericNeuronCell" postCellId="../DD2/0/GenericNeuronCell" weight="4.0" delay="0ms"/>
         </projection>
         <projection id="NC_DB3_DD3_Acetylcholine" presynapticPopulation="DB3" postsynapticPopulation="DD3" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../DB3/0/GenericNeuronCell" postCellId="../DD3/0/GenericNeuronCell" weight="10." delay="0ms"/>
+            <connectionWD id="0" preCellId="../DB3/0/GenericNeuronCell" postCellId="../DD3/0/GenericNeuronCell" weight="10.0" delay="0ms"/>
         </projection>
         <projection id="NC_DD2_DA3_GABA" presynapticPopulation="DD2" postsynapticPopulation="DA3" synapse="neuron_to_neuron_inh_syn">
-            <connectionWD id="0" preCellId="../DD2/0/GenericNeuronCell" postCellId="../DA3/0/GenericNeuronCell" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../DD2/0/GenericNeuronCell" postCellId="../DA3/0/GenericNeuronCell" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_DD2_VD3_GABA" presynapticPopulation="DD2" postsynapticPopulation="VD3" synapse="neuron_to_neuron_inh_syn">
-            <connectionWD id="0" preCellId="../DD2/0/GenericNeuronCell" postCellId="../VD3/0/GenericNeuronCell" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../DD2/0/GenericNeuronCell" postCellId="../VD3/0/GenericNeuronCell" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_VD2_VA2_GABA" presynapticPopulation="VD2" postsynapticPopulation="VA2" synapse="neuron_to_neuron_inh_syn">
-            <connectionWD id="0" preCellId="../VD2/0/GenericNeuronCell" postCellId="../VA2/0/GenericNeuronCell" weight="6." delay="0ms"/>
+            <connectionWD id="0" preCellId="../VD2/0/GenericNeuronCell" postCellId="../VA2/0/GenericNeuronCell" weight="6.0" delay="0ms"/>
         </projection>
         <projection id="NC_VD2_VB2_GABA" presynapticPopulation="VD2" postsynapticPopulation="VB2" synapse="neuron_to_neuron_inh_syn">
-            <connectionWD id="0" preCellId="../VD2/0/GenericNeuronCell" postCellId="../VB2/0/GenericNeuronCell" weight="3." delay="0ms"/>
+            <connectionWD id="0" preCellId="../VD2/0/GenericNeuronCell" postCellId="../VB2/0/GenericNeuronCell" weight="3.0" delay="0ms"/>
         </projection>
         <projection id="NC_VD3_VA3_GABA" presynapticPopulation="VD3" postsynapticPopulation="VA3" synapse="neuron_to_neuron_inh_syn">
-            <connectionWD id="0" preCellId="../VD3/0/GenericNeuronCell" postCellId="../VA3/0/GenericNeuronCell" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../VD3/0/GenericNeuronCell" postCellId="../VA3/0/GenericNeuronCell" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_VD3_VB2_GABA" presynapticPopulation="VD3" postsynapticPopulation="VB2" synapse="neuron_to_neuron_inh_syn">
-            <connectionWD id="0" preCellId="../VD3/0/GenericNeuronCell" postCellId="../VB2/0/GenericNeuronCell" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../VD3/0/GenericNeuronCell" postCellId="../VB2/0/GenericNeuronCell" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_VA2_VA3_Acetylcholine" presynapticPopulation="VA2" postsynapticPopulation="VA3" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../VA2/0/GenericNeuronCell" postCellId="../VA3/0/GenericNeuronCell" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../VA2/0/GenericNeuronCell" postCellId="../VA3/0/GenericNeuronCell" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_VA2_VD2_Acetylcholine" presynapticPopulation="VA2" postsynapticPopulation="VD2" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../VA2/0/GenericNeuronCell" postCellId="../VD2/0/GenericNeuronCell" weight="8." delay="0ms"/>
+            <connectionWD id="0" preCellId="../VA2/0/GenericNeuronCell" postCellId="../VD2/0/GenericNeuronCell" weight="8.0" delay="0ms"/>
         </projection>
         <projection id="NC_VA3_DD2_Acetylcholine" presynapticPopulation="VA3" postsynapticPopulation="DD2" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../VA3/0/GenericNeuronCell" postCellId="../DD2/0/GenericNeuronCell" weight="11." delay="0ms"/>
+            <connectionWD id="0" preCellId="../VA3/0/GenericNeuronCell" postCellId="../DD2/0/GenericNeuronCell" weight="11.0" delay="0ms"/>
         </projection>
         <projection id="NC_VA3_VD2_Acetylcholine" presynapticPopulation="VA3" postsynapticPopulation="VD2" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../VA3/0/GenericNeuronCell" postCellId="../VD2/0/GenericNeuronCell" weight="3." delay="0ms"/>
+            <connectionWD id="0" preCellId="../VA3/0/GenericNeuronCell" postCellId="../VD2/0/GenericNeuronCell" weight="3.0" delay="0ms"/>
         </projection>
         <projection id="NC_VA3_VD3_Acetylcholine" presynapticPopulation="VA3" postsynapticPopulation="VD3" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../VA3/0/GenericNeuronCell" postCellId="../VD3/0/GenericNeuronCell" weight="3." delay="0ms"/>
+            <connectionWD id="0" preCellId="../VA3/0/GenericNeuronCell" postCellId="../VD3/0/GenericNeuronCell" weight="3.0" delay="0ms"/>
         </projection>
         <projection id="NC_VB2_DD2_Acetylcholine" presynapticPopulation="VB2" postsynapticPopulation="DD2" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../VB2/0/GenericNeuronCell" postCellId="../DD2/0/GenericNeuronCell" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../VB2/0/GenericNeuronCell" postCellId="../DD2/0/GenericNeuronCell" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_VB2_VA2_Acetylcholine" presynapticPopulation="VB2" postsynapticPopulation="VA2" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../VB2/0/GenericNeuronCell" postCellId="../VA2/0/GenericNeuronCell" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../VB2/0/GenericNeuronCell" postCellId="../VA2/0/GenericNeuronCell" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_VB2_VD2_Acetylcholine" presynapticPopulation="VB2" postsynapticPopulation="VD2" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../VB2/0/GenericNeuronCell" postCellId="../VD2/0/GenericNeuronCell" weight="9." delay="0ms"/>
+            <connectionWD id="0" preCellId="../VB2/0/GenericNeuronCell" postCellId="../VD2/0/GenericNeuronCell" weight="9.0" delay="0ms"/>
         </projection>
         <projection id="NC_VB2_VD3_Acetylcholine" presynapticPopulation="VB2" postsynapticPopulation="VD3" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../VB2/0/GenericNeuronCell" postCellId="../VD3/0/GenericNeuronCell" weight="3." delay="0ms"/>
+            <connectionWD id="0" preCellId="../VB2/0/GenericNeuronCell" postCellId="../VD3/0/GenericNeuronCell" weight="3.0" delay="0ms"/>
         </projection>
         <projection id="NC_VB3_DD2_Acetylcholine" presynapticPopulation="VB3" postsynapticPopulation="DD2" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../VB3/0/GenericNeuronCell" postCellId="../DD2/0/GenericNeuronCell" weight="37." delay="0ms"/>
+            <connectionWD id="0" preCellId="../VB3/0/GenericNeuronCell" postCellId="../DD2/0/GenericNeuronCell" weight="37.0" delay="0ms"/>
         </projection>
         <electricalProjection id="NC_AVBL_AVBR_Generic_GJ" presynapticPopulation="AVBL" postsynapticPopulation="AVBR">
-            <electricalConnectionInstanceW id="0" preCell="../AVBL/0/GenericNeuronCell" postCell="../AVBR/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="3."/>
+            <electricalConnectionInstanceW id="0" preCell="../AVBL/0/GenericNeuronCell" postCell="../AVBR/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="3.0"/>
         </electricalProjection>
         <electricalProjection id="NC_AVBL_DB3_Generic_GJ" presynapticPopulation="AVBL" postsynapticPopulation="DB3">
-            <electricalConnectionInstanceW id="0" preCell="../AVBL/0/GenericNeuronCell" postCell="../DB3/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../AVBL/0/GenericNeuronCell" postCell="../DB3/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_AVBL_VB2_Generic_GJ" presynapticPopulation="AVBL" postsynapticPopulation="VB2">
-            <electricalConnectionInstanceW id="0" preCell="../AVBL/0/GenericNeuronCell" postCell="../VB2/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="3."/>
+            <electricalConnectionInstanceW id="0" preCell="../AVBL/0/GenericNeuronCell" postCell="../VB2/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="3.0"/>
         </electricalProjection>
         <electricalProjection id="NC_AVBR_AVBL_Generic_GJ" presynapticPopulation="AVBR" postsynapticPopulation="AVBL">
-            <electricalConnectionInstanceW id="0" preCell="../AVBR/0/GenericNeuronCell" postCell="../AVBL/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="3."/>
+            <electricalConnectionInstanceW id="0" preCell="../AVBR/0/GenericNeuronCell" postCell="../AVBL/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="3.0"/>
         </electricalProjection>
         <electricalProjection id="NC_AVBR_DB2_Generic_GJ" presynapticPopulation="AVBR" postsynapticPopulation="DB2">
-            <electricalConnectionInstanceW id="0" preCell="../AVBR/0/GenericNeuronCell" postCell="../DB2/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../AVBR/0/GenericNeuronCell" postCell="../DB2/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_AVBR_DB3_Generic_GJ" presynapticPopulation="AVBR" postsynapticPopulation="DB3">
-            <electricalConnectionInstanceW id="0" preCell="../AVBR/0/GenericNeuronCell" postCell="../DB3/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../AVBR/0/GenericNeuronCell" postCell="../DB3/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_AVBR_VB2_Generic_GJ" presynapticPopulation="AVBR" postsynapticPopulation="VB2">
-            <electricalConnectionInstanceW id="0" preCell="../AVBR/0/GenericNeuronCell" postCell="../VB2/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../AVBR/0/GenericNeuronCell" postCell="../VB2/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_AVBR_VB3_Generic_GJ" presynapticPopulation="AVBR" postsynapticPopulation="VB3">
-            <electricalConnectionInstanceW id="0" preCell="../AVBR/0/GenericNeuronCell" postCell="../VB3/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../AVBR/0/GenericNeuronCell" postCell="../VB3/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_DB2_AVBR_Generic_GJ" presynapticPopulation="DB2" postsynapticPopulation="AVBR">
-            <electricalConnectionInstanceW id="0" preCell="../DB2/0/GenericNeuronCell" postCell="../AVBR/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../DB2/0/GenericNeuronCell" postCell="../AVBR/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_DB2_DB3_Generic_GJ" presynapticPopulation="DB2" postsynapticPopulation="DB3">
-            <electricalConnectionInstanceW id="0" preCell="../DB2/0/GenericNeuronCell" postCell="../DB3/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="6."/>
+            <electricalConnectionInstanceW id="0" preCell="../DB2/0/GenericNeuronCell" postCell="../DB3/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="6.0"/>
         </electricalProjection>
         <electricalProjection id="NC_DB3_AVBL_Generic_GJ" presynapticPopulation="DB3" postsynapticPopulation="AVBL">
-            <electricalConnectionInstanceW id="0" preCell="../DB3/0/GenericNeuronCell" postCell="../AVBL/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../DB3/0/GenericNeuronCell" postCell="../AVBL/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_DB3_AVBR_Generic_GJ" presynapticPopulation="DB3" postsynapticPopulation="AVBR">
-            <electricalConnectionInstanceW id="0" preCell="../DB3/0/GenericNeuronCell" postCell="../AVBR/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../DB3/0/GenericNeuronCell" postCell="../AVBR/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_DB3_DB2_Generic_GJ" presynapticPopulation="DB3" postsynapticPopulation="DB2">
-            <electricalConnectionInstanceW id="0" preCell="../DB3/0/GenericNeuronCell" postCell="../DB2/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="6."/>
+            <electricalConnectionInstanceW id="0" preCell="../DB3/0/GenericNeuronCell" postCell="../DB2/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="6.0"/>
         </electricalProjection>
         <electricalProjection id="NC_DD2_DD3_Generic_GJ" presynapticPopulation="DD2" postsynapticPopulation="DD3">
-            <electricalConnectionInstanceW id="0" preCell="../DD2/0/GenericNeuronCell" postCell="../DD3/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="2."/>
+            <electricalConnectionInstanceW id="0" preCell="../DD2/0/GenericNeuronCell" postCell="../DD3/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="2.0"/>
         </electricalProjection>
         <electricalProjection id="NC_DD3_DD2_Generic_GJ" presynapticPopulation="DD3" postsynapticPopulation="DD2">
-            <electricalConnectionInstanceW id="0" preCell="../DD3/0/GenericNeuronCell" postCell="../DD2/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="2."/>
+            <electricalConnectionInstanceW id="0" preCell="../DD3/0/GenericNeuronCell" postCell="../DD2/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="2.0"/>
         </electricalProjection>
         <electricalProjection id="NC_VD2_VA2_Generic_GJ" presynapticPopulation="VD2" postsynapticPopulation="VA2">
-            <electricalConnectionInstanceW id="0" preCell="../VD2/0/GenericNeuronCell" postCell="../VA2/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="3."/>
+            <electricalConnectionInstanceW id="0" preCell="../VD2/0/GenericNeuronCell" postCell="../VA2/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="3.0"/>
         </electricalProjection>
         <electricalProjection id="NC_VD2_VD3_Generic_GJ" presynapticPopulation="VD2" postsynapticPopulation="VD3">
-            <electricalConnectionInstanceW id="0" preCell="../VD2/0/GenericNeuronCell" postCell="../VD3/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="2."/>
+            <electricalConnectionInstanceW id="0" preCell="../VD2/0/GenericNeuronCell" postCell="../VD3/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="2.0"/>
         </electricalProjection>
         <electricalProjection id="NC_VD3_VD2_Generic_GJ" presynapticPopulation="VD3" postsynapticPopulation="VD2">
-            <electricalConnectionInstanceW id="0" preCell="../VD3/0/GenericNeuronCell" postCell="../VD2/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="2."/>
+            <electricalConnectionInstanceW id="0" preCell="../VD3/0/GenericNeuronCell" postCell="../VD2/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="2.0"/>
         </electricalProjection>
         <electricalProjection id="NC_VA2_VD2_Generic_GJ" presynapticPopulation="VA2" postsynapticPopulation="VD2">
-            <electricalConnectionInstanceW id="0" preCell="../VA2/0/GenericNeuronCell" postCell="../VD2/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="3."/>
+            <electricalConnectionInstanceW id="0" preCell="../VA2/0/GenericNeuronCell" postCell="../VD2/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="3.0"/>
         </electricalProjection>
         <electricalProjection id="NC_VB2_AVBL_Generic_GJ" presynapticPopulation="VB2" postsynapticPopulation="AVBL">
-            <electricalConnectionInstanceW id="0" preCell="../VB2/0/GenericNeuronCell" postCell="../AVBL/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="3."/>
+            <electricalConnectionInstanceW id="0" preCell="../VB2/0/GenericNeuronCell" postCell="../AVBL/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="3.0"/>
         </electricalProjection>
         <electricalProjection id="NC_VB2_AVBR_Generic_GJ" presynapticPopulation="VB2" postsynapticPopulation="AVBR">
-            <electricalConnectionInstanceW id="0" preCell="../VB2/0/GenericNeuronCell" postCell="../AVBR/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../VB2/0/GenericNeuronCell" postCell="../AVBR/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_VB2_VB3_Generic_GJ" presynapticPopulation="VB2" postsynapticPopulation="VB3">
-            <electricalConnectionInstanceW id="0" preCell="../VB2/0/GenericNeuronCell" postCell="../VB3/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../VB2/0/GenericNeuronCell" postCell="../VB3/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_VB3_AVBR_Generic_GJ" presynapticPopulation="VB3" postsynapticPopulation="AVBR">
-            <electricalConnectionInstanceW id="0" preCell="../VB3/0/GenericNeuronCell" postCell="../AVBR/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../VB3/0/GenericNeuronCell" postCell="../AVBR/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_VB3_VB2_Generic_GJ" presynapticPopulation="VB3" postsynapticPopulation="VB2">
-            <electricalConnectionInstanceW id="0" preCell="../VB3/0/GenericNeuronCell" postCell="../VB2/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../VB3/0/GenericNeuronCell" postCell="../VB2/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <inputList id="Input_AVBL_offset_current" population="AVBL" component="offset_current">
             <input id="0" target="../AVBL/0/GenericNeuronCell" destination="synapses"/>

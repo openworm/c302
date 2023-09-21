@@ -808,16 +808,19 @@ def generate(net_id,
             if cells_to_stimulate is None or cell in cells_to_stimulate:
 
                 target = "../%s/0/%s"%(pop0.id, cell_id)
-                if params.is_level_D():
-                    target+="/0"
 
                 input_list = InputList(id="Input_%s_%s"%(cell,params.offset_current.id),
                                      component=params.offset_current.id,
                                      populations='%s'%cell)
-
-                input_list.input.append(Input(id=0,
+                                     
+                i0 = Input(id=0,
                               target=target,
-                              destination="synapses"))
+                              destination="synapses")
+                
+                if params.is_level_D():
+                    i0.segment_id = 0
+
+                input_list.input.append(i0)
 
                 net.input_lists.append(input_list)
 
@@ -959,16 +962,19 @@ def generate(net_id,
             if cells_to_stimulate is not None and muscle in cells_to_stimulate:
 
                 target = "../%s/0/%s"%(pop0.id, params.generic_muscle_cell.id)
-                if params.is_level_D():
-                    target+="/0"
 
                 input_list = InputList(id="Input_%s_%s"%(muscle,params.offset_current.id),
                                      component=params.offset_current.id,
                                      populations='%s'%pop0.id)
 
-                input_list.input.append(Input(id=0,
+                i0 = Input(id=0,
                               target=target,
-                              destination="synapses"))
+                              destination="synapses")
+                
+                if params.is_level_D():
+                    i0.segment_id = 0
+
+                input_list.input.append(i0)
 
                 net.input_lists.append(input_list)
 

@@ -3,13 +3,14 @@
     Generated network: Canonical_C
     Generation seed: 1234
     NeuroMLlite parameters: 
+        rng = &lt;random.Random object at 0x128823e10&gt;
         scaleDinout = 0.5
         stim_amp = 3.5pA
         stim_duration = 2000ms
-        weight_IN_MN = 3
-        weight_MN_MN_Exc = 20
-        weight_MN_MN_Inh = 40</notes>
-    <include href="GenericNeuronCell.cell.nml"/>
+        weight_IN_MN = 3.0
+        weight_MN_MN_Exc = 20.0
+        weight_MN_MN_Inh = 4.0</notes>
+    <include href="/Users/padraig/c302/examples/parametersweep/GenericNeuronCell.cell.nml"/>
     <silentSynapse id="silentSyn_proj_AVB_VB"/>
     <silentSynapse id="silentSyn_proj_AVB_DB"/>
     <silentSynapse id="silentSyn_proj_DB_VD"/>
@@ -24,14 +25,14 @@
     <network id="Canonical_C">
         <property tag="recommended_dt_ms" value="0.1"/>
         <property tag="recommended_duration_ms" value="3000.0"/>
-        <population id="AVB" component="GenericNeuronCell" size="1" type="populationList">
-            <property tag="color" value="1 0 .4"/>
-            <property tag="region" value="interneurons"/>
+        <population id="VB" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="region" value="Ventral motorneurons"/>
             <instance id="0">
-                <location x="96.645353569213881" y="44.073259917535268" z="0.749147005858719"/>
+                <location x="296.645353569213853" y="244.073259917535268" z="0.749147005858719"/>
             </instance>
         </population>
-        <population id="VB" component="GenericNeuronCell" size="1" type="populationList">
+        <population id="VD" component="GenericNeuronCell" size="1" type="populationList">
             <property tag="color" value=".5 .4 1"/>
             <property tag="region" value="Ventral motorneurons"/>
             <instance id="0">
@@ -45,18 +46,18 @@
                 <location x="267.156348148798486" y="8.393822683708397" z="76.648093279179633"/>
             </instance>
         </population>
-        <population id="VD" component="GenericNeuronCell" size="1" type="populationList">
-            <property tag="color" value=".5 .4 1"/>
-            <property tag="region" value="Ventral motorneurons"/>
-            <instance id="0">
-                <location x="223.680977536311786" y="203.081402172661001" z="78.877271723628354"/>
-            </instance>
-        </population>
         <population id="DD" component="GenericNeuronCell" size="1" type="populationList">
             <property tag="color" value=".5 .4 1"/>
             <property tag="region" value="Dorsal motorneurons"/>
             <instance id="0">
-                <location x="234.608896559712321" y="62.328147503916853" z="61.581569510361525"/>
+                <location x="223.680977536311786" y="3.081402172660996" z="78.877271723628354"/>
+            </instance>
+        </population>
+        <population id="AVB" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="region" value="interneurons"/>
+            <instance id="0">
+                <location x="34.608896559712306" y="62.328147503916853" z="61.581569510361525"/>
             </instance>
         </population>
         <continuousProjection id="proj_AVB_VB" presynapticPopulation="AVB" postsynapticPopulation="VB">
@@ -78,10 +79,10 @@
             <continuousConnectionInstanceW id="0" preCell="../VB/0/GenericNeuronCell" postCell="../DD/0/GenericNeuronCell" preComponent="silentSyn_proj_VB_DD" postComponent="neuron_to_neuron_exc_syn" weight="20."/>
         </continuousProjection>
         <continuousProjection id="proj_VD_VB" presynapticPopulation="VD" postsynapticPopulation="VB">
-            <continuousConnectionInstanceW id="0" preCell="../VD/0/GenericNeuronCell" postCell="../VB/0/GenericNeuronCell" preComponent="silentSyn_proj_VD_VB" postComponent="neuron_to_neuron_inh_syn" weight="40."/>
+            <continuousConnectionInstanceW id="0" preCell="../VD/0/GenericNeuronCell" postCell="../VB/0/GenericNeuronCell" preComponent="silentSyn_proj_VD_VB" postComponent="neuron_to_neuron_inh_syn" weight="4."/>
         </continuousProjection>
         <continuousProjection id="proj_DD_DB" presynapticPopulation="DD" postsynapticPopulation="DB">
-            <continuousConnectionInstanceW id="0" preCell="../DD/0/GenericNeuronCell" postCell="../DB/0/GenericNeuronCell" preComponent="silentSyn_proj_DD_DB" postComponent="neuron_to_neuron_inh_syn" weight="40."/>
+            <continuousConnectionInstanceW id="0" preCell="../DD/0/GenericNeuronCell" postCell="../DB/0/GenericNeuronCell" preComponent="silentSyn_proj_DD_DB" postComponent="neuron_to_neuron_inh_syn" weight="4."/>
         </continuousProjection>
         <inputList id="stim" population="AVB" component="iclamp_0">
             <input id="0" target="../AVB/0/GenericNeuronCell" destination="synapses"/>
