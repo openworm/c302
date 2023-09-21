@@ -4,7 +4,7 @@
 Parameters and setting used to generate this network:
 
     Data reader:                    SpreadsheetDataReader
-    c302 version:                   0.7.10
+    c302 version:                   0.7.11
     owmeta version:                 0.12.3
     owmeta_core version:            0.13.5
     Cells:                          ['URYDL', 'SMDDR', 'VD12', 'VB11', 'AS2']
@@ -110,14 +110,14 @@ Parameters and setting used to generate this network:
         <population id="MDL07" component="generic_muscle_iaf_cell" size="1" type="populationList">
             <property tag="color" value="0 .6 0"/>
             <instance id="0">
-                <location x="80." y="-90." z="80."/>
+                <location x="80.0" y="-90.0" z="80.0"/>
             </instance>
         </population>
         <projection id="NC_VD12_VB11_GABA" presynapticPopulation="VD12" postsynapticPopulation="VB11" synapse="neuron_to_neuron_inh_syn">
-            <connectionWD id="0" preCellId="../VD12/0/generic_neuron_iaf_cell" postCellId="../VB11/0/generic_neuron_iaf_cell" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../VD12/0/generic_neuron_iaf_cell" postCellId="../VB11/0/generic_neuron_iaf_cell" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_URYDL_SMDDR_Glutamate" presynapticPopulation="URYDL" postsynapticPopulation="SMDDR" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../URYDL/0/generic_neuron_iaf_cell" postCellId="../SMDDR/0/generic_neuron_iaf_cell" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../URYDL/0/generic_neuron_iaf_cell" postCellId="../SMDDR/0/generic_neuron_iaf_cell" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_AS2_MDL07_Acetylcholine" presynapticPopulation="AS2" postsynapticPopulation="MDL07" synapse="neuron_to_muscle_exc_syn">
             <connection id="0" preCellId="../AS2/0/generic_neuron_iaf_cell" postCellId="../MDL07/0/generic_muscle_iaf_cell"/>
