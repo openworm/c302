@@ -1,6 +1,6 @@
 {
     "IClamp_GenericNeuronCell": {
-        "version": "NeuroMLlite v0.5.6",
+        "version": "NeuroMLlite v0.5.7",
         "notes": "A network model: IClamp_GenericNeuronCell",
         "parameters": {
             "stim_amp": "4pA"
@@ -46,7 +46,7 @@
             "Stim_iclamp_0": {
                 "input_source": "iclamp_0",
                 "population": "pop_GenericNeuronCell",
-                "percentage": 100.0
+                "percentage": 100
             }
         },
         "temperature": 34.0

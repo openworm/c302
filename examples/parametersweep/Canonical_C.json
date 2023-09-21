@@ -1,6 +1,6 @@
 {
     "Canonical_C": {
-        "version": "NeuroMLlite v0.5.6",
+        "version": "NeuroMLlite v0.5.7",
         "parameters": {
             "stim_duration": "2000ms",
             "stim_amp": "3.5pA",
@@ -212,7 +212,7 @@
             "stim": {
                 "input_source": "iclamp_0",
                 "population": "AVB",
-                "percentage": 100.0
+                "percentage": 100
             }
         }
     }
