@@ -1,6 +1,6 @@
 {
     "Canonical_C": {
-        "version": "NeuroMLlite v0.3.0",
+        "version": "NeuroMLlite v0.5.7",
         "parameters": {
             "stim_duration": "2000ms",
             "stim_amp": "3.5pA",
@@ -24,12 +24,12 @@
         },
         "input_sources": {
             "iclamp_0": {
-                "neuroml2_input": "PulseGenerator",
                 "parameters": {
                     "amplitude": "stim_amp",
                     "delay": "500ms",
                     "duration": "stim_duration"
-                }
+                },
+                "neuroml2_input": "PulseGenerator"
             }
         },
         "regions": {
@@ -212,7 +212,7 @@
             "stim": {
                 "input_source": "iclamp_0",
                 "population": "AVB",
-                "percentage": 100.0
+                "percentage": 100
             }
         }
     }

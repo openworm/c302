@@ -4,7 +4,7 @@
 Parameters and setting used to generate this network:
 
     Data reader:                    SpreadsheetDataReader
-    c302 version:                   0.7.10
+    c302 version:                   0.7.11
     owmeta version:                 0.12.3
     owmeta_core version:            0.13.5
     Cells:                          ['M1', 'M2L', 'M2R', 'M3L', 'M3R', 'M4', 'M5', 'I1L', 'I1R', 'I2L', 'I2R', 'I3', 'I4', 'I5', 'I6', 'MI', 'NSML', 'NSMR', 'MCL', 'MCR']
@@ -112,7 +112,7 @@ Parameters and setting used to generate this network:
             <property tag="neurotransmitter" value="Acetylcholine"/>
             <property tag="OpenWormBackerAssignedName" value="sitructa"/>
             <instance id="0">
-                <location x="0." y="0." z="0."/>
+                <location x="0.0" y="0.0" z="0.0"/>
             </instance>
         </population>
         <population id="I1R" component="I1R" size="1" type="populationList">
@@ -122,7 +122,7 @@ Parameters and setting used to generate this network:
             <property tag="neurotransmitter" value="Acetylcholine"/>
             <property tag="OpenWormBackerAssignedName" value="Jesus Martinez"/>
             <instance id="0">
-                <location x="0." y="0." z="0."/>
+                <location x="0.0" y="0.0" z="0.0"/>
             </instance>
         </population>
         <population id="I2L" component="I2L" size="1" type="populationList">
@@ -132,7 +132,7 @@ Parameters and setting used to generate this network:
             <property tag="neurotransmitter" value="Glutamate"/>
             <property tag="OpenWormBackerAssignedName" value="MetaMal"/>
             <instance id="0">
-                <location x="0." y="0." z="0."/>
+                <location x="0.0" y="0.0" z="0.0"/>
             </instance>
         </population>
         <population id="I2R" component="I2R" size="1" type="populationList">
@@ -142,7 +142,7 @@ Parameters and setting used to generate this network:
             <property tag="neurotransmitter" value=""/>
             <property tag="OpenWormBackerAssignedName" value="Flying Armbar"/>
             <instance id="0">
-                <location x="0." y="0." z="0."/>
+                <location x="0.0" y="0.0" z="0.0"/>
             </instance>
         </population>
         <population id="I3" component="I3" size="1" type="populationList">
@@ -151,7 +151,7 @@ Parameters and setting used to generate this network:
             <property tag="receptor" value="GLR-7; GLR-8; SER-7"/>
             <property tag="neurotransmitter" value=""/>
             <instance id="0">
-                <location x="0." y="0." z="0."/>
+                <location x="0.0" y="0.0" z="0.0"/>
             </instance>
         </population>
         <population id="I4" component="I4" size="1" type="populationList">
@@ -160,7 +160,7 @@ Parameters and setting used to generate this network:
             <property tag="receptor" value="SER-7"/>
             <property tag="neurotransmitter" value=""/>
             <instance id="0">
-                <location x="0." y="0." z="0."/>
+                <location x="0.0" y="0.0" z="0.0"/>
             </instance>
         </population>
         <population id="I5" component="I5" size="1" type="populationList">
@@ -170,7 +170,7 @@ Parameters and setting used to generate this network:
             <property tag="neurotransmitter" value="Glutamate; Serotonin"/>
             <property tag="OpenWormBackerAssignedName" value="yates"/>
             <instance id="0">
-                <location x="0." y="0." z="0."/>
+                <location x="0.0" y="0.0" z="0.0"/>
             </instance>
         </population>
         <population id="I6" component="I6" size="1" type="populationList">
@@ -179,7 +179,7 @@ Parameters and setting used to generate this network:
             <property tag="receptor" value="GLR-7; GLR-8; SER-7"/>
             <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
-                <location x="0." y="0." z="0."/>
+                <location x="0.0" y="0.0" z="0.0"/>
             </instance>
         </population>
         <population id="M1" component="M1" size="1" type="populationList">
@@ -189,7 +189,7 @@ Parameters and setting used to generate this network:
             <property tag="neurotransmitter" value="Acetylcholine"/>
             <property tag="OpenWormBackerAssignedName" value="albertwenger"/>
             <instance id="0">
-                <location x="0." y="0." z="0."/>
+                <location x="0.0" y="0.0" z="0.0"/>
             </instance>
         </population>
         <population id="M2L" component="M2L" size="1" type="populationList">
@@ -198,7 +198,7 @@ Parameters and setting used to generate this network:
             <property tag="receptor" value="SER-7"/>
             <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
-                <location x="0." y="0." z="0."/>
+                <location x="0.0" y="0.0" z="0.0"/>
             </instance>
         </population>
         <population id="M2R" component="M2R" size="1" type="populationList">
@@ -207,7 +207,7 @@ Parameters and setting used to generate this network:
             <property tag="receptor" value="SER-7"/>
             <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
-                <location x="0." y="0." z="0."/>
+                <location x="0.0" y="0.0" z="0.0"/>
             </instance>
         </population>
         <population id="M3L" component="M3L" size="1" type="populationList">
@@ -216,7 +216,7 @@ Parameters and setting used to generate this network:
             <property tag="receptor" value="GLR-8; NPR-1; SER-7"/>
             <property tag="neurotransmitter" value="Glutamate"/>
             <instance id="0">
-                <location x="0." y="0." z="0."/>
+                <location x="0.0" y="0.0" z="0.0"/>
             </instance>
         </population>
         <population id="M3R" component="M3R" size="1" type="populationList">
@@ -225,7 +225,7 @@ Parameters and setting used to generate this network:
             <property tag="receptor" value="GLR-8; NPR-1; SER-7"/>
             <property tag="neurotransmitter" value="Glutamate"/>
             <instance id="0">
-                <location x="0." y="0." z="0."/>
+                <location x="0.0" y="0.0" z="0.0"/>
             </instance>
         </population>
         <population id="M4" component="M4" size="1" type="populationList">
@@ -234,7 +234,7 @@ Parameters and setting used to generate this network:
             <property tag="receptor" value="GLR-8; SER-7; SER7b"/>
             <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
-                <location x="0." y="0." z="0."/>
+                <location x="0.0" y="0.0" z="0.0"/>
             </instance>
         </population>
         <population id="M5" component="M5" size="1" type="populationList">
@@ -244,7 +244,7 @@ Parameters and setting used to generate this network:
             <property tag="neurotransmitter" value="Acetylcholine"/>
             <property tag="OpenWormBackerAssignedName" value="Asher"/>
             <instance id="0">
-                <location x="0." y="0." z="0."/>
+                <location x="0.0" y="0.0" z="0.0"/>
             </instance>
         </population>
         <population id="MCL" component="MCL" size="1" type="populationList">
@@ -253,7 +253,7 @@ Parameters and setting used to generate this network:
             <property tag="receptor" value="GLR-8; SER-7; TYRA-2"/>
             <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
-                <location x="0." y="0." z="0."/>
+                <location x="0.0" y="0.0" z="0.0"/>
             </instance>
         </population>
         <population id="MCR" component="MCR" size="1" type="populationList">
@@ -262,7 +262,7 @@ Parameters and setting used to generate this network:
             <property tag="receptor" value="GLR-8; SER-7; TYRA-2"/>
             <property tag="neurotransmitter" value="Acetylcholine"/>
             <instance id="0">
-                <location x="0." y="0." z="0."/>
+                <location x="0.0" y="0.0" z="0.0"/>
             </instance>
         </population>
         <population id="MI" component="MI" size="1" type="populationList">
@@ -272,7 +272,7 @@ Parameters and setting used to generate this network:
             <property tag="neurotransmitter" value="Glutamate"/>
             <property tag="OpenWormBackerAssignedName" value="NeuroMind technology"/>
             <instance id="0">
-                <location x="0." y="0." z="0."/>
+                <location x="0.0" y="0.0" z="0.0"/>
             </instance>
         </population>
         <population id="NSML" component="NSML" size="1" type="populationList">
@@ -281,7 +281,7 @@ Parameters and setting used to generate this network:
             <property tag="receptor" value="AEX-2; DOP-3; GLR-7; GLR-8; SER-2; SER-4; TYRA-2"/>
             <property tag="neurotransmitter" value="Serotonin"/>
             <instance id="0">
-                <location x="0." y="0." z="0."/>
+                <location x="0.0" y="0.0" z="0.0"/>
             </instance>
         </population>
         <population id="NSMR" component="NSMR" size="1" type="populationList">
@@ -290,440 +290,440 @@ Parameters and setting used to generate this network:
             <property tag="receptor" value="AEX-2; DOP-3; GLR-7; GLR-8; SER-2; SER-4; TYRA-2"/>
             <property tag="neurotransmitter" value="Serotonin"/>
             <instance id="0">
-                <location x="0." y="0." z="0."/>
+                <location x="0.0" y="0.0" z="0.0"/>
             </instance>
         </population>
         <projection id="NC_I1L_I3_Acetylcholine" presynapticPopulation="I1L" postsynapticPopulation="I3" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../I1L/0/I1L" postCellId="../I3/0/I3" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../I1L/0/I1L" postCellId="../I3/0/I3" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_I1R_I3_Acetylcholine" presynapticPopulation="I1R" postsynapticPopulation="I3" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../I1R/0/I1R" postCellId="../I3/0/I3" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../I1R/0/I1R" postCellId="../I3/0/I3" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_I2L_M1_Glutamate" presynapticPopulation="I2L" postsynapticPopulation="M1" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../I2L/0/I2L" postCellId="../M1/0/M1" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../I2L/0/I2L" postCellId="../M1/0/M1" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_I2R_M1_Glutamate" presynapticPopulation="I2R" postsynapticPopulation="M1" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../I2R/0/I2R" postCellId="../M1/0/M1" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../I2R/0/I2R" postCellId="../M1/0/M1" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_I3_M1_Glutamate" presynapticPopulation="I3" postsynapticPopulation="M1" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../I3/0/I3" postCellId="../M1/0/M1" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../I3/0/I3" postCellId="../M1/0/M1" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_I3_M2L_Glutamate" presynapticPopulation="I3" postsynapticPopulation="M2L" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../I3/0/I3" postCellId="../M2L/0/M2L" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../I3/0/I3" postCellId="../M2L/0/M2L" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_I3_M2R_Glutamate" presynapticPopulation="I3" postsynapticPopulation="M2R" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../I3/0/I3" postCellId="../M2R/0/M2R" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../I3/0/I3" postCellId="../M2R/0/M2R" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_I4_I2L_Glutamate" presynapticPopulation="I4" postsynapticPopulation="I2L" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../I4/0/I4" postCellId="../I2L/0/I2L" weight="5." delay="0ms"/>
+            <connectionWD id="0" preCellId="../I4/0/I4" postCellId="../I2L/0/I2L" weight="5.0" delay="0ms"/>
         </projection>
         <projection id="NC_I4_I2R_Glutamate" presynapticPopulation="I4" postsynapticPopulation="I2R" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../I4/0/I4" postCellId="../I2R/0/I2R" weight="5." delay="0ms"/>
+            <connectionWD id="0" preCellId="../I4/0/I4" postCellId="../I2R/0/I2R" weight="5.0" delay="0ms"/>
         </projection>
         <projection id="NC_I4_I5_Glutamate" presynapticPopulation="I4" postsynapticPopulation="I5" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../I4/0/I4" postCellId="../I5/0/I5" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../I4/0/I4" postCellId="../I5/0/I5" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_I4_M1_Glutamate" presynapticPopulation="I4" postsynapticPopulation="M1" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../I4/0/I4" postCellId="../M1/0/M1" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../I4/0/I4" postCellId="../M1/0/M1" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_I5_I1L_Serotonin_Glutamate" presynapticPopulation="I5" postsynapticPopulation="I1L" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../I5/0/I5" postCellId="../I1L/0/I1L" weight="3." delay="0ms"/>
+            <connectionWD id="0" preCellId="../I5/0/I5" postCellId="../I1L/0/I1L" weight="3.0" delay="0ms"/>
         </projection>
         <projection id="NC_I5_I1R_Serotonin_Glutamate" presynapticPopulation="I5" postsynapticPopulation="I1R" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../I5/0/I5" postCellId="../I1R/0/I1R" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../I5/0/I5" postCellId="../I1R/0/I1R" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_I5_M1_Serotonin_Glutamate" presynapticPopulation="I5" postsynapticPopulation="M1" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../I5/0/I5" postCellId="../M1/0/M1" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../I5/0/I5" postCellId="../M1/0/M1" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_I5_M5_Serotonin_Glutamate" presynapticPopulation="I5" postsynapticPopulation="M5" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../I5/0/I5" postCellId="../M5/0/M5" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../I5/0/I5" postCellId="../M5/0/M5" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_I5_MI_Serotonin_Glutamate" presynapticPopulation="I5" postsynapticPopulation="MI" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../I5/0/I5" postCellId="../MI/0/MI" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../I5/0/I5" postCellId="../MI/0/MI" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_I6_I2L_Acetylcholine" presynapticPopulation="I6" postsynapticPopulation="I2L" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../I6/0/I6" postCellId="../I2L/0/I2L" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../I6/0/I6" postCellId="../I2L/0/I2L" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_I6_I2R_Acetylcholine" presynapticPopulation="I6" postsynapticPopulation="I2R" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../I6/0/I6" postCellId="../I2R/0/I2R" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../I6/0/I6" postCellId="../I2R/0/I2R" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_I6_I3_Acetylcholine" presynapticPopulation="I6" postsynapticPopulation="I3" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../I6/0/I6" postCellId="../I3/0/I3" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../I6/0/I6" postCellId="../I3/0/I3" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_I6_NSML_Acetylcholine" presynapticPopulation="I6" postsynapticPopulation="NSML" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../I6/0/I6" postCellId="../NSML/0/NSML" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../I6/0/I6" postCellId="../NSML/0/NSML" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_I6_NSMR_Acetylcholine" presynapticPopulation="I6" postsynapticPopulation="NSMR" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../I6/0/I6" postCellId="../NSMR/0/NSMR" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../I6/0/I6" postCellId="../NSMR/0/NSMR" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_M2L_I1R_Acetylcholine" presynapticPopulation="M2L" postsynapticPopulation="I1R" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M2L/0/M2L" postCellId="../I1R/0/I1R" weight="3." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M2L/0/M2L" postCellId="../I1R/0/I1R" weight="3.0" delay="0ms"/>
         </projection>
         <projection id="NC_M2L_I1L_Acetylcholine" presynapticPopulation="M2L" postsynapticPopulation="I1L" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M2L/0/M2L" postCellId="../I1L/0/I1L" weight="3." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M2L/0/M2L" postCellId="../I1L/0/I1L" weight="3.0" delay="0ms"/>
         </projection>
         <projection id="NC_M2L_I3_Acetylcholine" presynapticPopulation="M2L" postsynapticPopulation="I3" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M2L/0/M2L" postCellId="../I3/0/I3" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M2L/0/M2L" postCellId="../I3/0/I3" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_M2L_MI_Acetylcholine" presynapticPopulation="M2L" postsynapticPopulation="MI" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M2L/0/M2L" postCellId="../MI/0/MI" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M2L/0/M2L" postCellId="../MI/0/MI" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_M2R_I1L_Acetylcholine" presynapticPopulation="M2R" postsynapticPopulation="I1L" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M2R/0/M2R" postCellId="../I1L/0/I1L" weight="3." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M2R/0/M2R" postCellId="../I1L/0/I1L" weight="3.0" delay="0ms"/>
         </projection>
         <projection id="NC_M2R_I1R_Acetylcholine" presynapticPopulation="M2R" postsynapticPopulation="I1R" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M2R/0/M2R" postCellId="../I1R/0/I1R" weight="3." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M2R/0/M2R" postCellId="../I1R/0/I1R" weight="3.0" delay="0ms"/>
         </projection>
         <projection id="NC_M2R_I3_Acetylcholine" presynapticPopulation="M2R" postsynapticPopulation="I3" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M2R/0/M2R" postCellId="../I3/0/I3" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M2R/0/M2R" postCellId="../I3/0/I3" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_M2R_MI_Acetylcholine" presynapticPopulation="M2R" postsynapticPopulation="MI" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M2R/0/M2R" postCellId="../MI/0/MI" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M2R/0/M2R" postCellId="../MI/0/MI" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_M3L_I1L_Glutamate" presynapticPopulation="M3L" postsynapticPopulation="I1L" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M3L/0/M3L" postCellId="../I1L/0/I1L" weight="4." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M3L/0/M3L" postCellId="../I1L/0/I1L" weight="4.0" delay="0ms"/>
         </projection>
         <projection id="NC_M3L_I1R_Glutamate" presynapticPopulation="M3L" postsynapticPopulation="I1R" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M3L/0/M3L" postCellId="../I1R/0/I1R" weight="4." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M3L/0/M3L" postCellId="../I1R/0/I1R" weight="4.0" delay="0ms"/>
         </projection>
         <projection id="NC_M3L_I4_Glutamate" presynapticPopulation="M3L" postsynapticPopulation="I4" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M3L/0/M3L" postCellId="../I4/0/I4" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M3L/0/M3L" postCellId="../I4/0/I4" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_M3L_I5_Glutamate" presynapticPopulation="M3L" postsynapticPopulation="I5" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M3L/0/M3L" postCellId="../I5/0/I5" weight="3." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M3L/0/M3L" postCellId="../I5/0/I5" weight="3.0" delay="0ms"/>
         </projection>
         <projection id="NC_M3L_I6_Glutamate" presynapticPopulation="M3L" postsynapticPopulation="I6" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M3L/0/M3L" postCellId="../I6/0/I6" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M3L/0/M3L" postCellId="../I6/0/I6" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_M3L_M1_Glutamate" presynapticPopulation="M3L" postsynapticPopulation="M1" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M3L/0/M3L" postCellId="../M1/0/M1" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M3L/0/M3L" postCellId="../M1/0/M1" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_M3L_MI_Glutamate" presynapticPopulation="M3L" postsynapticPopulation="MI" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M3L/0/M3L" postCellId="../MI/0/MI" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M3L/0/M3L" postCellId="../MI/0/MI" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_M3L_NSML_Glutamate" presynapticPopulation="M3L" postsynapticPopulation="NSML" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M3L/0/M3L" postCellId="../NSML/0/NSML" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M3L/0/M3L" postCellId="../NSML/0/NSML" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_M3L_NSMR_Glutamate" presynapticPopulation="M3L" postsynapticPopulation="NSMR" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M3L/0/M3L" postCellId="../NSMR/0/NSMR" weight="3." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M3L/0/M3L" postCellId="../NSMR/0/NSMR" weight="3.0" delay="0ms"/>
         </projection>
         <projection id="NC_M3R_I1L_Glutamate" presynapticPopulation="M3R" postsynapticPopulation="I1L" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M3R/0/M3R" postCellId="../I1L/0/I1L" weight="4." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M3R/0/M3R" postCellId="../I1L/0/I1L" weight="4.0" delay="0ms"/>
         </projection>
         <projection id="NC_M3R_I1R_Glutamate" presynapticPopulation="M3R" postsynapticPopulation="I1R" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M3R/0/M3R" postCellId="../I1R/0/I1R" weight="4." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M3R/0/M3R" postCellId="../I1R/0/I1R" weight="4.0" delay="0ms"/>
         </projection>
         <projection id="NC_M3R_I3_Glutamate" presynapticPopulation="M3R" postsynapticPopulation="I3" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M3R/0/M3R" postCellId="../I3/0/I3" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M3R/0/M3R" postCellId="../I3/0/I3" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_M3R_I4_Glutamate" presynapticPopulation="M3R" postsynapticPopulation="I4" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M3R/0/M3R" postCellId="../I4/0/I4" weight="6." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M3R/0/M3R" postCellId="../I4/0/I4" weight="6.0" delay="0ms"/>
         </projection>
         <projection id="NC_M3R_I5_Glutamate" presynapticPopulation="M3R" postsynapticPopulation="I5" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M3R/0/M3R" postCellId="../I5/0/I5" weight="3." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M3R/0/M3R" postCellId="../I5/0/I5" weight="3.0" delay="0ms"/>
         </projection>
         <projection id="NC_M3R_I6_Glutamate" presynapticPopulation="M3R" postsynapticPopulation="I6" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M3R/0/M3R" postCellId="../I6/0/I6" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M3R/0/M3R" postCellId="../I6/0/I6" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_M3R_M1_Glutamate" presynapticPopulation="M3R" postsynapticPopulation="M1" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M3R/0/M3R" postCellId="../M1/0/M1" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M3R/0/M3R" postCellId="../M1/0/M1" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_M3R_MI_Glutamate" presynapticPopulation="M3R" postsynapticPopulation="MI" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M3R/0/M3R" postCellId="../MI/0/MI" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M3R/0/M3R" postCellId="../MI/0/MI" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_M3R_NSML_Glutamate" presynapticPopulation="M3R" postsynapticPopulation="NSML" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M3R/0/M3R" postCellId="../NSML/0/NSML" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M3R/0/M3R" postCellId="../NSML/0/NSML" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_M3R_NSMR_Glutamate" presynapticPopulation="M3R" postsynapticPopulation="NSMR" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M3R/0/M3R" postCellId="../NSMR/0/NSMR" weight="3." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M3R/0/M3R" postCellId="../NSMR/0/NSMR" weight="3.0" delay="0ms"/>
         </projection>
         <projection id="NC_M4_I3_Acetylcholine" presynapticPopulation="M4" postsynapticPopulation="I3" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M4/0/M4" postCellId="../I3/0/I3" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M4/0/M4" postCellId="../I3/0/I3" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_M4_I5_Acetylcholine" presynapticPopulation="M4" postsynapticPopulation="I5" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M4/0/M4" postCellId="../I5/0/I5" weight="13." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M4/0/M4" postCellId="../I5/0/I5" weight="13.0" delay="0ms"/>
         </projection>
         <projection id="NC_M4_I6_Acetylcholine" presynapticPopulation="M4" postsynapticPopulation="I6" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M4/0/M4" postCellId="../I6/0/I6" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M4/0/M4" postCellId="../I6/0/I6" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_M4_NSML_Acetylcholine" presynapticPopulation="M4" postsynapticPopulation="NSML" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M4/0/M4" postCellId="../NSML/0/NSML" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M4/0/M4" postCellId="../NSML/0/NSML" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_M4_NSMR_Acetylcholine" presynapticPopulation="M4" postsynapticPopulation="NSMR" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M4/0/M4" postCellId="../NSMR/0/NSMR" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M4/0/M4" postCellId="../NSMR/0/NSMR" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_M5_I5_Acetylcholine" presynapticPopulation="M5" postsynapticPopulation="I5" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M5/0/M5" postCellId="../I5/0/I5" weight="3." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M5/0/M5" postCellId="../I5/0/I5" weight="3.0" delay="0ms"/>
         </projection>
         <projection id="NC_M5_M1_Acetylcholine" presynapticPopulation="M5" postsynapticPopulation="M1" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../M5/0/M5" postCellId="../M1/0/M1" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../M5/0/M5" postCellId="../M1/0/M1" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_MCL_I1L_Acetylcholine" presynapticPopulation="MCL" postsynapticPopulation="I1L" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../MCL/0/MCL" postCellId="../I1L/0/I1L" weight="3." delay="0ms"/>
+            <connectionWD id="0" preCellId="../MCL/0/MCL" postCellId="../I1L/0/I1L" weight="3.0" delay="0ms"/>
         </projection>
         <projection id="NC_MCL_I1R_Acetylcholine" presynapticPopulation="MCL" postsynapticPopulation="I1R" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../MCL/0/MCL" postCellId="../I1R/0/I1R" weight="3." delay="0ms"/>
+            <connectionWD id="0" preCellId="../MCL/0/MCL" postCellId="../I1R/0/I1R" weight="3.0" delay="0ms"/>
         </projection>
         <projection id="NC_MCL_I2L_Acetylcholine" presynapticPopulation="MCL" postsynapticPopulation="I2L" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../MCL/0/MCL" postCellId="../I2L/0/I2L" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../MCL/0/MCL" postCellId="../I2L/0/I2L" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_MCL_I2R_Acetylcholine" presynapticPopulation="MCL" postsynapticPopulation="I2R" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../MCL/0/MCL" postCellId="../I2R/0/I2R" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../MCL/0/MCL" postCellId="../I2R/0/I2R" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_MCL_I3_Acetylcholine" presynapticPopulation="MCL" postsynapticPopulation="I3" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../MCL/0/MCL" postCellId="../I3/0/I3" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../MCL/0/MCL" postCellId="../I3/0/I3" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_MCL_M1_Acetylcholine" presynapticPopulation="MCL" postsynapticPopulation="M1" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../MCL/0/MCL" postCellId="../M1/0/M1" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../MCL/0/MCL" postCellId="../M1/0/M1" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_MCR_I1L_Acetylcholine" presynapticPopulation="MCR" postsynapticPopulation="I1L" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../MCR/0/MCR" postCellId="../I1L/0/I1L" weight="3." delay="0ms"/>
+            <connectionWD id="0" preCellId="../MCR/0/MCR" postCellId="../I1L/0/I1L" weight="3.0" delay="0ms"/>
         </projection>
         <projection id="NC_MCR_I1R_Acetylcholine" presynapticPopulation="MCR" postsynapticPopulation="I1R" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../MCR/0/MCR" postCellId="../I1R/0/I1R" weight="3." delay="0ms"/>
+            <connectionWD id="0" preCellId="../MCR/0/MCR" postCellId="../I1R/0/I1R" weight="3.0" delay="0ms"/>
         </projection>
         <projection id="NC_MCR_I3_Acetylcholine" presynapticPopulation="MCR" postsynapticPopulation="I3" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../MCR/0/MCR" postCellId="../I3/0/I3" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../MCR/0/MCR" postCellId="../I3/0/I3" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_MCR_M1_Acetylcholine" presynapticPopulation="MCR" postsynapticPopulation="M1" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../MCR/0/MCR" postCellId="../M1/0/M1" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../MCR/0/MCR" postCellId="../M1/0/M1" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_NSML_I1L_Serotonin_Glutamate" presynapticPopulation="NSML" postsynapticPopulation="I1L" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../NSML/0/NSML" postCellId="../I1L/0/I1L" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../NSML/0/NSML" postCellId="../I1L/0/I1L" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_NSML_I1R_Serotonin_Glutamate" presynapticPopulation="NSML" postsynapticPopulation="I1R" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../NSML/0/NSML" postCellId="../I1R/0/I1R" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../NSML/0/NSML" postCellId="../I1R/0/I1R" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_NSML_I2L_Serotonin_Glutamate" presynapticPopulation="NSML" postsynapticPopulation="I2L" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../NSML/0/NSML" postCellId="../I2L/0/I2L" weight="6." delay="0ms"/>
+            <connectionWD id="0" preCellId="../NSML/0/NSML" postCellId="../I2L/0/I2L" weight="6.0" delay="0ms"/>
         </projection>
         <projection id="NC_NSML_I2R_Serotonin_Glutamate" presynapticPopulation="NSML" postsynapticPopulation="I2R" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../NSML/0/NSML" postCellId="../I2R/0/I2R" weight="6." delay="0ms"/>
+            <connectionWD id="0" preCellId="../NSML/0/NSML" postCellId="../I2R/0/I2R" weight="6.0" delay="0ms"/>
         </projection>
         <projection id="NC_NSML_I3_Serotonin_Glutamate" presynapticPopulation="NSML" postsynapticPopulation="I3" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../NSML/0/NSML" postCellId="../I3/0/I3" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../NSML/0/NSML" postCellId="../I3/0/I3" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_NSML_I4_Serotonin_Glutamate" presynapticPopulation="NSML" postsynapticPopulation="I4" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../NSML/0/NSML" postCellId="../I4/0/I4" weight="3." delay="0ms"/>
+            <connectionWD id="0" preCellId="../NSML/0/NSML" postCellId="../I4/0/I4" weight="3.0" delay="0ms"/>
         </projection>
         <projection id="NC_NSML_I5_Serotonin_Glutamate" presynapticPopulation="NSML" postsynapticPopulation="I5" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../NSML/0/NSML" postCellId="../I5/0/I5" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../NSML/0/NSML" postCellId="../I5/0/I5" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_NSML_I6_Serotonin_Glutamate" presynapticPopulation="NSML" postsynapticPopulation="I6" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../NSML/0/NSML" postCellId="../I6/0/I6" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../NSML/0/NSML" postCellId="../I6/0/I6" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_NSML_M3L_Serotonin_Glutamate" presynapticPopulation="NSML" postsynapticPopulation="M3L" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../NSML/0/NSML" postCellId="../M3L/0/M3L" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../NSML/0/NSML" postCellId="../M3L/0/M3L" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_NSML_M3R_Serotonin_Glutamate" presynapticPopulation="NSML" postsynapticPopulation="M3R" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../NSML/0/NSML" postCellId="../M3R/0/M3R" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../NSML/0/NSML" postCellId="../M3R/0/M3R" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_NSMR_I1L_Serotonin_Glutamate" presynapticPopulation="NSMR" postsynapticPopulation="I1L" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../NSMR/0/NSMR" postCellId="../I1L/0/I1L" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../NSMR/0/NSMR" postCellId="../I1L/0/I1L" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_NSMR_I1R_Serotonin_Glutamate" presynapticPopulation="NSMR" postsynapticPopulation="I1R" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../NSMR/0/NSMR" postCellId="../I1R/0/I1R" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../NSMR/0/NSMR" postCellId="../I1R/0/I1R" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_NSMR_I2L_Serotonin_Glutamate" presynapticPopulation="NSMR" postsynapticPopulation="I2L" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../NSMR/0/NSMR" postCellId="../I2L/0/I2L" weight="6." delay="0ms"/>
+            <connectionWD id="0" preCellId="../NSMR/0/NSMR" postCellId="../I2L/0/I2L" weight="6.0" delay="0ms"/>
         </projection>
         <projection id="NC_NSMR_I2R_Serotonin_Glutamate" presynapticPopulation="NSMR" postsynapticPopulation="I2R" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../NSMR/0/NSMR" postCellId="../I2R/0/I2R" weight="6." delay="0ms"/>
+            <connectionWD id="0" preCellId="../NSMR/0/NSMR" postCellId="../I2R/0/I2R" weight="6.0" delay="0ms"/>
         </projection>
         <projection id="NC_NSMR_I3_Serotonin_Glutamate" presynapticPopulation="NSMR" postsynapticPopulation="I3" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../NSMR/0/NSMR" postCellId="../I3/0/I3" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../NSMR/0/NSMR" postCellId="../I3/0/I3" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_NSMR_I4_Serotonin_Glutamate" presynapticPopulation="NSMR" postsynapticPopulation="I4" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../NSMR/0/NSMR" postCellId="../I4/0/I4" weight="3." delay="0ms"/>
+            <connectionWD id="0" preCellId="../NSMR/0/NSMR" postCellId="../I4/0/I4" weight="3.0" delay="0ms"/>
         </projection>
         <projection id="NC_NSMR_I5_Serotonin_Glutamate" presynapticPopulation="NSMR" postsynapticPopulation="I5" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../NSMR/0/NSMR" postCellId="../I5/0/I5" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../NSMR/0/NSMR" postCellId="../I5/0/I5" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_NSMR_I6_Serotonin_Glutamate" presynapticPopulation="NSMR" postsynapticPopulation="I6" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../NSMR/0/NSMR" postCellId="../I6/0/I6" weight="2." delay="0ms"/>
+            <connectionWD id="0" preCellId="../NSMR/0/NSMR" postCellId="../I6/0/I6" weight="2.0" delay="0ms"/>
         </projection>
         <projection id="NC_NSMR_M3L_Serotonin_Glutamate" presynapticPopulation="NSMR" postsynapticPopulation="M3L" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../NSMR/0/NSMR" postCellId="../M3L/0/M3L" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../NSMR/0/NSMR" postCellId="../M3L/0/M3L" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_NSMR_M3R_Serotonin_Glutamate" presynapticPopulation="NSMR" postsynapticPopulation="M3R" synapse="neuron_to_neuron_exc_syn">
-            <connectionWD id="0" preCellId="../NSMR/0/NSMR" postCellId="../M3R/0/M3R" weight="1." delay="0ms"/>
+            <connectionWD id="0" preCellId="../NSMR/0/NSMR" postCellId="../M3R/0/M3R" weight="1.0" delay="0ms"/>
         </projection>
         <electricalProjection id="NC_I1L_I1R_Generic_GJ" presynapticPopulation="I1L" postsynapticPopulation="I1R">
-            <electricalConnectionInstanceW id="0" preCell="../I1L/0/I1L" postCell="../I1R/0/I1R" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../I1L/0/I1L" postCell="../I1R/0/I1R" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_I1L_I5_Generic_GJ" presynapticPopulation="I1L" postsynapticPopulation="I5">
-            <electricalConnectionInstanceW id="0" preCell="../I1L/0/I1L" postCell="../I5/0/I5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../I1L/0/I1L" postCell="../I5/0/I5" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_I1R_I1L_Generic_GJ" presynapticPopulation="I1R" postsynapticPopulation="I1L">
-            <electricalConnectionInstanceW id="0" preCell="../I1R/0/I1R" postCell="../I1L/0/I1L" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../I1R/0/I1R" postCell="../I1L/0/I1L" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_I1R_I5_Generic_GJ" presynapticPopulation="I1R" postsynapticPopulation="I5">
-            <electricalConnectionInstanceW id="0" preCell="../I1R/0/I1R" postCell="../I5/0/I5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../I1R/0/I1R" postCell="../I5/0/I5" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_I2L_I1L_Generic_GJ" presynapticPopulation="I2L" postsynapticPopulation="I1L">
-            <electricalConnectionInstanceW id="0" preCell="../I2L/0/I2L" postCell="../I1L/0/I1L" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../I2L/0/I2L" postCell="../I1L/0/I1L" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_I2L_I1R_Generic_GJ" presynapticPopulation="I2L" postsynapticPopulation="I1R">
-            <electricalConnectionInstanceW id="0" preCell="../I2L/0/I2L" postCell="../I1R/0/I1R" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../I2L/0/I2L" postCell="../I1R/0/I1R" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_I2L_M1_Generic_GJ" presynapticPopulation="I2L" postsynapticPopulation="M1">
-            <electricalConnectionInstanceW id="0" preCell="../I2L/0/I2L" postCell="../M1/0/M1" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../I2L/0/I2L" postCell="../M1/0/M1" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_I2R_I1L_Generic_GJ" presynapticPopulation="I2R" postsynapticPopulation="I1L">
-            <electricalConnectionInstanceW id="0" preCell="../I2R/0/I2R" postCell="../I1L/0/I1L" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../I2R/0/I2R" postCell="../I1L/0/I1L" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_I2R_I1R_Generic_GJ" presynapticPopulation="I2R" postsynapticPopulation="I1R">
-            <electricalConnectionInstanceW id="0" preCell="../I2R/0/I2R" postCell="../I1R/0/I1R" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../I2R/0/I2R" postCell="../I1R/0/I1R" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_I2R_M1_Generic_GJ" presynapticPopulation="I2R" postsynapticPopulation="M1">
-            <electricalConnectionInstanceW id="0" preCell="../I2R/0/I2R" postCell="../M1/0/M1" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../I2R/0/I2R" postCell="../M1/0/M1" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_I3_M2L_Generic_GJ" presynapticPopulation="I3" postsynapticPopulation="M2L">
-            <electricalConnectionInstanceW id="0" preCell="../I3/0/I3" postCell="../M2L/0/M2L" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../I3/0/I3" postCell="../M2L/0/M2L" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_I3_M2R_Generic_GJ" presynapticPopulation="I3" postsynapticPopulation="M2R">
-            <electricalConnectionInstanceW id="0" preCell="../I3/0/I3" postCell="../M2R/0/M2R" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../I3/0/I3" postCell="../M2R/0/M2R" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_I5_I1L_Generic_GJ" presynapticPopulation="I5" postsynapticPopulation="I1L">
-            <electricalConnectionInstanceW id="0" preCell="../I5/0/I5" postCell="../I1L/0/I1L" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../I5/0/I5" postCell="../I1L/0/I1L" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_I5_I1R_Generic_GJ" presynapticPopulation="I5" postsynapticPopulation="I1R">
-            <electricalConnectionInstanceW id="0" preCell="../I5/0/I5" postCell="../I1R/0/I1R" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../I5/0/I5" postCell="../I1R/0/I1R" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_I5_M5_Generic_GJ" presynapticPopulation="I5" postsynapticPopulation="M5">
-            <electricalConnectionInstanceW id="0" preCell="../I5/0/I5" postCell="../M5/0/M5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../I5/0/I5" postCell="../M5/0/M5" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_I6_M4_Generic_GJ" presynapticPopulation="I6" postsynapticPopulation="M4">
-            <electricalConnectionInstanceW id="0" preCell="../I6/0/I6" postCell="../M4/0/M4" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../I6/0/I6" postCell="../M4/0/M4" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_I6_M5_Generic_GJ" presynapticPopulation="I6" postsynapticPopulation="M5">
-            <electricalConnectionInstanceW id="0" preCell="../I6/0/I6" postCell="../M5/0/M5" synapse="neuron_to_neuron_elec_syn" weight="2."/>
+            <electricalConnectionInstanceW id="0" preCell="../I6/0/I6" postCell="../M5/0/M5" synapse="neuron_to_neuron_elec_syn" weight="2.0"/>
         </electricalProjection>
         <electricalProjection id="NC_M1_I2L_Generic_GJ" presynapticPopulation="M1" postsynapticPopulation="I2L">
-            <electricalConnectionInstanceW id="0" preCell="../M1/0/M1" postCell="../I2L/0/I2L" synapse="neuron_to_neuron_elec_syn" weight="2."/>
+            <electricalConnectionInstanceW id="0" preCell="../M1/0/M1" postCell="../I2L/0/I2L" synapse="neuron_to_neuron_elec_syn" weight="2.0"/>
         </electricalProjection>
         <electricalProjection id="NC_M1_I2R_Generic_GJ" presynapticPopulation="M1" postsynapticPopulation="I2R">
-            <electricalConnectionInstanceW id="0" preCell="../M1/0/M1" postCell="../I2R/0/I2R" synapse="neuron_to_neuron_elec_syn" weight="2."/>
+            <electricalConnectionInstanceW id="0" preCell="../M1/0/M1" postCell="../I2R/0/I2R" synapse="neuron_to_neuron_elec_syn" weight="2.0"/>
         </electricalProjection>
         <electricalProjection id="NC_M1_I3_Generic_GJ" presynapticPopulation="M1" postsynapticPopulation="I3">
-            <electricalConnectionInstanceW id="0" preCell="../M1/0/M1" postCell="../I3/0/I3" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../M1/0/M1" postCell="../I3/0/I3" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_M1_I4_Generic_GJ" presynapticPopulation="M1" postsynapticPopulation="I4">
-            <electricalConnectionInstanceW id="0" preCell="../M1/0/M1" postCell="../I4/0/I4" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../M1/0/M1" postCell="../I4/0/I4" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_M2L_I3_Generic_GJ" presynapticPopulation="M2L" postsynapticPopulation="I3">
-            <electricalConnectionInstanceW id="0" preCell="../M2L/0/M2L" postCell="../I3/0/I3" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../M2L/0/M2L" postCell="../I3/0/I3" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_M2L_M2R_Generic_GJ" presynapticPopulation="M2L" postsynapticPopulation="M2R">
-            <electricalConnectionInstanceW id="0" preCell="../M2L/0/M2L" postCell="../M2R/0/M2R" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../M2L/0/M2L" postCell="../M2R/0/M2R" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_M2L_M5_Generic_GJ" presynapticPopulation="M2L" postsynapticPopulation="M5">
-            <electricalConnectionInstanceW id="0" preCell="../M2L/0/M2L" postCell="../M5/0/M5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../M2L/0/M2L" postCell="../M5/0/M5" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_M2R_I3_Generic_GJ" presynapticPopulation="M2R" postsynapticPopulation="I3">
-            <electricalConnectionInstanceW id="0" preCell="../M2R/0/M2R" postCell="../I3/0/I3" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../M2R/0/M2R" postCell="../I3/0/I3" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_M2R_M3L_Generic_GJ" presynapticPopulation="M2R" postsynapticPopulation="M3L">
-            <electricalConnectionInstanceW id="0" preCell="../M2R/0/M2R" postCell="../M3L/0/M3L" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../M2R/0/M2R" postCell="../M3L/0/M3L" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_M2R_M3R_Generic_GJ" presynapticPopulation="M2R" postsynapticPopulation="M3R">
-            <electricalConnectionInstanceW id="0" preCell="../M2R/0/M2R" postCell="../M3R/0/M3R" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../M2R/0/M2R" postCell="../M3R/0/M3R" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_M2R_M5_Generic_GJ" presynapticPopulation="M2R" postsynapticPopulation="M5">
-            <electricalConnectionInstanceW id="0" preCell="../M2R/0/M2R" postCell="../M5/0/M5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../M2R/0/M2R" postCell="../M5/0/M5" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_M2R_MI_Generic_GJ" presynapticPopulation="M2R" postsynapticPopulation="MI">
-            <electricalConnectionInstanceW id="0" preCell="../M2R/0/M2R" postCell="../MI/0/MI" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../M2R/0/M2R" postCell="../MI/0/MI" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_M3L_M3R_Generic_GJ" presynapticPopulation="M3L" postsynapticPopulation="M3R">
-            <electricalConnectionInstanceW id="0" preCell="../M3L/0/M3L" postCell="../M3R/0/M3R" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../M3L/0/M3L" postCell="../M3R/0/M3R" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_M3L_MCL_Generic_GJ" presynapticPopulation="M3L" postsynapticPopulation="MCL">
-            <electricalConnectionInstanceW id="0" preCell="../M3L/0/M3L" postCell="../MCL/0/MCL" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../M3L/0/M3L" postCell="../MCL/0/MCL" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_M3L_MCR_Generic_GJ" presynapticPopulation="M3L" postsynapticPopulation="MCR">
-            <electricalConnectionInstanceW id="0" preCell="../M3L/0/M3L" postCell="../MCR/0/MCR" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../M3L/0/M3L" postCell="../MCR/0/MCR" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_M3R_M3L_Generic_GJ" presynapticPopulation="M3R" postsynapticPopulation="M3L">
-            <electricalConnectionInstanceW id="0" preCell="../M3R/0/M3R" postCell="../M3L/0/M3L" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../M3R/0/M3R" postCell="../M3L/0/M3L" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_M3R_MCL_Generic_GJ" presynapticPopulation="M3R" postsynapticPopulation="MCL">
-            <electricalConnectionInstanceW id="0" preCell="../M3R/0/M3R" postCell="../MCL/0/MCL" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../M3R/0/M3R" postCell="../MCL/0/MCL" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_M3R_MCR_Generic_GJ" presynapticPopulation="M3R" postsynapticPopulation="MCR">
-            <electricalConnectionInstanceW id="0" preCell="../M3R/0/M3R" postCell="../MCR/0/MCR" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../M3R/0/M3R" postCell="../MCR/0/MCR" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_M4_I6_Generic_GJ" presynapticPopulation="M4" postsynapticPopulation="I6">
-            <electricalConnectionInstanceW id="0" preCell="../M4/0/M4" postCell="../I6/0/I6" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../M4/0/M4" postCell="../I6/0/I6" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_M4_M2L_Generic_GJ" presynapticPopulation="M4" postsynapticPopulation="M2L">
-            <electricalConnectionInstanceW id="0" preCell="../M4/0/M4" postCell="../M2L/0/M2L" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../M4/0/M4" postCell="../M2L/0/M2L" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_M4_M2R_Generic_GJ" presynapticPopulation="M4" postsynapticPopulation="M2R">
-            <electricalConnectionInstanceW id="0" preCell="../M4/0/M4" postCell="../M2R/0/M2R" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../M4/0/M4" postCell="../M2R/0/M2R" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_M4_M4_Generic_GJ" presynapticPopulation="M4" postsynapticPopulation="M4">
-            <electricalConnectionInstanceW id="0" preCell="../M4/0/M4" postCell="../M4/0/M4" synapse="neuron_to_neuron_elec_syn" weight="6."/>
+            <electricalConnectionInstanceW id="0" preCell="../M4/0/M4" postCell="../M4/0/M4" synapse="neuron_to_neuron_elec_syn" weight="6.0"/>
         </electricalProjection>
         <electricalProjection id="NC_M4_M5_Generic_GJ" presynapticPopulation="M4" postsynapticPopulation="M5">
-            <electricalConnectionInstanceW id="0" preCell="../M4/0/M4" postCell="../M5/0/M5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../M4/0/M4" postCell="../M5/0/M5" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_M5_I5_Generic_GJ" presynapticPopulation="M5" postsynapticPopulation="I5">
-            <electricalConnectionInstanceW id="0" preCell="../M5/0/M5" postCell="../I5/0/I5" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../M5/0/M5" postCell="../I5/0/I5" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_M5_I6_Generic_GJ" presynapticPopulation="M5" postsynapticPopulation="I6">
-            <electricalConnectionInstanceW id="0" preCell="../M5/0/M5" postCell="../I6/0/I6" synapse="neuron_to_neuron_elec_syn" weight="1."/>
+            <electricalConnectionInstanceW id="0" preCell="../M5/0/M5" postCell="../I6/0/I6" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
         </electricalProjection>
         <electricalProjection id="NC_M5_M2L_Generic_GJ" presynapticPopulation="M5" postsynapticPopulation="M2L">
-            <electricalConnectionInstanceW id="0" preCell="../M5/0/M5" postCell="../M2L/0/M2L" synapse="neuron_to_neuron_elec_syn" weight="2."/>
+            <electricalConnectionInstanceW id="0" preCell="../M5/0/M5" postCell="../M2L/0/M2L" synapse="neuron_to_neuron_elec_syn" weight="2.0"/>
         </electricalProjection>
         <electricalProjection id="NC_M5_M2R_Generic_GJ" presynapticPopulation="M5" postsynapticPopulation="M2R">
-            <electricalConnectionInstanceW id="0" preCell="../M5/0/M5" postCell="../M2R/0/M2R" synapse="neuron_to_neuron_elec_syn" weight="2."/>
+            <electricalConnectionInstanceW id="0" preCell="../M5/0/M5" postCell="../M2R/0/M2R" synapse="neuron_to_neuron_elec_syn" weight="2.0"/>
         </electricalProjection>
         <electricalProjection id="NC_M5_M5_Generic_GJ" presynapticPopulation="M5" postsynapticPopulation="M5">
-            <electricalConnectionInstanceW id="0" preCell="../M5/0/M5" postCell="../M5/0/M5" synapse="neuron_to_neuron_elec_syn" weight="4."/>
+            <electricalConnectionInstanceW id="0" preCell="../M5/0/M5" postCell="../M5/0/M5" synapse="neuron_to_neuron_elec_syn" weight="4.0"/>
         </electricalProjection>
         <electricalProjection id="NC_MCL_M2L_Generic_GJ" presynapticPopulation="MCL" postsynapticPopulation="M2L">
-            <electricalConnectionInstanceW id="0" preCell="../MCL/0/MCL" postCell="../M2L/0/M2L" synapse="neuron_to_neuron_elec_syn" weight="2."/>
+            <electricalConnectionInstanceW id="0" preCell="../MCL/0/MCL" postCell="../M2L/0/M2L" synapse="neuron_to_neuron_elec_syn" weight="2.0"/>
         </electricalProjection>
         <electricalProjection id="NC_MCL_M2R_Generic_GJ" presynapticPopulation="MCL" postsynapticPopulation="M2R">
-            <electricalConnectionInstanceW id="0" preCell="../MCL/0/MCL" postCell="../M2R/0/M2R" synapse="neuron_to_neuron_elec_syn" weight="2."/>
+            <electricalConnectionInstanceW id="0" preCell="../MCL/0/MCL" postCell="../M2R/0/M2R" synapse="neuron_to_neuron_elec_syn" weight="2.0"/>
         </electricalProjection>
         <electricalProjection id="NC_MCR_M2L_Generic_GJ" presynapticPopulation="MCR" postsynapticPopulation="M2L">
-            <electricalConnectionInstanceW id="0" preCell="../MCR/0/MCR" postCell="../M2L/0/M2L" synapse="neuron_to_neuron_elec_syn" weight="2."/>
+            <electricalConnectionInstanceW id="0" preCell="../MCR/0/MCR" postCell="../M2L/0/M2L" synapse="neuron_to_neuron_elec_syn" weight="2.0"/>
         </electricalProjection>
         <electricalProjection id="NC_MCR_M2R_Generic_GJ" presynapticPopulation="MCR" postsynapticPopulation="M2R">
-            <electricalConnectionInstanceW id="0" preCell="../MCR/0/MCR" postCell="../M2R/0/M2R" synapse="neuron_to_neuron_elec_syn" weight="2."/>
+            <electricalConnectionInstanceW id="0" preCell="../MCR/0/MCR" postCell="../M2R/0/M2R" synapse="neuron_to_neuron_elec_syn" weight="2.0"/>
         </electricalProjection>
         <inputList id="Input_I1L_offset_current" population="I1L" component="offset_current">
-            <input id="0" target="../I1L/0/I1L/0" destination="synapses"/>
+            <input id="0" target="../I1L/0/I1L" destination="synapses" segmentId="0"/>
         </inputList>
         <inputList id="Input_I4_offset_current" population="I4" component="offset_current">
-            <input id="0" target="../I4/0/I4/0" destination="synapses"/>
+            <input id="0" target="../I4/0/I4" destination="synapses" segmentId="0"/>
         </inputList>
         <inputList id="Input_I5_offset_current" population="I5" component="offset_current">
-            <input id="0" target="../I5/0/I5/0" destination="synapses"/>
+            <input id="0" target="../I5/0/I5" destination="synapses" segmentId="0"/>
         </inputList>
         <inputList id="Input_I6_offset_current" population="I6" component="offset_current">
-            <input id="0" target="../I6/0/I6/0" destination="synapses"/>
+            <input id="0" target="../I6/0/I6" destination="synapses" segmentId="0"/>
         </inputList>
         <inputList id="Input_M1_offset_current" population="M1" component="offset_current">
-            <input id="0" target="../M1/0/M1/0" destination="synapses"/>
+            <input id="0" target="../M1/0/M1" destination="synapses" segmentId="0"/>
         </inputList>
         <inputList id="Input_M3R_offset_current" population="M3R" component="offset_current">
-            <input id="0" target="../M3R/0/M3R/0" destination="synapses"/>
+            <input id="0" target="../M3R/0/M3R" destination="synapses" segmentId="0"/>
         </inputList>
         <inputList id="Input_M4_offset_current" population="M4" component="offset_current">
-            <input id="0" target="../M4/0/M4/0" destination="synapses"/>
+            <input id="0" target="../M4/0/M4" destination="synapses" segmentId="0"/>
         </inputList>
         <inputList id="Input_M5_offset_current" population="M5" component="offset_current">
-            <input id="0" target="../M5/0/M5/0" destination="synapses"/>
+            <input id="0" target="../M5/0/M5" destination="synapses" segmentId="0"/>
         </inputList>
         <inputList id="Input_MCL_offset_current" population="MCL" component="offset_current">
-            <input id="0" target="../MCL/0/MCL/0" destination="synapses"/>
+            <input id="0" target="../MCL/0/MCL" destination="synapses" segmentId="0"/>
         </inputList>
         <inputList id="Input_MCR_offset_current" population="MCR" component="offset_current">
-            <input id="0" target="../MCR/0/MCR/0" destination="synapses"/>
+            <input id="0" target="../MCR/0/MCR" destination="synapses" segmentId="0"/>
         </inputList>
     </network>
 </neuroml>

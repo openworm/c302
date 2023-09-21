@@ -159,7 +159,7 @@ def generate(duration=1000, paramset='C'):
                      network=new_file,
                      duration=duration,
                      dt='0.1',
-                     recordTraces={'all':'*'},
+                     record_traces={'all':'*'},
                      plots2D={'DB-VB':{'x_axis':'DB/0/%s/v'%neuron_id,
                                     'y_axis':'VB/0/%s/v'%neuron_id}})
 
