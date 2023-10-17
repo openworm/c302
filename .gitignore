@@ -87,3 +87,6 @@
 /examples/c302_X_Oscillator.net.nml
 /dockerfresh.sh
 arm64
+/.ipynb_checkpoints
+/c302/.ipynb_checkpoints
+.ipynb_checkpoints
