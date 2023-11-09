@@ -16,9 +16,9 @@ jobs:
         engine: [ jNeuroML, jNeuroML_NEURON, jNeuroML_validate ] #, NON_OMV_TESTS ]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Set up Python  ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v3
       with:
         python-version:  ${{ matrix.python-version }}
     - name: Install OMV
@@ -31,5 +31,6 @@ jobs:
         echo "Finished all OMV tests"
         omv list -V
         if [[ ${OMV_ENGINE} == "NON_OMV_TESTS" ]]; then echo "Continuing with tests not under OMV..."; else exit $OMV_SUCCESS; fi
-        echo "Running non OMV tests..."
-        python setup.py install
+        echo "Installing..."
+        pip install .
+        pip list
