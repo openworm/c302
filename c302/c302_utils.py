@@ -7,6 +7,7 @@ import traceback
 import matplotlib.pyplot as plt
 import numpy as np
 from pyneuroml import pynml
+from pyneuroml import plot as pyneuroml_plot
 from owmeta_core.bundle import Bundle
 
 import c302
@@ -92,7 +93,7 @@ def generate_traces_plot(config,parameter_set,xvals,yvals,info,labels,save,save_
 
     file_name = 'traces_%s%s_%s_%s.png'%(('muscles' if muscles else 'neuron'),('' if voltage else '_activity'),config,parameter_set)
 
-    pynml.generate_plot(xvals,
+    pyneuroml_plot.generate_plot(xvals,
                         yvals,
                         info,
                         labels=labels,
