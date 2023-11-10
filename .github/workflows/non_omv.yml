@@ -2,9 +2,9 @@ name: Non OMV tests
 
 on:
   push:
-    branches: [ master, development, test* ]
+    branches: [ master, development, test*, ow* ]
   pull_request:
-    branches: [ master, development, test* ]
+    branches: [ master, development, test*, ow* ]
 
 jobs:
   build:
