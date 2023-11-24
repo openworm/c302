@@ -25,8 +25,17 @@ The full set of dependencies for c302 can be installed with the following (see a
     pip install .
     owm bundle remote --user add ow 'https://raw.githubusercontent.com/openworm/owmeta-bundles/master/index.json'
 
-This will install c302 as well as all dependencies, including [pyNeuroML](https://github.com/NeuroML/pyNeuroML) and [owmeta](https://github.com/openworm/owmeta).
+This will install c302 as well as [pyNeuroML](https://github.com/NeuroML/pyNeuroML) and [owmeta](https://github.com/openworm/owmeta).
 
+To run the test.sh script, the Neuron simulator is also required, and should be installed as described [here](https://www.neuron.yale.edu/neuron/download).
+
+For Linux users, additional dependencies (OpenJDK 8 and Graphviz) are required to run the Usage Examples:
+    
+    sudo apt-get install openjdk-8-jdk graphviz
+
+Please note that Python3 is also required to run both the test.sh script and the Usage Examples. For convenience on Linux, it is recommended to install python-is-python3 prior to running the test.sh script.
+
+    sudo apt-get install python-is-python3
 
 #### Quick test
 
@@ -42,7 +51,7 @@ To ensure everything is set up correctly try:
 
 To test all of the working features of the framework run [test.sh](https://raw.githubusercontent.com/openworm/CElegansNeuroML/master/CElegans/pythonScripts/c302/test.sh):
 
-     ./test.sh  # or ./test3.sh if you use Python 3
+     ./test.sh
 
 ### Docker image
 
@@ -110,7 +119,7 @@ The other shows membrane potential for each neuron in the network.
 ![membrane potential](images/LEMS_MyNetwork-membranePotential.png)
 
 
-To see the structure of the network, use pyNeuroML:
+To see the structure of the network, use pyNeuroML (please note that Graphviz is required):
 
     pynml MyNetwork.net.nml -graph 4c  # Try other options like 1, 2f, 5c for varying levels of detail
 
