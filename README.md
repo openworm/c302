@@ -29,9 +29,9 @@ This will install c302 as well as [pyNeuroML](https://github.com/NeuroML/pyNeuro
 
 To run the test.sh script, the Neuron simulator is also required, and should be installed as described [here](https://www.neuron.yale.edu/neuron/download).
 
-For Linux users, additional dependencies (OpenJDK 8 and Graphviz) are required to run the Usage Examples:
+For Linux users, additional dependencies (OpenJDK 19 and Graphviz) are required to run the Usage Examples:
     
-    sudo apt-get install openjdk-8-jdk graphviz
+    sudo apt-get install openjdk-19-jdk graphviz
 
 Please note that Python3 is also required to run both the test.sh script and the Usage Examples. For convenience on Linux, it is recommended to install python-is-python3 prior to running the test.sh script.
 
