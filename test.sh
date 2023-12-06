@@ -1,9 +1,5 @@
 set -ex
 
-##   Install
-
-python setup.py install
-
 ##   Test readers
 
 python -m c302.SpreadsheetDataReader 
