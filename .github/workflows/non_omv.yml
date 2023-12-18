@@ -29,6 +29,7 @@ jobs:
     - name: Install c302
       run: |
         pip install .
+        pip install WormNeuroAtlas
         pip list
         
     - name: Test OpenWormReader with owmeta
