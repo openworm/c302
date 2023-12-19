@@ -105,7 +105,8 @@ def analyse_connections(cells, neuron_conns, neurons2muscles, muscles, muscle_co
 
     print_("Found %i neurons connected to muscles: %s\n"%(len(neurons2muscles), sorted(neurons2muscles)))
     print_("Found %i muscles connected to neurons: %s\n"%(len(muscles), sorted(muscles)))
-    print_("Found %i connections between neurons and muscles, e.g. %s\n"%(len(muscle_conns), muscle_conns[0]))
+
+    print_("Found %i connections between neurons and muscles%s\n"%(len(muscle_conns), (', e.g. %s'%muscle_conns[0]) if len(muscle_conns)>0 else ''))
 
     nts = {}
     nts_tot = {}
