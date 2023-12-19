@@ -26,6 +26,7 @@ setup(
         'xlwt',
         'pyNeuroML>=0.5.11',
         'owmeta>=0.12.3',
+        'WormNeuroAtlas',
     ],
     entry_points={
         'console_scripts': ['c302 = c302.__init__:main']},
