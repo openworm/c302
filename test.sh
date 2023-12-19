@@ -6,6 +6,7 @@ python -m c302.SpreadsheetDataReader
 python -m c302.UpdatedSpreadsheetDataReader                                                                                                                                                                      
 python -m c302.UpdatedSpreadsheetDataReader2                                                                                                                                                                  
 python -m c302.OpenWormReader 
+python -m c302.WormNeuroAtlasReader
 
 
 ##   (Re)generate NeuroML 2 & LEMS files from the python scripts
