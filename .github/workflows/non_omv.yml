@@ -1,4 +1,4 @@
-name: Non OMV tests
+name: Non-OMV-tests
 
 on:
   push:
