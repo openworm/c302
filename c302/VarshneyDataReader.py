@@ -1,20 +1,25 @@
 from c302.NeuroMLUtilities import ConnectionInfo
 from c302.NeuroMLUtilities import analyse_connections
 
-from openpyxl import load_workbook
+from xlrd import open_workbook
 import os
 
 spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/data/"
 
 from c302 import print_
 
-def read_data(include_nonconnected_cells=False, neuron_connect=False):
+READER_DESCRIPTION = """Data extracted from CElegansNeuronTables.xls for neuronal connectivity"""
 
+def read_data(include_nonconnected_cells=False, neuron_connect=True):
+
+
+
+# reading the NeuronConnectFormatted.xls file if neuron_connect = True
     if neuron_connect:
         conns = []
         cells = []
-        filename = "%switvliet_2020_8_adult.xlsx"%spreadsheet_location
-        rb = load_workbook(filename)
+        filename = "%sNeuronConnectFormatted.xls"%spreadsheet_location
+        rb = open_workbook(filename)
         print_("Opened the Excel file: " + filename)
 
         for row in range(1,rb.sheet_by_index(0).nrows):
@@ -35,10 +40,10 @@ def read_data(include_nonconnected_cells=False, neuron_connect=False):
     else:
         conns = []
         cells = []
-        filename = "%switvliet_2020_8_adult.xlsx"%spreadsheet_location
-        rb = load_workbook(filename)
+        filename = "%sCElegansNeuronTables.xls"%spreadsheet_location
+        rb = open_workbook(filename)
 
-        print_("Opened Excel file..: " + filename)
+        print_("Opened Excel file: " + filename)
 
         known_nonconnected_cells = ['CANL', 'CANR', 'VC6']
 
@@ -49,7 +54,6 @@ def read_data(include_nonconnected_cells=False, neuron_connect=False):
             syntype = rb.sheet_by_index(0).cell(row,2).value
             num = int(rb.sheet_by_index(0).cell(row,3).value)
             synclass = rb.sheet_by_index(0).cell(row,4).value
-
 
             conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
             if pre not in cells:
@@ -62,15 +66,14 @@ def read_data(include_nonconnected_cells=False, neuron_connect=False):
 
         return cells, conns
 
-
 def read_muscle_data():
 
     conns = []
     neurons = []
     muscles = []
 
-    filename = "%switvliet_2020_8_adult.xlsx"%spreadsheet_location
-    rb = load_workbook(filename)
+    filename = "%sCElegansNeuronTables.xls"%spreadsheet_location
+    rb = open_workbook(filename)
 
     print_("Opened Excel file: "+ filename)
 
@@ -104,4 +107,3 @@ def main():
 if __name__ == '__main__':
 
     main()
-
