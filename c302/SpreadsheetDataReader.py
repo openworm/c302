@@ -4,7 +4,7 @@
 
 #    A simple script to read the values in CElegansNeuronTables.xls.
 
-#    This is on of a number of interchangeable "Readers" which can 
+#    This is one of a number of interchangeable "Readers" which can 
 #    be used to get connection data for c302
 
 ############################################################
@@ -20,11 +20,13 @@ spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/data/"
 
 from c302 import print_
 
+READER_DESCRIPTION = """Data extracted from CElegansNeuronTables.xls for neuronal connectivity"""
+
 def read_data(include_nonconnected_cells=False, neuron_connect=False):
 
 
 
-# reading the NeuronConnect.xls file if neuron_connect = True
+# reading the NeuronConnectFormatted.xls file if neuron_connect = True
     if neuron_connect:
         conns = []
         cells = []
@@ -53,7 +55,7 @@ def read_data(include_nonconnected_cells=False, neuron_connect=False):
         filename = "%sCElegansNeuronTables.xls"%spreadsheet_location
         rb = open_workbook(filename)
 
-        print_("Opened Excel file..: " + filename)
+        print_("Opened Excel file: " + filename)
 
         known_nonconnected_cells = ['CANL', 'CANR', 'VC6']
 
