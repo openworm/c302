@@ -68,7 +68,7 @@ def read_muscle_data():
     muscles = []
 
     filename = "%s8_adult.xls"%spreadsheet_location
-    rb = open_workbook(filename)
+    rb = load_workbook(filename)
 
     print_("Opened Excel file: "+ filename)
 
