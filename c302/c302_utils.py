@@ -12,8 +12,6 @@ from owmeta_core.bundle import Bundle
 
 import c302
 
-
-
 natsort = lambda s: [int(t) if t.isdigit() else t for t in re.split(r'(\d+)', s)]
 
 
@@ -56,7 +54,8 @@ def plots(a_n, info, cells, dt):
 
     a_n_ = a_n[:,::downscale]
 
-    plot0 = ax.pcolormesh(a_n_)
+    cmap = plt.colormaps['jet']
+    plot0 = ax.pcolormesh(a_n_, cmap=cmap)
     ax.set_yticks(np.arange(a_n_.shape[0]) + 0.5, minor=False)
     ax.set_yticklabels(cells)
     ax.tick_params(axis='y', labelsize=6)
@@ -102,6 +101,7 @@ def generate_traces_plot(config,parameter_set,xvals,yvals,info,labels,save,save_
                         show_plot_already=False,
                         save_figure_to=(None if not save else save_fig_path%(file_name)),
                         cols_in_legend_box=8,
+                        legend_position = "bottom center",
                         title_above_plot=True)
 
 
