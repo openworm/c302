@@ -90,3 +90,4 @@ arm64
 /.ipynb_checkpoints
 /c302/.ipynb_checkpoints
 .ipynb_checkpoints
+/c302/data/~$*.xlsx
