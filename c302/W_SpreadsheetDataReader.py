@@ -4,7 +4,7 @@ from c302.NeuroMLUtilities import analyse_connections
 from xlrd import open_workbook
 import os
 
-spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"data/"
+spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/data/"
 
 from c302 import print_
 
