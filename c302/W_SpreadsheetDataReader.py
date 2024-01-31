@@ -1,7 +1,7 @@
 from c302.NeuroMLUtilities import ConnectionInfo
 from c302.NeuroMLUtilities import analyse_connections
 
-from xlrd import open_workbook
+from openpyxl import load_workbook
 import os
 
 spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/data/"
@@ -14,7 +14,7 @@ def read_data(include_nonconnected_cells=False, neuron_connect=False):
         conns = []
         cells = []
         filename = "%s8_adult.xls"%spreadsheet_location
-        rb = open_workbook(filename)
+        rb = load_workbook(filename)
         print_("Opened the Excel file: " + filename)
 
         for row in range(1,rb.sheet_by_index(0).nrows):
@@ -22,7 +22,7 @@ def read_data(include_nonconnected_cells=False, neuron_connect=False):
             post = str(rb.sheet_by_index(0).cell(row,1).value)
             syntype = rb.sheet_by_index(0).cell(row,2).value
             num = int(rb.sheet_by_index(0).cell(row,3).value)
-            
+            synclass = 'Generic_GJ' if 'EJ' in syntype else 'Chemical_Synapse'
 
             conns.append(ConnectionInfo(pre, post, num, syntype))
             if pre not in cells:
@@ -36,7 +36,7 @@ def read_data(include_nonconnected_cells=False, neuron_connect=False):
         conns = []
         cells = []
         filename = "%s8_adult.xls"%spreadsheet_location
-        rb = open_workbook(filename)
+        rb = load_workbook(filename)
 
         print_("Opened Excel file..: " + filename)
 
