@@ -12,8 +12,6 @@ from owmeta_core.bundle import Bundle
 
 import c302
 
-
-
 natsort = lambda s: [int(t) if t.isdigit() else t for t in re.split(r'(\d+)', s)]
 
 
@@ -56,7 +54,8 @@ def plots(a_n, info, cells, dt):
 
     a_n_ = a_n[:,::downscale]
 
-    plot0 = ax.pcolormesh(a_n_)
+    cmap = plt.colormaps['jet']
+    plot0 = ax.pcolormesh(a_n_, cmap=cmap)
     ax.set_yticks(np.arange(a_n_.shape[0]) + 0.5, minor=False)
     ax.set_yticklabels(cells)
     ax.tick_params(axis='y', labelsize=6)
@@ -102,6 +101,7 @@ def generate_traces_plot(config,parameter_set,xvals,yvals,info,labels,save,save_
                         show_plot_already=False,
                         save_figure_to=(None if not save else save_fig_path%(file_name)),
                         cols_in_legend_box=8,
+                        legend_position = "bottom center",
                         title_above_plot=True)
 
 
@@ -370,10 +370,12 @@ def _show_conn_matrix(data, t, all_info_pre,all_info_post, type, save_figure_to=
     plt.title(title)
     fig.canvas.manager.set_window_title(title)
     import matplotlib
-    cm = matplotlib.cm.get_cmap('gist_stern_r')
+    #cm = matplotlib.cm.get_cmap('gist_stern_r')
+    cmap = plt.colormaps['gist_stern_r']
+    #cmap = plt.colormaps['gist_earth']
 
 
-    im = plt.imshow(data, cmap=cm, interpolation='nearest',norm=None)
+    im = plt.imshow(data, cmap=cmap, interpolation='nearest',norm=None)
 
     ax = plt.gca();
     # Gridlines based on minor ticks
@@ -551,12 +553,12 @@ if __name__ == '__main__':
 
     from neuroml.loaders import read_neuroml2_file
 
-    configs = ['c302_C0_Syns.net.nml', 'c302_C0_Social.net.nml','c302_C0_Muscles.net.nml','c302_C0_Pharyngeal.net.nml','c302_C0_Oscillator.net.nml','c302_C0_Full.net.nml']
     configs = ['c302_C0_Syns.net.nml', 'c302_C0_Social.net.nml']
     #
     configs = ['c302_C0_Syns.net.nml']
     configs = ['c302_C0_Oscillator.net.nml']
     configs = ['c302_C0_Muscles.net.nml']
+    configs = ['c302_C0_Syns.net.nml', 'c302_C0_Social.net.nml','c302_C0_Muscles.net.nml','c302_C0_Pharyngeal.net.nml','c302_C0_Oscillator.net.nml','c302_C0_Full.net.nml']
     
     if '-phar' in sys.argv:
 
@@ -566,7 +568,7 @@ if __name__ == '__main__':
 
         nml_doc = read_neuroml2_file('examples/%s'%c)
 
-        generate_conn_matrix(nml_doc, save_fig_dir='./examples/summary/')
+        generate_conn_matrix(nml_doc, save_fig_dir='./examples/summary/images')
 
     if not '-nogui' in sys.argv:
         plt.show()
