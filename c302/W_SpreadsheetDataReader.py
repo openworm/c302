@@ -13,7 +13,7 @@ def read_data(include_nonconnected_cells=False, neuron_connect=False):
     if neuron_connect:
         conns = []
         cells = []
-        filename = "%s8_adult.xlsx"%spreadsheet_location
+        filename = "%s8_adult.xls"%spreadsheet_location
         rb = open_workbook(filename)
         print_("Opened the Excel file: " + filename)
 
@@ -35,7 +35,7 @@ def read_data(include_nonconnected_cells=False, neuron_connect=False):
     else:
         conns = []
         cells = []
-        filename = "%s8_adult.xlsx"%spreadsheet_location
+        filename = "%s8_adult.xls"%spreadsheet_location
         rb = open_workbook(filename)
 
         print_("Opened Excel file..: " + filename)
@@ -67,7 +67,7 @@ def read_muscle_data():
     neurons = []
     muscles = []
 
-    filename = "%s8_adult.xlsx"%spreadsheet_location
+    filename = "%s8_adult.xls"%spreadsheet_location
     rb = open_workbook(filename)
 
     print_("Opened Excel file: "+ filename)
