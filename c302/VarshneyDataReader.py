@@ -72,19 +72,19 @@ def read_muscle_data():
     neurons = []
     muscles = []
 
-    filename = "%sCElegansNeuronTables.xls"%spreadsheet_location
+    filename = "%sNeuronConnectFormatted.xls"%spreadsheet_location
     rb = open_workbook(filename)
 
     print_("Opened Excel file: "+ filename)
 
-    sheet = rb.sheet_by_index(1)
+    sheet = rb.sheet_by_index(0)
 
     for row in range(1,sheet.nrows):
         pre = str(sheet.cell(row,0).value)
         post = str(sheet.cell(row,1).value)
+        num = int(sheet.cell(row,3).value)
         syntype = 'Send'
-        num = int(sheet.cell(row,2).value)
-        synclass = sheet.cell(row,3).value.replace(',', 'plus').replace(' ', '_')
+        synclass = sheet.cell(row,2).value.replace(',', 'plus').replace(' ', '_')
 
         conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
         if pre not in neurons:
