@@ -22,6 +22,27 @@
   </td>
 <tr>
 <tr>
+  <td width=30><b>GenericNeuronCellX</b></td>
+  <td><a href="mean_spike_frequency_GenericNeuronCellX.png">
+    <img alt="?" src="mean_spike_frequency_GenericNeuronCellX.png" height="160"/></a>
+  </td>
+  <td><a href="firing_rates_GenericNeuronCellX.png">
+    <img alt="?" src="firing_rates_GenericNeuronCellX.png" height="160"/></a>
+  </td>
+  <td><a href="heatmap_GenericNeuronCellX.png">
+    <img alt="?" src="heatmap_GenericNeuronCellX.png" height="160"/></a>
+  </td>
+  <td><a href="dt_traces_GenericNeuronCellX.png">
+    <img alt="?" src="dt_traces_GenericNeuronCellX.png" height="160"/></a>
+  </td>
+  <td><a href="heatmap_dt_GenericNeuronCellX.png">
+    <img alt="?" src="heatmap_dt_GenericNeuronCellX.png" height="160"/></a>
+  </td>
+  <td><a href="mean_spike_frequency_dt_GenericNeuronCellX.png">
+    <img alt="?" src="mean_spike_frequency_dt_GenericNeuronCellX.png" height="160"/></a>
+  </td>
+<tr>
+<tr>
   <td width=30><b>GenericMuscleCell</b></td>
   <td><a href="mean_spike_frequency_GenericMuscleCell.png">
     <img alt="?" src="mean_spike_frequency_GenericMuscleCell.png" height="160"/></a>

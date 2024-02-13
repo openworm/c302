@@ -12,7 +12,7 @@ if __name__ == '__main__':
 
     heatmap_lims=[-110,20]
     
-    standard_stim_amps = ['%spA'%(i/10.0) for i in xrange(-5,70,1)]
+    standard_stim_amps = ['%spA'%(i/10.0) for i in range(-5,70,1)]
 
     if '-all' in sys.argv:
         
@@ -24,7 +24,7 @@ if __name__ == '__main__':
 
 
         vary = {'stim_amp':standard_stim_amps}
-        #vary = {'stim_amp':['%spA'%(i/10.0) for i in xrange(-10,20,5)]}
+        #vary = {'stim_amp':['%spA'%(i/10.0) for i in range(-10,20,5)]}
         #vary = {'stim_amp':['-100pA','0pA','100pA','200pA','300pA','400pA']}
         
         cells = colors.keys()
@@ -146,9 +146,9 @@ if __name__ == '__main__':
 
         vary = {'stim_amp':standard_stim_amps}
         
-        #vary = {'number_per_cell':[i for i in xrange(0,250,10)]}
+        #vary = {'number_per_cell':[i for i in range(0,250,10)]}
         vary = {'stim_amp':['-1pA','0pA','1.5pA','2pA']}
-        vary = {'stim_amp':['%spA'%(i/10.0) for i in xrange(-20,60,5)]}
+        vary = {'stim_amp':['%spA'%(i/10.0) for i in range(-20,60,5)]}
 
         type = 'GenericMuscleCell'
         type = 'GenericNeuronCell'
@@ -197,9 +197,9 @@ if __name__ == '__main__':
         vary = {'dt':[0.1,0.05,0.025,0.01,0.005,0.0025,0.001]}
         vary = {'dt':[0.1,0.05,0.025,0.01,0.005]}
         
-        #vary = {'number_per_cell':[i for i in xrange(0,250,10)]}
+        #vary = {'number_per_cell':[i for i in range(0,250,10)]}
         #vary = {'stim_amp':['1pA','1.5pA','2pA']}
-        vary = {'stim_amp':['%spA'%(i/10.0) for i in xrange(-3,60,1)]}
+        vary = {'stim_amp':['%spA'%(i/10.0) for i in range(-3,60,1)]}
 
         type = 'GenericMuscleCell'
         type = 'GenericNeuronCell'
