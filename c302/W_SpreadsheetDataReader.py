@@ -8,6 +8,16 @@ from c302 import print_
 
 spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/data/"
 
+def get_old_muscle_name(name):
+    if name.startswith("BWM-VL"):
+        return "MVL%s" %name[6:]
+    elif name.startswith("BWM-VR"):
+        return "MVR%s" %name[6:]
+    elif name.startswith("BWM-DL"):
+        return "MDL%s" %name[6:]
+    elif name.startswith("BWM-DR"):
+        return "MDR%s" %name[6:]
+
 class WitvlietDataReader1:   
 
     def read_data(include_nonconnected_cells=False, neuron_connect=False):
@@ -27,6 +37,7 @@ class WitvlietDataReader1:
                 syntype = str(row[2])
                 num = int(row[3])
                 synclass = 'Generic_GJ' if 'electrical' in syntype else 'Chemical_Synapse'
+                
 
                 conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
                 if pre not in cells:
@@ -68,6 +79,8 @@ class WitvlietDataReader1:
             return cells, conns
 
 
+    
+    
     def read_muscle_data():
 
         conns = []
@@ -81,20 +94,21 @@ class WitvlietDataReader1:
         print_("Opened Excel file: "+ filename)
 
         for row in sheet.iter_rows(min_row=2, values_only=True):
-            if not (is_neuron(pre) or is_body_wall_muscle(pre)) or not is_body_wall_muscle(post):
-                continue
-
                 pre = str(row[0])
                 post = str(row[1])
                 syntype = str(row[2])
                 num = int(row[3])
-                synclass = 'Generic_GJ' if 'electrical' in syntype else 'Chemical_Synapse'
-
-        conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
-        if pre not in neurons:
-                neurons.append(pre)
-        if post not in muscles:
-                muscles.append(post)
+                synclass = 'Generic_GJ' if 'EJ' in syntype else 'Chemical_Synapse'
+                if post.startswith("BWM-"):
+                    post = get_old_muscle_name(post)
+                else:
+                     continue
+                
+                conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
+                if pre not in neurons:
+                        neurons.append(pre)
+                if post not in muscles:
+                        muscles.append(post)
 
 
         return neurons, muscles, conns
@@ -184,12 +198,16 @@ class WitvlietDataReader2:
                 syntype = str(row[2])
                 num = int(row[3])
                 synclass = 'Generic_GJ' if 'electrical' in syntype else 'Chemical_Synapse'
+                if post.startswith("BWM-"):
+                    post = get_old_muscle_name(post)
+                else:
+                     continue
 
-        conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
-        if pre not in neurons:
-                neurons.append(pre)
-        if post not in muscles:
-                muscles.append(post)
+                conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
+                if pre not in neurons:
+                        neurons.append(pre)
+                if post not in muscles:
+                        muscles.append(post)
 
 
         return neurons, muscles, conns
