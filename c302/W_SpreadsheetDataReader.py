@@ -3,11 +3,15 @@ from c302.NeuroMLUtilities import analyse_connections
 
 from openpyxl import load_workbook
 import os
+from c302 import print_
+
 
 spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/data/"
 
 
-from c302 import print_
+
+
+
 
 
 class WitvlietDataReader1:   
@@ -83,6 +87,9 @@ class WitvlietDataReader1:
         print_("Opened Excel file: "+ filename)
 
         for row in sheet.iter_rows(min_row=2, values_only=True):
+            if not (is_neuron(pre) or is_body_wall_muscle(pre)) or not is_body_wall_muscle(post):
+                continue
+
                 pre = str(row[0])
                 post = str(row[1])
                 syntype = str(row[2])

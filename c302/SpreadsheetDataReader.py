@@ -22,7 +22,7 @@ from c302 import print_
 
 READER_DESCRIPTION = """Data extracted from CElegansNeuronTables.xls for neuronal connectivity"""
 
-def read_data(include_nonconnected_cells=False, neuron_connect=False):
+def read_data(include_nonconnected_cells=False, neuron_connect=True):
 
 
 
