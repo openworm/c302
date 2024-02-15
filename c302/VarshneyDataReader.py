@@ -3,68 +3,43 @@ from c302.NeuroMLUtilities import analyse_connections
 from openpyxl import load_workbook
 
 import os
-
-spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/data/"
-
 from c302 import print_
 
-READER_DESCRIPTION = """Data extracted from NeuronConnectFormatted.xlsx for neuronal connectivity"""
+spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/data/"
+spreadsheet_name = "NeuronConnect.xlsx" # has old name...
+spreadsheet_name = "NeuronConnectFormatted.xlsx"
 
+READER_DESCRIPTION = """Data extracted from %s for neuronal connectivity"""%spreadsheet_name
+
+NMJ_ENDPOINT = 'NMJ'
 
 def read_data(include_nonconnected_cells=False, neuron_connect=True):
 
     if neuron_connect:
         conns = []
         cells = []
-        filename = "%sNeuronConnectFormatted.xlsx"%spreadsheet_location            
+        filename = "%s%s"%(spreadsheet_location,spreadsheet_name)         
         wb = load_workbook(filename)
         sheet = wb.worksheets[0]
         print_("Opened the Excel file: " + filename)            
 
         for row in sheet.iter_rows(min_row=2, values_only=True):  # Assuming data starts from the second row
             pre = str(row[0])
-            post = str(row[1])                
-            syntype = str(row[2])
-            num = int(row[3])
-            synclass = 'Generic_GJ' if 'EJ' in syntype else 'Chemical_Synapse'
+            post = str(row[1])   
 
-            conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
-            if pre not in cells:
-                cells.append(pre)                
-            if post not in cells:
-                cells.append(post)
-            
-        return cells, conns
+            if not post==NMJ_ENDPOINT:        
+                syntype = str(row[2])
+                num = int(row[3])
+                synclass = 'Generic_GJ' if 'EJ' in syntype else 'Chemical_Synapse'
 
-    else:
-        conns = []
-        cells = []
-        filename = "%sNeuronConnectFormatted.xlsx"%spreadsheet_location
-        wb = load_workbook(filename)
-        sheet = wb.worksheets[0]
-
-        print_("Opened Excel file..: " + filename)
-
-        known_nonconnected_cells = ['CANL', 'CANR', 'VC6']
-        
-        for row in sheet.iter_rows(min_row=2, values_only=True):
-            pre = str(row[0])
-            post = str(row[1])
-            syntype = str(row[2])
-            num = int(row[3])
-            synclass = 'Generic_GJ' if 'EJ' in syntype else 'Chemical_Synapse'
-
-
-            conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
-            if pre not in cells:
-                cells.append(pre)    
-            if post not in cells:
-                cells.append(post)
-
-            if include_nonconnected_cells:
-                for c in known_nonconnected_cells: cells.append(c)
+                conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
+                if pre not in cells:
+                    cells.append(pre)                
+                if post not in cells:
+                    cells.append(post)
 
         return cells, conns
+
 
 def read_muscle_data():
 
@@ -72,7 +47,7 @@ def read_muscle_data():
     neurons = []
     muscles = []
 
-    filename = "%sNeuronConnectFormatted.xlsx"%spreadsheet_location
+    filename = "%s%s"%(spreadsheet_location,spreadsheet_name)        
     wb = load_workbook(filename)
     sheet = wb.worksheets[0]
 
@@ -81,16 +56,17 @@ def read_muscle_data():
     for row in sheet.iter_rows(min_row=2, values_only=True):  # Assuming data starts from the second row
         pre = str(row[0])
         post = str(row[1])
-        syntype = str(row[2])
-        num = int(row[3])
-        synclass = 'Generic_GJ' if 'EJ' in syntype else 'Chemical_Synapse'
 
+        if post==NMJ_ENDPOINT:        
+            syntype = str(row[2])
+            num = int(row[3])
+            synclass = 'Generic_GJ' if 'EJ' in syntype else 'Chemical_Synapse'
 
-        conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
-        if pre not in neurons:
-            neurons.append(pre)
-        if syntype == "NMJ":
-            muscles.append(post)
+            conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
+            if pre not in neurons:
+                neurons.append(pre)
+            if not post in muscles:
+                muscles.append(post)
 
 
     return neurons, muscles, conns
