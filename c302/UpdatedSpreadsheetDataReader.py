@@ -54,13 +54,13 @@ def get_old_muscle_name(muscle):
     index = int(muscle[5:])
     if index < 10:
         index = "0%s" % index
-    if muscle.startswith("vBWML"):
+    if muscle.startswith("BWM-VL"):
         return "MVL%s" % index
-    elif muscle.startswith("vBWMR"):
+    elif muscle.startswith("BWM-VR"):
         return "MVR%s" % index
-    elif muscle.startswith("dBWML"):
+    elif muscle.startswith("BWM-DL"):
         return "MDL%s" % index
-    elif muscle.startswith("dBWMR"):
+    elif muscle.startswith("BWM-DR"):
         return "MDR%s" % index
 
 def get_syntype(syntype):
