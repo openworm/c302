@@ -29,12 +29,17 @@ jobs:
     - name: Install c302
       run: |
         pip install .
+        pip install WormNeuroAtlas
         pip list
         
     - name: Test OpenWormReader with owmeta
       run: |
         owm bundle remote --user add ow 'https://raw.githubusercontent.com/openworm/owmeta-bundles/master/index.json'
         python -m c302.OpenWormReader
+
+    - name: Test WormNeuroAtlasReader
+      run: |
+        python -m c302.WormNeuroAtlasReader
 
     - name: Run some examples
       run: |
