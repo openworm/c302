@@ -8,12 +8,6 @@ from c302 import print_
 
 spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/data/"
 
-
-
-
-
-
-
 class WitvlietDataReader1:   
 
     def read_data(include_nonconnected_cells=False, neuron_connect=False):
