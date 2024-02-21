@@ -21,11 +21,11 @@ spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/data/"
 filename = "%saconnectome_white_1986_A.csv" % spreadsheet_location
 
 def get_all_muscle_prefixes():
-    return ["pm", "vm", "um", "dBWM", "vBWM"]
+    return ["pm", "vm", "um", "BWM-D", "BWM-V"]
 
 
 def get_body_wall_muscle_prefixes():
-    return ["dBWM", "vBWM"]
+    return ["BWM-D", "BWM-V"]
 
 
 def is_muscle(cell):
@@ -39,7 +39,7 @@ def is_body_wall_muscle(cell):
 
 
 def is_neuron(cell):
-    return cell[0].isupper()
+    return not is_body_wall_muscle(cell)
 
 
 def remove_leading_index_zero(cell):
@@ -51,17 +51,16 @@ def remove_leading_index_zero(cell):
     return cell
 
 def get_old_muscle_name(muscle):
-    index = int(muscle[6:])
-    if index < 10:
-        index = "0%s" % index
     if muscle.startswith("BWM-VL"):
-        return "MVL%s" % index
-    elif muscle.startswith("BWM-DR"):
-        return "MVR%s" % index
+        return "MVL%s" %muscle[6:]
+    elif muscle.startswith("BWM-VR"):
+        return "MVR%s" %muscle[6:]
     elif muscle.startswith("BWM-DL"):
-        return "MDL%s" % index
+        return "MDL%s" %muscle[6:]
     elif muscle.startswith("BWM-DR"):
-        return "MDR%s" % index
+        return "MDR%s" %muscle[6:]
+    else:
+        return muscle + "???"
 
 def get_syntype(syntype):
     if syntype == "electrical":
@@ -80,11 +79,12 @@ def get_synclass(cell, syntype):
             return "GABA"
         return "Acetylcholine"
 
-def parse_row(row):
-    pre = str.strip(row["Source"])
-    post = str.strip(row["Target"])
-    num = int(row["Weight"])
-    syntype = get_syntype(str.strip(row["Type"]))
+def parse_line(line):
+    elements = line.split()
+    pre = str.strip(elements[0])
+    post = str.strip(elements[1])
+    num = int(elements[3])
+    syntype = get_syntype(str.strip(elements[2]))
     synclass = get_synclass(pre, syntype)
     return pre, post, num, syntype, synclass
 
@@ -101,13 +101,13 @@ def read_data(include_nonconnected_cells=False):
     cells = []
 
     with open(filename, 'r') as f:
-        reader = csv.DictReader(f)
         print_("Opened file: " + filename)
+        f.readline()
 
         known_nonconnected_cells = ['CANL', 'CANR']
 
-        for row in reader:
-            pre, post, num, syntype, synclass = parse_row(row)
+        for line in f:
+            pre, post, num, syntype, synclass = parse_line(line)
 
             if not is_neuron(pre) or not is_neuron(post):
                 continue  # pre or post is not a neuron
@@ -143,26 +143,23 @@ def read_muscle_data():
     conns = []
 
     with open(filename, 'r') as f:
-        reader = csv.DictReader(f)
         print_("Opened file: " + filename)
+        f.readline()
 
-        for row in reader:
-            pre, post, num, syntype, synclass = parse_row(row)
+        for line in f:
+            pre, post, num, syntype, synclass = parse_line(line)
 
-            if not (is_neuron(pre) or is_body_wall_muscle(pre)) or not is_body_wall_muscle(post):
+            if not is_body_wall_muscle(post):
                 continue
-
+            
             if is_neuron(pre):
                 pre = remove_leading_index_zero(pre)
-            else:
-                pre = get_old_muscle_name(pre)
             post = get_old_muscle_name(post)
 
             conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
+            
             if is_neuron(pre) and pre not in neurons:
                 neurons.append(pre)
-            elif is_body_wall_muscle(pre) and pre not in muscles:
-                muscles.append(pre)
             if post not in muscles:
                 muscles.append(post)
 
@@ -178,3 +175,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+    
