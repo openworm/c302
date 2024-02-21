@@ -10,7 +10,9 @@ atlas = wa.NeuroAtlas()
 # will merge bilateral pairs of neurons (AVAL/R as AVA). 
 # atlas = wa.NeuroAtlas(merge_bilateral=True, merge_dorsoventral=False,
 #                        merge_numbered=False, merge_AWC=False)
+
 metadata = atlas.get_metadata()
+
 for m in metadata:
 
     print("\n%s:"%(m,))
@@ -27,8 +29,6 @@ def get_info(a):
     print("Array %s, %s"%(a.dtype, a.shape))
     print(a)
 
-gj = atlas.get_gap_junctions()
-print(get_info(gj))
 
 for index in range(len(atlas.neuron_ids)):
     neuron = atlas.neuron_ids[index]
@@ -36,10 +36,23 @@ for index in range(len(atlas.neuron_ids)):
     print("Index %i: %s = %s"%(index, neuron, ai))
     assert(index==ai)
 
+print("------  Gap junctions: ------ ")
+gj = atlas.get_gap_junctions()
+print(get_info(gj))
+
+print("------  Chem syns: ------ ")
+cs = atlas.get_chemical_synapses()
+print(get_info(cs))
+
+print("------  Anatomical conn: ------ ")
+ac = atlas.get_anatomical_connectome()
+print(get_info(ac))
+
+ 
+
 for c in test_cells:
     print("------------ ")
     print("Connection info on %s, ais: %s"%(c, atlas.ids_to_ai(c)))
-
     print(c)
 
 

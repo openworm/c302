@@ -25,19 +25,27 @@ class WormNeuroAtlasReader(object):
     def __init__(self):
         self.atlas = wa.NeuroAtlas()
         self.all_cells = self.atlas.neuron_ids
-
+        for i in range(len(self.all_cells)):
+            if self.all_cells[i] == 'AWCOFF':
+                self.all_cells[i] = 'AWCL'
+            if self.all_cells[i] == 'AWCON':
+                self.all_cells[i] = 'AWCR'
 
     def read_data(self, include_nonconnected_cells=False):
         print_("Initialising WormNeuroAtlasReader")
 
-        cell_names = self.atlas.neuron_ids
         conns = []
         gj = self.atlas.get_gap_junctions()
+        cs = self.atlas.get_chemical_synapses()
+
+        connected_cells = []
 
         for pre in self.all_cells:
             apre = self.atlas.ids_to_ai([pre])
             for post in self.all_cells:
                 apost = self.atlas.ids_to_ai([post]) 
+
+                connection = False
 
                 gji = gj[apre, apost]
                 num = gji[0]
@@ -46,11 +54,27 @@ class WormNeuroAtlasReader(object):
                     synclass = 'Generic_GJ'
                     syntype = "GapJunction"
                     conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
+                    connection = True
 
+                csi = cs[apre, apost]
+                num = csi[0]
+                if num>0:
+                    #print("Chem syn (%s (%i) -> %s (%i): %s"%(pre, apre, post, apost, gji))
+                    synclass = 'Generic_CS'
+                    syntype = "Chemical"
+                    conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
+                    connection = True
+
+                if connection:
+                    if not pre in connected_cells:
+                        connected_cells.append(pre)
+                    if not post in connected_cells:
+                        connected_cells.append(post)
+                    
         if include_nonconnected_cells:
-            return cell_names, conns
+            return self.all_cells, conns
         else:
-            return pre + post, conns
+            return connected_cells, conns
 
     def read_muscle_data(self):
         neurons = []
