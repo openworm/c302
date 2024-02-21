@@ -19,7 +19,7 @@ for m in metadata:
     for e in metadata[m]:
         print("    %s:\t%s"%(e,metadata[m][e]))
 
-test_cells = ['ADAL','ADEL','RIAL', 'VD9'] 
+test_cells = ['ADAL','ADEL','RIAL', 'VA3', 'VD3'] 
 for c in test_cells:
     atlas.everything_about(c)
 
@@ -49,6 +49,15 @@ ac = atlas.get_anatomical_connectome()
 print(get_info(ac))
 
  
+syn_sign = wa.SynapseSign()
+
+for nt in ['Glu', 'ACh', 'GABA']:
+    ns = syn_sign.get_neurons_producing(nt, mode='dominant')
+    print("------  Neurons producing %s as dominant NT (%i) ------ "%(nt, len(ns)))
+    print(ns)
+    ns = syn_sign.get_neurons_producing(nt, mode='alternative')
+    print("------  Neurons producing %s as alternative NT (%i) ------ "%(nt, len(ns)))
+    print(ns)
 
 for c in test_cells:
     print("------------ ")
