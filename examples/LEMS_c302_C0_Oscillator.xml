@@ -6,7 +6,7 @@
 Parameters and setting used to generate this network:
 
     Data reader:                    SpreadsheetDataReader
-    c302 version:                   0.7.12
+    c302 version:                   0.8.0
     owmeta version:                 0.12.3
     owmeta_core version:            0.13.5
     Cells:                          ['DB2', 'VB2', 'DD2', 'VD2', 'DB3', 'VB3', 'DD3', 'VD3', 'DA2', 'VA2', 'DA3', 'VA3', 'AVBL', 'AVBR']

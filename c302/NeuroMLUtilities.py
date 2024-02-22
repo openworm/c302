@@ -84,11 +84,14 @@ def analyse_connections(cells, neuron_conns, neurons2muscles, muscles, muscle_co
     #assert(len(cells) == 302)
     #print_("Expected number of cells correct if include_nonconnected_cells=True")
     not_in_preferred = []
+    missing_preferred = [n for n in PREFERRED_NEURON_NAMES]
     for c in cells:
         if not c in PREFERRED_NEURON_NAMES:
             not_in_preferred.append(c)
+        if c in missing_preferred:
+            missing_preferred.remove(c)
 
-    print_("Found %s non-neuron(s): %s\n"%(len(not_in_preferred),sorted(not_in_preferred)))
+    print_("Found %s non-neuron(s) here: %s; known neurons not present: %s\n"%(len(not_in_preferred),sorted(not_in_preferred), sorted(missing_preferred)))
 
     print_("Found %s connections..."%(len(neuron_conns)))
     for c in neuron_conns[:5]: print_("   %s"%c)
@@ -136,5 +139,27 @@ def analyse_connections(cells, neuron_conns, neurons2muscles, muscles, muscle_co
     
     for nt in nts:
         print_("  %s present in %s connections, %s synapses total (avg %.3f syns per conn)"%(nt, nts[nt], nts_tot[nt], nts_tot[nt]/nts[nt]))
+    
+    
+    core_set = ['AVBL','PVCL','VA6', 'VB6', 'VD6', 'DB4', 'DD4']
+    #core_set = ['VA6', 'VD6']
+    print_("\n\nConnections between cells in set %s\n"%(core_set))
+
+
+    for c in neuron_conns:
+        if c.pre_cell in core_set and c.post_cell in core_set:
+            print_(str(c))
+
 
     print_("")
+
+
+if __name__ == "__main__":
+
+    from SpreadsheetDataReader import read_data, read_muscle_data
+    from WormNeuroAtlasReader import read_data, read_muscle_data
+    
+    cells, neuron_conns = read_data(include_nonconnected_cells=True)
+    neurons2muscles, muscles, muscle_conns = read_muscle_data()
+
+    analyse_connections(cells, neuron_conns, neurons2muscles, muscles, muscle_conns)

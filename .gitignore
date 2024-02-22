@@ -91,3 +91,7 @@ arm64
 /c302/.ipynb_checkpoints
 .ipynb_checkpoints
 /c302/data/~$*.xlsx
+/examples/test/images/cell_C.xml
+/examples/test/images/c302_C1_Oscillator.net.nml
+/examples/test/images/LEMS_c302_C1_Oscillator.xml
+/c302/VarshneyDataReader2.py

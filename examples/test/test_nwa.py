@@ -10,14 +10,16 @@ atlas = wa.NeuroAtlas()
 # will merge bilateral pairs of neurons (AVAL/R as AVA). 
 # atlas = wa.NeuroAtlas(merge_bilateral=True, merge_dorsoventral=False,
 #                        merge_numbered=False, merge_AWC=False)
+
 metadata = atlas.get_metadata()
+
 for m in metadata:
 
     print("\n%s:"%(m,))
     for e in metadata[m]:
         print("    %s:\t%s"%(e,metadata[m][e]))
 
-test_cells = ['ADAL','ADEL','RIAL', 'VD9'] 
+test_cells = ['ADAL','ADEL','RIAL', 'VA3', 'VD3'] 
 for c in test_cells:
     atlas.everything_about(c)
 
@@ -27,8 +29,6 @@ def get_info(a):
     print("Array %s, %s"%(a.dtype, a.shape))
     print(a)
 
-gj = atlas.get_gap_junctions()
-print(get_info(gj))
 
 for index in range(len(atlas.neuron_ids)):
     neuron = atlas.neuron_ids[index]
@@ -36,10 +36,32 @@ for index in range(len(atlas.neuron_ids)):
     print("Index %i: %s = %s"%(index, neuron, ai))
     assert(index==ai)
 
+print("------  Gap junctions: ------ ")
+gj = atlas.get_gap_junctions()
+print(get_info(gj))
+
+print("------  Chem syns: ------ ")
+cs = atlas.get_chemical_synapses()
+print(get_info(cs))
+
+print("------  Anatomical conn: ------ ")
+ac = atlas.get_anatomical_connectome()
+print(get_info(ac))
+
+ 
+syn_sign = wa.SynapseSign()
+
+for nt in ['Glu', 'ACh', 'GABA']:
+    ns = syn_sign.get_neurons_producing(nt, mode='dominant')
+    print("------  Neurons producing %s as dominant NT (%i) ------ "%(nt, len(ns)))
+    print(ns)
+    ns = syn_sign.get_neurons_producing(nt, mode='alternative')
+    print("------  Neurons producing %s as alternative NT (%i) ------ "%(nt, len(ns)))
+    print(ns)
+
 for c in test_cells:
     print("------------ ")
     print("Connection info on %s, ais: %s"%(c, atlas.ids_to_ai(c)))
-
     print(c)
 
 

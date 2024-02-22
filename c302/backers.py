@@ -8,12 +8,12 @@ import os
 
 def get_adopted_cell_names(root=os.path.dirname(os.path.abspath(__file__))+"/data/"):
 
-    file = open(root+"adopters.txt")
-    ads = {}
-    for line in file:
-        cell = line.split(":")[0].strip()
-        name = line.split(":")[1].strip()
-        ads[cell] = name
+    with open(root+"adopters.txt") as file:
+        ads = {}
+        for line in file:
+            cell = line.split(":")[0].strip()
+            name = line.split(":")[1].strip()
+            ads[cell] = name
 
     return ads
 
