@@ -14,6 +14,7 @@ import c302
 
 natsort = lambda s: [int(t) if t.isdigit() else t for t in re.split(r'(\d+)', s)]
 
+default_figsize = (6.4,4.8)
 
 def plots(a_n, info, cells, dt):
 
@@ -349,7 +350,7 @@ def plot_c302_results(lems_results,
         plt.close("all")
 
 
-def _show_conn_matrix(data, t, all_info_pre,all_info_post, type, save_figure_to=False):
+def _show_conn_matrix(data, t, all_info_pre, all_info_post, type, save_figure_to=False, verbose=True, figsize=default_figsize):
 
 
     if data.shape[0]>0 and data.shape[1]>0 and np.amax(data)>0:
@@ -359,13 +360,13 @@ def _show_conn_matrix(data, t, all_info_pre,all_info_post, type, save_figure_to=
         ##norm = None
         maxn = 0
 
-    c302.print_("Plotting data of size %s, max %s: %s"%(str(data.shape),maxn, t))
+    c302.print_("Plotting data of size %s, max %s: %s"%(str(data.shape),maxn, t), verbose)
 
     if maxn==0:
-        c302.print_("No connections!!")
+        c302.print_("No connections!!", verbose)
         return
 
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=figsize)
     title = '%s: %s'%(type,t)
     plt.title(title)
     fig.canvas.manager.set_window_title(title)
@@ -406,9 +407,9 @@ def _show_conn_matrix(data, t, all_info_pre,all_info_post, type, save_figure_to=
         c302.print_("Saving connectivity figure to: %s"%save_figure_to)
         plt.savefig(save_figure_to,bbox_inches='tight')
     else:
-        c302.print_("Not saving figure")
+        c302.print_("Not saving figure", verbose)
 
-def generate_conn_matrix(nml_doc, save_fig_dir=None, verbose=False):
+def generate_conn_matrix(nml_doc, save_fig_dir=None, verbose=False, figsize=default_figsize):
 
     net = nml_doc.networks[0]
 
@@ -494,15 +495,24 @@ def generate_conn_matrix(nml_doc, save_fig_dir=None, verbose=False):
 
 
     _show_conn_matrix(data_exc_n, 'Excitatory (non GABA) conns to neurons',all_neuron_info,all_neuron_info,
-                      net.id, save_figure_to='%s/%s_exc_to_neurons.png'%(save_fig_dir,net.id) if save_fig_dir else None)
+                      net.id, save_figure_to='%s/%s_exc_to_neurons.png'%(save_fig_dir,net.id) if save_fig_dir else None, 
+                      verbose=verbose,
+                      figsize=figsize)
 
     _show_conn_matrix(data_exc_m, 'Excitatory (non GABA) conns to muscles',all_neuron_info,all_muscle_info,
-                      net.id, save_figure_to='%s/%s_exc_to_muscles.png'%(save_fig_dir,net.id) if save_fig_dir else None)
+                      net.id, save_figure_to='%s/%s_exc_to_muscles.png'%(save_fig_dir,net.id) if save_fig_dir else None, 
+                      verbose=verbose,
+                      figsize=figsize)
 
     _show_conn_matrix(data_inh_n, 'Inhibitory (GABA) conns to neurons',all_neuron_info,all_neuron_info,
-                      net.id, save_figure_to='%s/%s_inh_to_neurons.png'%(save_fig_dir,net.id) if save_fig_dir else None)
+                      net.id, save_figure_to='%s/%s_inh_to_neurons.png'%(save_fig_dir,net.id) if save_fig_dir else None, 
+                      verbose=verbose,
+                      figsize=figsize)
+
     _show_conn_matrix(data_inh_m, 'Inhibitory (GABA) conns to muscles',all_neuron_info,all_muscle_info,
-                      net.id, save_figure_to='%s/%s_inh_to_muscles.png'%(save_fig_dir,net.id) if save_fig_dir else None)
+                      net.id, save_figure_to='%s/%s_inh_to_muscles.png'%(save_fig_dir,net.id) if save_fig_dir else None, 
+                      verbose=verbose,
+                      figsize=figsize)
 
 
     data_n = np.zeros((len(all_neurons),len(all_neurons)))
@@ -532,19 +542,26 @@ def generate_conn_matrix(nml_doc, save_fig_dir=None, verbose=False):
 
 
     _show_conn_matrix(data_n, 'Electrical (gap junction) conns to neurons',all_neuron_info,all_neuron_info,
-                      net.id, save_figure_to='%s/%s_elec_neurons_neurons.png'%(save_fig_dir,net.id) if save_fig_dir else None)
+                      net.id, save_figure_to='%s/%s_elec_neurons_neurons.png'%(save_fig_dir,net.id) if save_fig_dir else None, 
+                      verbose=verbose,
+                      figsize=figsize)
 
     if neuron_muscle:
         _show_conn_matrix(data_n_m, 'Electrical (gap junction) conns between neurons and muscles', all_neuron_info, all_muscle_info,
                           net.id,
-                          save_figure_to='%s/%s_elec_neurons_muscles.png' % (save_fig_dir, net.id) if save_fig_dir else None)
+                          save_figure_to='%s/%s_elec_neurons_muscles.png' % (save_fig_dir, net.id) if save_fig_dir else None, 
+                      verbose=verbose,
+                      figsize=figsize)
 
     if muscle_muscle:
         _show_conn_matrix(data_m_m, 'Electrical (gap junction) conns between muscles', all_muscle_info,
                           all_muscle_info,
                           net.id,
                           save_figure_to='%s/%s_elec_muscles_muscles.png' % (
-                          save_fig_dir, net.id) if save_fig_dir else None)
+                          save_fig_dir, net.id) if save_fig_dir else None, 
+                      verbose=verbose,
+                      figsize=figsize)
+
     #_show_conn_matrix(data_m, 'Electrical (gap junction) conns to muscles',all_neuron_info,all_muscle_info, net.id)
 
 
@@ -564,11 +581,15 @@ if __name__ == '__main__':
 
         configs = ['c302_C0_Pharyngeal.net.nml']
 
+    elif '-osc' in sys.argv:
+
+        configs = ['c302_C1_Oscillator.net.nml']
+
     for c in configs:
 
         nml_doc = read_neuroml2_file('examples/%s'%c)
 
-        generate_conn_matrix(nml_doc, save_fig_dir='./examples/summary/images')
+        generate_conn_matrix(nml_doc, save_fig_dir='./examples/summary/images', figsize=(6.4,4.8))
 
     if not '-nogui' in sys.argv:
         plt.show()
