@@ -2,9 +2,9 @@ name: Non-OMV-tests
 
 on:
   push:
-    branches: [ master, development, experimental, ow* ]
+    branches: [ master, development, experimental, ow*, test* ]
   pull_request:
-    branches: [ master, development, experimental, ow* ]
+    branches: [ master, development, experimental, ow*, test* ]
 
 jobs:
   build:
