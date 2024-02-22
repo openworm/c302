@@ -18,11 +18,11 @@ import os
 from c302 import print_
 
 def get_all_muscle_prefixes():
-    return ["pm", "vm", "um", "BWM-D", "BWM-V"]
+    return ["pm", "vm", "um", "BWM-D", "BWM-V", "LegacyBodyWallMuscles"]
 
 
 def get_body_wall_muscle_prefixes():
-    return ["BWM-D", "BWM-V"]
+    return ["BWM-D", "BWM-V", "LegacyBodyWallMuscles"]
 
 
 def is_muscle(cell):
@@ -90,6 +90,7 @@ class White_A:
     spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/data/"
     filename = "%saconnectome_white_1986_A.csv" % spreadsheet_location
 
+        
     def read_data(include_nonconnected_cells=False):
         conns = []
         cells = []
@@ -232,6 +233,10 @@ def main2():
 class White_whole:
     spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/data/"
     filename = "%saconnectome_white_1986_whole.csv" % spreadsheet_location
+
+    BODYWALLMUSCLE_ENDPOINT = "LegacyBodyWallMuscles"
+    
+
     def read_data(include_nonconnected_cells=False):
     
         conns = []
@@ -248,7 +253,6 @@ class White_whole:
 
                 if not is_neuron(pre) or not is_neuron(post):
                     continue  # pre or post is not a neuron
-
                 pre = remove_leading_index_zero(pre)
                 post = remove_leading_index_zero(post)
 
@@ -276,17 +280,18 @@ class White_whole:
             print_("Opened file: " + White_whole.filename)
             f.readline()
 
+
             for line in f:
                 pre, post, num, syntype, synclass = parse_line(line)
-
+                    
                 if not is_body_wall_muscle(post):
                     continue
-                
+    
                 if is_neuron(pre):
                     pre = remove_leading_index_zero(pre)
-                post = get_old_muscle_name(post)
+                    post = get_old_muscle_name(post)
 
-                conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
+                    conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
                 
                 if is_neuron(pre) and pre not in neurons:
                     neurons.append(pre)
