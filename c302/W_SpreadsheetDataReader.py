@@ -36,7 +36,7 @@ class WitvlietDataReader1:
                 post = str(row[1])
                 syntype = str(row[2])
                 num = int(row[3])
-                synclass = 'Generic_GJ' if 'electrical' in syntype else 'Chemical_Synapse'
+                synclass = 'Generic_GJ' if 'electrical' in syntype else 'Generic_CS'
                 
 
                 conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
@@ -64,7 +64,7 @@ class WitvlietDataReader1:
                 post = str(row[1])
                 syntype = str(row[2])
                 num = int(row[3])
-                synclass = 'Generic_GJ' if 'electrical' in syntype else 'Chemical_Synapse'
+                synclass = 'Generic_GJ' if 'electrical' in syntype else 'Generic_CS'
 
 
                 conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
@@ -98,7 +98,7 @@ class WitvlietDataReader1:
                 post = str(row[1])
                 syntype = str(row[2])
                 num = int(row[3])
-                synclass = 'Generic_GJ' if 'EJ' in syntype else 'Chemical_Synapse'
+                synclass = 'Generic_GJ' if 'EJ' in syntype else 'Generic_CS'
                 if post.startswith("BWM-"):
                     post = get_old_muscle_name(post)
                 else:
@@ -138,7 +138,7 @@ class WitvlietDataReader2:
                 post = str(row[1])
                 syntype = str(row[2])
                 num = int(row[3])
-                synclass = 'Generic_GJ' if 'electrical' in syntype else 'Chemical_Synapse'
+                synclass = 'Generic_GJ' if 'electrical' in syntype else 'Generic_CS'
 
                 conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
                 if pre not in cells:
@@ -165,7 +165,7 @@ class WitvlietDataReader2:
                 post = str(row[1])
                 syntype = str(row[2])
                 num = int(row[3])
-                synclass = 'Generic_GJ' if 'electrical' in syntype else 'Chemical_Synapse'
+                synclass = 'Generic_GJ' if 'electrical' in syntype else 'Generic_CS'
 
 
                 conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
@@ -197,7 +197,7 @@ class WitvlietDataReader2:
                 post = str(row[1])
                 syntype = str(row[2])
                 num = int(row[3])
-                synclass = 'Generic_GJ' if 'electrical' in syntype else 'Chemical_Synapse'
+                synclass = 'Generic_GJ' if 'electrical' in syntype else 'Generic_CS'
                 if post.startswith("BWM-"):
                     post = get_old_muscle_name(post)
                 else:

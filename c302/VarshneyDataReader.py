@@ -30,7 +30,7 @@ def read_data(include_nonconnected_cells=False, neuron_connect=True):
             if not post==NMJ_ENDPOINT:        
                 syntype = str(row[2])
                 num = int(row[3])
-                synclass = 'Generic_GJ' if 'EJ' in syntype else 'Chemical_Synapse'
+                synclass = 'Generic_GJ' if 'EJ' in syntype else 'Generic_CS'
 
                 conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
                 if pre not in cells:
@@ -60,7 +60,7 @@ def read_muscle_data():
         if post==NMJ_ENDPOINT:        
             syntype = str(row[2])
             num = int(row[3])
-            synclass = 'Generic_GJ' if 'EJ' in syntype else 'Chemical_Synapse'
+            synclass = 'Generic_GJ' if 'EJ' in syntype else 'Generic_CS'
 
             conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
             if pre not in neurons:
