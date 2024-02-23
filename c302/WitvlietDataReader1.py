@@ -1,15 +1,17 @@
 # Temporary class to allow this to be used in comparison notebook. 
 # Should be tidied up.
 
-from c302.W_SpreadsheetDataReader import WitvlietDataReader1
+from c302.W_SpreadsheetDataReader import WitvlietDataReader
 from c302.NeuroMLUtilities import analyse_connections
 
-read_data = WitvlietDataReader1.read_data
-read_muscle_data = WitvlietDataReader1.read_muscle_data
+wdr = WitvlietDataReader('witvliet_2020_7.xlsx')
+
+read_data = wdr.read_data
+read_muscle_data = wdr.read_muscle_data
 
 def main1():
 
-    cells, neuron_conns = read_data(include_nonconnected_cells=True)
+    cells, neuron_conns = read_data()
     neurons2muscles, muscles, muscle_conns = read_muscle_data()
 
     analyse_connections(cells, neuron_conns, neurons2muscles, muscles, muscle_conns)

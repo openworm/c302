@@ -11,32 +11,16 @@
 
 import csv
 
-from c302.NeuroMLUtilities import ConnectionInfo
-from c302.NeuroMLUtilities import analyse_connections
+from c302.ConnectomeReader import ConnectionInfo
+from c302.ConnectomeReader import analyse_connections
+from c302.ConnectomeReader import convert_to_preferred_muscle_name
+from c302.ConnectomeReader import is_neuron
+from c302.ConnectomeReader import is_body_wall_muscle
+
+
 import os
 
 from c302 import print_
-
-def get_all_muscle_prefixes():
-    return ["pm", "vm", "um", "BWM-D", "BWM-V", "LegacyBodyWallMuscles"]
-
-
-def get_body_wall_muscle_prefixes():
-    return ["BWM-D", "BWM-V", "LegacyBodyWallMuscles"]
-
-
-def is_muscle(cell):
-    known_muscle_prefixes = get_all_muscle_prefixes()
-    return cell.startswith(tuple(known_muscle_prefixes))
-
-
-def is_body_wall_muscle(cell):
-    known_muscle_prefixes = get_body_wall_muscle_prefixes()
-    return cell.startswith(tuple(known_muscle_prefixes))
-
-
-def is_neuron(cell):
-    return not is_body_wall_muscle(cell)
 
 
 def remove_leading_index_zero(cell):
@@ -47,17 +31,6 @@ def remove_leading_index_zero(cell):
         return "%s%s" % (cell[:-2], cell[-1:])
     return cell
 
-def get_old_muscle_name(muscle):
-    if muscle.startswith("BWM-VL"):
-        return "MVL%s" %muscle[6:]
-    elif muscle.startswith("BWM-VR"):
-        return "MVR%s" %muscle[6:]
-    elif muscle.startswith("BWM-DL"):
-        return "MDL%s" %muscle[6:]
-    elif muscle.startswith("BWM-DR"):
-        return "MDR%s" %muscle[6:]
-    else:
-        return muscle + "???"
 
 def get_syntype(syntype):
     if syntype == "electrical":
@@ -142,7 +115,7 @@ class White_A:
                 
                 if is_neuron(pre):
                     pre = remove_leading_index_zero(pre)
-                post = get_old_muscle_name(post)
+                post = convert_to_preferred_muscle_name(post)
 
                 conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
                 
@@ -213,7 +186,7 @@ class White_L4:
                 
                 if is_neuron(pre):
                     pre = remove_leading_index_zero(pre)
-                post = get_old_muscle_name(post)
+                post = convert_to_preferred_muscle_name(post)
 
                 conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
                 
@@ -289,7 +262,7 @@ class White_whole:
     
                 if is_neuron(pre):
                     pre = remove_leading_index_zero(pre)
-                    post = get_old_muscle_name(post)
+                    post = convert_to_preferred_muscle_name(post)
 
                     conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
                 
