@@ -47,7 +47,9 @@ def get_synclass(cell, syntype):
             return "GABA"
         return "Acetylcholine"
 
-class Cook2019DataReaderReader():
+class Cook2019DataReader():
+
+    verbose = False
 
     def __init__(self):
 
@@ -69,12 +71,12 @@ class Cook2019DataReaderReader():
             for i in pre_range[conn_type]:
                 self.pre_cells[conn_type].append(sheet['C%i'%i].value)
 
-            print(' - Pre cells for %s (%i):\n%s'%(conn_type, len(self.pre_cells[conn_type]), self.pre_cells[conn_type]))
+            if self.verbose: print(' - Pre cells for %s (%i):\n%s'%(conn_type, len(self.pre_cells[conn_type]), self.pre_cells[conn_type]))
 
             for i in post_range[conn_type]:
                 self.post_cells[conn_type].append(sheet.cell(row=3, column=i).value)
 
-            print(' - Post cells for %s (%i):\n%s'%(conn_type, len(self.post_cells[conn_type]), self.post_cells[conn_type]))
+            if self.verbose: print(' - Post cells for %s (%i):\n%s'%(conn_type, len(self.post_cells[conn_type]), self.post_cells[conn_type]))
 
             self.conn_nums[conn_type] = np.zeros([len(self.pre_cells[conn_type]),len(self.post_cells[conn_type])], dtype=int)
 
@@ -87,8 +89,7 @@ class Cook2019DataReaderReader():
                     if val is not None:
                         self.conn_nums[conn_type][i,j] = int(val)
 
-            print()
-            print(' - Conns for %s (%s):\n%s'%(conn_type, self.conn_nums[conn_type].shape, self.conn_nums[conn_type]))
+            if self.verbose: print(' - Conns for %s (%s):\n%s'%(conn_type, self.conn_nums[conn_type].shape, self.conn_nums[conn_type]))
 
 
 
@@ -167,14 +168,14 @@ class Cook2019DataReaderReader():
                 elif is_body_wall_muscle(pre) and pre not in muscles:
                     muscles.append(pre)
                 if post not in muscles:
-                    muscles.append(post)'''
+                    muscles.append(post)''' 
 
         return neurons, muscles, conns
 
 
 def main():
 
-    cdr = Cook2019DataReaderReader()
+    cdr = Cook2019DataReader()
     read_data = cdr.read_data
     read_muscle_data = cdr.read_muscle_data
     

@@ -1,0 +1,14 @@
+|EXC|INH|GJ|
+|-|-|-|
+|![---](./images/Pharyngeal/SSData_exc_to_neurons.png)|![---](./images/Pharyngeal/SSData_inh_to_neurons.png)|![---](./images/Pharyngeal/SSData_elec_neurons_neurons.png)|
+|![---](./images/Pharyngeal/UpdSSData_exc_to_neurons.png)|![---](./images/Pharyngeal/UpdSSData_inh_to_neurons.png)|![---](./images/Pharyngeal/UpdSSData_elec_neurons_neurons.png)|
+|![---](./images/Pharyngeal/UpdSSData2_exc_to_neurons.png)|![---](./images/Pharyngeal/UpdSSData2_inh_to_neurons.png)|![---](./images/Pharyngeal/UpdSSData2_elec_neurons_neurons.png)|
+|![---](./images/Pharyngeal/OpenWorm_exc_to_neurons.png)|![---](./images/Pharyngeal/OpenWorm_inh_to_neurons.png)|![---](./images/Pharyngeal/OpenWorm_elec_neurons_neurons.png)|
+|![---](./images/Pharyngeal/White_A_exc_to_neurons.png)|![---](./images/Pharyngeal/White_A_inh_to_neurons.png)|![---](./images/Pharyngeal/White_A_elec_neurons_neurons.png)|
+|![---](./images/Pharyngeal/White_L4_exc_to_neurons.png)|![---](./images/Pharyngeal/White_L4_inh_to_neurons.png)|![---](./images/Pharyngeal/White_L4_elec_neurons_neurons.png)|
+|![---](./images/Pharyngeal/White_whole_exc_to_neurons.png)|![---](./images/Pharyngeal/White_whole_inh_to_neurons.png)|![---](./images/Pharyngeal/White_whole_elec_neurons_neurons.png)|
+|![---](./images/Pharyngeal/Varshney_exc_to_neurons.png)|![---](./images/Pharyngeal/Varshney_inh_to_neurons.png)|![---](./images/Pharyngeal/Varshney_elec_neurons_neurons.png)|
+|![---](./images/Pharyngeal/Witvliet1_exc_to_neurons.png)|![---](./images/Pharyngeal/Witvliet1_inh_to_neurons.png)|![---](./images/Pharyngeal/Witvliet1_elec_neurons_neurons.png)|
+|![---](./images/Pharyngeal/Witvliet2_exc_to_neurons.png)|![---](./images/Pharyngeal/Witvliet2_inh_to_neurons.png)|![---](./images/Pharyngeal/Witvliet2_elec_neurons_neurons.png)|
+|![---](./images/Pharyngeal/WormNeuroAtlas_exc_to_neurons.png)|![---](./images/Pharyngeal/WormNeuroAtlas_inh_to_neurons.png)|![---](./images/Pharyngeal/WormNeuroAtlas_elec_neurons_neurons.png)|
+|![---](./images/Pharyngeal/Cook2019Herm_exc_to_neurons.png)|![---](./images/Pharyngeal/Cook2019Herm_inh_to_neurons.png)|![---](./images/Pharyngeal/Cook2019Herm_elec_neurons_neurons.png)|
