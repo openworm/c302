@@ -28,11 +28,11 @@ def convert_to_preferred_muscle_name(muscle):
         return muscle + "???"
 
 def get_all_muscle_prefixes():
-    return ["pm", "vm", "um", "BWM-D", "BWM-V", "LegacyBodyWallMuscles"]
+    return ["pm", "vm", "um", "BWM-D", "BWM-V", "LegacyBodyWallMuscles", "vBWM", "dBWM"]
 
 
 def get_body_wall_muscle_prefixes():
-    return ["BWM-D", "BWM-V", "LegacyBodyWallMuscles"]
+    return ["BWM-D", "BWM-V", "LegacyBodyWallMuscles", "vBWM", "dBWM"]
 
 
 def is_muscle(cell):
@@ -47,6 +47,15 @@ def is_body_wall_muscle(cell):
 
 def is_neuron(cell):
     return not is_body_wall_muscle(cell)
+
+
+def remove_leading_index_zero(cell):
+    """
+    Returns neuron name with an index without leading zero. E.g. VB01 -> VB1.
+    """
+    if is_neuron(cell) and cell[-2:].startswith("0"):
+        return "%s%s" % (cell[:-2], cell[-1:])
+    return cell
 
 class ConnectionInfo:
 

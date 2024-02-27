@@ -16,6 +16,7 @@ from c302.ConnectomeReader import analyse_connections
 from c302.ConnectomeReader import convert_to_preferred_muscle_name
 from c302.ConnectomeReader import is_neuron
 from c302.ConnectomeReader import is_body_wall_muscle
+from c302.ConnectomeReader import remove_leading_index_zero
 
 from openpyxl import load_workbook
 
@@ -27,7 +28,24 @@ from c302 import print_
 spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/data/"
 filename = "%sSI 5 Connectome adjacency matrices.xlsx" % spreadsheet_location
 
-SHEET_HERM_CHEM = 'hermaphrodite chemical'
+HERM_CHEM = 'hermaphrodite chemical'
+HERM_GAP_SYMM = 'herm gap jn symmetric'
+
+pre_range = {HERM_CHEM:range(4,304),
+             HERM_GAP_SYMM:range(4,472)}
+             
+post_range = {HERM_CHEM:range(4,457),
+             HERM_GAP_SYMM:range(4,472)}
+
+
+def get_synclass(cell, syntype):
+    #TODO: fix this dirty hack
+    if syntype == "GapJunction":
+        return "Generic_GJ"
+    else:
+        if cell.startswith("DD") or cell.startswith("VD"):
+            return "GABA"
+        return "Acetylcholine"
 
 class Cook2019DataReaderReader():
 
@@ -35,32 +53,42 @@ class Cook2019DataReaderReader():
 
         wb = load_workbook(filename)
         print_("Opened the Excel file: " + filename)   
-        sheet = wb.get_sheet_by_name(SHEET_HERM_CHEM)
-        print('Looking at sheet: %s'%SHEET_HERM_CHEM)
-        self.pre_cells = []
-        for i in range(4,304):
-            self.pre_cells.append(sheet['C%i'%i].value)
 
-        print('Pre cells (%i): %s'%(len(self.pre_cells),self.pre_cells))
+        self.pre_cells = {}
+        self.post_cells = {}
+        self.conn_nums = {}
 
-        self.post_cells = []
-        for i in range(4,457):
-            self.post_cells.append(sheet.cell(row=3, column=i).value)
+        for conn_type in [HERM_CHEM, HERM_GAP_SYMM]:
 
-        print('Post cells (%i): %s'%(len(self.post_cells),self.post_cells))
+            sheet = wb.get_sheet_by_name(conn_type)
+            print('Looking at sheet: %s'%conn_type)
 
-        self.conns = np.zeros([len(self.pre_cells),len(self.post_cells)], dtype=int)
+            self.pre_cells[conn_type] = []
+            self.post_cells[conn_type] = []
 
-        print(self.conns)
+            for i in pre_range[conn_type]:
+                self.pre_cells[conn_type].append(sheet['C%i'%i].value)
 
-        for i in range(len(self.pre_cells)):
-            for j in range(len(self.post_cells)):
-                val = sheet.cell(row=4+i, column=4+j).value
-                #print('Cell (%i,%i) = %s)'%(i,j,val))
-                if val is not None:
-                    self.conns[i,j] = int(val)
+            print(' - Pre cells for %s (%i):\n%s'%(conn_type, len(self.pre_cells[conn_type]), self.pre_cells[conn_type]))
 
-        print(self.conns)
+            for i in post_range[conn_type]:
+                self.post_cells[conn_type].append(sheet.cell(row=3, column=i).value)
+
+            print(' - Post cells for %s (%i):\n%s'%(conn_type, len(self.post_cells[conn_type]), self.post_cells[conn_type]))
+
+            self.conn_nums[conn_type] = np.zeros([len(self.pre_cells[conn_type]),len(self.post_cells[conn_type])], dtype=int)
+
+            for i in range(len(self.pre_cells[conn_type])):
+                for j in range(len(self.post_cells[conn_type])):
+                    row =4+i
+                    col = 4+j
+                    val = sheet.cell(row=row, column=col).value
+                    #print('Cell (%i,%i) [row %i, col %i] = %s'%(i,j,row, col, val))
+                    if val is not None:
+                        self.conn_nums[conn_type][i,j] = int(val)
+
+            print()
+            print(' - Conns for %s (%s):\n%s'%(conn_type, self.conn_nums[conn_type].shape, self.conn_nums[conn_type]))
 
 
 
@@ -78,27 +106,28 @@ class Cook2019DataReaderReader():
 
         conns = []
         cells = []
+        for conn_type in [HERM_CHEM, HERM_GAP_SYMM]:
 
-        for pre_index in range(len(self.pre_cells)):
-            for post_index in range(len(self.post_cells)):
+            for pre_index in range(len(self.pre_cells[conn_type])):
+                for post_index in range(len(self.post_cells[conn_type])):
 
-                pre = self.pre_cells[pre_index]
-                post = self.post_cells[post_index]
+                    pre = remove_leading_index_zero(self.pre_cells[conn_type][pre_index])
+                    post = remove_leading_index_zero(self.post_cells[conn_type][post_index])
 
-                if not is_neuron(pre) or not is_neuron(post):
-                    continue  # pre or post is not a neuron
+                    if is_body_wall_muscle(post):
+                        continue  # post is a BWM so ignore
 
-                num = self.conns[pre_index,post_index]
-                if num>0:
-                    syntype = '???'
-                    synclass = '???'
+                    num = self.conn_nums[conn_type][pre_index,post_index]
+                    if num>0:
+                        syntype = 'Send' if conn_type == HERM_CHEM else "GapJunction"
+                        synclass = get_synclass(pre, syntype)
 
-                    conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
-                    #print ConnectionInfo(pre, post, num, syntype, synclass)
-                    if pre not in cells:
-                        cells.append(pre)
-                    if post not in cells:
-                        cells.append(post)
+                        conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
+                        #print ConnectionInfo(pre, post, num, syntype, synclass)
+                        if pre not in cells:
+                            cells.append(pre)
+                        if post not in cells:
+                            cells.append(post)
 
         return cells, conns
 
