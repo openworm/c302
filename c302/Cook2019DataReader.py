@@ -56,7 +56,7 @@ class Cook2019DataReaderReader():
         for i in range(len(self.pre_cells)):
             for j in range(len(self.post_cells)):
                 val = sheet.cell(row=4+i, column=4+j).value
-                print('Cell (%i,%i) = %s)'%(i,j,val))
+                #print('Cell (%i,%i) = %s)'%(i,j,val))
                 if val is not None:
                     self.conns[i,j] = int(val)
 
@@ -64,96 +64,95 @@ class Cook2019DataReaderReader():
 
 
 
-def read_data(include_nonconnected_cells=False):
-    """
-    Args:
-        include_nonconnected_cells (bool): Also append neurons without known connections to other neurons to the 'cells' list. True if they should get appended, False otherwise.
-    Returns:
-        cells (:obj:`list` of :obj:`str`): List of neurons
-        conns (:obj:`list` of :obj:`ConnectionInfo`): List of connections from neuron to neuron
-    """
+    def read_data(self, include_nonconnected_cells=False):
+        """
+        Args:
+            include_nonconnected_cells (bool): Also append neurons without known connections to other neurons to the 'cells' list. True if they should get appended, False otherwise.
+        Returns:
+            cells (:obj:`list` of :obj:`str`): List of neurons
+            conns (:obj:`list` of :obj:`ConnectionInfo`): List of connections from neuron to neuron
+        """
 
-    conns = []
-    cells = []
+        if not include_nonconnected_cells:
+            raise Exception('Option include_nonconnected_cells=False not supported')
 
-    with open(filename, 'r') as f:
-        reader = csv.DictReader(f)
-        print_("Opened file: " + filename)
+        conns = []
+        cells = []
 
-        known_nonconnected_cells = ['CANL', 'CANR']
+        for pre_index in range(len(self.pre_cells)):
+            for post_index in range(len(self.post_cells)):
 
-        for row in reader:
-            pre, post, num, syntype, synclass = parse_row(row)
+                pre = self.pre_cells[pre_index]
+                post = self.post_cells[post_index]
 
-            if not is_neuron(pre) or not is_neuron(post):
-                continue  # pre or post is not a neuron
+                if not is_neuron(pre) or not is_neuron(post):
+                    continue  # pre or post is not a neuron
 
-            pre = remove_leading_index_zero(pre)
-            post = remove_leading_index_zero(post)
+                num = self.conns[pre_index,post_index]
+                if num>0:
+                    syntype = '???'
+                    synclass = '???'
 
-            conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
-            #print ConnectionInfo(pre, post, num, syntype, synclass)
-            if pre not in cells:
-                cells.append(pre)
-            if post not in cells:
-                cells.append(post)
+                    conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
+                    #print ConnectionInfo(pre, post, num, syntype, synclass)
+                    if pre not in cells:
+                        cells.append(pre)
+                    if post not in cells:
+                        cells.append(post)
 
-        if include_nonconnected_cells:
-            for c in known_nonconnected_cells:
-                if c not in cells:
-                    cells.append(c)
-
-    return cells, conns
+        return cells, conns
 
 
-def read_muscle_data():
-    """
-    Returns:
-        neurons (:obj:`list` of :obj:`str`): List of motor neurons. Each neuron has at least one connection with a post-synaptic muscle cell.
-        muscles (:obj:`list` of :obj:`str`): List of muscle cells.
-        conns (:obj:`list` of :obj:`ConnectionInfo`): List of neuron-muscle connections.
-    """
+    def read_muscle_data(self):
+        """
+        Returns:
+            neurons (:obj:`list` of :obj:`str`): List of motor neurons. Each neuron has at least one connection with a post-synaptic muscle cell.
+            muscles (:obj:`list` of :obj:`str`): List of muscle cells.
+            conns (:obj:`list` of :obj:`ConnectionInfo`): List of neuron-muscle connections.
+        """
 
-    neurons = []
-    muscles = []
-    conns = []
+        neurons = []
+        muscles = []
+        conns = []
 
-    with open(filename, 'r') as f:
-        reader = csv.DictReader(f)
-        print_("Opened file: " + filename)
+        '''
+        with open(filename, 'r') as f:
+            reader = csv.DictReader(f)
+            print_("Opened file: " + filename)
 
-        for row in reader:
-            pre, post, num, syntype, synclass = parse_row(row)
+            for row in reader:
+                pre, post, num, syntype, synclass = parse_row(row)
 
-            if not (is_neuron(pre) or is_body_wall_muscle(pre)) or not is_body_wall_muscle(post):
-                continue
+                if not (is_neuron(pre) or is_body_wall_muscle(pre)) or not is_body_wall_muscle(post):
+                    continue
 
-            if is_neuron(pre):
-                pre = remove_leading_index_zero(pre)
-            else:
-                pre = get_old_muscle_name(pre)
-            post = get_old_muscle_name(post)
+                if is_neuron(pre):
+                    pre = remove_leading_index_zero(pre)
+                else:
+                    pre = get_old_muscle_name(pre)
+                post = get_old_muscle_name(post)
 
-            conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
-            if is_neuron(pre) and pre not in neurons:
-                neurons.append(pre)
-            elif is_body_wall_muscle(pre) and pre not in muscles:
-                muscles.append(pre)
-            if post not in muscles:
-                muscles.append(post)
+                conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
+                if is_neuron(pre) and pre not in neurons:
+                    neurons.append(pre)
+                elif is_body_wall_muscle(pre) and pre not in muscles:
+                    muscles.append(pre)
+                if post not in muscles:
+                    muscles.append(post)'''
 
-    return neurons, muscles, conns
+        return neurons, muscles, conns
 
 
 def main():
 
     cdr = Cook2019DataReaderReader()
-
+    read_data = cdr.read_data
+    read_muscle_data = cdr.read_muscle_data
     
-    '''cells, neuron_conns = read_data(include_nonconnected_cells=True)
+    cells, neuron_conns = read_data(include_nonconnected_cells=True)
     neurons2muscles, muscles, muscle_conns = read_muscle_data()
 
-    analyse_connections(cells, neuron_conns, neurons2muscles, muscles, muscle_conns)'''
+    analyse_connections(cells, neuron_conns, neurons2muscles, muscles, muscle_conns)
 
 if __name__ == '__main__':
     main()
