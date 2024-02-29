@@ -170,10 +170,20 @@ def analyse_connections(cells, neuron_conns, neurons2muscles, muscles, muscle_co
     #core_set = ['VA6', 'VD6']
     print_("\n\nConnections between cells in the subset %s:\n"%(core_set))
 
-
     for c in neuron_conns:
         if c.pre_cell in core_set and c.post_cell in core_set:
             print_(str(c))
+
+    print_details_on =['AVBR','NSMR']
+    for cd in print_details_on:
+        print_("\n\nAll outgoing connections of %s:\n"%(cd))
+        for c in neuron_conns:
+            if c.pre_cell == cd:
+                print_(str(c))
+        print_("\n\nAll incoming connections of %s:\n"%(cd))
+        for c in neuron_conns:
+            if c.post_cell == cd:
+                print_(str(c))
 
 
     print_("")

@@ -20,6 +20,7 @@ for m in metadata:
         print("    %s:\t%s"%(e,metadata[m][e]))
 
 test_cells = ['ADAL','ADEL','RIAL', 'VA3', 'VD3'] 
+test_cells = ['NSMR'] 
 for c in test_cells:
     atlas.everything_about(c)
 
