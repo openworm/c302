@@ -465,7 +465,7 @@ def _get_cell_info(bnd, cells):
     for name in fixed_up_names:
         cell = next(ctx(Cell).query(name=name).load(), None)
         if cell is None:
-            print_("No matching cell for %s" % name)
+            #print_("No matching cell for %s" % name)
             continue
 
         normalized_name = cell.name()
