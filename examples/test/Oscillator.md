@@ -1,0 +1,14 @@
+|EXC|INH|GJ|
+|-|-|-|
+|![---](./images/Oscillator/SSData_exc_to_neurons.png)|![---](./images/Oscillator/SSData_inh_to_neurons.png)|![---](./images/Oscillator/SSData_elec_neurons_neurons.png)|
+|![---](./images/Oscillator/UpdSSData_exc_to_neurons.png)|![---](./images/Oscillator/UpdSSData_inh_to_neurons.png)|![---](./images/Oscillator/UpdSSData_elec_neurons_neurons.png)|
+|![---](./images/Oscillator/UpdSSData2_exc_to_neurons.png)|![---](./images/Oscillator/UpdSSData2_inh_to_neurons.png)|![---](./images/Oscillator/UpdSSData2_elec_neurons_neurons.png)|
+|![---](./images/Oscillator/OpenWorm_exc_to_neurons.png)|![---](./images/Oscillator/OpenWorm_inh_to_neurons.png)|![---](./images/Oscillator/OpenWorm_elec_neurons_neurons.png)|
+|![---](./images/Oscillator/White_A_exc_to_neurons.png)|![---](./images/Oscillator/White_A_inh_to_neurons.png)|![---](./images/Oscillator/White_A_elec_neurons_neurons.png)|
+|![---](./images/Oscillator/White_L4_exc_to_neurons.png)|![---](./images/Oscillator/White_L4_inh_to_neurons.png)|![---](./images/Oscillator/White_L4_elec_neurons_neurons.png)|
+|![---](./images/Oscillator/White_whole_exc_to_neurons.png)|![---](./images/Oscillator/White_whole_inh_to_neurons.png)|![---](./images/Oscillator/White_whole_elec_neurons_neurons.png)|
+|![---](./images/Oscillator/Varshney_exc_to_neurons.png)|![---](./images/Oscillator/Varshney_inh_to_neurons.png)|![---](./images/Oscillator/Varshney_elec_neurons_neurons.png)|
+|![---](./images/Oscillator/Witvliet1_exc_to_neurons.png)|![---](./images/Oscillator/Witvliet1_inh_to_neurons.png)|![---](./images/Oscillator/Witvliet1_elec_neurons_neurons.png)|
+|![---](./images/Oscillator/Witvliet2_exc_to_neurons.png)|![---](./images/Oscillator/Witvliet2_inh_to_neurons.png)|![---](./images/Oscillator/Witvliet2_elec_neurons_neurons.png)|
+|![---](./images/Oscillator/WormNeuroAtlas_exc_to_neurons.png)|![---](./images/Oscillator/WormNeuroAtlas_inh_to_neurons.png)|![---](./images/Oscillator/WormNeuroAtlas_elec_neurons_neurons.png)|
+|![---](./images/Oscillator/Cook2019Herm_exc_to_neurons.png)|![---](./images/Oscillator/Cook2019Herm_inh_to_neurons.png)|![---](./images/Oscillator/Cook2019Herm_elec_neurons_neurons.png)|

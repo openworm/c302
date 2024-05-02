@@ -577,6 +577,8 @@ if __name__ == '__main__':
     configs = ['c302_C0_Muscles.net.nml']
     configs = ['c302_C0_Syns.net.nml', 'c302_C0_Social.net.nml','c302_C0_Muscles.net.nml','c302_C0_Pharyngeal.net.nml','c302_C0_Oscillator.net.nml','c302_C0_Full.net.nml']
     
+    figsize=(6.4,4.8)
+
     if '-phar' in sys.argv:
 
         configs = ['c302_C0_Pharyngeal.net.nml']
@@ -585,11 +587,21 @@ if __name__ == '__main__':
 
         configs = ['c302_C1_Oscillator.net.nml']
 
+    elif '-musc' in sys.argv:
+
+        configs = ['c302_C1_Muscles.net.nml']
+        figsize=(10,10)
+
+    elif '-full' in sys.argv:
+
+        configs = ['c302_C1_Full.net.nml']
+        figsize=(10,10)
+
     for c in configs:
 
         nml_doc = read_neuroml2_file('examples/%s'%c)
 
-        generate_conn_matrix(nml_doc, save_fig_dir='./examples/summary/images', figsize=(6.4,4.8))
+        generate_conn_matrix(nml_doc, save_fig_dir='./examples/summary/images', figsize=figsize)
 
     if not '-nogui' in sys.argv:
         plt.show()

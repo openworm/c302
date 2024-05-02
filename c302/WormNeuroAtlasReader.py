@@ -76,7 +76,7 @@ class WormNeuroAtlasReader(object):
 
                 connection = False
 
-                gji = gj[apre, apost]
+                gji = gj[apost, apre]
                 num = gji[0]
                 if num>0:
                     #print("Gap junc (%s (%i) -> %s (%i): %s"%(pre, apre, post, apost, gji))
@@ -85,7 +85,7 @@ class WormNeuroAtlasReader(object):
                     conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
                     connection = True
 
-                csi = cs[apre, apost]
+                csi = cs[apost, apre]
                 num = csi[0]
                 if num>0:
                     #print("Chem syn (%s (%i) -> %s (%i): %s"%(pre, apre, post, apost, gji))

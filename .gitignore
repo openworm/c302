@@ -95,3 +95,13 @@ arm64
 /examples/test/images/c302_C1_Oscillator.net.nml
 /examples/test/images/LEMS_c302_C1_Oscillator.xml
 /c302/VarshneyDataReader2.py
+/
+/examples/test/images/LEMS_c302_C1_Full.xml
+/examples/test/images/LEMS_c302_C1_Muscles.xml
+/examples/test/images/LEMS_c302_C1_Social.xml
+/examples/test/images/LEMS_c302_C1_Syns.xml
+/examples/test/images/c302_C1_Full.net.nml
+/examples/test/images/c302_C1_Muscles.net.nml
+/examples/test/images/c302_C1_Pharyngeal.net.nml
+/examples/test/images/c302_C1_Social.net.nml
+/examples/test/images/c302_C1_Syns.net.nml
