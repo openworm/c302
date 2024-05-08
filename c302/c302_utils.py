@@ -350,7 +350,7 @@ def plot_c302_results(lems_results,
         plt.close("all")
 
 
-def _show_conn_matrix(data, t, all_info_pre, all_info_post, type, save_figure_to=False, verbose=True, figsize=default_figsize):
+def _show_conn_matrix(data, t, all_info_pre, all_info_post, type, save_figure_to=False, verbose=True, figsize=default_figsize, colormap=None):
 
 
     if data.shape[0]>0 and data.shape[1]>0 and np.amax(data)>0:
@@ -372,8 +372,12 @@ def _show_conn_matrix(data, t, all_info_pre, all_info_post, type, save_figure_to
     fig.canvas.manager.set_window_title(title)
     import matplotlib
     #cm = matplotlib.cm.get_cmap('gist_stern_r')
-    cmap = plt.colormaps['gist_stern_r']
-    #cmap = plt.colormaps['gist_earth']
+    if colormap==None:
+        cmap = plt.colormaps['gist_stern_r']
+    else:
+        #cmap = plt.colormaps['gist_earth']
+        #cmap = plt.colormaps['nipy_spectral']
+        cmap = plt.colormaps[colormap]
 
 
     im = plt.imshow(data, cmap=cmap, interpolation='nearest',norm=None)
@@ -409,7 +413,7 @@ def _show_conn_matrix(data, t, all_info_pre, all_info_post, type, save_figure_to
     else:
         c302.print_("Not saving figure", verbose)
 
-def generate_conn_matrix(nml_doc, save_fig_dir=None, verbose=False, figsize=default_figsize):
+def generate_conn_matrix(nml_doc, save_fig_dir=None, verbose=False, figsize=default_figsize, order_by_type=False, colormap=None):
 
     net = nml_doc.networks[0]
 
@@ -458,6 +462,22 @@ def generate_conn_matrix(nml_doc, save_fig_dir=None, verbose=False, figsize=defa
         c302.print_('Unable to connect to owmeta bundle: %s' % e)
         traceback.print_exc()
 
+    '''
+    if order_by_type:
+        ordered_all_neuron_info = {}
+        order = ['(Se)','(InSe)','(In)','(Mo)']
+
+        for o in order:
+            for c in all_neuron_info:
+                print('Checking: %s'%str(all_neuron_info[c]))
+                if o in all_neuron_info[c][4]:
+                    print('Adding: %s'%str(all_neuron_info[c]))
+                    ordered_all_neuron_info[c] = all_neuron_info[c]
+
+
+        print('Swapping %s with %s'%(all_neuron_info,ordered_all_neuron_info))
+        all_neuron_info = ordered_all_neuron_info'''
+
     all_neurons = []
     all_muscles = []
     for c in all_cells:
@@ -497,22 +517,26 @@ def generate_conn_matrix(nml_doc, save_fig_dir=None, verbose=False, figsize=defa
     _show_conn_matrix(data_exc_n, 'Excitatory (non GABA) conns to neurons',all_neuron_info,all_neuron_info,
                       net.id, save_figure_to='%s/%s_exc_to_neurons.png'%(save_fig_dir,net.id) if save_fig_dir else None, 
                       verbose=verbose,
-                      figsize=figsize)
+                      figsize=figsize,
+                      colormap=colormap)
 
     _show_conn_matrix(data_exc_m, 'Excitatory (non GABA) conns to muscles',all_neuron_info,all_muscle_info,
                       net.id, save_figure_to='%s/%s_exc_to_muscles.png'%(save_fig_dir,net.id) if save_fig_dir else None, 
                       verbose=verbose,
-                      figsize=figsize)
+                      figsize=figsize,
+                      colormap=colormap)
 
     _show_conn_matrix(data_inh_n, 'Inhibitory (GABA) conns to neurons',all_neuron_info,all_neuron_info,
                       net.id, save_figure_to='%s/%s_inh_to_neurons.png'%(save_fig_dir,net.id) if save_fig_dir else None, 
                       verbose=verbose,
-                      figsize=figsize)
+                      figsize=figsize,
+                      colormap=colormap)
 
     _show_conn_matrix(data_inh_m, 'Inhibitory (GABA) conns to muscles',all_neuron_info,all_muscle_info,
                       net.id, save_figure_to='%s/%s_inh_to_muscles.png'%(save_fig_dir,net.id) if save_fig_dir else None, 
                       verbose=verbose,
-                      figsize=figsize)
+                      figsize=figsize,
+                      colormap=colormap)
 
 
     data_n = np.zeros((len(all_neurons),len(all_neurons)))
@@ -544,14 +568,16 @@ def generate_conn_matrix(nml_doc, save_fig_dir=None, verbose=False, figsize=defa
     _show_conn_matrix(data_n, 'Electrical (gap junction) conns to neurons',all_neuron_info,all_neuron_info,
                       net.id, save_figure_to='%s/%s_elec_neurons_neurons.png'%(save_fig_dir,net.id) if save_fig_dir else None, 
                       verbose=verbose,
-                      figsize=figsize)
+                      figsize=figsize,
+                      colormap=colormap)
 
     if neuron_muscle:
         _show_conn_matrix(data_n_m, 'Electrical (gap junction) conns between neurons and muscles', all_neuron_info, all_muscle_info,
                           net.id,
                           save_figure_to='%s/%s_elec_neurons_muscles.png' % (save_fig_dir, net.id) if save_fig_dir else None, 
                       verbose=verbose,
-                      figsize=figsize)
+                      figsize=figsize,
+                      colormap=colormap)
 
     if muscle_muscle:
         _show_conn_matrix(data_m_m, 'Electrical (gap junction) conns between muscles', all_muscle_info,
@@ -560,7 +586,8 @@ def generate_conn_matrix(nml_doc, save_fig_dir=None, verbose=False, figsize=defa
                           save_figure_to='%s/%s_elec_muscles_muscles.png' % (
                           save_fig_dir, net.id) if save_fig_dir else None, 
                       verbose=verbose,
-                      figsize=figsize)
+                      figsize=figsize,
+                      colormap=colormap)
 
     #_show_conn_matrix(data_m, 'Electrical (gap junction) conns to muscles',all_neuron_info,all_muscle_info, net.id)
 
@@ -578,6 +605,7 @@ if __name__ == '__main__':
     configs = ['c302_C0_Syns.net.nml', 'c302_C0_Social.net.nml','c302_C0_Muscles.net.nml','c302_C0_Pharyngeal.net.nml','c302_C0_Oscillator.net.nml','c302_C0_Full.net.nml']
     
     figsize=(6.4,4.8)
+    colormap = None
 
     if '-phar' in sys.argv:
 
@@ -587,6 +615,10 @@ if __name__ == '__main__':
 
         configs = ['c302_C1_Oscillator.net.nml']
 
+    elif '-soc' in sys.argv:
+
+        configs = ['c302_C1_Social.net.nml']
+
     elif '-musc' in sys.argv:
 
         configs = ['c302_C1_Muscles.net.nml']
@@ -595,13 +627,17 @@ if __name__ == '__main__':
     elif '-full' in sys.argv:
 
         configs = ['c302_C1_Full.net.nml']
-        figsize=(10,10)
+        figsize=(12,12)
+        colormap = 'nipy_spectral'
 
     for c in configs:
 
         nml_doc = read_neuroml2_file('examples/%s'%c)
 
-        generate_conn_matrix(nml_doc, save_fig_dir='./examples/summary/images', figsize=figsize)
+        generate_conn_matrix(nml_doc, 
+                             save_fig_dir='./examples/summary/images', 
+                             figsize=figsize, 
+                             colormap=colormap)
 
     if not '-nogui' in sys.argv:
         plt.show()
