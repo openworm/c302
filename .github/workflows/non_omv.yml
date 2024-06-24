@@ -56,10 +56,10 @@ jobs:
         cd c302
         mkdir examples
         python c302_IClamp.py A
-        pip install NEURON==8.0.1 # Need to install NEURON
+        pip install NEURON # Need to install NEURON
         which nrnivmodl
         env
-        export NEURON_HOME=$RUNNER_TOOL_CACHE/Python/3.9.7/x64/
+        #export NEURON_HOME=$RUNNER_TOOL_CACHE/Python/3.9.7/x64/
         
     - name: Run test script
       run: |
