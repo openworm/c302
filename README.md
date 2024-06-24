@@ -18,7 +18,7 @@ It uses information on the synaptic connectivity of the network (from [here](htt
 
 ### To install & test
 
-The full set of dependencies for c302 can be installed with the following (see also the [Travis-CI script](https://github.com/openworm/c302/blob/master/.travis.yml)):
+The full set of dependencies for c302 can be installed with the following (see also the [ci.yml workflow](https://github.com/openworm/c302/blob/master/.github/workflows/ci.yml)):
 
     git clone https://github.com/openworm/c302.git
     cd c302
