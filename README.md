@@ -28,7 +28,9 @@ The full set of dependencies for c302 can be installed with the following (see a
 
 This will install c302 as well as [pyNeuroML](https://github.com/NeuroML/pyNeuroML) and [owmeta](https://github.com/openworm/owmeta).
 
-To run the test.sh script, the Neuron simulator is also required, and should be installed as described [here](https://www.neuron.yale.edu/neuron/download) (On Mac and Linux it can be installed with `pip install neuron`).
+For Windows users a  virtual environment must be generated with Python 3.10 as any newer versions do not currently support owmeta.
+
+To run the test.sh script, the Neuron simulator is also required, and should be installed as described [here](https://www.neuron.yale.edu/neuron/download) (On Mac and Linux it can be installed with `pip install neuron`). The most current version of Neuron is incompatible with Windows and should be run through docker under Mac or Linux.
 
 For Linux users, additional dependencies (OpenJDK 19 and Graphviz) are required to run the Usage Examples:
     
