@@ -9,30 +9,33 @@ c302 is a framework for generating network models in NeuroML 2 based on *C. eleg
 
 ![c302 structure](https://raw.githubusercontent.com/openworm/CElegansNeuroML/master/CElegans/pythonScripts/c302/images/c302.png)
 
-It uses information on the synaptic connectivity of the network (from [here](https://github.com/openworm/c302/blob/master/c302/data/CElegansNeuronTables.xls)) and uses [libNeuroML](https://github.com/NeuralEnsemble/libNeuroML) to generate a network in valid NeuroML, which can be run in [jNeuroML](https://github.com/NeuroML/jNeuroML) or [pyNeuroML](https://github.com/NeuroML/pyNeuroML).
+It uses information on the synaptic connectivity of the network (from [here](https://github.com/openworm/c302/blob/master/c302/data)) and uses [libNeuroML](https://github.com/NeuralEnsemble/libNeuroML) to generate a network in valid NeuroML, which can be run in [jNeuroML](https://github.com/NeuroML/jNeuroML) or [pyNeuroML](https://github.com/NeuroML/pyNeuroML).
 
-**The c302 paper has recently been published!**
+**The c302 paper is out!**
 
 *c302: a multiscale framework for modelling the nervous system of Caenorhabditis elegans* Padraig Gleeson, David Lung, Radu Grosu, Ramin Hasani, Stephen D. Larson, [Phil. Trans. R. Soc. B 2018 373 20170379](http://rstb.royalsocietypublishing.org/content/373/1758/20170379); DOI: 10.1098/rstb.2017.0379.
 
 
 ### To install & test
 
-The full set of dependencies for c302 can be installed with the following (see also the [ci.yml workflow](https://github.com/openworm/c302/blob/master/.github/workflows/ci.yml)):
+The full set of dependencies for c302 can be installed with the following (see also the [ci.yml](https://github.com/openworm/c302/blob/master/.github/workflows/ci.yml) and [non_omv.yml](https://github.com/openworm/c302/blob/master/.github/workflows/non_omv.yml) workflow files):
 
-    git clone https://github.com/openworm/c302.git
-    cd c302
-    pip install .
-    # The following can only be run on Mac and Linux. c302 can be run without ownmeta installed
-    owm bundle remote --user add ow 'https://raw.githubusercontent.com/openworm/owmeta-bundles/master/index.json'
+```console
+git clone https://github.com/openworm/c302.git
+cd c302
+pip install .
+
+# The following can only be run on Mac and Linux. Note: c302 can be run without ownmeta fully installed
+owm bundle remote --user add ow 'https://raw.githubusercontent.com/openworm/owmeta-bundles/master/index.json'
+```
 
 This will install c302 as well as [pyNeuroML](https://github.com/NeuroML/pyNeuroML) and [owmeta](https://github.com/openworm/owmeta).
 
 For Windows users a  virtual environment must be generated with Python 3.10 as any newer versions do not currently support owmeta.
 
-To run the test.sh script, the Neuron simulator is also required, and should be installed as described [here](https://www.neuron.yale.edu/neuron/download) (On Mac and Linux it can be installed with `pip install neuron`). The most current version of Neuron is incompatible with Windows and should be run through docker under Mac or Linux.
+To run the test.sh script, the Neuron simulator is also required, and should be installed as described [here](https://www.neuron.yale.edu/neuron/download) (On Mac and Linux it can be installed with `pip install neuron`). 
 
-For Linux users, additional dependencies (OpenJDK 19 and Graphviz) are required to run the Usage Examples:
+For Linux users, additional dependencies (OpenJDK 19 and Graphviz) are required to run the usage examples:
     
     sudo apt-get install openjdk-19-jdk graphviz
 
@@ -84,7 +87,7 @@ Screenshots of a simulation with pyNeuroML of c302_B_Pharyngeal are shown below 
 
 #### 1b) Run standard examples with Neuron
 
-The models can also be run using the Neuron simulator. This should be installed as outlined [here](https://www.neuron.yale.edu/neuron/download).
+The models can also be run using the Neuron simulator.  This should be installed as outlined [here](https://www.neuron.yale.edu/neuron/download). Note: running c302 with Neuron is not currently supported on Windows.
 
        cd examples
        pynml LEMS_c302_A_IClamp.xml -neuron   # Generate the Neuron files (Python/hoc/mod)
