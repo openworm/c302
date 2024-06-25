@@ -18,16 +18,19 @@ It uses information on the synaptic connectivity of the network (from [here](htt
 
 ### To install & test
 
-The full set of dependencies for c302 can be installed with the following (see also the [Travis-CI script](https://github.com/openworm/c302/blob/master/.travis.yml)):
+The full set of dependencies for c302 can be installed with the following (see also the [ci.yml workflow](https://github.com/openworm/c302/blob/master/.github/workflows/ci.yml)):
 
     git clone https://github.com/openworm/c302.git
     cd c302
     pip install .
+    # The following can only be run on Mac and Linux. c302 can be run without ownmeta installed
     owm bundle remote --user add ow 'https://raw.githubusercontent.com/openworm/owmeta-bundles/master/index.json'
 
 This will install c302 as well as [pyNeuroML](https://github.com/NeuroML/pyNeuroML) and [owmeta](https://github.com/openworm/owmeta).
 
-To run the test.sh script, the Neuron simulator is also required, and should be installed as described [here](https://www.neuron.yale.edu/neuron/download).
+For Windows users a  virtual environment must be generated with Python 3.10 as any newer versions do not currently support owmeta.
+
+To run the test.sh script, the Neuron simulator is also required, and should be installed as described [here](https://www.neuron.yale.edu/neuron/download) (On Mac and Linux it can be installed with `pip install neuron`). The most current version of Neuron is incompatible with Windows and should be run through docker under Mac or Linux.
 
 For Linux users, additional dependencies (OpenJDK 19 and Graphviz) are required to run the Usage Examples:
     
