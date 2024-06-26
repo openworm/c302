@@ -8,7 +8,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 from pyneuroml import pynml
 from pyneuroml import plot as pyneuroml_plot
-from owmeta_core.bundle import Bundle
 
 import c302
 
@@ -456,6 +455,7 @@ def generate_conn_matrix(nml_doc, save_fig_dir=None, verbose=False, figsize=defa
     all_cells = sorted(all_cells)
 
     try:
+        from owmeta_core.bundle import Bundle
         with Bundle('openworm/owmeta-data', version=6) as bnd:
             all_neuron_info, all_muscle_info = c302._get_cell_info(bnd, all_cells)
     except Exception as e:
