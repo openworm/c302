@@ -17,7 +17,6 @@ default_figsize = (6.4,4.8)
 
 def plots(a_n, info, cells, dt):
 
-
     c302.print_('Generating plots for: %s'%info)
 
     heightened = False
