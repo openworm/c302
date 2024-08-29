@@ -1,11 +1,12 @@
 # function GABAergic = GABA
 
-#GABA Produces a list of neurons with GABAergic synapses.
-#GABA produces a binary vector that lists neurons that have GABAergic
-# synapses, using data from McIntire SL, Jorgensen E, Kaplan J, 
-# Horvitz HR (1993) The GABAergic nervous system of Caenorhabditis 
+# GABA Produces a list of neurons with GABAergic synapses.
+# GABA produces a binary vector that lists neurons that have GABAergic
+# synapses, using data from McIntire SL, Jorgensen E, Kaplan J,
+# Horvitz HR (1993) The GABAergic nervous system of Caenorhabditis
 # elegans. Nature 364:337�341. doi:10.1038/364337a0.
 
+"""
 GABAergic = [
     0
     0
@@ -287,3 +288,4 @@ GABAergic = [
     0
     0
     ];
+"""
