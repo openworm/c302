@@ -451,6 +451,7 @@ def elem_in_coll_matches_conn(coll, conn):
 
 
 def _get_cell_info(bnd, cells):
+    #print('Getting cell info for %s'%cells)
     if bnd is None:
         return None
     all_neuron_info = collections.OrderedDict()
@@ -1494,4 +1495,46 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+
+    import sys 
+
+    if '-cache' in sys.argv:
+        print('Starting c302...')
+        from c302.ConnectomeReader import PREFERRED_MUSCLE_NAMES
+        from c302.ConnectomeReader import PREFERRED_NEURON_NAMES
+        
+        all_info = {'neuron_info':{}, 'muscle_info':{}}
+
+        from owmeta_core.bundle import Bundle
+
+        from owmeta_core import __version__ as owc_version
+        from owmeta import __version__ as owmeta_version
+
+        ver_info = 'owmeta v%s (owmeta core v%s)'%(owmeta_version,owc_version)
+
+        with Bundle('openworm/owmeta-data', version=6) as bnd:
+            
+            for n in PREFERRED_NEURON_NAMES:
+
+                ani, _all_muscle_info = _get_cell_info(bnd, [n])
+            
+                print('  > %s; %s'%(ani[n], _all_muscle_info))
+                all_info['neuron_info'][n] = (str(ani[n][0]),list(ani[n][1]),list(ani[n][2]),list(ani[n][3]),ani[n][4],ani[n][5])
+
+            for n in PREFERRED_MUSCLE_NAMES:
+
+                _all_neuron_info, ami = _get_cell_info(bnd, [n])
+            
+                if not n == 'MVULVA' and not n == 'MANAL':  
+                    ow_name = n[1:] if n[3]!='0' else '%s%s'%(n[1:3],n[-1])
+                    print('  > %s (%s): %s; %s'%(n, ow_name, _all_neuron_info, ami))
+
+                    all_info['muscle_info'][n] = (str(ami[ow_name][0]),list(ami[ow_name][1]),list(ami[ow_name][2]),list(ami[ow_name][3]),ami[ow_name][4],ami[ow_name][5])
+
+        import json
+
+        with open('c302/data/owmeta_cache.json', 'w') as fp:
+            json.dump(all_info, fp, sort_keys=True, indent=4)
+
+    else:
+        main()
