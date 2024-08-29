@@ -1,11 +1,11 @@
-__author__ = 'Ari'
+__author__ = "Ari"
 
 from operator import itemgetter
 import xlrd
 import os
 
-def comparitor(fName1, fName2):
 
+def comparitor(fName1, fName2):
     path1 = fName1
     path2 = fName2
     dir = os.path.dirname(__file__)
@@ -28,17 +28,54 @@ def comparitor(fName1, fName2):
     # Print results. Give number of pairs that are matched, remained from unmatched files, and associated pairs.
     print("Number of matching pairs: " + str(len(matches[indexName2[0]])))
     for p in range(len(matches[indexName2[0]])):
-        print(str(matches[indexName2[0]][p])+" -> "+str(matches[indexName2[1]][p])+" ("+str(matches[indexName2[2]][p])+", "+str(matches[indexName2[3]][p])+")")
-    print("\nNumber of pairs unmatched in " + fName1 + " is: " + str(len(col1[indexName2[0]])))
+        print(
+            str(matches[indexName2[0]][p])
+            + " -> "
+            + str(matches[indexName2[1]][p])
+            + " ("
+            + str(matches[indexName2[2]][p])
+            + ", "
+            + str(matches[indexName2[3]][p])
+            + ")"
+        )
+    print(
+        "\nNumber of pairs unmatched in "
+        + fName1
+        + " is: "
+        + str(len(col1[indexName2[0]]))
+    )
     for p in range(len(col1[indexName2[0]])):
-        print(str(col1[indexName2[0]][p])+" -> "+str(col1[indexName2[1]][p])+" ("+str(col1[indexName2[2]][p])+", "+str(col1[indexName2[3]][p])+")")
-    print("\nNumber of pairs unmatched in " + fName2 + " is: " + str(len(col2[indexName1[0]])))
+        print(
+            str(col1[indexName2[0]][p])
+            + " -> "
+            + str(col1[indexName2[1]][p])
+            + " ("
+            + str(col1[indexName2[2]][p])
+            + ", "
+            + str(col1[indexName2[3]][p])
+            + ")"
+        )
+    print(
+        "\nNumber of pairs unmatched in "
+        + fName2
+        + " is: "
+        + str(len(col2[indexName1[0]]))
+    )
     for p in range(len(col2[indexName1[0]])):
-        print(str(col2[indexName1[0]][p])+" -> "+str(col2[indexName1[1]][p])+" ("+str(col2[indexName1[2]][p])+", "+str(col2[indexName1[3]][p])+")")
+        print(
+            str(col2[indexName1[0]][p])
+            + " -> "
+            + str(col2[indexName1[1]][p])
+            + " ("
+            + str(col2[indexName1[2]][p])
+            + ", "
+            + str(col2[indexName1[3]][p])
+            + ")"
+        )
 
 
 # Get columns from .txt files
-def getColumns(fileIn, delim = "\t", header = True):
+def getColumns(fileIn, delim="\t", header=True):
     cols = {}
     indexName = {}
     for lineNum, line in enumerate(fileIn):
@@ -62,6 +99,7 @@ def getColumns(fileIn, delim = "\t", header = True):
                 cols[indexName[i]] += [cell]
                 i += 1
     return cols, indexName
+
 
 # Get columns from .xls files
 def getColumnsXls(fileIn):
@@ -92,16 +130,19 @@ def getColumnsXls(fileIn):
             cols[indexName[curr_cell]] += [cell_value]
     return cols, indexName
 
+
 # Sort dictionaries by first two column (From/To Neurons), first by one, then the other.
 def sortTwoColumns(cols):
-    cols = sorted(cols, key = itemgetter(0,1))
+    cols = sorted(cols, key=itemgetter(0, 1))
+
 
 # Formatting involved removing any filler zeros from the middle of strings.
 def formatNames(cols, indexName):
     for i in range(2):
         for char in cols[indexName[i]]:
-            if char[-1] != '0':
-                char = "".join(char.split("0",1))
+            if char[-1] != "0":
+                char = "".join(char.split("0", 1))
+
 
 # Compare two lists, create new list of matching pairs, remove pairs from respective original lists.
 def matchLists(cols1, cols2, indexName1, indexName2):
@@ -134,7 +175,9 @@ def matchLists(cols1, cols2, indexName1, indexName2):
                 if x2 == pair:
                     index2 = p2
             # If matches array does not contain current pair from long array, add it
-            if not zip(matches[indexNames1[0]], matches[indexNames1[1]]).__contains__(([pair[0]],[pair[1]])):
+            if not zip(matches[indexNames1[0]], matches[indexNames1[1]]).__contains__(
+                ([pair[0]], [pair[1]])
+            ):
                 # print(matches[indexNames1[0]], matches[indexNames1[1]])
                 for i in range(len(indexNames1)):
                     if col1[indexNames1[i]][index1] == col2[indexNames2[i]][index2]:
@@ -144,17 +187,23 @@ def matchLists(cols1, cols2, indexName1, indexName2):
                         del col2[indexNames2[i]][index2]
                         del col1[indexNames1[i]][index1]
                     else:
-                        matches[indexNames1[i]] += [[col1[indexNames1[i]][index1], col2[indexNames2[i]][index2]]]
+                        matches[indexNames1[i]] += [
+                            [col1[indexNames1[i]][index1], col2[indexNames2[i]][index2]]
+                        ]
                         del col2[indexNames2[i]][index2]
                         del col1[indexNames1[i]][index1]
             # If pair is already in array, add value from last two columns to array
             else:
-                for p3, x3 in enumerate(zip(matches[indexNames1[0]], matches[indexNames1[1]])):
+                for p3, x3 in enumerate(
+                    zip(matches[indexNames1[0]], matches[indexNames1[1]])
+                ):
                     if x3 == ([pair[0]], [pair[1]]):
                         index3 = p3
                 for i in range(len(indexNames1)):
                     if i > 1:
-                        matches[indexNames1[i]][index3] += [col1[indexNames1[i]][index1]]
+                        matches[indexNames1[i]][index3] += [
+                            col1[indexNames1[i]][index1]
+                        ]
                     del col1[indexNames1[i]][index1]
                     del col2[indexNames2[i]][index2]
 
@@ -164,8 +213,12 @@ def matchLists(cols1, cols2, indexName1, indexName2):
             if x1 == pair:
                 index1 = p1
         # If matches array does contain current pair from long array, add its conn. type and number
-        if zip(matches[indexNames1[0]], matches[indexNames1[1]]).__contains__(([pair[0]],[pair[1]])):
-            for p3, x3 in enumerate(zip(matches[indexNames1[0]], matches[indexNames1[1]])):
+        if zip(matches[indexNames1[0]], matches[indexNames1[1]]).__contains__(
+            ([pair[0]], [pair[1]])
+        ):
+            for p3, x3 in enumerate(
+                zip(matches[indexNames1[0]], matches[indexNames1[1]])
+            ):
                 if x3 == ([pair[0]], [pair[1]]):
                     index3 = p3
             for i in range(len(indexNames1)):
@@ -183,7 +236,9 @@ def matchLists(cols1, cols2, indexName1, indexName2):
         for p4, x4 in enumerate(zip(matches[indexNames1[0]], matches[indexNames1[1]])):
             if x4 == ([pair[1]], [pair[0]]):
                 index4 = p4
-        if zip(matches[indexNames1[0]], matches[indexNames1[1]]).__contains__(([pair[1]], [pair[0]])):
+        if zip(matches[indexNames1[0]], matches[indexNames1[1]]).__contains__(
+            ([pair[1]], [pair[0]])
+        ):
             # print(zip(matches[indexNames1[0]], matches[indexNames1[1]]))
             # print(([pair[1]], [pair[0]]))
             for i in range(len(indexNames1)):
@@ -193,21 +248,21 @@ def matchLists(cols1, cols2, indexName1, indexName2):
                     matches[indexNames1[i]][index4] += [col1[indexNames1[i]][index1]]
                 del col1[indexNames1[i]][index1]
 
-
     return matches, col1, col2
+
 
 # Option of additional formatting to shorten lists. Not used. Not complete.
 # 'EJ' maps to 'GapJunction'.
 # 'R', 'Rp', 'S', 'Sp' map to 'Send'.
 # 'NMJ' does not map.
 def typeMapping(cols1, cols2, indexName1, indexName2):
-    list1 = ['GapJunction','Send']
-    list2 = ['EJ','NMJ','R','Rp','S','Sp']
+    list1 = ["GapJunction", "Send"]
+    list2 = ["EJ", "NMJ", "R", "Rp", "S", "Sp"]
     type1 = cols1[indexName1[2]]
     type2 = cols2[indexName2[2]]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     fName1 = "CElegansNeuronTables.xls"
     fName2 = "NeuronConnectFormatted.xlsx"
 
@@ -215,4 +270,4 @@ if __name__ == '__main__':
     # file2 = "C:\\Users\\Ari\\Documents\\Projects\\OpenWorm\\book2.txt"
     # xfile1 = "C:\\Users\\Ari\\Documents\\Projects\\OpenWorm\\CElegansNeuroML\\CElegansNeuronTables.xls"
     # xfile2 = "C:\\Users\\Ari\\Documents\\Projects\\OpenWorm\\CElegansNeuroML\\NeuronConnectFormatted.xlsx"
-    comparitor(fName1,fName2)
+    comparitor(fName1, fName2)
