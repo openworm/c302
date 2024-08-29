@@ -1505,12 +1505,14 @@ if __name__ == '__main__':
         
         all_info = {'neuron_info':{}, 'muscle_info':{}}
 
+
         from owmeta_core.bundle import Bundle
 
         from owmeta_core import __version__ as owc_version
         from owmeta import __version__ as owmeta_version
 
         ver_info = 'owmeta v%s (owmeta core v%s)'%(owmeta_version,owc_version)
+        all_info['comment'] = 'Information exported from '+ver_info
 
         with Bundle('openworm/owmeta-data', version=6) as bnd:
             
@@ -1519,7 +1521,7 @@ if __name__ == '__main__':
                 ani, _all_muscle_info = _get_cell_info(bnd, [n])
             
                 print('  > %s; %s'%(ani[n], _all_muscle_info))
-                all_info['neuron_info'][n] = (str(ani[n][0]),list(ani[n][1]),list(ani[n][2]),list(ani[n][3]),ani[n][4],ani[n][5])
+                all_info['neuron_info'][n] = (str(ani[n][0]),sorted(list(ani[n][1])),sorted(list(ani[n][2])),sorted(list(ani[n][3])),ani[n][4],ani[n][5])
 
             for n in PREFERRED_MUSCLE_NAMES:
 
@@ -1529,7 +1531,7 @@ if __name__ == '__main__':
                     ow_name = n[1:] if n[3]!='0' else '%s%s'%(n[1:3],n[-1])
                     print('  > %s (%s): %s; %s'%(n, ow_name, _all_neuron_info, ami))
 
-                    all_info['muscle_info'][n] = (str(ami[ow_name][0]),list(ami[ow_name][1]),list(ami[ow_name][2]),list(ami[ow_name][3]),ami[ow_name][4],ami[ow_name][5])
+                    all_info['muscle_info'][n] = (str(ami[ow_name][0]),sorted(list(ami[ow_name][1])),sorted(list(ami[ow_name][2])),sorted(list(ami[ow_name][3])),ami[ow_name][4],ami[ow_name][5])
 
         import json
 

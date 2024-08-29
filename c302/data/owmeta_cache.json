@@ -1,4 +1,5 @@
 {
+    "comment": "Information exported from owmeta v0.12.3 (owmeta core v0.13.5)",
     "muscle_info": {
         "MDL01": [
             "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DL1>)",
@@ -792,12 +793,12 @@
                 "sensory"
             ],
             [
-                "OCTR-1",
-                "EXP-1",
-                "TRP-4",
                 "ACR-16",
-                "TYRA-3",
-                "DOP-2"
+                "DOP-2",
+                "EXP-1",
+                "OCTR-1",
+                "TRP-4",
+                "TYRA-3"
             ],
             [
                 "Dopamine"
@@ -811,12 +812,12 @@
                 "sensory"
             ],
             [
-                "OCTR-1",
-                "EXP-1",
-                "TRP-4",
                 "ACR-16",
-                "TYRA-3",
-                "DOP-2"
+                "DOP-2",
+                "EXP-1",
+                "OCTR-1",
+                "TRP-4",
+                "TYRA-3"
             ],
             [
                 "Dopamine"
@@ -830,16 +831,16 @@
                 "sensory"
             ],
             [
-                "OSM-9",
-                "TMC-1",
-                "SRB-6",
-                "NPR-2",
-                "NTR-1",
                 "MGL-3",
+                "NPR-2",
+                "NPR-5",
+                "NTR-1",
                 "NTR-2",
                 "OCR-2",
-                "NPR-5",
-                "SRD-1"
+                "OSM-9",
+                "SRB-6",
+                "SRD-1",
+                "TMC-1"
             ],
             [
                 "Serotonin"
@@ -853,16 +854,16 @@
                 "sensory"
             ],
             [
-                "OSM-9",
-                "TMC-1",
-                "SRB-6",
-                "NPR-2",
-                "NTR-1",
                 "MGL-3",
+                "NPR-2",
+                "NPR-5",
+                "NTR-1",
                 "NTR-2",
                 "OCR-2",
-                "NPR-5",
-                "SRD-1"
+                "OSM-9",
+                "SRB-6",
+                "SRD-1",
+                "TMC-1"
             ],
             [
                 "Serotonin"
@@ -876,21 +877,21 @@
                 "sensory"
             ],
             [
-                "OSM-9",
-                "SRI-51",
-                "TMC-1",
                 "GCY-21",
-                "SRB-6",
-                "SER-6",
                 "NTR-1",
-                "SRO-1",
-                "TYRA-3",
+                "NTR-2",
                 "OCR-1",
                 "OCR-2",
-                "SRH-220",
+                "OSM-9",
+                "SER-6",
+                "SRB-6",
                 "SRE-1",
-                "NTR-2",
-                "SRH-132"
+                "SRH-132",
+                "SRH-220",
+                "SRI-51",
+                "SRO-1",
+                "TMC-1",
+                "TYRA-3"
             ],
             [],
             "? (Se) ADLL",
@@ -902,21 +903,21 @@
                 "sensory"
             ],
             [
-                "OSM-9",
-                "SRI-51",
-                "TMC-1",
                 "GCY-21",
-                "SRB-6",
-                "SER-6",
                 "NTR-1",
-                "SRO-1",
-                "TYRA-3",
+                "NTR-2",
                 "OCR-1",
                 "OCR-2",
-                "SRH-220",
+                "OSM-9",
+                "SER-6",
+                "SRB-6",
                 "SRE-1",
-                "NTR-2",
-                "SRH-132"
+                "SRH-132",
+                "SRH-220",
+                "SRI-51",
+                "SRO-1",
+                "TMC-1",
+                "TYRA-3"
             ],
             [],
             "? (Se) ADLR",
@@ -928,12 +929,12 @@
                 "sensory"
             ],
             [
-                "GCY-23",
-                "TMC-1",
-                "GCY-29",
-                "TYRA-3",
                 "GCY-18",
-                "GCY-8"
+                "GCY-23",
+                "GCY-29",
+                "GCY-8",
+                "TMC-1",
+                "TYRA-3"
             ],
             [
                 "Glutamate"
@@ -947,12 +948,12 @@
                 "sensory"
             ],
             [
-                "GCY-23",
-                "TMC-1",
-                "GCY-29",
-                "TYRA-3",
                 "GCY-18",
-                "GCY-8"
+                "GCY-23",
+                "GCY-29",
+                "GCY-8",
+                "TMC-1",
+                "TYRA-3"
             ],
             [
                 "Glutamate"
@@ -966,16 +967,16 @@
                 "interneuron"
             ],
             [
-                "SRA-11",
-                "GLC-3",
-                "MOD-1",
-                "MGL-1",
-                "SCD-2",
-                "NPR-11",
-                "NTR-2",
                 "GCY-28",
+                "GLC-3",
+                "GLR-2",
+                "MGL-1",
+                "MOD-1",
+                "NPR-11",
                 "NPR-5",
-                "GLR-2"
+                "NTR-2",
+                "SCD-2",
+                "SRA-11"
             ],
             [
                 "Acetylcholine"
@@ -989,16 +990,16 @@
                 "interneuron"
             ],
             [
-                "SRA-11",
-                "GLC-3",
-                "MOD-1",
-                "MGL-1",
-                "SCD-2",
-                "NPR-11",
-                "NTR-2",
                 "GCY-28",
+                "GLC-3",
+                "GLR-2",
+                "MGL-1",
+                "MOD-1",
+                "NPR-11",
                 "NPR-5",
-                "GLR-2"
+                "NTR-2",
+                "SCD-2",
+                "SRA-11"
             ],
             [
                 "Acetylcholine"
@@ -1012,13 +1013,13 @@
                 "interneuron"
             ],
             [
-                "SER-4",
-                "MOD-1",
                 "GGR-1",
                 "GLR-1",
+                "GLR-2",
                 "GLR-5",
                 "MGL-2",
-                "GLR-2"
+                "MOD-1",
+                "SER-4"
             ],
             [
                 "Glutamate"
@@ -1032,14 +1033,14 @@
                 "interneuron"
             ],
             [
-                "SER-1",
-                "SER-4",
-                "MOD-1",
                 "GGR-1",
                 "GLR-1",
+                "GLR-2",
                 "GLR-5",
                 "MGL-2",
-                "GLR-2"
+                "MOD-1",
+                "SER-1",
+                "SER-4"
             ],
             [],
             "? (In) AIBR",
@@ -1051,13 +1052,13 @@
                 "interneuron"
             ],
             [
+                "GCY-18",
                 "LGC-53",
-                "TYRA-3",
-                "GCY-18"
+                "TYRA-3"
             ],
             [
-                "Serotonin",
-                "Glutamate"
+                "Glutamate",
+                "Serotonin"
             ],
             "+ (In) AIML",
             "1 0 .4"
@@ -1068,13 +1069,13 @@
                 "interneuron"
             ],
             [
+                "GCY-18",
                 "LGC-53",
-                "TYRA-3",
-                "GCY-18"
+                "TYRA-3"
             ],
             [
-                "Serotonin",
-                "Glutamate"
+                "Glutamate",
+                "Serotonin"
             ],
             "+ (In) AIMR",
             "1 0 .4"
@@ -1109,20 +1110,20 @@
                 "interneuron"
             ],
             [
-                "SRA-11",
                 "ACR-14",
-                "GCY-1",
-                "OCTR-1",
-                "LGC-38",
-                "MOD-1",
-                "GAR-2",
-                "MGL-1",
-                "CKR-2",
                 "C50F7.1",
-                "NPR-14",
+                "CKR-2",
+                "GAR-2",
+                "GCY-1",
+                "GLC-3",
+                "LGC-38",
+                "MGL-1",
+                "MOD-1",
                 "NPR-11",
+                "NPR-14",
+                "OCTR-1",
                 "SER-2",
-                "GLC-3"
+                "SRA-11"
             ],
             [
                 "Acetylcholine"
@@ -1136,20 +1137,20 @@
                 "interneuron"
             ],
             [
-                "SRA-11",
                 "ACR-14",
-                "GCY-1",
-                "OCTR-1",
-                "LGC-38",
-                "MOD-1",
-                "GAR-2",
-                "MGL-1",
-                "CKR-2",
                 "C50F7.1",
-                "NPR-14",
+                "CKR-2",
+                "GAR-2",
+                "GCY-1",
+                "GLC-3",
+                "LGC-38",
+                "MGL-1",
+                "MOD-1",
                 "NPR-11",
+                "NPR-14",
+                "OCTR-1",
                 "SER-2",
-                "GLC-3"
+                "SRA-11"
             ],
             [
                 "Acetylcholine"
@@ -1163,8 +1164,8 @@
                 "interneuron"
             ],
             [
-                "NPR-2",
                 "MOD-1",
+                "NPR-2",
                 "SER-2"
             ],
             [
@@ -1179,8 +1180,8 @@
                 "interneuron"
             ],
             [
-                "NPR-2",
                 "MOD-1",
+                "NPR-2",
                 "SER-2"
             ],
             [
@@ -1195,9 +1196,9 @@
                 "interneuron"
             ],
             [
-                "SRA-10",
                 "ACR-13",
-                "ACR-4"
+                "ACR-4",
+                "SRA-10"
             ],
             [],
             "? (In) ALA",
@@ -1209,24 +1210,24 @@
                 "sensory"
             ],
             [
-                "MEC-2",
-                "PDFR-1",
-                "DEGT-1",
-                "STR-33",
-                "LGC-55",
-                "GAB-1",
-                "DES-2",
-                "MEC-10",
-                "LGC-37",
-                "DOP-1",
-                "TYRA-2",
-                "MEC-4",
-                "DEG-3",
-                "MEC-9",
                 "ASIC-1",
-                "MEC-6",
+                "DEG-3",
+                "DEGT-1",
                 "DEL-1",
-                "GLR-8"
+                "DES-2",
+                "DOP-1",
+                "GAB-1",
+                "GLR-8",
+                "LGC-37",
+                "LGC-55",
+                "MEC-10",
+                "MEC-2",
+                "MEC-4",
+                "MEC-6",
+                "MEC-9",
+                "PDFR-1",
+                "STR-33",
+                "TYRA-2"
             ],
             [
                 "Glutamate"
@@ -1240,24 +1241,24 @@
                 "sensory"
             ],
             [
-                "MEC-2",
-                "PDFR-1",
-                "DEGT-1",
-                "STR-33",
-                "LGC-55",
-                "GAB-1",
-                "DES-2",
-                "MEC-10",
-                "LGC-37",
-                "DOP-1",
-                "TYRA-2",
-                "MEC-4",
-                "DEG-3",
-                "MEC-9",
                 "ASIC-1",
-                "MEC-6",
+                "DEG-3",
+                "DEGT-1",
                 "DEL-1",
-                "GLR-8"
+                "DES-2",
+                "DOP-1",
+                "GAB-1",
+                "GLR-8",
+                "LGC-37",
+                "LGC-55",
+                "MEC-10",
+                "MEC-2",
+                "MEC-4",
+                "MEC-6",
+                "MEC-9",
+                "PDFR-1",
+                "STR-33",
+                "TYRA-2"
             ],
             [
                 "Glutamate"
@@ -1271,9 +1272,9 @@
                 "sensory"
             ],
             [
-                "SER-2",
+                "DOP-1",
                 "LGC-55",
-                "DOP-1"
+                "SER-2"
             ],
             [
                 "Acetylcholine"
@@ -1287,9 +1288,9 @@
                 "sensory"
             ],
             [
-                "SER-2",
+                "DOP-1",
                 "LGC-55",
-                "DOP-1"
+                "SER-2"
             ],
             [
                 "Acetylcholine"
@@ -1303,14 +1304,14 @@
                 "sensory"
             ],
             [
-                "NLP-37",
-                "GCY-32",
-                "GCY-37",
-                "GCY-36",
-                "GCY-35",
                 "GCY-25",
-                "NPR-1",
-                "GCY-34"
+                "GCY-32",
+                "GCY-34",
+                "GCY-35",
+                "GCY-36",
+                "GCY-37",
+                "NLP-37",
+                "NPR-1"
             ],
             [
                 "Glutamate"
@@ -1325,13 +1326,13 @@
             ],
             [
                 "ACR-14",
-                "UNC-63",
-                "DOP-1",
+                "ACR-15",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
                 "LGC-46",
-                "ACR-15",
-                "NPR-3"
+                "NPR-3",
+                "UNC-63"
             ],
             [
                 "Acetylcholine"
@@ -1346,13 +1347,13 @@
             ],
             [
                 "ACR-14",
-                "UNC-63",
-                "DOP-1",
+                "ACR-15",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
                 "LGC-46",
-                "ACR-15",
-                "NPR-3"
+                "NPR-3",
+                "UNC-63"
             ],
             [
                 "Acetylcholine"
@@ -1367,13 +1368,13 @@
             ],
             [
                 "ACR-14",
-                "UNC-63",
-                "DOP-1",
+                "ACR-15",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
                 "LGC-46",
-                "ACR-15",
-                "NPR-3"
+                "NPR-3",
+                "UNC-63"
             ],
             [
                 "Acetylcholine"
@@ -1388,13 +1389,13 @@
             ],
             [
                 "ACR-14",
-                "UNC-63",
-                "DOP-1",
+                "ACR-15",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
                 "LGC-46",
-                "ACR-15",
-                "NPR-3"
+                "NPR-3",
+                "UNC-63"
             ],
             [
                 "Acetylcholine"
@@ -1409,13 +1410,13 @@
             ],
             [
                 "ACR-14",
-                "UNC-63",
-                "DOP-1",
+                "ACR-15",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
                 "LGC-46",
-                "ACR-15",
-                "NPR-3"
+                "NPR-3",
+                "UNC-63"
             ],
             [
                 "Acetylcholine"
@@ -1430,13 +1431,13 @@
             ],
             [
                 "ACR-14",
-                "UNC-63",
-                "DOP-1",
+                "ACR-15",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
                 "LGC-46",
-                "ACR-15",
-                "NPR-3"
+                "NPR-3",
+                "UNC-63"
             ],
             [
                 "Acetylcholine"
@@ -1451,13 +1452,13 @@
             ],
             [
                 "ACR-14",
-                "UNC-63",
-                "DOP-1",
+                "ACR-15",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
                 "LGC-46",
-                "ACR-15",
-                "NPR-3"
+                "NPR-3",
+                "UNC-63"
             ],
             [
                 "Acetylcholine"
@@ -1472,13 +1473,13 @@
             ],
             [
                 "ACR-14",
-                "UNC-63",
-                "DOP-1",
+                "ACR-15",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
                 "LGC-46",
-                "ACR-15",
-                "NPR-3"
+                "NPR-3",
+                "UNC-63"
             ],
             [
                 "Acetylcholine"
@@ -1493,13 +1494,13 @@
             ],
             [
                 "ACR-14",
-                "UNC-63",
-                "DOP-1",
+                "ACR-15",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
                 "LGC-46",
-                "ACR-15",
-                "NPR-3"
+                "NPR-3",
+                "UNC-63"
             ],
             [
                 "Acetylcholine"
@@ -1514,13 +1515,13 @@
             ],
             [
                 "ACR-14",
-                "UNC-63",
-                "DOP-1",
+                "ACR-15",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
                 "LGC-46",
-                "ACR-15",
-                "NPR-3"
+                "NPR-3",
+                "UNC-63"
             ],
             [
                 "Acetylcholine"
@@ -1535,13 +1536,13 @@
             ],
             [
                 "ACR-14",
-                "UNC-63",
-                "DOP-1",
+                "ACR-15",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
                 "LGC-46",
-                "ACR-15",
-                "NPR-3"
+                "NPR-3",
+                "UNC-63"
             ],
             [
                 "Acetylcholine"
@@ -1555,28 +1556,28 @@
                 "sensory"
             ],
             [
-                "GCY-29",
                 "DEL-3",
-                "NPR-15",
-                "SRD-33",
-                "GCY-6",
-                "NPR-5",
-                "GCY-20",
-                "MGL-3",
-                "SRG-30",
-                "GCY-19",
-                "GCY-7",
+                "DEL-4",
+                "DOP-3",
+                "DOP-5",
                 "GCY-14",
+                "GCY-19",
+                "GCY-20",
+                "GCY-29",
+                "GCY-6",
+                "GCY-7",
+                "MGL-3",
+                "NPR-1",
+                "NPR-15",
+                "NPR-5",
+                "NTR-1",
+                "OSM-9",
+                "SRAB-14",
+                "SRD-33",
+                "SRG-30",
+                "SRX-76",
                 "TMC-1",
                 "TRPA-2",
-                "NTR-1",
-                "DOP-3",
-                "SRAB-14",
-                "NPR-1",
-                "DOP-5",
-                "OSM-9",
-                "DEL-4",
-                "SRX-76",
                 "TYRA-2"
             ],
             [
@@ -1591,32 +1592,32 @@
                 "sensory"
             ],
             [
-                "GCY-29",
-                "DEL-3",
-                "NPR-15",
-                "GCY-4",
-                "SRD-33",
-                "GCY-3",
-                "TRP-2",
-                "NPR-5",
-                "GCY-1",
-                "MGL-3",
-                "SRG-30",
-                "GCY-19",
                 "DAF-2",
-                "TMC-1",
-                "GCY-22",
-                "TRPA-2",
-                "NTR-1",
-                "DOP-3",
-                "SRAB-14",
-                "NPR-1",
-                "DOP-5",
-                "OSM-9",
+                "DEL-3",
                 "DEL-4",
+                "DOP-3",
+                "DOP-5",
+                "GCY-1",
+                "GCY-19",
+                "GCY-22",
+                "GCY-29",
+                "GCY-3",
+                "GCY-4",
+                "GCY-5",
+                "MGL-3",
+                "NPR-1",
+                "NPR-15",
+                "NPR-5",
+                "NTR-1",
+                "OSM-9",
+                "SRAB-14",
+                "SRD-33",
+                "SRG-30",
                 "SRX-76",
-                "TYRA-2",
-                "GCY-5"
+                "TMC-1",
+                "TRP-2",
+                "TRPA-2",
+                "TYRA-2"
             ],
             [
                 "Glutamate"
@@ -1630,18 +1631,18 @@
                 "sensory"
             ],
             [
-                "OSM-9",
-                "GCY-15",
                 "DOP-4",
+                "GCY-15",
                 "GCY-21",
-                "NPR-15",
-                "TYRA-2",
                 "NPR-1",
-                "NPR-5"
+                "NPR-15",
+                "NPR-5",
+                "OSM-9",
+                "TYRA-2"
             ],
             [
-                "Serotonin",
-                "Glutamate"
+                "Glutamate",
+                "Serotonin"
             ],
             "+ (Se) ASGL",
             "1 .2 1"
@@ -1652,18 +1653,18 @@
                 "sensory"
             ],
             [
-                "OSM-9",
-                "GCY-15",
                 "DOP-4",
+                "GCY-15",
                 "GCY-21",
-                "NPR-15",
-                "TYRA-2",
                 "NPR-1",
-                "NPR-5"
+                "NPR-15",
+                "NPR-5",
+                "OSM-9",
+                "TYRA-2"
             ],
             [
-                "Serotonin",
-                "Glutamate"
+                "Glutamate",
+                "Serotonin"
             ],
             "+ (Se) ASGR",
             "1 .2 1"
@@ -1674,23 +1675,23 @@
                 "sensory"
             ],
             [
-                "OSM-9",
-                "DOP-4",
-                "OCTR-1",
-                "TMC-1",
-                "SRB-6",
-                "NPR-2",
-                "NPR-1",
-                "SER-3",
-                "NTR-1",
-                "UNC-8",
                 "DCAR-1",
+                "DOP-4",
+                "NPR-1",
+                "NPR-2",
+                "NTR-1",
+                "NTR-2",
+                "OCR-2",
+                "OCTR-1",
+                "OSM-9",
+                "SER-3",
                 "SER-5",
+                "SRA-6",
+                "SRB-6",
+                "TMC-1",
                 "TRPA-1",
                 "TYRA-2",
-                "NTR-2",
-                "SRA-6",
-                "OCR-2"
+                "UNC-8"
             ],
             [
                 "Glutamate"
@@ -1704,23 +1705,23 @@
                 "sensory"
             ],
             [
-                "OSM-9",
-                "DOP-4",
-                "OCTR-1",
-                "TMC-1",
-                "SRB-6",
-                "NPR-2",
-                "NPR-1",
-                "SER-3",
-                "NTR-1",
-                "UNC-8",
                 "DCAR-1",
+                "DOP-4",
+                "NPR-1",
+                "NPR-2",
+                "NTR-1",
+                "NTR-2",
+                "OCR-2",
+                "OCTR-1",
+                "OSM-9",
+                "SER-3",
                 "SER-5",
+                "SRA-6",
+                "SRB-6",
+                "TMC-1",
                 "TRPA-1",
                 "TYRA-2",
-                "NTR-2",
-                "SRA-6",
-                "OCR-2"
+                "UNC-8"
             ],
             [
                 "Glutamate"
@@ -1734,23 +1735,23 @@
                 "sensory"
             ],
             [
-                "NPR-17",
-                "STR-2",
-                "OCTR-1",
-                "GCY-1",
+                "DAF-11",
                 "DAF-37",
                 "DAF-38",
-                "SER-6",
-                "GCY-2",
-                "STR-3",
                 "DCAR-1",
-                "NPR-15",
-                "SRD-1",
-                "TYRA-2",
+                "GCY-1",
+                "GCY-2",
+                "GCY-27",
                 "GCY-3",
-                "DAF-11",
+                "NPR-15",
+                "NPR-17",
                 "NPR-5",
-                "GCY-27"
+                "OCTR-1",
+                "SER-6",
+                "SRD-1",
+                "STR-2",
+                "STR-3",
+                "TYRA-2"
             ],
             [],
             "? (Se) ASIL",
@@ -1762,23 +1763,23 @@
                 "sensory"
             ],
             [
-                "NPR-17",
-                "STR-2",
-                "OCTR-1",
-                "GCY-1",
+                "DAF-11",
                 "DAF-37",
                 "DAF-38",
-                "SER-6",
-                "GCY-2",
-                "STR-3",
                 "DCAR-1",
-                "NPR-15",
-                "SRD-1",
-                "TYRA-2",
+                "GCY-1",
+                "GCY-2",
+                "GCY-27",
                 "GCY-3",
-                "DAF-11",
+                "NPR-15",
+                "NPR-17",
                 "NPR-5",
-                "GCY-27"
+                "OCTR-1",
+                "SER-6",
+                "SRD-1",
+                "STR-2",
+                "STR-3",
+                "TYRA-2"
             ],
             [],
             "? (Se) ASIR",
@@ -1791,9 +1792,9 @@
             ],
             [
                 "DAF-11",
-                "SRE-1",
+                "NPR-5",
                 "OSM-9",
-                "NPR-5"
+                "SRE-1"
             ],
             [],
             "? (Se) ASJL",
@@ -1806,9 +1807,9 @@
             ],
             [
                 "DAF-11",
-                "SRE-1",
+                "NPR-5",
                 "OSM-9",
-                "NPR-5"
+                "SRE-1"
             ],
             [],
             "? (Se) ASJR",
@@ -1820,15 +1821,15 @@
                 "sensory"
             ],
             [
+                "DAF-11",
+                "DOP-3",
+                "NPR-5",
                 "OSM-9",
                 "SRA-7",
-                "SRG-8",
-                "TYRA-3",
                 "SRA-9",
-                "DOP-3",
-                "DAF-11",
-                "NPR-5",
-                "SRG-2"
+                "SRG-2",
+                "SRG-8",
+                "TYRA-3"
             ],
             [
                 "Glutamate"
@@ -1842,15 +1843,15 @@
                 "sensory"
             ],
             [
+                "DAF-11",
+                "DOP-3",
+                "NPR-5",
                 "OSM-9",
                 "SRA-7",
-                "SRG-8",
-                "TYRA-3",
                 "SRA-9",
-                "DOP-3",
-                "DAF-11",
-                "NPR-5",
-                "SRG-2"
+                "SRG-2",
+                "SRG-8",
+                "TYRA-3"
             ],
             [
                 "Glutamate"
@@ -1864,12 +1865,12 @@
                 "interneuron"
             ],
             [
-                "NPR-1",
-                "TYRA-3",
                 "DOP-1",
-                "SER-2",
                 "GLR-4",
-                "NPR-5"
+                "NPR-1",
+                "NPR-5",
+                "SER-2",
+                "TYRA-3"
             ],
             [
                 "Glutamate"
@@ -1883,12 +1884,12 @@
                 "interneuron"
             ],
             [
-                "NPR-1",
-                "TYRA-3",
                 "DOP-1",
-                "SER-2",
                 "GLR-4",
-                "NPR-5"
+                "NPR-1",
+                "NPR-5",
+                "SER-2",
+                "TYRA-3"
             ],
             [
                 "Glutamate"
@@ -1902,15 +1903,15 @@
                 "interneuron"
             ],
             [
-                "UNC-8",
-                "GLR-1",
-                "GLR-4",
                 "GGR-3",
-                "NPR-4",
+                "GLR-1",
+                "GLR-2",
+                "GLR-4",
                 "GLR-5",
-                "NMR-2",
                 "NMR-1",
-                "GLR-2"
+                "NMR-2",
+                "NPR-4",
+                "UNC-8"
             ],
             [],
             "? (In) AVAL",
@@ -1922,15 +1923,15 @@
                 "interneuron"
             ],
             [
-                "UNC-8",
-                "GLR-1",
-                "GLR-4",
                 "GGR-3",
-                "NPR-4",
+                "GLR-1",
+                "GLR-2",
+                "GLR-4",
                 "GLR-5",
-                "NMR-2",
                 "NMR-1",
-                "GLR-2"
+                "NMR-2",
+                "NPR-4",
+                "UNC-8"
             ],
             [],
             "? (In) AVAR",
@@ -1942,12 +1943,12 @@
                 "interneuron"
             ],
             [
-                "SRA-11",
-                "LGC-55",
-                "UNC-8",
                 "GGR-3",
                 "GLR-1",
-                "GLR-5"
+                "GLR-5",
+                "LGC-55",
+                "SRA-11",
+                "UNC-8"
             ],
             [],
             "? (In) AVBL",
@@ -1959,12 +1960,12 @@
                 "interneuron"
             ],
             [
-                "SRA-11",
-                "LGC-55",
-                "UNC-8",
                 "GGR-3",
                 "GLR-1",
-                "GLR-5"
+                "GLR-5",
+                "LGC-55",
+                "SRA-11",
+                "UNC-8"
             ],
             [],
             "? (In) AVBR",
@@ -1976,13 +1977,13 @@
                 "interneuron"
             ],
             [
-                "PDFR-1",
-                "UNC-8",
                 "GLR-1",
+                "GLR-2",
                 "GLR-5",
-                "NMR-2",
                 "NMR-1",
-                "GLR-2"
+                "NMR-2",
+                "PDFR-1",
+                "UNC-8"
             ],
             [],
             "? (In) AVDL",
@@ -1994,13 +1995,13 @@
                 "interneuron"
             ],
             [
-                "PDFR-1",
-                "UNC-8",
                 "GLR-1",
+                "GLR-2",
                 "GLR-5",
-                "NMR-2",
                 "NMR-1",
-                "GLR-2"
+                "NMR-2",
+                "PDFR-1",
+                "UNC-8"
             ],
             [],
             "? (In) AVDR",
@@ -2012,12 +2013,12 @@
                 "interneuron"
             ],
             [
-                "GLR-1",
                 "FRPR-4",
+                "GLR-1",
+                "GLR-2",
                 "GLR-5",
-                "NMR-2",
                 "NMR-1",
-                "GLR-2"
+                "NMR-2"
             ],
             [],
             "? (In) AVEL",
@@ -2029,12 +2030,12 @@
                 "interneuron"
             ],
             [
-                "GLR-1",
                 "FRPR-4",
+                "GLR-1",
+                "GLR-2",
                 "GLR-5",
-                "NMR-2",
                 "NMR-1",
-                "GLR-2"
+                "NMR-2"
             ],
             [],
             "? (In) AVER",
@@ -2072,13 +2073,13 @@
                 "interneuron"
             ],
             [
-                "NPR-17",
-                "GLR-1",
                 "DEG-3",
-                "NTR-2",
-                "NMR-2",
+                "GLR-1",
+                "GLR-2",
                 "NMR-1",
-                "GLR-2"
+                "NMR-2",
+                "NPR-17",
+                "NTR-2"
             ],
             [],
             "? (In) AVG",
@@ -2090,8 +2091,8 @@
                 "interneuron"
             ],
             [
-                "GLR-4",
                 "GGR-1",
+                "GLR-4",
                 "SER-2"
             ],
             [],
@@ -2104,8 +2105,8 @@
                 "interneuron"
             ],
             [
-                "GLR-4",
                 "GGR-1",
+                "GLR-4",
                 "SER-2"
             ],
             [],
@@ -2165,8 +2166,8 @@
         "AVL": [
             "Neuron(<http://data.openworm.org/sci/bio/Neuron#AVL>)",
             [
-                "motor",
-                "interneuron"
+                "interneuron",
+                "motor"
             ],
             [
                 "DOP-4"
@@ -2183,9 +2184,9 @@
                 "sensory"
             ],
             [
-                "PDFR-1",
                 "DOP-1",
-                "LGC-55"
+                "LGC-55",
+                "PDFR-1"
             ],
             [
                 "Glutamate"
@@ -2199,11 +2200,11 @@
                 "sensory"
             ],
             [
-                "OSM-9",
-                "ODR-10",
+                "NPR-5",
                 "OCR-1",
                 "OCR-2",
-                "NPR-5"
+                "ODR-10",
+                "OSM-9"
             ],
             [],
             "? (Se) AWAL",
@@ -2215,11 +2216,11 @@
                 "sensory"
             ],
             [
-                "OSM-9",
-                "ODR-10",
+                "NPR-5",
                 "OCR-1",
                 "OCR-2",
-                "NPR-5"
+                "ODR-10",
+                "OSM-9"
             ],
             [],
             "? (Se) AWAR",
@@ -2231,11 +2232,11 @@
                 "sensory"
             ],
             [
-                "SER-6",
-                "SER-5",
-                "NPR-5",
                 "AEX-2",
                 "DAF-11",
+                "NPR-5",
+                "SER-5",
+                "SER-6",
                 "STR-1"
             ],
             [],
@@ -2248,11 +2249,11 @@
                 "sensory"
             ],
             [
-                "SER-6",
-                "SER-5",
-                "NPR-5",
                 "AEX-2",
                 "DAF-11",
+                "NPR-5",
+                "SER-5",
+                "SER-6",
                 "STR-1"
             ],
             [],
@@ -2266,9 +2267,9 @@
             ],
             [
                 "DAF-11",
-                "TYRA-3",
+                "OSM-9",
                 "STR-2",
-                "OSM-9"
+                "TYRA-3"
             ],
             [
                 "Glutamate"
@@ -2283,9 +2284,9 @@
             ],
             [
                 "DAF-11",
-                "TYRA-3",
+                "OSM-9",
                 "STR-2",
-                "OSM-9"
+                "TYRA-3"
             ],
             [
                 "Glutamate"
@@ -2299,9 +2300,9 @@
                 "sensory"
             ],
             [
+                "GCY-33",
                 "NPR-4",
-                "TYRA-3",
-                "GCY-33"
+                "TYRA-3"
             ],
             [
                 "Glutamate"
@@ -2315,9 +2316,9 @@
                 "sensory"
             ],
             [
+                "GCY-33",
                 "NPR-4",
-                "TYRA-3",
-                "GCY-33"
+                "TYRA-3"
             ],
             [
                 "Glutamate"
@@ -2331,9 +2332,9 @@
                 "interneuron"
             ],
             [
+                "GLR-8",
                 "NPR-4",
                 "NTR-1",
-                "GLR-8",
                 "SER-2"
             ],
             [],
@@ -2346,9 +2347,9 @@
                 "interneuron"
             ],
             [
+                "GLR-8",
                 "NPR-4",
                 "NTR-1",
-                "GLR-8",
                 "SER-2"
             ],
             [],
@@ -2363,9 +2364,9 @@
             [
                 "DOP-4",
                 "GGR-2",
-                "TYRA-2",
+                "LGC-53",
                 "SER-2",
-                "LGC-53"
+                "TYRA-2"
             ],
             [],
             "? () CANL",
@@ -2379,9 +2380,9 @@
             [
                 "DOP-4",
                 "GGR-2",
-                "TYRA-2",
+                "LGC-53",
                 "SER-2",
-                "LGC-53"
+                "TYRA-2"
             ],
             [],
             "? () CANR",
@@ -2393,9 +2394,9 @@
                 "sensory"
             ],
             [
+                "DOP-2",
                 "OCTR-1",
-                "TYRA-3",
-                "DOP-2"
+                "TYRA-3"
             ],
             [
                 "Dopamine"
@@ -2409,9 +2410,9 @@
                 "sensory"
             ],
             [
+                "DOP-2",
                 "OCTR-1",
-                "TYRA-3",
-                "DOP-2"
+                "TYRA-3"
             ],
             [
                 "Dopamine"
@@ -2425,9 +2426,9 @@
                 "sensory"
             ],
             [
+                "DOP-2",
                 "OCTR-1",
-                "TYRA-3",
-                "DOP-2"
+                "TYRA-3"
             ],
             [
                 "Dopamine"
@@ -2441,9 +2442,9 @@
                 "sensory"
             ],
             [
+                "DOP-2",
                 "OCTR-1",
-                "TYRA-3",
-                "DOP-2"
+                "TYRA-3"
             ],
             [
                 "Dopamine"
@@ -2457,12 +2458,12 @@
                 "motor"
             ],
             [
-                "UNC-8",
-                "DOP-1",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
+                "NPR-3",
                 "SER-2",
-                "NPR-3"
+                "UNC-8"
             ],
             [
                 "Acetylcholine"
@@ -2476,12 +2477,12 @@
                 "motor"
             ],
             [
-                "UNC-8",
-                "DOP-1",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
+                "NPR-3",
                 "SER-2",
-                "NPR-3"
+                "UNC-8"
             ],
             [
                 "Acetylcholine"
@@ -2495,12 +2496,12 @@
                 "motor"
             ],
             [
-                "UNC-8",
-                "DOP-1",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
+                "NPR-3",
                 "SER-2",
-                "NPR-3"
+                "UNC-8"
             ],
             [
                 "Acetylcholine"
@@ -2514,12 +2515,12 @@
                 "motor"
             ],
             [
-                "UNC-8",
-                "DOP-1",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
+                "NPR-3",
                 "SER-2",
-                "NPR-3"
+                "UNC-8"
             ],
             [
                 "Acetylcholine"
@@ -2533,12 +2534,12 @@
                 "motor"
             ],
             [
-                "UNC-8",
-                "DOP-1",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
+                "NPR-3",
                 "SER-2",
-                "NPR-3"
+                "UNC-8"
             ],
             [
                 "Acetylcholine"
@@ -2552,12 +2553,12 @@
                 "motor"
             ],
             [
-                "UNC-8",
-                "DOP-1",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
+                "NPR-3",
                 "SER-2",
-                "NPR-3"
+                "UNC-8"
             ],
             [
                 "Acetylcholine"
@@ -2571,12 +2572,12 @@
                 "motor"
             ],
             [
-                "UNC-8",
-                "DOP-1",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
+                "NPR-3",
                 "SER-2",
-                "NPR-3"
+                "UNC-8"
             ],
             [
                 "Acetylcholine"
@@ -2590,12 +2591,12 @@
                 "motor"
             ],
             [
-                "UNC-8",
-                "DOP-1",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
+                "NPR-3",
                 "SER-2",
-                "NPR-3"
+                "UNC-8"
             ],
             [
                 "Acetylcholine"
@@ -2609,12 +2610,12 @@
                 "motor"
             ],
             [
-                "UNC-8",
-                "DOP-1",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
+                "NPR-3",
                 "SER-2",
-                "NPR-3"
+                "UNC-8"
             ],
             [
                 "Acetylcholine"
@@ -2629,8 +2630,8 @@
             ],
             [
                 "CKR-2",
-                "DOP-3",
                 "DOP-1",
+                "DOP-3",
                 "NPR-3"
             ],
             [
@@ -2645,11 +2646,11 @@
                 "motor"
             ],
             [
-                "PDFR-1",
-                "DOP-1",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
-                "NPR-3"
+                "NPR-3",
+                "PDFR-1"
             ],
             [
                 "Acetylcholine"
@@ -2664,8 +2665,8 @@
             ],
             [
                 "CKR-2",
-                "DOP-3",
                 "DOP-1",
+                "DOP-3",
                 "NPR-3"
             ],
             [
@@ -2681,8 +2682,8 @@
             ],
             [
                 "CKR-2",
-                "DOP-3",
                 "DOP-1",
+                "DOP-3",
                 "NPR-3"
             ],
             [
@@ -2698,8 +2699,8 @@
             ],
             [
                 "CKR-2",
-                "DOP-3",
                 "DOP-1",
+                "DOP-3",
                 "NPR-3"
             ],
             [
@@ -2715,8 +2716,8 @@
             ],
             [
                 "CKR-2",
-                "DOP-3",
                 "DOP-1",
+                "DOP-3",
                 "NPR-3"
             ],
             [
@@ -2732,8 +2733,8 @@
             ],
             [
                 "CKR-2",
-                "DOP-3",
                 "DOP-1",
+                "DOP-3",
                 "NPR-3"
             ],
             [
@@ -2748,9 +2749,9 @@
                 "motor"
             ],
             [
-                "NPR-1",
+                "DOP-3",
                 "MOD-1",
-                "DOP-3"
+                "NPR-1"
             ],
             [
                 "GABA"
@@ -2764,9 +2765,9 @@
                 "motor"
             ],
             [
-                "NPR-1",
+                "DOP-3",
                 "MOD-1",
-                "DOP-3"
+                "NPR-1"
             ],
             [
                 "GABA"
@@ -2780,9 +2781,9 @@
                 "motor"
             ],
             [
-                "NPR-1",
+                "DOP-3",
                 "MOD-1",
-                "DOP-3"
+                "NPR-1"
             ],
             [
                 "GABA"
@@ -2796,9 +2797,9 @@
                 "motor"
             ],
             [
-                "NPR-1",
+                "DOP-3",
                 "MOD-1",
-                "DOP-3"
+                "NPR-1"
             ],
             [
                 "GABA"
@@ -2812,9 +2813,9 @@
                 "motor"
             ],
             [
-                "NPR-1",
+                "DOP-3",
                 "MOD-1",
-                "DOP-3"
+                "NPR-1"
             ],
             [
                 "GABA"
@@ -2828,9 +2829,9 @@
                 "motor"
             ],
             [
-                "NPR-1",
+                "DOP-3",
                 "MOD-1",
-                "DOP-3"
+                "NPR-1"
             ],
             [
                 "GABA"
@@ -2845,15 +2846,15 @@
                 "sensory"
             ],
             [
-                "SER-4",
-                "TRP-4",
                 "EGL-6",
-                "GGR-3",
                 "FRPR-4",
-                "SER-2",
-                "GLR-5",
+                "GGR-3",
                 "GLR-4",
-                "NMR-1"
+                "GLR-5",
+                "NMR-1",
+                "SER-2",
+                "SER-4",
+                "TRP-4"
             ],
             [
                 "Acetylcholine"
@@ -2864,8 +2865,8 @@
         "DVB": [
             "Neuron(<http://data.openworm.org/sci/bio/Neuron#DVB>)",
             [
-                "motor",
-                "interneuron"
+                "interneuron",
+                "motor"
             ],
             [],
             [
@@ -2897,16 +2898,16 @@
                 "sensory"
             ],
             [
+                "DEG-3",
+                "DEL-1",
+                "DES-2",
+                "GLR-4",
+                "LGC-53",
+                "MEC-10",
+                "NPR-2",
                 "OSM-9",
                 "PDFR-1",
-                "NPR-2",
-                "DES-2",
-                "UNC-8",
-                "MEC-10",
-                "DEG-3",
-                "LGC-53",
-                "GLR-4",
-                "DEL-1"
+                "UNC-8"
             ],
             [
                 "Glutamate"
@@ -2920,16 +2921,16 @@
                 "sensory"
             ],
             [
+                "DEG-3",
+                "DEL-1",
+                "DES-2",
+                "GLR-4",
+                "LGC-53",
+                "MEC-10",
+                "NPR-2",
                 "OSM-9",
                 "PDFR-1",
-                "NPR-2",
-                "DES-2",
-                "UNC-8",
-                "MEC-10",
-                "DEG-3",
-                "LGC-53",
-                "GLR-4",
-                "DEL-1"
+                "UNC-8"
             ],
             [
                 "Glutamate"
@@ -2943,12 +2944,12 @@
                 "motor"
             ],
             [
-                "LGC-55",
                 "EGL-6",
                 "GAR-2",
                 "GGR-2",
                 "GLR-5",
                 "LGC-53",
+                "LGC-55",
                 "MEC-6"
             ],
             [
@@ -2963,12 +2964,12 @@
                 "motor"
             ],
             [
-                "LGC-55",
                 "EGL-6",
                 "GAR-2",
                 "GGR-2",
                 "GLR-5",
                 "LGC-53",
+                "LGC-55",
                 "MEC-6"
             ],
             [
@@ -2984,11 +2985,11 @@
                 "sensory"
             ],
             [
-                "PDFR-1",
                 "DOP-4",
                 "FRPR-4",
                 "GLR-7",
-                "GLR-8"
+                "GLR-8",
+                "PDFR-1"
             ],
             [
                 "Acetylcholine"
@@ -3003,11 +3004,11 @@
                 "sensory"
             ],
             [
-                "PDFR-1",
                 "DOP-4",
                 "FRPR-4",
                 "GLR-7",
-                "GLR-8"
+                "GLR-8",
+                "PDFR-1"
             ],
             [
                 "Acetylcholine"
@@ -3023,10 +3024,10 @@
             ],
             [
                 "DOP-4",
-                "NTR-1",
-                "SER-7",
                 "GLR-7",
-                "GLR-8"
+                "GLR-8",
+                "NTR-1",
+                "SER-7"
             ],
             [
                 "Glutamate"
@@ -3042,10 +3043,10 @@
             ],
             [
                 "DOP-4",
-                "NTR-1",
-                "SER-7",
                 "GLR-7",
-                "GLR-8"
+                "GLR-8",
+                "NTR-1",
+                "SER-7"
             ],
             [],
             "? (InSe) I2R",
@@ -3058,9 +3059,9 @@
                 "sensory"
             ],
             [
-                "SER-7",
+                "GLR-7",
                 "GLR-8",
-                "GLR-7"
+                "SER-7"
             ],
             [],
             "? (InSe) I3",
@@ -3086,8 +3087,8 @@
             ],
             [],
             [
-                "Serotonin",
-                "Glutamate"
+                "Glutamate",
+                "Serotonin"
             ],
             "+ (InSe) I5",
             "1 0 .4"
@@ -3099,9 +3100,9 @@
                 "sensory"
             ],
             [
-                "SER-7",
+                "GLR-7",
                 "GLR-8",
-                "GLR-7"
+                "SER-7"
             ],
             [
                 "Acetylcholine"
@@ -3117,9 +3118,9 @@
                 "sensory"
             ],
             [
-                "MEC-6",
-                "LGC-55",
                 "DEG-3",
+                "LGC-55",
+                "MEC-6",
                 "TRPA-1"
             ],
             [
@@ -3136,9 +3137,9 @@
                 "sensory"
             ],
             [
-                "MEC-6",
-                "LGC-55",
                 "DEG-3",
+                "LGC-55",
+                "MEC-6",
                 "TRPA-1"
             ],
             [
@@ -3155,9 +3156,9 @@
                 "sensory"
             ],
             [
-                "MEC-6",
-                "LGC-55",
                 "DEG-3",
+                "LGC-55",
+                "MEC-6",
                 "TRPA-1"
             ],
             [
@@ -3174,9 +3175,9 @@
                 "sensory"
             ],
             [
-                "MEC-6",
-                "LGC-55",
                 "DEG-3",
+                "LGC-55",
+                "MEC-6",
                 "TRPA-1"
             ],
             [
@@ -3193,9 +3194,9 @@
                 "sensory"
             ],
             [
-                "MEC-6",
-                "LGC-55",
                 "DEG-3",
+                "LGC-55",
+                "MEC-6",
                 "TRPA-1"
             ],
             [
@@ -3212,9 +3213,9 @@
                 "sensory"
             ],
             [
-                "MEC-6",
-                "LGC-55",
                 "DEG-3",
+                "LGC-55",
+                "MEC-6",
                 "TRPA-1"
             ],
             [
@@ -3229,9 +3230,9 @@
                 "sensory"
             ],
             [
+                "DES-2",
                 "LGC-53",
                 "NPR-1",
-                "DES-2",
                 "NPR-5"
             ],
             [
@@ -3246,9 +3247,9 @@
                 "sensory"
             ],
             [
+                "DES-2",
                 "LGC-53",
                 "NPR-1",
-                "DES-2",
                 "NPR-5"
             ],
             [
@@ -3263,9 +3264,9 @@
                 "sensory"
             ],
             [
+                "DES-2",
                 "LGC-53",
                 "NPR-1",
-                "DES-2",
                 "NPR-5"
             ],
             [
@@ -3280,9 +3281,9 @@
                 "sensory"
             ],
             [
+                "DES-2",
                 "LGC-53",
                 "NPR-1",
-                "DES-2",
                 "NPR-5"
             ],
             [
@@ -3297,9 +3298,9 @@
                 "sensory"
             ],
             [
+                "DES-2",
                 "LGC-53",
                 "NPR-1",
-                "DES-2",
                 "NPR-5"
             ],
             [
@@ -3314,9 +3315,9 @@
                 "sensory"
             ],
             [
+                "DES-2",
                 "LGC-53",
                 "NPR-1",
-                "DES-2",
                 "NPR-5"
             ],
             [
@@ -3331,8 +3332,8 @@
                 "interneuron"
             ],
             [
-                "SER-2",
-                "GLR-5"
+                "GLR-5",
+                "SER-2"
             ],
             [
                 "Glutamate"
@@ -3346,8 +3347,8 @@
                 "interneuron"
             ],
             [
-                "SER-2",
-                "GLR-5"
+                "GLR-5",
+                "SER-2"
             ],
             [
                 "Glutamate"
@@ -3361,9 +3362,9 @@
                 "motor"
             ],
             [
-                "SER-4",
                 "AVR-14",
-                "GLR-2"
+                "GLR-2",
+                "SER-4"
             ],
             [
                 "Acetylcholine"
@@ -3406,8 +3407,8 @@
                 "sensory"
             ],
             [
-                "NPR-1",
                 "GLR-8",
+                "NPR-1",
                 "SER-7"
             ],
             [
@@ -3423,8 +3424,8 @@
                 "sensory"
             ],
             [
-                "NPR-1",
                 "GLR-8",
+                "NPR-1",
                 "SER-7"
             ],
             [
@@ -3439,9 +3440,9 @@
                 "motor"
             ],
             [
-                "SER7b",
                 "GLR-8",
-                "SER-7"
+                "SER-7",
+                "SER7b"
             ],
             [
                 "Acetylcholine"
@@ -3471,9 +3472,9 @@
                 "sensory"
             ],
             [
-                "TYRA-2",
                 "GLR-8",
-                "SER-7"
+                "SER-7",
+                "TYRA-2"
             ],
             [
                 "Acetylcholine"
@@ -3488,9 +3489,9 @@
                 "sensory"
             ],
             [
-                "TYRA-2",
                 "GLR-8",
-                "SER-7"
+                "SER-7",
+                "TYRA-2"
             ],
             [
                 "Acetylcholine"
@@ -3501,8 +3502,8 @@
         "MI": [
             "Neuron(<http://data.openworm.org/sci/bio/Neuron#MI>)",
             [
-                "motor",
-                "interneuron"
+                "interneuron",
+                "motor"
             ],
             [],
             [
@@ -3518,13 +3519,13 @@
                 "sensory"
             ],
             [
-                "SER-4",
                 "AEX-2",
                 "DOP-3",
-                "TYRA-2",
-                "SER-2",
                 "GLR-7",
-                "GLR-8"
+                "GLR-8",
+                "SER-2",
+                "SER-4",
+                "TYRA-2"
             ],
             [
                 "Serotonin"
@@ -3539,13 +3540,13 @@
                 "sensory"
             ],
             [
-                "SER-4",
                 "AEX-2",
                 "DOP-3",
-                "TYRA-2",
-                "SER-2",
                 "GLR-7",
-                "GLR-8"
+                "GLR-8",
+                "SER-2",
+                "SER-4",
+                "TYRA-2"
             ],
             [
                 "Serotonin"
@@ -3590,13 +3591,13 @@
                 "sensory"
             ],
             [
+                "NPR-1",
+                "NPR-2",
+                "OCR-4",
                 "OSM-9",
                 "PDFR-1",
-                "NPR-2",
-                "TYRA-3",
                 "TRPA-1",
-                "NPR-1",
-                "OCR-4"
+                "TYRA-3"
             ],
             [
                 "Glutamate"
@@ -3611,13 +3612,13 @@
                 "sensory"
             ],
             [
+                "NPR-1",
+                "NPR-2",
+                "OCR-4",
                 "OSM-9",
                 "PDFR-1",
-                "NPR-2",
-                "TYRA-3",
                 "TRPA-1",
-                "NPR-1",
-                "OCR-4"
+                "TYRA-3"
             ],
             [
                 "Glutamate"
@@ -3632,13 +3633,13 @@
                 "sensory"
             ],
             [
+                "NPR-1",
+                "NPR-2",
+                "OCR-4",
                 "OSM-9",
                 "PDFR-1",
-                "NPR-2",
-                "TYRA-3",
                 "TRPA-1",
-                "NPR-1",
-                "OCR-4"
+                "TYRA-3"
             ],
             [
                 "Glutamate"
@@ -3653,13 +3654,13 @@
                 "sensory"
             ],
             [
+                "NPR-1",
+                "NPR-2",
+                "OCR-4",
                 "OSM-9",
                 "PDFR-1",
-                "NPR-2",
-                "TYRA-3",
                 "TRPA-1",
-                "NPR-1",
-                "OCR-4"
+                "TYRA-3"
             ],
             [
                 "Glutamate"
@@ -3673,10 +3674,10 @@
                 "motor"
             ],
             [
-                "UNC-8",
+                "DOP-2",
                 "EXP-1",
                 "SER-2",
-                "DOP-2"
+                "UNC-8"
             ],
             [
                 "Acetylcholine"
@@ -3687,8 +3688,8 @@
         "PDB": [
             "Neuron(<http://data.openworm.org/sci/bio/Neuron#PDB>)",
             [
-                "motor",
-                "interneuron"
+                "interneuron",
+                "motor"
             ],
             [
                 "UNC-8"
@@ -3731,15 +3732,15 @@
                 "sensory"
             ],
             [
-                "OSM-9",
-                "PDFR-1",
-                "SRG-13",
-                "SRB-6",
-                "SER-3",
                 "GCY-12",
                 "NPR-1",
+                "NPR-5",
                 "OCR-2",
-                "NPR-5"
+                "OSM-9",
+                "PDFR-1",
+                "SER-3",
+                "SRB-6",
+                "SRG-13"
             ],
             [
                 "Glutamate"
@@ -3753,15 +3754,15 @@
                 "sensory"
             ],
             [
-                "OSM-9",
-                "PDFR-1",
-                "SRG-13",
-                "SRB-6",
-                "SER-3",
                 "GCY-12",
                 "NPR-1",
+                "NPR-5",
                 "OCR-2",
-                "NPR-5"
+                "OSM-9",
+                "PDFR-1",
+                "SER-3",
+                "SRB-6",
+                "SRG-13"
             ],
             [
                 "Glutamate"
@@ -3775,17 +3776,17 @@
                 "sensory"
             ],
             [
+                "NPR-1",
+                "NPR-5",
+                "OCR-2",
                 "OSM-9",
                 "PDFR-1",
-                "SRB-6",
                 "SER-3",
-                "NPR-1",
-                "OCR-2",
-                "NPR-5"
+                "SRB-6"
             ],
             [
-                "Serotonin",
-                "Glutamate"
+                "Glutamate",
+                "Serotonin"
             ],
             "+ (Se) PHBL",
             "1 .2 1"
@@ -3796,17 +3797,17 @@
                 "sensory"
             ],
             [
+                "NPR-1",
+                "NPR-5",
+                "OCR-2",
                 "OSM-9",
                 "PDFR-1",
-                "SRB-6",
                 "SER-3",
-                "NPR-1",
-                "OCR-2",
-                "NPR-5"
+                "SRB-6"
             ],
             [
-                "Serotonin",
-                "Glutamate"
+                "Glutamate",
+                "Serotonin"
             ],
             "+ (Se) PHBR",
             "1 .2 1"
@@ -3845,15 +3846,15 @@
                 "sensory"
             ],
             [
-                "MEC-2",
-                "PDFR-1",
+                "DEG-3",
                 "DES-2",
                 "DOP-1",
+                "GLR-8",
+                "MEC-2",
                 "MEC-4",
-                "DEG-3",
-                "MEC-9",
                 "MEC-6",
-                "GLR-8"
+                "MEC-9",
+                "PDFR-1"
             ],
             [
                 "Glutamate"
@@ -3867,15 +3868,15 @@
                 "sensory"
             ],
             [
-                "MEC-2",
-                "PDFR-1",
+                "DEG-3",
                 "DES-2",
                 "DOP-1",
+                "GLR-8",
+                "MEC-2",
                 "MEC-4",
-                "DEG-3",
-                "MEC-9",
                 "MEC-6",
-                "GLR-8"
+                "MEC-9",
+                "PDFR-1"
             ],
             [
                 "Glutamate"
@@ -3919,15 +3920,15 @@
                 "sensory"
             ],
             [
-                "NPR-17",
-                "PDFR-1",
                 "DOP-4",
                 "GCY-32",
-                "NPR-1",
-                "NTR-1",
                 "GCY-35",
+                "NPR-1",
+                "NPR-17",
+                "NPR-4",
+                "NTR-1",
                 "NTR-2",
-                "NPR-4"
+                "PDFR-1"
             ],
             [
                 "Glutamate"
@@ -3971,20 +3972,20 @@
                 "sensory"
             ],
             [
-                "OSM-9",
-                "NPR-2",
+                "DEG-3",
                 "DES-2",
-                "MEC-10",
                 "DOP-1",
-                "TRPA-1",
                 "DOP-3",
-                "TYRA-2",
-                "SER-2",
-                "MEC-9",
-                "LGC-53",
                 "GLR-4",
+                "LGC-53",
+                "MEC-10",
                 "MEC-6",
-                "DEG-3"
+                "MEC-9",
+                "NPR-2",
+                "OSM-9",
+                "SER-2",
+                "TRPA-1",
+                "TYRA-2"
             ],
             [
                 "Glutamate"
@@ -3998,20 +3999,20 @@
                 "sensory"
             ],
             [
-                "OSM-9",
-                "NPR-2",
+                "DEG-3",
                 "DES-2",
-                "MEC-10",
                 "DOP-1",
-                "TRPA-1",
                 "DOP-3",
-                "TYRA-2",
-                "SER-2",
-                "MEC-9",
-                "LGC-53",
                 "GLR-4",
+                "LGC-53",
+                "MEC-10",
                 "MEC-6",
-                "DEG-3"
+                "MEC-9",
+                "NPR-2",
+                "OSM-9",
+                "SER-2",
+                "TRPA-1",
+                "TYRA-2"
             ],
             [
                 "Glutamate"
@@ -4025,15 +4026,15 @@
                 "sensory"
             ],
             [
-                "MEC-2",
-                "PDFR-1",
-                "GAR-1",
-                "UNC-8",
-                "MEC-10",
                 "FRPR-4",
+                "GAR-1",
+                "MEC-10",
+                "MEC-2",
                 "MEC-4",
+                "MEC-6",
                 "MEC-9",
-                "MEC-6"
+                "PDFR-1",
+                "UNC-8"
             ],
             [],
             "? (Se) PVM",
@@ -4042,8 +4043,8 @@
         "PVNL": [
             "Neuron(<http://data.openworm.org/sci/bio/Neuron#PVNL>)",
             [
-                "motor",
-                "interneuron"
+                "interneuron",
+                "motor"
             ],
             [],
             [],
@@ -4053,8 +4054,8 @@
         "PVNR": [
             "Neuron(<http://data.openworm.org/sci/bio/Neuron#PVNR>)",
             [
-                "motor",
-                "interneuron"
+                "interneuron",
+                "motor"
             ],
             [],
             [],
@@ -4097,17 +4098,17 @@
                 "interneuron"
             ],
             [
-                "SER-1",
-                "NPR-17",
-                "PDFR-1",
-                "NPR-2",
-                "SER-3",
-                "NTR-1",
-                "GGR-1",
                 "DOP-1",
+                "GGR-1",
                 "GLR-1",
-                "NTR-2",
                 "GLR-5",
+                "NPR-17",
+                "NPR-2",
+                "NTR-1",
+                "NTR-2",
+                "PDFR-1",
+                "SER-1",
+                "SER-3",
                 "SRA-6"
             ],
             [
@@ -4122,17 +4123,17 @@
                 "interneuron"
             ],
             [
-                "SER-1",
-                "NPR-17",
-                "PDFR-1",
-                "NPR-2",
-                "SER-3",
-                "NTR-1",
-                "GGR-1",
                 "DOP-1",
+                "GGR-1",
                 "GLR-1",
-                "NTR-2",
                 "GLR-5",
+                "NPR-17",
+                "NPR-2",
+                "NTR-1",
+                "NTR-2",
+                "PDFR-1",
+                "SER-1",
+                "SER-3",
                 "SRA-6"
             ],
             [
@@ -4163,9 +4164,9 @@
             ],
             [
                 "SER-1",
+                "SER-2",
                 "SER-4",
-                "TYRA-3",
-                "SER-2"
+                "TYRA-3"
             ],
             [],
             "? (In) PVT",
@@ -4178,8 +4179,8 @@
             ],
             [
                 "NTR-1",
-                "PDFR-1",
-                "NTR-2"
+                "NTR-2",
+                "PDFR-1"
             ],
             [
                 "Acetylcholine"
@@ -4194,8 +4195,8 @@
             ],
             [
                 "NTR-1",
-                "PDFR-1",
-                "NTR-2"
+                "NTR-2",
+                "PDFR-1"
             ],
             [
                 "Acetylcholine"
@@ -4209,10 +4210,10 @@
                 "interneuron"
             ],
             [
-                "SER-1",
                 "DOP-2",
-                "SER-2",
-                "FRPR-4"
+                "FRPR-4",
+                "SER-1",
+                "SER-2"
             ],
             [
                 "Glutamate"
@@ -4226,10 +4227,10 @@
                 "interneuron"
             ],
             [
-                "SER-1",
                 "DOP-2",
-                "SER-2",
-                "FRPR-4"
+                "FRPR-4",
+                "SER-1",
+                "SER-2"
             ],
             [
                 "Glutamate"
@@ -4243,8 +4244,8 @@
                 "interneuron"
             ],
             [
-                "SER-4",
-                "DOP-1"
+                "DOP-1",
+                "SER-4"
             ],
             [],
             "? (In) RIBL",
@@ -4256,8 +4257,8 @@
                 "interneuron"
             ],
             [
-                "SER-4",
-                "DOP-1"
+                "DOP-1",
+                "SER-4"
             ],
             [],
             "? (In) RIBR",
@@ -4269,12 +4270,12 @@
                 "interneuron"
             ],
             [
-                "SER-1",
-                "SER-6",
+                "DOP-3",
                 "MOD-1",
                 "NTR-1",
-                "DOP-3",
-                "SER-2"
+                "SER-1",
+                "SER-2",
+                "SER-6"
             ],
             [
                 "Octopamine"
@@ -4288,12 +4289,12 @@
                 "interneuron"
             ],
             [
-                "SER-1",
-                "SER-6",
+                "DOP-3",
                 "MOD-1",
                 "NTR-1",
-                "DOP-3",
-                "SER-2"
+                "SER-1",
+                "SER-2",
+                "SER-6"
             ],
             [
                 "Octopamine"
@@ -4304,13 +4305,13 @@
         "RID": [
             "Neuron(<http://data.openworm.org/sci/bio/Neuron#RID>)",
             [
-                "motor",
-                "interneuron"
+                "interneuron",
+                "motor"
             ],
             [
+                "DOP-2",
                 "MOD-1",
-                "SER-2",
-                "DOP-2"
+                "SER-2"
             ],
             [],
             "? (MoIn) RID",
@@ -4322,8 +4323,8 @@
                 "interneuron"
             ],
             [
-                "PDFR-1",
-                "NTR-2"
+                "NTR-2",
+                "PDFR-1"
             ],
             [],
             "? (In) RIFL",
@@ -4335,8 +4336,8 @@
                 "interneuron"
             ],
             [
-                "PDFR-1",
-                "NTR-2"
+                "NTR-2",
+                "PDFR-1"
             ],
             [],
             "? (In) RIFR",
@@ -4385,18 +4386,18 @@
         "RIML": [
             "Neuron(<http://data.openworm.org/sci/bio/Neuron#RIML>)",
             [
-                "motor",
-                "interneuron"
+                "interneuron",
+                "motor"
             ],
             [
-                "SER-4",
+                "DOP-1",
                 "MOD-1",
-                "DOP-1"
+                "SER-4"
             ],
             [
                 "Acetylcholine",
-                "Tyramine",
-                "Glutamate"
+                "Glutamate",
+                "Tyramine"
             ],
             "+ (MoIn) RIML",
             ".5 .4 1"
@@ -4404,18 +4405,18 @@
         "RIMR": [
             "Neuron(<http://data.openworm.org/sci/bio/Neuron#RIMR>)",
             [
-                "motor",
-                "interneuron"
+                "interneuron",
+                "motor"
             ],
             [
-                "SER-4",
+                "DOP-1",
                 "MOD-1",
-                "DOP-1"
+                "SER-4"
             ],
             [
                 "Acetylcholine",
-                "Tyramine",
-                "Glutamate"
+                "Glutamate",
+                "Tyramine"
             ],
             "+ (MoIn) RIMR",
             ".5 .4 1"
@@ -4456,9 +4457,9 @@
                 "interneuron"
             ],
             [
+                "DOP-1",
                 "GLR-1",
-                "SER-4",
-                "DOP-1"
+                "SER-4"
             ],
             [
                 "GABA"
@@ -4469,8 +4470,8 @@
         "RIVL": [
             "Neuron(<http://data.openworm.org/sci/bio/Neuron#RIVL>)",
             [
-                "motor",
-                "interneuron"
+                "interneuron",
+                "motor"
             ],
             [
                 "NPR-1",
@@ -4483,8 +4484,8 @@
         "RIVR": [
             "Neuron(<http://data.openworm.org/sci/bio/Neuron#RIVR>)",
             [
-                "motor",
-                "interneuron"
+                "interneuron",
+                "motor"
             ],
             [
                 "NPR-1",
@@ -4501,8 +4502,8 @@
             ],
             [
                 "GLR-1",
-                "SER-1",
-                "LGC-55"
+                "LGC-55",
+                "SER-1"
             ],
             [
                 "Acetylcholine"
@@ -4517,8 +4518,8 @@
             ],
             [
                 "GLR-1",
-                "SER-1",
-                "LGC-55"
+                "LGC-55",
+                "SER-1"
             ],
             [
                 "Acetylcholine"
@@ -4533,8 +4534,8 @@
             ],
             [
                 "GLR-1",
-                "SER-1",
-                "LGC-55"
+                "LGC-55",
+                "SER-1"
             ],
             [
                 "Acetylcholine"
@@ -4549,8 +4550,8 @@
             ],
             [
                 "GLR-1",
-                "SER-1",
-                "LGC-55"
+                "LGC-55",
+                "SER-1"
             ],
             [
                 "Acetylcholine"
@@ -4565,8 +4566,8 @@
             ],
             [
                 "GLR-1",
-                "SER-1",
-                "LGC-55"
+                "LGC-55",
+                "SER-1"
             ],
             [
                 "Acetylcholine"
@@ -4581,8 +4582,8 @@
             ],
             [
                 "GLR-1",
-                "SER-1",
-                "LGC-55"
+                "LGC-55",
+                "SER-1"
             ],
             [
                 "Acetylcholine"
@@ -4596,12 +4597,12 @@
                 "motor"
             ],
             [
-                "PDFR-1",
-                "MOD-1",
+                "AVR-15",
                 "GLR-1",
-                "SER-2",
+                "MOD-1",
                 "NTR-2",
-                "AVR-15"
+                "PDFR-1",
+                "SER-2"
             ],
             [
                 "GABA"
@@ -4615,12 +4616,12 @@
                 "motor"
             ],
             [
-                "PDFR-1",
-                "MOD-1",
+                "AVR-15",
                 "GLR-1",
-                "SER-2",
+                "MOD-1",
                 "NTR-2",
-                "AVR-15"
+                "PDFR-1",
+                "SER-2"
             ],
             [
                 "GABA"
@@ -4634,12 +4635,12 @@
                 "motor"
             ],
             [
-                "PDFR-1",
-                "MOD-1",
+                "AVR-15",
                 "GLR-1",
-                "SER-2",
+                "MOD-1",
                 "NTR-2",
-                "AVR-15"
+                "PDFR-1",
+                "SER-2"
             ],
             [
                 "GABA"
@@ -4653,12 +4654,12 @@
                 "motor"
             ],
             [
-                "PDFR-1",
-                "MOD-1",
+                "AVR-15",
                 "GLR-1",
-                "SER-2",
+                "MOD-1",
                 "NTR-2",
-                "AVR-15"
+                "PDFR-1",
+                "SER-2"
             ],
             [
                 "GABA"
@@ -4741,8 +4742,8 @@
         "SAADL": [
             "Neuron(<http://data.openworm.org/sci/bio/Neuron#SAADL>)",
             [
-                "motor",
-                "interneuron"
+                "interneuron",
+                "motor"
             ],
             [
                 "NPR-1"
@@ -4756,8 +4757,8 @@
         "SAADR": [
             "Neuron(<http://data.openworm.org/sci/bio/Neuron#SAADR>)",
             [
-                "motor",
-                "interneuron"
+                "interneuron",
+                "motor"
             ],
             [
                 "NPR-1"
@@ -4771,8 +4772,8 @@
         "SAAVL": [
             "Neuron(<http://data.openworm.org/sci/bio/Neuron#SAAVL>)",
             [
-                "motor",
-                "interneuron"
+                "interneuron",
+                "motor"
             ],
             [],
             [
@@ -4784,8 +4785,8 @@
         "SAAVR": [
             "Neuron(<http://data.openworm.org/sci/bio/Neuron#SAAVR>)",
             [
-                "motor",
-                "interneuron"
+                "interneuron",
+                "motor"
             ],
             [],
             [
@@ -4797,8 +4798,8 @@
         "SABD": [
             "Neuron(<http://data.openworm.org/sci/bio/Neuron#SABD>)",
             [
-                "motor",
-                "interneuron"
+                "interneuron",
+                "motor"
             ],
             [
                 "NPR-2",
@@ -4813,8 +4814,8 @@
         "SABVL": [
             "Neuron(<http://data.openworm.org/sci/bio/Neuron#SABVL>)",
             [
-                "motor",
-                "interneuron"
+                "interneuron",
+                "motor"
             ],
             [
                 "NPR-2",
@@ -4829,8 +4830,8 @@
         "SABVR": [
             "Neuron(<http://data.openworm.org/sci/bio/Neuron#SABVR>)",
             [
-                "motor",
-                "interneuron"
+                "interneuron",
+                "motor"
             ],
             [
                 "NPR-2",
@@ -4849,11 +4850,11 @@
                 "sensory"
             ],
             [
-                "LGC-55",
                 "EGL-6",
-                "TYRA-3",
+                "LGC-55",
+                "NPR-1",
                 "SER-2",
-                "NPR-1"
+                "TYRA-3"
             ],
             [
                 "Acetylcholine"
@@ -4868,11 +4869,11 @@
                 "sensory"
             ],
             [
-                "LGC-55",
                 "EGL-6",
-                "TYRA-3",
+                "LGC-55",
+                "NPR-1",
                 "SER-2",
-                "NPR-1"
+                "TYRA-3"
             ],
             [
                 "Acetylcholine"
@@ -4883,15 +4884,15 @@
         "SIADL": [
             "Neuron(<http://data.openworm.org/sci/bio/Neuron#SIADL>)",
             [
-                "motor",
-                "interneuron"
+                "interneuron",
+                "motor"
             ],
             [
-                "SER-6",
-                "SER-3",
                 "DOP-2",
                 "DOP-3",
-                "SER-2"
+                "SER-2",
+                "SER-3",
+                "SER-6"
             ],
             [
                 "Acetylcholine"
@@ -4902,15 +4903,15 @@
         "SIADR": [
             "Neuron(<http://data.openworm.org/sci/bio/Neuron#SIADR>)",
             [
-                "motor",
-                "interneuron"
+                "interneuron",
+                "motor"
             ],
             [
-                "SER-6",
-                "SER-3",
                 "DOP-2",
                 "DOP-3",
-                "SER-2"
+                "SER-2",
+                "SER-3",
+                "SER-6"
             ],
             [
                 "Acetylcholine"
@@ -4921,15 +4922,15 @@
         "SIAVL": [
             "Neuron(<http://data.openworm.org/sci/bio/Neuron#SIAVL>)",
             [
-                "motor",
-                "interneuron"
+                "interneuron",
+                "motor"
             ],
             [
-                "SER-6",
-                "SER-3",
                 "DOP-2",
                 "DOP-3",
-                "SER-2"
+                "SER-2",
+                "SER-3",
+                "SER-6"
             ],
             [
                 "Acetylcholine"
@@ -4940,15 +4941,15 @@
         "SIAVR": [
             "Neuron(<http://data.openworm.org/sci/bio/Neuron#SIAVR>)",
             [
-                "motor",
-                "interneuron"
+                "interneuron",
+                "motor"
             ],
             [
-                "SER-6",
-                "SER-3",
                 "DOP-2",
                 "DOP-3",
-                "SER-2"
+                "SER-2",
+                "SER-3",
+                "SER-6"
             ],
             [
                 "Acetylcholine"
@@ -4959,8 +4960,8 @@
         "SIBDL": [
             "Neuron(<http://data.openworm.org/sci/bio/Neuron#SIBDL>)",
             [
-                "motor",
-                "interneuron"
+                "interneuron",
+                "motor"
             ],
             [
                 "DOP-2"
@@ -4974,8 +4975,8 @@
         "SIBDR": [
             "Neuron(<http://data.openworm.org/sci/bio/Neuron#SIBDR>)",
             [
-                "motor",
-                "interneuron"
+                "interneuron",
+                "motor"
             ],
             [
                 "DOP-2"
@@ -4989,8 +4990,8 @@
         "SIBVL": [
             "Neuron(<http://data.openworm.org/sci/bio/Neuron#SIBVL>)",
             [
-                "motor",
-                "interneuron"
+                "interneuron",
+                "motor"
             ],
             [
                 "DOP-2"
@@ -5004,8 +5005,8 @@
         "SIBVR": [
             "Neuron(<http://data.openworm.org/sci/bio/Neuron#SIBVR>)",
             [
-                "motor",
-                "interneuron"
+                "interneuron",
+                "motor"
             ],
             [
                 "DOP-2"
@@ -5211,16 +5212,16 @@
                 "sensory"
             ],
             [
-                "SRA-10",
-                "PDFR-1",
                 "GCY-1",
-                "GCY-32",
-                "GCY-37",
-                "GCY-36",
-                "GCY-35",
                 "GCY-25",
+                "GCY-32",
+                "GCY-34",
+                "GCY-35",
+                "GCY-36",
+                "GCY-37",
                 "NPR-1",
-                "GCY-34"
+                "PDFR-1",
+                "SRA-10"
             ],
             [],
             "? (InSe) URXL",
@@ -5233,16 +5234,16 @@
                 "sensory"
             ],
             [
-                "SRA-10",
-                "PDFR-1",
                 "GCY-1",
-                "GCY-32",
-                "GCY-37",
-                "GCY-36",
-                "GCY-35",
                 "GCY-25",
+                "GCY-32",
+                "GCY-34",
+                "GCY-35",
+                "GCY-36",
+                "GCY-37",
                 "NPR-1",
-                "GCY-34"
+                "PDFR-1",
+                "SRA-10"
             ],
             [],
             "? (InSe) URXR",
@@ -5255,8 +5256,8 @@
             ],
             [
                 "LGC-53",
-                "SER-1",
-                "PDFR-1"
+                "PDFR-1",
+                "SER-1"
             ],
             [
                 "Glutamate"
@@ -5271,8 +5272,8 @@
             ],
             [
                 "LGC-53",
-                "SER-1",
-                "PDFR-1"
+                "PDFR-1",
+                "SER-1"
             ],
             [
                 "Glutamate"
@@ -5287,8 +5288,8 @@
             ],
             [
                 "LGC-53",
-                "SER-1",
-                "PDFR-1"
+                "PDFR-1",
+                "SER-1"
             ],
             [
                 "Glutamate"
@@ -5303,8 +5304,8 @@
             ],
             [
                 "LGC-53",
-                "SER-1",
-                "PDFR-1"
+                "PDFR-1",
+                "SER-1"
             ],
             [
                 "Glutamate"
@@ -5318,8 +5319,8 @@
                 "motor"
             ],
             [
-                "DOP-1",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
                 "LGC-53",
                 "NPR-3"
@@ -5336,8 +5337,8 @@
                 "motor"
             ],
             [
-                "DOP-1",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
                 "LGC-53",
                 "NPR-3"
@@ -5354,8 +5355,8 @@
                 "motor"
             ],
             [
-                "DOP-1",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
                 "LGC-53",
                 "NPR-3"
@@ -5372,8 +5373,8 @@
                 "motor"
             ],
             [
-                "DOP-1",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
                 "LGC-53",
                 "NPR-3"
@@ -5390,8 +5391,8 @@
                 "motor"
             ],
             [
-                "DOP-1",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
                 "LGC-53",
                 "NPR-3"
@@ -5408,8 +5409,8 @@
                 "motor"
             ],
             [
-                "DOP-1",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
                 "LGC-53",
                 "NPR-3"
@@ -5426,8 +5427,8 @@
                 "motor"
             ],
             [
-                "DOP-1",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
                 "LGC-53",
                 "NPR-3"
@@ -5444,8 +5445,8 @@
                 "motor"
             ],
             [
-                "DOP-1",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
                 "LGC-53",
                 "NPR-3"
@@ -5462,8 +5463,8 @@
                 "motor"
             ],
             [
-                "DOP-1",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
                 "LGC-53",
                 "NPR-3"
@@ -5480,8 +5481,8 @@
                 "motor"
             ],
             [
-                "DOP-1",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
                 "LGC-53",
                 "NPR-3"
@@ -5498,8 +5499,8 @@
                 "motor"
             ],
             [
-                "DOP-1",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
                 "LGC-53",
                 "NPR-3"
@@ -5516,8 +5517,8 @@
                 "motor"
             ],
             [
-                "DOP-1",
                 "CKR-2",
+                "DOP-1",
                 "DOP-3",
                 "LGC-53",
                 "NPR-3"
@@ -5536,8 +5537,8 @@
             ],
             [
                 "CKR-2",
-                "DOP-3",
                 "DOP-1",
+                "DOP-3",
                 "NPR-3"
             ],
             [
@@ -5554,8 +5555,8 @@
             ],
             [
                 "CKR-2",
-                "DOP-3",
                 "DOP-1",
+                "DOP-3",
                 "NPR-3"
             ],
             [
@@ -5572,8 +5573,8 @@
             ],
             [
                 "CKR-2",
-                "DOP-3",
                 "DOP-1",
+                "DOP-3",
                 "NPR-3"
             ],
             [
@@ -5590,8 +5591,8 @@
             ],
             [
                 "CKR-2",
-                "DOP-3",
                 "DOP-1",
+                "DOP-3",
                 "NPR-3"
             ],
             [
@@ -5608,8 +5609,8 @@
             ],
             [
                 "CKR-2",
-                "DOP-3",
                 "DOP-1",
+                "DOP-3",
                 "NPR-3"
             ],
             [
@@ -5626,8 +5627,8 @@
             ],
             [
                 "CKR-2",
-                "DOP-3",
                 "DOP-1",
+                "DOP-3",
                 "NPR-3"
             ],
             [
@@ -5644,8 +5645,8 @@
             ],
             [
                 "CKR-2",
-                "DOP-3",
                 "DOP-1",
+                "DOP-3",
                 "NPR-3"
             ],
             [
@@ -5662,8 +5663,8 @@
             ],
             [
                 "CKR-2",
-                "DOP-3",
                 "DOP-1",
+                "DOP-3",
                 "NPR-3"
             ],
             [
@@ -5680,8 +5681,8 @@
             ],
             [
                 "CKR-2",
-                "DOP-3",
                 "DOP-1",
+                "DOP-3",
                 "NPR-3"
             ],
             [
@@ -5698,8 +5699,8 @@
             ],
             [
                 "CKR-2",
-                "DOP-3",
                 "DOP-1",
+                "DOP-3",
                 "NPR-3"
             ],
             [
@@ -5716,8 +5717,8 @@
             ],
             [
                 "CKR-2",
-                "DOP-3",
                 "DOP-1",
+                "DOP-3",
                 "NPR-3"
             ],
             [
@@ -5818,9 +5819,9 @@
                 "motor"
             ],
             [
-                "NPR-1",
-                "MOD-1",
                 "DOP-3",
+                "MOD-1",
+                "NPR-1",
                 "SER-2"
             ],
             [
@@ -5835,9 +5836,9 @@
                 "motor"
             ],
             [
-                "NPR-1",
-                "MOD-1",
                 "DOP-3",
+                "MOD-1",
+                "NPR-1",
                 "SER-2"
             ],
             [
@@ -5852,9 +5853,9 @@
                 "motor"
             ],
             [
-                "NPR-1",
-                "MOD-1",
                 "DOP-3",
+                "MOD-1",
+                "NPR-1",
                 "SER-2"
             ],
             [
@@ -5869,9 +5870,9 @@
                 "motor"
             ],
             [
-                "NPR-1",
-                "MOD-1",
                 "DOP-3",
+                "MOD-1",
+                "NPR-1",
                 "SER-2"
             ],
             [
@@ -5886,9 +5887,9 @@
                 "motor"
             ],
             [
-                "NPR-1",
-                "MOD-1",
                 "DOP-3",
+                "MOD-1",
+                "NPR-1",
                 "SER-2"
             ],
             [
@@ -5903,9 +5904,9 @@
                 "motor"
             ],
             [
-                "NPR-1",
-                "MOD-1",
                 "DOP-3",
+                "MOD-1",
+                "NPR-1",
                 "SER-2"
             ],
             [
@@ -5920,9 +5921,9 @@
                 "motor"
             ],
             [
-                "NPR-1",
-                "MOD-1",
                 "DOP-3",
+                "MOD-1",
+                "NPR-1",
                 "SER-2"
             ],
             [
@@ -5937,9 +5938,9 @@
                 "motor"
             ],
             [
-                "NPR-1",
-                "MOD-1",
                 "DOP-3",
+                "MOD-1",
+                "NPR-1",
                 "SER-2"
             ],
             [
@@ -5954,9 +5955,9 @@
                 "motor"
             ],
             [
-                "NPR-1",
-                "MOD-1",
                 "DOP-3",
+                "MOD-1",
+                "NPR-1",
                 "SER-2"
             ],
             [
@@ -5971,9 +5972,9 @@
                 "motor"
             ],
             [
-                "NPR-1",
-                "MOD-1",
                 "DOP-3",
+                "MOD-1",
+                "NPR-1",
                 "SER-2"
             ],
             [
@@ -5988,9 +5989,9 @@
                 "motor"
             ],
             [
-                "NPR-1",
-                "MOD-1",
                 "DOP-3",
+                "MOD-1",
+                "NPR-1",
                 "SER-2"
             ],
             [
@@ -6005,9 +6006,9 @@
                 "motor"
             ],
             [
-                "NPR-1",
-                "MOD-1",
                 "DOP-3",
+                "MOD-1",
+                "NPR-1",
                 "SER-2"
             ],
             [
@@ -6022,9 +6023,9 @@
                 "motor"
             ],
             [
-                "NPR-1",
-                "MOD-1",
                 "DOP-3",
+                "MOD-1",
+                "NPR-1",
                 "SER-2"
             ],
             [
