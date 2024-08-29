@@ -2,27 +2,26 @@ from decimal import Decimal
 
 from neuroml import ExpTwoSynapse, GapJunction, GradedSynapse
 
-'''
+"""
     Subject to much change & refactoring once owmeta is stable...
-'''
+"""
 
 
 def split_neuroml_quantity(quantity):
-
-    i=len(quantity)
-    while i>0:
+    i = len(quantity)
+    while i > 0:
         magnitude = quantity[0:i].strip()
         unit = quantity[i:].strip()
 
         try:
             magnitude = float(magnitude)
-            i=0
+            i = 0
         except ValueError:
             i -= 1
     return magnitude, unit
 
-class BioParameter():
 
+class BioParameter:
     def __init__(self, name, value, source, certainty):
         self.name = name
         self.value = value
@@ -30,30 +29,34 @@ class BioParameter():
         self.certainty = certainty
 
     def __str__(self):
-        return "BioParameter: %s = %s (SRC: %s, certainty %s)"%(self.name, self.value, self.source, self.certainty)
+        return "BioParameter: %s = %s (SRC: %s, certainty %s)" % (
+            self.name,
+            self.value,
+            self.source,
+            self.certainty,
+        )
 
     def __repr__(self):
         return self.__str__()
 
     def change_magnitude(self, magnitude):
-
-        self.value = '%s %s'%(Decimal(magnitude), split_neuroml_quantity(self.value)[1])
+        self.value = "%s %s" % (
+            Decimal(magnitude),
+            split_neuroml_quantity(self.value)[1],
+        )
 
     def x(self):
-
         return split_neuroml_quantity(self.value)[0]
 
 
 class ParameterisedModelPrototype(object):
-
-    #bioparameters = []
+    # bioparameters = []
     def __init__(self):
         self.bioparameters = []
 
     def print_(self, msg):
         pre = "c302      >>> "
-        print('%s %s'%(pre,msg.replace('\n','\n'+pre)))
-
+        print("%s %s" % (pre, msg.replace("\n", "\n" + pre)))
 
     def add_bioparameter(self, name, value, source, certainty):
         found = False
@@ -67,7 +70,6 @@ class ParameterisedModelPrototype(object):
             bp = BioParameter(name, value, source, certainty)
             self.bioparameters.append(bp)
 
-
     def add_bioparameter_obj(self, bioparameter):
         for bp in self.bioparameters:
             if bp.name == bioparameter.name:
@@ -75,18 +77,22 @@ class ParameterisedModelPrototype(object):
 
         self.bioparameters.append(bioparameter)
 
-
     def get_bioparameter(self, name, warn_if_missing=False):
         for bp in self.bioparameters:
             if bp.name == name:
                 return bp
         if warn_if_missing:
-            self.print_('Cannot find bioparameter: %s; %i known: %s'%(name, len(self.bioparameters), [bp.name for bp in self.bioparameters]))
+            self.print_(
+                "Cannot find bioparameter: %s; %i known: %s"
+                % (
+                    name,
+                    len(self.bioparameters),
+                    [bp.name for bp in self.bioparameters],
+                )
+            )
         return None
 
-
     def set_bioparameter(self, name, value, source, certainty):
-
         for bp in self.bioparameters:
             if bp.name == name:
                 bp.value = value
@@ -94,14 +100,13 @@ class ParameterisedModelPrototype(object):
                 bp.certainty = certainty
 
     def bioparameter_info(self, indent=""):
-        info = indent+"Known BioParameters:\n"
+        info = indent + "Known BioParameters:\n"
         for bp in sorted(self.bioparameters, key=lambda x: x.name):
-            info += indent+indent+"%s\n"%bp
+            info += indent + indent + "%s\n" % bp
         return info
 
 
 class c302ModelPrototype(ParameterisedModelPrototype):
-
     def __init__(self):
         super(c302ModelPrototype, self).__init__()
 
@@ -117,32 +122,41 @@ class c302ModelPrototype(ParameterisedModelPrototype):
         self.found_specific_param = False
 
     def is_level_A(self):
-        return self.level.startswith('A')
+        return self.level.startswith("A")
 
     def is_level_B(self):
-        return self.level.startswith('B')
+        return self.level.startswith("B")
 
     def is_level_C(self):
-        return self.level.startswith('C')
+        return self.level.startswith("C")
 
     def is_level_C0(self):
-        return self.level == 'C0'
+        return self.level == "C0"
 
     def is_level_C2(self):
-        return self.level == 'C2'
+        return self.level == "C2"
 
     def is_level_D1(self):
-        return self.level == 'D1'
+        return self.level == "D1"
 
     def is_level_D(self):
-        return self.level.startswith('D')
+        return self.level.startswith("D")
 
     def is_level_X(self):
-        return self.level.startswith('X')
+        return self.level.startswith("X")
 
-
-    def get_conn_param(self, pre_cell, post_cell, specific_conn_template, default_conn_template, param_name):
-        param = self.get_bioparameter(specific_conn_template % (pre_cell, post_cell, param_name), warn_if_missing=False)
+    def get_conn_param(
+        self,
+        pre_cell,
+        post_cell,
+        specific_conn_template,
+        default_conn_template,
+        param_name,
+    ):
+        param = self.get_bioparameter(
+            specific_conn_template % (pre_cell, post_cell, param_name),
+            warn_if_missing=False,
+        )
         if param:
             self.found_specific_param = True
             return param.value
@@ -151,15 +165,13 @@ class c302ModelPrototype(ParameterisedModelPrototype):
             return None
         return def_param.value
 
-
     def get_syn(self, pre_cell, post_cell, type, pol):
-        if pol == 'elec':
+        if pol == "elec":
             return self.get_elec_syn(pre_cell, post_cell, type)
-        elif pol == 'exc':
+        elif pol == "exc":
             return self.get_exc_syn(pre_cell, post_cell, type)
-        elif pol == 'inh':
+        elif pol == "inh":
             return self.get_inh_syn(pre_cell, post_cell, type)
-
 
     def create_n_connection_synapse(self, prototype_syn, n, nml_doc, existing_synapses):
         if prototype_syn.id in existing_synapses:
@@ -173,12 +185,11 @@ class c302ModelPrototype(ParameterisedModelPrototype):
         elif isinstance(prototype_syn, GradedSynapse):
             nml_doc.graded_synapses.append(prototype_syn)
         else:
-            info = '%s conns; %s'%(n, existing_synapses)
+            info = "%s conns; %s" % (n, existing_synapses)
             del existing_synapses[prototype_syn.id]
-            raise Exception('Unknown synapse type: %s (%s)'%(prototype_syn.id, info))
+            raise Exception("Unknown synapse type: %s (%s)" % (prototype_syn.id, info))
 
         return prototype_syn
-
 
     def is_analog_conn(self, syn):
         return isinstance(syn, GradedSynapse)
