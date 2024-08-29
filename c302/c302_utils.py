@@ -8,7 +8,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 from pyneuroml import pynml
 from pyneuroml import plot as pyneuroml_plot
-from owmeta_core.bundle import Bundle
 
 import c302
 
@@ -17,7 +16,6 @@ natsort = lambda s: [int(t) if t.isdigit() else t for t in re.split(r'(\d+)', s)
 default_figsize = (6.4,4.8)
 
 def plots(a_n, info, cells, dt):
-
 
     c302.print_('Generating plots for: %s'%info)
 
@@ -455,12 +453,23 @@ def generate_conn_matrix(nml_doc, save_fig_dir=None, verbose=False, figsize=defa
 
     all_cells = sorted(all_cells)
 
+    all_neurons = []
+    all_muscles = []
+    for c in all_cells:
+        if c302.is_muscle(c):
+            all_muscles.append(c)
+        else:
+            all_neurons.append(c)
+
     try:
+        from owmeta_core.bundle import Bundle
         with Bundle('openworm/owmeta-data', version=6) as bnd:
             all_neuron_info, all_muscle_info = c302._get_cell_info(bnd, all_cells)
     except Exception as e:
-        c302.print_('Unable to connect to owmeta bundle: %s' % e)
         traceback.print_exc()
+        c302.print_('Unable to connect to the owmeta bundle: %s\n Proceeding anyway...' % e)
+        all_neuron_info, all_muscle_info = c302._get_cell_info(None, all_cells)
+
 
     '''
     if order_by_type:
@@ -478,13 +487,6 @@ def generate_conn_matrix(nml_doc, save_fig_dir=None, verbose=False, figsize=defa
         print('Swapping %s with %s'%(all_neuron_info,ordered_all_neuron_info))
         all_neuron_info = ordered_all_neuron_info'''
 
-    all_neurons = []
-    all_muscles = []
-    for c in all_cells:
-        if c302.is_muscle(c):
-            all_muscles.append(c)
-        else:
-            all_neurons.append(c)
 
 
     data_exc_n = np.zeros((len(all_neurons),len(all_neurons)))
