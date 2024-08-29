@@ -71,7 +71,7 @@ LEMS_TEMPLATE_FILE = "LEMS_c302_TEMPLATE.xml"
 
 MUSCLE_RE = re.compile(r'M([VD][LR])(\d+)')
 
-OWMETA_CACHED_DATA_FILE = 'c302/data/owmeta_cache.json'
+OWMETA_CACHED_DATA_FILE = os.path.dirname(os.path.abspath(__file__))+'/data/owmeta_cache.json'
 
 
 def print_(msg, print_it=True): # print_it=False when not verbose
@@ -463,7 +463,7 @@ def _get_cell_info(bnd, cells):
 
     if bnd is None:
         if cached_owmeta_data == None:
-            print('Loading OWMeta data from: %s'%OWMETA_CACHED_DATA_FILE)
+            print_('Loading owmeta cached data from: %s'%OWMETA_CACHED_DATA_FILE)
             with open(OWMETA_CACHED_DATA_FILE) as f:
                 cached_owmeta_data = json.load(f)
 
@@ -752,14 +752,14 @@ def generate(net_id,
     cells_vs_name = c302.backers.get_adopted_cell_names()
 
     count = 0
-    bnd_ow = None
+    
     try:
         with Bundle('openworm/owmeta-data', version=6) as bnd:
-            bnd_ow = bnd
+            all_neuron_info, all_muscle_info = _get_cell_info(bnd, set(cell_names))
     except Exception as e:
         print_('Unable to open "openworm/owmeta-data" bundle: %s' % e)
+        all_neuron_info, all_muscle_info = _get_cell_info(None, set(cell_names))
             
-    all_neuron_info, all_muscle_info = _get_cell_info(bnd_ow, set(cell_names))
 
     for cell in cell_names:
         if cells is None or cell in cells:
