@@ -51,10 +51,11 @@ jobs:
         cd c302
         mkdir examples
         python c302_IClamp.py A
-        omv list -V
+        pip install neuron
         #omv install NEURON # Need to install NEURON
         #which nrnivmodl
         #export NEURON_HOME=$RUNNER_TOOL_CACHE/Python/3.9.7/x64/
+        omv list -V
         
     - name: Run test script
       run: |
