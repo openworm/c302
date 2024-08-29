@@ -3,7 +3,7 @@ from decimal import Decimal
 from neuroml import ExpTwoSynapse, GapJunction, GradedSynapse
 
 """
-    Subject to much change & refactoring once owmeta is stable...
+    Subject to much change & refactoring...
 """
 
 

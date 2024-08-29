@@ -41,19 +41,6 @@ import json
 
 import collections
 
-try:
-    from owmeta_core import __version__ as owc_version
-    from owmeta_core.bundle import Bundle
-    from owmeta_core.context import Context
-    from owmeta import __version__ as owmeta_version
-    from owmeta.cell import Cell
-    from owmeta.neuron import Neuron
-    from owmeta.muscle import Muscle
-
-    owmeta_installed = True
-except:
-    print("owmeta not installed! Proceeding anyway...")
-    owmeta_installed = False
 
 try:
     from urllib2 import URLError  # Python 2
@@ -108,7 +95,7 @@ def get_str_from_expnotation(num):
 def get_muscle_position(muscle, data_reader="SpreadsheetDataReader"):
     if muscle == "MANAL" or muscle == "MVULVA":
         return 0, 0, 0
-    # TODO: Pull these positions from openworm/owmeta-data
+        
     pat1 = r"M([VD])([LR])(\d+)"
     pat2 = r"([VD])([LR])(\d+)"
     md = re.fullmatch(pat1, muscle)
@@ -512,24 +499,24 @@ def elem_in_coll_matches_conn(coll, conn):
 cached_owmeta_data = None
 
 
-def _get_cell_info(bnd, cells):
+def _get_cell_info(cells):
     global cached_owmeta_data
     # print('------ Getting the cell info for %s'%cells)
     all_neuron_info = collections.OrderedDict()
     all_muscle_info = collections.OrderedDict()
 
-    if bnd is None:
-        if cached_owmeta_data == None:
-            print_("Loading owmeta cached data from: %s" % OWMETA_CACHED_DATA_FILE)
-            with open(OWMETA_CACHED_DATA_FILE) as f:
-                cached_owmeta_data = json.load(f)
+    if cached_owmeta_data == None:
+        print_("Loading owmeta cached data from: %s" % OWMETA_CACHED_DATA_FILE)
+        with open(OWMETA_CACHED_DATA_FILE) as f:
+            cached_owmeta_data = json.load(f)
 
-        for cell in cells:
-            if is_muscle(cell):
-                all_muscle_info[cell] = cached_owmeta_data["muscle_info"][cell]
-            else:
-                all_neuron_info[cell] = cached_owmeta_data["neuron_info"][cell]
+    for cell in cells:
+        if is_muscle(cell):
+            all_muscle_info[cell] = cached_owmeta_data["muscle_info"][cell]
+        else:
+            all_neuron_info[cell] = cached_owmeta_data["neuron_info"][cell]
 
+    '''
     else:
         ctx = bnd(Context)(ident="http://openworm.org/data").stored
         # Go through our list and get the neuron object associated with each name.
@@ -590,6 +577,7 @@ def _get_cell_info(bnd, cells):
                 all_muscle_info[cell.name()] = info
             elif isinstance(cell, Neuron):
                 all_neuron_info[cell.name()] = info
+    '''
 
     # print('==== Returning %s; %s'%(all_neuron_info, all_muscle_info))
     return all_neuron_info, all_muscle_info
@@ -705,10 +693,6 @@ def generate(
         "\n\nParameters and setting used to generate this network:\n\n"
         + "    Data reader:                    %s\n" % data_reader
         + "    c302 version:                   %s\n" % __version__
-        + "    owmeta version:                 %s\n"
-        % ("- not installed -" if not owmeta_installed else owmeta_version)
-        + "    owmeta_core version:            %s\n"
-        % ("- not installed -" if not owmeta_installed else owc_version)
         + "    Cells:                          %s\n"
         % (cells if cells is not None else "All cells")
         + "    Cell stimulated:                %s\n"
@@ -843,12 +827,7 @@ def generate(
 
     count = 0
 
-    try:
-        with Bundle("openworm/owmeta-data", version=6) as bnd:
-            all_neuron_info, all_muscle_info = _get_cell_info(bnd, set(cell_names))
-    except Exception as e:
-        print_('Unable to open "openworm/owmeta-data" bundle: %s' % e)
-        all_neuron_info, all_muscle_info = _get_cell_info(None, set(cell_names))
+    all_neuron_info, all_muscle_info = _get_cell_info(set(cell_names))
 
     for cell in cell_names:
         if cells is None or cell in cells:
