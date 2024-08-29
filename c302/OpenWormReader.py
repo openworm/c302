@@ -5,11 +5,15 @@ from c302.NeuroMLUtilities import ConnectionInfo
 from c302.NeuroMLUtilities import analyse_connections
 from c302 import print_, MUSCLE_RE
 
-from owmeta_core.bundle import Bundle
-from owmeta_core.context import Context
-from owmeta.neuron import Neuron
-from owmeta.muscle import BodyWallMuscle
-from owmeta.worm import Worm
+try:
+    from owmeta_core.bundle import Bundle
+    from owmeta_core.context import Context
+    from owmeta.neuron import Neuron
+    from owmeta.muscle import BodyWallMuscle
+    from owmeta.worm import Worm
+except:
+    print("owmeta not installed! Cannot run OpenWormReader")
+    exit()
 
 ############################################################
 
