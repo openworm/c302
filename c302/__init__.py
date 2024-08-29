@@ -37,6 +37,8 @@ import math
 from lxml import etree
 import re
 
+import json
+
 import collections
 
 try:
@@ -68,6 +70,8 @@ __version__ = about['__version__']
 LEMS_TEMPLATE_FILE = "LEMS_c302_TEMPLATE.xml"
 
 MUSCLE_RE = re.compile(r'M([VD][LR])(\d+)')
+
+OWMETA_CACHED_DATA_FILE = 'c302/data/owmeta_cache.json'
 
 
 def print_(msg, print_it=True): # print_it=False when not verbose
@@ -449,73 +453,88 @@ def elem_in_coll_matches_conn(coll, conn):
             return True
     return False
 
+cached_owmeta_data = None
 
 def _get_cell_info(bnd, cells):
-    #print('Getting cell info for %s'%cells)
-    if bnd is None:
-        return None
+    global cached_owmeta_data
+    #print('------ Getting the cell info for %s'%cells)
     all_neuron_info = collections.OrderedDict()
     all_muscle_info = collections.OrderedDict()
-    ctx = bnd(Context)(ident="http://openworm.org/data").stored
-    # Go through our list and get the neuron object associated with each name.
-    # Store these in another list.
-    fixed_up_names = []
-    for name in cells:
-        match = is_muscle(name)
-        if match:
-            name = match.group(1) + str(int(match.group(2)))
-        fixed_up_names.append(name)
-    #fixed_up_names.remove('MANAL')
-    #fixed_up_names.remove('MVULVA')
 
-    for name in fixed_up_names:
-        cell = next(ctx(Cell).query(name=name).load(), None)
-        if cell is None:
-            #print_("No matching cell for %s" % name)
-            continue
+    if bnd is None:
+        if cached_owmeta_data == None:
+            print('Loading OWMeta data from: %s'%OWMETA_CACHED_DATA_FILE)
+            with open(OWMETA_CACHED_DATA_FILE) as f:
+                cached_owmeta_data = json.load(f)
 
-        normalized_name = cell.name()
-        short = ') %s' % normalized_name
-        color = '.5 0 0'
-        if isinstance(cell, Neuron):
-            neuron_types = cell.type()
-            if 'sensory' in neuron_types:
-                short = 'Se%s' % short
-                color = '1 .2 1'
-            if 'interneuron' in neuron_types:
-                short = 'In%s' % short
-                color = '1 0 .4'
-            if 'motor' in neuron_types:
-                short = 'Mo%s' % short
-                color = '.5 .4 1'
+        for cell in cells:
+            if is_muscle(cell):
+                all_muscle_info[cell] = cached_owmeta_data['muscle_info'][cell]
+            else:
+                all_neuron_info[cell] = cached_owmeta_data['neuron_info'][cell]
 
-            neurotransmitter = cell.neurotransmitter()
-        elif isinstance(cell, Muscle):
-            neuron_types = ()
-            neurotransmitter = ()
-            color = '0 0.6 0'
-            short = 'Mu%s' % short
-        else:
-            # At this point, we should only have Neurons and Muscles because the reader
-            # filters them out
-            raise Exception('Got an unexpected cell type')
+    else:
+        ctx = bnd(Context)(ident="http://openworm.org/data").stored
+        # Go through our list and get the neuron object associated with each name.
+        # Store these in another list.
+        fixed_up_names = []
+        for name in cells:
+            match = is_muscle(name)
+            if match:
+                name = match.group(1) + str(int(match.group(2)))
+            fixed_up_names.append(name)
+        #fixed_up_names.remove('MANAL')
+        #fixed_up_names.remove('MVULVA')
 
-        short = '(%s' % short
-        receptor = cell.receptor()
-        if 'GABA' in neurotransmitter:
-            short = '- %s' % short
-        elif len(neurotransmitter) == 0:
-            short = '? %s' % short
-        else:
-            short = '+ %s' % short
+        for name in fixed_up_names:
+            cell = next(ctx(Cell).query(name=name).load(), None)
+            if cell is None:
+                #print_("No matching cell for %s" % name)
+                continue
 
-        info = (cell, neuron_types, receptor, neurotransmitter, short, color)
+            normalized_name = cell.name()
+            short = ') %s' % normalized_name
+            color = '.5 0 0'
+            if isinstance(cell, Neuron):
+                neuron_types = cell.type()
+                if 'sensory' in neuron_types:
+                    short = 'Se%s' % short
+                    color = '1 .2 1'
+                if 'interneuron' in neuron_types:
+                    short = 'In%s' % short
+                    color = '1 0 .4'
+                if 'motor' in neuron_types:
+                    short = 'Mo%s' % short
+                    color = '.5 .4 1'
 
-        if isinstance(cell, Muscle):
-            all_muscle_info[cell.name()] = info
-        elif isinstance(cell, Neuron):
-            all_neuron_info[cell.name()] = info
+                neurotransmitter = cell.neurotransmitter()
+            elif isinstance(cell, Muscle):
+                neuron_types = ()
+                neurotransmitter = ()
+                color = '0 0.6 0'
+                short = 'Mu%s' % short
+            else:
+                # At this point, we should only have Neurons and Muscles because the reader
+                # filters them out
+                raise Exception('Got an unexpected cell type')
 
+            short = '(%s' % short
+            receptor = cell.receptor()
+            if 'GABA' in neurotransmitter:
+                short = '- %s' % short
+            elif len(neurotransmitter) == 0:
+                short = '? %s' % short
+            else:
+                short = '+ %s' % short
+
+            info = (cell, neuron_types, receptor, neurotransmitter, short, color)
+
+            if isinstance(cell, Muscle):
+                all_muscle_info[cell.name()] = info
+            elif isinstance(cell, Neuron):
+                all_neuron_info[cell.name()] = info
+
+    #print('==== Returning %s; %s'%(all_neuron_info, all_muscle_info))
     return all_neuron_info, all_muscle_info
 
 
@@ -733,13 +752,14 @@ def generate(net_id,
     cells_vs_name = c302.backers.get_adopted_cell_names()
 
     count = 0
+    bnd_ow = None
     try:
         with Bundle('openworm/owmeta-data', version=6) as bnd:
-            all_neuron_info, all_muscle_info = _get_cell_info(bnd, set(cell_names))
+            bnd_ow = bnd
     except Exception as e:
         print_('Unable to open "openworm/owmeta-data" bundle: %s' % e)
-        all_neuron_info = None
-        all_muscle_info = None
+            
+    all_neuron_info, all_muscle_info = _get_cell_info(bnd_ow, set(cell_names))
 
     for cell in cell_names:
         if cells is None or cell in cells:
@@ -1533,9 +1553,7 @@ if __name__ == '__main__':
 
                     all_info['muscle_info'][n] = (str(ami[ow_name][0]),sorted(list(ami[ow_name][1])),sorted(list(ami[ow_name][2])),sorted(list(ami[ow_name][3])),ami[ow_name][4],ami[ow_name][5])
 
-        import json
-
-        with open('c302/data/owmeta_cache.json', 'w') as fp:
+        with open(OWMETA_CACHED_DATA_FILE, 'w') as fp:
             json.dump(all_info, fp, sort_keys=True, indent=4)
 
     else:

@@ -468,8 +468,7 @@ def generate_conn_matrix(nml_doc, save_fig_dir=None, verbose=False, figsize=defa
     except Exception as e:
         traceback.print_exc()
         c302.print_('Unable to connect to the owmeta bundle: %s\n Proceeding anyway...' % e)
-        all_neuron_info = {n:('cell?','neuron_types?', 'receptor?', 'neurotransmitter?', n, 'color?') for n in all_neurons}
-        all_muscle_info = {m:('cell?','neuron_types?', 'receptor?', 'neurotransmitter?', m, 'color?') for m in all_muscles}
+        all_neuron_info, all_muscle_info = c302._get_cell_info(None, all_cells)
 
 
     '''
