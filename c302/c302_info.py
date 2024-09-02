@@ -63,7 +63,7 @@ def generate_c302_info(nml_doc, verbose=False):
             all_neurons.append(c)
 
     info = "# Information on neuron and muscles\n"
-    info += "## Generated using %s\n" % ver_info
+    info += "## Generated using c302 v%s\n" % c302.__version__
 
     info += "### Neurons (%i)\n" % (len(all_neuron_info))
     info += "<table>\n"
