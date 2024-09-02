@@ -1,12 +1,12 @@
 """
 
-    Parameters X:
-        Cells:           Single compartment, conductance based, passive cell
-        Chem Synapses:   Analogue/graded synapses; continuous transmission (voltage dependent)
-        Gap junctions:   Electrical connection; current linerly depends on difference in voltages 
-        
-    ASSESSMENT:
-        TBC...
+Parameters X:
+    Cells:           Single compartment, conductance based, passive cell
+    Chem Synapses:   Analogue/graded synapses; continuous transmission (voltage dependent)
+    Gap junctions:   Electrical connection; current linerly depends on difference in voltages
+
+ASSESSMENT:
+    TBC...
 
 """
 

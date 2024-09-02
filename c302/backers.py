@@ -1,7 +1,7 @@
 """
-    This method reads a generated list of cells vs. names as assigned by OpenWorm backers
+This method reads a generated list of cells vs. names as assigned by OpenWorm backers
 
-    This information will eventually be moved elsewhere...
+This information will eventually be moved elsewhere...
 """
 
 import os

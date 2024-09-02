@@ -95,7 +95,7 @@ def get_str_from_expnotation(num):
 def get_muscle_position(muscle, data_reader="SpreadsheetDataReader"):
     if muscle == "MANAL" or muscle == "MVULVA":
         return 0, 0, 0
-        
+
     pat1 = r"M([VD])([LR])(\d+)"
     pat2 = r"([VD])([LR])(\d+)"
     md = re.fullmatch(pat1, muscle)
@@ -516,7 +516,7 @@ def _get_cell_info(cells):
         else:
             all_neuron_info[cell] = cached_owmeta_data["neuron_info"][cell]
 
-    '''
+    """
     else:
         ctx = bnd(Context)(ident="http://openworm.org/data").stored
         # Go through our list and get the neuron object associated with each name.
@@ -577,7 +577,7 @@ def _get_cell_info(cells):
                 all_muscle_info[cell.name()] = info
             elif isinstance(cell, Neuron):
                 all_neuron_info[cell.name()] = info
-    '''
+    """
 
     # print('==== Returning %s; %s'%(all_neuron_info, all_muscle_info))
     return all_neuron_info, all_muscle_info
