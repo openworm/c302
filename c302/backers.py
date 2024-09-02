@@ -42,7 +42,7 @@ if __name__ == "__main__":
         info += "Adopted name: **" + name + "**\n\n\n"
         i = 0
         search_file = open(
-            "../CElegans/pythonScripts/c302/examples/c302_A_Full.nml", "r"
+            "../examples/c302_A_Full.nml", "r"
         )
         for line in search_file:
             i += 1
