@@ -6,12 +6,8 @@
 
 ############################################################
 
-from c302 import print_
 
-from c302.ConnectomeReader import PREFERRED_NEURON_NAMES
-from c302.ConnectomeReader import PREFERRED_MUSCLE_NAMES
 
-from c302.ConnectomeReader import ConnectionInfo
 from c302.ConnectomeReader import analyse_connections
 
 
@@ -48,7 +44,7 @@ def fract(a, b, f):
 
 
 if __name__ == "__main__":
-    from SpreadsheetDataReader import read_data, read_muscle_data
+    #from SpreadsheetDataReader import read_data, read_muscle_data
     from WormNeuroAtlasReader import read_data, read_muscle_data
 
     cells, neuron_conns = read_data(include_nonconnected_cells=True)

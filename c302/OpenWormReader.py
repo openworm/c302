@@ -1,8 +1,8 @@
 import logging
 import re
 
-from c302.NeuroMLUtilities import ConnectionInfo
-from c302.NeuroMLUtilities import analyse_connections
+from c302.ConnectomeReader import ConnectionInfo
+from c302.ConnectomeReader import analyse_connections
 from c302 import print_, MUSCLE_RE
 
 try:
@@ -11,7 +11,7 @@ try:
     from owmeta.neuron import Neuron
     from owmeta.muscle import BodyWallMuscle
     from owmeta.worm import Worm
-except:
+except Exception:
     print("owmeta not installed! Cannot run OpenWormReader")
     exit()
 
@@ -158,7 +158,7 @@ if __name__ == "__main__":
     exit()
 
     conn_map_OWR = {}
-    for c in conns:
+    for c in muscle_conns:
         conn_map_OWR[c.short().lower()] = c
 
     from c302.UpdatedSpreadsheetDataReader import read_data as read_data_usr

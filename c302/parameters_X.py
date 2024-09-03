@@ -23,7 +23,6 @@ from neuroml import SpecificCapacitance
 from neuroml import ChannelDensity
 from neuroml import SpikeThresh
 
-from neuroml import GradedSynapse
 from neuroml import GapJunction
 from neuroml import PulseGenerator
 

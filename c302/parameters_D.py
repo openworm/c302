@@ -20,9 +20,6 @@ from neuroml import Cell
 from neuroml import Morphology
 from neuroml import Point3DWithDiam
 from neuroml import Segment
-from neuroml import SegmentParent
-from neuroml import Member
-from neuroml import SegmentGroup
 from neuroml import BiophysicalProperties
 from neuroml import IntracellularProperties
 from neuroml import Resistivity

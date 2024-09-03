@@ -44,7 +44,7 @@ import collections
 
 try:
     from urllib2 import URLError  # Python 2
-except:
+except Exception:
     from urllib.error import URLError  # Python 3
 
 logging.basicConfig()

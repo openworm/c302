@@ -1,8 +1,3 @@
-import sys
-import os
-from pyneuroml import pynml
-import matplotlib.pyplot as plt
-import numpy as np
 
 import c302
 
@@ -15,14 +10,14 @@ def generate_c302_info(nml_doc, verbose=False):
     all_cells = []
 
     for cp in net.continuous_projections:
-        if not cp.presynaptic_population in cc_exc_conns.keys():
+        if cp.presynaptic_population not in cc_exc_conns.keys():
             cc_exc_conns[cp.presynaptic_population] = {}
-        if not cp.presynaptic_population in cc_inh_conns.keys():
+        if cp.presynaptic_population not in cc_inh_conns.keys():
             cc_inh_conns[cp.presynaptic_population] = {}
 
-        if not cp.presynaptic_population in all_cells:
+        if cp.presynaptic_population not in all_cells:
             all_cells.append(cp.presynaptic_population)
-        if not cp.postsynaptic_population in all_cells:
+        if cp.postsynaptic_population not in all_cells:
             all_cells.append(cp.postsynaptic_population)
 
         for c in cp.continuous_connection_instance_ws:
@@ -37,12 +32,12 @@ def generate_c302_info(nml_doc, verbose=False):
 
     gj_conns = {}
     for ep in net.electrical_projections:
-        if not ep.presynaptic_population in gj_conns.keys():
+        if ep.presynaptic_population not in gj_conns.keys():
             gj_conns[ep.presynaptic_population] = {}
 
-        if not ep.presynaptic_population in all_cells:
+        if ep.presynaptic_population not in all_cells:
             all_cells.append(ep.presynaptic_population)
-        if not ep.postsynaptic_population in all_cells:
+        if ep.postsynaptic_population not in all_cells:
             all_cells.append(ep.postsynaptic_population)
 
         for e in ep.electrical_connection_instance_ws:
