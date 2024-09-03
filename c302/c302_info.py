@@ -27,13 +27,13 @@ def generate_c302_info(nml_doc, verbose=False):
 
         for c in cp.continuous_connection_instance_ws:
             if "inh" in c.post_component:
-                cc_inh_conns[cp.presynaptic_population][
-                    cp.postsynaptic_population
-                ] = float(c.weight)
+                cc_inh_conns[cp.presynaptic_population][cp.postsynaptic_population] = (
+                    float(c.weight)
+                )
             else:
-                cc_exc_conns[cp.presynaptic_population][
-                    cp.postsynaptic_population
-                ] = float(c.weight)
+                cc_exc_conns[cp.presynaptic_population][cp.postsynaptic_population] = (
+                    float(c.weight)
+                )
 
     gj_conns = {}
     for ep in net.electrical_projections:

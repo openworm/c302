@@ -483,13 +483,13 @@ def generate_conn_matrix(
 
         for c in cp.continuous_connection_instance_ws:
             if "inh" in c.post_component:
-                cc_inh_conns[cp.presynaptic_population][
-                    cp.postsynaptic_population
-                ] = float(c.weight)
+                cc_inh_conns[cp.presynaptic_population][cp.postsynaptic_population] = (
+                    float(c.weight)
+                )
             else:
-                cc_exc_conns[cp.presynaptic_population][
-                    cp.postsynaptic_population
-                ] = float(c.weight)
+                cc_exc_conns[cp.presynaptic_population][cp.postsynaptic_population] = (
+                    float(c.weight)
+                )
 
     gj_conns = {}
     for ep in net.electrical_projections:
@@ -546,13 +546,13 @@ def generate_conn_matrix(
                 "Exc Conn %s -> %s: %s" % (pre, post, cc_exc_conns[pre][post]), verbose
             )
             if post in all_neurons:
-                data_exc_n[
-                    all_neurons.index(pre), all_neurons.index(post)
-                ] = cc_exc_conns[pre][post]
+                data_exc_n[all_neurons.index(pre), all_neurons.index(post)] = (
+                    cc_exc_conns[pre][post]
+                )
             else:
-                data_exc_m[
-                    all_neurons.index(pre), all_muscles.index(post)
-                ] = cc_exc_conns[pre][post]
+                data_exc_m[all_neurons.index(pre), all_muscles.index(post)] = (
+                    cc_exc_conns[pre][post]
+                )
             if pre in all_muscles:
                 raise Exception("Unexpected...")
 
@@ -562,13 +562,13 @@ def generate_conn_matrix(
                 "Inh Conn %s -> %s: %s" % (pre, post, cc_inh_conns[pre][post]), verbose
             )
             if post in all_neurons:
-                data_inh_n[
-                    all_neurons.index(pre), all_neurons.index(post)
-                ] = cc_inh_conns[pre][post]
+                data_inh_n[all_neurons.index(pre), all_neurons.index(post)] = (
+                    cc_inh_conns[pre][post]
+                )
             else:
-                data_inh_m[
-                    all_neurons.index(pre), all_muscles.index(post)
-                ] = cc_inh_conns[pre][post]
+                data_inh_m[all_neurons.index(pre), all_muscles.index(post)] = (
+                    cc_inh_conns[pre][post]
+                )
             if pre in all_muscles:
                 raise Exception("Unexpected...")
 
@@ -652,13 +652,13 @@ def generate_conn_matrix(
                 and post in all_neurons
             ):
                 if pre in all_neurons:
-                    data_n_m[
-                        all_neurons.index(pre), all_muscles.index(post)
-                    ] = gj_conns[pre][post]
+                    data_n_m[all_neurons.index(pre), all_muscles.index(post)] = (
+                        gj_conns[pre][post]
+                    )
                 else:
-                    data_n_m[
-                        all_muscles.index(pre), all_neurons.index(post)
-                    ] = gj_conns[pre][post]
+                    data_n_m[all_muscles.index(pre), all_neurons.index(post)] = (
+                        gj_conns[pre][post]
+                    )
                 neuron_muscle = True
             elif pre in all_muscles and post in all_muscles:
                 muscle_muscle = True
@@ -736,13 +736,17 @@ if __name__ == "__main__":
     colormap = None
 
     if "-phar" in sys.argv:
-        configs = ["c302_C0_Pharyngeal.net.nml"]
+        configs = ["c302_C1_Pharyngeal.net.nml"]
 
     elif "-osc" in sys.argv:
         configs = ["c302_C1_Oscillator.net.nml"]
 
     elif "-soc" in sys.argv:
         configs = ["c302_C1_Social.net.nml"]
+
+    elif "-syns" in sys.argv:
+        configs = ["c302_C1_Syns.net.nml"]
+        figsize = (10, 10)
 
     elif "-musc" in sys.argv:
         configs = ["c302_C1_Muscles.net.nml"]
