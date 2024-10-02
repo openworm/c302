@@ -250,6 +250,9 @@ if __name__ == "__main__":
     elif "-synsB" in sys.argv:
         run_c302("Syns", "B", "", 500, 0.05, "jNeuroML_NEURON")
 
+    elif "-synsBC" in sys.argv:
+        run_c302("Syns", "BC1", "", 500, 0.05, "jNeuroML_NEURON")
+
     elif "-synsC0" in sys.argv:
         run_c302("Syns", "C0", "", 500, 0.05, "jNeuroML_NEURON")
 
@@ -335,6 +338,8 @@ if __name__ == "__main__":
         run_c302("IClamp", "A", "", 6000, 0.05, "jNeuroML")
     elif "-iB" in sys.argv:
         run_c302("IClamp", "B", "", 6000, 0.05, "jNeuroML")
+    elif "-iBC" in sys.argv:
+        run_c302("IClamp", "BC1", "", 6000, 0.05, "jNeuroML")
     elif "-iC0" in sys.argv:
         run_c302("IClamp", "C0", "", 6000, 0.05, "jNeuroML")
     elif "-iC" in sys.argv:
