@@ -1,0 +1,6038 @@
+{
+    "comment": "Information exported from owmeta v0.12.3 (owmeta core v0.13.5)",
+    "muscle_info": {
+        "MDL01": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DL1>)",
+            [],
+            [],
+            [],
+            "? (Mu) DL1",
+            "0 0.6 0"
+        ],
+        "MDL02": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DL2>)",
+            [],
+            [],
+            [],
+            "? (Mu) DL2",
+            "0 0.6 0"
+        ],
+        "MDL03": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DL3>)",
+            [],
+            [],
+            [],
+            "? (Mu) DL3",
+            "0 0.6 0"
+        ],
+        "MDL04": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DL4>)",
+            [],
+            [],
+            [],
+            "? (Mu) DL4",
+            "0 0.6 0"
+        ],
+        "MDL05": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DL5>)",
+            [],
+            [],
+            [],
+            "? (Mu) DL5",
+            "0 0.6 0"
+        ],
+        "MDL06": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DL6>)",
+            [],
+            [],
+            [],
+            "? (Mu) DL6",
+            "0 0.6 0"
+        ],
+        "MDL07": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DL7>)",
+            [],
+            [],
+            [],
+            "? (Mu) DL7",
+            "0 0.6 0"
+        ],
+        "MDL08": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DL8>)",
+            [],
+            [],
+            [],
+            "? (Mu) DL8",
+            "0 0.6 0"
+        ],
+        "MDL09": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DL9>)",
+            [],
+            [],
+            [],
+            "? (Mu) DL9",
+            "0 0.6 0"
+        ],
+        "MDL10": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DL10>)",
+            [],
+            [],
+            [],
+            "? (Mu) DL10",
+            "0 0.6 0"
+        ],
+        "MDL11": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DL11>)",
+            [],
+            [],
+            [],
+            "? (Mu) DL11",
+            "0 0.6 0"
+        ],
+        "MDL12": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DL12>)",
+            [],
+            [],
+            [],
+            "? (Mu) DL12",
+            "0 0.6 0"
+        ],
+        "MDL13": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DL13>)",
+            [],
+            [],
+            [],
+            "? (Mu) DL13",
+            "0 0.6 0"
+        ],
+        "MDL14": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DL14>)",
+            [],
+            [],
+            [],
+            "? (Mu) DL14",
+            "0 0.6 0"
+        ],
+        "MDL15": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DL15>)",
+            [],
+            [],
+            [],
+            "? (Mu) DL15",
+            "0 0.6 0"
+        ],
+        "MDL16": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DL16>)",
+            [],
+            [],
+            [],
+            "? (Mu) DL16",
+            "0 0.6 0"
+        ],
+        "MDL17": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DL17>)",
+            [],
+            [],
+            [],
+            "? (Mu) DL17",
+            "0 0.6 0"
+        ],
+        "MDL18": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DL18>)",
+            [],
+            [],
+            [],
+            "? (Mu) DL18",
+            "0 0.6 0"
+        ],
+        "MDL19": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DL19>)",
+            [],
+            [],
+            [],
+            "? (Mu) DL19",
+            "0 0.6 0"
+        ],
+        "MDL20": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DL20>)",
+            [],
+            [],
+            [],
+            "? (Mu) DL20",
+            "0 0.6 0"
+        ],
+        "MDL21": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DL21>)",
+            [],
+            [],
+            [],
+            "? (Mu) DL21",
+            "0 0.6 0"
+        ],
+        "MDL22": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DL22>)",
+            [],
+            [],
+            [],
+            "? (Mu) DL22",
+            "0 0.6 0"
+        ],
+        "MDL23": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DL23>)",
+            [],
+            [],
+            [],
+            "? (Mu) DL23",
+            "0 0.6 0"
+        ],
+        "MDL24": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DL24>)",
+            [],
+            [],
+            [],
+            "? (Mu) DL24",
+            "0 0.6 0"
+        ],
+        "MDR01": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DR1>)",
+            [],
+            [],
+            [],
+            "? (Mu) DR1",
+            "0 0.6 0"
+        ],
+        "MDR02": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DR2>)",
+            [],
+            [],
+            [],
+            "? (Mu) DR2",
+            "0 0.6 0"
+        ],
+        "MDR03": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DR3>)",
+            [],
+            [],
+            [],
+            "? (Mu) DR3",
+            "0 0.6 0"
+        ],
+        "MDR04": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DR4>)",
+            [],
+            [],
+            [],
+            "? (Mu) DR4",
+            "0 0.6 0"
+        ],
+        "MDR05": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DR5>)",
+            [],
+            [],
+            [],
+            "? (Mu) DR5",
+            "0 0.6 0"
+        ],
+        "MDR06": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DR6>)",
+            [],
+            [],
+            [],
+            "? (Mu) DR6",
+            "0 0.6 0"
+        ],
+        "MDR07": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DR7>)",
+            [],
+            [],
+            [],
+            "? (Mu) DR7",
+            "0 0.6 0"
+        ],
+        "MDR08": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DR8>)",
+            [],
+            [],
+            [],
+            "? (Mu) DR8",
+            "0 0.6 0"
+        ],
+        "MDR09": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DR9>)",
+            [],
+            [],
+            [],
+            "? (Mu) DR9",
+            "0 0.6 0"
+        ],
+        "MDR10": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DR10>)",
+            [],
+            [],
+            [],
+            "? (Mu) DR10",
+            "0 0.6 0"
+        ],
+        "MDR11": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DR11>)",
+            [],
+            [],
+            [],
+            "? (Mu) DR11",
+            "0 0.6 0"
+        ],
+        "MDR12": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DR12>)",
+            [],
+            [],
+            [],
+            "? (Mu) DR12",
+            "0 0.6 0"
+        ],
+        "MDR13": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DR13>)",
+            [],
+            [],
+            [],
+            "? (Mu) DR13",
+            "0 0.6 0"
+        ],
+        "MDR14": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DR14>)",
+            [],
+            [],
+            [],
+            "? (Mu) DR14",
+            "0 0.6 0"
+        ],
+        "MDR15": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DR15>)",
+            [],
+            [],
+            [],
+            "? (Mu) DR15",
+            "0 0.6 0"
+        ],
+        "MDR16": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DR16>)",
+            [],
+            [],
+            [],
+            "? (Mu) DR16",
+            "0 0.6 0"
+        ],
+        "MDR17": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DR17>)",
+            [],
+            [],
+            [],
+            "? (Mu) DR17",
+            "0 0.6 0"
+        ],
+        "MDR18": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DR18>)",
+            [],
+            [],
+            [],
+            "? (Mu) DR18",
+            "0 0.6 0"
+        ],
+        "MDR19": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DR19>)",
+            [],
+            [],
+            [],
+            "? (Mu) DR19",
+            "0 0.6 0"
+        ],
+        "MDR20": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DR20>)",
+            [],
+            [],
+            [],
+            "? (Mu) DR20",
+            "0 0.6 0"
+        ],
+        "MDR21": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DR21>)",
+            [],
+            [],
+            [],
+            "? (Mu) DR21",
+            "0 0.6 0"
+        ],
+        "MDR22": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DR22>)",
+            [],
+            [],
+            [],
+            "? (Mu) DR22",
+            "0 0.6 0"
+        ],
+        "MDR23": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DR23>)",
+            [],
+            [],
+            [],
+            "? (Mu) DR23",
+            "0 0.6 0"
+        ],
+        "MDR24": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#DR24>)",
+            [],
+            [],
+            [],
+            "? (Mu) DR24",
+            "0 0.6 0"
+        ],
+        "MVL01": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VL1>)",
+            [],
+            [],
+            [],
+            "? (Mu) VL1",
+            "0 0.6 0"
+        ],
+        "MVL02": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VL2>)",
+            [],
+            [],
+            [],
+            "? (Mu) VL2",
+            "0 0.6 0"
+        ],
+        "MVL03": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VL3>)",
+            [],
+            [],
+            [],
+            "? (Mu) VL3",
+            "0 0.6 0"
+        ],
+        "MVL04": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VL4>)",
+            [],
+            [],
+            [],
+            "? (Mu) VL4",
+            "0 0.6 0"
+        ],
+        "MVL05": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VL5>)",
+            [],
+            [],
+            [],
+            "? (Mu) VL5",
+            "0 0.6 0"
+        ],
+        "MVL06": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VL6>)",
+            [],
+            [],
+            [],
+            "? (Mu) VL6",
+            "0 0.6 0"
+        ],
+        "MVL07": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VL7>)",
+            [],
+            [],
+            [],
+            "? (Mu) VL7",
+            "0 0.6 0"
+        ],
+        "MVL08": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VL8>)",
+            [],
+            [],
+            [],
+            "? (Mu) VL8",
+            "0 0.6 0"
+        ],
+        "MVL09": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VL9>)",
+            [],
+            [],
+            [],
+            "? (Mu) VL9",
+            "0 0.6 0"
+        ],
+        "MVL10": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VL10>)",
+            [],
+            [],
+            [],
+            "? (Mu) VL10",
+            "0 0.6 0"
+        ],
+        "MVL11": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VL11>)",
+            [],
+            [],
+            [],
+            "? (Mu) VL11",
+            "0 0.6 0"
+        ],
+        "MVL12": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VL12>)",
+            [],
+            [],
+            [],
+            "? (Mu) VL12",
+            "0 0.6 0"
+        ],
+        "MVL13": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VL13>)",
+            [],
+            [],
+            [],
+            "? (Mu) VL13",
+            "0 0.6 0"
+        ],
+        "MVL14": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VL14>)",
+            [],
+            [],
+            [],
+            "? (Mu) VL14",
+            "0 0.6 0"
+        ],
+        "MVL15": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VL15>)",
+            [],
+            [],
+            [],
+            "? (Mu) VL15",
+            "0 0.6 0"
+        ],
+        "MVL16": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VL16>)",
+            [],
+            [],
+            [],
+            "? (Mu) VL16",
+            "0 0.6 0"
+        ],
+        "MVL17": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VL17>)",
+            [],
+            [],
+            [],
+            "? (Mu) VL17",
+            "0 0.6 0"
+        ],
+        "MVL18": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VL18>)",
+            [],
+            [],
+            [],
+            "? (Mu) VL18",
+            "0 0.6 0"
+        ],
+        "MVL19": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VL19>)",
+            [],
+            [],
+            [],
+            "? (Mu) VL19",
+            "0 0.6 0"
+        ],
+        "MVL20": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VL20>)",
+            [],
+            [],
+            [],
+            "? (Mu) VL20",
+            "0 0.6 0"
+        ],
+        "MVL21": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VL21>)",
+            [],
+            [],
+            [],
+            "? (Mu) VL21",
+            "0 0.6 0"
+        ],
+        "MVL22": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VL22>)",
+            [],
+            [],
+            [],
+            "? (Mu) VL22",
+            "0 0.6 0"
+        ],
+        "MVL23": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VL23>)",
+            [],
+            [],
+            [],
+            "? (Mu) VL23",
+            "0 0.6 0"
+        ],
+        "MVR01": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VR1>)",
+            [],
+            [],
+            [],
+            "? (Mu) VR1",
+            "0 0.6 0"
+        ],
+        "MVR02": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VR2>)",
+            [],
+            [],
+            [],
+            "? (Mu) VR2",
+            "0 0.6 0"
+        ],
+        "MVR03": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VR3>)",
+            [],
+            [],
+            [],
+            "? (Mu) VR3",
+            "0 0.6 0"
+        ],
+        "MVR04": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VR4>)",
+            [],
+            [],
+            [],
+            "? (Mu) VR4",
+            "0 0.6 0"
+        ],
+        "MVR05": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VR5>)",
+            [],
+            [],
+            [],
+            "? (Mu) VR5",
+            "0 0.6 0"
+        ],
+        "MVR06": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VR6>)",
+            [],
+            [],
+            [],
+            "? (Mu) VR6",
+            "0 0.6 0"
+        ],
+        "MVR07": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VR7>)",
+            [],
+            [],
+            [],
+            "? (Mu) VR7",
+            "0 0.6 0"
+        ],
+        "MVR08": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VR8>)",
+            [],
+            [],
+            [],
+            "? (Mu) VR8",
+            "0 0.6 0"
+        ],
+        "MVR09": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VR9>)",
+            [],
+            [],
+            [],
+            "? (Mu) VR9",
+            "0 0.6 0"
+        ],
+        "MVR10": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VR10>)",
+            [],
+            [],
+            [],
+            "? (Mu) VR10",
+            "0 0.6 0"
+        ],
+        "MVR11": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VR11>)",
+            [],
+            [],
+            [],
+            "? (Mu) VR11",
+            "0 0.6 0"
+        ],
+        "MVR12": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VR12>)",
+            [],
+            [],
+            [],
+            "? (Mu) VR12",
+            "0 0.6 0"
+        ],
+        "MVR13": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VR13>)",
+            [],
+            [],
+            [],
+            "? (Mu) VR13",
+            "0 0.6 0"
+        ],
+        "MVR14": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VR14>)",
+            [],
+            [],
+            [],
+            "? (Mu) VR14",
+            "0 0.6 0"
+        ],
+        "MVR15": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VR15>)",
+            [],
+            [],
+            [],
+            "? (Mu) VR15",
+            "0 0.6 0"
+        ],
+        "MVR16": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VR16>)",
+            [],
+            [],
+            [],
+            "? (Mu) VR16",
+            "0 0.6 0"
+        ],
+        "MVR17": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VR17>)",
+            [],
+            [],
+            [],
+            "? (Mu) VR17",
+            "0 0.6 0"
+        ],
+        "MVR18": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VR18>)",
+            [],
+            [],
+            [],
+            "? (Mu) VR18",
+            "0 0.6 0"
+        ],
+        "MVR19": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VR19>)",
+            [],
+            [],
+            [],
+            "? (Mu) VR19",
+            "0 0.6 0"
+        ],
+        "MVR20": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VR20>)",
+            [],
+            [],
+            [],
+            "? (Mu) VR20",
+            "0 0.6 0"
+        ],
+        "MVR21": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VR21>)",
+            [],
+            [],
+            [],
+            "? (Mu) VR21",
+            "0 0.6 0"
+        ],
+        "MVR22": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VR22>)",
+            [],
+            [],
+            [],
+            "? (Mu) VR22",
+            "0 0.6 0"
+        ],
+        "MVR23": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VR23>)",
+            [],
+            [],
+            [],
+            "? (Mu) VR23",
+            "0 0.6 0"
+        ],
+        "MVR24": [
+            "BodyWallMuscle(<http://data.openworm.org/sci/bio/BodyWallMuscle#VR24>)",
+            [],
+            [],
+            [],
+            "? (Mu) VR24",
+            "0 0.6 0"
+        ]
+    },
+    "neuron_info": {
+        "ADAL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#ADAL>)",
+            [
+                "interneuron"
+            ],
+            [],
+            [
+                "Glutamate"
+            ],
+            "+ (In) ADAL",
+            "1 0 .4"
+        ],
+        "ADAR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#ADAR>)",
+            [
+                "interneuron"
+            ],
+            [],
+            [
+                "Glutamate"
+            ],
+            "+ (In) ADAR",
+            "1 0 .4"
+        ],
+        "ADEL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#ADEL>)",
+            [
+                "sensory"
+            ],
+            [
+                "ACR-16",
+                "DOP-2",
+                "EXP-1",
+                "OCTR-1",
+                "TRP-4",
+                "TYRA-3"
+            ],
+            [
+                "Dopamine"
+            ],
+            "+ (Se) ADEL",
+            "1 .2 1"
+        ],
+        "ADER": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#ADER>)",
+            [
+                "sensory"
+            ],
+            [
+                "ACR-16",
+                "DOP-2",
+                "EXP-1",
+                "OCTR-1",
+                "TRP-4",
+                "TYRA-3"
+            ],
+            [
+                "Dopamine"
+            ],
+            "+ (Se) ADER",
+            "1 .2 1"
+        ],
+        "ADFL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#ADFL>)",
+            [
+                "sensory"
+            ],
+            [
+                "MGL-3",
+                "NPR-2",
+                "NPR-5",
+                "NTR-1",
+                "NTR-2",
+                "OCR-2",
+                "OSM-9",
+                "SRB-6",
+                "SRD-1",
+                "TMC-1"
+            ],
+            [
+                "Serotonin"
+            ],
+            "+ (Se) ADFL",
+            "1 .2 1"
+        ],
+        "ADFR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#ADFR>)",
+            [
+                "sensory"
+            ],
+            [
+                "MGL-3",
+                "NPR-2",
+                "NPR-5",
+                "NTR-1",
+                "NTR-2",
+                "OCR-2",
+                "OSM-9",
+                "SRB-6",
+                "SRD-1",
+                "TMC-1"
+            ],
+            [
+                "Serotonin"
+            ],
+            "+ (Se) ADFR",
+            "1 .2 1"
+        ],
+        "ADLL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#ADLL>)",
+            [
+                "sensory"
+            ],
+            [
+                "GCY-21",
+                "NTR-1",
+                "NTR-2",
+                "OCR-1",
+                "OCR-2",
+                "OSM-9",
+                "SER-6",
+                "SRB-6",
+                "SRE-1",
+                "SRH-132",
+                "SRH-220",
+                "SRI-51",
+                "SRO-1",
+                "TMC-1",
+                "TYRA-3"
+            ],
+            [],
+            "? (Se) ADLL",
+            "1 .2 1"
+        ],
+        "ADLR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#ADLR>)",
+            [
+                "sensory"
+            ],
+            [
+                "GCY-21",
+                "NTR-1",
+                "NTR-2",
+                "OCR-1",
+                "OCR-2",
+                "OSM-9",
+                "SER-6",
+                "SRB-6",
+                "SRE-1",
+                "SRH-132",
+                "SRH-220",
+                "SRI-51",
+                "SRO-1",
+                "TMC-1",
+                "TYRA-3"
+            ],
+            [],
+            "? (Se) ADLR",
+            "1 .2 1"
+        ],
+        "AFDL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AFDL>)",
+            [
+                "sensory"
+            ],
+            [
+                "GCY-18",
+                "GCY-23",
+                "GCY-29",
+                "GCY-8",
+                "TMC-1",
+                "TYRA-3"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) AFDL",
+            "1 .2 1"
+        ],
+        "AFDR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AFDR>)",
+            [
+                "sensory"
+            ],
+            [
+                "GCY-18",
+                "GCY-23",
+                "GCY-29",
+                "GCY-8",
+                "TMC-1",
+                "TYRA-3"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) AFDR",
+            "1 .2 1"
+        ],
+        "AIAL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AIAL>)",
+            [
+                "interneuron"
+            ],
+            [
+                "GCY-28",
+                "GLC-3",
+                "GLR-2",
+                "MGL-1",
+                "MOD-1",
+                "NPR-11",
+                "NPR-5",
+                "NTR-2",
+                "SCD-2",
+                "SRA-11"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (In) AIAL",
+            "1 0 .4"
+        ],
+        "AIAR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AIAR>)",
+            [
+                "interneuron"
+            ],
+            [
+                "GCY-28",
+                "GLC-3",
+                "GLR-2",
+                "MGL-1",
+                "MOD-1",
+                "NPR-11",
+                "NPR-5",
+                "NTR-2",
+                "SCD-2",
+                "SRA-11"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (In) AIAR",
+            "1 0 .4"
+        ],
+        "AIBL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AIBL>)",
+            [
+                "interneuron"
+            ],
+            [
+                "GGR-1",
+                "GLR-1",
+                "GLR-2",
+                "GLR-5",
+                "MGL-2",
+                "MOD-1",
+                "SER-4"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (In) AIBL",
+            "1 0 .4"
+        ],
+        "AIBR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AIBR>)",
+            [
+                "interneuron"
+            ],
+            [
+                "GGR-1",
+                "GLR-1",
+                "GLR-2",
+                "GLR-5",
+                "MGL-2",
+                "MOD-1",
+                "SER-1",
+                "SER-4"
+            ],
+            [],
+            "? (In) AIBR",
+            "1 0 .4"
+        ],
+        "AIML": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AIML>)",
+            [
+                "interneuron"
+            ],
+            [
+                "GCY-18",
+                "LGC-53",
+                "TYRA-3"
+            ],
+            [
+                "Glutamate",
+                "Serotonin"
+            ],
+            "+ (In) AIML",
+            "1 0 .4"
+        ],
+        "AIMR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AIMR>)",
+            [
+                "interneuron"
+            ],
+            [
+                "GCY-18",
+                "LGC-53",
+                "TYRA-3"
+            ],
+            [
+                "Glutamate",
+                "Serotonin"
+            ],
+            "+ (In) AIMR",
+            "1 0 .4"
+        ],
+        "AINL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AINL>)",
+            [
+                "interneuron"
+            ],
+            [],
+            [
+                "Acetylcholine"
+            ],
+            "+ (In) AINL",
+            "1 0 .4"
+        ],
+        "AINR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AINR>)",
+            [
+                "interneuron"
+            ],
+            [],
+            [
+                "Acetylcholine"
+            ],
+            "+ (In) AINR",
+            "1 0 .4"
+        ],
+        "AIYL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AIYL>)",
+            [
+                "interneuron"
+            ],
+            [
+                "ACR-14",
+                "C50F7.1",
+                "CKR-2",
+                "GAR-2",
+                "GCY-1",
+                "GLC-3",
+                "LGC-38",
+                "MGL-1",
+                "MOD-1",
+                "NPR-11",
+                "NPR-14",
+                "OCTR-1",
+                "SER-2",
+                "SRA-11"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (In) AIYL",
+            "1 0 .4"
+        ],
+        "AIYR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AIYR>)",
+            [
+                "interneuron"
+            ],
+            [
+                "ACR-14",
+                "C50F7.1",
+                "CKR-2",
+                "GAR-2",
+                "GCY-1",
+                "GLC-3",
+                "LGC-38",
+                "MGL-1",
+                "MOD-1",
+                "NPR-11",
+                "NPR-14",
+                "OCTR-1",
+                "SER-2",
+                "SRA-11"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (In) AIYR",
+            "1 0 .4"
+        ],
+        "AIZL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AIZL>)",
+            [
+                "interneuron"
+            ],
+            [
+                "MOD-1",
+                "NPR-2",
+                "SER-2"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (In) AIZL",
+            "1 0 .4"
+        ],
+        "AIZR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AIZR>)",
+            [
+                "interneuron"
+            ],
+            [
+                "MOD-1",
+                "NPR-2",
+                "SER-2"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (In) AIZR",
+            "1 0 .4"
+        ],
+        "ALA": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#ALA>)",
+            [
+                "interneuron"
+            ],
+            [
+                "ACR-13",
+                "ACR-4",
+                "SRA-10"
+            ],
+            [],
+            "? (In) ALA",
+            "1 0 .4"
+        ],
+        "ALML": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#ALML>)",
+            [
+                "sensory"
+            ],
+            [
+                "ASIC-1",
+                "DEG-3",
+                "DEGT-1",
+                "DEL-1",
+                "DES-2",
+                "DOP-1",
+                "GAB-1",
+                "GLR-8",
+                "LGC-37",
+                "LGC-55",
+                "MEC-10",
+                "MEC-2",
+                "MEC-4",
+                "MEC-6",
+                "MEC-9",
+                "PDFR-1",
+                "STR-33",
+                "TYRA-2"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) ALML",
+            "1 .2 1"
+        ],
+        "ALMR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#ALMR>)",
+            [
+                "sensory"
+            ],
+            [
+                "ASIC-1",
+                "DEG-3",
+                "DEGT-1",
+                "DEL-1",
+                "DES-2",
+                "DOP-1",
+                "GAB-1",
+                "GLR-8",
+                "LGC-37",
+                "LGC-55",
+                "MEC-10",
+                "MEC-2",
+                "MEC-4",
+                "MEC-6",
+                "MEC-9",
+                "PDFR-1",
+                "STR-33",
+                "TYRA-2"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) ALMR",
+            "1 .2 1"
+        ],
+        "ALNL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#ALNL>)",
+            [
+                "sensory"
+            ],
+            [
+                "DOP-1",
+                "LGC-55",
+                "SER-2"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Se) ALNL",
+            "1 .2 1"
+        ],
+        "ALNR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#ALNR>)",
+            [
+                "sensory"
+            ],
+            [
+                "DOP-1",
+                "LGC-55",
+                "SER-2"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Se) ALNR",
+            "1 .2 1"
+        ],
+        "AQR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AQR>)",
+            [
+                "sensory"
+            ],
+            [
+                "GCY-25",
+                "GCY-32",
+                "GCY-34",
+                "GCY-35",
+                "GCY-36",
+                "GCY-37",
+                "NLP-37",
+                "NPR-1"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) AQR",
+            "1 .2 1"
+        ],
+        "AS1": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AS1>)",
+            [
+                "motor"
+            ],
+            [
+                "ACR-14",
+                "ACR-15",
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "LGC-46",
+                "NPR-3",
+                "UNC-63"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) AS1",
+            ".5 .4 1"
+        ],
+        "AS10": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AS10>)",
+            [
+                "motor"
+            ],
+            [
+                "ACR-14",
+                "ACR-15",
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "LGC-46",
+                "NPR-3",
+                "UNC-63"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) AS10",
+            ".5 .4 1"
+        ],
+        "AS11": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AS11>)",
+            [
+                "motor"
+            ],
+            [
+                "ACR-14",
+                "ACR-15",
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "LGC-46",
+                "NPR-3",
+                "UNC-63"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) AS11",
+            ".5 .4 1"
+        ],
+        "AS2": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AS2>)",
+            [
+                "motor"
+            ],
+            [
+                "ACR-14",
+                "ACR-15",
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "LGC-46",
+                "NPR-3",
+                "UNC-63"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) AS2",
+            ".5 .4 1"
+        ],
+        "AS3": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AS3>)",
+            [
+                "motor"
+            ],
+            [
+                "ACR-14",
+                "ACR-15",
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "LGC-46",
+                "NPR-3",
+                "UNC-63"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) AS3",
+            ".5 .4 1"
+        ],
+        "AS4": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AS4>)",
+            [
+                "motor"
+            ],
+            [
+                "ACR-14",
+                "ACR-15",
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "LGC-46",
+                "NPR-3",
+                "UNC-63"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) AS4",
+            ".5 .4 1"
+        ],
+        "AS5": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AS5>)",
+            [
+                "motor"
+            ],
+            [
+                "ACR-14",
+                "ACR-15",
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "LGC-46",
+                "NPR-3",
+                "UNC-63"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) AS5",
+            ".5 .4 1"
+        ],
+        "AS6": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AS6>)",
+            [
+                "motor"
+            ],
+            [
+                "ACR-14",
+                "ACR-15",
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "LGC-46",
+                "NPR-3",
+                "UNC-63"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) AS6",
+            ".5 .4 1"
+        ],
+        "AS7": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AS7>)",
+            [
+                "motor"
+            ],
+            [
+                "ACR-14",
+                "ACR-15",
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "LGC-46",
+                "NPR-3",
+                "UNC-63"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) AS7",
+            ".5 .4 1"
+        ],
+        "AS8": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AS8>)",
+            [
+                "motor"
+            ],
+            [
+                "ACR-14",
+                "ACR-15",
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "LGC-46",
+                "NPR-3",
+                "UNC-63"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) AS8",
+            ".5 .4 1"
+        ],
+        "AS9": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AS9>)",
+            [
+                "motor"
+            ],
+            [
+                "ACR-14",
+                "ACR-15",
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "LGC-46",
+                "NPR-3",
+                "UNC-63"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) AS9",
+            ".5 .4 1"
+        ],
+        "ASEL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#ASEL>)",
+            [
+                "sensory"
+            ],
+            [
+                "DEL-3",
+                "DEL-4",
+                "DOP-3",
+                "DOP-5",
+                "GCY-14",
+                "GCY-19",
+                "GCY-20",
+                "GCY-29",
+                "GCY-6",
+                "GCY-7",
+                "MGL-3",
+                "NPR-1",
+                "NPR-15",
+                "NPR-5",
+                "NTR-1",
+                "OSM-9",
+                "SRAB-14",
+                "SRD-33",
+                "SRG-30",
+                "SRX-76",
+                "TMC-1",
+                "TRPA-2",
+                "TYRA-2"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) ASEL",
+            "1 .2 1"
+        ],
+        "ASER": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#ASER>)",
+            [
+                "sensory"
+            ],
+            [
+                "DAF-2",
+                "DEL-3",
+                "DEL-4",
+                "DOP-3",
+                "DOP-5",
+                "GCY-1",
+                "GCY-19",
+                "GCY-22",
+                "GCY-29",
+                "GCY-3",
+                "GCY-4",
+                "GCY-5",
+                "MGL-3",
+                "NPR-1",
+                "NPR-15",
+                "NPR-5",
+                "NTR-1",
+                "OSM-9",
+                "SRAB-14",
+                "SRD-33",
+                "SRG-30",
+                "SRX-76",
+                "TMC-1",
+                "TRP-2",
+                "TRPA-2",
+                "TYRA-2"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) ASER",
+            "1 .2 1"
+        ],
+        "ASGL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#ASGL>)",
+            [
+                "sensory"
+            ],
+            [
+                "DOP-4",
+                "GCY-15",
+                "GCY-21",
+                "NPR-1",
+                "NPR-15",
+                "NPR-5",
+                "OSM-9",
+                "TYRA-2"
+            ],
+            [
+                "Glutamate",
+                "Serotonin"
+            ],
+            "+ (Se) ASGL",
+            "1 .2 1"
+        ],
+        "ASGR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#ASGR>)",
+            [
+                "sensory"
+            ],
+            [
+                "DOP-4",
+                "GCY-15",
+                "GCY-21",
+                "NPR-1",
+                "NPR-15",
+                "NPR-5",
+                "OSM-9",
+                "TYRA-2"
+            ],
+            [
+                "Glutamate",
+                "Serotonin"
+            ],
+            "+ (Se) ASGR",
+            "1 .2 1"
+        ],
+        "ASHL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#ASHL>)",
+            [
+                "sensory"
+            ],
+            [
+                "DCAR-1",
+                "DOP-4",
+                "NPR-1",
+                "NPR-2",
+                "NTR-1",
+                "NTR-2",
+                "OCR-2",
+                "OCTR-1",
+                "OSM-9",
+                "SER-3",
+                "SER-5",
+                "SRA-6",
+                "SRB-6",
+                "TMC-1",
+                "TRPA-1",
+                "TYRA-2",
+                "UNC-8"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) ASHL",
+            "1 .2 1"
+        ],
+        "ASHR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#ASHR>)",
+            [
+                "sensory"
+            ],
+            [
+                "DCAR-1",
+                "DOP-4",
+                "NPR-1",
+                "NPR-2",
+                "NTR-1",
+                "NTR-2",
+                "OCR-2",
+                "OCTR-1",
+                "OSM-9",
+                "SER-3",
+                "SER-5",
+                "SRA-6",
+                "SRB-6",
+                "TMC-1",
+                "TRPA-1",
+                "TYRA-2",
+                "UNC-8"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) ASHR",
+            "1 .2 1"
+        ],
+        "ASIL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#ASIL>)",
+            [
+                "sensory"
+            ],
+            [
+                "DAF-11",
+                "DAF-37",
+                "DAF-38",
+                "DCAR-1",
+                "GCY-1",
+                "GCY-2",
+                "GCY-27",
+                "GCY-3",
+                "NPR-15",
+                "NPR-17",
+                "NPR-5",
+                "OCTR-1",
+                "SER-6",
+                "SRD-1",
+                "STR-2",
+                "STR-3",
+                "TYRA-2"
+            ],
+            [],
+            "? (Se) ASIL",
+            "1 .2 1"
+        ],
+        "ASIR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#ASIR>)",
+            [
+                "sensory"
+            ],
+            [
+                "DAF-11",
+                "DAF-37",
+                "DAF-38",
+                "DCAR-1",
+                "GCY-1",
+                "GCY-2",
+                "GCY-27",
+                "GCY-3",
+                "NPR-15",
+                "NPR-17",
+                "NPR-5",
+                "OCTR-1",
+                "SER-6",
+                "SRD-1",
+                "STR-2",
+                "STR-3",
+                "TYRA-2"
+            ],
+            [],
+            "? (Se) ASIR",
+            "1 .2 1"
+        ],
+        "ASJL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#ASJL>)",
+            [
+                "sensory"
+            ],
+            [
+                "DAF-11",
+                "NPR-5",
+                "OSM-9",
+                "SRE-1"
+            ],
+            [],
+            "? (Se) ASJL",
+            "1 .2 1"
+        ],
+        "ASJR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#ASJR>)",
+            [
+                "sensory"
+            ],
+            [
+                "DAF-11",
+                "NPR-5",
+                "OSM-9",
+                "SRE-1"
+            ],
+            [],
+            "? (Se) ASJR",
+            "1 .2 1"
+        ],
+        "ASKL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#ASKL>)",
+            [
+                "sensory"
+            ],
+            [
+                "DAF-11",
+                "DOP-3",
+                "NPR-5",
+                "OSM-9",
+                "SRA-7",
+                "SRA-9",
+                "SRG-2",
+                "SRG-8",
+                "TYRA-3"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) ASKL",
+            "1 .2 1"
+        ],
+        "ASKR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#ASKR>)",
+            [
+                "sensory"
+            ],
+            [
+                "DAF-11",
+                "DOP-3",
+                "NPR-5",
+                "OSM-9",
+                "SRA-7",
+                "SRA-9",
+                "SRG-2",
+                "SRG-8",
+                "TYRA-3"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) ASKR",
+            "1 .2 1"
+        ],
+        "AUAL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AUAL>)",
+            [
+                "interneuron"
+            ],
+            [
+                "DOP-1",
+                "GLR-4",
+                "NPR-1",
+                "NPR-5",
+                "SER-2",
+                "TYRA-3"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (In) AUAL",
+            "1 0 .4"
+        ],
+        "AUAR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AUAR>)",
+            [
+                "interneuron"
+            ],
+            [
+                "DOP-1",
+                "GLR-4",
+                "NPR-1",
+                "NPR-5",
+                "SER-2",
+                "TYRA-3"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (In) AUAR",
+            "1 0 .4"
+        ],
+        "AVAL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AVAL>)",
+            [
+                "interneuron"
+            ],
+            [
+                "GGR-3",
+                "GLR-1",
+                "GLR-2",
+                "GLR-4",
+                "GLR-5",
+                "NMR-1",
+                "NMR-2",
+                "NPR-4",
+                "UNC-8"
+            ],
+            [],
+            "? (In) AVAL",
+            "1 0 .4"
+        ],
+        "AVAR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AVAR>)",
+            [
+                "interneuron"
+            ],
+            [
+                "GGR-3",
+                "GLR-1",
+                "GLR-2",
+                "GLR-4",
+                "GLR-5",
+                "NMR-1",
+                "NMR-2",
+                "NPR-4",
+                "UNC-8"
+            ],
+            [],
+            "? (In) AVAR",
+            "1 0 .4"
+        ],
+        "AVBL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AVBL>)",
+            [
+                "interneuron"
+            ],
+            [
+                "GGR-3",
+                "GLR-1",
+                "GLR-5",
+                "LGC-55",
+                "SRA-11",
+                "UNC-8"
+            ],
+            [],
+            "? (In) AVBL",
+            "1 0 .4"
+        ],
+        "AVBR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AVBR>)",
+            [
+                "interneuron"
+            ],
+            [
+                "GGR-3",
+                "GLR-1",
+                "GLR-5",
+                "LGC-55",
+                "SRA-11",
+                "UNC-8"
+            ],
+            [],
+            "? (In) AVBR",
+            "1 0 .4"
+        ],
+        "AVDL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AVDL>)",
+            [
+                "interneuron"
+            ],
+            [
+                "GLR-1",
+                "GLR-2",
+                "GLR-5",
+                "NMR-1",
+                "NMR-2",
+                "PDFR-1",
+                "UNC-8"
+            ],
+            [],
+            "? (In) AVDL",
+            "1 0 .4"
+        ],
+        "AVDR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AVDR>)",
+            [
+                "interneuron"
+            ],
+            [
+                "GLR-1",
+                "GLR-2",
+                "GLR-5",
+                "NMR-1",
+                "NMR-2",
+                "PDFR-1",
+                "UNC-8"
+            ],
+            [],
+            "? (In) AVDR",
+            "1 0 .4"
+        ],
+        "AVEL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AVEL>)",
+            [
+                "interneuron"
+            ],
+            [
+                "FRPR-4",
+                "GLR-1",
+                "GLR-2",
+                "GLR-5",
+                "NMR-1",
+                "NMR-2"
+            ],
+            [],
+            "? (In) AVEL",
+            "1 0 .4"
+        ],
+        "AVER": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AVER>)",
+            [
+                "interneuron"
+            ],
+            [
+                "FRPR-4",
+                "GLR-1",
+                "GLR-2",
+                "GLR-5",
+                "NMR-1",
+                "NMR-2"
+            ],
+            [],
+            "? (In) AVER",
+            "1 0 .4"
+        ],
+        "AVFL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AVFL>)",
+            [
+                "interneuron"
+            ],
+            [
+                "LGC-53",
+                "PDFR-1"
+            ],
+            [],
+            "? (In) AVFL",
+            "1 0 .4"
+        ],
+        "AVFR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AVFR>)",
+            [
+                "interneuron"
+            ],
+            [
+                "LGC-53",
+                "PDFR-1"
+            ],
+            [],
+            "? (In) AVFR",
+            "1 0 .4"
+        ],
+        "AVG": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AVG>)",
+            [
+                "interneuron"
+            ],
+            [
+                "DEG-3",
+                "GLR-1",
+                "GLR-2",
+                "NMR-1",
+                "NMR-2",
+                "NPR-17",
+                "NTR-2"
+            ],
+            [],
+            "? (In) AVG",
+            "1 0 .4"
+        ],
+        "AVHL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AVHL>)",
+            [
+                "interneuron"
+            ],
+            [
+                "GGR-1",
+                "GLR-4",
+                "SER-2"
+            ],
+            [],
+            "? (In) AVHL",
+            "1 0 .4"
+        ],
+        "AVHR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AVHR>)",
+            [
+                "interneuron"
+            ],
+            [
+                "GGR-1",
+                "GLR-4",
+                "SER-2"
+            ],
+            [],
+            "? (In) AVHR",
+            "1 0 .4"
+        ],
+        "AVJL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AVJL>)",
+            [
+                "interneuron"
+            ],
+            [
+                "GLR-1",
+                "SER-5"
+            ],
+            [],
+            "? (In) AVJL",
+            "1 0 .4"
+        ],
+        "AVJR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AVJR>)",
+            [
+                "interneuron"
+            ],
+            [
+                "GLR-1",
+                "SER-5"
+            ],
+            [],
+            "? (In) AVJR",
+            "1 0 .4"
+        ],
+        "AVKL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AVKL>)",
+            [
+                "interneuron"
+            ],
+            [
+                "GLR-5"
+            ],
+            [],
+            "? (In) AVKL",
+            "1 0 .4"
+        ],
+        "AVKR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AVKR>)",
+            [
+                "interneuron"
+            ],
+            [
+                "GLR-5"
+            ],
+            [],
+            "? (In) AVKR",
+            "1 0 .4"
+        ],
+        "AVL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AVL>)",
+            [
+                "interneuron",
+                "motor"
+            ],
+            [
+                "DOP-4"
+            ],
+            [
+                "GABA"
+            ],
+            "- (MoIn) AVL",
+            ".5 .4 1"
+        ],
+        "AVM": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AVM>)",
+            [
+                "sensory"
+            ],
+            [
+                "DOP-1",
+                "LGC-55",
+                "PDFR-1"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) AVM",
+            "1 .2 1"
+        ],
+        "AWAL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AWAL>)",
+            [
+                "sensory"
+            ],
+            [
+                "NPR-5",
+                "OCR-1",
+                "OCR-2",
+                "ODR-10",
+                "OSM-9"
+            ],
+            [],
+            "? (Se) AWAL",
+            "1 .2 1"
+        ],
+        "AWAR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AWAR>)",
+            [
+                "sensory"
+            ],
+            [
+                "NPR-5",
+                "OCR-1",
+                "OCR-2",
+                "ODR-10",
+                "OSM-9"
+            ],
+            [],
+            "? (Se) AWAR",
+            "1 .2 1"
+        ],
+        "AWBL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AWBL>)",
+            [
+                "sensory"
+            ],
+            [
+                "AEX-2",
+                "DAF-11",
+                "NPR-5",
+                "SER-5",
+                "SER-6",
+                "STR-1"
+            ],
+            [],
+            "? (Se) AWBL",
+            "1 .2 1"
+        ],
+        "AWBR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AWBR>)",
+            [
+                "sensory"
+            ],
+            [
+                "AEX-2",
+                "DAF-11",
+                "NPR-5",
+                "SER-5",
+                "SER-6",
+                "STR-1"
+            ],
+            [],
+            "? (Se) AWBR",
+            "1 .2 1"
+        ],
+        "AWCL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AWCL>)",
+            [
+                "sensory"
+            ],
+            [
+                "DAF-11",
+                "OSM-9",
+                "STR-2",
+                "TYRA-3"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) AWCL",
+            "1 .2 1"
+        ],
+        "AWCR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#AWCR>)",
+            [
+                "sensory"
+            ],
+            [
+                "DAF-11",
+                "OSM-9",
+                "STR-2",
+                "TYRA-3"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) AWCR",
+            "1 .2 1"
+        ],
+        "BAGL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#BAGL>)",
+            [
+                "sensory"
+            ],
+            [
+                "GCY-33",
+                "NPR-4",
+                "TYRA-3"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) BAGL",
+            "1 .2 1"
+        ],
+        "BAGR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#BAGR>)",
+            [
+                "sensory"
+            ],
+            [
+                "GCY-33",
+                "NPR-4",
+                "TYRA-3"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) BAGR",
+            "1 .2 1"
+        ],
+        "BDUL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#BDUL>)",
+            [
+                "interneuron"
+            ],
+            [
+                "GLR-8",
+                "NPR-4",
+                "NTR-1",
+                "SER-2"
+            ],
+            [],
+            "? (In) BDUL",
+            "1 0 .4"
+        ],
+        "BDUR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#BDUR>)",
+            [
+                "interneuron"
+            ],
+            [
+                "GLR-8",
+                "NPR-4",
+                "NTR-1",
+                "SER-2"
+            ],
+            [],
+            "? (In) BDUR",
+            "1 0 .4"
+        ],
+        "CANL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#CANL>)",
+            [
+                "unknown"
+            ],
+            [
+                "DOP-4",
+                "GGR-2",
+                "LGC-53",
+                "SER-2",
+                "TYRA-2"
+            ],
+            [],
+            "? () CANL",
+            ".5 0 0"
+        ],
+        "CANR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#CANR>)",
+            [
+                "unknown"
+            ],
+            [
+                "DOP-4",
+                "GGR-2",
+                "LGC-53",
+                "SER-2",
+                "TYRA-2"
+            ],
+            [],
+            "? () CANR",
+            ".5 0 0"
+        ],
+        "CEPDL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#CEPDL>)",
+            [
+                "sensory"
+            ],
+            [
+                "DOP-2",
+                "OCTR-1",
+                "TYRA-3"
+            ],
+            [
+                "Dopamine"
+            ],
+            "+ (Se) CEPDL",
+            "1 .2 1"
+        ],
+        "CEPDR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#CEPDR>)",
+            [
+                "sensory"
+            ],
+            [
+                "DOP-2",
+                "OCTR-1",
+                "TYRA-3"
+            ],
+            [
+                "Dopamine"
+            ],
+            "+ (Se) CEPDR",
+            "1 .2 1"
+        ],
+        "CEPVL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#CEPVL>)",
+            [
+                "sensory"
+            ],
+            [
+                "DOP-2",
+                "OCTR-1",
+                "TYRA-3"
+            ],
+            [
+                "Dopamine"
+            ],
+            "+ (Se) CEPVL",
+            "1 .2 1"
+        ],
+        "CEPVR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#CEPVR>)",
+            [
+                "sensory"
+            ],
+            [
+                "DOP-2",
+                "OCTR-1",
+                "TYRA-3"
+            ],
+            [
+                "Dopamine"
+            ],
+            "+ (Se) CEPVR",
+            "1 .2 1"
+        ],
+        "DA1": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#DA1>)",
+            [
+                "motor"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "NPR-3",
+                "SER-2",
+                "UNC-8"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) DA1",
+            ".5 .4 1"
+        ],
+        "DA2": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#DA2>)",
+            [
+                "motor"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "NPR-3",
+                "SER-2",
+                "UNC-8"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) DA2",
+            ".5 .4 1"
+        ],
+        "DA3": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#DA3>)",
+            [
+                "motor"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "NPR-3",
+                "SER-2",
+                "UNC-8"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) DA3",
+            ".5 .4 1"
+        ],
+        "DA4": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#DA4>)",
+            [
+                "motor"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "NPR-3",
+                "SER-2",
+                "UNC-8"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) DA4",
+            ".5 .4 1"
+        ],
+        "DA5": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#DA5>)",
+            [
+                "motor"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "NPR-3",
+                "SER-2",
+                "UNC-8"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) DA5",
+            ".5 .4 1"
+        ],
+        "DA6": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#DA6>)",
+            [
+                "motor"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "NPR-3",
+                "SER-2",
+                "UNC-8"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) DA6",
+            ".5 .4 1"
+        ],
+        "DA7": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#DA7>)",
+            [
+                "motor"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "NPR-3",
+                "SER-2",
+                "UNC-8"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) DA7",
+            ".5 .4 1"
+        ],
+        "DA8": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#DA8>)",
+            [
+                "motor"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "NPR-3",
+                "SER-2",
+                "UNC-8"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) DA8",
+            ".5 .4 1"
+        ],
+        "DA9": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#DA9>)",
+            [
+                "motor"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "NPR-3",
+                "SER-2",
+                "UNC-8"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) DA9",
+            ".5 .4 1"
+        ],
+        "DB1": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#DB1>)",
+            [
+                "motor"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) DB1",
+            ".5 .4 1"
+        ],
+        "DB2": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#DB2>)",
+            [
+                "motor"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "NPR-3",
+                "PDFR-1"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) DB2",
+            ".5 .4 1"
+        ],
+        "DB3": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#DB3>)",
+            [
+                "motor"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) DB3",
+            ".5 .4 1"
+        ],
+        "DB4": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#DB4>)",
+            [
+                "motor"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) DB4",
+            ".5 .4 1"
+        ],
+        "DB5": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#DB5>)",
+            [
+                "motor"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) DB5",
+            ".5 .4 1"
+        ],
+        "DB6": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#DB6>)",
+            [
+                "motor"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) DB6",
+            ".5 .4 1"
+        ],
+        "DB7": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#DB7>)",
+            [
+                "motor"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) DB7",
+            ".5 .4 1"
+        ],
+        "DD1": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#DD1>)",
+            [
+                "motor"
+            ],
+            [
+                "DOP-3",
+                "MOD-1",
+                "NPR-1"
+            ],
+            [
+                "GABA"
+            ],
+            "- (Mo) DD1",
+            ".5 .4 1"
+        ],
+        "DD2": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#DD2>)",
+            [
+                "motor"
+            ],
+            [
+                "DOP-3",
+                "MOD-1",
+                "NPR-1"
+            ],
+            [
+                "GABA"
+            ],
+            "- (Mo) DD2",
+            ".5 .4 1"
+        ],
+        "DD3": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#DD3>)",
+            [
+                "motor"
+            ],
+            [
+                "DOP-3",
+                "MOD-1",
+                "NPR-1"
+            ],
+            [
+                "GABA"
+            ],
+            "- (Mo) DD3",
+            ".5 .4 1"
+        ],
+        "DD4": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#DD4>)",
+            [
+                "motor"
+            ],
+            [
+                "DOP-3",
+                "MOD-1",
+                "NPR-1"
+            ],
+            [
+                "GABA"
+            ],
+            "- (Mo) DD4",
+            ".5 .4 1"
+        ],
+        "DD5": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#DD5>)",
+            [
+                "motor"
+            ],
+            [
+                "DOP-3",
+                "MOD-1",
+                "NPR-1"
+            ],
+            [
+                "GABA"
+            ],
+            "- (Mo) DD5",
+            ".5 .4 1"
+        ],
+        "DD6": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#DD6>)",
+            [
+                "motor"
+            ],
+            [
+                "DOP-3",
+                "MOD-1",
+                "NPR-1"
+            ],
+            [
+                "GABA"
+            ],
+            "- (Mo) DD6",
+            ".5 .4 1"
+        ],
+        "DVA": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#DVA>)",
+            [
+                "interneuron",
+                "sensory"
+            ],
+            [
+                "EGL-6",
+                "FRPR-4",
+                "GGR-3",
+                "GLR-4",
+                "GLR-5",
+                "NMR-1",
+                "SER-2",
+                "SER-4",
+                "TRP-4"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (InSe) DVA",
+            "1 0 .4"
+        ],
+        "DVB": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#DVB>)",
+            [
+                "interneuron",
+                "motor"
+            ],
+            [],
+            [
+                "GABA"
+            ],
+            "- (MoIn) DVB",
+            ".5 .4 1"
+        ],
+        "DVC": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#DVC>)",
+            [
+                "interneuron"
+            ],
+            [
+                "GLR-1",
+                "SER-1",
+                "SER-4",
+                "TRP-4"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (In) DVC",
+            "1 0 .4"
+        ],
+        "FLPL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#FLPL>)",
+            [
+                "sensory"
+            ],
+            [
+                "DEG-3",
+                "DEL-1",
+                "DES-2",
+                "GLR-4",
+                "LGC-53",
+                "MEC-10",
+                "NPR-2",
+                "OSM-9",
+                "PDFR-1",
+                "UNC-8"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) FLPL",
+            "1 .2 1"
+        ],
+        "FLPR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#FLPR>)",
+            [
+                "sensory"
+            ],
+            [
+                "DEG-3",
+                "DEL-1",
+                "DES-2",
+                "GLR-4",
+                "LGC-53",
+                "MEC-10",
+                "NPR-2",
+                "OSM-9",
+                "PDFR-1",
+                "UNC-8"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) FLPR",
+            "1 .2 1"
+        ],
+        "HSNL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#HSNL>)",
+            [
+                "motor"
+            ],
+            [
+                "EGL-6",
+                "GAR-2",
+                "GGR-2",
+                "GLR-5",
+                "LGC-53",
+                "LGC-55",
+                "MEC-6"
+            ],
+            [
+                "Serotonin"
+            ],
+            "+ (Mo) HSNL",
+            ".5 .4 1"
+        ],
+        "HSNR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#HSNR>)",
+            [
+                "motor"
+            ],
+            [
+                "EGL-6",
+                "GAR-2",
+                "GGR-2",
+                "GLR-5",
+                "LGC-53",
+                "LGC-55",
+                "MEC-6"
+            ],
+            [
+                "Serotonin"
+            ],
+            "+ (Mo) HSNR",
+            ".5 .4 1"
+        ],
+        "I1L": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#I1L>)",
+            [
+                "interneuron",
+                "sensory"
+            ],
+            [
+                "DOP-4",
+                "FRPR-4",
+                "GLR-7",
+                "GLR-8",
+                "PDFR-1"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (InSe) I1L",
+            "1 0 .4"
+        ],
+        "I1R": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#I1R>)",
+            [
+                "interneuron",
+                "sensory"
+            ],
+            [
+                "DOP-4",
+                "FRPR-4",
+                "GLR-7",
+                "GLR-8",
+                "PDFR-1"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (InSe) I1R",
+            "1 0 .4"
+        ],
+        "I2L": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#I2L>)",
+            [
+                "interneuron",
+                "sensory"
+            ],
+            [
+                "DOP-4",
+                "GLR-7",
+                "GLR-8",
+                "NTR-1",
+                "SER-7"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (InSe) I2L",
+            "1 0 .4"
+        ],
+        "I2R": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#I2R>)",
+            [
+                "interneuron",
+                "sensory"
+            ],
+            [
+                "DOP-4",
+                "GLR-7",
+                "GLR-8",
+                "NTR-1",
+                "SER-7"
+            ],
+            [],
+            "? (InSe) I2R",
+            "1 0 .4"
+        ],
+        "I3": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#I3>)",
+            [
+                "interneuron",
+                "sensory"
+            ],
+            [
+                "GLR-7",
+                "GLR-8",
+                "SER-7"
+            ],
+            [],
+            "? (InSe) I3",
+            "1 0 .4"
+        ],
+        "I4": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#I4>)",
+            [
+                "interneuron"
+            ],
+            [
+                "SER-7"
+            ],
+            [],
+            "? (In) I4",
+            "1 0 .4"
+        ],
+        "I5": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#I5>)",
+            [
+                "interneuron",
+                "sensory"
+            ],
+            [],
+            [
+                "Glutamate",
+                "Serotonin"
+            ],
+            "+ (InSe) I5",
+            "1 0 .4"
+        ],
+        "I6": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#I6>)",
+            [
+                "interneuron",
+                "sensory"
+            ],
+            [
+                "GLR-7",
+                "GLR-8",
+                "SER-7"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (InSe) I6",
+            "1 0 .4"
+        ],
+        "IL1DL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#IL1DL>)",
+            [
+                "interneuron",
+                "motor",
+                "sensory"
+            ],
+            [
+                "DEG-3",
+                "LGC-55",
+                "MEC-6",
+                "TRPA-1"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (MoInSe) IL1DL",
+            ".5 .4 1"
+        ],
+        "IL1DR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#IL1DR>)",
+            [
+                "interneuron",
+                "motor",
+                "sensory"
+            ],
+            [
+                "DEG-3",
+                "LGC-55",
+                "MEC-6",
+                "TRPA-1"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (MoInSe) IL1DR",
+            ".5 .4 1"
+        ],
+        "IL1L": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#IL1L>)",
+            [
+                "interneuron",
+                "motor",
+                "sensory"
+            ],
+            [
+                "DEG-3",
+                "LGC-55",
+                "MEC-6",
+                "TRPA-1"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (MoInSe) IL1L",
+            ".5 .4 1"
+        ],
+        "IL1R": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#IL1R>)",
+            [
+                "interneuron",
+                "motor",
+                "sensory"
+            ],
+            [
+                "DEG-3",
+                "LGC-55",
+                "MEC-6",
+                "TRPA-1"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (MoInSe) IL1R",
+            ".5 .4 1"
+        ],
+        "IL1VL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#IL1VL>)",
+            [
+                "interneuron",
+                "motor",
+                "sensory"
+            ],
+            [
+                "DEG-3",
+                "LGC-55",
+                "MEC-6",
+                "TRPA-1"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (MoInSe) IL1VL",
+            ".5 .4 1"
+        ],
+        "IL1VR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#IL1VR>)",
+            [
+                "interneuron",
+                "motor",
+                "sensory"
+            ],
+            [
+                "DEG-3",
+                "LGC-55",
+                "MEC-6",
+                "TRPA-1"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (MoInSe) IL1VR",
+            ".5 .4 1"
+        ],
+        "IL2DL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#IL2DL>)",
+            [
+                "sensory"
+            ],
+            [
+                "DES-2",
+                "LGC-53",
+                "NPR-1",
+                "NPR-5"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Se) IL2DL",
+            "1 .2 1"
+        ],
+        "IL2DR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#IL2DR>)",
+            [
+                "sensory"
+            ],
+            [
+                "DES-2",
+                "LGC-53",
+                "NPR-1",
+                "NPR-5"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Se) IL2DR",
+            "1 .2 1"
+        ],
+        "IL2L": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#IL2L>)",
+            [
+                "sensory"
+            ],
+            [
+                "DES-2",
+                "LGC-53",
+                "NPR-1",
+                "NPR-5"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Se) IL2L",
+            "1 .2 1"
+        ],
+        "IL2R": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#IL2R>)",
+            [
+                "sensory"
+            ],
+            [
+                "DES-2",
+                "LGC-53",
+                "NPR-1",
+                "NPR-5"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Se) IL2R",
+            "1 .2 1"
+        ],
+        "IL2VL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#IL2VL>)",
+            [
+                "sensory"
+            ],
+            [
+                "DES-2",
+                "LGC-53",
+                "NPR-1",
+                "NPR-5"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Se) IL2VL",
+            "1 .2 1"
+        ],
+        "IL2VR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#IL2VR>)",
+            [
+                "sensory"
+            ],
+            [
+                "DES-2",
+                "LGC-53",
+                "NPR-1",
+                "NPR-5"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Se) IL2VR",
+            "1 .2 1"
+        ],
+        "LUAL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#LUAL>)",
+            [
+                "interneuron"
+            ],
+            [
+                "GLR-5",
+                "SER-2"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (In) LUAL",
+            "1 0 .4"
+        ],
+        "LUAR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#LUAR>)",
+            [
+                "interneuron"
+            ],
+            [
+                "GLR-5",
+                "SER-2"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (In) LUAR",
+            "1 0 .4"
+        ],
+        "M1": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#M1>)",
+            [
+                "motor"
+            ],
+            [
+                "AVR-14",
+                "GLR-2",
+                "SER-4"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) M1",
+            ".5 .4 1"
+        ],
+        "M2L": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#M2L>)",
+            [
+                "motor"
+            ],
+            [
+                "SER-7"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) M2L",
+            ".5 .4 1"
+        ],
+        "M2R": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#M2R>)",
+            [
+                "motor"
+            ],
+            [
+                "SER-7"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) M2R",
+            ".5 .4 1"
+        ],
+        "M3L": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#M3L>)",
+            [
+                "motor",
+                "sensory"
+            ],
+            [
+                "GLR-8",
+                "NPR-1",
+                "SER-7"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (MoSe) M3L",
+            ".5 .4 1"
+        ],
+        "M3R": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#M3R>)",
+            [
+                "motor",
+                "sensory"
+            ],
+            [
+                "GLR-8",
+                "NPR-1",
+                "SER-7"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (MoSe) M3R",
+            ".5 .4 1"
+        ],
+        "M4": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#M4>)",
+            [
+                "motor"
+            ],
+            [
+                "GLR-8",
+                "SER-7",
+                "SER7b"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) M4",
+            ".5 .4 1"
+        ],
+        "M5": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#M5>)",
+            [
+                "motor"
+            ],
+            [
+                "GLR-8",
+                "SER-7"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) M5",
+            ".5 .4 1"
+        ],
+        "MCL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#MCL>)",
+            [
+                "motor",
+                "sensory"
+            ],
+            [
+                "GLR-8",
+                "SER-7",
+                "TYRA-2"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoSe) MCL",
+            ".5 .4 1"
+        ],
+        "MCR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#MCR>)",
+            [
+                "motor",
+                "sensory"
+            ],
+            [
+                "GLR-8",
+                "SER-7",
+                "TYRA-2"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoSe) MCR",
+            ".5 .4 1"
+        ],
+        "MI": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#MI>)",
+            [
+                "interneuron",
+                "motor"
+            ],
+            [],
+            [
+                "Glutamate"
+            ],
+            "+ (MoIn) MI",
+            ".5 .4 1"
+        ],
+        "NSML": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#NSML>)",
+            [
+                "motor",
+                "sensory"
+            ],
+            [
+                "AEX-2",
+                "DOP-3",
+                "GLR-7",
+                "GLR-8",
+                "SER-2",
+                "SER-4",
+                "TYRA-2"
+            ],
+            [
+                "Serotonin"
+            ],
+            "+ (MoSe) NSML",
+            ".5 .4 1"
+        ],
+        "NSMR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#NSMR>)",
+            [
+                "motor",
+                "sensory"
+            ],
+            [
+                "AEX-2",
+                "DOP-3",
+                "GLR-7",
+                "GLR-8",
+                "SER-2",
+                "SER-4",
+                "TYRA-2"
+            ],
+            [
+                "Serotonin"
+            ],
+            "+ (MoSe) NSMR",
+            ".5 .4 1"
+        ],
+        "OLLL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#OLLL>)",
+            [
+                "sensory"
+            ],
+            [
+                "PDFR-1",
+                "SER-2"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) OLLL",
+            "1 .2 1"
+        ],
+        "OLLR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#OLLR>)",
+            [
+                "sensory"
+            ],
+            [
+                "PDFR-1",
+                "SER-2"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) OLLR",
+            "1 .2 1"
+        ],
+        "OLQDL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#OLQDL>)",
+            [
+                "interneuron",
+                "sensory"
+            ],
+            [
+                "NPR-1",
+                "NPR-2",
+                "OCR-4",
+                "OSM-9",
+                "PDFR-1",
+                "TRPA-1",
+                "TYRA-3"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (InSe) OLQDL",
+            "1 0 .4"
+        ],
+        "OLQDR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#OLQDR>)",
+            [
+                "interneuron",
+                "sensory"
+            ],
+            [
+                "NPR-1",
+                "NPR-2",
+                "OCR-4",
+                "OSM-9",
+                "PDFR-1",
+                "TRPA-1",
+                "TYRA-3"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (InSe) OLQDR",
+            "1 0 .4"
+        ],
+        "OLQVL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#OLQVL>)",
+            [
+                "interneuron",
+                "sensory"
+            ],
+            [
+                "NPR-1",
+                "NPR-2",
+                "OCR-4",
+                "OSM-9",
+                "PDFR-1",
+                "TRPA-1",
+                "TYRA-3"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (InSe) OLQVL",
+            "1 0 .4"
+        ],
+        "OLQVR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#OLQVR>)",
+            [
+                "interneuron",
+                "sensory"
+            ],
+            [
+                "NPR-1",
+                "NPR-2",
+                "OCR-4",
+                "OSM-9",
+                "PDFR-1",
+                "TRPA-1",
+                "TYRA-3"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (InSe) OLQVR",
+            "1 0 .4"
+        ],
+        "PDA": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PDA>)",
+            [
+                "motor"
+            ],
+            [
+                "DOP-2",
+                "EXP-1",
+                "SER-2",
+                "UNC-8"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) PDA",
+            ".5 .4 1"
+        ],
+        "PDB": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PDB>)",
+            [
+                "interneuron",
+                "motor"
+            ],
+            [
+                "UNC-8"
+            ],
+            [],
+            "? (MoIn) PDB",
+            ".5 .4 1"
+        ],
+        "PDEL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PDEL>)",
+            [
+                "sensory"
+            ],
+            [
+                "DOP-2"
+            ],
+            [
+                "Dopamine"
+            ],
+            "+ (Se) PDEL",
+            "1 .2 1"
+        ],
+        "PDER": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PDER>)",
+            [
+                "sensory"
+            ],
+            [
+                "DOP-2"
+            ],
+            [
+                "Dopamine"
+            ],
+            "+ (Se) PDER",
+            "1 .2 1"
+        ],
+        "PHAL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PHAL>)",
+            [
+                "sensory"
+            ],
+            [
+                "GCY-12",
+                "NPR-1",
+                "NPR-5",
+                "OCR-2",
+                "OSM-9",
+                "PDFR-1",
+                "SER-3",
+                "SRB-6",
+                "SRG-13"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) PHAL",
+            "1 .2 1"
+        ],
+        "PHAR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PHAR>)",
+            [
+                "sensory"
+            ],
+            [
+                "GCY-12",
+                "NPR-1",
+                "NPR-5",
+                "OCR-2",
+                "OSM-9",
+                "PDFR-1",
+                "SER-3",
+                "SRB-6",
+                "SRG-13"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) PHAR",
+            "1 .2 1"
+        ],
+        "PHBL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PHBL>)",
+            [
+                "sensory"
+            ],
+            [
+                "NPR-1",
+                "NPR-5",
+                "OCR-2",
+                "OSM-9",
+                "PDFR-1",
+                "SER-3",
+                "SRB-6"
+            ],
+            [
+                "Glutamate",
+                "Serotonin"
+            ],
+            "+ (Se) PHBL",
+            "1 .2 1"
+        ],
+        "PHBR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PHBR>)",
+            [
+                "sensory"
+            ],
+            [
+                "NPR-1",
+                "NPR-5",
+                "OCR-2",
+                "OSM-9",
+                "PDFR-1",
+                "SER-3",
+                "SRB-6"
+            ],
+            [
+                "Glutamate",
+                "Serotonin"
+            ],
+            "+ (Se) PHBR",
+            "1 .2 1"
+        ],
+        "PHCL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PHCL>)",
+            [
+                "sensory"
+            ],
+            [
+                "DOP-1"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) PHCL",
+            "1 .2 1"
+        ],
+        "PHCR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PHCR>)",
+            [
+                "sensory"
+            ],
+            [
+                "DOP-1"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) PHCR",
+            "1 .2 1"
+        ],
+        "PLML": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PLML>)",
+            [
+                "sensory"
+            ],
+            [
+                "DEG-3",
+                "DES-2",
+                "DOP-1",
+                "GLR-8",
+                "MEC-2",
+                "MEC-4",
+                "MEC-6",
+                "MEC-9",
+                "PDFR-1"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) PLML",
+            "1 .2 1"
+        ],
+        "PLMR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PLMR>)",
+            [
+                "sensory"
+            ],
+            [
+                "DEG-3",
+                "DES-2",
+                "DOP-1",
+                "GLR-8",
+                "MEC-2",
+                "MEC-4",
+                "MEC-6",
+                "MEC-9",
+                "PDFR-1"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) PLMR",
+            "1 .2 1"
+        ],
+        "PLNL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PLNL>)",
+            [
+                "interneuron",
+                "sensory"
+            ],
+            [
+                "DOP-1"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (InSe) PLNL",
+            "1 0 .4"
+        ],
+        "PLNR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PLNR>)",
+            [
+                "interneuron",
+                "sensory"
+            ],
+            [
+                "DOP-1"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (InSe) PLNR",
+            "1 0 .4"
+        ],
+        "PQR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PQR>)",
+            [
+                "sensory"
+            ],
+            [
+                "DOP-4",
+                "GCY-32",
+                "GCY-35",
+                "NPR-1",
+                "NPR-17",
+                "NPR-4",
+                "NTR-1",
+                "NTR-2",
+                "PDFR-1"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) PQR",
+            "1 .2 1"
+        ],
+        "PVCL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PVCL>)",
+            [
+                "interneuron"
+            ],
+            [
+                "PDFR-1",
+                "SER-2"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (In) PVCL",
+            "1 0 .4"
+        ],
+        "PVCR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PVCR>)",
+            [
+                "interneuron"
+            ],
+            [
+                "PDFR-1",
+                "SER-2"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (In) PVCR",
+            "1 0 .4"
+        ],
+        "PVDL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PVDL>)",
+            [
+                "sensory"
+            ],
+            [
+                "DEG-3",
+                "DES-2",
+                "DOP-1",
+                "DOP-3",
+                "GLR-4",
+                "LGC-53",
+                "MEC-10",
+                "MEC-6",
+                "MEC-9",
+                "NPR-2",
+                "OSM-9",
+                "SER-2",
+                "TRPA-1",
+                "TYRA-2"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) PVDL",
+            "1 .2 1"
+        ],
+        "PVDR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PVDR>)",
+            [
+                "sensory"
+            ],
+            [
+                "DEG-3",
+                "DES-2",
+                "DOP-1",
+                "DOP-3",
+                "GLR-4",
+                "LGC-53",
+                "MEC-10",
+                "MEC-6",
+                "MEC-9",
+                "NPR-2",
+                "OSM-9",
+                "SER-2",
+                "TRPA-1",
+                "TYRA-2"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) PVDR",
+            "1 .2 1"
+        ],
+        "PVM": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PVM>)",
+            [
+                "sensory"
+            ],
+            [
+                "FRPR-4",
+                "GAR-1",
+                "MEC-10",
+                "MEC-2",
+                "MEC-4",
+                "MEC-6",
+                "MEC-9",
+                "PDFR-1",
+                "UNC-8"
+            ],
+            [],
+            "? (Se) PVM",
+            "1 .2 1"
+        ],
+        "PVNL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PVNL>)",
+            [
+                "interneuron",
+                "motor"
+            ],
+            [],
+            [],
+            "? (MoIn) PVNL",
+            ".5 .4 1"
+        ],
+        "PVNR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PVNR>)",
+            [
+                "interneuron",
+                "motor"
+            ],
+            [],
+            [],
+            "? (MoIn) PVNR",
+            ".5 .4 1"
+        ],
+        "PVPL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PVPL>)",
+            [
+                "interneuron"
+            ],
+            [
+                "NPR-17",
+                "NTR-2"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (In) PVPL",
+            "1 0 .4"
+        ],
+        "PVPR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PVPR>)",
+            [
+                "interneuron"
+            ],
+            [
+                "NPR-17",
+                "NTR-2"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (In) PVPR",
+            "1 0 .4"
+        ],
+        "PVQL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PVQL>)",
+            [
+                "interneuron"
+            ],
+            [
+                "DOP-1",
+                "GGR-1",
+                "GLR-1",
+                "GLR-5",
+                "NPR-17",
+                "NPR-2",
+                "NTR-1",
+                "NTR-2",
+                "PDFR-1",
+                "SER-1",
+                "SER-3",
+                "SRA-6"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (In) PVQL",
+            "1 0 .4"
+        ],
+        "PVQR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PVQR>)",
+            [
+                "interneuron"
+            ],
+            [
+                "DOP-1",
+                "GGR-1",
+                "GLR-1",
+                "GLR-5",
+                "NPR-17",
+                "NPR-2",
+                "NTR-1",
+                "NTR-2",
+                "PDFR-1",
+                "SER-1",
+                "SER-3",
+                "SRA-6"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (In) PVQR",
+            "1 0 .4"
+        ],
+        "PVR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PVR>)",
+            [
+                "interneuron"
+            ],
+            [
+                "NTR-1",
+                "NTR-2"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (In) PVR",
+            "1 0 .4"
+        ],
+        "PVT": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PVT>)",
+            [
+                "interneuron"
+            ],
+            [
+                "SER-1",
+                "SER-2",
+                "SER-4",
+                "TYRA-3"
+            ],
+            [],
+            "? (In) PVT",
+            "1 0 .4"
+        ],
+        "PVWL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PVWL>)",
+            [
+                "interneuron"
+            ],
+            [
+                "NTR-1",
+                "NTR-2",
+                "PDFR-1"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (In) PVWL",
+            "1 0 .4"
+        ],
+        "PVWR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#PVWR>)",
+            [
+                "interneuron"
+            ],
+            [
+                "NTR-1",
+                "NTR-2",
+                "PDFR-1"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (In) PVWR",
+            "1 0 .4"
+        ],
+        "RIAL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RIAL>)",
+            [
+                "interneuron"
+            ],
+            [
+                "DOP-2",
+                "FRPR-4",
+                "SER-1",
+                "SER-2"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (In) RIAL",
+            "1 0 .4"
+        ],
+        "RIAR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RIAR>)",
+            [
+                "interneuron"
+            ],
+            [
+                "DOP-2",
+                "FRPR-4",
+                "SER-1",
+                "SER-2"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (In) RIAR",
+            "1 0 .4"
+        ],
+        "RIBL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RIBL>)",
+            [
+                "interneuron"
+            ],
+            [
+                "DOP-1",
+                "SER-4"
+            ],
+            [],
+            "? (In) RIBL",
+            "1 0 .4"
+        ],
+        "RIBR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RIBR>)",
+            [
+                "interneuron"
+            ],
+            [
+                "DOP-1",
+                "SER-4"
+            ],
+            [],
+            "? (In) RIBR",
+            "1 0 .4"
+        ],
+        "RICL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RICL>)",
+            [
+                "interneuron"
+            ],
+            [
+                "DOP-3",
+                "MOD-1",
+                "NTR-1",
+                "SER-1",
+                "SER-2",
+                "SER-6"
+            ],
+            [
+                "Octopamine"
+            ],
+            "+ (In) RICL",
+            "1 0 .4"
+        ],
+        "RICR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RICR>)",
+            [
+                "interneuron"
+            ],
+            [
+                "DOP-3",
+                "MOD-1",
+                "NTR-1",
+                "SER-1",
+                "SER-2",
+                "SER-6"
+            ],
+            [
+                "Octopamine"
+            ],
+            "+ (In) RICR",
+            "1 0 .4"
+        ],
+        "RID": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RID>)",
+            [
+                "interneuron",
+                "motor"
+            ],
+            [
+                "DOP-2",
+                "MOD-1",
+                "SER-2"
+            ],
+            [],
+            "? (MoIn) RID",
+            ".5 .4 1"
+        ],
+        "RIFL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RIFL>)",
+            [
+                "interneuron"
+            ],
+            [
+                "NTR-2",
+                "PDFR-1"
+            ],
+            [],
+            "? (In) RIFL",
+            "1 0 .4"
+        ],
+        "RIFR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RIFR>)",
+            [
+                "interneuron"
+            ],
+            [
+                "NTR-2",
+                "PDFR-1"
+            ],
+            [],
+            "? (In) RIFR",
+            "1 0 .4"
+        ],
+        "RIGL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RIGL>)",
+            [
+                "interneuron"
+            ],
+            [
+                "NPR-1"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (In) RIGL",
+            "1 0 .4"
+        ],
+        "RIGR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RIGR>)",
+            [
+                "interneuron"
+            ],
+            [
+                "NPR-1"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (In) RIGR",
+            "1 0 .4"
+        ],
+        "RIH": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RIH>)",
+            [
+                "interneuron"
+            ],
+            [],
+            [
+                "Serotonin"
+            ],
+            "+ (In) RIH",
+            "1 0 .4"
+        ],
+        "RIML": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RIML>)",
+            [
+                "interneuron",
+                "motor"
+            ],
+            [
+                "DOP-1",
+                "MOD-1",
+                "SER-4"
+            ],
+            [
+                "Acetylcholine",
+                "Glutamate",
+                "Tyramine"
+            ],
+            "+ (MoIn) RIML",
+            ".5 .4 1"
+        ],
+        "RIMR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RIMR>)",
+            [
+                "interneuron",
+                "motor"
+            ],
+            [
+                "DOP-1",
+                "MOD-1",
+                "SER-4"
+            ],
+            [
+                "Acetylcholine",
+                "Glutamate",
+                "Tyramine"
+            ],
+            "+ (MoIn) RIMR",
+            ".5 .4 1"
+        ],
+        "RIPL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RIPL>)",
+            [
+                "interneuron"
+            ],
+            [],
+            [],
+            "? (In) RIPL",
+            "1 0 .4"
+        ],
+        "RIPR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RIPR>)",
+            [
+                "interneuron"
+            ],
+            [],
+            [],
+            "? (In) RIPR",
+            "1 0 .4"
+        ],
+        "RIR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RIR>)",
+            [
+                "interneuron"
+            ],
+            [],
+            [],
+            "? (In) RIR",
+            "1 0 .4"
+        ],
+        "RIS": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RIS>)",
+            [
+                "interneuron"
+            ],
+            [
+                "DOP-1",
+                "GLR-1",
+                "SER-4"
+            ],
+            [
+                "GABA"
+            ],
+            "- (In) RIS",
+            "1 0 .4"
+        ],
+        "RIVL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RIVL>)",
+            [
+                "interneuron",
+                "motor"
+            ],
+            [
+                "NPR-1",
+                "NPR-4"
+            ],
+            [],
+            "? (MoIn) RIVL",
+            ".5 .4 1"
+        ],
+        "RIVR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RIVR>)",
+            [
+                "interneuron",
+                "motor"
+            ],
+            [
+                "NPR-1",
+                "NPR-4"
+            ],
+            [],
+            "? (MoIn) RIVR",
+            ".5 .4 1"
+        ],
+        "RMDDL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RMDDL>)",
+            [
+                "motor"
+            ],
+            [
+                "GLR-1",
+                "LGC-55",
+                "SER-1"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) RMDDL",
+            ".5 .4 1"
+        ],
+        "RMDDR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RMDDR>)",
+            [
+                "motor"
+            ],
+            [
+                "GLR-1",
+                "LGC-55",
+                "SER-1"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) RMDDR",
+            ".5 .4 1"
+        ],
+        "RMDL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RMDL>)",
+            [
+                "motor"
+            ],
+            [
+                "GLR-1",
+                "LGC-55",
+                "SER-1"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) RMDL",
+            ".5 .4 1"
+        ],
+        "RMDR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RMDR>)",
+            [
+                "motor"
+            ],
+            [
+                "GLR-1",
+                "LGC-55",
+                "SER-1"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) RMDR",
+            ".5 .4 1"
+        ],
+        "RMDVL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RMDVL>)",
+            [
+                "motor"
+            ],
+            [
+                "GLR-1",
+                "LGC-55",
+                "SER-1"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) RMDVL",
+            ".5 .4 1"
+        ],
+        "RMDVR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RMDVR>)",
+            [
+                "motor"
+            ],
+            [
+                "GLR-1",
+                "LGC-55",
+                "SER-1"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) RMDVR",
+            ".5 .4 1"
+        ],
+        "RMED": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RMED>)",
+            [
+                "motor"
+            ],
+            [
+                "AVR-15",
+                "GLR-1",
+                "MOD-1",
+                "NTR-2",
+                "PDFR-1",
+                "SER-2"
+            ],
+            [
+                "GABA"
+            ],
+            "- (Mo) RMED",
+            ".5 .4 1"
+        ],
+        "RMEL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RMEL>)",
+            [
+                "motor"
+            ],
+            [
+                "AVR-15",
+                "GLR-1",
+                "MOD-1",
+                "NTR-2",
+                "PDFR-1",
+                "SER-2"
+            ],
+            [
+                "GABA"
+            ],
+            "- (Mo) RMEL",
+            ".5 .4 1"
+        ],
+        "RMER": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RMER>)",
+            [
+                "motor"
+            ],
+            [
+                "AVR-15",
+                "GLR-1",
+                "MOD-1",
+                "NTR-2",
+                "PDFR-1",
+                "SER-2"
+            ],
+            [
+                "GABA"
+            ],
+            "- (Mo) RMER",
+            ".5 .4 1"
+        ],
+        "RMEV": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RMEV>)",
+            [
+                "motor"
+            ],
+            [
+                "AVR-15",
+                "GLR-1",
+                "MOD-1",
+                "NTR-2",
+                "PDFR-1",
+                "SER-2"
+            ],
+            [
+                "GABA"
+            ],
+            "- (Mo) RMEV",
+            ".5 .4 1"
+        ],
+        "RMFL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RMFL>)",
+            [
+                "motor"
+            ],
+            [
+                "SER-1"
+            ],
+            [],
+            "? (Mo) RMFL",
+            ".5 .4 1"
+        ],
+        "RMFR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RMFR>)",
+            [
+                "motor"
+            ],
+            [
+                "SER-1"
+            ],
+            [],
+            "? (Mo) RMFR",
+            ".5 .4 1"
+        ],
+        "RMGL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RMGL>)",
+            [
+                "interneuron"
+            ],
+            [
+                "NPR-1"
+            ],
+            [],
+            "? (In) RMGL",
+            "1 0 .4"
+        ],
+        "RMGR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RMGR>)",
+            [
+                "interneuron"
+            ],
+            [
+                "NPR-1"
+            ],
+            [],
+            "? (In) RMGR",
+            "1 0 .4"
+        ],
+        "RMHL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RMHL>)",
+            [
+                "motor"
+            ],
+            [
+                "SER-1"
+            ],
+            [],
+            "? (Mo) RMHL",
+            ".5 .4 1"
+        ],
+        "RMHR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#RMHR>)",
+            [
+                "motor"
+            ],
+            [
+                "SER-1"
+            ],
+            [],
+            "? (Mo) RMHR",
+            ".5 .4 1"
+        ],
+        "SAADL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#SAADL>)",
+            [
+                "interneuron",
+                "motor"
+            ],
+            [
+                "NPR-1"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoIn) SAADL",
+            ".5 .4 1"
+        ],
+        "SAADR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#SAADR>)",
+            [
+                "interneuron",
+                "motor"
+            ],
+            [
+                "NPR-1"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoIn) SAADR",
+            ".5 .4 1"
+        ],
+        "SAAVL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#SAAVL>)",
+            [
+                "interneuron",
+                "motor"
+            ],
+            [],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoIn) SAAVL",
+            ".5 .4 1"
+        ],
+        "SAAVR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#SAAVR>)",
+            [
+                "interneuron",
+                "motor"
+            ],
+            [],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoIn) SAAVR",
+            ".5 .4 1"
+        ],
+        "SABD": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#SABD>)",
+            [
+                "interneuron",
+                "motor"
+            ],
+            [
+                "NPR-2",
+                "SER-2"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoIn) SABD",
+            ".5 .4 1"
+        ],
+        "SABVL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#SABVL>)",
+            [
+                "interneuron",
+                "motor"
+            ],
+            [
+                "NPR-2",
+                "SER-2"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoIn) SABVL",
+            ".5 .4 1"
+        ],
+        "SABVR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#SABVR>)",
+            [
+                "interneuron",
+                "motor"
+            ],
+            [
+                "NPR-2",
+                "SER-2"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoIn) SABVR",
+            ".5 .4 1"
+        ],
+        "SDQL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#SDQL>)",
+            [
+                "interneuron",
+                "sensory"
+            ],
+            [
+                "EGL-6",
+                "LGC-55",
+                "NPR-1",
+                "SER-2",
+                "TYRA-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (InSe) SDQL",
+            "1 0 .4"
+        ],
+        "SDQR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#SDQR>)",
+            [
+                "interneuron",
+                "sensory"
+            ],
+            [
+                "EGL-6",
+                "LGC-55",
+                "NPR-1",
+                "SER-2",
+                "TYRA-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (InSe) SDQR",
+            "1 0 .4"
+        ],
+        "SIADL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#SIADL>)",
+            [
+                "interneuron",
+                "motor"
+            ],
+            [
+                "DOP-2",
+                "DOP-3",
+                "SER-2",
+                "SER-3",
+                "SER-6"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoIn) SIADL",
+            ".5 .4 1"
+        ],
+        "SIADR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#SIADR>)",
+            [
+                "interneuron",
+                "motor"
+            ],
+            [
+                "DOP-2",
+                "DOP-3",
+                "SER-2",
+                "SER-3",
+                "SER-6"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoIn) SIADR",
+            ".5 .4 1"
+        ],
+        "SIAVL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#SIAVL>)",
+            [
+                "interneuron",
+                "motor"
+            ],
+            [
+                "DOP-2",
+                "DOP-3",
+                "SER-2",
+                "SER-3",
+                "SER-6"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoIn) SIAVL",
+            ".5 .4 1"
+        ],
+        "SIAVR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#SIAVR>)",
+            [
+                "interneuron",
+                "motor"
+            ],
+            [
+                "DOP-2",
+                "DOP-3",
+                "SER-2",
+                "SER-3",
+                "SER-6"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoIn) SIAVR",
+            ".5 .4 1"
+        ],
+        "SIBDL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#SIBDL>)",
+            [
+                "interneuron",
+                "motor"
+            ],
+            [
+                "DOP-2"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoIn) SIBDL",
+            ".5 .4 1"
+        ],
+        "SIBDR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#SIBDR>)",
+            [
+                "interneuron",
+                "motor"
+            ],
+            [
+                "DOP-2"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoIn) SIBDR",
+            ".5 .4 1"
+        ],
+        "SIBVL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#SIBVL>)",
+            [
+                "interneuron",
+                "motor"
+            ],
+            [
+                "DOP-2"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoIn) SIBVL",
+            ".5 .4 1"
+        ],
+        "SIBVR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#SIBVR>)",
+            [
+                "interneuron",
+                "motor"
+            ],
+            [
+                "DOP-2"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoIn) SIBVR",
+            ".5 .4 1"
+        ],
+        "SMBDL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#SMBDL>)",
+            [
+                "motor"
+            ],
+            [
+                "NPR-1"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) SMBDL",
+            ".5 .4 1"
+        ],
+        "SMBDR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#SMBDR>)",
+            [
+                "motor"
+            ],
+            [
+                "NPR-1"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) SMBDR",
+            ".5 .4 1"
+        ],
+        "SMBVL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#SMBVL>)",
+            [
+                "motor"
+            ],
+            [],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) SMBVL",
+            ".5 .4 1"
+        ],
+        "SMBVR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#SMBVR>)",
+            [
+                "motor"
+            ],
+            [],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) SMBVR",
+            ".5 .4 1"
+        ],
+        "SMDDL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#SMDDL>)",
+            [
+                "motor"
+            ],
+            [
+                "LGC-55",
+                "NTR-2"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) SMDDL",
+            ".5 .4 1"
+        ],
+        "SMDDR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#SMDDR>)",
+            [
+                "motor"
+            ],
+            [
+                "LGC-55",
+                "NTR-2"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) SMDDR",
+            ".5 .4 1"
+        ],
+        "SMDVL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#SMDVL>)",
+            [
+                "motor"
+            ],
+            [
+                "LGC-55",
+                "NTR-2"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) SMDVL",
+            ".5 .4 1"
+        ],
+        "SMDVR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#SMDVR>)",
+            [
+                "motor"
+            ],
+            [
+                "LGC-55",
+                "NTR-2"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) SMDVR",
+            ".5 .4 1"
+        ],
+        "URADL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#URADL>)",
+            [
+                "motor",
+                "sensory"
+            ],
+            [],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoSe) URADL",
+            ".5 .4 1"
+        ],
+        "URADR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#URADR>)",
+            [
+                "motor",
+                "sensory"
+            ],
+            [],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoSe) URADR",
+            ".5 .4 1"
+        ],
+        "URAVL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#URAVL>)",
+            [
+                "motor",
+                "sensory"
+            ],
+            [],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoSe) URAVL",
+            ".5 .4 1"
+        ],
+        "URAVR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#URAVR>)",
+            [
+                "motor",
+                "sensory"
+            ],
+            [],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoSe) URAVR",
+            ".5 .4 1"
+        ],
+        "URBL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#URBL>)",
+            [
+                "interneuron"
+            ],
+            [],
+            [
+                "Acetylcholine"
+            ],
+            "+ (In) URBL",
+            "1 0 .4"
+        ],
+        "URBR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#URBR>)",
+            [
+                "interneuron"
+            ],
+            [],
+            [
+                "Acetylcholine"
+            ],
+            "+ (In) URBR",
+            "1 0 .4"
+        ],
+        "URXL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#URXL>)",
+            [
+                "interneuron",
+                "sensory"
+            ],
+            [
+                "GCY-1",
+                "GCY-25",
+                "GCY-32",
+                "GCY-34",
+                "GCY-35",
+                "GCY-36",
+                "GCY-37",
+                "NPR-1",
+                "PDFR-1",
+                "SRA-10"
+            ],
+            [],
+            "? (InSe) URXL",
+            "1 0 .4"
+        ],
+        "URXR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#URXR>)",
+            [
+                "interneuron",
+                "sensory"
+            ],
+            [
+                "GCY-1",
+                "GCY-25",
+                "GCY-32",
+                "GCY-34",
+                "GCY-35",
+                "GCY-36",
+                "GCY-37",
+                "NPR-1",
+                "PDFR-1",
+                "SRA-10"
+            ],
+            [],
+            "? (InSe) URXR",
+            "1 0 .4"
+        ],
+        "URYDL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#URYDL>)",
+            [
+                "sensory"
+            ],
+            [
+                "LGC-53",
+                "PDFR-1",
+                "SER-1"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) URYDL",
+            "1 .2 1"
+        ],
+        "URYDR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#URYDR>)",
+            [
+                "sensory"
+            ],
+            [
+                "LGC-53",
+                "PDFR-1",
+                "SER-1"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) URYDR",
+            "1 .2 1"
+        ],
+        "URYVL": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#URYVL>)",
+            [
+                "sensory"
+            ],
+            [
+                "LGC-53",
+                "PDFR-1",
+                "SER-1"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) URYVL",
+            "1 .2 1"
+        ],
+        "URYVR": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#URYVR>)",
+            [
+                "sensory"
+            ],
+            [
+                "LGC-53",
+                "PDFR-1",
+                "SER-1"
+            ],
+            [
+                "Glutamate"
+            ],
+            "+ (Se) URYVR",
+            "1 .2 1"
+        ],
+        "VA1": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VA1>)",
+            [
+                "motor"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "LGC-53",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) VA1",
+            ".5 .4 1"
+        ],
+        "VA10": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VA10>)",
+            [
+                "motor"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "LGC-53",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) VA10",
+            ".5 .4 1"
+        ],
+        "VA11": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VA11>)",
+            [
+                "motor"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "LGC-53",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) VA11",
+            ".5 .4 1"
+        ],
+        "VA12": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VA12>)",
+            [
+                "motor"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "LGC-53",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) VA12",
+            ".5 .4 1"
+        ],
+        "VA2": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VA2>)",
+            [
+                "motor"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "LGC-53",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) VA2",
+            ".5 .4 1"
+        ],
+        "VA3": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VA3>)",
+            [
+                "motor"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "LGC-53",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) VA3",
+            ".5 .4 1"
+        ],
+        "VA4": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VA4>)",
+            [
+                "motor"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "LGC-53",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) VA4",
+            ".5 .4 1"
+        ],
+        "VA5": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VA5>)",
+            [
+                "motor"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "LGC-53",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) VA5",
+            ".5 .4 1"
+        ],
+        "VA6": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VA6>)",
+            [
+                "motor"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "LGC-53",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) VA6",
+            ".5 .4 1"
+        ],
+        "VA7": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VA7>)",
+            [
+                "motor"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "LGC-53",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) VA7",
+            ".5 .4 1"
+        ],
+        "VA8": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VA8>)",
+            [
+                "motor"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "LGC-53",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) VA8",
+            ".5 .4 1"
+        ],
+        "VA9": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VA9>)",
+            [
+                "motor"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "LGC-53",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) VA9",
+            ".5 .4 1"
+        ],
+        "VB1": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VB1>)",
+            [
+                "motor",
+                "sensory"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoSe) VB1",
+            ".5 .4 1"
+        ],
+        "VB10": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VB10>)",
+            [
+                "motor",
+                "sensory"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoSe) VB10",
+            ".5 .4 1"
+        ],
+        "VB11": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VB11>)",
+            [
+                "motor",
+                "sensory"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoSe) VB11",
+            ".5 .4 1"
+        ],
+        "VB2": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VB2>)",
+            [
+                "motor",
+                "sensory"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoSe) VB2",
+            ".5 .4 1"
+        ],
+        "VB3": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VB3>)",
+            [
+                "motor",
+                "sensory"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoSe) VB3",
+            ".5 .4 1"
+        ],
+        "VB4": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VB4>)",
+            [
+                "motor",
+                "sensory"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoSe) VB4",
+            ".5 .4 1"
+        ],
+        "VB5": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VB5>)",
+            [
+                "motor",
+                "sensory"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoSe) VB5",
+            ".5 .4 1"
+        ],
+        "VB6": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VB6>)",
+            [
+                "motor",
+                "sensory"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoSe) VB6",
+            ".5 .4 1"
+        ],
+        "VB7": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VB7>)",
+            [
+                "motor",
+                "sensory"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoSe) VB7",
+            ".5 .4 1"
+        ],
+        "VB8": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VB8>)",
+            [
+                "motor",
+                "sensory"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoSe) VB8",
+            ".5 .4 1"
+        ],
+        "VB9": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VB9>)",
+            [
+                "motor",
+                "sensory"
+            ],
+            [
+                "CKR-2",
+                "DOP-1",
+                "DOP-3",
+                "NPR-3"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (MoSe) VB9",
+            ".5 .4 1"
+        ],
+        "VC1": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VC1>)",
+            [
+                "motor"
+            ],
+            [
+                "GLR-5"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) VC1",
+            ".5 .4 1"
+        ],
+        "VC2": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VC2>)",
+            [
+                "motor"
+            ],
+            [
+                "GLR-5"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) VC2",
+            ".5 .4 1"
+        ],
+        "VC3": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VC3>)",
+            [
+                "motor"
+            ],
+            [
+                "GLR-5"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) VC3",
+            ".5 .4 1"
+        ],
+        "VC4": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VC4>)",
+            [
+                "motor"
+            ],
+            [
+                "GLR-5"
+            ],
+            [
+                "Acetylcholine",
+                "Serotonin"
+            ],
+            "+ (Mo) VC4",
+            ".5 .4 1"
+        ],
+        "VC5": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VC5>)",
+            [
+                "motor"
+            ],
+            [
+                "GLR-5"
+            ],
+            [
+                "Acetylcholine",
+                "Serotonin"
+            ],
+            "+ (Mo) VC5",
+            ".5 .4 1"
+        ],
+        "VC6": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VC6>)",
+            [
+                "motor"
+            ],
+            [
+                "GLR-5"
+            ],
+            [
+                "Acetylcholine"
+            ],
+            "+ (Mo) VC6",
+            ".5 .4 1"
+        ],
+        "VD1": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VD1>)",
+            [
+                "motor"
+            ],
+            [
+                "DOP-3",
+                "MOD-1",
+                "NPR-1",
+                "SER-2"
+            ],
+            [
+                "GABA"
+            ],
+            "- (Mo) VD1",
+            ".5 .4 1"
+        ],
+        "VD10": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VD10>)",
+            [
+                "motor"
+            ],
+            [
+                "DOP-3",
+                "MOD-1",
+                "NPR-1",
+                "SER-2"
+            ],
+            [
+                "GABA"
+            ],
+            "- (Mo) VD10",
+            ".5 .4 1"
+        ],
+        "VD11": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VD11>)",
+            [
+                "motor"
+            ],
+            [
+                "DOP-3",
+                "MOD-1",
+                "NPR-1",
+                "SER-2"
+            ],
+            [
+                "GABA"
+            ],
+            "- (Mo) VD11",
+            ".5 .4 1"
+        ],
+        "VD12": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VD12>)",
+            [
+                "motor"
+            ],
+            [
+                "DOP-3",
+                "MOD-1",
+                "NPR-1",
+                "SER-2"
+            ],
+            [
+                "GABA"
+            ],
+            "- (Mo) VD12",
+            ".5 .4 1"
+        ],
+        "VD13": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VD13>)",
+            [
+                "motor"
+            ],
+            [
+                "DOP-3",
+                "MOD-1",
+                "NPR-1",
+                "SER-2"
+            ],
+            [
+                "GABA"
+            ],
+            "- (Mo) VD13",
+            ".5 .4 1"
+        ],
+        "VD2": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VD2>)",
+            [
+                "motor"
+            ],
+            [
+                "DOP-3",
+                "MOD-1",
+                "NPR-1",
+                "SER-2"
+            ],
+            [
+                "GABA"
+            ],
+            "- (Mo) VD2",
+            ".5 .4 1"
+        ],
+        "VD3": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VD3>)",
+            [
+                "motor"
+            ],
+            [
+                "DOP-3",
+                "MOD-1",
+                "NPR-1",
+                "SER-2"
+            ],
+            [
+                "GABA"
+            ],
+            "- (Mo) VD3",
+            ".5 .4 1"
+        ],
+        "VD4": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VD4>)",
+            [
+                "motor"
+            ],
+            [
+                "DOP-3",
+                "MOD-1",
+                "NPR-1",
+                "SER-2"
+            ],
+            [
+                "GABA"
+            ],
+            "- (Mo) VD4",
+            ".5 .4 1"
+        ],
+        "VD5": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VD5>)",
+            [
+                "motor"
+            ],
+            [
+                "DOP-3",
+                "MOD-1",
+                "NPR-1",
+                "SER-2"
+            ],
+            [
+                "GABA"
+            ],
+            "- (Mo) VD5",
+            ".5 .4 1"
+        ],
+        "VD6": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VD6>)",
+            [
+                "motor"
+            ],
+            [
+                "DOP-3",
+                "MOD-1",
+                "NPR-1",
+                "SER-2"
+            ],
+            [
+                "GABA"
+            ],
+            "- (Mo) VD6",
+            ".5 .4 1"
+        ],
+        "VD7": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VD7>)",
+            [
+                "motor"
+            ],
+            [
+                "DOP-3",
+                "MOD-1",
+                "NPR-1",
+                "SER-2"
+            ],
+            [
+                "GABA"
+            ],
+            "- (Mo) VD7",
+            ".5 .4 1"
+        ],
+        "VD8": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VD8>)",
+            [
+                "motor"
+            ],
+            [
+                "DOP-3",
+                "MOD-1",
+                "NPR-1",
+                "SER-2"
+            ],
+            [
+                "GABA"
+            ],
+            "- (Mo) VD8",
+            ".5 .4 1"
+        ],
+        "VD9": [
+            "Neuron(<http://data.openworm.org/sci/bio/Neuron#VD9>)",
+            [
+                "motor"
+            ],
+            [
+                "DOP-3",
+                "MOD-1",
+                "NPR-1",
+                "SER-2"
+            ],
+            [
+                "GABA"
+            ],
+            "- (Mo) VD9",
+            ".5 .4 1"
+        ]
+    }
+}

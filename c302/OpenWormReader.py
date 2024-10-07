@@ -5,11 +5,15 @@ from c302.NeuroMLUtilities import ConnectionInfo
 from c302.NeuroMLUtilities import analyse_connections
 from c302 import print_, MUSCLE_RE
 
-from owmeta_core.bundle import Bundle
-from owmeta_core.context import Context
-from owmeta.neuron import Neuron
-from owmeta.muscle import BodyWallMuscle
-from owmeta.worm import Worm
+try:
+    from owmeta_core.bundle import Bundle
+    from owmeta_core.context import Context
+    from owmeta.neuron import Neuron
+    from owmeta.muscle import BodyWallMuscle
+    from owmeta.worm import Worm
+except:
+    print("owmeta not installed! Cannot run OpenWormReader")
+    exit()
 
 ############################################################
 
@@ -26,7 +30,6 @@ class OpenWormReader(object):
         self.cached = False
 
     def get_cells_in_model(self, net):
-
         cell_names = set()
         for n in net.neurons():
             cell_names.add(str(n.name()))
@@ -37,11 +40,13 @@ class OpenWormReader(object):
         print_("Initialising OpenWormReader")
 
         try:
-            cell_names, pre, post, conns = self._read_connections('neuron')
+            cell_names, pre, post, conns = self._read_connections("neuron")
         except:
-            print('\nProblem loading connections via owmeta! The package is installed however. You may need to try running:'+
-                  "\n\n    owm bundle remote --user add ow 'https://raw.githubusercontent.com/openworm/owmeta-bundles/master/index.json'\n")
-        
+            print(
+                "\nProblem loading connections via owmeta! The package is installed however. You may need to try running:"
+                + "\n\n    owm bundle remote --user add ow 'https://raw.githubusercontent.com/openworm/owmeta-bundles/master/index.json'\n"
+            )
+
             exit()
 
         if include_nonconnected_cells:
@@ -50,12 +55,12 @@ class OpenWormReader(object):
             return pre + post, conns
 
     def read_muscle_data(self):
-        cell_names, neurons, muscles, conns = self._read_connections('muscle')
+        cell_names, neurons, muscles, conns = self._read_connections("muscle")
         return neurons, muscles, conns
 
     def _read_connections(self, termination=None):
         if not self.cached:
-            with Bundle('openworm/owmeta-data', version=6) as bnd:
+            with Bundle("openworm/owmeta-data", version=6) as bnd:
                 ctx = bnd(Context)(ident="http://openworm.org/data").stored
                 # Extract the network object from the worm object.
                 net = ctx(Worm).query().neuron_network()
@@ -77,9 +82,9 @@ class OpenWormReader(object):
                 self.cell_names = self.get_cells_in_model(net)
             self.cached = True
 
-        if termination == 'neuron':
+        if termination == "neuron":
             term_type = set([Neuron.rdf_type])
-        elif termination == 'muscle':
+        elif termination == "muscle":
             term_type = set([BodyWallMuscle.rdf_type])
         else:
             term_type = set([Neuron.rdf_type, BodyWallMuscle.rdf_type])
@@ -88,11 +93,12 @@ class OpenWormReader(object):
         pre_cell_names = set()
         post_cell_names = set()
         for conn in self.connlist:
-            if (Neuron.rdf_type in conn.pre_cell.rdf_type and
-                    term_type & set(conn.post_cell.rdf_type)):
+            if Neuron.rdf_type in conn.pre_cell.rdf_type and term_type & set(
+                conn.post_cell.rdf_type
+            ):
                 num = conn.number
-                syntype = conn.syntype or ''
-                synclass = conn.synclass or ''
+                syntype = conn.syntype or ""
+                synclass = conn.synclass or ""
                 pre_name = conn.pre_cell.name
                 post_name = conn.post_cell.name
                 if BodyWallMuscle.rdf_type in conn.post_cell.rdf_type:
@@ -106,14 +112,20 @@ class OpenWormReader(object):
                         if pre_name.startswith("DD") or pre_name.startswith("VD"):
                             synclass = "GABA"
                         synclass = "Acetylcholine"
-                conns.append(ConnectionInfo(pre_name, post_name, num, syntype, synclass))
+                conns.append(
+                    ConnectionInfo(pre_name, post_name, num, syntype, synclass)
+                )
 
                 pre_cell_names.add(pre_name)
                 post_cell_names.add(post_name)
 
-        print_("Total cells %i (%i with connections)" % (
-            len(self.cell_names | pre_cell_names | post_cell_names),
-            len(pre_cell_names | post_cell_names)))
+        print_(
+            "Total cells %i (%i with connections)"
+            % (
+                len(self.cell_names | pre_cell_names | post_cell_names),
+                len(pre_cell_names | post_cell_names),
+            )
+        )
         print_("Total connections found %i " % len(conns))
 
         return list(self.cell_names), pre_cell_names, post_cell_names, conns
@@ -124,11 +136,11 @@ def format_muscle_name(muscle_name):
     if md:
         return muscle_name
     else:
-        md = re.fullmatch(r'([VD][LR])(\d+)', muscle_name)
+        md = re.fullmatch(r"([VD][LR])(\d+)", muscle_name)
         if md:
-            return 'M{0}{1:02d}'.format(md.group(1), int(md.group(2)))
+            return "M{0}{1:02d}".format(md.group(1), int(md.group(2)))
         else:
-            LOGGER.debug('Unrecognized muscle name format in %s', muscle_name)
+            LOGGER.debug("Unrecognized muscle name format in %s", muscle_name)
             return muscle_name
 
 
@@ -138,8 +150,6 @@ read_data = READER.read_data
 read_muscle_data = READER.read_muscle_data
 
 if __name__ == "__main__":
-
-   
     cells, neuron_conns = read_data(include_nonconnected_cells=True)
     neurons2muscles, muscles, muscle_conns = read_muscle_data()
 
@@ -147,20 +157,26 @@ if __name__ == "__main__":
 
     exit()
 
-
     conn_map_OWR = {}
     for c in conns:
         conn_map_OWR[c.short().lower()] = c
 
     from c302.UpdatedSpreadsheetDataReader import read_data as read_data_usr
-    #from c302.SpreadsheetDataReader import read_data as read_data_usr
+
+    # from c302.SpreadsheetDataReader import read_data as read_data_usr
 
     cells2, conns2 = read_data_usr(include_nonconnected_cells=True)
 
-    print_("%i cells found using UpdatedSpreadsheetDataReader2: %s..." % (len(cells2), sorted(cells2)[0:3]))
-    print_("Found %s connections using UpdatedSpreadsheetDataReader2, First few: " % (len(conns2), ))
-    for c in sorted(conns2)[:min(len(conns2),5)]:
-        print_('  %s'%c)
+    print_(
+        "%i cells found using UpdatedSpreadsheetDataReader2: %s..."
+        % (len(cells2), sorted(cells2)[0:3])
+    )
+    print_(
+        "Found %s connections using UpdatedSpreadsheetDataReader2, First few: "
+        % (len(conns2),)
+    )
+    for c in sorted(conns2)[: min(len(conns2), 5)]:
+        print_("  %s" % c)
 
     conn_map_USR = {}
     for c2 in conns2:
@@ -180,16 +196,18 @@ if __name__ == "__main__":
             else:
                 matching += 1
         else:
-            print_("Missing from UpdatedSpreadsheetDataReader: %s" % (conn_map_OWR[ref]))
+            print_(
+                "Missing from UpdatedSpreadsheetDataReader: %s" % (conn_map_OWR[ref])
+            )
 
-    print_('Number matching: %i' % matching)
+    print_("Number matching: %i" % matching)
 
     matching = 0
 
     refs_USR = list(conn_map_USR.keys())
 
     for i in range(min(maxn, len(refs_USR))):
-        #print("\n-----  Connection in USR: %s"%refs[i])
+        # print("\n-----  Connection in USR: %s"%refs[i])
         # print cm2[refs[i]]
         ref = refs_USR[i]
         if ref in conn_map_OWR:
@@ -200,4 +218,4 @@ if __name__ == "__main__":
         else:
             print_("* Missing from OpenWormReader: %s" % conn_map_USR[ref])
 
-    print_('Number matching: %i' % matching)
+    print_("Number matching: %i" % matching)

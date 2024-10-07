@@ -1,4 +1,4 @@
-# Temporary class to allow this to be used in comparison notebook. 
+# Temporary class to allow this to be used in comparison notebook.
 # Should be tidied up.
 
 from c302.WhiteDataReader import White_L4
@@ -15,5 +15,5 @@ def main1():
     analyse_connections(cells, neuron_conns, neurons2muscles, muscles, muscle_conns)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main1()
