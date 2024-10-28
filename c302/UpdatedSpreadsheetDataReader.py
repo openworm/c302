@@ -4,7 +4,7 @@
 
 #    A simple script to read the values in herm_full_edgelist.csv.
 
-#    This is on of a number of interchangeable "Readers" which can 
+#    This is on of a number of interchangeable "Readers" which can
 #    be used to get connection data for c302
 
 ############################################################
@@ -17,8 +17,9 @@ import os
 
 from c302 import print_
 
-spreadsheet_location = os.path.dirname(os.path.abspath(__file__))+"/data/"
+spreadsheet_location = os.path.dirname(os.path.abspath(__file__)) + "/data/"
 filename = "%sherm_full_edgelist.csv" % spreadsheet_location
+
 
 def get_all_muscle_prefixes():
     return ["pm", "vm", "um", "dBWM", "vBWM"]
@@ -50,6 +51,7 @@ def remove_leading_index_zero(cell):
         return "%s%s" % (cell[:-2], cell[-1:])
     return cell
 
+
 def get_old_muscle_name(muscle):
     index = int(muscle[5:])
     if index < 10:
@@ -63,6 +65,7 @@ def get_old_muscle_name(muscle):
     elif muscle.startswith("dBWMR"):
         return "MDR%s" % index
 
+
 def get_syntype(syntype):
     if syntype == "electrical":
         return "GapJunction"
@@ -71,14 +74,16 @@ def get_syntype(syntype):
     else:
         raise NotImplementedError("Cannot parse syntype '%s'" % syntype)
 
+
 def get_synclass(cell, syntype):
-    #dirty hack
+    # dirty hack
     if syntype == "GapJunction":
         return "Generic_GJ"
     else:
         if cell.startswith("DD") or cell.startswith("VD"):
             return "GABA"
         return "Acetylcholine"
+
 
 def parse_row(row):
     pre = str.strip(row["Source"])
@@ -87,6 +92,7 @@ def parse_row(row):
     syntype = get_syntype(str.strip(row["Type"]))
     synclass = get_synclass(pre, syntype)
     return pre, post, num, syntype, synclass
+
 
 def read_data(include_nonconnected_cells=False):
     """
@@ -100,11 +106,11 @@ def read_data(include_nonconnected_cells=False):
     conns = []
     cells = []
 
-    with open(filename, 'r') as f:
+    with open(filename, "r") as f:
         reader = csv.DictReader(f)
         print_("Opened file: " + filename)
 
-        known_nonconnected_cells = ['CANL', 'CANR']
+        known_nonconnected_cells = ["CANL", "CANR"]
 
         for row in reader:
             pre, post, num, syntype, synclass = parse_row(row)
@@ -116,7 +122,7 @@ def read_data(include_nonconnected_cells=False):
             post = remove_leading_index_zero(post)
 
             conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
-            #print ConnectionInfo(pre, post, num, syntype, synclass)
+            # print ConnectionInfo(pre, post, num, syntype, synclass)
             if pre not in cells:
                 cells.append(pre)
             if post not in cells:
@@ -142,14 +148,16 @@ def read_muscle_data():
     muscles = []
     conns = []
 
-    with open(filename, 'r') as f:
+    with open(filename, "r") as f:
         reader = csv.DictReader(f)
         print_("Opened file: " + filename)
 
         for row in reader:
             pre, post, num, syntype, synclass = parse_row(row)
 
-            if not (is_neuron(pre) or is_body_wall_muscle(pre)) or not is_body_wall_muscle(post):
+            if not (
+                is_neuron(pre) or is_body_wall_muscle(pre)
+            ) or not is_body_wall_muscle(post):
                 continue
 
             if is_neuron(pre):
@@ -170,11 +178,11 @@ def read_muscle_data():
 
 
 def main():
-
     cells, neuron_conns = read_data(include_nonconnected_cells=True)
     neurons2muscles, muscles, muscle_conns = read_muscle_data()
 
     analyse_connections(cells, neuron_conns, neurons2muscles, muscles, muscle_conns)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
