@@ -118,13 +118,13 @@ def getColumnsXls(fileIn):
         # print(indexName[c])
     while curr_row < num_rows:
         curr_row += 1
-        row = worksheet.row(curr_row)
+        # row = worksheet.row(curr_row)
         # print('Row:', curr_row)
         curr_cell = -1
         while curr_cell < num_cells:
             curr_cell += 1
             # Cell Types: 0=Empty, 1=Text, 2=Number, 3=Date, 4=Boolean, 5=Error, 6=Blank
-            cell_type = worksheet.cell_type(curr_row, curr_cell)
+            # cell_type = worksheet.cell_type(curr_row, curr_cell)
             cell_value = str(worksheet.cell_value(curr_row, curr_cell))
             # print('	', cell_type, ':', cell_value)
             cols[indexName[curr_cell]] += [cell_value]
@@ -256,10 +256,11 @@ def matchLists(cols1, cols2, indexName1, indexName2):
 # 'R', 'Rp', 'S', 'Sp' map to 'Send'.
 # 'NMJ' does not map.
 def typeMapping(cols1, cols2, indexName1, indexName2):
-    list1 = ["GapJunction", "Send"]
-    list2 = ["EJ", "NMJ", "R", "Rp", "S", "Sp"]
-    type1 = cols1[indexName1[2]]
-    type2 = cols2[indexName2[2]]
+    # list1 = ["GapJunction", "Send"]
+    # list2 = ["EJ", "NMJ", "R", "Rp", "S", "Sp"]
+    # type1 = cols1[indexName1[2]]
+    # type2 = cols2[indexName2[2]]
+    pass
 
 
 if __name__ == "__main__":

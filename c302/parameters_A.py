@@ -1,22 +1,22 @@
 """
 
-    Parameters A:
-        Cells:           Simple integrate and fire cells
-        Chem Synapses:   Event based, ohmic; one rise & one decay constant
-        Gap junctions:   NOT REAL GJs: using event based synapses, generally set to zero conductance
-        
-    ASSESSMENT:
-        Not very useful in longer term; tendency for cells to over excite; difficult to tune networks
-        
-        
-    We are very aware that:
-    
-        C elegans neurons do NOT behave like Integrate & Fire neurons
-        Their synapses are NOT like double exponential, conductance based synapses
-        Electrical synapses are very different from event triggered, conductance based synapses
-        
-    The values below are a FIRST APPROXIMATION of neurons for use in a network to 
-    investigate the synaptic connectivity of C elegans
+Parameters A:
+    Cells:           Simple integrate and fire cells
+    Chem Synapses:   Event based, ohmic; one rise & one decay constant
+    Gap junctions:   NOT REAL GJs: using event based synapses, generally set to zero conductance
+
+ASSESSMENT:
+    Not very useful in longer term; tendency for cells to over excite; difficult to tune networks
+
+
+We are very aware that:
+
+    C elegans neurons do NOT behave like Integrate & Fire neurons
+    Their synapses are NOT like double exponential, conductance based synapses
+    Electrical synapses are very different from event triggered, conductance based synapses
+
+The values below are a FIRST APPROXIMATION of neurons for use in a network to
+investigate the synaptic connectivity of C elegans
 
 """
 

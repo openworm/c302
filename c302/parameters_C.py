@@ -1,13 +1,13 @@
 """
 
-    Parameters C:
-        Cells:           Single compartment, conductance based cell models with HH like ion channels
-        Chem Synapses:   Event based, ohmic; one rise & one decay constant
-        Gap junctions:   Electrical connection; current linerly depends on difference in voltages 
-        
-    ASSESSMENT:
-        May be possible to use this to generate oscilliatory behaviour, but use of event based synapses normally requires
-        spiking in cells, so core neurons will have to have clear spikes.
+Parameters C:
+    Cells:           Single compartment, conductance based cell models with HH like ion channels
+    Chem Synapses:   Event based, ohmic; one rise & one decay constant
+    Gap junctions:   Electrical connection; current linerly depends on difference in voltages
+
+ASSESSMENT:
+    May be possible to use this to generate oscilliatory behaviour, but use of event based synapses normally requires
+    spiking in cells, so core neurons will have to have clear spikes.
 
 """
 

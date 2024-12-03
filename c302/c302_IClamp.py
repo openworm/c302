@@ -2,6 +2,8 @@ import c302
 import sys
 import neuroml.writers as writers
 
+import importlib
+
 
 def setup(
     parameter_set,
@@ -17,11 +19,14 @@ def setup(
     reference = "c302_%s_IClamp" % parameter_set
     c302.print_("Setting up %s" % reference)
 
-    exec("from c302.parameters_%s import ParameterisedModel" % parameter_set, globals())
+    ParameterisedModel = getattr(
+        importlib.import_module("c302.parameters_%s" % parameter_set),
+        "ParameterisedModel",
+    )
     params = ParameterisedModel()
 
     stim_amplitudes = ["1pA", "2pA", "3pA", "4pA", "5pA", "6pA"]
-    if duration == None:
+    if duration is None:
         duration = (len(stim_amplitudes)) * 1000
 
     my_cells = ["ADAL", "PVCL"]
