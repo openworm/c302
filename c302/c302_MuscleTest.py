@@ -34,13 +34,14 @@ def setup(
         "unphysiological_offset_current_dur", "2000 ms", "Testing TapWithdrawal", "0"
     )
 
+    """
     VA_motors = ["VA%s" % c for c in range_incl(1, 12)]
     VB_motors = ["VB%s" % c for c in range_incl(1, 11)]
     DA_motors = ["DA%s" % c for c in range_incl(1, 9)]
     DB_motors = ["DB%s" % c for c in range_incl(1, 7)]
     DD_motors = ["DD%s" % c for c in range_incl(1, 6)]
     VD_motors = ["VD%s" % c for c in range_incl(1, 13)]
-    AS_motors = ["AS%s" % c for c in range_incl(1, 11)]
+    AS_motors = ["AS%s" % c for c in range_incl(1, 11)]"""
 
     cells = []
 
@@ -75,7 +76,7 @@ def setup(
         "ca_conc_rho_muscle": "0.002138919 mol_per_m_per_A_per_s",
     }
 
-    end = "%sms" % (int(duration) - 100)
+    # end = "%sms" % (int(duration) - 100)
 
     input_list = []
 
@@ -174,4 +175,4 @@ if __name__ == "__main__":
     if len(sys.argv) == 3:
         setup_kwargs["data_reader"] = sys.argv[2]
 
-    setup(parameter_set, generate=True, data_reader=data_reader)
+    # setup(parameter_set, generate=True, data_reader=data_reader)

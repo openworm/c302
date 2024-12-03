@@ -82,8 +82,8 @@ def plots(a_n, info, cells, dt):
     # print plt.xlim()
 
 
-def plots_prof(a_n, info, cells, dt):
-    cProfile.run("real_plots(a_n, info, cells, dt)")
+# def plots_prof(a_n, info, cells, dt):
+#    cProfile.run("real_plots(a_n, info, cells, dt)")
 
 
 def generate_traces_plot(
@@ -414,7 +414,7 @@ def _show_conn_matrix(
     fig.canvas.manager.set_window_title(title)
 
     # cm = matplotlib.cm.get_cmap('gist_stern_r')
-    if colormap == None:
+    if colormap is None:
         cmap = plt.colormaps["gist_stern_r"]
     else:
         # cmap = plt.colormaps['gist_earth']
