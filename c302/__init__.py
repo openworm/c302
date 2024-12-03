@@ -1717,7 +1717,7 @@ def main():
     args = process_args()
 
     ParameterisedModel = getattr(
-        importlib.import_module("c302.parameters_%s" % args.parameters),
+        importlib.import_module("c302.%s" % args.parameters),
         "ParameterisedModel",
     )
     params = ParameterisedModel()
