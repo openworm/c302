@@ -1,23 +1,23 @@
 """
 
-    Parameters B:
-        Cells:           Simple integrate and fire cells, custom component type, with an "activity" variable
-        Chem Synapses:   Event based, ohmic; one rise & one decay constant
-        Gap junctions:   Electrical connection; current linerly depends on difference in voltages 
-        
-    ASSESSMENT:
-        Not very useful in longer term; same criticisms as parameters A
+Parameters B:
+    Cells:           Simple integrate and fire cells, custom component type, with an "activity" variable
+    Chem Synapses:   Event based, ohmic; one rise & one decay constant
+    Gap junctions:   Electrical connection; current linerly depends on difference in voltages
+
+ASSESSMENT:
+    Not very useful in longer term; same criticisms as parameters A
 
 
-    We are very aware that:
-    
-        C elegans neurons do NOT behave like Integrate & Fire neurons
-        Their synapses are NOT like double exponential, conductance based synapses
-        Electrical synapses are very different from event triggered, conductance based synapses
-        
-    The values below are a FIRST APPROXIMATION of neurons for use in a network to 
-    investigate the synaptic connectivity of C elegans
-    
+We are very aware that:
+
+    C elegans neurons do NOT behave like Integrate & Fire neurons
+    Their synapses are NOT like double exponential, conductance based synapses
+    Electrical synapses are very different from event triggered, conductance based synapses
+
+The values below are a FIRST APPROXIMATION of neurons for use in a network to
+investigate the synaptic connectivity of C elegans
+
 
 """
 

@@ -1,15 +1,15 @@
 """
 
-    Parameters D:
-        Cells:           Multicompartmental, conductance based cell models with HH like ion channels
-        Chem Synapses:   Analogue/graded synapses; continuous transmission (voltage dependent)
-        Gap junctions:   Electrical connection; current linerly depends on difference in voltages 
-        
-    ASSESSMENT:
-        May be the right target for the "full scale" model in the medium term...
-        Similar issues to parameters D
-        Note issue https://github.com/openworm/CElegansNeuroML/issues/71 regarding status of this
-        
+Parameters D:
+    Cells:           Multicompartmental, conductance based cell models with HH like ion channels
+    Chem Synapses:   Analogue/graded synapses; continuous transmission (voltage dependent)
+    Gap junctions:   Electrical connection; current linerly depends on difference in voltages
+
+ASSESSMENT:
+    May be the right target for the "full scale" model in the medium term...
+    Similar issues to parameters D
+    Note issue https://github.com/openworm/CElegansNeuroML/issues/71 regarding status of this
+
 
 """
 

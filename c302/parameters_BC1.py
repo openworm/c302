@@ -1,12 +1,12 @@
 """
 
-    Parameters BC1:
-        Cells:           Simple integrate and fire cells, custom component type, with an "activity" variable (same as B)
-        Chem Synapses:   Analogue/graded synapses; continuous transmission (voltage dependent) (same as C1)
-        Gap junctions:   Electrical connection; current linerly depends on difference in voltages 
+Parameters BC1:
+    Cells:           Simple integrate and fire cells, custom component type, with an "activity" variable (same as B)
+    Chem Synapses:   Analogue/graded synapses; continuous transmission (voltage dependent) (same as C1)
+    Gap junctions:   Electrical connection; current linerly depends on difference in voltages
 
-    ASSESSMENT:
-        Probably not very useful in longer term; same criticisms as parameters A; see C0
+ASSESSMENT:
+    Probably not very useful in longer term; same criticisms as parameters A; see C0
 
 """
 
