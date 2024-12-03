@@ -1,5 +1,7 @@
 set -ex
 
+pip install .
+
 ##   Test readers
 
 python -m c302.SpreadsheetDataReader 
