@@ -1,7 +1,6 @@
 import sys
 import matplotlib.pyplot as plt
 from pylab import *
-from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 
 
 fig = plt.figure(facecolor="#FFFFFF", edgecolor="#FFFFFF")

@@ -9,7 +9,6 @@
 
 ############################################################
 
-import csv
 
 from c302.ConnectomeReader import ConnectionInfo
 from c302.ConnectomeReader import analyse_connections
