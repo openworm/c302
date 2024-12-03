@@ -256,10 +256,11 @@ def matchLists(cols1, cols2, indexName1, indexName2):
 # 'R', 'Rp', 'S', 'Sp' map to 'Send'.
 # 'NMJ' does not map.
 def typeMapping(cols1, cols2, indexName1, indexName2):
-    list1 = ["GapJunction", "Send"]
-    list2 = ["EJ", "NMJ", "R", "Rp", "S", "Sp"]
-    type1 = cols1[indexName1[2]]
-    type2 = cols2[indexName2[2]]
+    # list1 = ["GapJunction", "Send"]
+    # list2 = ["EJ", "NMJ", "R", "Rp", "S", "Sp"]
+    # type1 = cols1[indexName1[2]]
+    # type2 = cols2[indexName2[2]]
+    pass
 
 
 if __name__ == "__main__":

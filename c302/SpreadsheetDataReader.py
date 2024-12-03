@@ -10,9 +10,9 @@
 ############################################################
 
 
-from c302 import print_
 from c302.ConnectomeReader import ConnectionInfo
 from c302.ConnectomeReader import analyse_connections
+from c302 import print_
 
 from xlrd import open_workbook
 import os

@@ -41,7 +41,7 @@ class OpenWormReader(object):
 
         try:
             cell_names, pre, post, conns = self._read_connections("neuron")
-        except:
+        except Exception:
             print(
                 "\nProblem loading connections via owmeta! The package is installed however. You may need to try running:"
                 + "\n\n    owm bundle remote --user add ow 'https://raw.githubusercontent.com/openworm/owmeta-bundles/master/index.json'\n"

@@ -1,5 +1,6 @@
 import c302
 import sys
+import importlib
 
 
 def setup(
@@ -13,7 +14,10 @@ def setup(
     config_param_overrides={},
     verbose=True,
 ):
-    exec("from c302.parameters_%s import ParameterisedModel" % parameter_set, globals())
+    ParameterisedModel = getattr(
+        importlib.import_module("c302.parameters_%s" % parameter_set),
+        "ParameterisedModel",
+    )
     params = ParameterisedModel()
 
     params.set_bioparameter("unphysiological_offset_current", "4pA", "Testing Osc", "0")

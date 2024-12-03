@@ -23,7 +23,7 @@ from neuroml import SilentSynapse
 import neuroml.writers as writers
 import neuroml.loaders as loaders
 
-import c302.bioparameters
+# import c302.bioparameters
 
 import airspeed
 
@@ -38,6 +38,7 @@ from lxml import etree
 import re
 
 import json
+
 
 import collections
 
@@ -1710,10 +1711,15 @@ def parse_dict_arg(dict_arg):
 
 
 def main():
+    import importlib
+
     print("Starting c302 v%s..." % __version__)
     args = process_args()
 
-    exec("from c302.%s import ParameterisedModel" % args.parameters, globals())
+    ParameterisedModel = getattr(
+        importlib.import_module("c302.parameters_%s" % args.parameters),
+        "ParameterisedModel",
+    )
     params = ParameterisedModel()
     generate(
         args.reference,

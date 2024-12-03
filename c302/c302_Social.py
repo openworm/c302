@@ -14,6 +14,7 @@ import c302
 import neuroml.writers as writers
 
 import sys
+import importlib
 
 
 def setup(
@@ -27,7 +28,10 @@ def setup(
     config_param_overrides={},
     verbose=True,
 ):
-    exec("from c302.parameters_%s import ParameterisedModel" % parameter_set, globals())
+    ParameterisedModel = getattr(
+        importlib.import_module("c302.parameters_%s" % parameter_set),
+        "ParameterisedModel",
+    )
     params = ParameterisedModel()
 
     cells = ["RMGR", "ASHR", "ASKR", "AWBR", "IL2R", "RMHR", "URXR"]
