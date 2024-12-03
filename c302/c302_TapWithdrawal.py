@@ -6,6 +6,7 @@ Tap-Withdrawal circuit still under development - it does not produce the correct
 
 import c302
 import sys
+import importlib
 
 import neuroml.writers as writers
 
@@ -23,7 +24,10 @@ def setup(
     config_param_overrides={},
     verbose=True,
 ):
-    exec("from c302.parameters_%s import ParameterisedModel" % parameter_set, globals())
+    ParameterisedModel = getattr(
+        importlib.import_module("c302.parameters_%s" % parameter_set),
+        "ParameterisedModel",
+    )
     params = ParameterisedModel()
 
     params.set_bioparameter(
@@ -62,7 +66,7 @@ def setup(
         "ALML",
         "ALMR",
     ]
-    TW_sensory = ["PLML", "PLMR", "AVM", "ALML", "ALMR"]
+    # TW_sensory = ["PLML", "PLMR", "AVM", "ALML", "ALMR"]
     all_motors = list(
         VA_motors
         + VB_motors
@@ -421,7 +425,7 @@ def setup(
             verbose=verbose,
         )
 
-        stim_amplitude = "6pA"
+        # stim_amplitude = "6pA"
         # stim_amplitude = "5.135697186048022pA"
 
         for vb in VB_motors:

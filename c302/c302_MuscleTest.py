@@ -1,5 +1,6 @@
 import sys
 import os
+import importlib
 
 sys.path.insert(0, os.path.abspath("."))
 
@@ -21,7 +22,10 @@ def setup(
     verbose=True,
     config_param_overrides={},
 ):
-    exec("from c302.parameters_%s import ParameterisedModel" % parameter_set, globals())
+    ParameterisedModel = getattr(
+        importlib.import_module("c302.parameters_%s" % parameter_set),
+        "ParameterisedModel",
+    )
     params = ParameterisedModel()
 
     params.set_bioparameter(
