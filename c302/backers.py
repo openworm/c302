@@ -1,7 +1,7 @@
 """
 This method reads a generated list of cells vs. names as assigned by OpenWorm backers
 
-This information will eventually be moved to owmeta/elsewhere...
+This information will eventually be moved elsewhere...
 """
 
 import os
@@ -41,9 +41,7 @@ if __name__ == "__main__":
         info += "----------\n\n"
         info += "Adopted name: **" + name + "**\n\n\n"
         i = 0
-        search_file = open(
-            "../CElegans/pythonScripts/c302/examples/c302_A_Full.nml", "r"
-        )
+        search_file = open("../examples/c302_A_Full.nml", "r")
         for line in search_file:
             i += 1
             if 'tag="OpenWormBackerAssignedName" value="%s"' % name in line:

@@ -46,26 +46,7 @@ def generate_c302_info(nml_doc, verbose=False):
 
     all_cells = sorted(all_cells)
 
-    try:
-        from PyOpenWorm import (
-            connect as pyow_connect,
-            __version__ as pyow_version,
-        )
-
-        pow_conn = pyow_connect("./pyopenworm.conf")
-        all_neuron_info, all_muscle_info = c302._get_cell_info(pow_conn, all_cells)
-        ver_info = "PyOpenWorm v%s" % pyow_version
-    except Exception as e:
-        c302.print_("Unable to connect to PyOpenWorm database: %s" % e)
-        from owmeta_core.bundle import Bundle
-
-        from owmeta_core import __version__ as owc_version
-        from owmeta import __version__ as owmeta_version
-
-        ver_info = "owmeta v%s (owmeta core v%s)" % (owmeta_version, owc_version)
-
-        with Bundle("openworm/owmeta-data", version=6) as bnd:
-            all_neuron_info, all_muscle_info = c302._get_cell_info(bnd, all_cells)
+    all_neuron_info, all_muscle_info = c302._get_cell_info(all_cells)
 
     all_neurons = []
     all_muscles = []
@@ -76,7 +57,7 @@ def generate_c302_info(nml_doc, verbose=False):
             all_neurons.append(c)
 
     info = "# Information on neuron and muscles\n"
-    info += "## Generated using %s\n" % ver_info
+    info += "## Generated using c302 v%s\n" % c302.__version__
 
     info += "### Neurons (%i)\n" % (len(all_neuron_info))
     info += "<table>\n"

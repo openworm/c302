@@ -158,7 +158,7 @@ if __name__ == "__main__":
     exit()
 
     conn_map_OWR = {}
-    for c in neuron_conns:
+    for c in muscle_conns:
         conn_map_OWR[c.short().lower()] = c
 
     from c302.UpdatedSpreadsheetDataReader import read_data as read_data_usr

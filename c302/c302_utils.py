@@ -1,7 +1,6 @@
 import sys
 import os
 import re
-import traceback
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -513,17 +512,7 @@ def generate_conn_matrix(
         else:
             all_neurons.append(c)
 
-    try:
-        from owmeta_core.bundle import Bundle
-
-        with Bundle("openworm/owmeta-data", version=6) as bnd:
-            all_neuron_info, all_muscle_info = c302._get_cell_info(bnd, all_cells)
-    except Exception as e:
-        traceback.print_exc()
-        c302.print_(
-            "Unable to connect to the owmeta bundle: %s\n Proceeding anyway..." % e
-        )
-        all_neuron_info, all_muscle_info = c302._get_cell_info(None, all_cells)
+    all_neuron_info, all_muscle_info = c302._get_cell_info(all_cells)
 
     """
     if order_by_type:
@@ -743,13 +732,17 @@ if __name__ == "__main__":
     colormap = None
 
     if "-phar" in sys.argv:
-        configs = ["c302_C0_Pharyngeal.net.nml"]
+        configs = ["c302_C1_Pharyngeal.net.nml"]
 
     elif "-osc" in sys.argv:
         configs = ["c302_C1_Oscillator.net.nml"]
 
     elif "-soc" in sys.argv:
         configs = ["c302_C1_Social.net.nml"]
+
+    elif "-syns" in sys.argv:
+        configs = ["c302_C1_Syns.net.nml"]
+        figsize = (10, 10)
 
     elif "-musc" in sys.argv:
         configs = ["c302_C1_Muscles.net.nml"]
