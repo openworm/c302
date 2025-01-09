@@ -1,6 +1,6 @@
 {
     "IClamp_GenericMuscleCell": {
-        "version": "NeuroMLlite v0.5.9",
+        "version": "NeuroMLlite v0.6.1",
         "notes": "A network model: IClamp_GenericMuscleCell",
         "parameters": {
             "stim_amp": "4pA"

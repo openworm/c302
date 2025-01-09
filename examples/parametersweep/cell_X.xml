@@ -1,18 +1,58 @@
-<neuroml xmlns="http://www.neuroml.org/schema/neuroml2"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2 https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2beta4.xsd" id="cell_C">
+<Lems>
 
+<ComponentType name="cellX"
+    extends="baseCellMembPotDL"
+    description="...">
+    
+    <Parameter name="bias" dimension="none" description="..."/>
+    <Parameter name="gain" dimension="none" description="..."/>
+    <Parameter name="tau" dimension="time"/>
 
-    <!--
+    <!-- Initial Conditions -->
+    <Parameter name="state0" dimension="none"/>
+
+    <Attachments name="synapses" type="basePointCurrentDL"/>
+
+    <Constant name="MSEC" dimension="time" value="1ms"/>
+
+    <!-- <Exposure name="V" dimension="none"/> --> <!-- Already exposed from baseCellMembPotDL -->
+    <Exposure name="ISyn" dimension="none"/>
+    <Exposure name="spiking" dimension="none"/>
+    <Exposure name="state" dimension="none"/>
+    <Exposure name="output" dimension="none"/>
     
-    Parameters X for c302 still under developemnt!!
+    <Dynamics>
+        
+        <StateVariable name="spiking" dimension="none" exposure="spiking"/>
+        <StateVariable name="state" dimension="none" exposure="state"/>
+        <StateVariable name="V" dimension="none" exposure="V"/>
+        
+        <DerivedVariable name="ISyn" dimension="none" exposure="ISyn" select="synapses[*]/I" reduce="add" />
+        <DerivedVariable name="output" dimension="none" exposure="output" value="1/(1 + exp(-1 * gain * (state+bias)))" />
+
+        <TimeDerivative variable="V" value="0/MSEC"/>
+
+        <TimeDerivative variable="state" value="((0-state) + ISyn)/(tau)"/>
+        
+        <OnStart>
+            <StateAssignment variable="state" value="state0"/>
+        </OnStart>
+
+        <OnCondition test="V .gt. 0 .and. spiking .lt. 0.5">
+            <StateAssignment variable="spiking" value="1"/>
+            <EventOut port="spike"/>
+        </OnCondition>
+
+        <OnCondition test="V .lt. 0">
+            <StateAssignment variable="spiking" value="0"/>
+        </OnCondition>
     
-    Subject to change without notice!!
+
+    </Dynamics>
     
- 
-    -->
+</ComponentType>
+
+<cellX id="GenericNeuronCellX" bias="1" gain="1" state0="10" tau="1000ms"/>
+
+</Lems>
     
-    
-    <ionChannel id="Leak" conductance="10pS" type="ionChannelPassive"/>
-    
-    
-    
-</neuroml>

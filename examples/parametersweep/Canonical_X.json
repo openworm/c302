@@ -1,6 +1,6 @@
 {
     "Canonical_X": {
-        "version": "NeuroMLlite v0.5.9",
+        "version": "NeuroMLlite v0.6.1",
         "parameters": {
             "stim_duration": "250ms",
             "stim_amp": "1pA",
