@@ -1,5 +1,4 @@
 import logging
-import re
 
 from c302.NeuroMLUtilities import ConnectionInfo
 from c302.NeuroMLUtilities import analyse_connections
@@ -93,9 +92,9 @@ class WormNeuroAtlasReader(object):
                     connection = True
 
                 if connection:
-                    if not pre in connected_cells:
+                    if pre not in connected_cells:
                         connected_cells.append(pre)
-                    if not post in connected_cells:
+                    if post not in connected_cells:
                         connected_cells.append(post)
 
         if include_nonconnected_cells:

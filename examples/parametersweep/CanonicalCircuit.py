@@ -1,6 +1,5 @@
 from neuromllite import *
 from neuromllite.NetworkGenerator import *
-from neuromllite.utils import create_new_model
 import sys
 
 sys.path.append("..")

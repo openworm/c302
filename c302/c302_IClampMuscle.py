@@ -1,6 +1,5 @@
 import c302
 import sys
-import neuroml.writers as writers
 
 
 def setup(
