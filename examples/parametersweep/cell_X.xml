@@ -52,7 +52,7 @@
     
 </ComponentType>
 
-<cellX id="GenericNeuronCellX" bias="1" gain="1" state0="10" tau="1000ms"/>
+<cellX id="GenericNeuronCellX" bias="1" gain="1" state0="0" tau="1000ms"/>
 
 </Lems>
     
