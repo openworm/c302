@@ -24,7 +24,7 @@ jobs:
     - name: Install OMV
       run: |
         pip install git+https://github.com/OpenSourceBrain/osb-model-validation
-        pip install scipy sympy matplotlib cython pandas tables
+        pip install scipy sympy matplotlib cython pandas tables pytest
     - name: Run OMV tests on engine ${{ matrix.engine }}
       run: |
         omv all -V --engine=${{ matrix.engine }}; export OMV_SUCCESS=$?; echo $OMV_SUCCESS
@@ -34,3 +34,8 @@ jobs:
         echo "Installing..."
         pip install .
         pip list
+    - name: Run unit tests
+      run: |
+        pip install .; pip install owmeta; pip install owmeta-core;
+        owm bundle remote --user add ow 'https://raw.githubusercontent.com/openworm/owmeta-bundles/master/index.json';
+        pytest tests/
