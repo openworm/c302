@@ -1,18 +1,18 @@
 """
 
-    Parameters D:
-        Cells:           Multicompartmental, conductance based cell models with HH like ion channels
-        Chem Synapses:   Event based, ohmic; one rise & one decay constant
-        Gap junctions:   Electrical connection; current linerly depends on difference in voltages 
-        
-    ASSESSMENT:
-        As with C, the use of event based synapses normally requires spiking in cells, so core neurons will 
-        have to have clear spikes.
-        Also: either the cells have i) low internal resistance (cytoplasmic resistivity) & membrane potential changes rapidly propagate 
-        through cell or ii) high internal resistance and changes are concentrated around the soma. For i) this allows all synapses on 
-        cell (e.g. distant dendrites) to transmit if cell fires/depolarises, but it means bigger cells have much higher imput resistance,
-        and so take much more syn input to respond. 
-        Note issue https://github.com/openworm/CElegansNeuroML/issues/71 regarding status of this
+Parameters D:
+    Cells:           Multicompartmental, conductance based cell models with HH like ion channels
+    Chem Synapses:   Event based, ohmic; one rise & one decay constant
+    Gap junctions:   Electrical connection; current linerly depends on difference in voltages
+
+ASSESSMENT:
+    As with C, the use of event based synapses normally requires spiking in cells, so core neurons will
+    have to have clear spikes.
+    Also: either the cells have i) low internal resistance (cytoplasmic resistivity) & membrane potential changes rapidly propagate
+    through cell or ii) high internal resistance and changes are concentrated around the soma. For i) this allows all synapses on
+    cell (e.g. distant dendrites) to transmit if cell fires/depolarises, but it means bigger cells have much higher imput resistance,
+    and so take much more syn input to respond.
+    Note issue https://github.com/openworm/CElegansNeuroML/issues/71 regarding status of this
 
 """
 
@@ -20,9 +20,6 @@ from neuroml import Cell
 from neuroml import Morphology
 from neuroml import Point3DWithDiam
 from neuroml import Segment
-from neuroml import SegmentParent
-from neuroml import Member
-from neuroml import SegmentGroup
 from neuroml import BiophysicalProperties
 from neuroml import IntracellularProperties
 from neuroml import Resistivity

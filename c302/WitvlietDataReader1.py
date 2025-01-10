@@ -2,7 +2,7 @@
 # Should be tidied up.
 
 from c302.W_SpreadsheetDataReader import WitvlietDataReader
-from c302.NeuroMLUtilities import analyse_connections
+from c302.ConnectomeReader import analyse_connections
 
 wdr = WitvlietDataReader("witvliet_2020_7.xlsx")
 

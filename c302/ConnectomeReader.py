@@ -507,7 +507,7 @@ def check_neurons(cells):
     not_in_preferred = []
     missing_preferred = [n for n in PREFERRED_NEURON_NAMES]
     for c in cells:
-        if not c in PREFERRED_NEURON_NAMES:
+        if c not in PREFERRED_NEURON_NAMES:
             not_in_preferred.append(c)
         else:
             preferred.append(c)
@@ -539,7 +539,7 @@ def analyse_connections(cells, neuron_conns, neurons2muscles, muscles, muscle_co
     nts_tot = {}
     for c in neuron_conns:
         nt = c.synclass
-        if not nt in nts:
+        if nt not in nts:
             nts[nt] = 0
             nts_tot[nt] = 0
         nts[nt] += 1
@@ -558,7 +558,7 @@ def analyse_connections(cells, neuron_conns, neurons2muscles, muscles, muscle_co
     print_("Found %s muscles: %s\n" % (len(muscles), sorted(muscles)))
     not_in_preferred = []
     for m in muscles:
-        if not m in PREFERRED_MUSCLE_NAMES:
+        if m not in PREFERRED_MUSCLE_NAMES:
             not_in_preferred.append(m)
 
     print_(
@@ -586,7 +586,7 @@ def analyse_connections(cells, neuron_conns, neurons2muscles, muscles, muscle_co
     nts_tot = {}
     for c in muscle_conns:
         nt = c.synclass
-        if not nt in nts:
+        if nt not in nts:
             nts[nt] = 0
             nts_tot[nt] = 0
         nts[nt] += 1

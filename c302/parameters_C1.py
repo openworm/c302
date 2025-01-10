@@ -1,12 +1,12 @@
 """
 
-    Parameters C1:
-        Cells:           Single compartment, conductance based cell models with HH like ion channels
-        Chem Synapses:   Analogue/graded synapses; continuous transmission (voltage dependent)
-        Gap junctions:   Electrical connection; current linerly depends on difference in voltages 
-        
-    ASSESSMENT:
-        A good prospect, but cell model could be simpler. See C0
+Parameters C1:
+    Cells:           Single compartment, conductance based cell models with HH like ion channels
+    Chem Synapses:   Analogue/graded synapses; continuous transmission (voltage dependent)
+    Gap junctions:   Electrical connection; current linerly depends on difference in voltages
+
+ASSESSMENT:
+    A good prospect, but cell model could be simpler. See C0
 
 """
 
@@ -29,7 +29,7 @@ class ParameterisedModel(ParameterisedModel_C):
         param_C = ParameterisedModel_C()
         param_C.set_default_bioparameters()
         for b in param_C.bioparameters:
-            if not "syn" in b.name:
+            if "syn" not in b.name:
                 self.add_bioparameter_obj(b)
 
         self.add_bioparameter(

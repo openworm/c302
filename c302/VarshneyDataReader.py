@@ -1,5 +1,5 @@
-from c302.NeuroMLUtilities import ConnectionInfo
-from c302.NeuroMLUtilities import analyse_connections
+from c302.ConnectomeReader import ConnectionInfo
+from c302.ConnectomeReader import analyse_connections
 from openpyxl import load_workbook
 
 import os
@@ -70,7 +70,7 @@ def read_muscle_data():
             conns.append(ConnectionInfo(pre, post, num, syntype, synclass))
             if pre not in neurons:
                 neurons.append(pre)
-            if not post in muscles:
+            if post not in muscles:
                 muscles.append(post)
 
     return neurons, muscles, conns
