@@ -3,7 +3,7 @@
 
 from c302.WhiteDataReader import White_A
 
-from c302.NeuroMLUtilities import analyse_connections
+from c302.ConnectomeReader import analyse_connections
 
 read_data = White_A.read_data
 read_muscle_data = White_A.read_muscle_data

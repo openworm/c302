@@ -1,4 +1,3 @@
-import c302
 from c302.c302_IClampMuscle import setup
 
 setup(

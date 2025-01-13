@@ -1,12 +1,12 @@
 """
 
-    Parameters C2 for c302 still under developemnt!!
-    
-    
-    C2 adds analogue synapses... Might be merged into C or bumped up to D
-    
-    Subject to change without notice!!
-    
+Parameters C2 for c302 still under developemnt!!
+
+
+C2 adds analogue synapses... Might be merged into C or bumped up to D
+
+Subject to change without notice!!
+
 """
 
 from neuroml import Cell, PulseGenerator, FixedFactorConcentrationModel
