@@ -13,7 +13,6 @@ ASSESSMENT:
 
 """
 
-
 from neuroml import GapJunction
 
 from c302.parameters_D import ParameterisedModel as ParameterisedModel_D
