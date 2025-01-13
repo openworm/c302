@@ -44,7 +44,7 @@ def generate(cell, duration=3000, config="IClamp", parameters=None):
         else:
             input_source = InputSource(
                 id="iclamp_0",
-                neuroml2_input="PulseGeneratorDL",
+                neuroml2_input="PulseGenerator",
                 parameters={
                     "amplitude": "stim_amp",
                     "delay": "2000ms",
@@ -82,7 +82,7 @@ def generate(cell, duration=3000, config="IClamp", parameters=None):
 
     if cell_id=='GenericNeuronCellX':
         sim.record_traces={}
-        sim.record_variables={"V": {"all": "*"}, "state": {"all": "*"}, "output": {"all": "*"}}
+        sim.record_variables={"v": {"all": "*"}, "state": {"all": "*"}, "output": {"all": "*"}}
 
     #qprint(dir(sim))
     sim.to_json_file()
@@ -98,7 +98,7 @@ if __name__ == "__main__":
 
     elif "-x" in sys.argv:
         
-        sim, net = generate("GenericNeuronCellX", 10000, config="IClamp", parameters={"stim_amp": "1"})
+        sim, net = generate("GenericNeuronCellX", 10000, config="IClamp", parameters={"stim_amp": "1pA"})
         check_to_generate_or_run(sys.argv, sim)
 
     else:

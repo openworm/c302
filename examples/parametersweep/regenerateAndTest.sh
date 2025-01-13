@@ -7,4 +7,5 @@ python GenerateExamples.py -x -jnml
 
 python CanonicalCircuit.py 
 python CanonicalCircuit.py -jnml
+python CanonicalCircuit.py -x -jnml
 
