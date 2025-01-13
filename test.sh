@@ -141,6 +141,11 @@ nrnivmodl
 
 cd -
 
+## Try NeuroMLlite examples 
+cd examples/parametersweep/
+./regenerateAndTest.sh 
+cd ../..
+
 ## Try helper scripts
 
 python -m c302.runAndPlot -test
