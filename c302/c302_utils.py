@@ -519,7 +519,7 @@ def generate_conn_matrix(
         with Bundle("openworm/owmeta-data", version=6) as bnd:
             all_neuron_info, all_muscle_info = c302._get_cell_info(bnd, all_cells)
     except Exception as e:
-        traceback.print_exc()
+        #traceback.print_exc()
         c302.print_(
             "Unable to connect to the owmeta bundle: %s\n Proceeding anyway..." % e
         )

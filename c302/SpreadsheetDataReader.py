@@ -16,6 +16,8 @@ from c302.ConnectomeReader import analyse_connections
 from xlrd import open_workbook
 import os
 
+from c302 import print_
+
 spreadsheet_location = os.path.dirname(os.path.abspath(__file__)) + "/data/"
 
 
