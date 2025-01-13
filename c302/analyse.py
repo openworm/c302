@@ -1,5 +1,6 @@
 import sys
 import matplotlib.pyplot as plt
+from pylab import *
 
 
 fig = plt.figure(facecolor="#FFFFFF", edgecolor="#FFFFFF")
