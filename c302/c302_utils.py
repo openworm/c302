@@ -1,12 +1,10 @@
 import sys
 import os
 import re
-import collections
 import traceback
 
 import matplotlib.pyplot as plt
 import numpy as np
-from pyneuroml import pynml
 from pyneuroml import plot as pyneuroml_plot
 
 import c302
@@ -414,7 +412,6 @@ def _show_conn_matrix(
     title = "%s: %s" % (type, t)
     plt.title(title)
     fig.canvas.manager.set_window_title(title)
-    import matplotlib
 
     # cm = matplotlib.cm.get_cmap('gist_stern_r')
     if colormap == None:
@@ -471,34 +468,34 @@ def generate_conn_matrix(
     all_cells = []
 
     for cp in net.continuous_projections:
-        if not cp.presynaptic_population in cc_exc_conns.keys():
+        if cp.presynaptic_population not in cc_exc_conns.keys():
             cc_exc_conns[cp.presynaptic_population] = {}
-        if not cp.presynaptic_population in cc_inh_conns.keys():
+        if cp.presynaptic_population not in cc_inh_conns.keys():
             cc_inh_conns[cp.presynaptic_population] = {}
 
-        if not cp.presynaptic_population in all_cells:
+        if cp.presynaptic_population not in all_cells:
             all_cells.append(cp.presynaptic_population)
-        if not cp.postsynaptic_population in all_cells:
+        if cp.postsynaptic_population not in all_cells:
             all_cells.append(cp.postsynaptic_population)
 
         for c in cp.continuous_connection_instance_ws:
             if "inh" in c.post_component:
-                cc_inh_conns[cp.presynaptic_population][
-                    cp.postsynaptic_population
-                ] = float(c.weight)
+                cc_inh_conns[cp.presynaptic_population][cp.postsynaptic_population] = (
+                    float(c.weight)
+                )
             else:
-                cc_exc_conns[cp.presynaptic_population][
-                    cp.postsynaptic_population
-                ] = float(c.weight)
+                cc_exc_conns[cp.presynaptic_population][cp.postsynaptic_population] = (
+                    float(c.weight)
+                )
 
     gj_conns = {}
     for ep in net.electrical_projections:
-        if not ep.presynaptic_population in gj_conns.keys():
+        if ep.presynaptic_population not in gj_conns.keys():
             gj_conns[ep.presynaptic_population] = {}
 
-        if not ep.presynaptic_population in all_cells:
+        if ep.presynaptic_population not in all_cells:
             all_cells.append(ep.presynaptic_population)
-        if not ep.postsynaptic_population in all_cells:
+        if ep.postsynaptic_population not in all_cells:
             all_cells.append(ep.postsynaptic_population)
 
         for e in ep.electrical_connection_instance_ws:
@@ -556,13 +553,13 @@ def generate_conn_matrix(
                 "Exc Conn %s -> %s: %s" % (pre, post, cc_exc_conns[pre][post]), verbose
             )
             if post in all_neurons:
-                data_exc_n[
-                    all_neurons.index(pre), all_neurons.index(post)
-                ] = cc_exc_conns[pre][post]
+                data_exc_n[all_neurons.index(pre), all_neurons.index(post)] = (
+                    cc_exc_conns[pre][post]
+                )
             else:
-                data_exc_m[
-                    all_neurons.index(pre), all_muscles.index(post)
-                ] = cc_exc_conns[pre][post]
+                data_exc_m[all_neurons.index(pre), all_muscles.index(post)] = (
+                    cc_exc_conns[pre][post]
+                )
             if pre in all_muscles:
                 raise Exception("Unexpected...")
 
@@ -572,13 +569,13 @@ def generate_conn_matrix(
                 "Inh Conn %s -> %s: %s" % (pre, post, cc_inh_conns[pre][post]), verbose
             )
             if post in all_neurons:
-                data_inh_n[
-                    all_neurons.index(pre), all_neurons.index(post)
-                ] = cc_inh_conns[pre][post]
+                data_inh_n[all_neurons.index(pre), all_neurons.index(post)] = (
+                    cc_inh_conns[pre][post]
+                )
             else:
-                data_inh_m[
-                    all_neurons.index(pre), all_muscles.index(post)
-                ] = cc_inh_conns[pre][post]
+                data_inh_m[all_neurons.index(pre), all_muscles.index(post)] = (
+                    cc_inh_conns[pre][post]
+                )
             if pre in all_muscles:
                 raise Exception("Unexpected...")
 
@@ -662,13 +659,13 @@ def generate_conn_matrix(
                 and post in all_neurons
             ):
                 if pre in all_neurons:
-                    data_n_m[
-                        all_neurons.index(pre), all_muscles.index(post)
-                    ] = gj_conns[pre][post]
+                    data_n_m[all_neurons.index(pre), all_muscles.index(post)] = (
+                        gj_conns[pre][post]
+                    )
                 else:
-                    data_n_m[
-                        all_muscles.index(pre), all_neurons.index(post)
-                    ] = gj_conns[pre][post]
+                    data_n_m[all_muscles.index(pre), all_neurons.index(post)] = (
+                        gj_conns[pre][post]
+                    )
                 neuron_muscle = True
             elif pre in all_muscles and post in all_muscles:
                 muscle_muscle = True
@@ -773,5 +770,5 @@ if __name__ == "__main__":
             colormap=colormap,
         )
 
-    if not "-nogui" in sys.argv:
+    if "-nogui" not in sys.argv:
         plt.show()

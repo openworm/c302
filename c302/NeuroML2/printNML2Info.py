@@ -1,4 +1,3 @@
-import neuroml
 
 import neuroml.loaders as loaders
 

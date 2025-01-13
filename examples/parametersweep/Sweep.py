@@ -114,7 +114,7 @@ if __name__ == "__main__":
 
         import matplotlib.pyplot as plt
 
-        if not "-nogui" in sys.argv:
+        if "-nogui" not in sys.argv:
             print("Showing plots")
             plt.show()
 
@@ -184,7 +184,7 @@ if __name__ == "__main__":
 
         import matplotlib.pyplot as plt
 
-        if not "-nogui" in sys.argv:
+        if "-nogui" not in sys.argv:
             print("Showing plots")
             plt.show()
 
@@ -244,7 +244,7 @@ if __name__ == "__main__":
 
         import matplotlib.pyplot as plt
 
-        if not "-nogui" in sys.argv:
+        if "-nogui" not in sys.argv:
             print("Showing plots")
             plt.show()
 
@@ -316,6 +316,6 @@ if __name__ == "__main__":
 
         import matplotlib.pyplot as plt
 
-        if not "-nogui" in sys.argv:
+        if "-nogui" not in sys.argv:
             print("Showing plots")
             plt.show()
