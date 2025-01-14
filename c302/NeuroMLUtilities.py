@@ -7,7 +7,6 @@
 ############################################################
 
 
-
 from c302.ConnectomeReader import analyse_connections
 
 
