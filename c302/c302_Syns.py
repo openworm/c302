@@ -1,6 +1,7 @@
 import c302
 import sys
 import neuroml.writers as writers
+import importlib
 
 
 def setup(
@@ -14,7 +15,10 @@ def setup(
     config_param_overrides={},
     verbose=True,
 ):
-    exec("from c302.parameters_%s import ParameterisedModel" % parameter_set, globals())
+    ParameterisedModel = getattr(
+        importlib.import_module("c302.parameters_%s" % parameter_set),
+        "ParameterisedModel",
+    )
     params = ParameterisedModel()
 
     stim_amplitudes = ["1pA", "5pA"]

@@ -11,7 +11,7 @@ try:
     from owmeta.neuron import Neuron
     from owmeta.muscle import BodyWallMuscle
     from owmeta.worm import Worm
-except:
+except Exception:
     print("owmeta not installed! Cannot run OpenWormReader")
     exit()
 
@@ -41,7 +41,7 @@ class OpenWormReader(object):
 
         try:
             cell_names, pre, post, conns = self._read_connections("neuron")
-        except:
+        except Exception:
             print(
                 "\nProblem loading connections via owmeta! The package is installed however. You may need to try running:"
                 + "\n\n    owm bundle remote --user add ow 'https://raw.githubusercontent.com/openworm/owmeta-bundles/master/index.json'\n"
@@ -158,7 +158,7 @@ if __name__ == "__main__":
     exit()
 
     conn_map_OWR = {}
-    for c in conns:
+    for c in neuron_conns:
         conn_map_OWR[c.short().lower()] = c
 
     from c302.UpdatedSpreadsheetDataReader import read_data as read_data_usr

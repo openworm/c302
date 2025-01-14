@@ -23,7 +23,7 @@ from neuroml import SilentSynapse
 import neuroml.writers as writers
 import neuroml.loaders as loaders
 
-import c302.bioparameters
+# import c302.bioparameters
 
 import airspeed
 
@@ -39,6 +39,7 @@ import re
 
 import json
 
+
 import collections
 
 try:
@@ -51,13 +52,14 @@ try:
     from owmeta.muscle import Muscle
 
     owmeta_installed = True
-except:
+
+except Exception:
     print("owmeta not installed! Proceeding anyway...")
     owmeta_installed = False
 
 try:
     from urllib2 import URLError  # Python 2
-except:
+except Exception:
     from urllib.error import URLError  # Python 3
 
 logging.basicConfig()
@@ -519,7 +521,7 @@ def _get_cell_info(bnd, cells):
     all_muscle_info = collections.OrderedDict()
 
     if bnd is None:
-        if cached_owmeta_data == None:
+        if cached_owmeta_data is None:
             print_("Loading owmeta cached data from: %s" % OWMETA_CACHED_DATA_FILE)
             with open(OWMETA_CACHED_DATA_FILE) as f:
                 cached_owmeta_data = json.load(f)
@@ -1730,10 +1732,15 @@ def parse_dict_arg(dict_arg):
 
 
 def main():
+    import importlib
+
     print("Starting c302 v%s..." % __version__)
     args = process_args()
 
-    exec("from c302.%s import ParameterisedModel" % args.parameters, globals())
+    ParameterisedModel = getattr(
+        importlib.import_module("c302.%s" % args.parameters),
+        "ParameterisedModel",
+    )
     params = ParameterisedModel()
     generate(
         args.reference,

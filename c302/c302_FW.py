@@ -1,5 +1,6 @@
 import sys
 import os
+import importlib
 
 sys.path.insert(0, os.path.abspath("."))
 
@@ -21,7 +22,10 @@ def setup(
     verbose=True,
     config_param_overrides={},
 ):
-    exec("from c302.parameters_%s import ParameterisedModel" % parameter_set, globals())
+    ParameterisedModel = getattr(
+        importlib.import_module("c302.parameters_%s" % parameter_set),
+        "ParameterisedModel",
+    )
     params = ParameterisedModel()
 
     params.set_bioparameter(
@@ -34,13 +38,14 @@ def setup(
         "unphysiological_offset_current_dur", "2000 ms", "Testing TapWithdrawal", "0"
     )
 
+    """
     VA_motors = ["VA%s" % c for c in range_incl(1, 12)]
-    VB_motors = ["VB%s" % c for c in range_incl(1, 11)]
     DA_motors = ["DA%s" % c for c in range_incl(1, 9)]
+    AS_motors = ["AS%s" % c for c in range_incl(1, 11)]"""
+    VB_motors = ["VB%s" % c for c in range_incl(1, 11)]
     DB_motors = ["DB%s" % c for c in range_incl(1, 7)]
     DD_motors = ["DD%s" % c for c in range_incl(1, 6)]
     VD_motors = ["VD%s" % c for c in range_incl(1, 13)]
-    AS_motors = ["AS%s" % c for c in range_incl(1, 11)]
 
     cells = list(["AVBL", "AVBR"] + DB_motors + VD_motors + VB_motors + DD_motors)
 

@@ -1,14 +1,18 @@
-from c302 import generate, add_new_input
+from c302 import generate, add_new_input, print_
 
 import neuroml.writers as writers
 
+import importlib
 import sys
 
 
 if __name__ == "__main__":
     parameter_set = sys.argv[1] if len(sys.argv) == 2 else "A"
 
-    exec("from c302.parameters_%s import ParameterisedModel" % parameter_set, globals())
+    ParameterisedModel = getattr(
+        importlib.import_module("c302.parameters_%s" % parameter_set),
+        "ParameterisedModel",
+    )
     params = ParameterisedModel()
 
     cells = ["URYDL", "SMDDR", "ADAL", "RIML", "IL2VL", "RIPL"]
@@ -26,7 +30,7 @@ if __name__ == "__main__":
         duration=1000,
         dt=0.1,
         target_directory=target_directory,
-        verbose=verbose,
+        verbose=True,
     )
 
     stim_amplitude = "0.35nA"
@@ -39,4 +43,4 @@ if __name__ == "__main__":
         nml_doc, nml_file
     )  # Write over network file written above...
 
-    c302.print_("(Re)written network file to: " + nml_file)
+    print_("(Re)written network file to: " + nml_file)
