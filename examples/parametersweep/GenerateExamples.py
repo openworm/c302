@@ -17,7 +17,11 @@ def generate(cell, duration=3000, config="IClamp", parameters=None):
     reference = "%s_%s" % (config, cell)
 
     cell_id = "%s" % cell
-    cell_nmll = Cell(id=cell_id, neuroml2_source_file="%s.cell.nml" % (cell))
+    
+    if cell_id=='GenericNeuronCellX':
+        cell_nmll = Cell(id=cell_id, lems_source_file='cell_X.xml')
+    else:
+        cell_nmll = Cell(id=cell_id, neuroml2_source_file="%s.cell.nml" % (cell))
 
     ################################################################################
     ###   Add some inputs
@@ -27,15 +31,26 @@ def generate(cell, duration=3000, config="IClamp", parameters=None):
             parameters = {}
             parameters["stim_amp"] = "350pA"
 
-        input_source = InputSource(
-            id="iclamp_0",
-            neuroml2_input="PulseGenerator",
-            parameters={
-                "amplitude": "stim_amp",
-                "delay": "500ms",
-                "duration": "2000ms",
-            },
-        )
+        if cell_id is not 'GenericNeuronCellX':
+            input_source = InputSource(
+                id="iclamp_0",
+                neuroml2_input="PulseGenerator",
+                parameters={
+                    "amplitude": "stim_amp",
+                    "delay": "500ms",
+                    "duration": "2000ms",
+                },
+            )
+        else:
+            input_source = InputSource(
+                id="iclamp_0",
+                neuroml2_input="PulseGenerator",
+                parameters={
+                    "amplitude": "stim_amp",
+                    "delay": "2000ms",
+                    "duration": "6000ms",
+                },
+            )
 
     else:
         if not parameters:
@@ -65,13 +80,26 @@ def generate(cell, duration=3000, config="IClamp", parameters=None):
         input_for_default_population=input_source,
     )
 
+    if cell_id=='GenericNeuronCellX':
+        sim.record_traces={}
+        sim.record_variables={"v": {"all": "*"}, "state": {"all": "*"}, "output": {"all": "*"}}
+
+    #qprint(dir(sim))
+    sim.to_json_file()
+
     return sim, net
 
 
 if __name__ == "__main__":
+
     if "-all" in sys.argv:
         for cell in colors:
             generate(cell, 3000, config="IClamp", parameters={"stim_amp": "4pA"})
+
+    elif "-x" in sys.argv:
+        
+        sim, net = generate("GenericNeuronCellX", 10000, config="IClamp", parameters={"stim_amp": "1pA"})
+        check_to_generate_or_run(sys.argv, sim)
 
     else:
         # sim, net = generate('cADpyr229_L23_PC_c292d67a2e_0_0', 3000, config="IClamp")

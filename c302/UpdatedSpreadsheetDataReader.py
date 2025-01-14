@@ -11,8 +11,8 @@
 
 import csv
 
-from c302.NeuroMLUtilities import ConnectionInfo
-from c302.NeuroMLUtilities import analyse_connections
+from c302.ConnectomeReader import ConnectionInfo
+from c302.ConnectomeReader import analyse_connections
 import os
 
 from c302 import print_

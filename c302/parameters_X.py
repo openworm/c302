@@ -1,12 +1,12 @@
 """
 
-    Parameters X:
-        Cells:           Single compartment, conductance based, passive cell
-        Chem Synapses:   Analogue/graded synapses; continuous transmission (voltage dependent)
-        Gap junctions:   Electrical connection; current linerly depends on difference in voltages 
-        
-    ASSESSMENT:
-        TBC...
+Parameters X:
+    Cells:           Single compartment, conductance based, passive cell
+    Chem Synapses:   Analogue/graded synapses; continuous transmission (voltage dependent)
+    Gap junctions:   Electrical connection; current linerly depends on difference in voltages
+
+ASSESSMENT:
+    TBC...
 
 """
 
@@ -23,7 +23,6 @@ from neuroml import SpecificCapacitance
 from neuroml import ChannelDensity
 from neuroml import SpikeThresh
 
-from neuroml import GradedSynapse
 from neuroml import GapJunction
 from neuroml import PulseGenerator
 

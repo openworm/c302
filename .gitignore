@@ -106,3 +106,6 @@ arm64
 /examples/test/images/c302_C1_Social.net.nml
 /examples/test/images/c302_C1_Syns.net.nml
 *ken.sh
+/examples/parametersweep/IClamp_GenericNeuronCellX__lems.xml
+/examples/parametersweep/LEMS_SimCanonical_X.png
+/examples/parametersweep/Canonical_X__lems.xml

@@ -1,8 +1,8 @@
 import logging
 import re
 
-from c302.NeuroMLUtilities import ConnectionInfo
-from c302.NeuroMLUtilities import analyse_connections
+from c302.ConnectomeReader import ConnectionInfo
+from c302.ConnectomeReader import analyse_connections
 from c302 import print_, MUSCLE_RE
 
 try:

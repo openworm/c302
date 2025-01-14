@@ -4,9 +4,9 @@
 Parameters and setting used to generate this network:
 
     Data reader:                    SpreadsheetDataReader
-    c302 version:                   0.8.0
-    owmeta version:                 0.12.3
-    owmeta_core version:            0.13.5
+    c302 version:                   0.9.0
+    owmeta version:                 - not installed -
+    owmeta_core version:            - not installed -
     Cells:                          All cells
     Cell stimulated:                ['PLML', 'PLMR']
     Connection:                     []

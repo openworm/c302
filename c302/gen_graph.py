@@ -4,6 +4,7 @@ Utility for converting NeuroML descriptions to graphs
 
 Originally developed by David Lung: https://github.com/lungd/nml_to_graph
 """
+
 import os
 import sys
 import xml.etree.ElementTree as ET

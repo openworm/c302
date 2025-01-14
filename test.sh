@@ -1,5 +1,7 @@
 set -ex
 
+pip install .
+
 ##   Test readers
 
 python -m c302.SpreadsheetDataReader 
@@ -140,6 +142,11 @@ pynml LEMS_c302_C_Syns.xml -neuron
 nrnivmodl
 
 cd -
+
+## Try NeuroMLlite examples 
+cd examples/parametersweep/
+./regenerateAndTest.sh 
+cd ../..
 
 ## Try helper scripts
 

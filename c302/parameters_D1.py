@@ -1,35 +1,19 @@
 """
 
-    Parameters D:
-        Cells:           Multicompartmental, conductance based cell models with HH like ion channels
-        Chem Synapses:   Analogue/graded synapses; continuous transmission (voltage dependent)
-        Gap junctions:   Electrical connection; current linerly depends on difference in voltages 
-        
-    ASSESSMENT:
-        May be the right target for the "full scale" model in the medium term...
-        Similar issues to parameters D
-        Note issue https://github.com/openworm/CElegansNeuroML/issues/71 regarding status of this
-        
+Parameters D:
+    Cells:           Multicompartmental, conductance based cell models with HH like ion channels
+    Chem Synapses:   Analogue/graded synapses; continuous transmission (voltage dependent)
+    Gap junctions:   Electrical connection; current linerly depends on difference in voltages
+
+ASSESSMENT:
+    May be the right target for the "full scale" model in the medium term...
+    Similar issues to parameters D
+    Note issue https://github.com/openworm/CElegansNeuroML/issues/71 regarding status of this
+
 
 """
 
-from neuroml import Cell
-from neuroml import Morphology
-from neuroml import Point3DWithDiam
-from neuroml import Segment
-from neuroml import BiophysicalProperties
-from neuroml import IntracellularProperties
-from neuroml import Resistivity
-from neuroml import Species
-from neuroml import MembraneProperties
-from neuroml import InitMembPotential
-from neuroml import SpecificCapacitance
-from neuroml import ChannelDensity
-from neuroml import SpikeThresh
-from neuroml import FixedFactorConcentrationModel
-
 from neuroml import GapJunction
-from neuroml import PulseGenerator
 
 from c302.parameters_D import ParameterisedModel as ParameterisedModel_D
 

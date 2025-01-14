@@ -1,16 +1,22 @@
 {
     "SimCanonical_X": {
-        "version": "NeuroMLlite v0.5.9",
+        "version": "NeuroMLlite v0.6.1",
         "network": "Canonical_X.json",
         "duration": 3000.0,
         "dt": 0.1,
-        "record_traces": {
-            "all": "*"
+        "record_traces": {},
+        "record_variables": {
+            "state": {
+                "all": "*"
+            },
+            "output": {
+                "all": "*"
+            }
         },
         "plots2D": {
             "DB-VB": {
-                "x_axis": "DB/0/GenericNeuronCellX/v",
-                "y_axis": "VB/0/GenericNeuronCellX/v"
+                "x_axis": "DB/0/GenericNeuronCellX/output",
+                "y_axis": "VB/0/GenericNeuronCellX/output"
             }
         }
     }

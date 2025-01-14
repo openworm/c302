@@ -6,12 +6,7 @@
 
 ############################################################
 
-from c302 import print_
 
-from c302.ConnectomeReader import PREFERRED_NEURON_NAMES
-from c302.ConnectomeReader import PREFERRED_MUSCLE_NAMES
-
-from c302.ConnectomeReader import ConnectionInfo
 from c302.ConnectomeReader import analyse_connections
 
 
