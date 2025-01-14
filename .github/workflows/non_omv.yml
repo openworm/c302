@@ -65,6 +65,7 @@ jobs:
         
     - name: Run test script
       run: |
+        pip install ruff
         ./test.sh
         
     - name: Final version info
