@@ -1,5 +1,7 @@
 set -ex
 
+ruff format **/*.py
+
 pip install .
 
 ##   Test readers
