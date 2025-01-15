@@ -79,7 +79,7 @@ def setup(
 
     reference = "c302_%s_Full" % parameter_set
 
-    cell_names, conns = c302.get_cell_names_and_connection()
+    cell_names, conns = c302.get_cell_names_and_connection(data_reader)
 
     nml_doc = None
 

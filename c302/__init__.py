@@ -23,6 +23,8 @@ from neuroml import SilentSynapse
 import neuroml.writers as writers
 import neuroml.loaders as loaders
 
+import cect
+
 # import c302.bioparameters
 
 import airspeed
@@ -93,7 +95,11 @@ def load_data_reader(data_reader="SpreadsheetDataReader"):
     Returns:
         reader (obj): The data reader object
     """
-    return importlib.import_module("c302.%s" % data_reader)
+    # return importlib.import_module("c302.%s" % data_reader)
+    if "cect" in data_reader:
+        return importlib.import_module("%s" % data_reader)
+    else:
+        return importlib.import_module("c302.%s" % data_reader)
 
 
 def get_str_from_expnotation(num):
@@ -107,7 +113,7 @@ def get_str_from_expnotation(num):
     return "{0:.15f}".format(num)
 
 
-def get_muscle_position(muscle, data_reader="SpreadsheetDataReader"):
+def get_muscle_position(muscle, data_reader):
     if muscle == "MANAL" or muscle == "MVULVA":
         return 0, 0, 0
     # TODO: Pull these positions from openworm/owmeta-data
@@ -449,7 +455,7 @@ def get_file_name_relative_to_c302(file_name):
         return os.path.relpath(os.environ["C302_HOME"], file_name)
 
 
-def get_cell_names_and_connection(data_reader="SpreadsheetDataReader", test=False):
+def get_cell_names_and_connection(data_reader, test=False):
     # Use the spreadsheet reader to give a list of all cells and a list of all connections
     # This could be replaced with a call to "DatabaseReader" or "OpenWormNeuroLexReader" in future...
     # If called from unittest folder ammend path to "../../../../"
@@ -463,9 +469,7 @@ def get_cell_names_and_connection(data_reader="SpreadsheetDataReader", test=Fals
     return cell_names, conns
 
 
-def get_cell_muscle_names_and_connection(
-    data_reader="SpreadsheetDataReader", test=False
-):
+def get_cell_muscle_names_and_connection(data_reader, test=False):
     mneurons, all_muscles, muscle_conns = load_data_reader(
         data_reader
     ).read_muscle_data()
@@ -707,6 +711,11 @@ def generate(
         "\n\nParameters and setting used to generate this network:\n\n"
         + "    Data reader:                    %s\n" % data_reader
         + "    c302 version:                   %s\n" % __version__
+        + (
+            "    cect version:                   %s\n" % (cect.__version__)
+            if "cect" in data_reader
+            else ""
+        )
         + "    owmeta version:                 %s\n"
         % ("- not installed -" if not owmeta_installed else owmeta_version)
         + "    owmeta_core version:            %s\n"

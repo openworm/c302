@@ -5,8 +5,9 @@
 
 Parameters and setting used to generate this network:
 
-    Data reader:                    SpreadsheetDataReader
+    Data reader:                    cect.SpreadsheetDataReader
     c302 version:                   0.9.1
+    cect version:                   0.2.2
     owmeta version:                 - not installed -
     owmeta_core version:            - not installed -
     Cells:                          ['DB2', 'VB2', 'DD2', 'VD2', 'DB3', 'VB3', 'DD3', 'VD3', 'DA2', 'VA2', 'DA3', 'VA3', 'AVBL', 'AVBR']
@@ -112,39 +113,39 @@ Parameters and setting used to generate this network:
 
         <Display id="neurons" title="c302_D1_Oscillator: Membrane potential of a number of neurons" timeScale="1ms" xmin="-100.0" xmax="1100.0" ymin="-60" ymax="25">
             
-            <Line id="AVBL" quantity="AVBL/0/AVBL/v" scale="1mV" color="#e13b00" timeScale="1ms" />
-            <Line id="AVBR" quantity="AVBR/0/AVBR/v" scale="1mV" color="#32b579" timeScale="1ms" />
-            <Line id="DA2" quantity="DA2/0/DA2/v" scale="1mV" color="#b1f7ed" timeScale="1ms" />
-            <Line id="DA3" quantity="DA3/0/DA3/v" scale="1mV" color="#3a00f9" timeScale="1ms" />
-            <Line id="DB2" quantity="DB2/0/DB2/v" scale="1mV" color="#232d17" timeScale="1ms" />
-            <Line id="DB3" quantity="DB3/0/DB3/v" scale="1mV" color="#f6b588" timeScale="1ms" />
-            <Line id="DD2" quantity="DD2/0/DD2/v" scale="1mV" color="#002400" timeScale="1ms" />
-            <Line id="DD3" quantity="DD3/0/DD3/v" scale="1mV" color="#c1551b" timeScale="1ms" />
-            <Line id="VA2" quantity="VA2/0/VA2/v" scale="1mV" color="#266e49" timeScale="1ms" />
-            <Line id="VA3" quantity="VA3/0/VA3/v" scale="1mV" color="#489ce8" timeScale="1ms" />
-            <Line id="VB2" quantity="VB2/0/VB2/v" scale="1mV" color="#145a8b" timeScale="1ms" />
-            <Line id="VB3" quantity="VB3/0/VB3/v" scale="1mV" color="#ed15c5" timeScale="1ms" />
-            <Line id="VD2" quantity="VD2/0/VD2/v" scale="1mV" color="#eff317" timeScale="1ms" />
-            <Line id="VD3" quantity="VD3/0/VD3/v" scale="1mV" color="#e0978c" timeScale="1ms" />
+            <Line id="AVBL" quantity="AVBL/0/AVBL/v" scale="1mV" color="#10dbf7" timeScale="1ms" />
+            <Line id="AVBR" quantity="AVBR/0/AVBR/v" scale="1mV" color="#fb8e52" timeScale="1ms" />
+            <Line id="DA2" quantity="DA2/0/DA2/v" scale="1mV" color="#267fb8" timeScale="1ms" />
+            <Line id="DA3" quantity="DA3/0/DA3/v" scale="1mV" color="#b5c3d7" timeScale="1ms" />
+            <Line id="DB2" quantity="DB2/0/DB2/v" scale="1mV" color="#599bb9" timeScale="1ms" />
+            <Line id="DB3" quantity="DB3/0/DB3/v" scale="1mV" color="#e1c016" timeScale="1ms" />
+            <Line id="DD2" quantity="DD2/0/DD2/v" scale="1mV" color="#639bbb" timeScale="1ms" />
+            <Line id="DD3" quantity="DD3/0/DD3/v" scale="1mV" color="#dff021" timeScale="1ms" />
+            <Line id="VA2" quantity="VA2/0/VA2/v" scale="1mV" color="#72d37a" timeScale="1ms" />
+            <Line id="VA3" quantity="VA3/0/VA3/v" scale="1mV" color="#9a2429" timeScale="1ms" />
+            <Line id="VB2" quantity="VB2/0/VB2/v" scale="1mV" color="#4c3931" timeScale="1ms" />
+            <Line id="VB3" quantity="VB3/0/VB3/v" scale="1mV" color="#b2ddd4" timeScale="1ms" />
+            <Line id="VD2" quantity="VD2/0/VD2/v" scale="1mV" color="#495b3d" timeScale="1ms" />
+            <Line id="VD3" quantity="VD3/0/VD3/v" scale="1mV" color="#54595a" timeScale="1ms" />
             
         </Display>
       
         <Display id="activity_neurons" title="c302_D1_Oscillator: Activity of a number of neurons" timeScale="1ms" xmin="-100.0" xmax="1100.0" ymin="-0.1" ymax="1.1">
             
-            <Line id="AVBL" quantity="AVBL/0/AVBL/caConc" scale="1" color="#2e112a" timeScale="1ms" />
-            <Line id="AVBR" quantity="AVBR/0/AVBR/caConc" scale="1" color="#000000" timeScale="1ms" />
-            <Line id="DA2" quantity="DA2/0/DA2/caConc" scale="1" color="#4c2e5d" timeScale="1ms" />
-            <Line id="DA3" quantity="DA3/0/DA3/caConc" scale="1" color="#7f21ee" timeScale="1ms" />
-            <Line id="DB2" quantity="DB2/0/DB2/caConc" scale="1" color="#8a209a" timeScale="1ms" />
-            <Line id="DB3" quantity="DB3/0/DB3/caConc" scale="1" color="#7f66e8" timeScale="1ms" />
-            <Line id="DD2" quantity="DD2/0/DD2/caConc" scale="1" color="#aa49f2" timeScale="1ms" />
-            <Line id="DD3" quantity="DD3/0/DD3/caConc" scale="1" color="#27fe53" timeScale="1ms" />
-            <Line id="VA2" quantity="VA2/0/VA2/caConc" scale="1" color="#00b138" timeScale="1ms" />
-            <Line id="VA3" quantity="VA3/0/VA3/caConc" scale="1" color="#14d58d" timeScale="1ms" />
-            <Line id="VB2" quantity="VB2/0/VB2/caConc" scale="1" color="#4f994f" timeScale="1ms" />
-            <Line id="VB3" quantity="VB3/0/VB3/caConc" scale="1" color="#b2fdae" timeScale="1ms" />
-            <Line id="VD2" quantity="VD2/0/VD2/caConc" scale="1" color="#f157e1" timeScale="1ms" />
-            <Line id="VD3" quantity="VD3/0/VD3/caConc" scale="1" color="#3f5fd5" timeScale="1ms" />
+            <Line id="AVBL" quantity="AVBL/0/AVBL/caConc" scale="1" color="#0069ec" timeScale="1ms" />
+            <Line id="AVBR" quantity="AVBR/0/AVBR/caConc" scale="1" color="#11faa7" timeScale="1ms" />
+            <Line id="DA2" quantity="DA2/0/DA2/caConc" scale="1" color="#16d747" timeScale="1ms" />
+            <Line id="DA3" quantity="DA3/0/DA3/caConc" scale="1" color="#9186e9" timeScale="1ms" />
+            <Line id="DB2" quantity="DB2/0/DB2/caConc" scale="1" color="#44e97a" timeScale="1ms" />
+            <Line id="DB3" quantity="DB3/0/DB3/caConc" scale="1" color="#007844" timeScale="1ms" />
+            <Line id="DD2" quantity="DD2/0/DD2/caConc" scale="1" color="#7aa0e6" timeScale="1ms" />
+            <Line id="DD3" quantity="DD3/0/DD3/caConc" scale="1" color="#a60050" timeScale="1ms" />
+            <Line id="VA2" quantity="VA2/0/VA2/caConc" scale="1" color="#1210fe" timeScale="1ms" />
+            <Line id="VA3" quantity="VA3/0/VA3/caConc" scale="1" color="#4cc4bf" timeScale="1ms" />
+            <Line id="VB2" quantity="VB2/0/VB2/caConc" scale="1" color="#e25561" timeScale="1ms" />
+            <Line id="VB3" quantity="VB3/0/VB3/caConc" scale="1" color="#e47d8c" timeScale="1ms" />
+            <Line id="VD2" quantity="VD2/0/VD2/caConc" scale="1" color="#88e99a" timeScale="1ms" />
+            <Line id="VD3" quantity="VD3/0/VD3/caConc" scale="1" color="#f5b1a7" timeScale="1ms" />
 
         </Display>
 
