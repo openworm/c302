@@ -61,8 +61,14 @@ try:
 except Exception:
     from urllib.error import URLError  # Python 3
 
+
+from cect.Cells import BODY_WALL_MUSCLE_NAMES
+
 DEFAULT_DATA_READER = "SpreadsheetDataReader"
+#
+# DEFAULT_DATA_READER = "cect.White_whole"
 # DEFAULT_DATA_READER = "cect.Cook2019HermReader"
+DEFAULT_DATA_READER = "cect.SpreadsheetDataReader"
 FW_DATA_READER = "UpdatedSpreadsheetDataReader2"
 
 logging.basicConfig()
@@ -478,7 +484,20 @@ def get_cell_muscle_names_and_connection(data_reader, test=False):
         all_muscles.remove("MANAL")
     if "MVULVA" in all_muscles:
         all_muscles.remove("MVULVA")
-    return mneurons, sorted(all_muscles), muscle_conns
+
+    all_known_muscles = []
+    if len(all_muscles) == 0:
+        all_known_muscles = BODY_WALL_MUSCLE_NAMES
+    else:
+        for m in all_muscles:
+            if m in BODY_WALL_MUSCLE_NAMES:
+                all_known_muscles.append(m)
+
+    all_known_muscles = sorted(all_known_muscles)
+
+    print(" --- Using for muscles: %s" % all_known_muscles)
+
+    return mneurons, all_known_muscles, muscle_conns
 
 
 def is_cond_based_cell(params):
