@@ -69,7 +69,7 @@ DEFAULT_DATA_READER = "SpreadsheetDataReader"
 # DEFAULT_DATA_READER = "cect.White_whole"
 # DEFAULT_DATA_READER = "cect.Cook2019HermReader"
 DEFAULT_DATA_READER = "cect.SpreadsheetDataReader"
-FW_DATA_READER = "UpdatedSpreadsheetDataReader2"
+FW_DATA_READER = "cect.UpdatedSpreadsheetDataReader2"
 
 logging.basicConfig()
 
