@@ -38,10 +38,7 @@ import importlib
 import math
 from lxml import etree
 import re
-
 import json
-
-
 import collections
 
 try:
@@ -63,6 +60,10 @@ try:
     from urllib2 import URLError  # Python 2
 except Exception:
     from urllib.error import URLError  # Python 3
+
+DEFAULT_DATA_READER = "SpreadsheetDataReader"
+# DEFAULT_DATA_READER = "cect.Cook2019HermReader"
+FW_DATA_READER = "UpdatedSpreadsheetDataReader2"
 
 logging.basicConfig()
 
@@ -87,7 +88,7 @@ def print_(msg, print_it=True):  # print_it=False when not verbose
         print("%s %s" % (pre, msg.replace("\n", "\n" + pre)))
 
 
-def load_data_reader(data_reader="SpreadsheetDataReader"):
+def load_data_reader(data_reader):
     """
     Imports and returns data reader module
     Args:
@@ -166,8 +167,8 @@ def process_args():
         "-datareader",
         type=str,
         metavar="<data-reader>",
-        default="SpreadsheetDataReader",
-        help='Use a specific data reader. Possible values are: "SpreadsheetDataReader". (default: SpreadsheetDataReader)',
+        default=DEFAULT_DATA_READER,
+        help="Use a specific data reader. (default: %s)" % DEFAULT_DATA_READER,
     )
 
     parser.add_argument(
@@ -456,7 +457,7 @@ def get_file_name_relative_to_c302(file_name):
 
 
 def get_cell_names_and_connection(data_reader, test=False):
-    # Use the spreadsheet reader to give a list of all cells and a list of all connections
+    # Use the data reader to give a list of all cells and a list of all connections
     # This could be replaced with a call to "DatabaseReader" or "OpenWormNeuroLexReader" in future...
     # If called from unittest folder ammend path to "../../../../"
 
@@ -633,7 +634,7 @@ def mirror_param(params, k, v):
 def generate(
     net_id,
     params,
-    data_reader="SpreadsheetDataReader",
+    data_reader=DEFAULT_DATA_READER,
     cells=None,
     cells_to_plot=None,
     cells_to_stimulate=None,
@@ -1014,10 +1015,6 @@ def generate(
     mneurons, all_muscles, muscle_conns = get_cell_muscle_names_and_connection(
         data_reader
     )
-
-    # print(all_muscles)
-    # if data_reader == "SpreadsheetDataReader":
-    #    all_muscles = get_muscle_names()
 
     if muscles_to_include is None or muscles_to_include is True:
         muscles_to_include = all_muscles

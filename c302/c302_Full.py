@@ -11,7 +11,7 @@ def setup(
     dt=0.05,
     target_directory="examples",
     muscles_to_include=None,  # None => All!
-    data_reader="SpreadsheetDataReader",
+    data_reader=c302.DEFAULT_DATA_READER,
     param_overrides={},
     config_param_overrides={},
     verbose=True,
