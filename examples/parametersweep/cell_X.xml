@@ -13,7 +13,6 @@
 
     <Attachments name="synapses" type="basePointCurrent"/>
 
-    <Constant name="MSEC" dimension="time" value="1ms"/>
     <Constant name="MVOLT" dimension="voltage" value="1mV"/>
     <Constant name="PAMP" dimension="current" value="1pA"/>
 
