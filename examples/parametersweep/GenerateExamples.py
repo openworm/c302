@@ -30,15 +30,21 @@ def generate(cell, duration=3000, config="IClamp", parameters=None):
         if not parameters:
             parameters = {}
             parameters["stim_amp"] = "350pA"
+            
+        parameters["stim_delay"] = "2000ms"
+        parameters["stim_duration"] = "6000ms"
 
         if cell_id is not "GenericNeuronCellX":
+
+            parameters["stim_delay"] = "500ms"
+            parameters["stim_duration"] = "2000ms"
             input_source = InputSource(
                 id="iclamp_0",
                 neuroml2_input="PulseGenerator",
                 parameters={
                     "amplitude": "stim_amp",
-                    "delay": "500ms",
-                    "duration": "2000ms",
+                    "delay": "stim_delay",
+                    "duration": "stim_duration",
                 },
             )
         else:
@@ -47,8 +53,8 @@ def generate(cell, duration=3000, config="IClamp", parameters=None):
                 neuroml2_input="PulseGenerator",
                 parameters={
                     "amplitude": "stim_amp",
-                    "delay": "2000ms",
-                    "duration": "6000ms",
+                    "delay": "stim_delay",
+                    "duration": "stim_duration",
                 },
             )
 
@@ -81,9 +87,8 @@ def generate(cell, duration=3000, config="IClamp", parameters=None):
     )
 
     if cell_id == "GenericNeuronCellX":
-        sim.record_traces = {}
+        sim.record_traces={"all": "*"}
         sim.record_variables = {
-            "v": {"all": "*"},
             "state": {"all": "*"},
             "output": {"all": "*"},
         }
