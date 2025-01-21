@@ -2,15 +2,23 @@
     "Canonical_X": {
         "version": "NeuroMLlite v0.6.1",
         "parameters": {
-            "stim_duration": "250ms",
-            "stim_amp": "1pA",
+            "bias": 0,
+            "gain": 1,
+            "tau": "100ms",
+            "stim_duration": "2000ms",
+            "stim_amp": "0.2pA",
             "weight_IN_MN": 1,
             "weight_MN_MN_Exc": 1,
-            "weight_MN_MN_Inh": -1,
+            "weight_MN_MN_Inh": -5,
             "scaleDinout": 0.5
         },
         "cells": {
             "GenericNeuronCellX": {
+                "parameters": {
+                    "bias": "bias",
+                    "gain": "gain",
+                    "tau": "tau"
+                },
                 "lems_source_file": "cell_X.xml"
             }
         },
@@ -119,9 +127,9 @@
             }
         },
         "projections": {
-            "proj_AVB_VD": {
+            "proj_AVB_VB": {
                 "presynaptic": "AVB",
-                "postsynaptic": "VD",
+                "postsynaptic": "VB",
                 "synapse": "neuron_to_neuron_exc_syn_x",
                 "type": "continuousProjection",
                 "delay": 0,
@@ -130,10 +138,21 @@
                     "probability": 1
                 }
             },
+            "proj_VB_VD": {
+                "presynaptic": "VB",
+                "postsynaptic": "VD",
+                "synapse": "neuron_to_neuron_exc_syn_x",
+                "type": "continuousProjection",
+                "delay": 0,
+                "weight": "weight_MN_MN_Exc",
+                "random_connectivity": {
+                    "probability": 1
+                }
+            },
             "proj_VD_VB": {
                 "presynaptic": "VD",
                 "postsynaptic": "VB",
-                "synapse": "neuron_to_neuron_exc_syn_x",
+                "synapse": "neuron_to_neuron_inh_syn_x",
                 "type": "continuousProjection",
                 "delay": 0,
                 "weight": "weight_MN_MN_Inh",

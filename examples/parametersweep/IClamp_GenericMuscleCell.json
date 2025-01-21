@@ -3,7 +3,9 @@
         "version": "NeuroMLlite v0.6.1",
         "notes": "A network model: IClamp_GenericMuscleCell",
         "parameters": {
-            "stim_amp": "4pA"
+            "stim_amp": "4pA",
+            "stim_delay": "500ms",
+            "stim_duration": "2000ms"
         },
         "cells": {
             "GenericMuscleCell": {
@@ -14,8 +16,8 @@
             "iclamp_0": {
                 "parameters": {
                     "amplitude": "stim_amp",
-                    "delay": "500ms",
-                    "duration": "2000ms"
+                    "delay": "stim_delay",
+                    "duration": "stim_duration"
                 },
                 "neuroml2_input": "PulseGenerator"
             }

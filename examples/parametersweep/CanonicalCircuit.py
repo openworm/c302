@@ -80,10 +80,18 @@ def generate(duration=1000, paramset="C"):
 
     net = Network(id=reference)
     net.parameters = {}
+
+    cell_params = {"bias": 0, "gain": 1, "tau": "100ms"}
+
     if paramset == "X":
         neuron_id = "GenericNeuronCellX"
 
-        neuron_nmllite = Cell(id=neuron_id, lems_source_file='cell_X.xml')
+        neuron_nmllite = Cell(id=neuron_id, lems_source_file="cell_X.xml")
+        neuron_nmllite.parameters = {}
+
+        for p in cell_params:
+            neuron_nmllite.parameters[p] = p
+            net.parameters[p] = cell_params[p]
 
         exc_syn = Synapse(
             id="neuron_to_neuron_exc_syn_x", neuroml2_source_file="test_syns.xml"
@@ -126,11 +134,11 @@ def generate(duration=1000, paramset="C"):
     net.parameters["scaleDinout"] = 0.5
 
     if paramset == "X":
-        net.parameters["stim_duration"] = "250ms"
-        net.parameters["stim_amp"] = "1pA"
+        net.parameters["stim_duration"] = "2000ms"
+        net.parameters["stim_amp"] = "0.2pA"
         net.parameters["weight_IN_MN"] = 1
         net.parameters["weight_MN_MN_Exc"] = 1
-        net.parameters["weight_MN_MN_Inh"] = -1
+        net.parameters["weight_MN_MN_Inh"] = -5
         net.parameters["scaleDinout"] = 0.5
 
     mode = "circ"
@@ -150,20 +158,22 @@ def generate(duration=1000, paramset="C"):
         add_connection(net, "DD", "DB", inh_syn, "weight_MN_MN_Inh")
 
     if mode == "iclamp":
-        
-        add_connection(net, "AVB", "VD", exc_syn, "weight_IN_MN")
-        add_connection(net, "VD", "VB", exc_syn, "weight_MN_MN_Inh")
+        add_connection(net, "AVB", "VB", exc_syn, "weight_IN_MN")
+        add_connection(net, "VB", "VD", exc_syn, "weight_MN_MN_Exc")
+        # add_connection(net, "VB", "DD", exc_syn, "weight_MN_MN_Exc")
+
+        add_connection(net, "VD", "VB", inh_syn, "weight_MN_MN_Inh")
 
     if paramset == "X":
-            input_source = InputSource(
-                id="iclamp_0",
-                neuroml2_input="PulseGenerator",
-                parameters={
-                    "amplitude": "stim_amp",
-                    "delay": "500ms",
-                    "duration": "stim_duration",
-                },
-            )
+        input_source = InputSource(
+            id="iclamp_0",
+            neuroml2_input="PulseGenerator",
+            parameters={
+                "amplitude": "stim_amp",
+                "delay": "500ms",
+                "duration": "stim_duration",
+            },
+        )
 
     else:
         input_source = InputSource(
@@ -202,13 +212,15 @@ def generate(duration=1000, paramset="C"):
         },
     )
 
-    if paramset=="X":
-
-        sim.record_traces={}
-        sim.record_variables={"state": {"all": "*"}, "output": {"all": "*"}} # "V": {"all": "*"}, 
-        sim.plots2D={
+    if paramset == "X":
+        sim.record_traces = {}
+        sim.record_variables = {
+            "state": {"all": "*"},
+            "output": {"all": "*"},
+        }  # "V": {"all": "*"},
+        sim.plots2D = {
             "DB-VB": {
-                "x_axis": "DB/0/%s/output" % neuron_id,
+                "x_axis": "VD/0/%s/output" % neuron_id,
                 "y_axis": "VB/0/%s/output" % neuron_id,
             }
         }
