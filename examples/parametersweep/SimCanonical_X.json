@@ -15,7 +15,7 @@
         },
         "plots2D": {
             "DB-VB": {
-                "x_axis": "DB/0/GenericNeuronCellX/output",
+                "x_axis": "VD/0/GenericNeuronCellX/output",
                 "y_axis": "VB/0/GenericNeuronCellX/output"
             }
         }
