@@ -1,14 +1,14 @@
+from GenerateExamples import colors
+
+from neuromllite.sweep.ParameterSweep import ParameterSweep
+from neuromllite.sweep.ParameterSweep import NeuroMLliteRunner
+
 import sys
 
 import pprint
 
 pp = pprint.PrettyPrinter(depth=6)
 
-from neuromllite.sweep.ParameterSweep import ParameterSweep
-from neuromllite.sweep.ParameterSweep import NeuroMLliteRunner
-
-
-from GenerateExamples import colors
 
 if __name__ == "__main__":
     heatmap_lims = [-110, 20]
@@ -249,8 +249,12 @@ if __name__ == "__main__":
             plt.show()
 
     elif "-x" in sys.argv:
-
-        fixed = {"dt": 0.025, "duration": 3000, "stim_delay": "500ms", "stim_duration": "2000ms"}
+        fixed = {
+            "dt": 0.025,
+            "duration": 3000,
+            "stim_delay": "500ms",
+            "stim_duration": "2000ms",
+        }
 
         quick = False
         # quick=True
@@ -287,7 +291,11 @@ if __name__ == "__main__":
         report = ps.run()
         ps.print_report()
 
-        ps.plotLines('stim_amp','average_last_1percent',save_figure_to='average_last_1percent_%s.png'%type)
+        ps.plotLines(
+            "stim_amp",
+            "average_last_1percent",
+            save_figure_to="average_last_1percent_%s.png" % type,
+        )
 
         # ps.plotLines('dt','mean_spike_frequency',save_figure_to='mean_spike_frequency_%s.png'%type, logx=True)
         # ps.plotLines('number_per_cell','mean_spike_frequency',save_figure_to='poisson_mean_spike_frequency_%s.png'%type)
