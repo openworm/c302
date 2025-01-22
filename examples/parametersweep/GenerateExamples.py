@@ -1,5 +1,9 @@
-from neuromllite import *
-from neuromllite.NetworkGenerator import *
+from neuromllite import (
+    Cell,
+    InputSource,
+)
+
+from neuromllite.NetworkGenerator import check_to_generate_or_run
 from neuromllite.utils import create_new_model
 import sys
 
@@ -30,12 +34,11 @@ def generate(cell, duration=3000, config="IClamp", parameters=None):
         if not parameters:
             parameters = {}
             parameters["stim_amp"] = "350pA"
-            
+
         parameters["stim_delay"] = "2000ms"
         parameters["stim_duration"] = "6000ms"
 
-        if cell_id is not "GenericNeuronCellX":
-
+        if cell_id != "GenericNeuronCellX":
             parameters["stim_delay"] = "500ms"
             parameters["stim_duration"] = "2000ms"
             input_source = InputSource(
@@ -64,6 +67,7 @@ def generate(cell, duration=3000, config="IClamp", parameters=None):
             parameters["average_rate"] = "100 Hz"
             parameters["number_per_cell"] = "10"
 
+        """ Not yet tested..?
         input_source = InputSource(
             id="pfs0",
             neuroml2_input="PoissonFiringSynapse",
@@ -72,7 +76,7 @@ def generate(cell, duration=3000, config="IClamp", parameters=None):
                 "synapse": syn_exc.id,
                 "spike_target": "./%s" % syn_exc.id,
             },
-        )
+        )"""
 
     sim, net = create_new_model(
         reference,
@@ -87,7 +91,7 @@ def generate(cell, duration=3000, config="IClamp", parameters=None):
     )
 
     if cell_id == "GenericNeuronCellX":
-        sim.record_traces={"all": "*"}
+        sim.record_traces = {"all": "*"}
         sim.record_variables = {
             "state": {"all": "*"},
             "output": {"all": "*"},
