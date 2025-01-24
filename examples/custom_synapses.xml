@@ -19,7 +19,7 @@
         <InstanceRequirement name="peer" type="outputSynapse"/>
 
         <Dynamics>
-            <DerivedVariable name="outputpeer" dimension="none" select="peer/state"/>
+            <DerivedVariable name="outputpeer" dimension="none" select="peer/output"/>
             <DerivedVariable name="i" exposure="i"  value="weight * outputpeer * PAMP_SCALE"/>
         </Dynamics>
     </ComponentType>
