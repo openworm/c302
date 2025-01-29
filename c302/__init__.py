@@ -104,7 +104,8 @@ def load_data_reader(data_reader):
     """
     # return importlib.import_module("c302.%s" % data_reader)
     if "cect" in data_reader:
-        return importlib.import_module("%s" % data_reader)
+        dr = importlib.import_module("%s" % data_reader)
+        return dr.get_instance()
     else:
         return importlib.import_module("c302.%s" % data_reader)
 

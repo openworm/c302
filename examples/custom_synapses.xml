@@ -14,7 +14,7 @@
 
         <Exposure name="i" dimension="current"/>
 
-        <Requirement name="state" dimension="none"/>
+        <Requirement name="output" dimension="none"/>
 
         <InstanceRequirement name="peer" type="outputSynapse"/>
 
