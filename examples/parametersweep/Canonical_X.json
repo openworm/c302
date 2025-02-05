@@ -26,8 +26,8 @@
             "neuron_to_neuron_exc_syn_x": {
                 "neuroml2_source_file": "test_syns.xml"
             },
-            "neuron_to_neuron_inh_syn_x": {
-                "neuroml2_source_file": "test_syns.xml"
+            "gapJunction0": {
+                "neuroml2_source_file": "test_syns2.xml"
             }
         },
         "input_sources": {
@@ -127,35 +127,12 @@
             }
         },
         "projections": {
-            "proj_AVB_VB": {
+            "elec_proj_AVB_VB": {
                 "presynaptic": "AVB",
                 "postsynaptic": "VB",
-                "synapse": "neuron_to_neuron_exc_syn_x",
-                "type": "continuousProjection",
-                "delay": 0,
+                "synapse": "gapJunction0",
+                "type": "electricalProjection",
                 "weight": "weight_IN_MN",
-                "random_connectivity": {
-                    "probability": 1
-                }
-            },
-            "proj_VB_VD": {
-                "presynaptic": "VB",
-                "postsynaptic": "VD",
-                "synapse": "neuron_to_neuron_exc_syn_x",
-                "type": "continuousProjection",
-                "delay": 0,
-                "weight": "weight_MN_MN_Exc",
-                "random_connectivity": {
-                    "probability": 1
-                }
-            },
-            "proj_VD_VB": {
-                "presynaptic": "VD",
-                "postsynaptic": "VB",
-                "synapse": "neuron_to_neuron_inh_syn_x",
-                "type": "continuousProjection",
-                "delay": 0,
-                "weight": "weight_MN_MN_Inh",
                 "random_connectivity": {
                     "probability": 1
                 }

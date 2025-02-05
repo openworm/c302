@@ -110,8 +110,8 @@ Parameters and setting used to generate this network:
     </cell>
     <pulseGenerator id="offset_current" delay="100 ms" duration="800 ms" amplitude="4pA"/>
     <network id="c302_C0_Oscillator">
-        <property tag="recommended_duration_ms" value="1000"/>
-        <property tag="recommended_dt_ms" value="0.05"/>
+        <property tag="recommended_duration_ms" value="2000"/>
+        <property tag="recommended_dt_ms" value="0.025"/>
         <population id="AVBL" component="GenericNeuronCell" size="1" type="populationList">
             <property tag="color" value="1 0 .4"/>
             <property tag="type" value="interneuron"/>

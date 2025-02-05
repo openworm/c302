@@ -33,7 +33,7 @@ def generate(cell, duration=3000, config="IClamp", parameters=None):
     if "IClamp" in config:
         if not parameters:
             parameters = {}
-            parameters["stim_amp"] = "350pA"
+            parameters["stim_amp"] = ".350"
 
         parameters["stim_delay"] = "2000ms"
         parameters["stim_duration"] = "6000ms"

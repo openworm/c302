@@ -3,16 +3,20 @@
     <!-- Definition of new synapse model types-->
 
 
+    <ComponentType name="baseGradedSynapseDL"
+                   extends="baseSynapseDL"
+                   description="Base type for dimensionless graded synapses">
+    </ComponentType>
 
     <ComponentType name="outputSynapse"
-                   extends="baseGradedSynapse"
+                   extends="baseGradedSynapseDL"
                    description="For Worm2D...">
 
         <Property name="weight" dimension="none" defaultValue="1"/>
 
         <Constant name="PAMP_SCALE" dimension="current" value="1pA"/>
 
-        <Exposure name="i" dimension="current"/>
+        <Exposure name="I" dimension="none"/>
 
         <Requirement name="output" dimension="none"/>
 
@@ -20,7 +24,7 @@
 
         <Dynamics>
             <DerivedVariable name="outputpeer" dimension="none" select="peer/output"/>
-            <DerivedVariable name="i" exposure="i"  value="weight * outputpeer * PAMP_SCALE"/>
+            <DerivedVariable name="I" exposure="I"  value="weight * outputpeer"/>
         </Dynamics>
     </ComponentType>
 

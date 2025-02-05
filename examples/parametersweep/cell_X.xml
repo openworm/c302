@@ -17,25 +17,26 @@
     <Constant name="PAMP" dimension="current" value="1pA"/>
 
     <!-- <Exposure name="v" dimension="none"/> --> <!-- Already exposed from baseCellMembPotDL -->
-    <Exposure name="iSyn" dimension="none"/>
+    <Exposure name="iSyn" dimension="current"/>
     <Exposure name="spiking" dimension="none"/>
     <Exposure name="state" dimension="none"/>
     <Exposure name="output" dimension="none"/>
     
     <Dynamics>
         
+        <StateVariable name="v" dimension="voltage" exposure="v" description="Membrane potential state variable"/>
         <StateVariable name="spiking" dimension="none" exposure="spiking"/>
-        <StateVariable name="state" dimension="none" exposure="state"/>
+        <!--<StateVariable name="state" dimension="none" exposure="state"/>-->
         
         <DerivedVariable name="iSyn" dimension="current" exposure="iSyn" select="synapses[*]/i" reduce="add" />
+        <DerivedVariable name="state" dimension="none" exposure="state" value="v/MVOLT" />
         <DerivedVariable name="output" dimension="none" exposure="output" value="1/(1 + exp(-1 * gain * (state+bias)))" />
-        <DerivedVariable name="v" dimension="voltage" exposure="v" value="state*MVOLT" />
 
 
-        <TimeDerivative variable="state" value="((0-state) + iSyn/PAMP)/(tau)"/>
+        <TimeDerivative variable="v" value="MVOLT*((0-state) + iSyn/PAMP)/(tau)"/>
         
         <OnStart>
-            <StateAssignment variable="state" value="state0"/>
+            <StateAssignment variable="v" value="state0*MVOLT"/>
         </OnStart>
 
         <OnCondition test="v .gt. 0 .and. spiking .lt. 0.5">
