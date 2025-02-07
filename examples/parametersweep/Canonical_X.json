@@ -136,6 +136,17 @@
                 "random_connectivity": {
                     "probability": 1
                 }
+            },
+            "proj_VB_VD": {
+                "presynaptic": "VB",
+                "postsynaptic": "VD",
+                "synapse": "neuron_to_neuron_exc_syn_x",
+                "type": "continuousProjection",
+                "delay": 0,
+                "weight": "weight_MN_MN_Exc",
+                "random_connectivity": {
+                    "probability": 1
+                }
             }
         },
         "inputs": {

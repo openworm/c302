@@ -1,12 +1,17 @@
 <Lems>
 
 <ComponentType name="cellX"
-    extends="baseCellMembPot"
+    extends="baseCellMembPotCap"
     description="...">
     
     <Parameter name="bias" dimension="none" description="..."/>
     <Parameter name="gain" dimension="none" description="..."/>
-    <Parameter name="tau" dimension="time"/>
+    <!--<Parameter name="tau" dimension="time"/>-->
+
+    <!--
+    Defined in baseCellMembPotCap:
+    <Parameter name="C" dimension="capacitance"/>
+    -->
 
     <!-- Initial Conditions -->
     <Parameter name="state0" dimension="none"/>
@@ -33,7 +38,9 @@
         <DerivedVariable name="output" dimension="none" exposure="output" value="1/(1 + exp(-1 * gain * (state+bias)))" />
 
 
-        <TimeDerivative variable="v" value="MVOLT*((0-state) + iSyn/PAMP)/(tau)"/>
+        <DerivedVariable name="iMemb" dimension="current" exposure="iMemb" value="((0-state)*PAMP + iSyn)"/>
+
+        <TimeDerivative variable="v" value="iMemb / C"/>
         
         <OnStart>
             <StateAssignment variable="v" value="state0*MVOLT"/>
@@ -53,7 +60,7 @@
     
 </ComponentType>
 
-<cellX id="GenericNeuronCellX" bias="1" gain="1" state0="0" tau="1000ms"/>
+<cellX id="GenericNeuronCellX" C="100 pF" bias="1" gain="1" state0=".5"/>
 
 </Lems>
     
