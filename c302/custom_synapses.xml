@@ -9,14 +9,14 @@
     </ComponentType>
 
     <ComponentType name="outputSynapse"
-                   extends="baseGradedSynapseDL"
+                   extends="baseGradedSynapse"
                    description="For Worm2D...">
 
         <Property name="weight" dimension="none" defaultValue="1"/>
 
         <Constant name="PAMP_SCALE" dimension="current" value="1pA"/>
 
-        <Exposure name="I" dimension="none"/>
+        <Exposure name="i" dimension="current"/>
 
         <Requirement name="output" dimension="none"/>
 
@@ -24,7 +24,7 @@
 
         <Dynamics>
             <DerivedVariable name="outputpeer" dimension="none" select="peer/output"/>
-            <DerivedVariable name="I" exposure="I"  value="weight * outputpeer"/>
+            <DerivedVariable name="i" exposure="i"  value="weight * outputpeer * PAMP_SCALE"/>
         </Dynamics>
     </ComponentType>
 
