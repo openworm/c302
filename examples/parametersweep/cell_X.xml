@@ -1,12 +1,15 @@
 <Lems>
 
 <ComponentType name="cellX"
-    extends="baseCellMembPotCap"
+    extends="baseCellMembPot"
     description="...">
     
     <Parameter name="bias" dimension="none" description="..."/>
     <Parameter name="gain" dimension="none" description="..."/>
-    <!--<Parameter name="tau" dimension="time"/>-->
+    <Parameter name="tau" dimension="time"/>
+
+    <Constant name="COND_SCALE" dimension="conductance" value="1nS"/>
+    <DerivedParameter name="C" dimension="capacitance" value="tau*COND_SCALE"/>
 
     <!--
     Defined in baseCellMembPotCap:
@@ -26,6 +29,9 @@
     <Exposure name="spiking" dimension="none"/>
     <Exposure name="state" dimension="none"/>
     <Exposure name="output" dimension="none"/>
+
+    <Exposure name="iSyn" dimension="current" description="Total current due to synaptic inputs"/>
+    <Exposure name="iMemb" dimension="current" description="Total current crossing the cell membrane"/>
     
     <Dynamics>
         
@@ -60,7 +66,7 @@
     
 </ComponentType>
 
-<cellX id="GenericNeuronCellX" C="100 pF" bias="1" gain="1" state0=".5"/>
+<cellX id="GenericNeuronCellX" tau="1s" bias="1" gain="1" state0=".5"/>
 
 </Lems>
     
