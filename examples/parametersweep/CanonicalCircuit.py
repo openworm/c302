@@ -83,6 +83,20 @@ def add_connection(net, pre, post, syn, weight):
     )
 
 
+def add_elec_connection(net, pre, post, syn, weight):
+    net.projections.append(
+        Projection(
+            id="elec_proj_%s_%s" % (pre, post),
+            presynaptic=pre,
+            postsynaptic=post,
+            synapse=syn.id,
+            type="electricalProjection",
+            weight=weight,
+            random_connectivity=RandomConnectivity(probability=1),
+        )
+    )
+
+
 def generate(duration=1000, paramset="C"):
     global neuron_id
     global neuron_nmllite
@@ -109,10 +123,14 @@ def generate(duration=1000, paramset="C"):
             id="neuron_to_neuron_exc_syn_x", neuroml2_source_file="test_syns.xml"
         )
         net.synapses.append(exc_syn)
+
         inh_syn = Synapse(
             id="neuron_to_neuron_inh_syn_x", neuroml2_source_file="test_syns.xml"
         )
-        net.synapses.append(inh_syn)
+        # net.synapses.append(inh_syn)
+
+        elec_syn = Synapse(id="gapJunction0", neuroml2_source_file="test_syns2.xml")
+        net.synapses.append(elec_syn)
 
     else:
         exc_syn = Synapse(
@@ -136,6 +154,7 @@ def generate(duration=1000, paramset="C"):
     add_cell(net, "VB", MOTORNEURON, MOTORNEURON_VENTRAL)
     add_cell(net, "DB", MOTORNEURON, MOTORNEURON_DORSAL)
     add_cell(net, "VD", MOTORNEURON, MOTORNEURON_VENTRAL)
+
     add_cell(net, "DD", MOTORNEURON, MOTORNEURON_DORSAL)
 
     net.parameters["stim_duration"] = "2000ms"
@@ -170,11 +189,13 @@ def generate(duration=1000, paramset="C"):
         add_connection(net, "DD", "DB", inh_syn, "weight_MN_MN_Inh")
 
     if mode == "iclamp":
-        add_connection(net, "AVB", "VB", exc_syn, "weight_IN_MN")
+        add_elec_connection(net, "AVB", "VB", elec_syn, "weight_IN_MN")
         add_connection(net, "VB", "VD", exc_syn, "weight_MN_MN_Exc")
+        #
+        """add_connection(net, "AVB", "VB", exc_syn, 0)
         # add_connection(net, "VB", "DD", exc_syn, "weight_MN_MN_Exc")
 
-        add_connection(net, "VD", "VB", inh_syn, "weight_MN_MN_Inh")
+        add_connection(net, "VD", "VB", inh_syn, "weight_MN_MN_Inh")"""
 
     if paramset == "X":
         input_source = InputSource(
@@ -216,12 +237,6 @@ def generate(duration=1000, paramset="C"):
         duration=duration,
         dt="0.1",
         record_traces={"all": "*"},
-        plots2D={
-            "DB-VB": {
-                "x_axis": "DB/0/%s/v" % neuron_id,
-                "y_axis": "VB/0/%s/v" % neuron_id,
-            }
-        },
     )
 
     if paramset == "X":
@@ -230,12 +245,12 @@ def generate(duration=1000, paramset="C"):
             "state": {"all": "*"},
             "output": {"all": "*"},
         }  # "V": {"all": "*"},
-        sim.plots2D = {
+        """sim.plots2D = {
             "DB-VB": {
                 "x_axis": "VD/0/%s/output" % neuron_id,
                 "y_axis": "VB/0/%s/output" % neuron_id,
             }
-        }
+        }"""
 
     sim.to_json_file()
 
