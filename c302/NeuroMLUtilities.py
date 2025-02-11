@@ -43,7 +43,6 @@ def fract(a, b, f):
 
 
 if __name__ == "__main__":
-    # from SpreadsheetDataReader import read_data, read_muscle_data
     from WormNeuroAtlasReader import read_data, read_muscle_data
 
     cells, neuron_conns = read_data(include_nonconnected_cells=True)
