@@ -24,7 +24,7 @@ setup(
         "numpy",
         "xlrd",
         "xlwt",
-        "pyNeuroML>=0.5.11",
+        "pyNeuroML>=1.3.15",
         "WormNeuroAtlas",
         "cect>=0.2.4",
     ],
