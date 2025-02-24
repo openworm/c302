@@ -9,7 +9,7 @@ def setup(
     duration=1000,
     dt=0.05,
     target_directory="examples",
-    data_reader="SpreadsheetDataReader",
+    data_reader=c302.DEFAULT_DATA_READER,
     param_overrides={},
     config_param_overrides={},
     verbose=True,

@@ -24,7 +24,7 @@ def run_c302(
     simulator,
     save=False,
     show_plot_already=True,
-    data_reader="SpreadsheetDataReader",
+    data_reader=c302.DEFAULT_DATA_READER,
     verbose=False,
     plot_ca=True,
     plot_connectivity=False,
@@ -142,7 +142,7 @@ if __name__ == "__main__":
             0.05,
             "jNeuroML_NEURON",
             config_package="notebooks.configs.AVB",
-            data_reader="UpdatedSpreadsheetDataReader2",
+            data_reader=c302.FW_DATA_READER,
         )
 
     elif "-fw1" in sys.argv:
@@ -154,7 +154,7 @@ if __name__ == "__main__":
             5000,
             0.005,
             "jNeuroML_NEURON",
-            data_reader="UpdatedSpreadsheetDataReader2",
+            data_reader=c302.FW_DATA_READER,
             save=True,
             show_plot_already=False,
         )
@@ -167,7 +167,7 @@ if __name__ == "__main__":
             5000,
             0.05,
             "jNeuroML_NEURON",
-            data_reader="UpdatedSpreadsheetDataReader2",
+            data_reader=c302.FW_DATA_READER,
             save=True,
             show_plot_already=True,
         )
@@ -503,7 +503,7 @@ if __name__ == "__main__":
                     save=True,
                     show_plot_already=False,
                     plot_connectivity=True,
-                    data_reader="SpreadsheetDataReader",
+                    data_reader=c302.DEFAULT_DATA_READER,
                 )
 
                 html += "  </td>\n"
