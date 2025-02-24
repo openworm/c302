@@ -12,7 +12,7 @@ sys.path.append("..")
 
 colors = {
     "GenericNeuronCell": "0 0 0.8",
-    "GenericNeuronCellX": "0 0 0.8",
+    "GenericNeuronCellW2D": "0 0 0.8",
     "GenericMuscleCell": "0.8 0 0",
 }
 
@@ -22,8 +22,8 @@ def generate(cell, duration=3000, config="IClamp", parameters=None):
 
     cell_id = "%s" % cell
 
-    if cell_id == "GenericNeuronCellX":
-        cell_nmll = Cell(id=cell_id, lems_source_file="cell_X.xml")
+    if cell_id == "GenericNeuronCellW2D":
+        cell_nmll = Cell(id=cell_id, lems_source_file="cell_W2D.xml")
     else:
         cell_nmll = Cell(id=cell_id, neuroml2_source_file="%s.cell.nml" % (cell))
 
@@ -38,7 +38,7 @@ def generate(cell, duration=3000, config="IClamp", parameters=None):
         parameters["stim_delay"] = "2000ms"
         parameters["stim_duration"] = "6000ms"
 
-        if cell_id != "GenericNeuronCellX":
+        if cell_id != "GenericNeuronCellW2D":
             parameters["stim_delay"] = "500ms"
             parameters["stim_duration"] = "2000ms"
             input_source = InputSource(
@@ -90,7 +90,7 @@ def generate(cell, duration=3000, config="IClamp", parameters=None):
         input_for_default_population=input_source,
     )
 
-    if cell_id == "GenericNeuronCellX":
+    if cell_id == "GenericNeuronCellW2D":
         sim.record_traces = {"all": "*"}
         sim.record_variables = {
             "state": {"all": "*"},
@@ -108,9 +108,12 @@ if __name__ == "__main__":
         for cell in colors:
             generate(cell, 3000, config="IClamp", parameters={"stim_amp": "4pA"})
 
-    elif "-x" in sys.argv:
+    elif "-w2d" in sys.argv:
         sim, net = generate(
-            "GenericNeuronCellX", 10000, config="IClamp", parameters={"stim_amp": "1pA"}
+            "GenericNeuronCellW2D",
+            10000,
+            config="IClamp",
+            parameters={"stim_amp": "1pA"},
         )
         check_to_generate_or_run(sys.argv, sim)
 

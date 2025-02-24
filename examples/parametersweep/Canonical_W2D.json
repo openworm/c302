@@ -1,5 +1,5 @@
 {
-    "Canonical_X": {
+    "Canonical_W2D": {
         "version": "NeuroMLlite v0.6.1",
         "parameters": {
             "bias": 0,
@@ -13,13 +13,13 @@
             "scaleDinout": 0.5
         },
         "cells": {
-            "GenericNeuronCellX": {
+            "GenericNeuronCellW2D": {
                 "parameters": {
                     "bias": "bias",
                     "gain": "gain",
                     "tau": "tau"
                 },
-                "lems_source_file": "cell_X.xml"
+                "lems_source_file": "cell_W2D.xml"
             }
         },
         "synapses": {
@@ -77,7 +77,7 @@
         "populations": {
             "AVB": {
                 "size": 1,
-                "component": "GenericNeuronCellX",
+                "component": "GenericNeuronCellW2D",
                 "properties": {
                     "color": "1 0 .4"
                 },
@@ -87,7 +87,7 @@
             },
             "VB": {
                 "size": 1,
-                "component": "GenericNeuronCellX",
+                "component": "GenericNeuronCellW2D",
                 "properties": {
                     "color": ".5 .4 1"
                 },
@@ -97,7 +97,7 @@
             },
             "DB": {
                 "size": 1,
-                "component": "GenericNeuronCellX",
+                "component": "GenericNeuronCellW2D",
                 "properties": {
                     "color": ".5 .4 1"
                 },
@@ -107,7 +107,7 @@
             },
             "VD": {
                 "size": 1,
-                "component": "GenericNeuronCellX",
+                "component": "GenericNeuronCellW2D",
                 "properties": {
                     "color": ".5 .4 1"
                 },
@@ -117,7 +117,7 @@
             },
             "DD": {
                 "size": 1,
-                "component": "GenericNeuronCellX",
+                "component": "GenericNeuronCellW2D",
                 "properties": {
                     "color": ".5 .4 1"
                 },

@@ -109,10 +109,10 @@ def generate(duration=1000, paramset="C"):
 
     cell_params = {"bias": 0, "gain": 1, "tau": "100ms"}
 
-    if paramset == "X":
-        neuron_id = "GenericNeuronCellX"
+    if paramset == "W2D":
+        neuron_id = "GenericNeuronCellW2D"
 
-        neuron_nmllite = Cell(id=neuron_id, lems_source_file="cell_X.xml")
+        neuron_nmllite = Cell(id=neuron_id, lems_source_file="cell_W2D.xml")
         neuron_nmllite.parameters = {}
 
         for p in cell_params:
@@ -164,7 +164,7 @@ def generate(duration=1000, paramset="C"):
     net.parameters["weight_MN_MN_Inh"] = 40
     net.parameters["scaleDinout"] = 0.5
 
-    if paramset == "X":
+    if paramset == "W2D":
         net.parameters["stim_duration"] = "2000ms"
         net.parameters["stim_amp"] = "0.2pA"
         net.parameters["weight_IN_MN"] = 1
@@ -174,7 +174,7 @@ def generate(duration=1000, paramset="C"):
 
     mode = "circ"
 
-    if paramset == "X":
+    if paramset == "W2D":
         mode = "iclamp"
 
     if mode == "circ":
@@ -197,7 +197,7 @@ def generate(duration=1000, paramset="C"):
 
         add_connection(net, "VD", "VB", inh_syn, "weight_MN_MN_Inh")"""
 
-    if paramset == "X":
+    if paramset == "W2D":
         input_source = InputSource(
             id="iclamp_0",
             neuroml2_input="PulseGenerator",
@@ -239,7 +239,7 @@ def generate(duration=1000, paramset="C"):
         record_traces={"all": "*"},
     )
 
-    if paramset == "X":
+    if paramset == "W2D":
         sim.record_traces = {}
         sim.record_variables = {
             "state": {"all": "*"},
@@ -262,8 +262,8 @@ if __name__ == "__main__":
         for cell in colors:
             generate(cell, 3000, config="IClamp", parameters={"stim_amp": "1pA"})
 
-    elif "-x" in sys.argv:
-        sim, net = generate(duration=3000, paramset="X")
+    elif "-w2d" in sys.argv:
+        sim, net = generate(duration=3000, paramset="W2D")
 
         check_to_generate_or_run(sys.argv, sim)
 
