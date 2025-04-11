@@ -1,5 +1,17 @@
-from neuromllite import *
-from neuromllite.NetworkGenerator import *
+from neuromllite import (
+    Cell,
+    Synapse,
+    InputSource,
+    Input,
+    RandomLayout,
+    Population,
+    Simulation,
+    Network,
+    Projection,
+    RandomConnectivity,
+    RectangularRegion,
+)
+from neuromllite.NetworkGenerator import check_to_generate_or_run
 import sys
 
 sys.path.append("..")
@@ -43,7 +55,7 @@ all_cell_pops = {}
 
 
 def add_cell(net, name, type, region=None):
-    region = regions[type] if region == None else regions[region]
+    region = regions[type] if region is None else regions[region]
     cell_pop = Population(
         id=name,
         size=1,

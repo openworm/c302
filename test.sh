@@ -1,8 +1,10 @@
 set -ex
 
-ruff format **/*.py
+ruff format *.py */*.py */*/*.py */*/*/*.py
 
 pip install .
+
+python -m c302.backers # Generate OW backer info page
 
 ##   Test readers
 

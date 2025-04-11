@@ -1,4 +1,8 @@
+#!/bin/bash
 set -ex
+
+ruff format *.py
+ruff check  *.py
 
 python GenerateExamples.py -all
 python GenerateExamples.py -jnml
