@@ -6,7 +6,7 @@
 Parameters and setting used to generate this network:
 
     Data reader:                    SpreadsheetDataReader
-    c302 version:                   0.9.1
+    c302 version:                   0.9.3
     owmeta version:                 - not installed -
     owmeta_core version:            - not installed -
     Cells:                          ['RMGR', 'ASHR', 'ASKR', 'AWBR', 'IL2R', 'RMHR', 'URXR']
