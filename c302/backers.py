@@ -6,9 +6,10 @@ This information will eventually be moved to owmeta/elsewhere...
 
 import os
 
+currentfile_dir = os.path.dirname(os.path.abspath(__file__))
 
-def get_adopted_cell_names(root=os.path.dirname(os.path.abspath(__file__)) + "/data/"):
-    with open(root + "adopters.txt") as file:
+def get_adopted_cell_names(root=os.path.join(currentfile_dir, "data")):
+    with open(os.path.join(root, "adopters.txt")) as file:
         ads = {}
         for line in file:
             cell = line.split(":")[0].strip()
@@ -21,7 +22,7 @@ def get_adopted_cell_names(root=os.path.dirname(os.path.abspath(__file__)) + "/d
 if __name__ == "__main__":
     ads = get_adopted_cell_names()
 
-    file = open("README.md", "w")
+    file = open("cells.md", "w")
 
     info = ""
 
@@ -31,7 +32,7 @@ if __name__ == "__main__":
     info += '  <img src="https://raw.githubusercontent.com/openworm/CElegansNeuroML/master/OpenWormBackers/SomeCells.png" alt="Some cells"/>\n'
     info += "</p>\n\n"
 
-    url = "https://github.com/openworm/CElegansNeuroML/blob/master/CElegans/pythonScripts/c302/examples/c302_A_Full.nml#L%i"
+    url = "https://github.com/openworm/CElegansNeuroML/blob/master/CElegans/pythonScripts/c302/examples/c302_A_Full.net.nml#L%i"
 
     osb_3d_url = "http://www.opensourcebrain.org/projects/celegans?explorer=https%3A%2F%2Fraw.githubusercontent.com%2Fopenworm%2FCElegansNeuroML%2Fmaster%2FCElegans%2FgeneratedNeuroML2%2F"
 
@@ -42,7 +43,7 @@ if __name__ == "__main__":
         info += "Adopted name: **" + name + "**\n\n\n"
         i = 0
         search_file = open(
-            "../CElegans/pythonScripts/c302/examples/c302_A_Full.nml", "r"
+            os.path.normpath(os.path.join(currentfile_dir, "..", "examples", "c302_A_Full.net.nml")), "r"
         )
         for line in search_file:
             i += 1
