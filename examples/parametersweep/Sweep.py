@@ -248,12 +248,12 @@ if __name__ == "__main__":
             print("Showing plots")
             plt.show()
 
-    elif "-x" in sys.argv:
+    elif "-w2d" in sys.argv:
         fixed = {
             "dt": 0.025,
-            "duration": 3000,
-            "stim_delay": "500ms",
-            "stim_duration": "2000ms",
+            "duration": 8000,
+            "stim_delay": "1000ms",
+            "stim_duration": "5000ms",
         }
 
         quick = False
@@ -263,7 +263,7 @@ if __name__ == "__main__":
 
         type = "GenericMuscleCell"
         type = "GenericNeuronCell"
-        type = "GenericNeuronCellX"
+        type = "GenericNeuronCellW2D"
         # type='poolosyn'
         config = "IClamp"
         # config = 'PoissonFiringSynapse'
@@ -336,7 +336,7 @@ if __name__ == "__main__":
 
         type = "GenericMuscleCell"
         type = "GenericNeuronCell"
-        type = "GenericNeuronCellX"
+        type = "GenericNeuronCellW2D"
         # type='poolosyn'
         config = "IClamp"
         # config = 'PoissonFiringSynapse'
