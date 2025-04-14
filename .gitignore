@@ -120,3 +120,4 @@ arm64
 /examples/parametersweep/c302_C0_IClampMuscle.net.nml
 /examples/parametersweep/average_last_1percent_GenericNeuronCellW2D.png
 /examples/parametersweep/heatmap_GenericNeuronCellW2D.png
+openworm/
