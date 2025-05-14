@@ -65,8 +65,11 @@
     
 </ComponentType>
 
-<cellW2D id="GenericNeuronCellW2D" tau="1s" bias="1" gain="1" state0=".5"/>
-<cellW2D id="GenericMuscleCellW2D" tau="1s" bias="1" gain="1" state0=".5"/>
+<cellW2D id="GenericNeuronCell" tau="1s" bias="1" gain="1" state0=".5"/>
+<cellW2D id="GenericMuscleCell" tau="1s" bias="1" gain="1" state0=".5"/>
+
+<outputSynapse id="neuron_to_neuron_w2d"/>
+<outputSynapse id="neuron_to_muscle_w2d"/>
 
 </Lems>
     

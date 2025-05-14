@@ -3,9 +3,9 @@
    
     <include href="../custom_synapses.xml"/>
     
-    <outputSynapse id="neuron_to_neuron_syn_x"/>
-    <outputSynapse id="neuron_to_neuron_exc_syn_x"/>
-    <outputSynapse id="neuron_to_neuron_inh_syn_x"/>
+    <outputSynapse id="neuron_to_neuron_syn_w2d"/>
+    <outputSynapse id="neuron_to_neuron_exc_syn_w2d"/>
+    <outputSynapse id="neuron_to_neuron_inh_syn_w2d"/>
     
     <gradedSynapse id="neuron_to_neuron_exc_syn" conductance="0.09 nS" delta="5 mV" Vth="0 mV" k="0.025per_ms" erev="0 mV"/>
     
