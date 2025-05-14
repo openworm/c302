@@ -72,3 +72,4 @@ jobs:
       run: |
         pip list
         env
+        ls -lath
