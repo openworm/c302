@@ -5,8 +5,9 @@
 
 Parameters and setting used to generate this network:
 
-    Data reader:                    SpreadsheetDataReader
+    Data reader:                    cect.SpreadsheetDataReader
     c302 version:                   0.10.0
+    cect version:                   0.2.4
     owmeta version:                 - not installed -
     owmeta_core version:            - not installed -
     Cells:                          ['RMGR', 'ASHR', 'ASKR', 'AWBR', 'IL2R', 'RMHR', 'URXR']
@@ -67,13 +68,13 @@ Parameters and setting used to generate this network:
 
         <Display id="neurons" title="c302_A_Social: Membrane potential of a number of neurons" timeScale="1ms" xmin="-250.0" xmax="2750.0" ymin="-52" ymax="-28">
             
-            <Line id="ASHR" quantity="ASHR/0/generic_neuron_iaf_cell/v" scale="1mV" color="#e13b00" timeScale="1ms" />
-            <Line id="ASKR" quantity="ASKR/0/generic_neuron_iaf_cell/v" scale="1mV" color="#2e112a" timeScale="1ms" />
-            <Line id="AWBR" quantity="AWBR/0/generic_neuron_iaf_cell/v" scale="1mV" color="#32b579" timeScale="1ms" />
-            <Line id="IL2R" quantity="IL2R/0/generic_neuron_iaf_cell/v" scale="1mV" color="#000000" timeScale="1ms" />
-            <Line id="RMGR" quantity="RMGR/0/generic_neuron_iaf_cell/v" scale="1mV" color="#b1f7ed" timeScale="1ms" />
-            <Line id="RMHR" quantity="RMHR/0/generic_neuron_iaf_cell/v" scale="1mV" color="#4c2e5d" timeScale="1ms" />
-            <Line id="URXR" quantity="URXR/0/generic_neuron_iaf_cell/v" scale="1mV" color="#3a00f9" timeScale="1ms" />
+            <Line id="ASHR" quantity="ASHR/0/generic_neuron_iaf_cell/v" scale="1mV" color="#10dbf7" timeScale="1ms" />
+            <Line id="ASKR" quantity="ASKR/0/generic_neuron_iaf_cell/v" scale="1mV" color="#0069ec" timeScale="1ms" />
+            <Line id="AWBR" quantity="AWBR/0/generic_neuron_iaf_cell/v" scale="1mV" color="#fb8e52" timeScale="1ms" />
+            <Line id="IL2R" quantity="IL2R/0/generic_neuron_iaf_cell/v" scale="1mV" color="#11faa7" timeScale="1ms" />
+            <Line id="RMGR" quantity="RMGR/0/generic_neuron_iaf_cell/v" scale="1mV" color="#267fb8" timeScale="1ms" />
+            <Line id="RMHR" quantity="RMHR/0/generic_neuron_iaf_cell/v" scale="1mV" color="#16d747" timeScale="1ms" />
+            <Line id="URXR" quantity="URXR/0/generic_neuron_iaf_cell/v" scale="1mV" color="#b5c3d7" timeScale="1ms" />
             
         </Display>
 

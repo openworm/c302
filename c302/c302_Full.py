@@ -11,7 +11,7 @@ def setup(
     dt=0.05,
     target_directory="examples",
     muscles_to_include=None,  # None => All!
-    data_reader="SpreadsheetDataReader",
+    data_reader=c302.DEFAULT_DATA_READER,
     param_overrides={},
     config_param_overrides={},
     verbose=True,
@@ -79,7 +79,7 @@ def setup(
 
     reference = "c302_%s_Full" % parameter_set
 
-    cell_names, conns = c302.get_cell_names_and_connection()
+    cell_names, conns = c302.get_cell_names_and_connection(data_reader)
 
     nml_doc = None
 

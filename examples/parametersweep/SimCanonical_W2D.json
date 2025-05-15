@@ -1,7 +1,7 @@
 {
-    "SimCanonical_X": {
+    "SimCanonical_W2D": {
         "version": "NeuroMLlite v0.6.1",
-        "network": "Canonical_X.json",
+        "network": "Canonical_W2D.json",
         "duration": 3000.0,
         "dt": 0.1,
         "record_traces": {},
@@ -11,12 +11,6 @@
             },
             "output": {
                 "all": "*"
-            }
-        },
-        "plots2D": {
-            "DB-VB": {
-                "x_axis": "VD/0/GenericNeuronCellX/output",
-                "y_axis": "VB/0/GenericNeuronCellX/output"
             }
         }
     }

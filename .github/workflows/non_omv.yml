@@ -61,10 +61,10 @@ jobs:
         omv list -V
         omv install NEURON # Need to install NEURON
         which nrnivmodl
-        export NEURON_HOME=$RUNNER_TOOL_CACHE/Python/3.9.7/x64/
         
     - name: Run test script
       run: |
+        export NEURON_HOME=$pythonLocation
         pip install ruff
         ./test.sh
         
