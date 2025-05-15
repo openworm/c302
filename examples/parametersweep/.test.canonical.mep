@@ -1,0 +1,9 @@
+system: Test
+
+experiments:
+    state_avb:
+        expected:
+            spike times: [0.6103]
+    state_vd:
+        expected:
+            spike times: [0.0091, 0.7238]

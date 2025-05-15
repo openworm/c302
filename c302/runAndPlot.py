@@ -346,6 +346,9 @@ if __name__ == "__main__":
     elif "-iD1" in sys.argv:
         run_c302("IClamp", "D1", "", 6000, 0.05, "jNeuroML_NEURON", save=True)
 
+    elif "-iw2d" in sys.argv:
+        run_c302("IClamp", "W2D", "", 6000, 0.05, "jNeuroML", save=True)
+
     elif "-all" in sys.argv:
         print("Generating all plots")
         html = "<table>\n"

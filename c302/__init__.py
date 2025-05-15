@@ -496,7 +496,7 @@ def get_cell_muscle_names_and_connection(data_reader, test=False):
 
     all_known_muscles = sorted(all_known_muscles)
 
-    print(" --- Using for muscles: %s" % all_known_muscles)
+    print_(" - Using for muscles: %s" % all_known_muscles)
 
     return mneurons, all_known_muscles, muscle_conns
 

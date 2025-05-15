@@ -1,0 +1,28 @@
+target: test_ex_jnml.py
+engine: Brian2
+
+mep: .test.canonical.mep
+experiments:
+  state_avb:
+    observables:
+      spike times:
+        file: 
+          path: AVB_0.state.dat
+          columns: [0,1]
+          scaling: [1, 1]
+        spike detection: 
+          method: threshold
+          threshold: 0.1
+        tolerance: 0.00
+  state_vd:
+    observables:
+      spike times:
+        file: 
+          path: VD_0.state.dat
+          columns: [0,1]
+          scaling: [1, 1]
+        spike detection: 
+          method: threshold
+          threshold: 0.51
+        tolerance: 0.000
+
