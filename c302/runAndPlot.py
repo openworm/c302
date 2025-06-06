@@ -265,6 +265,9 @@ if __name__ == "__main__":
     elif "-synsD1" in sys.argv:
         run_c302("Syns", "D1", "", 500, 0.05, "jNeuroML_NEURON")
 
+    elif "-synsW2D" in sys.argv:
+        run_c302("Syns", "W2D", "", 500, 0.05, "jNeuroML_NEURON")
+
     elif "-socialA" in sys.argv:
         run_c302("Social", "A", "", 2500, 0.05, "jNeuroML_NEURON")
 
