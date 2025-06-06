@@ -2,7 +2,11 @@
 
 [![Continuous builds](https://github.com/openworm/c302/actions/workflows/ci.yml/badge.svg)](https://github.com/openworm/c302/actions/workflows/ci.yml) [![Non OMV tests](https://github.com/openworm/c302/actions/workflows/non_omv.yml/badge.svg)](https://github.com/openworm/c302/actions/workflows/non_omv.yml)
 
-c302 is a framework for generating network models in [NeuroML 2](https://docs.neuroml.org) based on *C. elegans* connectivity data. It is primarily intended as a way to generate neuronal networks at multiple levels of detail for the [OpenWorm project](http://www.openworm.org). To see how c302 relates to other OpenWorm subprojects click on the image below:
+c302 is a framework for generating network models in [NeuroML 2](https://docs.neuroml.org) based on *C. elegans* connectivity data. It is primarily intended as a way to generate neuronal networks at multiple levels of detail for the [OpenWorm project](http://www.openworm.org). The c302 framework is described in the following publication:
+
+**_c302: a multiscale framework for modelling the nervous system of Caenorhabditis elegans_ Padraig Gleeson, David Lung, Radu Grosu, Ramin Hasani, Stephen D. Larson, [Phil. Trans. R. Soc. B 2018 373 20170379](http://rstb.royalsocietypublishing.org/content/373/1758/20170379); DOI: 10.1098/rstb.2017.0379.**
+
+To see how c302 relates to other OpenWorm subprojects click on the image below:
 
 <p align="center"><a href="OpenWormOverview.md"><img width="200" alt="c302_in_overview" src="https://user-images.githubusercontent.com/1573896/44876490-42fca100-ac6f-11e8-95ab-76dc8a2d80e1.png"></a></p>
 
@@ -11,9 +15,6 @@ c302 is a framework for generating network models in [NeuroML 2](https://docs.ne
 
 It uses information on the synaptic connectivity of the network (from [here](https://github.com/openworm/c302/blob/master/c302/data)) and uses [libNeuroML](https://github.com/NeuralEnsemble/libNeuroML) to generate a network in valid NeuroML, which can be run in [jNeuroML](https://github.com/NeuroML/jNeuroML) or [pyNeuroML](https://github.com/NeuroML/pyNeuroML).
 
-**The c302 paper is out!**
-
-*c302: a multiscale framework for modelling the nervous system of Caenorhabditis elegans* Padraig Gleeson, David Lung, Radu Grosu, Ramin Hasani, Stephen D. Larson, [Phil. Trans. R. Soc. B 2018 373 20170379](http://rstb.royalsocietypublishing.org/content/373/1758/20170379); DOI: 10.1098/rstb.2017.0379.
 
 
 ### To install & test
