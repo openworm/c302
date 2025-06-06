@@ -120,12 +120,12 @@ def generate(duration=1000, paramset="C"):
             net.parameters[p] = cell_params[p]
 
         exc_syn = Synapse(
-            id="neuron_to_neuron_exc_syn_x", neuroml2_source_file="test_syns.xml"
+            id="neuron_to_neuron_exc_syn_w2d", neuroml2_source_file="test_syns.xml"
         )
         net.synapses.append(exc_syn)
 
         inh_syn = Synapse(
-            id="neuron_to_neuron_inh_syn_x", neuroml2_source_file="test_syns.xml"
+            id="neuron_to_neuron_inh_syn_w2d", neuroml2_source_file="test_syns.xml"
         )
         # net.synapses.append(inh_syn)
 

@@ -265,6 +265,9 @@ if __name__ == "__main__":
     elif "-synsD1" in sys.argv:
         run_c302("Syns", "D1", "", 500, 0.05, "jNeuroML_NEURON")
 
+    elif "-synsW2D" in sys.argv:
+        run_c302("Syns", "W2D", "", 500, 0.05, "jNeuroML_NEURON")
+
     elif "-socialA" in sys.argv:
         run_c302("Social", "A", "", 2500, 0.05, "jNeuroML_NEURON")
 
@@ -345,6 +348,9 @@ if __name__ == "__main__":
         run_c302("IClamp", "D", "", 6000, 0.05, "jNeuroML_NEURON", save=True)
     elif "-iD1" in sys.argv:
         run_c302("IClamp", "D1", "", 6000, 0.05, "jNeuroML_NEURON", save=True)
+
+    elif "-iw2d" in sys.argv:
+        run_c302("IClamp", "W2D", "", 6000, 0.05, "jNeuroML", save=True)
 
     elif "-all" in sys.argv:
         print("Generating all plots")

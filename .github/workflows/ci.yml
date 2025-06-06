@@ -11,20 +11,24 @@ jobs:
 
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        python-version: [ 3.8, 3.9 ]
+        python-version: [ 3.9, "3.11" ]
         engine: [ jNeuroML, jNeuroML_NEURON, jNeuroML_validate ] #, NON_OMV_TESTS ]
 
     steps:
     - uses: actions/checkout@v4
+
     - name: Set up Python  ${{ matrix.python-version }}
       uses: actions/setup-python@v5
       with:
         python-version:  ${{ matrix.python-version }}
+
     - name: Install OMV
       run: |
         pip install git+https://github.com/OpenSourceBrain/osb-model-validation
         pip install scipy sympy matplotlib cython pandas tables
+
     - name: Run OMV tests on engine ${{ matrix.engine }}
       run: |
         omv all -V --engine=${{ matrix.engine }}; export OMV_SUCCESS=$?; echo $OMV_SUCCESS

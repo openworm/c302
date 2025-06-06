@@ -15,3 +15,5 @@ python CanonicalCircuit.py -jnml
 python CanonicalCircuit.py -w2d -jnml
 python CanonicalCircuit.py -w2d -jnmlnrn
 
+omv all -V 
+

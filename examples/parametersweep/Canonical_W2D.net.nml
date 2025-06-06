@@ -59,7 +59,7 @@
             <electricalConnectionInstance id="0" preCell="../AVB/0/GenericNeuronCellW2D" postCell="../VB/0/GenericNeuronCellW2D" synapse="gapJunction0"/>
         </electricalProjection>
         <continuousProjection id="proj_VB_VD" presynapticPopulation="VB" postsynapticPopulation="VD">
-            <continuousConnectionInstance id="0" preCell="../VB/0/GenericNeuronCellW2D" postCell="../VD/0/GenericNeuronCellW2D" preComponent="silentSyn_proj_VB_VD" postComponent="neuron_to_neuron_exc_syn_x"/>
+            <continuousConnectionInstance id="0" preCell="../VB/0/GenericNeuronCellW2D" postCell="../VD/0/GenericNeuronCellW2D" preComponent="silentSyn_proj_VB_VD" postComponent="neuron_to_neuron_exc_syn_w2d"/>
         </continuousProjection>
         <inputList id="stim" population="AVB" component="iclamp_0">
             <input id="0" target="../AVB/0/GenericNeuronCellW2D" destination="synapses"/>
