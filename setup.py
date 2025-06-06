@@ -26,7 +26,7 @@ setup(
         "xlwt",
         "pyNeuroML>=1.3.15",
         "WormNeuroAtlas",
-        "cect>=0.2.4",
+        "cect>=0.2.5",
     ],
     entry_points={"console_scripts": ["c302 = c302.__init__:main"]},
     package_data={"c302": ["*.xml", "data/*", "NeuroML2/*"]},
