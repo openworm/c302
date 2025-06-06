@@ -126,7 +126,7 @@ def plot_c302_results(
     directory="./",
     save=True,
     show_plot_already=True,
-    data_reader="SpreadsheetDataReader",
+    data_reader=c302.DEFAULT_DATA_READER,
     plot_ca=True,
 ):
     params = {"legend.fontsize": 8, "font.size": 10}

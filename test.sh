@@ -1,6 +1,6 @@
 set -ex
 
-ruff format *.py */*.py */*/*.py */*/*/*.py
+ruff format *.py */*.py */*/*.py
 
 pip install .
 

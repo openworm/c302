@@ -1,12 +1,20 @@
 <Lems>
 
-<ComponentType name="cellX"
+<ComponentType name="cellW2D"
     extends="baseCellMembPot"
-    description="...">
+    description="Cell based on Worm2D model">
     
     <Parameter name="bias" dimension="none" description="..."/>
     <Parameter name="gain" dimension="none" description="..."/>
     <Parameter name="tau" dimension="time"/>
+
+    <Constant name="COND_SCALE" dimension="conductance" value="1nS"/>
+    <DerivedParameter name="C" dimension="capacitance" value="tau*COND_SCALE"/>
+
+    <!--
+    Defined in baseCellMembPotCap:
+    <Parameter name="C" dimension="capacitance"/>
+    -->
 
     <!-- Initial Conditions -->
     <Parameter name="state0" dimension="none"/>
@@ -17,25 +25,31 @@
     <Constant name="PAMP" dimension="current" value="1pA"/>
 
     <!-- <Exposure name="v" dimension="none"/> --> <!-- Already exposed from baseCellMembPotDL -->
-    <Exposure name="iSyn" dimension="none"/>
+    <Exposure name="iSyn" dimension="current"/>
     <Exposure name="spiking" dimension="none"/>
     <Exposure name="state" dimension="none"/>
     <Exposure name="output" dimension="none"/>
+
+    <Exposure name="iSyn" dimension="current" description="Total current due to synaptic inputs"/>
+    <Exposure name="iMemb" dimension="current" description="Total current crossing the cell membrane"/>
     
     <Dynamics>
         
+        <StateVariable name="v" dimension="voltage" exposure="v" description="Membrane potential state variable"/>
         <StateVariable name="spiking" dimension="none" exposure="spiking"/>
-        <StateVariable name="state" dimension="none" exposure="state"/>
+        <!--<StateVariable name="state" dimension="none" exposure="state"/>-->
         
         <DerivedVariable name="iSyn" dimension="current" exposure="iSyn" select="synapses[*]/i" reduce="add" />
+        <DerivedVariable name="state" dimension="none" exposure="state" value="v/MVOLT" />
         <DerivedVariable name="output" dimension="none" exposure="output" value="1/(1 + exp(-1 * gain * (state+bias)))" />
-        <DerivedVariable name="v" dimension="voltage" exposure="v" value="state*MVOLT" />
 
 
-        <TimeDerivative variable="state" value="((0-state) + iSyn/PAMP)/(tau)"/>
+        <DerivedVariable name="iMemb" dimension="current" exposure="iMemb" value="((0-state)*PAMP + iSyn)"/>
+
+        <TimeDerivative variable="v" value="iMemb / C"/>
         
         <OnStart>
-            <StateAssignment variable="state" value="state0"/>
+            <StateAssignment variable="v" value="state0*MVOLT"/>
         </OnStart>
 
         <OnCondition test="v .gt. 0 .and. spiking .lt. 0.5">
@@ -52,7 +66,7 @@
     
 </ComponentType>
 
-<cellX id="GenericNeuronCellX" bias="1" gain="1" state0="0" tau="1000ms"/>
+<cellW2D id="GenericNeuronCellW2D" tau="1s" bias="1" gain="1" state0=".5"/>
 
 </Lems>
     

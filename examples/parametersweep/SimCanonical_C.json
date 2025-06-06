@@ -6,12 +6,6 @@
         "dt": 0.1,
         "record_traces": {
             "all": "*"
-        },
-        "plots2D": {
-            "DB-VB": {
-                "x_axis": "DB/0/GenericNeuronCell/v",
-                "y_axis": "VB/0/GenericNeuronCell/v"
-            }
         }
     }
 }

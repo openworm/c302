@@ -83,6 +83,20 @@ def add_connection(net, pre, post, syn, weight):
     )
 
 
+def add_elec_connection(net, pre, post, syn, weight):
+    net.projections.append(
+        Projection(
+            id="elec_proj_%s_%s" % (pre, post),
+            presynaptic=pre,
+            postsynaptic=post,
+            synapse=syn.id,
+            type="electricalProjection",
+            weight=weight,
+            random_connectivity=RandomConnectivity(probability=1),
+        )
+    )
+
+
 def generate(duration=1000, paramset="C"):
     global neuron_id
     global neuron_nmllite
@@ -95,10 +109,10 @@ def generate(duration=1000, paramset="C"):
 
     cell_params = {"bias": 0, "gain": 1, "tau": "100ms"}
 
-    if paramset == "X":
-        neuron_id = "GenericNeuronCellX"
+    if paramset == "W2D":
+        neuron_id = "GenericNeuronCellW2D"
 
-        neuron_nmllite = Cell(id=neuron_id, lems_source_file="cell_X.xml")
+        neuron_nmllite = Cell(id=neuron_id, lems_source_file="cell_W2D.xml")
         neuron_nmllite.parameters = {}
 
         for p in cell_params:
@@ -109,10 +123,14 @@ def generate(duration=1000, paramset="C"):
             id="neuron_to_neuron_exc_syn_x", neuroml2_source_file="test_syns.xml"
         )
         net.synapses.append(exc_syn)
+
         inh_syn = Synapse(
             id="neuron_to_neuron_inh_syn_x", neuroml2_source_file="test_syns.xml"
         )
-        net.synapses.append(inh_syn)
+        # net.synapses.append(inh_syn)
+
+        elec_syn = Synapse(id="gapJunction0", neuroml2_source_file="test_syns2.xml")
+        net.synapses.append(elec_syn)
 
     else:
         exc_syn = Synapse(
@@ -136,6 +154,7 @@ def generate(duration=1000, paramset="C"):
     add_cell(net, "VB", MOTORNEURON, MOTORNEURON_VENTRAL)
     add_cell(net, "DB", MOTORNEURON, MOTORNEURON_DORSAL)
     add_cell(net, "VD", MOTORNEURON, MOTORNEURON_VENTRAL)
+
     add_cell(net, "DD", MOTORNEURON, MOTORNEURON_DORSAL)
 
     net.parameters["stim_duration"] = "2000ms"
@@ -145,7 +164,7 @@ def generate(duration=1000, paramset="C"):
     net.parameters["weight_MN_MN_Inh"] = 40
     net.parameters["scaleDinout"] = 0.5
 
-    if paramset == "X":
+    if paramset == "W2D":
         net.parameters["stim_duration"] = "2000ms"
         net.parameters["stim_amp"] = "0.2pA"
         net.parameters["weight_IN_MN"] = 1
@@ -155,7 +174,7 @@ def generate(duration=1000, paramset="C"):
 
     mode = "circ"
 
-    if paramset == "X":
+    if paramset == "W2D":
         mode = "iclamp"
 
     if mode == "circ":
@@ -170,13 +189,15 @@ def generate(duration=1000, paramset="C"):
         add_connection(net, "DD", "DB", inh_syn, "weight_MN_MN_Inh")
 
     if mode == "iclamp":
-        add_connection(net, "AVB", "VB", exc_syn, "weight_IN_MN")
+        add_elec_connection(net, "AVB", "VB", elec_syn, "weight_IN_MN")
         add_connection(net, "VB", "VD", exc_syn, "weight_MN_MN_Exc")
+        #
+        """add_connection(net, "AVB", "VB", exc_syn, 0)
         # add_connection(net, "VB", "DD", exc_syn, "weight_MN_MN_Exc")
 
-        add_connection(net, "VD", "VB", inh_syn, "weight_MN_MN_Inh")
+        add_connection(net, "VD", "VB", inh_syn, "weight_MN_MN_Inh")"""
 
-    if paramset == "X":
+    if paramset == "W2D":
         input_source = InputSource(
             id="iclamp_0",
             neuroml2_input="PulseGenerator",
@@ -216,26 +237,20 @@ def generate(duration=1000, paramset="C"):
         duration=duration,
         dt="0.1",
         record_traces={"all": "*"},
-        plots2D={
-            "DB-VB": {
-                "x_axis": "DB/0/%s/v" % neuron_id,
-                "y_axis": "VB/0/%s/v" % neuron_id,
-            }
-        },
     )
 
-    if paramset == "X":
+    if paramset == "W2D":
         sim.record_traces = {}
         sim.record_variables = {
             "state": {"all": "*"},
             "output": {"all": "*"},
         }  # "V": {"all": "*"},
-        sim.plots2D = {
+        """sim.plots2D = {
             "DB-VB": {
                 "x_axis": "VD/0/%s/output" % neuron_id,
                 "y_axis": "VB/0/%s/output" % neuron_id,
             }
-        }
+        }"""
 
     sim.to_json_file()
 
@@ -247,8 +262,8 @@ if __name__ == "__main__":
         for cell in colors:
             generate(cell, 3000, config="IClamp", parameters={"stim_amp": "1pA"})
 
-    elif "-x" in sys.argv:
-        sim, net = generate(duration=3000, paramset="X")
+    elif "-w2d" in sys.argv:
+        sim, net = generate(duration=3000, paramset="W2D")
 
         check_to_generate_or_run(sys.argv, sim)
 
