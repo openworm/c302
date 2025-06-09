@@ -12,6 +12,8 @@ natsort = lambda s: [int(t) if t.isdigit() else t for t in re.split(r"(\d+)", s)
 
 default_figsize = (6.4, 4.8)
 
+paramsets_no_calcium = ["A", "W2D"]
+
 
 def plots(a_n, info, cells, dt):
     c302.print_("Generating plots for: %s" % info)
@@ -126,7 +128,7 @@ def plot_c302_results(
     directory="./",
     save=True,
     show_plot_already=True,
-    data_reader="SpreadsheetDataReader",
+    data_reader=c302.DEFAULT_DATA_READER,
     plot_ca=True,
 ):
     params = {"legend.fontsize": 8, "font.size": 10}
@@ -267,7 +269,7 @@ def plot_c302_results(
     ################################################
     ## Plot activity/[Ca2+] in cells
 
-    if plot_ca and parameter_set != "A" and len(cells) > 0:
+    if plot_ca and parameter_set not in paramsets_no_calcium and len(cells) > 0:
         c302.print_("Plotting neuron activities ([Ca2+])")
         variable = "activity"
         description = "Activity"
@@ -321,7 +323,7 @@ def plot_c302_results(
     ################################################
     ## Plot activity/[Ca2+] in muscles
 
-    if plot_ca and parameter_set != "A" and len(muscles) > 0:
+    if plot_ca and parameter_set not in paramsets_no_calcium and len(muscles) > 0:
         c302.print_("Plotting muscle activities ([Ca2+])")
         variable = "activity"
         description = "Activity"

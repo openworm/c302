@@ -110,4 +110,14 @@ arm64
 /examples/parametersweep/LEMS_SimCanonical_X.png
 /examples/parametersweep/Canonical_X__lems.xml
 /examples/parametersweep/average_last_1percent_GenericNeuronCellX.png
+/examples/parametersweep/IClamp_GenericNeuronCellW2D.json
+/examples/parametersweep/IClamp_GenericNeuronCellW2D.net.nml
+/examples/parametersweep/IClamp_GenericNeuronCellW2D__lems.xml
+/examples/parametersweep/LEMS_SimCanonical_W2D.xml
+/examples/parametersweep/Sim_IClamp_GenericNeuronCellW2D.json
+/examples/parametersweep/Canonical_W2D__lems.xml
+/examples/parametersweep/LEMS_Sim_IClamp_GenericNeuronCellW2D.xml
+/examples/parametersweep/c302_C0_IClampMuscle.net.nml
+/examples/parametersweep/average_last_1percent_GenericNeuronCellW2D.png
+/examples/parametersweep/heatmap_GenericNeuronCellW2D.png
 openworm/

@@ -5,8 +5,9 @@
 
 Parameters and setting used to generate this network:
 
-    Data reader:                    SpreadsheetDataReader
-    c302 version:                   0.9.3
+    Data reader:                    cect.SpreadsheetDataReader
+    c302 version:                   0.10.0
+    cect version:                   0.2.5
     owmeta version:                 - not installed -
     owmeta_core version:            - not installed -
     Cells:                          ['URYDL', 'SMDDR', 'VD12', 'VB11', 'AS2', 'AIZL', 'ASHL']
@@ -68,37 +69,37 @@ Parameters and setting used to generate this network:
 
         <Display id="neurons" title="c302_B_Syns: Membrane potential of a number of neurons" timeScale="1ms" xmin="-360.0" xmax="3960.0000000000005" ymin="-52" ymax="-28">
             
-            <Line id="AIZL" quantity="AIZL/0/generic_neuron_iaf_cell/v" scale="1mV" color="#e13b00" timeScale="1ms" />
-            <Line id="AS2" quantity="AS2/0/generic_neuron_iaf_cell/v" scale="1mV" color="#32b579" timeScale="1ms" />
-            <Line id="ASHL" quantity="ASHL/0/generic_neuron_iaf_cell/v" scale="1mV" color="#b1f7ed" timeScale="1ms" />
-            <Line id="SMDDR" quantity="SMDDR/0/generic_neuron_iaf_cell/v" scale="1mV" color="#3a00f9" timeScale="1ms" />
-            <Line id="URYDL" quantity="URYDL/0/generic_neuron_iaf_cell/v" scale="1mV" color="#232d17" timeScale="1ms" />
-            <Line id="VB11" quantity="VB11/0/generic_neuron_iaf_cell/v" scale="1mV" color="#f6b588" timeScale="1ms" />
-            <Line id="VD12" quantity="VD12/0/generic_neuron_iaf_cell/v" scale="1mV" color="#002400" timeScale="1ms" />
+            <Line id="AIZL" quantity="AIZL/0/generic_neuron_iaf_cell/v" scale="1mV" color="#10dbf7" timeScale="1ms" />
+            <Line id="AS2" quantity="AS2/0/generic_neuron_iaf_cell/v" scale="1mV" color="#fb8e52" timeScale="1ms" />
+            <Line id="ASHL" quantity="ASHL/0/generic_neuron_iaf_cell/v" scale="1mV" color="#267fb8" timeScale="1ms" />
+            <Line id="SMDDR" quantity="SMDDR/0/generic_neuron_iaf_cell/v" scale="1mV" color="#b5c3d7" timeScale="1ms" />
+            <Line id="URYDL" quantity="URYDL/0/generic_neuron_iaf_cell/v" scale="1mV" color="#599bb9" timeScale="1ms" />
+            <Line id="VB11" quantity="VB11/0/generic_neuron_iaf_cell/v" scale="1mV" color="#e1c016" timeScale="1ms" />
+            <Line id="VD12" quantity="VD12/0/generic_neuron_iaf_cell/v" scale="1mV" color="#639bbb" timeScale="1ms" />
             
         </Display>
       
         <Display id="muscles" title="c302_B_Syns: Membrane potential of a number of muscles" timeScale="1ms" xmin="-360.0" xmax="3960.0000000000005" ymin="-52" ymax="-28">
             
-            <Line id="MDL07" quantity="MDL07/0/generic_muscle_iaf_cell/v" scale="1mV" color="#c1551b" timeScale="1ms" />
+            <Line id="MDL07" quantity="MDL07/0/generic_muscle_iaf_cell/v" scale="1mV" color="#dff021" timeScale="1ms" />
 
         </Display>
       
         <Display id="activity_neurons" title="c302_B_Syns: Activity of a number of neurons" timeScale="1ms" xmin="-360.0" xmax="3960.0000000000005" ymin="-0.1" ymax="1.1">
             
-            <Line id="AIZL" quantity="AIZL/0/generic_neuron_iaf_cell/activity" scale="1" color="#2e112a" timeScale="1ms" />
-            <Line id="AS2" quantity="AS2/0/generic_neuron_iaf_cell/activity" scale="1" color="#000000" timeScale="1ms" />
-            <Line id="ASHL" quantity="ASHL/0/generic_neuron_iaf_cell/activity" scale="1" color="#4c2e5d" timeScale="1ms" />
-            <Line id="SMDDR" quantity="SMDDR/0/generic_neuron_iaf_cell/activity" scale="1" color="#7f21ee" timeScale="1ms" />
-            <Line id="URYDL" quantity="URYDL/0/generic_neuron_iaf_cell/activity" scale="1" color="#8a209a" timeScale="1ms" />
-            <Line id="VB11" quantity="VB11/0/generic_neuron_iaf_cell/activity" scale="1" color="#7f66e8" timeScale="1ms" />
-            <Line id="VD12" quantity="VD12/0/generic_neuron_iaf_cell/activity" scale="1" color="#aa49f2" timeScale="1ms" />
+            <Line id="AIZL" quantity="AIZL/0/generic_neuron_iaf_cell/activity" scale="1" color="#0069ec" timeScale="1ms" />
+            <Line id="AS2" quantity="AS2/0/generic_neuron_iaf_cell/activity" scale="1" color="#11faa7" timeScale="1ms" />
+            <Line id="ASHL" quantity="ASHL/0/generic_neuron_iaf_cell/activity" scale="1" color="#16d747" timeScale="1ms" />
+            <Line id="SMDDR" quantity="SMDDR/0/generic_neuron_iaf_cell/activity" scale="1" color="#9186e9" timeScale="1ms" />
+            <Line id="URYDL" quantity="URYDL/0/generic_neuron_iaf_cell/activity" scale="1" color="#44e97a" timeScale="1ms" />
+            <Line id="VB11" quantity="VB11/0/generic_neuron_iaf_cell/activity" scale="1" color="#007844" timeScale="1ms" />
+            <Line id="VD12" quantity="VD12/0/generic_neuron_iaf_cell/activity" scale="1" color="#7aa0e6" timeScale="1ms" />
 
         </Display>
       
         <Display id="activity_muscles" title="c302_B_Syns: Activity of a number of muscles" timeScale="1ms" xmin="-360.0" xmax="3960.0000000000005" ymin="-0.1" ymax="1.1">
             
-            <Line id="MDL07" quantity="MDL07/0/generic_muscle_iaf_cell/activity" scale="1" color="#27fe53" timeScale="1ms" />
+            <Line id="MDL07" quantity="MDL07/0/generic_muscle_iaf_cell/activity" scale="1" color="#a60050" timeScale="1ms" />
 
         </Display>
 

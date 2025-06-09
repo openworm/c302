@@ -106,6 +106,11 @@ class ParameterisedModelPrototype(object):
         return info
 
 
+class NonNeuroMLCustomType:
+    def __init__(self, id):
+        self.id = id
+
+
 class c302ModelPrototype(ParameterisedModelPrototype):
     def __init__(self):
         super(c302ModelPrototype, self).__init__()
@@ -184,6 +189,8 @@ class c302ModelPrototype(ParameterisedModelPrototype):
             nml_doc.gap_junctions.append(prototype_syn)
         elif isinstance(prototype_syn, GradedSynapse):
             nml_doc.graded_synapses.append(prototype_syn)
+        elif isinstance(prototype_syn, NonNeuroMLCustomType):
+            pass
         else:
             info = "%s conns; %s" % (n, existing_synapses)
             del existing_synapses[prototype_syn.id]
@@ -192,7 +199,7 @@ class c302ModelPrototype(ParameterisedModelPrototype):
         return prototype_syn
 
     def is_analog_conn(self, syn):
-        return isinstance(syn, GradedSynapse)
+        return isinstance(syn, GradedSynapse) or isinstance(syn, NonNeuroMLCustomType)
 
     def is_elec_conn(self, syn):
         return isinstance(syn, GapJunction)

@@ -1,5 +1,5 @@
 {
-    "Canonical_X": {
+    "Canonical_W2D": {
         "version": "NeuroMLlite v0.6.1",
         "parameters": {
             "bias": 0,
@@ -13,21 +13,21 @@
             "scaleDinout": 0.5
         },
         "cells": {
-            "GenericNeuronCellX": {
+            "GenericNeuronCellW2D": {
                 "parameters": {
                     "bias": "bias",
                     "gain": "gain",
                     "tau": "tau"
                 },
-                "lems_source_file": "cell_X.xml"
+                "lems_source_file": "cell_W2D.xml"
             }
         },
         "synapses": {
-            "neuron_to_neuron_exc_syn_x": {
+            "neuron_to_neuron_exc_syn_w2d": {
                 "neuroml2_source_file": "test_syns.xml"
             },
-            "neuron_to_neuron_inh_syn_x": {
-                "neuroml2_source_file": "test_syns.xml"
+            "gapJunction0": {
+                "neuroml2_source_file": "test_syns2.xml"
             }
         },
         "input_sources": {
@@ -77,7 +77,7 @@
         "populations": {
             "AVB": {
                 "size": 1,
-                "component": "GenericNeuronCellX",
+                "component": "GenericNeuronCellW2D",
                 "properties": {
                     "color": "1 0 .4"
                 },
@@ -87,7 +87,7 @@
             },
             "VB": {
                 "size": 1,
-                "component": "GenericNeuronCellX",
+                "component": "GenericNeuronCellW2D",
                 "properties": {
                     "color": ".5 .4 1"
                 },
@@ -97,7 +97,7 @@
             },
             "DB": {
                 "size": 1,
-                "component": "GenericNeuronCellX",
+                "component": "GenericNeuronCellW2D",
                 "properties": {
                     "color": ".5 .4 1"
                 },
@@ -107,7 +107,7 @@
             },
             "VD": {
                 "size": 1,
-                "component": "GenericNeuronCellX",
+                "component": "GenericNeuronCellW2D",
                 "properties": {
                     "color": ".5 .4 1"
                 },
@@ -117,7 +117,7 @@
             },
             "DD": {
                 "size": 1,
-                "component": "GenericNeuronCellX",
+                "component": "GenericNeuronCellW2D",
                 "properties": {
                     "color": ".5 .4 1"
                 },
@@ -127,12 +127,11 @@
             }
         },
         "projections": {
-            "proj_AVB_VB": {
+            "elec_proj_AVB_VB": {
                 "presynaptic": "AVB",
                 "postsynaptic": "VB",
-                "synapse": "neuron_to_neuron_exc_syn_x",
-                "type": "continuousProjection",
-                "delay": 0,
+                "synapse": "gapJunction0",
+                "type": "electricalProjection",
                 "weight": "weight_IN_MN",
                 "random_connectivity": {
                     "probability": 1
@@ -141,21 +140,10 @@
             "proj_VB_VD": {
                 "presynaptic": "VB",
                 "postsynaptic": "VD",
-                "synapse": "neuron_to_neuron_exc_syn_x",
+                "synapse": "neuron_to_neuron_exc_syn_w2d",
                 "type": "continuousProjection",
                 "delay": 0,
                 "weight": "weight_MN_MN_Exc",
-                "random_connectivity": {
-                    "probability": 1
-                }
-            },
-            "proj_VD_VB": {
-                "presynaptic": "VD",
-                "postsynaptic": "VB",
-                "synapse": "neuron_to_neuron_inh_syn_x",
-                "type": "continuousProjection",
-                "delay": 0,
-                "weight": "weight_MN_MN_Inh",
                 "random_connectivity": {
                     "probability": 1
                 }

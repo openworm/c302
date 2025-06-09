@@ -23,6 +23,8 @@ from neuroml import SilentSynapse
 import neuroml.writers as writers
 import neuroml.loaders as loaders
 
+import cect
+
 # import c302.bioparameters
 
 import airspeed
@@ -36,10 +38,7 @@ import importlib
 import math
 from lxml import etree
 import re
-
 import json
-
-
 import collections
 
 try:
@@ -61,6 +60,16 @@ try:
     from urllib2 import URLError  # Python 2
 except Exception:
     from urllib.error import URLError  # Python 3
+
+
+from cect.Cells import BODY_WALL_MUSCLE_NAMES
+
+DEFAULT_DATA_READER = "SpreadsheetDataReader"
+#
+# DEFAULT_DATA_READER = "cect.White_whole"
+# DEFAULT_DATA_READER = "cect.Cook2019HermReader"
+DEFAULT_DATA_READER = "cect.SpreadsheetDataReader"
+FW_DATA_READER = "cect.UpdatedSpreadsheetDataReader2"
 
 logging.basicConfig()
 
@@ -85,7 +94,7 @@ def print_(msg, print_it=True):  # print_it=False when not verbose
         print("%s %s" % (pre, msg.replace("\n", "\n" + pre)))
 
 
-def load_data_reader(data_reader="SpreadsheetDataReader"):
+def load_data_reader(data_reader):
     """
     Imports and returns data reader module
     Args:
@@ -93,7 +102,12 @@ def load_data_reader(data_reader="SpreadsheetDataReader"):
     Returns:
         reader (obj): The data reader object
     """
-    return importlib.import_module("c302.%s" % data_reader)
+    # return importlib.import_module("c302.%s" % data_reader)
+    if "cect" in data_reader:
+        dr = importlib.import_module("%s" % data_reader)
+        return dr.get_instance()
+    else:
+        return importlib.import_module("c302.%s" % data_reader)
 
 
 def get_str_from_expnotation(num):
@@ -107,7 +121,7 @@ def get_str_from_expnotation(num):
     return "{0:.15f}".format(num)
 
 
-def get_muscle_position(muscle, data_reader="SpreadsheetDataReader"):
+def get_muscle_position(muscle, data_reader):
     if muscle == "MANAL" or muscle == "MVULVA":
         return 0, 0, 0
     # TODO: Pull these positions from openworm/owmeta-data
@@ -160,8 +174,8 @@ def process_args():
         "-datareader",
         type=str,
         metavar="<data-reader>",
-        default="SpreadsheetDataReader",
-        help='Use a specific data reader. Possible values are: "SpreadsheetDataReader". (default: SpreadsheetDataReader)',
+        default=DEFAULT_DATA_READER,
+        help="Use a specific data reader. (default: %s)" % DEFAULT_DATA_READER,
     )
 
     parser.add_argument(
@@ -449,8 +463,8 @@ def get_file_name_relative_to_c302(file_name):
         return os.path.relpath(os.environ["C302_HOME"], file_name)
 
 
-def get_cell_names_and_connection(data_reader="SpreadsheetDataReader", test=False):
-    # Use the spreadsheet reader to give a list of all cells and a list of all connections
+def get_cell_names_and_connection(data_reader, test=False):
+    # Use the data reader to give a list of all cells and a list of all connections
     # This could be replaced with a call to "DatabaseReader" or "OpenWormNeuroLexReader" in future...
     # If called from unittest folder ammend path to "../../../../"
 
@@ -463,9 +477,7 @@ def get_cell_names_and_connection(data_reader="SpreadsheetDataReader", test=Fals
     return cell_names, conns
 
 
-def get_cell_muscle_names_and_connection(
-    data_reader="SpreadsheetDataReader", test=False
-):
+def get_cell_muscle_names_and_connection(data_reader, test=False):
     mneurons, all_muscles, muscle_conns = load_data_reader(
         data_reader
     ).read_muscle_data()
@@ -473,7 +485,20 @@ def get_cell_muscle_names_and_connection(
         all_muscles.remove("MANAL")
     if "MVULVA" in all_muscles:
         all_muscles.remove("MVULVA")
-    return mneurons, sorted(all_muscles), muscle_conns
+
+    all_known_muscles = []
+    if len(all_muscles) == 0:
+        all_known_muscles = BODY_WALL_MUSCLE_NAMES
+    else:
+        for m in all_muscles:
+            if m in BODY_WALL_MUSCLE_NAMES:
+                all_known_muscles.append(m)
+
+    all_known_muscles = sorted(all_known_muscles)
+
+    print_(" - Using for muscles: %s" % all_known_muscles)
+
+    return mneurons, all_known_muscles, muscle_conns
 
 
 def is_cond_based_cell(params):
@@ -629,7 +654,7 @@ def mirror_param(params, k, v):
 def generate(
     net_id,
     params,
-    data_reader="SpreadsheetDataReader",
+    data_reader=DEFAULT_DATA_READER,
     cells=None,
     cells_to_plot=None,
     cells_to_stimulate=None,
@@ -707,6 +732,11 @@ def generate(
         "\n\nParameters and setting used to generate this network:\n\n"
         + "    Data reader:                    %s\n" % data_reader
         + "    c302 version:                   %s\n" % __version__
+        + (
+            "    cect version:                   %s\n" % (cect.__version__)
+            if "cect" in data_reader
+            else ""
+        )
         + "    owmeta version:                 %s\n"
         % ("- not installed -" if not owmeta_installed else owmeta_version)
         + "    owmeta_core version:            %s\n"
@@ -1005,10 +1035,6 @@ def generate(
     mneurons, all_muscles, muscle_conns = get_cell_muscle_names_and_connection(
         data_reader
     )
-
-    # print(all_muscles)
-    # if data_reader == "SpreadsheetDataReader":
-    #    all_muscles = get_muscle_names()
 
     if muscles_to_include is None or muscles_to_include is True:
         muscles_to_include = all_muscles

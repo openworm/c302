@@ -1,6 +1,6 @@
 set -ex
 
-ruff format *.py */*.py */*/*.py */*/*/*.py
+ruff format *.py */*.py */*/*.py
 
 pip install .
 
@@ -15,6 +15,9 @@ python -m c302.OpenWormReader
 
 
 ##   (Re)generate NeuroML 2 & LEMS files from the python scripts
+
+python -m c302.c302_IClamp W2D
+
 
 python -m c302.c302_IClamp A
 python -m c302.c302_Syns A

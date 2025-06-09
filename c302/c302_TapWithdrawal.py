@@ -19,7 +19,7 @@ def setup(
     duration=400,
     dt=0.05,
     target_directory="examples",
-    data_reader="UpdatedSpreadsheetDataReader",
+    data_reader=c302.FW_DATA_READER,
     param_overrides={},
     config_param_overrides={},
     verbose=True,
@@ -469,4 +469,4 @@ def setup(
 if __name__ == "__main__":
     parameter_set = sys.argv[1] if len(sys.argv) == 2 else "C2"
 
-    setup(parameter_set, generate=True, data_reader="UpdatedSpreadsheetDataReader")
+    setup(parameter_set, generate=True, data_reader=c302.FW_DATA_READER)
