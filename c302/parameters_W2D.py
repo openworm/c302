@@ -71,7 +71,8 @@ class ParameterisedModel(c302ModelPrototype):
         )
 
     def create_neuron_to_neuron_syn(self):
-        self.neuron_to_neuron_exc_syn = OutputSynapse(id="neuron_to_neuron_w2d")
+        self.neuron_to_neuron_exc_syn = OutputSynapse(id="neuron_to_neuron_exc_w2d")
+        self.neuron_to_neuron_inh_syn = OutputSynapse(id="neuron_to_neuron_inh_w2d")
 
         self.neuron_to_neuron_elec_syn = GapJunction(
             id="neuron_to_neuron_elec_syn",
@@ -101,7 +102,7 @@ class ParameterisedModel(c302ModelPrototype):
         return self.neuron_to_neuron_exc_syn
 
     def get_inh_syn(self, pre_cell, post_cell, type):
-        return self.neuron_to_neuron_exc_syn
+        return self.neuron_to_neuron_inh_syn
 
 
 from c302.bioparameters import NonNeuroMLCustomType

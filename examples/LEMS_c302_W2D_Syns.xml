@@ -1,0 +1,85 @@
+<Lems>
+    
+    <!--
+
+
+Parameters and setting used to generate this network:
+
+    Data reader:                    cect.SpreadsheetDataReader
+    c302 version:                   0.10.0
+    cect version:                   0.2.5
+    owmeta version:                 - not installed -
+    owmeta_core version:            - not installed -
+    Cells:                          ['URYDL', 'SMDDR', 'VD12', 'VB11', 'AS2', 'AIZL', 'ASHL']
+    Cell stimulated:                []
+    Connection:                     []
+    Connection numbers overridden:  None
+    Connection numbers scaled:      None
+    Connection polarities override: None
+    Muscles:                        ['MDL07']
+
+    Known BioParameters:
+        BioParameter: initial_memb_pot = -45 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_elec_syn_gbase = 1 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_elec_syn_gbase = 1 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: unphysiological_offset_current = 0 pA (SRC: KnownError, certainty 0)
+        BioParameter: unphysiological_offset_current_del = 50 ms (SRC: Testing IClamp, certainty 0)
+        BioParameter: unphysiological_offset_current_dur = 2000 ms (SRC: KnownError, certainty 0)
+
+   
+    -->
+
+    <Target component="sim_c302_W2D_Syns" />
+
+    <!-- Include core NeuroML2 ComponentType definitions -->
+
+    <Include file="Cells.xml" />
+    <Include file="Networks.xml" />
+    <Include file="Simulation.xml" />
+    
+    <Include file="cell_W2D.xml" />
+    
+    <Include file="custom_synapses.xml" />
+    
+    <Include file="c302_W2D_Syns.net.nml" />
+
+    <!-- End of NeuroML2 content -->
+    
+
+    <Simulation id="sim_c302_W2D_Syns" length="3600ms" step="0.05ms" target="c302_W2D_Syns">
+
+        <Display id="neurons" title="c302_W2D_Syns: Membrane potential of a number of neurons" timeScale="1ms" xmin="-360.0" xmax="3960.0000000000005" ymin="-52" ymax="-28">
+            
+            <Line id="AIZL" quantity="AIZL/0/GenericNeuronCell/v" scale="1mV" color="#e13b00" timeScale="1ms" />
+            <Line id="AS2" quantity="AS2/0/GenericNeuronCell/v" scale="1mV" color="#2e112a" timeScale="1ms" />
+            <Line id="ASHL" quantity="ASHL/0/GenericNeuronCell/v" scale="1mV" color="#32b579" timeScale="1ms" />
+            <Line id="SMDDR" quantity="SMDDR/0/GenericNeuronCell/v" scale="1mV" color="#000000" timeScale="1ms" />
+            <Line id="URYDL" quantity="URYDL/0/GenericNeuronCell/v" scale="1mV" color="#b1f7ed" timeScale="1ms" />
+            <Line id="VB11" quantity="VB11/0/GenericNeuronCell/v" scale="1mV" color="#4c2e5d" timeScale="1ms" />
+            <Line id="VD12" quantity="VD12/0/GenericNeuronCell/v" scale="1mV" color="#3a00f9" timeScale="1ms" />
+            
+        </Display>
+      
+        <Display id="muscles" title="c302_W2D_Syns: Membrane potential of a number of muscles" timeScale="1ms" xmin="-360.0" xmax="3960.0000000000005" ymin="-52" ymax="-28">
+            
+            <Line id="MDL07" quantity="MDL07/0/GenericMuscleCell/v" scale="1mV" color="#7f21ee" timeScale="1ms" />
+
+        </Display>
+
+        <OutputFile id="neurons_v" fileName="c302_W2D_Syns.dat">
+            <OutputColumn id="AIZL_v" quantity="AIZL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="AS2_v" quantity="AS2/0/GenericNeuronCell/v"/>
+            <OutputColumn id="ASHL_v" quantity="ASHL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="SMDDR_v" quantity="SMDDR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="URYDL_v" quantity="URYDL/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VB11_v" quantity="VB11/0/GenericNeuronCell/v"/>
+            <OutputColumn id="VD12_v" quantity="VD12/0/GenericNeuronCell/v"/>
+        </OutputFile>
+        
+        <OutputFile id="muscles_v" fileName="c302_W2D_Syns.muscles.dat">
+            <OutputColumn id="MDL07_v" quantity="MDL07/0/GenericMuscleCell/v"/>
+        </OutputFile>
+    </Simulation>
+
+
+</Lems>

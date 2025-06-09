@@ -266,6 +266,9 @@ if __name__ == "__main__":
         run_c302("Syns", "D1", "", 500, 0.05, "jNeuroML_NEURON")
 
     elif "-synsW2D" in sys.argv:
+        run_c302("Syns", "W2D", "", 500, 0.05, "jNeuroML")
+
+    elif "-synsW2Dn" in sys.argv:
         run_c302("Syns", "W2D", "", 500, 0.05, "jNeuroML_NEURON")
 
     elif "-socialA" in sys.argv:
@@ -352,11 +355,14 @@ if __name__ == "__main__":
     elif "-iw2d" in sys.argv:
         run_c302("IClamp", "W2D", "", 6000, 0.05, "jNeuroML", save=True)
 
+    elif "-iw2dn" in sys.argv:
+        run_c302("IClamp", "W2D", "", 6000, 0.05, "jNeuroML_NEURON", save=True)
+
     elif "-all" in sys.argv:
         print("Generating all plots")
         html = "<table>\n"
 
-        levels = ["A", "B", "C0", "C", "C1", "C2", "D", "D1"]
+        levels = ["A", "B", "C0", "C", "C1", "C2", "D", "D1", "W2D"]
         # levels = ['D','D1']
         # levels = ['C2']
         # levels = ['C0']

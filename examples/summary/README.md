@@ -322,4 +322,43 @@
     &nbsp;<a href="http://opensourcebrain.org/projects/celegans?explorer=https://raw.githubusercontent.com/openworm/c302/master/examples/c302_D1_Full.net.nml">OSB</a>
   </td>
 </tr>
+
+<tr>
+  <td><b><a href="https://github.com/openworm/c302/blob/master/c302/parameters_W2D.py">Params W2D</a></b></td>
+  <td><a href="summary_W2D_IClamp.md">
+    <img alt="?" src="images/neurons_W2D_IClamp.png" height="80"/></a>
+    <br/><a href="https://github.com/openworm/c302/blob/master/examples/c302_W2D_IClamp.net.nml">NML</a>
+    &nbsp;<a href="http://opensourcebrain.org/projects/celegans?explorer=https://raw.githubusercontent.com/openworm/c302/master/examples/c302_W2D_IClamp.net.nml">OSB</a>
+  </td>
+  <td><a href="summary_W2D_Syns.md">
+    <img alt="?" src="images/neurons_W2D_Syns.png" height="80"/></a>
+    <br/><a href="https://github.com/openworm/c302/blob/master/examples/c302_W2D_Syns.net.nml">NML</a>
+    &nbsp;<a href="http://opensourcebrain.org/projects/celegans?explorer=https://raw.githubusercontent.com/openworm/c302/master/examples/c302_W2D_Syns.net.nml">OSB</a>
+  </td>
+  <td><a href="summary_W2D_Pharyngeal.md">
+    <img alt="?" src="images/neurons_W2D_Pharyngeal.png" height="80"/></a>
+    <br/><a href="https://github.com/openworm/c302/blob/master/examples/c302_W2D_Pharyngeal.net.nml">NML</a>
+    &nbsp;<a href="http://opensourcebrain.org/projects/celegans?explorer=https://raw.githubusercontent.com/openworm/c302/master/examples/c302_W2D_Pharyngeal.net.nml">OSB</a>
+  </td>
+  <td><a href="summary_W2D_Social.md">
+    <img alt="?" src="images/neurons_W2D_Social.png" height="80"/></a>
+    <br/><a href="https://github.com/openworm/c302/blob/master/examples/c302_W2D_Social.net.nml">NML</a>
+    &nbsp;<a href="http://opensourcebrain.org/projects/celegans?explorer=https://raw.githubusercontent.com/openworm/c302/master/examples/c302_W2D_Social.net.nml">OSB</a>
+  </td>
+  <td><a href="summary_W2D_Oscillator.md">
+    <img alt="?" src="images/neurons_W2D_Oscillator.png" height="80"/></a>
+    <br/><a href="https://github.com/openworm/c302/blob/master/examples/c302_W2D_Oscillator.net.nml">NML</a>
+    &nbsp;<a href="http://opensourcebrain.org/projects/celegans?explorer=https://raw.githubusercontent.com/openworm/c302/master/examples/c302_W2D_Oscillator.net.nml">OSB</a>
+  </td>
+  <td><a href="summary_W2D_Muscles.md">
+    <img alt="?" src="images/neurons_W2D_Muscles.png" height="80"/></a>
+    <br/><a href="https://github.com/openworm/c302/blob/master/examples/c302_W2D_Muscles.net.nml">NML</a>
+    &nbsp;<a href="http://opensourcebrain.org/projects/celegans?explorer=https://raw.githubusercontent.com/openworm/c302/master/examples/c302_W2D_Muscles.net.nml">OSB</a>
+  </td>
+  <td><a href="summary_W2D_Full.md">
+    <img alt="?" src="images/neurons_W2D_Full.png" height="80"/></a>
+    <br/><a href="https://github.com/openworm/c302/blob/master/examples/c302_W2D_Full.net.nml">NML</a>
+    &nbsp;<a href="http://opensourcebrain.org/projects/celegans?explorer=https://raw.githubusercontent.com/openworm/c302/master/examples/c302_W2D_Full.net.nml">OSB</a>
+  </td>
+</tr>
 </table>

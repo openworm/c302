@@ -1,0 +1,154 @@
+<neuroml xmlns="http://www.neuroml.org/schema/neuroml2"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2 https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2.3.1.xsd" id="c302_W2D_Syns">
+    <notes>
+
+Parameters and setting used to generate this network:
+
+    Data reader:                    cect.SpreadsheetDataReader
+    c302 version:                   0.10.0
+    cect version:                   0.2.5
+    owmeta version:                 - not installed -
+    owmeta_core version:            - not installed -
+    Cells:                          ['URYDL', 'SMDDR', 'VD12', 'VB11', 'AS2', 'AIZL', 'ASHL']
+    Cell stimulated:                []
+    Connection:                     []
+    Connection numbers overridden:  None
+    Connection numbers scaled:      None
+    Connection polarities override: None
+    Muscles:                        ['MDL07']
+
+    Known BioParameters:
+        BioParameter: initial_memb_pot = -45 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_elec_syn_gbase = 1 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_elec_syn_gbase = 1 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: unphysiological_offset_current = 0 pA (SRC: KnownError, certainty 0)
+        BioParameter: unphysiological_offset_current_del = 50 ms (SRC: Testing IClamp, certainty 0)
+        BioParameter: unphysiological_offset_current_dur = 2000 ms (SRC: KnownError, certainty 0)
+
+</notes>
+    <include href="cell_W2D.xml"/>
+    <include href="custom_synapses.xml"/>
+    <gapJunction id="neuron_to_neuron_elec_syn" conductance="1 nS"/>
+    <silentSynapse id="silent"/>
+    <pulseGenerator id="offset_current" delay="50 ms" duration="2000 ms" amplitude="0 pA"/>
+    <pulseGenerator id="stim_URYDL_1" delay="500ms" duration="800ms" amplitude="1pA"/>
+    <pulseGenerator id="stim_VD12_1" delay="500ms" duration="800ms" amplitude="1pA"/>
+    <pulseGenerator id="stim_AS2_1" delay="500ms" duration="800ms" amplitude="1pA"/>
+    <pulseGenerator id="stim_AIZL_1" delay="500ms" duration="800ms" amplitude="1pA"/>
+    <pulseGenerator id="stim_URYDL_2" delay="1900ms" duration="800ms" amplitude="5pA"/>
+    <pulseGenerator id="stim_VD12_2" delay="1900ms" duration="800ms" amplitude="5pA"/>
+    <pulseGenerator id="stim_AS2_2" delay="1900ms" duration="800ms" amplitude="5pA"/>
+    <pulseGenerator id="stim_AIZL_2" delay="1900ms" duration="800ms" amplitude="5pA"/>
+    <network id="c302_W2D_Syns">
+        <property tag="recommended_duration_ms" value="3600"/>
+        <property tag="recommended_dt_ms" value="0.05"/>
+        <population id="AIZL" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron"/>
+            <property tag="receptor" value="MOD-1; NPR-2; SER-2"/>
+            <property tag="neurotransmitter" value="Glutamate"/>
+            <instance id="0">
+                <location x="5.6000004" y="-258.75" z="37.450000000000003"/>
+            </instance>
+        </population>
+        <population id="AS2" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="ACR-14; ACR-15; CKR-2; DOP-1; DOP-3; LGC-46; NPR-3; UNC-63"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
+            <property tag="OpenWormBackerAssignedName" value="Geraldine"/>
+            <instance id="0">
+                <location x="-1.8750001" y="-203.875" z="-12.725"/>
+            </instance>
+        </population>
+        <population id="ASHL" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value="1 .2 1"/>
+            <property tag="type" value="sensory"/>
+            <property tag="receptor" value="DCAR-1; DOP-4; NPR-1; NPR-2; NTR-1; NTR-2; OCR-2; OCTR-1; OSM-9; SER-3; SER-5; SRA-6; SRB-6; TMC-1; TRPA-1; TYRA-2; UNC-8"/>
+            <property tag="neurotransmitter" value="Glutamate"/>
+            <instance id="0">
+                <location x="5.55" y="-265.625" z="41.0"/>
+            </instance>
+        </population>
+        <population id="SMDDR" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="LGC-55; NTR-2"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
+            <instance id="0">
+                <location x="-7.4500003" y="-266.25" z="34.100000000000001"/>
+            </instance>
+        </population>
+        <population id="URYDL" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value="1 .2 1"/>
+            <property tag="type" value="sensory"/>
+            <property tag="receptor" value="LGC-53; PDFR-1; SER-1"/>
+            <property tag="neurotransmitter" value="Glutamate"/>
+            <instance id="0">
+                <location x="4.125" y="-281.425000000000011" z="51.899997999999997"/>
+            </instance>
+        </population>
+        <population id="VB11" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor; sensory"/>
+            <property tag="receptor" value="CKR-2; DOP-1; DOP-3; NPR-3"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
+            <instance id="0">
+                <location x="-1.8249999" y="262.324999999999989" z="-21.949999999999999"/>
+            </instance>
+        </population>
+        <population id="VD12" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="DOP-3; MOD-1; NPR-1; SER-2"/>
+            <property tag="neurotransmitter" value="GABA"/>
+            <instance id="0">
+                <location x="-0.75" y="345.5" z="-23.149999999999999"/>
+            </instance>
+        </population>
+        <population id="MDL07" component="GenericMuscleCell" size="1" type="populationList">
+            <property tag="color" value="0 .6 0"/>
+            <instance id="0">
+                <location x="80.0" y="-90.0" z="80.0"/>
+            </instance>
+        </population>
+        <electricalProjection id="NC_AIZL_ASHL_Generic_GJ" presynapticPopulation="AIZL" postsynapticPopulation="ASHL">
+            <electricalConnectionInstanceW id="0" preCell="../AIZL/0/GenericNeuronCell" postCell="../ASHL/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
+        </electricalProjection>
+        <electricalProjection id="NC_ASHL_AIZL_Generic_GJ" presynapticPopulation="ASHL" postsynapticPopulation="AIZL">
+            <electricalConnectionInstanceW id="0" preCell="../ASHL/0/GenericNeuronCell" postCell="../AIZL/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
+        </electricalProjection>
+        <continuousProjection id="NC_VD12_VB11_GABA" presynapticPopulation="VD12" postsynapticPopulation="VB11">
+            <continuousConnectionInstanceW id="0" preCell="../VD12/0/GenericNeuronCell" postCell="../VB11/0/GenericNeuronCell" preComponent="silent" postComponent="neuron_to_neuron_inh_w2d" weight="1.0"/>
+        </continuousProjection>
+        <continuousProjection id="NC_URYDL_SMDDR_Glutamate" presynapticPopulation="URYDL" postsynapticPopulation="SMDDR">
+            <continuousConnectionInstanceW id="0" preCell="../URYDL/0/GenericNeuronCell" postCell="../SMDDR/0/GenericNeuronCell" preComponent="silent" postComponent="neuron_to_neuron_exc_w2d" weight="1.0"/>
+        </continuousProjection>
+        <continuousProjection id="NC_AS2_MDL07_Acetylcholine" presynapticPopulation="AS2" postsynapticPopulation="MDL07">
+            <continuousConnectionInstanceW id="0" preCell="../AS2/0/GenericNeuronCell" postCell="../MDL07/0/GenericMuscleCell" preComponent="silent" postComponent="neuron_to_neuron_exc_w2d" weight="3.0"/>
+        </continuousProjection>
+        <inputList id="Input_URYDL_stim_URYDL_1" population="URYDL" component="stim_URYDL_1">
+            <input id="0" target="../URYDL/0/GenericNeuronCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_VD12_stim_VD12_1" population="VD12" component="stim_VD12_1">
+            <input id="0" target="../VD12/0/GenericNeuronCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_AS2_stim_AS2_1" population="AS2" component="stim_AS2_1">
+            <input id="0" target="../AS2/0/GenericNeuronCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_AIZL_stim_AIZL_1" population="AIZL" component="stim_AIZL_1">
+            <input id="0" target="../AIZL/0/GenericNeuronCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_URYDL_stim_URYDL_2" population="URYDL" component="stim_URYDL_2">
+            <input id="0" target="../URYDL/0/GenericNeuronCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_VD12_stim_VD12_2" population="VD12" component="stim_VD12_2">
+            <input id="0" target="../VD12/0/GenericNeuronCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_AS2_stim_AS2_2" population="AS2" component="stim_AS2_2">
+            <input id="0" target="../AS2/0/GenericNeuronCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_AIZL_stim_AIZL_2" population="AIZL" component="stim_AIZL_2">
+            <input id="0" target="../AIZL/0/GenericNeuronCell" destination="synapses"/>
+        </inputList>
+    </network>
+</neuroml>

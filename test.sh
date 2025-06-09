@@ -146,6 +146,7 @@ cd examples
 pynml LEMS_c302_A_Full.xml -neuron
 pynml LEMS_c302_B_Pharyngeal.xml -neuron
 pynml LEMS_c302_C_Syns.xml -neuron
+pynml LEMS_c302_W2D_Syns.xml -neuron
 nrnivmodl
 
 cd -
