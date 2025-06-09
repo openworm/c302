@@ -1,0 +1,28 @@
+target: LEMS_Sim_IClamp_GenericNeuronCellW2D.xml
+engine: jNeuroML_NEURON
+
+mep: .test.ex.mep
+experiments:
+  state:
+    observables:
+      spike times:
+        file: 
+          path: pop_GenericNeuronCellW2D_0.state.dat
+          columns: [0,1]
+          scaling: [1, 1]
+        spike detection: 
+          method: threshold
+          threshold: 0.8
+        tolerance: 7.063344069599857e-06
+  output:
+    observables:
+      spike times:
+        file: 
+          path: pop_GenericNeuronCellW2D_0.output.dat
+          columns: [0,1]
+          scaling: [1, 1]
+        spike detection: 
+          method: threshold
+          threshold: 0.8
+        tolerance: 1.0338268133298212e-05
+
