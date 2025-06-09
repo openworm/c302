@@ -1,5 +1,5 @@
-target: LEMS_Sim_IClamp_GenericNeuronCellW2D.xml
-engine: jNeuroML_NEURON
+target: test_ex0_jnmlnrn.py
+engine: Brian2
 
 mep: .test.ex.mep
 experiments:
