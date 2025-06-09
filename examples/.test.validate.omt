@@ -1,5 +1,5 @@
 # Script for running automated tests on OSB using Travis-CI, see https://github.com/OpenSourceBrain/osb-model-validation 
 
 # This test will validate NeuroML 2 files in the current directory using: jnml -validate 
-target: "*A_*.nml *C_*.nml *C1_*.nml *D_*.nml"
+target: "*A_*.nml *C_*.nml *C1_*.nml *_D_*.nml"
 engine: jNeuroML_validate

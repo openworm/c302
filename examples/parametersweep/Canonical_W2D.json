@@ -23,7 +23,7 @@
             }
         },
         "synapses": {
-            "neuron_to_neuron_exc_syn_x": {
+            "neuron_to_neuron_exc_syn_w2d": {
                 "neuroml2_source_file": "test_syns.xml"
             },
             "gapJunction0": {
@@ -140,7 +140,7 @@
             "proj_VB_VD": {
                 "presynaptic": "VB",
                 "postsynaptic": "VD",
-                "synapse": "neuron_to_neuron_exc_syn_x",
+                "synapse": "neuron_to_neuron_exc_syn_w2d",
                 "type": "continuousProjection",
                 "delay": 0,
                 "weight": "weight_MN_MN_Exc",

@@ -25,7 +25,6 @@
     <Constant name="PAMP" dimension="current" value="1pA"/>
 
     <!-- <Exposure name="v" dimension="none"/> --> <!-- Already exposed from baseCellMembPotDL -->
-    <Exposure name="iSyn" dimension="current"/>
     <Exposure name="spiking" dimension="none"/>
     <Exposure name="state" dimension="none"/>
     <Exposure name="output" dimension="none"/>
@@ -67,6 +66,7 @@
 </ComponentType>
 
 <cellW2D id="GenericNeuronCellW2D" tau="1s" bias="1" gain="1" state0=".5"/>
+<cellW2D id="GenericMuscleCellW2D" tau="1s" bias="1" gain="1" state0=".5"/>
 
 </Lems>
     
