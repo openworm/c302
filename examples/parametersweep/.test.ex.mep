@@ -1,6 +1,9 @@
 system: Test
 
 experiments:
+    v:
+        expected:
+            spike times: [3.539375]
     state:
         expected:
             spike times: [3.5394]
