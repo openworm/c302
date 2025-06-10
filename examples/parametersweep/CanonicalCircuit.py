@@ -112,7 +112,7 @@ def generate(duration=1000, paramset="C"):
     if paramset == "W2D":
         neuron_id = "GenericNeuronCellW2D"
 
-        neuron_nmllite = Cell(id=neuron_id, lems_source_file="cell_W2D.xml")
+        neuron_nmllite = Cell(id=neuron_id, lems_source_file="../../c302/cell_W2D.xml")
         neuron_nmllite.parameters = {}
 
         for p in cell_params:

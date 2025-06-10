@@ -19,7 +19,7 @@
                     "gain": "gain",
                     "tau": "tau"
                 },
-                "lems_source_file": "cell_W2D.xml"
+                "lems_source_file": "../../c302/cell_W2D.xml"
             }
         },
         "synapses": {
