@@ -1,0 +1,194 @@
+<neuroml xmlns="http://www.neuroml.org/schema/neuroml2"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2 https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2.3.1.xsd" id="c302_W2D_Social">
+    <notes>
+
+Parameters and setting used to generate this network:
+
+    Data reader:                    cect.SpreadsheetDataReader
+    c302 version:                   0.10.0
+    cect version:                   0.2.5
+    owmeta version:                 - not installed -
+    owmeta_core version:            - not installed -
+    Cells:                          ['RMGR', 'ASHR', 'ASKR', 'AWBR', 'IL2R', 'RMHR', 'URXR']
+    Cell stimulated:                []
+    Connection:                     []
+    Connection numbers overridden:  None
+    Connection numbers scaled:      None
+    Connection polarities override: None
+    Muscles:                        []
+
+    Known BioParameters:
+        BioParameter: initial_memb_pot = -45 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_elec_syn_gbase = 1 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_elec_syn_gbase = 1 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: unphysiological_offset_current = 0 pA (SRC: KnownError, certainty 0)
+        BioParameter: unphysiological_offset_current_del = 0 ms (SRC: KnownError, certainty 0)
+        BioParameter: unphysiological_offset_current_dur = 2000 ms (SRC: KnownError, certainty 0)
+
+</notes>
+    <include href="cell_W2D.xml"/>
+    <include href="custom_synapses.xml"/>
+    <gapJunction id="neuron_to_neuron_elec_syn" conductance="1 nS"/>
+    <silentSynapse id="silent"/>
+    <pulseGenerator id="offset_current" delay="0 ms" duration="2000 ms" amplitude="0 pA"/>
+    <pulseGenerator id="stim_RMGR_1" delay="100ms" duration="200ms" amplitude="5pA"/>
+    <pulseGenerator id="stim_ASHR_1" delay="400ms" duration="200ms" amplitude="5pA"/>
+    <pulseGenerator id="stim_ASKR_1" delay="700ms" duration="200ms" amplitude="5pA"/>
+    <pulseGenerator id="stim_AWBR_1" delay="1000ms" duration="200ms" amplitude="5pA"/>
+    <pulseGenerator id="stim_IL2R_1" delay="1300ms" duration="200ms" amplitude="5pA"/>
+    <pulseGenerator id="stim_RMHR_1" delay="1600ms" duration="200ms" amplitude="5pA"/>
+    <pulseGenerator id="stim_URXR_1" delay="1900ms" duration="200ms" amplitude="5pA"/>
+    <network id="c302_W2D_Social">
+        <property tag="recommended_duration_ms" value="2500"/>
+        <property tag="recommended_dt_ms" value="0.05"/>
+        <population id="ASHR" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value="1 .2 1"/>
+            <property tag="type" value="sensory"/>
+            <property tag="receptor" value="DCAR-1; DOP-4; NPR-1; NPR-2; NTR-1; NTR-2; OCR-2; OCTR-1; OSM-9; SER-3; SER-5; SRA-6; SRB-6; TMC-1; TRPA-1; TYRA-2; UNC-8"/>
+            <property tag="neurotransmitter" value="Glutamate"/>
+            <instance id="0">
+                <location x="-9.800000000000001" y="-265.625" z="41.0"/>
+            </instance>
+        </population>
+        <population id="ASKR" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value="1 .2 1"/>
+            <property tag="type" value="sensory"/>
+            <property tag="receptor" value="DAF-11; DOP-3; NPR-5; OSM-9; SRA-7; SRA-9; SRG-2; SRG-8; TYRA-3"/>
+            <property tag="neurotransmitter" value="Glutamate"/>
+            <property tag="OpenWormBackerAssignedName" value="Z.B."/>
+            <instance id="0">
+                <location x="-8.0" y="-268.024999999999977" z="46.399997999999997"/>
+            </instance>
+        </population>
+        <population id="AWBR" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value="1 .2 1"/>
+            <property tag="type" value="sensory"/>
+            <property tag="receptor" value="AEX-2; DAF-11; NPR-5; SER-5; SER-6; STR-1"/>
+            <property tag="neurotransmitter" value=""/>
+            <instance id="0">
+                <location x="-9.75" y="-266.225000000000023" z="43.100000000000001"/>
+            </instance>
+        </population>
+        <population id="IL2R" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value="1 .2 1"/>
+            <property tag="type" value="sensory"/>
+            <property tag="receptor" value="DES-2; LGC-53; NPR-1; NPR-5"/>
+            <property tag="neurotransmitter" value="Acetylcholine"/>
+            <instance id="0">
+                <location x="-11.0" y="-285.0" z="49.350000000000001"/>
+            </instance>
+        </population>
+        <population id="RMGR" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron"/>
+            <property tag="receptor" value="NPR-1"/>
+            <property tag="neurotransmitter" value=""/>
+            <property tag="OpenWormBackerAssignedName" value="Bryan Nagle"/>
+            <instance id="0">
+                <location x="-12.5" y="-238.299990000000008" z="32.700000000000003"/>
+            </instance>
+        </population>
+        <population id="RMHR" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value=".5 .4 1"/>
+            <property tag="type" value="motor"/>
+            <property tag="receptor" value="SER-1"/>
+            <property tag="neurotransmitter" value=""/>
+            <property tag="OpenWormBackerAssignedName" value="Martino"/>
+            <instance id="0">
+                <location x="-5.2999997" y="-265.899999999999977" z="35.700000000000003"/>
+            </instance>
+        </population>
+        <population id="URXR" component="GenericNeuronCell" size="1" type="populationList">
+            <property tag="color" value="1 0 .4"/>
+            <property tag="type" value="interneuron; sensory"/>
+            <property tag="receptor" value="GCY-1; GCY-25; GCY-32; GCY-34; GCY-35; GCY-36; GCY-37; NPR-1; PDFR-1; SRA-10"/>
+            <property tag="neurotransmitter" value=""/>
+            <instance id="0">
+                <location x="-7.35" y="-269.875" z="48.274999999999999"/>
+            </instance>
+        </population>
+        <electricalProjection id="NC_ASHR_ASKR_Generic_GJ" presynapticPopulation="ASHR" postsynapticPopulation="ASKR">
+            <electricalConnectionInstanceW id="0" preCell="../ASHR/0/GenericNeuronCell" postCell="../ASKR/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
+        </electricalProjection>
+        <electricalProjection id="NC_ASHR_RMGR_Generic_GJ" presynapticPopulation="ASHR" postsynapticPopulation="RMGR">
+            <electricalConnectionInstanceW id="0" preCell="../ASHR/0/GenericNeuronCell" postCell="../RMGR/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
+        </electricalProjection>
+        <electricalProjection id="NC_ASKR_ASHR_Generic_GJ" presynapticPopulation="ASKR" postsynapticPopulation="ASHR">
+            <electricalConnectionInstanceW id="0" preCell="../ASKR/0/GenericNeuronCell" postCell="../ASHR/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
+        </electricalProjection>
+        <electricalProjection id="NC_ASKR_RMGR_Generic_GJ" presynapticPopulation="ASKR" postsynapticPopulation="RMGR">
+            <electricalConnectionInstanceW id="0" preCell="../ASKR/0/GenericNeuronCell" postCell="../RMGR/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
+        </electricalProjection>
+        <electricalProjection id="NC_AWBR_RMGR_Generic_GJ" presynapticPopulation="AWBR" postsynapticPopulation="RMGR">
+            <electricalConnectionInstanceW id="0" preCell="../AWBR/0/GenericNeuronCell" postCell="../RMGR/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
+        </electricalProjection>
+        <electricalProjection id="NC_IL2R_RMGR_Generic_GJ" presynapticPopulation="IL2R" postsynapticPopulation="RMGR">
+            <electricalConnectionInstanceW id="0" preCell="../IL2R/0/GenericNeuronCell" postCell="../RMGR/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
+        </electricalProjection>
+        <electricalProjection id="NC_IL2R_URXR_Generic_GJ" presynapticPopulation="IL2R" postsynapticPopulation="URXR">
+            <electricalConnectionInstanceW id="0" preCell="../IL2R/0/GenericNeuronCell" postCell="../URXR/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
+        </electricalProjection>
+        <electricalProjection id="NC_RMGR_ASHR_Generic_GJ" presynapticPopulation="RMGR" postsynapticPopulation="ASHR">
+            <electricalConnectionInstanceW id="0" preCell="../RMGR/0/GenericNeuronCell" postCell="../ASHR/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
+        </electricalProjection>
+        <electricalProjection id="NC_RMGR_ASKR_Generic_GJ" presynapticPopulation="RMGR" postsynapticPopulation="ASKR">
+            <electricalConnectionInstanceW id="0" preCell="../RMGR/0/GenericNeuronCell" postCell="../ASKR/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
+        </electricalProjection>
+        <electricalProjection id="NC_RMGR_AWBR_Generic_GJ" presynapticPopulation="RMGR" postsynapticPopulation="AWBR">
+            <electricalConnectionInstanceW id="0" preCell="../RMGR/0/GenericNeuronCell" postCell="../AWBR/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
+        </electricalProjection>
+        <electricalProjection id="NC_RMGR_IL2R_Generic_GJ" presynapticPopulation="RMGR" postsynapticPopulation="IL2R">
+            <electricalConnectionInstanceW id="0" preCell="../RMGR/0/GenericNeuronCell" postCell="../IL2R/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
+        </electricalProjection>
+        <electricalProjection id="NC_RMGR_RMHR_Generic_GJ" presynapticPopulation="RMGR" postsynapticPopulation="RMHR">
+            <electricalConnectionInstanceW id="0" preCell="../RMGR/0/GenericNeuronCell" postCell="../RMHR/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
+        </electricalProjection>
+        <electricalProjection id="NC_RMGR_URXR_Generic_GJ" presynapticPopulation="RMGR" postsynapticPopulation="URXR">
+            <electricalConnectionInstanceW id="0" preCell="../RMGR/0/GenericNeuronCell" postCell="../URXR/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
+        </electricalProjection>
+        <electricalProjection id="NC_RMHR_RMGR_Generic_GJ" presynapticPopulation="RMHR" postsynapticPopulation="RMGR">
+            <electricalConnectionInstanceW id="0" preCell="../RMHR/0/GenericNeuronCell" postCell="../RMGR/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
+        </electricalProjection>
+        <electricalProjection id="NC_URXR_IL2R_Generic_GJ" presynapticPopulation="URXR" postsynapticPopulation="IL2R">
+            <electricalConnectionInstanceW id="0" preCell="../URXR/0/GenericNeuronCell" postCell="../IL2R/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
+        </electricalProjection>
+        <electricalProjection id="NC_URXR_RMGR_Generic_GJ" presynapticPopulation="URXR" postsynapticPopulation="RMGR">
+            <electricalConnectionInstanceW id="0" preCell="../URXR/0/GenericNeuronCell" postCell="../RMGR/0/GenericNeuronCell" synapse="neuron_to_neuron_elec_syn" weight="1.0"/>
+        </electricalProjection>
+        <continuousProjection id="NC_ASHR_RMGR_Glutamate" presynapticPopulation="ASHR" postsynapticPopulation="RMGR">
+            <continuousConnectionInstanceW id="0" preCell="../ASHR/0/GenericNeuronCell" postCell="../RMGR/0/GenericNeuronCell" preComponent="silent" postComponent="neuron_to_neuron_exc_w2d" weight="2.0"/>
+        </continuousProjection>
+        <continuousProjection id="NC_AWBR_ASHR_Glutamate" presynapticPopulation="AWBR" postsynapticPopulation="ASHR">
+            <continuousConnectionInstanceW id="0" preCell="../AWBR/0/GenericNeuronCell" postCell="../ASHR/0/GenericNeuronCell" preComponent="silent" postComponent="neuron_to_neuron_exc_w2d" weight="2.0"/>
+        </continuousProjection>
+        <continuousProjection id="NC_RMGR_ASHR_FMRFamide" presynapticPopulation="RMGR" postsynapticPopulation="ASHR">
+            <continuousConnectionInstanceW id="0" preCell="../RMGR/0/GenericNeuronCell" postCell="../ASHR/0/GenericNeuronCell" preComponent="silent" postComponent="neuron_to_neuron_exc_w2d" weight="1.0"/>
+        </continuousProjection>
+        <continuousProjection id="NC_RMGR_URXR_FMRFamide" presynapticPopulation="RMGR" postsynapticPopulation="URXR">
+            <continuousConnectionInstanceW id="0" preCell="../RMGR/0/GenericNeuronCell" postCell="../URXR/0/GenericNeuronCell" preComponent="silent" postComponent="neuron_to_neuron_exc_w2d" weight="1.0"/>
+        </continuousProjection>
+        <continuousProjection id="NC_URXR_RMGR_Glutamate" presynapticPopulation="URXR" postsynapticPopulation="RMGR">
+            <continuousConnectionInstanceW id="0" preCell="../URXR/0/GenericNeuronCell" postCell="../RMGR/0/GenericNeuronCell" preComponent="silent" postComponent="neuron_to_neuron_exc_w2d" weight="1.0"/>
+        </continuousProjection>
+        <inputList id="Input_RMGR_stim_RMGR_1" population="RMGR" component="stim_RMGR_1">
+            <input id="0" target="../RMGR/0/GenericNeuronCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_ASHR_stim_ASHR_1" population="ASHR" component="stim_ASHR_1">
+            <input id="0" target="../ASHR/0/GenericNeuronCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_ASKR_stim_ASKR_1" population="ASKR" component="stim_ASKR_1">
+            <input id="0" target="../ASKR/0/GenericNeuronCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_AWBR_stim_AWBR_1" population="AWBR" component="stim_AWBR_1">
+            <input id="0" target="../AWBR/0/GenericNeuronCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_IL2R_stim_IL2R_1" population="IL2R" component="stim_IL2R_1">
+            <input id="0" target="../IL2R/0/GenericNeuronCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_RMHR_stim_RMHR_1" population="RMHR" component="stim_RMHR_1">
+            <input id="0" target="../RMHR/0/GenericNeuronCell" destination="synapses"/>
+        </inputList>
+        <inputList id="Input_URXR_stim_URXR_1" population="URXR" component="stim_URXR_1">
+            <input id="0" target="../URXR/0/GenericNeuronCell" destination="synapses"/>
+        </inputList>
+    </network>
+</neuroml>

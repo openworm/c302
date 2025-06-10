@@ -1,0 +1,39 @@
+target: test_ex0_jnmlnrn.py
+engine: Brian2
+
+mep: .test.ex.mep
+experiments:
+  v:
+    observables:
+      spike times:
+        file: 
+          path: Sim_IClamp_GenericNeuronCellW2D.pop_GenericNeuronCellW2D.v.dat
+          columns: [0,1]
+          scaling: [1, 1000]
+        spike detection: 
+          method: threshold
+          threshold: 0.8
+        tolerance: 7.063393960781701e-06
+  state:
+    observables:
+      spike times:
+        file: 
+          path: pop_GenericNeuronCellW2D_0.state.dat
+          columns: [0,1]
+          scaling: [1, 1]
+        spike detection: 
+          method: threshold
+          threshold: 0.8
+        tolerance: 7.063344069599857e-06
+  output:
+    observables:
+      spike times:
+        file: 
+          path: pop_GenericNeuronCellW2D_0.output.dat
+          columns: [0,1]
+          scaling: [1, 1]
+        spike detection: 
+          method: threshold
+          threshold: 0.8
+        tolerance: 1.0338268133298212e-05
+

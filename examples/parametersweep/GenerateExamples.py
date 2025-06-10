@@ -23,7 +23,7 @@ def generate(cell, duration=3000, config="IClamp", parameters=None):
     cell_id = "%s" % cell
 
     if cell_id == "GenericNeuronCellW2D":
-        cell_nmll = Cell(id=cell_id, lems_source_file="cell_W2D.xml")
+        cell_nmll = Cell(id=cell_id, lems_source_file="../../c302/cell_W2D.xml")
     else:
         cell_nmll = Cell(id=cell_id, neuroml2_source_file="%s.cell.nml" % (cell))
 

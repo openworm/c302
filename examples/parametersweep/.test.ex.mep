@@ -1,0 +1,12 @@
+system: Test
+
+experiments:
+    v:
+        expected:
+            spike times: [3.539375]
+    state:
+        expected:
+            spike times: [3.5394]
+    output:
+        expected:
+            spike times: [2.4182]

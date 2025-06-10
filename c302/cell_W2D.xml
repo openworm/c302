@@ -1,7 +1,7 @@
 <Lems>
 
 <ComponentType name="cellW2D"
-    extends="baseCellMembPot"
+    extends="baseCellMembPotCap"
     description="Cell based on Worm2D model">
     
     <Parameter name="bias" dimension="none" description="..."/>
@@ -9,12 +9,12 @@
     <Parameter name="tau" dimension="time"/>
 
     <Constant name="COND_SCALE" dimension="conductance" value="1nS"/>
-    <DerivedParameter name="C" dimension="capacitance" value="tau*COND_SCALE"/>
 
     <!--
     Defined in baseCellMembPotCap:
     <Parameter name="C" dimension="capacitance"/>
     -->
+    <DerivedParameter name="C" dimension="capacitance" value="tau*COND_SCALE"/>
 
     <!-- Initial Conditions -->
     <Parameter name="state0" dimension="none"/>
@@ -65,11 +65,15 @@
     
 </ComponentType>
 
-<cellW2D id="GenericNeuronCell" tau="1s" bias="1" gain="1" state0=".5"/>
-<cellW2D id="GenericMuscleCell" tau="1s" bias="1" gain="1" state0=".5"/>
+<cellW2D id="GenericNeuronCell" tau="100ms" bias="1" gain="1" state0="0"/>
+<cellW2D id="GenericMuscleCell" tau="100ms" bias="1" gain="1" state0="0"/>
 
-<outputSynapse id="neuron_to_neuron_w2d"/>
-<outputSynapse id="neuron_to_muscle_w2d"/>
+<cellW2D id="GenericNeuronCellW2D" tau="1s" bias="1" gain="1" state0=".5"/>
+<cellW2D id="GenericMuscleCellW2D" tau="1s" bias="1" gain="1" state0=".5"/>
+
+<outputSynapse id="neuron_to_neuron_exc_w2d" sign="1"/>
+<outputSynapse id="neuron_to_neuron_inh_w2d" sign="-1"/>
+<outputSynapse id="neuron_to_muscle_w2d" sign="1"/>
 
 </Lems>
     

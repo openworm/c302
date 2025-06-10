@@ -1,0 +1,76 @@
+<Lems>
+    
+    <!--
+
+
+Parameters and setting used to generate this network:
+
+    Data reader:                    cect.SpreadsheetDataReader
+    c302 version:                   0.10.0
+    cect version:                   0.2.5
+    owmeta version:                 - not installed -
+    owmeta_core version:            - not installed -
+    Cells:                          ['RMGR', 'ASHR', 'ASKR', 'AWBR', 'IL2R', 'RMHR', 'URXR']
+    Cell stimulated:                []
+    Connection:                     []
+    Connection numbers overridden:  None
+    Connection numbers scaled:      None
+    Connection polarities override: None
+    Muscles:                        []
+
+    Known BioParameters:
+        BioParameter: initial_memb_pot = -45 mV (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_muscle_elec_syn_gbase = 1 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: neuron_to_neuron_elec_syn_gbase = 1 nS (SRC: BlindGuess, certainty 0.1)
+        BioParameter: unphysiological_offset_current = 0 pA (SRC: KnownError, certainty 0)
+        BioParameter: unphysiological_offset_current_del = 0 ms (SRC: KnownError, certainty 0)
+        BioParameter: unphysiological_offset_current_dur = 2000 ms (SRC: KnownError, certainty 0)
+
+   
+    -->
+
+    <Target component="sim_c302_W2D_Social" />
+
+    <!-- Include core NeuroML2 ComponentType definitions -->
+
+    <Include file="Cells.xml" />
+    <Include file="Networks.xml" />
+    <Include file="Simulation.xml" />
+    
+    <Include file="cell_W2D.xml" />
+    
+    <Include file="custom_synapses.xml" />
+    
+    <Include file="c302_W2D_Social.net.nml" />
+
+    <!-- End of NeuroML2 content -->
+    
+
+    <Simulation id="sim_c302_W2D_Social" length="2500ms" step="0.05ms" target="c302_W2D_Social">
+
+        <Display id="neurons" title="c302_W2D_Social: Membrane potential of a number of neurons" timeScale="1ms" xmin="-250.0" xmax="2750.0" ymin="-52" ymax="-28">
+            
+            <Line id="ASHR" quantity="ASHR/0/GenericNeuronCell/v" scale="1mV" color="#e13b00" timeScale="1ms" />
+            <Line id="ASKR" quantity="ASKR/0/GenericNeuronCell/v" scale="1mV" color="#2e112a" timeScale="1ms" />
+            <Line id="AWBR" quantity="AWBR/0/GenericNeuronCell/v" scale="1mV" color="#32b579" timeScale="1ms" />
+            <Line id="IL2R" quantity="IL2R/0/GenericNeuronCell/v" scale="1mV" color="#000000" timeScale="1ms" />
+            <Line id="RMGR" quantity="RMGR/0/GenericNeuronCell/v" scale="1mV" color="#b1f7ed" timeScale="1ms" />
+            <Line id="RMHR" quantity="RMHR/0/GenericNeuronCell/v" scale="1mV" color="#4c2e5d" timeScale="1ms" />
+            <Line id="URXR" quantity="URXR/0/GenericNeuronCell/v" scale="1mV" color="#3a00f9" timeScale="1ms" />
+            
+        </Display>
+
+        <OutputFile id="neurons_v" fileName="c302_W2D_Social.dat">
+            <OutputColumn id="ASHR_v" quantity="ASHR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="ASKR_v" quantity="ASKR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="AWBR_v" quantity="AWBR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="IL2R_v" quantity="IL2R/0/GenericNeuronCell/v"/>
+            <OutputColumn id="RMGR_v" quantity="RMGR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="RMHR_v" quantity="RMHR/0/GenericNeuronCell/v"/>
+            <OutputColumn id="URXR_v" quantity="URXR/0/GenericNeuronCell/v"/>
+        </OutputFile>
+        
+    </Simulation>
+
+
+</Lems>
