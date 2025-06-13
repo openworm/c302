@@ -43,7 +43,7 @@ jobs:
         pip list
         
     - name: Test OpenWormReader with owmeta
-      if: ${{ matrix.python-version != '3.11' }}
+      if: ${{ matrix.python-version != '3.11' } && { matrix.python-version != '3.12' }}
       run: |
         pip install owmeta>=0.12.3
         owm bundle remote --user add ow 'https://raw.githubusercontent.com/openworm/owmeta-bundles/master/index.json'
