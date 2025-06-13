@@ -6,7 +6,7 @@
 Parameters and setting used to generate this network:
 
     Data reader:                    cect.SpreadsheetDataReader
-    c302 version:                   0.10.0
+    c302 version:                   0.10.1
     cect version:                   0.2.5
     owmeta version:                 - not installed -
     owmeta_core version:            - not installed -

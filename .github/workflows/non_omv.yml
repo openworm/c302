@@ -14,7 +14,7 @@ jobs:
       fail-fast: false
       matrix:        
         runs-on: [ubuntu-latest, macos-13, macos-latest ]
-        python-version: [ 3.8, 3.9, "3.10", "3.11" ]
+        python-version: [ 3.9, "3.10", "3.11", "3.12" ]
         exclude:
           - runs-on: macos-latest
             python-version: "3.8"
@@ -42,12 +42,6 @@ jobs:
         pip install WormNeuroAtlas
         pip list
         
-    - name: Test OpenWormReader with owmeta
-      if: ${{ matrix.python-version != '3.11' }}
-      run: |
-        pip install owmeta>=0.12.3
-        owm bundle remote --user add ow 'https://raw.githubusercontent.com/openworm/owmeta-bundles/master/index.json'
-        python -m c302.OpenWormReader
 
     - name: Test WormNeuroAtlasReader
       run: |

@@ -12,6 +12,8 @@
                    extends="baseGradedSynapse"
                    description="For Worm2D...">
 
+        <Parameter name="sign" dimension="none"/>
+
         <Property name="weight" dimension="none" defaultValue="1"/>
 
         <Constant name="PAMP_SCALE" dimension="current" value="1pA"/>
@@ -24,7 +26,7 @@
 
         <Dynamics>
             <DerivedVariable name="outputpeer" dimension="none" select="peer/output"/>
-            <DerivedVariable name="i" exposure="i"  value="weight * outputpeer * PAMP_SCALE"/>
+            <DerivedVariable name="i" exposure="i"  value="weight * sign * outputpeer * PAMP_SCALE"/>
         </Dynamics>
     </ComponentType>
 
