@@ -4,7 +4,7 @@
 Parameters and setting used to generate this network:
 
     Data reader:                    cect.readers.SpreadsheetDataReader
-    c302 version:                   0.12.0
+    c302 version:                   0.12.1
     cect version:                   0.3.1
     owmeta version:                 - not installed -
     owmeta_core version:            - not installed -
@@ -10989,16 +10989,16 @@ Parameters and setting used to generate this network:
         <projection id="NC_RIBR_SMDVL_Generic_GJ" presynapticPopulation="RIBR" postsynapticPopulation="SMDVL" synapse="neuron_to_neuron_elec_syn">
             <connectionWD id="0" preCellId="../RIBR/0/generic_neuron_iaf_cell" postCellId="../SMDVL/0/generic_neuron_iaf_cell" weight="2.0" delay="0ms"/>
         </projection>
-        <projection id="NC_RICL_ADAR_Octapamine" presynapticPopulation="RICL" postsynapticPopulation="ADAR" synapse="neuron_to_neuron_exc_syn">
+        <projection id="NC_RICL_ADAR_Octopamine" presynapticPopulation="RICL" postsynapticPopulation="ADAR" synapse="neuron_to_neuron_exc_syn">
             <connectionWD id="0" preCellId="../RICL/0/generic_neuron_iaf_cell" postCellId="../ADAR/0/generic_neuron_iaf_cell" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_RICL_ASHL_Generic_GJ" presynapticPopulation="RICL" postsynapticPopulation="ASHL" synapse="neuron_to_neuron_elec_syn">
             <connectionWD id="0" preCellId="../RICL/0/generic_neuron_iaf_cell" postCellId="../ASHL/0/generic_neuron_iaf_cell" weight="2.0" delay="0ms"/>
         </projection>
-        <projection id="NC_RICL_AVAL_Octapamine" presynapticPopulation="RICL" postsynapticPopulation="AVAL" synapse="neuron_to_neuron_exc_syn">
+        <projection id="NC_RICL_AVAL_Octopamine" presynapticPopulation="RICL" postsynapticPopulation="AVAL" synapse="neuron_to_neuron_exc_syn">
             <connectionWD id="0" preCellId="../RICL/0/generic_neuron_iaf_cell" postCellId="../AVAL/0/generic_neuron_iaf_cell" weight="5.0" delay="0ms"/>
         </projection>
-        <projection id="NC_RICL_AVAR_Octapamine" presynapticPopulation="RICL" postsynapticPopulation="AVAR" synapse="neuron_to_neuron_exc_syn">
+        <projection id="NC_RICL_AVAR_Octopamine" presynapticPopulation="RICL" postsynapticPopulation="AVAR" synapse="neuron_to_neuron_exc_syn">
             <connectionWD id="0" preCellId="../RICL/0/generic_neuron_iaf_cell" postCellId="../AVAR/0/generic_neuron_iaf_cell" weight="6.0" delay="0ms"/>
         </projection>
         <projection id="NC_RICL_AVKL_Generic_GJ" presynapticPopulation="RICL" postsynapticPopulation="AVKL" synapse="neuron_to_neuron_elec_syn">
@@ -11007,64 +11007,64 @@ Parameters and setting used to generate this network:
         <projection id="NC_RICL_AVKR_Generic_GJ" presynapticPopulation="RICL" postsynapticPopulation="AVKR" synapse="neuron_to_neuron_elec_syn">
             <connectionWD id="0" preCellId="../RICL/0/generic_neuron_iaf_cell" postCellId="../AVKR/0/generic_neuron_iaf_cell" weight="1.0" delay="0ms"/>
         </projection>
-        <projection id="NC_RICL_AVKR_Octapamine" presynapticPopulation="RICL" postsynapticPopulation="AVKR" synapse="neuron_to_neuron_exc_syn">
+        <projection id="NC_RICL_AVKR_Octopamine" presynapticPopulation="RICL" postsynapticPopulation="AVKR" synapse="neuron_to_neuron_exc_syn">
             <connectionWD id="0" preCellId="../RICL/0/generic_neuron_iaf_cell" postCellId="../AVKR/0/generic_neuron_iaf_cell" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_RICL_AWBR_Generic_GJ" presynapticPopulation="RICL" postsynapticPopulation="AWBR" synapse="neuron_to_neuron_elec_syn">
             <connectionWD id="0" preCellId="../RICL/0/generic_neuron_iaf_cell" postCellId="../AWBR/0/generic_neuron_iaf_cell" weight="1.0" delay="0ms"/>
         </projection>
-        <projection id="NC_RICL_RIML_Octapamine" presynapticPopulation="RICL" postsynapticPopulation="RIML" synapse="neuron_to_neuron_exc_syn">
+        <projection id="NC_RICL_RIML_Octopamine" presynapticPopulation="RICL" postsynapticPopulation="RIML" synapse="neuron_to_neuron_exc_syn">
             <connectionWD id="0" preCellId="../RICL/0/generic_neuron_iaf_cell" postCellId="../RIML/0/generic_neuron_iaf_cell" weight="1.0" delay="0ms"/>
         </projection>
-        <projection id="NC_RICL_RIMR_Octapamine" presynapticPopulation="RICL" postsynapticPopulation="RIMR" synapse="neuron_to_neuron_exc_syn">
+        <projection id="NC_RICL_RIMR_Octopamine" presynapticPopulation="RICL" postsynapticPopulation="RIMR" synapse="neuron_to_neuron_exc_syn">
             <connectionWD id="0" preCellId="../RICL/0/generic_neuron_iaf_cell" postCellId="../RIMR/0/generic_neuron_iaf_cell" weight="3.0" delay="0ms"/>
         </projection>
-        <projection id="NC_RICL_RIVR_Octapamine" presynapticPopulation="RICL" postsynapticPopulation="RIVR" synapse="neuron_to_neuron_exc_syn">
+        <projection id="NC_RICL_RIVR_Octopamine" presynapticPopulation="RICL" postsynapticPopulation="RIVR" synapse="neuron_to_neuron_exc_syn">
             <connectionWD id="0" preCellId="../RICL/0/generic_neuron_iaf_cell" postCellId="../RIVR/0/generic_neuron_iaf_cell" weight="1.0" delay="0ms"/>
         </projection>
-        <projection id="NC_RICL_RMFR_Octapamine" presynapticPopulation="RICL" postsynapticPopulation="RMFR" synapse="neuron_to_neuron_exc_syn">
+        <projection id="NC_RICL_RMFR_Octopamine" presynapticPopulation="RICL" postsynapticPopulation="RMFR" synapse="neuron_to_neuron_exc_syn">
             <connectionWD id="0" preCellId="../RICL/0/generic_neuron_iaf_cell" postCellId="../RMFR/0/generic_neuron_iaf_cell" weight="1.0" delay="0ms"/>
         </projection>
-        <projection id="NC_RICL_SMBDL_Octapamine" presynapticPopulation="RICL" postsynapticPopulation="SMBDL" synapse="neuron_to_neuron_exc_syn">
+        <projection id="NC_RICL_SMBDL_Octopamine" presynapticPopulation="RICL" postsynapticPopulation="SMBDL" synapse="neuron_to_neuron_exc_syn">
             <connectionWD id="0" preCellId="../RICL/0/generic_neuron_iaf_cell" postCellId="../SMBDL/0/generic_neuron_iaf_cell" weight="2.0" delay="0ms"/>
         </projection>
-        <projection id="NC_RICL_SMDDL_Octapamine" presynapticPopulation="RICL" postsynapticPopulation="SMDDL" synapse="neuron_to_neuron_exc_syn">
+        <projection id="NC_RICL_SMDDL_Octopamine" presynapticPopulation="RICL" postsynapticPopulation="SMDDL" synapse="neuron_to_neuron_exc_syn">
             <connectionWD id="0" preCellId="../RICL/0/generic_neuron_iaf_cell" postCellId="../SMDDL/0/generic_neuron_iaf_cell" weight="3.0" delay="0ms"/>
         </projection>
-        <projection id="NC_RICL_SMDDR_Octapamine" presynapticPopulation="RICL" postsynapticPopulation="SMDDR" synapse="neuron_to_neuron_exc_syn">
+        <projection id="NC_RICL_SMDDR_Octopamine" presynapticPopulation="RICL" postsynapticPopulation="SMDDR" synapse="neuron_to_neuron_exc_syn">
             <connectionWD id="0" preCellId="../RICL/0/generic_neuron_iaf_cell" postCellId="../SMDDR/0/generic_neuron_iaf_cell" weight="3.0" delay="0ms"/>
         </projection>
-        <projection id="NC_RICL_SMDVR_Octapamine" presynapticPopulation="RICL" postsynapticPopulation="SMDVR" synapse="neuron_to_neuron_exc_syn">
+        <projection id="NC_RICL_SMDVR_Octopamine" presynapticPopulation="RICL" postsynapticPopulation="SMDVR" synapse="neuron_to_neuron_exc_syn">
             <connectionWD id="0" preCellId="../RICL/0/generic_neuron_iaf_cell" postCellId="../SMDVR/0/generic_neuron_iaf_cell" weight="1.0" delay="0ms"/>
         </projection>
-        <projection id="NC_RICR_ADAR_Octapamine" presynapticPopulation="RICR" postsynapticPopulation="ADAR" synapse="neuron_to_neuron_exc_syn">
+        <projection id="NC_RICR_ADAR_Octopamine" presynapticPopulation="RICR" postsynapticPopulation="ADAR" synapse="neuron_to_neuron_exc_syn">
             <connectionWD id="0" preCellId="../RICR/0/generic_neuron_iaf_cell" postCellId="../ADAR/0/generic_neuron_iaf_cell" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_RICR_ASHR_Generic_GJ" presynapticPopulation="RICR" postsynapticPopulation="ASHR" synapse="neuron_to_neuron_elec_syn">
             <connectionWD id="0" preCellId="../RICR/0/generic_neuron_iaf_cell" postCellId="../ASHR/0/generic_neuron_iaf_cell" weight="2.0" delay="0ms"/>
         </projection>
-        <projection id="NC_RICR_AVAL_Octapamine" presynapticPopulation="RICR" postsynapticPopulation="AVAL" synapse="neuron_to_neuron_exc_syn">
+        <projection id="NC_RICR_AVAL_Octopamine" presynapticPopulation="RICR" postsynapticPopulation="AVAL" synapse="neuron_to_neuron_exc_syn">
             <connectionWD id="0" preCellId="../RICR/0/generic_neuron_iaf_cell" postCellId="../AVAL/0/generic_neuron_iaf_cell" weight="5.0" delay="0ms"/>
         </projection>
-        <projection id="NC_RICR_AVAR_Octapamine" presynapticPopulation="RICR" postsynapticPopulation="AVAR" synapse="neuron_to_neuron_exc_syn">
+        <projection id="NC_RICR_AVAR_Octopamine" presynapticPopulation="RICR" postsynapticPopulation="AVAR" synapse="neuron_to_neuron_exc_syn">
             <connectionWD id="0" preCellId="../RICR/0/generic_neuron_iaf_cell" postCellId="../AVAR/0/generic_neuron_iaf_cell" weight="5.0" delay="0ms"/>
         </projection>
         <projection id="NC_RICR_AVKL_Generic_GJ" presynapticPopulation="RICR" postsynapticPopulation="AVKL" synapse="neuron_to_neuron_elec_syn">
             <connectionWD id="0" preCellId="../RICR/0/generic_neuron_iaf_cell" postCellId="../AVKL/0/generic_neuron_iaf_cell" weight="1.0" delay="0ms"/>
         </projection>
-        <projection id="NC_RICR_SMBDR_Octapamine" presynapticPopulation="RICR" postsynapticPopulation="SMBDR" synapse="neuron_to_neuron_exc_syn">
+        <projection id="NC_RICR_SMBDR_Octopamine" presynapticPopulation="RICR" postsynapticPopulation="SMBDR" synapse="neuron_to_neuron_exc_syn">
             <connectionWD id="0" preCellId="../RICR/0/generic_neuron_iaf_cell" postCellId="../SMBDR/0/generic_neuron_iaf_cell" weight="1.0" delay="0ms"/>
         </projection>
-        <projection id="NC_RICR_SMDDL_Octapamine" presynapticPopulation="RICR" postsynapticPopulation="SMDDL" synapse="neuron_to_neuron_exc_syn">
+        <projection id="NC_RICR_SMDDL_Octopamine" presynapticPopulation="RICR" postsynapticPopulation="SMDDL" synapse="neuron_to_neuron_exc_syn">
             <connectionWD id="0" preCellId="../RICR/0/generic_neuron_iaf_cell" postCellId="../SMDDL/0/generic_neuron_iaf_cell" weight="4.0" delay="0ms"/>
         </projection>
-        <projection id="NC_RICR_SMDDR_Octapamine" presynapticPopulation="RICR" postsynapticPopulation="SMDDR" synapse="neuron_to_neuron_exc_syn">
+        <projection id="NC_RICR_SMDDR_Octopamine" presynapticPopulation="RICR" postsynapticPopulation="SMDDR" synapse="neuron_to_neuron_exc_syn">
             <connectionWD id="0" preCellId="../RICR/0/generic_neuron_iaf_cell" postCellId="../SMDDR/0/generic_neuron_iaf_cell" weight="3.0" delay="0ms"/>
         </projection>
-        <projection id="NC_RICR_SMDVL_Octapamine" presynapticPopulation="RICR" postsynapticPopulation="SMDVL" synapse="neuron_to_neuron_exc_syn">
+        <projection id="NC_RICR_SMDVL_Octopamine" presynapticPopulation="RICR" postsynapticPopulation="SMDVL" synapse="neuron_to_neuron_exc_syn">
             <connectionWD id="0" preCellId="../RICR/0/generic_neuron_iaf_cell" postCellId="../SMDVL/0/generic_neuron_iaf_cell" weight="2.0" delay="0ms"/>
         </projection>
-        <projection id="NC_RICR_SMDVR_Octapamine" presynapticPopulation="RICR" postsynapticPopulation="SMDVR" synapse="neuron_to_neuron_exc_syn">
+        <projection id="NC_RICR_SMDVR_Octopamine" presynapticPopulation="RICR" postsynapticPopulation="SMDVR" synapse="neuron_to_neuron_exc_syn">
             <connectionWD id="0" preCellId="../RICR/0/generic_neuron_iaf_cell" postCellId="../SMDVR/0/generic_neuron_iaf_cell" weight="1.0" delay="0ms"/>
         </projection>
         <projection id="NC_RID_ALA_Generic_GJ" presynapticPopulation="RID" postsynapticPopulation="ALA" synapse="neuron_to_neuron_elec_syn">
@@ -13668,10 +13668,10 @@ Parameters and setting used to generate this network:
         <projection id="NC_AVL_MVR10_GABA" presynapticPopulation="AVL" postsynapticPopulation="MVR10" synapse="neuron_to_muscle_inh_syn">
             <connection id="0" preCellId="../AVL/0/generic_neuron_iaf_cell" postCellId="../MVR10/0/generic_muscle_iaf_cell"/>
         </projection>
-        <projection id="NC_CEPVL_MVL03_" presynapticPopulation="CEPVL" postsynapticPopulation="MVL03" synapse="neuron_to_muscle_exc_syn">
+        <projection id="NC_CEPVL_MVL03_OtherChemicalNT" presynapticPopulation="CEPVL" postsynapticPopulation="MVL03" synapse="neuron_to_muscle_exc_syn">
             <connection id="0" preCellId="../CEPVL/0/generic_neuron_iaf_cell" postCellId="../MVL03/0/generic_muscle_iaf_cell"/>
         </projection>
-        <projection id="NC_CEPVR_MVR04_" presynapticPopulation="CEPVR" postsynapticPopulation="MVR04" synapse="neuron_to_muscle_exc_syn">
+        <projection id="NC_CEPVR_MVR04_OtherChemicalNT" presynapticPopulation="CEPVR" postsynapticPopulation="MVR04" synapse="neuron_to_muscle_exc_syn">
             <connection id="0" preCellId="../CEPVR/0/generic_neuron_iaf_cell" postCellId="../MVR04/0/generic_muscle_iaf_cell"/>
         </projection>
         <projection id="NC_DA1_MDL08_Acetylcholine" presynapticPopulation="DA1" postsynapticPopulation="MDL08" synapse="neuron_to_muscle_exc_syn">
@@ -14196,22 +14196,22 @@ Parameters and setting used to generate this network:
         <projection id="NC_RID_MDL21_GABA" presynapticPopulation="RID" postsynapticPopulation="MDL21" synapse="neuron_to_muscle_inh_syn">
             <connection id="0" preCellId="../RID/0/generic_neuron_iaf_cell" postCellId="../MDL21/0/generic_muscle_iaf_cell"/>
         </projection>
-        <projection id="NC_RIML_MDR05_Acetylcholineplus_Tyramine" presynapticPopulation="RIML" postsynapticPopulation="MDR05" synapse="neuron_to_muscle_exc_syn">
+        <projection id="NC_RIML_MDR05_Acetylcholine_Tyramine" presynapticPopulation="RIML" postsynapticPopulation="MDR05" synapse="neuron_to_muscle_exc_syn">
             <connection id="0" preCellId="../RIML/0/generic_neuron_iaf_cell" postCellId="../MDR05/0/generic_muscle_iaf_cell"/>
         </projection>
-        <projection id="NC_RIML_MVR05_Acetylcholineplus_Tyramine" presynapticPopulation="RIML" postsynapticPopulation="MVR05" synapse="neuron_to_muscle_exc_syn">
+        <projection id="NC_RIML_MVR05_Acetylcholine_Tyramine" presynapticPopulation="RIML" postsynapticPopulation="MVR05" synapse="neuron_to_muscle_exc_syn">
             <connection id="0" preCellId="../RIML/0/generic_neuron_iaf_cell" postCellId="../MVR05/0/generic_muscle_iaf_cell"/>
         </projection>
-        <projection id="NC_RIMR_MDL05_Acetylcholineplus_Tyramine" presynapticPopulation="RIMR" postsynapticPopulation="MDL05" synapse="neuron_to_muscle_exc_syn">
+        <projection id="NC_RIMR_MDL05_Acetylcholine_Tyramine" presynapticPopulation="RIMR" postsynapticPopulation="MDL05" synapse="neuron_to_muscle_exc_syn">
             <connection id="0" preCellId="../RIMR/0/generic_neuron_iaf_cell" postCellId="../MDL05/0/generic_muscle_iaf_cell"/>
         </projection>
-        <projection id="NC_RIMR_MDL07_Acetylcholineplus_Tyramine" presynapticPopulation="RIMR" postsynapticPopulation="MDL07" synapse="neuron_to_muscle_exc_syn">
+        <projection id="NC_RIMR_MDL07_Acetylcholine_Tyramine" presynapticPopulation="RIMR" postsynapticPopulation="MDL07" synapse="neuron_to_muscle_exc_syn">
             <connection id="0" preCellId="../RIMR/0/generic_neuron_iaf_cell" postCellId="../MDL07/0/generic_muscle_iaf_cell"/>
         </projection>
-        <projection id="NC_RIMR_MVL05_Acetylcholineplus_Tyramine" presynapticPopulation="RIMR" postsynapticPopulation="MVL05" synapse="neuron_to_muscle_exc_syn">
+        <projection id="NC_RIMR_MVL05_Acetylcholine_Tyramine" presynapticPopulation="RIMR" postsynapticPopulation="MVL05" synapse="neuron_to_muscle_exc_syn">
             <connection id="0" preCellId="../RIMR/0/generic_neuron_iaf_cell" postCellId="../MVL05/0/generic_muscle_iaf_cell"/>
         </projection>
-        <projection id="NC_RIMR_MVL07_Acetylcholineplus_Tyramine" presynapticPopulation="RIMR" postsynapticPopulation="MVL07" synapse="neuron_to_muscle_exc_syn">
+        <projection id="NC_RIMR_MVL07_Acetylcholine_Tyramine" presynapticPopulation="RIMR" postsynapticPopulation="MVL07" synapse="neuron_to_muscle_exc_syn">
             <connection id="0" preCellId="../RIMR/0/generic_neuron_iaf_cell" postCellId="../MVL07/0/generic_muscle_iaf_cell"/>
         </projection>
         <projection id="NC_RIVL_MVR05_GABA" presynapticPopulation="RIVL" postsynapticPopulation="MVR05" synapse="neuron_to_muscle_inh_syn">
@@ -14439,19 +14439,19 @@ Parameters and setting used to generate this network:
         <projection id="NC_RMFL_MVR03_Glutamate" presynapticPopulation="RMFL" postsynapticPopulation="MVR03" synapse="neuron_to_muscle_exc_syn">
             <connection id="0" preCellId="../RMFL/0/generic_neuron_iaf_cell" postCellId="../MVR03/0/generic_muscle_iaf_cell"/>
         </projection>
-        <projection id="NC_RMGL_MDL05_FRMFemide" presynapticPopulation="RMGL" postsynapticPopulation="MDL05" synapse="neuron_to_muscle_exc_syn">
+        <projection id="NC_RMGL_MDL05_FMRFamide" presynapticPopulation="RMGL" postsynapticPopulation="MDL05" synapse="neuron_to_muscle_exc_syn">
             <connection id="0" preCellId="../RMGL/0/generic_neuron_iaf_cell" postCellId="../MDL05/0/generic_muscle_iaf_cell"/>
         </projection>
-        <projection id="NC_RMGL_MVL05_FRMFemide" presynapticPopulation="RMGL" postsynapticPopulation="MVL05" synapse="neuron_to_muscle_exc_syn">
+        <projection id="NC_RMGL_MVL05_FMRFamide" presynapticPopulation="RMGL" postsynapticPopulation="MVL05" synapse="neuron_to_muscle_exc_syn">
             <connection id="0" preCellId="../RMGL/0/generic_neuron_iaf_cell" postCellId="../MVL05/0/generic_muscle_iaf_cell"/>
         </projection>
-        <projection id="NC_RMGR_MDR05_FRMFemide" presynapticPopulation="RMGR" postsynapticPopulation="MDR05" synapse="neuron_to_muscle_exc_syn">
+        <projection id="NC_RMGR_MDR05_FMRFamide" presynapticPopulation="RMGR" postsynapticPopulation="MDR05" synapse="neuron_to_muscle_exc_syn">
             <connection id="0" preCellId="../RMGR/0/generic_neuron_iaf_cell" postCellId="../MDR05/0/generic_muscle_iaf_cell"/>
         </projection>
-        <projection id="NC_RMGR_MVR05_FRMFemide" presynapticPopulation="RMGR" postsynapticPopulation="MVR05" synapse="neuron_to_muscle_exc_syn">
+        <projection id="NC_RMGR_MVR05_FMRFamide" presynapticPopulation="RMGR" postsynapticPopulation="MVR05" synapse="neuron_to_muscle_exc_syn">
             <connection id="0" preCellId="../RMGR/0/generic_neuron_iaf_cell" postCellId="../MVR05/0/generic_muscle_iaf_cell"/>
         </projection>
-        <projection id="NC_RMGR_MVR07_FRMFemide" presynapticPopulation="RMGR" postsynapticPopulation="MVR07" synapse="neuron_to_muscle_exc_syn">
+        <projection id="NC_RMGR_MVR07_FMRFamide" presynapticPopulation="RMGR" postsynapticPopulation="MVR07" synapse="neuron_to_muscle_exc_syn">
             <connection id="0" preCellId="../RMGR/0/generic_neuron_iaf_cell" postCellId="../MVR07/0/generic_muscle_iaf_cell"/>
         </projection>
         <projection id="NC_RMHL_MDR01_Glutamate" presynapticPopulation="RMHL" postsynapticPopulation="MDR01" synapse="neuron_to_muscle_exc_syn">

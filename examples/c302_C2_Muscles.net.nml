@@ -4,7 +4,7 @@
 Parameters and setting used to generate this network:
 
     Data reader:                    cect.readers.SpreadsheetDataReader
-    c302 version:                   0.12.0
+    c302 version:                   0.12.1
     cect version:                   0.3.1
     owmeta version:                 - not installed -
     owmeta_core version:            - not installed -
@@ -5300,10 +5300,10 @@ Parameters and setting used to generate this network:
         <continuousProjection id="NC_AVL_MVR10_GABA" presynapticPopulation="AVL" postsynapticPopulation="MVR10">
             <continuousConnectionInstanceW id="0" preCell="../AVL/0/GenericNeuronCell" postCell="../MVR10/0/GenericMuscleCell" preComponent="silent" postComponent="neuron_to_muscle_inh_syn" weight="5.0"/>
         </continuousProjection>
-        <continuousProjection id="NC_CEPVL_MVL03_" presynapticPopulation="CEPVL" postsynapticPopulation="MVL03">
+        <continuousProjection id="NC_CEPVL_MVL03_OtherChemicalNT" presynapticPopulation="CEPVL" postsynapticPopulation="MVL03">
             <continuousConnectionInstanceW id="0" preCell="../CEPVL/0/GenericNeuronCell" postCell="../MVL03/0/GenericMuscleCell" preComponent="silent" postComponent="neuron_to_muscle_exc_syn" weight="1.0"/>
         </continuousProjection>
-        <continuousProjection id="NC_CEPVR_MVR04_" presynapticPopulation="CEPVR" postsynapticPopulation="MVR04">
+        <continuousProjection id="NC_CEPVR_MVR04_OtherChemicalNT" presynapticPopulation="CEPVR" postsynapticPopulation="MVR04">
             <continuousConnectionInstanceW id="0" preCell="../CEPVR/0/GenericNeuronCell" postCell="../MVR04/0/GenericMuscleCell" preComponent="silent" postComponent="neuron_to_muscle_exc_syn" weight="1.0"/>
         </continuousProjection>
         <continuousProjection id="NC_DA1_MDL08_Acetylcholine" presynapticPopulation="DA1" postsynapticPopulation="MDL08">
@@ -5828,22 +5828,22 @@ Parameters and setting used to generate this network:
         <continuousProjection id="NC_RID_MDL21_GABA" presynapticPopulation="RID" postsynapticPopulation="MDL21">
             <continuousConnectionInstanceW id="0" preCell="../RID/0/GenericNeuronCell" postCell="../MDL21/0/GenericMuscleCell" preComponent="silent" postComponent="neuron_to_muscle_inh_syn" weight="2.0"/>
         </continuousProjection>
-        <continuousProjection id="NC_RIML_MDR05_Acetylcholineplus_Tyramine" presynapticPopulation="RIML" postsynapticPopulation="MDR05">
+        <continuousProjection id="NC_RIML_MDR05_Acetylcholine_Tyramine" presynapticPopulation="RIML" postsynapticPopulation="MDR05">
             <continuousConnectionInstanceW id="0" preCell="../RIML/0/GenericNeuronCell" postCell="../MDR05/0/GenericMuscleCell" preComponent="silent" postComponent="neuron_to_muscle_exc_syn" weight="2.0"/>
         </continuousProjection>
-        <continuousProjection id="NC_RIML_MVR05_Acetylcholineplus_Tyramine" presynapticPopulation="RIML" postsynapticPopulation="MVR05">
+        <continuousProjection id="NC_RIML_MVR05_Acetylcholine_Tyramine" presynapticPopulation="RIML" postsynapticPopulation="MVR05">
             <continuousConnectionInstanceW id="0" preCell="../RIML/0/GenericNeuronCell" postCell="../MVR05/0/GenericMuscleCell" preComponent="silent" postComponent="neuron_to_muscle_exc_syn" weight="2.0"/>
         </continuousProjection>
-        <continuousProjection id="NC_RIMR_MDL05_Acetylcholineplus_Tyramine" presynapticPopulation="RIMR" postsynapticPopulation="MDL05">
+        <continuousProjection id="NC_RIMR_MDL05_Acetylcholine_Tyramine" presynapticPopulation="RIMR" postsynapticPopulation="MDL05">
             <continuousConnectionInstanceW id="0" preCell="../RIMR/0/GenericNeuronCell" postCell="../MDL05/0/GenericMuscleCell" preComponent="silent" postComponent="neuron_to_muscle_exc_syn" weight="1.0"/>
         </continuousProjection>
-        <continuousProjection id="NC_RIMR_MDL07_Acetylcholineplus_Tyramine" presynapticPopulation="RIMR" postsynapticPopulation="MDL07">
+        <continuousProjection id="NC_RIMR_MDL07_Acetylcholine_Tyramine" presynapticPopulation="RIMR" postsynapticPopulation="MDL07">
             <continuousConnectionInstanceW id="0" preCell="../RIMR/0/GenericNeuronCell" postCell="../MDL07/0/GenericMuscleCell" preComponent="silent" postComponent="neuron_to_muscle_exc_syn" weight="1.0"/>
         </continuousProjection>
-        <continuousProjection id="NC_RIMR_MVL05_Acetylcholineplus_Tyramine" presynapticPopulation="RIMR" postsynapticPopulation="MVL05">
+        <continuousProjection id="NC_RIMR_MVL05_Acetylcholine_Tyramine" presynapticPopulation="RIMR" postsynapticPopulation="MVL05">
             <continuousConnectionInstanceW id="0" preCell="../RIMR/0/GenericNeuronCell" postCell="../MVL05/0/GenericMuscleCell" preComponent="silent" postComponent="neuron_to_muscle_exc_syn" weight="1.0"/>
         </continuousProjection>
-        <continuousProjection id="NC_RIMR_MVL07_Acetylcholineplus_Tyramine" presynapticPopulation="RIMR" postsynapticPopulation="MVL07">
+        <continuousProjection id="NC_RIMR_MVL07_Acetylcholine_Tyramine" presynapticPopulation="RIMR" postsynapticPopulation="MVL07">
             <continuousConnectionInstanceW id="0" preCell="../RIMR/0/GenericNeuronCell" postCell="../MVL07/0/GenericMuscleCell" preComponent="silent" postComponent="neuron_to_muscle_exc_syn" weight="1.0"/>
         </continuousProjection>
         <continuousProjection id="NC_RIVL_MVR05_GABA" presynapticPopulation="RIVL" postsynapticPopulation="MVR05">
@@ -6071,19 +6071,19 @@ Parameters and setting used to generate this network:
         <continuousProjection id="NC_RMFL_MVR03_Glutamate" presynapticPopulation="RMFL" postsynapticPopulation="MVR03">
             <continuousConnectionInstanceW id="0" preCell="../RMFL/0/GenericNeuronCell" postCell="../MVR03/0/GenericMuscleCell" preComponent="silent" postComponent="neuron_to_muscle_exc_syn" weight="1.0"/>
         </continuousProjection>
-        <continuousProjection id="NC_RMGL_MDL05_FRMFemide" presynapticPopulation="RMGL" postsynapticPopulation="MDL05">
+        <continuousProjection id="NC_RMGL_MDL05_FMRFamide" presynapticPopulation="RMGL" postsynapticPopulation="MDL05">
             <continuousConnectionInstanceW id="0" preCell="../RMGL/0/GenericNeuronCell" postCell="../MDL05/0/GenericMuscleCell" preComponent="silent" postComponent="neuron_to_muscle_exc_syn" weight="2.0"/>
         </continuousProjection>
-        <continuousProjection id="NC_RMGL_MVL05_FRMFemide" presynapticPopulation="RMGL" postsynapticPopulation="MVL05">
+        <continuousProjection id="NC_RMGL_MVL05_FMRFamide" presynapticPopulation="RMGL" postsynapticPopulation="MVL05">
             <continuousConnectionInstanceW id="0" preCell="../RMGL/0/GenericNeuronCell" postCell="../MVL05/0/GenericMuscleCell" preComponent="silent" postComponent="neuron_to_muscle_exc_syn" weight="2.0"/>
         </continuousProjection>
-        <continuousProjection id="NC_RMGR_MDR05_FRMFemide" presynapticPopulation="RMGR" postsynapticPopulation="MDR05">
+        <continuousProjection id="NC_RMGR_MDR05_FMRFamide" presynapticPopulation="RMGR" postsynapticPopulation="MDR05">
             <continuousConnectionInstanceW id="0" preCell="../RMGR/0/GenericNeuronCell" postCell="../MDR05/0/GenericMuscleCell" preComponent="silent" postComponent="neuron_to_muscle_exc_syn" weight="1.0"/>
         </continuousProjection>
-        <continuousProjection id="NC_RMGR_MVR05_FRMFemide" presynapticPopulation="RMGR" postsynapticPopulation="MVR05">
+        <continuousProjection id="NC_RMGR_MVR05_FMRFamide" presynapticPopulation="RMGR" postsynapticPopulation="MVR05">
             <continuousConnectionInstanceW id="0" preCell="../RMGR/0/GenericNeuronCell" postCell="../MVR05/0/GenericMuscleCell" preComponent="silent" postComponent="neuron_to_muscle_exc_syn" weight="1.0"/>
         </continuousProjection>
-        <continuousProjection id="NC_RMGR_MVR07_FRMFemide" presynapticPopulation="RMGR" postsynapticPopulation="MVR07">
+        <continuousProjection id="NC_RMGR_MVR07_FMRFamide" presynapticPopulation="RMGR" postsynapticPopulation="MVR07">
             <continuousConnectionInstanceW id="0" preCell="../RMGR/0/GenericNeuronCell" postCell="../MVR07/0/GenericMuscleCell" preComponent="silent" postComponent="neuron_to_muscle_exc_syn" weight="1.0"/>
         </continuousProjection>
         <continuousProjection id="NC_RMHL_MDR01_Glutamate" presynapticPopulation="RMHL" postsynapticPopulation="MDR01">
