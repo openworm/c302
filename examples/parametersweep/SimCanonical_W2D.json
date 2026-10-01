@@ -1,6 +1,6 @@
 {
     "SimCanonical_W2D": {
-        "version": "NeuroMLlite v0.6.1",
+        "version": "NeuroMLlite v0.6.2",
         "network": "Canonical_W2D.json",
         "duration": 3000.0,
         "dt": 0.1,
