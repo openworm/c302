@@ -177,7 +177,7 @@ if __name__ == "__main__":
             "FW",
             "W2D",
             "",
-            2000,
+            100,
             0.05,
             "jNeuroML",
             data_reader=c302.FW_DATA_READER,
@@ -332,7 +332,10 @@ if __name__ == "__main__":
         run_c302("Kato", "C1", "", 1080, 0.05, "jNeuroML_NEURON")
 
     elif "-targetC0" in sys.argv:
-        run_c302("TargetMuscle", "C0", "", 300, 0.05, "jNeuroML")
+        run_c302("TargetMuscle", "C0", "", 250, 0.05, "jNeuroML")
+
+    elif "-targetC2" in sys.argv:
+        run_c302("TargetMuscle", "C2", "", 300, 0.05, "jNeuroML")
 
     elif "-twC2" in sys.argv:
         run_c302(
@@ -406,6 +409,7 @@ if __name__ == "__main__":
                 ("Pharyngeal", 500),
                 ("Social", 2500),
                 ("Oscillator", 1000),
+                ("TargetMuscle", 300),
                 ("Muscles", 1000),
                 ("Full", 1000),
                 ("FW", 2000),

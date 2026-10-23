@@ -1,6 +1,6 @@
 {
     "Canonical_W2D": {
-        "version": "NeuroMLlite v0.6.1",
+        "version": "NeuroMLlite v0.6.2",
         "parameters": {
             "bias": 0,
             "gain": 1,

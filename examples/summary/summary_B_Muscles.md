@@ -1,7 +1,7 @@
 ### Parameter config summary 
 <h2>c302 simulation</h2>
 <p>Parameter set: <b>B</b>; configuration: <b>Muscles</b></p>
-<p>Generated on: Mon, 30 Mar 2026 with c302 v0.12.0</p><br/>
+<p>Generated on: Fri, 23 Oct 2026 with c302 v0.12.1</p><br/>
 <table>
 
 <tr>
