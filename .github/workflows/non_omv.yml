@@ -62,3 +62,4 @@ jobs:
         pip list
         env
         ls -lath
+        ls -lath examples

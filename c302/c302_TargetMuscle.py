@@ -1,6 +1,7 @@
 import c302
 import sys
 import importlib
+import neuroml.writers as writers
 
 
 def setup(
@@ -31,10 +32,8 @@ def setup(
         "unphysiological_offset_current_dur", "20 ms", "Testing IClamp", "0"
     )
 
-    duration = 300
-
     my_cells = ["AVKR"]
-    my_cells = ["RMHR"]
+    my_cells = ["RMHR", "DA9", "VA1"]
     muscles_to_include = None
 
     cells = my_cells
@@ -48,7 +47,7 @@ def setup(
             reference,
             params,
             cells=cells,
-            cells_to_stimulate=cells,
+            cells_to_stimulate=[],
             muscles_to_include=muscles_to_include,
             duration=duration,
             dt=dt,
@@ -58,6 +57,20 @@ def setup(
             data_reader=data_reader,
             print_connections=True,
         )
+
+        stim_amplitudes = ["25pA", "25pA", "25pA"]
+        start_times = ["10ms", "100ms", "200ms"]
+
+        for i in range(len(stim_amplitudes)):
+            start = start_times[i]
+            c = my_cells[i]
+
+            c302.add_new_input(nml_doc, c, start, "10ms", stim_amplitudes[i], params)
+
+        nml_file = target_directory + "/" + reference + ".net.nml"
+        writers.NeuroMLWriter.write(
+            nml_doc, nml_file
+        )  # Write over network file written above...
 
     return cells, cells, params, muscles_to_include, nml_doc
 
