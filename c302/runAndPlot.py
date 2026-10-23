@@ -409,6 +409,7 @@ if __name__ == "__main__":
                 ("Pharyngeal", 500),
                 ("Social", 2500),
                 ("Oscillator", 1000),
+                ("TargetMuscle", 300),
                 ("Muscles", 1000),
                 ("Full", 1000),
                 ("FW", 2000),
