@@ -12,10 +12,14 @@ def setup(
     dt=0.05,
     target_directory="examples",
     data_reader=c302.DEFAULT_DATA_READER,
-    param_overrides={},
-    config_param_overrides={},
+    param_overrides=None,
+    config_param_overrides=None,
     verbose=True,
 ):
+    if config_param_overrides is None:
+        config_param_overrides = {}
+    if param_overrides is None:
+        param_overrides = {}
     reference = "c302_%s_IClamp" % parameter_set
     c302.print_("Setting up %s" % reference)
 

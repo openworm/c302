@@ -11,9 +11,11 @@ def setup(
     dt=0.05,
     target_directory="examples",
     data_reader=c302.DEFAULT_DATA_READER,
-    param_overrides={},
+    param_overrides=None,
     verbose=True,
 ):
+    if param_overrides is None:
+        param_overrides = {}
     ParameterisedModel = getattr(
         importlib.import_module("c302.parameters_%s" % parameter_set),
         "ParameterisedModel",

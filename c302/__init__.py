@@ -656,9 +656,9 @@ def generate(
     cells=None,
     cells_to_plot=None,
     cells_to_stimulate=None,
-    muscles_to_include=[],
-    conns_to_include=[],
-    conns_to_exclude=[],
+    muscles_to_include=None,
+    conns_to_include=None,
+    conns_to_exclude=None,
     conn_number_override=None,
     conn_number_scaling=None,
     conn_polarity_override=None,
@@ -670,9 +670,17 @@ def generate(
     test=False,
     verbose=True,
     print_connections=False,
-    param_overrides={},
+    param_overrides=None,
     target_directory="./",
 ):
+    if param_overrides is None:
+        param_overrides = {}
+    if conns_to_exclude is None:
+        conns_to_exclude = []
+    if conns_to_include is None:
+        conns_to_include = []
+    if muscles_to_include is None:
+        muscles_to_include = []
     validate = not (
         params.is_level_B()
         or params.is_level_C0()
